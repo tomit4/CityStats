@@ -12,5 +12,11 @@ exports.seed = async function (knex) {
             density: '99.1/sq mi',
             median_household_income: '$52000',
         },
+        {
+            state_id: 2,
+            total: '736081',
+            density: '1.26/sq mi',
+            median_household_income: '$77800',
+        },
     ])
 }

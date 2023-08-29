@@ -13,5 +13,6 @@ exports.seed = async function (knex) {
         { state_id: 1, delegate_name: 'Dale Strong' },
         { state_id: 1, delegate_name: 'Gary Palmer' },
         { state_id: 1, delegate_name: 'Terri Sewell' },
+        { state_id: 2, delegate_name: 'Mary Peltola' },
     ])
 }

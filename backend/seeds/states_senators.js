@@ -8,5 +8,7 @@ exports.seed = async function (knex) {
     await knex('states_senators').insert([
         { state_id: 1, senator_name: 'Tommy Tuberville' },
         { state_id: 1, senator_name: 'Katie Britt' },
+        { state_id: 2, senator_name: 'Lisa Murkowski' },
+        { state_id: 2, senator_name: 'Dan Sullivan' },
     ])
 }

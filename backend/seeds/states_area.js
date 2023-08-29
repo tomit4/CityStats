@@ -12,5 +12,11 @@ exports.seed = async function (knex) {
             land: '50744 sq mi',
             water: '1675 sq mi',
         },
+        {
+            state_id: 2,
+            total: '663268 sq mi',
+            land: '571951 sq mi',
+            water: '91316 sq mi',
+        },
     ])
 }
