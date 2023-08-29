@@ -2,17 +2,11 @@
 
 const fastify = require('fastify')({ logger: true })
 require('dotenv').config()
-
-const registerPlugins = async () => {
-    await fastify.register(require('@fastify/swagger'))
-    await fastify.register(require('@fastify/swagger-ui'))
-    await fastify.register(require('./plugins/knex'))
-    await fastify.register(require('./lib/routes/states/get-all-states'))
-}
+const registerPlugins = require('./plugins')
 
 const start = async () => {
     try {
-        await registerPlugins()
+        await registerPlugins(fastify)
         await fastify.ready()
         fastify.swagger()
         fastify.listen({ port: process.env.PORT })
