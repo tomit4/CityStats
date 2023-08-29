@@ -11,9 +11,12 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 **Backend:**
 
 -   [ ] Break out knex/sql statements into services folder as classes with properties/methods.
--   [ ] Integrate making JWT/API keys with long lasting expiration(1 year), and auth all routes to backend with this. See [fastify-jwt](https://github.com/fastify/fastify-jwt).
 -   [ ] Integrate [fastify-helmet](https://github.com/fastify/fastify-helmet).
--   [ ] Write unit tests using ava(and sinon??)
+-   [ ] Write unit tests using ava(and sinon??). Consider using [fastify's testing guide](https://fastify.dev/docs/latest/Guides/Testing)
+-   [ ] Break out seed data with mock js/json files.
+-   [ ] Integrate Joi schema validation. Utilization with fastify is done via the [joi-compiler package](https://github.com/Eomm/joi-compiler). See this [helpful example](https://www.nearform.com/blog/validate-the-fastify-input-with-joi/).
+
+-   [ ] Integrate making JWT/API keys with long lasting expiration(1 year), and auth all routes to backend with this. See [fastify-jwt](https://github.com/fastify/fastify-jwt).
 
 **Frontend:**
 
