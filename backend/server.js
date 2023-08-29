@@ -6,7 +6,7 @@ require('dotenv').config()
 const registerPlugins = async () => {
     await fastify.register(require('@fastify/swagger'))
     await fastify.register(require('@fastify/swagger-ui'))
-    await fastify.register(require('./db'))
+    await fastify.register(require('./plugins/knex'))
     await fastify.register(require('./lib/routes/states/get-all-states'))
 }
 

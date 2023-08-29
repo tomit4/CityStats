@@ -7,7 +7,7 @@
         "dev": "nodemon server",
         "knex": "knex",
         "km-make": "knex migrate:make",
-        "km-up": "knex migrate:latest",
+        "km-up": "rm ./db/city_stats.db && knex migrate:latest",
         "km-down": "knex migrate:down",
         "ks-make": "knex seed:make",
         "ks-reseed": "knex seed:run"
