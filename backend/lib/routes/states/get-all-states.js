@@ -39,7 +39,6 @@ module.exports = async (fastify, options, done) => {
         // },
         handler: async (request, reply) => {
             const { id } = request.params
-            console.log('request.params :=>', request.params)
             // TODO: Break out all knex statements into services
             let allStates = await knex.select(...stateKeys).from('states')
 
