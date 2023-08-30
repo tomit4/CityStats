@@ -10,6 +10,12 @@ module.exports = {
             filename: './db/city_stats.db',
         },
         useNullAsDefault: true,
+        migrations: {
+            directory: './db/migrations',
+        },
+        seeds: {
+            directory: './db/seeds',
+        },
     },
     // staging: {},
     // production: {},
