@@ -5,10 +5,7 @@
 module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
-        // NOTE: different route for ALL states
         url: '/states',
-        // NOTE: different route for SINGLE states
-        // url: '/states/:id',
         // TODO: break out schema appropriately
         // schema: {
         // response: {
