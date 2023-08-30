@@ -4,7 +4,7 @@
 
 const responseSchema = {
     type: 'object',
-    required: ['id'],
+    required: ['state_name'],
     properties: {
         id: { type: 'number' },
         state_name: { type: 'string' },
@@ -55,14 +55,13 @@ module.exports = async (fastify, options, done) => {
             // id: { type: 'string' },
             // },
             // },
-            // response: {
-            // 200: factory.joi.object(),
-            // },
+            response: {
+                200: responseSchema,
+            },
         },
         handler: async (request, reply) => {
             const { id } = request.params
             const { knex, stateService } = fastify
-            console.log('fastify.joi :=>', fastify.joi)
             reply.send(await stateService.grabAllStateById(knex, id))
         },
     })
