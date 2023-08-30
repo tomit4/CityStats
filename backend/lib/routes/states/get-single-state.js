@@ -1,6 +1,25 @@
 'use strict'
 // TODO: Implement proper error handling (i.e. try, catch, throw)
-// TODO: put schemas in separate route
+
+// TODO: put schemas in separate directory
+const joi = {
+    string: () => {
+        return { type: 'string' }
+    },
+    number: () => {
+        return { type: 'number' }
+    },
+    object: args => {
+        return { type: 'object', properties: { ...args } }
+    },
+    array: () => {
+        return { type: 'array' }
+    },
+    bool: () => {
+        return { type: 'boolean' }
+    },
+}
+
 const responseSchema = {
     type: 'object',
     required: [
@@ -24,55 +43,41 @@ const responseSchema = {
         'house_delegates',
     ],
     properties: {
-        id: { type: 'number' },
-        state_name: { type: 'string' },
-        state_abbreviation: { type: 'string' },
-        date_admitted: { type: 'string' },
-        capital: { type: 'string' },
-        largest_city: { type: 'string' },
-        govenor: { type: 'string' },
-        elevation: { type: 'string' },
-        time_zone: { type: 'string' },
-        latitude: { type: 'string' },
-        longitude: { type: 'string' },
-        url: { type: 'string' },
-        flag_url: { type: 'string' },
-        insignia_url: { type: 'string' },
-        area: {
-            type: 'object',
-            properties: {
-                total: { type: 'string' },
-                land: { type: 'string' },
-                water: { type: 'string' },
-            },
-        },
-        population: {
-            type: 'object',
-            properties: {
-                total: { type: 'string' },
-                density: { type: 'string' },
-                median_household_income: { type: 'string' },
-            },
-        },
-        senators: {
-            type: 'array',
-        },
-        house_delegates: {
-            type: 'array',
-        },
+        id: joi.number(),
+        state_name: joi.string(),
+        state_abbreviation: joi.string(),
+        date_admitted: joi.string(),
+        capital: joi.string(),
+        largest_city: joi.string(),
+        govenor: joi.string(),
+        elevation: joi.string(),
+        time_zone: joi.string(),
+        latitude: joi.string(),
+        longitude: joi.string(),
+        url: joi.string(),
+        flag_url: joi.string(),
+        insignia_url: joi.string(),
+        area: joi.object({
+            total: joi.string(),
+            land: joi.string(),
+            water: joi.string(),
+        }),
+        population: joi.object({
+            total: joi.string(),
+            density: joi.string(),
+            median_household_income: joi.string(),
+        }),
+        senators: joi.array(),
+        house_delegates: joi.array(),
     },
 }
+
 module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
         url: '/states/:id',
         schema: {
-            params: {
-                type: 'object',
-                properties: {
-                    id: { type: 'string' },
-                },
-            },
+            params: joi.object({ id: joi.string() }),
             response: {
                 200: responseSchema,
             },
