@@ -1,9 +1,28 @@
 'use strict'
 // TODO: Implement proper error handling (i.e. try, catch, throw)
-
+// TODO: put schemas in separate route
 const responseSchema = {
     type: 'object',
-    required: ['state_name'],
+    required: [
+        'id',
+        'state_name',
+        'state_abbreviation',
+        'date_admitted',
+        'capital',
+        'largest_city',
+        'govenor',
+        'elevation',
+        'time_zone',
+        'latitude',
+        'longitude',
+        'url',
+        'flag_url',
+        'insignia_url',
+        'area',
+        'population',
+        'senators',
+        'house_delegates',
+    ],
     properties: {
         id: { type: 'number' },
         state_name: { type: 'string' },
@@ -48,12 +67,12 @@ module.exports = async (fastify, options, done) => {
         method: 'GET',
         url: '/states/:id',
         schema: {
-            // params: {
-            // type: 'object',
-            // properties: {
-            // id: { type: 'string' },
-            // },
-            // },
+            params: {
+                type: 'object',
+                properties: {
+                    id: { type: 'string' },
+                },
+            },
             response: {
                 200: responseSchema,
             },
