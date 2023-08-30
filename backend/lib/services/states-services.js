@@ -78,10 +78,12 @@ class StatesService {
             .where('state_id', id)
             .select('total', 'land', 'water')
             .from('states_area')
+            .first()
         this.singleState.population = await knex
             .where('state_id', id)
             .select('total', 'density', 'median_household_income')
             .from('states_population')
+            .first()
         this.singleState.senators = (
             await knex
                 .where('state_id', id)
