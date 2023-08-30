@@ -3,11 +3,13 @@
 const fastify = require('fastify')({ logger: true })
 require('dotenv').config()
 const registerPlugins = require('./lib/plugins')
+const registerServices = require('./lib/services/')
 const registerRoutes = require('./lib/routes/')
 
 const start = async () => {
     try {
         await registerPlugins(fastify)
+        await registerServices(fastify)
         await registerRoutes(fastify)
         await fastify.ready()
         fastify.swagger()
