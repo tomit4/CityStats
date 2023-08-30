@@ -1,14 +1,6 @@
 'use strict'
 
-const factory = require('./lib/plugins/joifactory')
-const fastify = require('fastify')({
-    logger: true,
-    schemaController: {
-        compilersFactory: {
-            buildValidator: factory.buildValidator,
-        },
-    },
-})
+const fastify = require('fastify')({ logger: true })
 require('dotenv').config()
 const registerPlugins = require('./lib/plugins')
 const registerServices = require('./lib/services/')

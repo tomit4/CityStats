@@ -1,6 +1,5 @@
 'use strict'
 // TODO: Implement proper error handling (i.e. try, catch, throw)
-// TODO: implement Joi validation
 
 const responseSchema = {
     type: 'object',
