@@ -14,9 +14,10 @@
         "ks-reseed": "knex seed:run"
     },
     "keywords": [],
-    "author": "",
+    "author": "Brian Hayes",
     "license": "BSD-3",
     "dependencies": {
+        "@fastify/helmet": "^11.0.0",
         "@fastify/swagger": "^8.9.0",
         "@fastify/swagger-ui": "^1.9.3",
         "better-sqlite3": "^8.5.2",
