@@ -1,12 +1,11 @@
 'use strict'
 
-// TODO: Implement proper error handling (i.e. try, catch, throw)
 module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
         url: '/states/:id',
         schema: {
-            // TODO: resolve how to use registered singleState shcema here
+            description: 'returns a single state entity by id',
             params: {
                 type: 'object',
                 required: ['id'],
@@ -20,8 +19,11 @@ module.exports = async (fastify, options, done) => {
         },
         handler: async (request, reply) => {
             const { id } = request.params
+            // NOTE: the fact that this throws shows that the
+            // required field in params above is broken...
+            if (!id) throw Error('No id passed within URL string')
             const { knex, stateService } = fastify
-            reply.send(await stateService.grabAllStateById(knex, id))
+            return reply.send(await stateService.grabSingleStateById(knex, id))
         },
     })
     done()

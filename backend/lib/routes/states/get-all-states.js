@@ -1,11 +1,11 @@
 'use strict'
 
-// TODO: Implement proper error handling (i.e. try, catch, throw)
 module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
         url: '/states',
         schema: {
+            description: 'returns all states entities',
             response: {
                 200: {
                     type: 'array',

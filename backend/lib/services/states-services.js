@@ -11,28 +11,33 @@ class StatesService {
         this.house_delegates = []
     }
     async grabAllStateInfo(knex) {
-        this.allStates = await knex('states')
-        this.dbErr(this.allStates)
+        const allStates = await knex('states')
+        if (!allStates) throw Error('No States Table Found')
+        this.allStates = allStates
     }
     async grabAllStateAreas(knex) {
-        this.statesAreas = await knex
+        const statesAreas = await knex
             .select('total', 'land', 'water')
             .from('states_area')
-        this.dbErr(this.statesAreas)
+        if (!statesAreas) throw Error('No States Areas Table Found')
+        this.statesAreas = statesAreas
     }
     async grabAllStatePopulations(knex) {
-        this.statesPopulations = await knex
+        const statesPopulations = await knex
             .select('total', 'density', 'median_household_income')
             .from('states_population')
-        this.dbErr(this.statesPopulations)
+        if (!statesPopulations) throw Error('No States Populations Table Found')
+        this.statesPopulations = statesPopulations
     }
     async grabAllStateSenators(knex) {
-        this.senators = await knex('states_senators')
-        this.dbErr(this.senators)
+        const senators = await knex('states_senators')
+        if (!senators) throw Error('No States Senators Table Found')
+        this.senators = senators
     }
     async grabAllHouseDelegates(knex) {
-        this.house_delegates = await knex('states_house_delegates')
-        this.dbErr(this.house_delegates)
+        const delegates = await knex('states_house_delegates')
+        if (!delegates) throw Error('No States Delegates Table Found')
+        this.house_delegates = delegates
     }
     mapAreaAndPopulation() {
         this.allStates = this.allStates.map((state, i) => {
@@ -65,10 +70,6 @@ class StatesService {
                 })
         })
     }
-    dbErr(data) {
-        if (!data.length)
-            throw Error(`ERROR: No Data retrieved from DB for ${data}`)
-    }
     async grabAllStates(knex) {
         await this.grabAllStateInfo(knex)
         await this.grabAllStateAreas(knex)
@@ -81,35 +82,45 @@ class StatesService {
         return this.allStates
     }
     async grabStateById(knex, id) {
-        return await knex('states').where('id', id).first()
+        const state = await knex('states').where('id', id).first()
+        if (!state) throw Error(`No State Found For Id: ${id}`)
+        return state
     }
     async grabAreaById(knex, id) {
-        return await knex
+        const area = await knex
             .where('state_id', id)
             .select('total', 'land', 'water')
             .from('states_area')
             .first()
+        if (!area) throw Error(`No Areas Found For Id: ${id}`)
+        return area
     }
     async grabPopulationById(knex, id) {
-        return await knex
+        const population = await knex
             .where('state_id', id)
             .select('total', 'density', 'median_household_income')
             .from('states_population')
             .first()
+        if (!population) throw Error(`No Populations Found For Id: ${id}`)
+        return population
     }
     async grabSenatorsById(knex, id) {
-        return await knex
+        const senators = await knex
             .where('state_id', id)
             .select('senator_name')
             .from('states_senators')
+        if (!senators) throw Error(`No Senators Found For Id: ${id}`)
+        return senators
     }
     async grabDelegatesById(knex, id) {
-        return await knex
+        const delegates = await knex
             .where('state_id', id)
             .select('delegate_name')
             .from('states_house_delegates')
+        if (!delegates) throw Error(`No Delegates Found For Id: ${id}`)
+        return delegates
     }
-    async grabAllStateById(knex, id) {
+    async grabSingleStateById(knex, id) {
         this.singleState = await this.grabStateById(knex, id)
         this.singleState.area = await this.grabAreaById(knex, id)
         this.singleState.population = await this.grabPopulationById(knex, id)
