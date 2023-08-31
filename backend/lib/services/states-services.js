@@ -106,6 +106,7 @@ class StatesService {
     }
     // TODO: Break all this individual state methods
     // out into it's own class/service file
+    // (multiple classes for single states and subqueries)
     async grabStateById(knex, id) {
         const state = await knex('states').where('id', id).first()
         if (!state) throw Error(`No State Found For Id: ${id}`)
@@ -167,22 +168,26 @@ class StatesService {
     }
     async grabRelatedFieldData(knex, id, field) {
         const state = await this.grabMinStateInfo(knex, id, field)
+        let area = null
+        let population = null
+        let senators = null
+        let delegates = null
         let returnVal = null
         switch (field) {
             case 'area':
-                const area = await this.grabAreaById(knex, id)
+                area = await this.grabAreaById(knex, id)
                 returnVal = { area }
                 break
             case 'population':
-                const population = await this.grabPopulationById(knex, id)
+                population = await this.grabPopulationById(knex, id)
                 returnVal = { population }
                 break
             case 'senators':
-                const senators = await this.grabSenatorsById(knex, id)
+                senators = await this.grabSenatorsById(knex, id)
                 returnVal = { senators }
                 break
             case 'house_delegates':
-                const delegates = await this.grabDelegatesById(knex, id)
+                delegates = await this.grabDelegatesById(knex, id)
                 returnVal = { house_delegates: delegates }
                 break
             default:
