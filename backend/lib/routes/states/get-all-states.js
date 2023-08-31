@@ -15,7 +15,7 @@ module.exports = async (fastify, options, done) => {
         },
         handler: async (request, reply) => {
             const { knex, stateService } = fastify
-            reply.send(await stateService.grabAllStates(knex))
+            return reply.send(await stateService.grabAllStates(knex))
         },
     })
     done()

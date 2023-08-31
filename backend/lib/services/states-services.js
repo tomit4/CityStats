@@ -9,6 +9,29 @@ class StatesService {
         this.statesPopulations = {}
         this.senators = []
         this.house_delegates = []
+        this.nativeFields = [
+            'id',
+            'state_name',
+            'state_abbreviation',
+            'date_admitted',
+            'capital',
+            'largest_city',
+            'govenor',
+            'elevation',
+            'time_zone',
+            'latitude',
+            'longitude',
+            'url',
+            'flag_url',
+            'insignia_url',
+        ]
+        this.relatedFields = [
+            'area',
+            'population',
+            'senators',
+            'house_delegates',
+        ]
+        this.fields = [...this.nativeFields, ...this.relatedFields]
     }
     async grabAllStateInfo(knex) {
         const allStates = await knex('states')
@@ -81,6 +104,8 @@ class StatesService {
         this.mapDelegates()
         return this.allStates
     }
+    // TODO: Break all this individual state methods
+    // out into it's own class/service file
     async grabStateById(knex, id) {
         const state = await knex('states').where('id', id).first()
         if (!state) throw Error(`No State Found For Id: ${id}`)
@@ -110,7 +135,7 @@ class StatesService {
             .select('senator_name')
             .from('states_senators')
         if (!senators) throw Error(`No Senators Found For Id: ${id}`)
-        return senators
+        return senators.map(senator => senator.senator_name)
     }
     async grabDelegatesById(knex, id) {
         const delegates = await knex
@@ -118,19 +143,66 @@ class StatesService {
             .select('delegate_name')
             .from('states_house_delegates')
         if (!delegates) throw Error(`No Delegates Found For Id: ${id}`)
-        return delegates
+        return delegates.map(delegate => delegate.delegate_name)
     }
     async grabSingleStateById(knex, id) {
         this.singleState = await this.grabStateById(knex, id)
         this.singleState.area = await this.grabAreaById(knex, id)
         this.singleState.population = await this.grabPopulationById(knex, id)
-        this.singleState.senators = (await this.grabSenatorsById(knex, id)).map(
-            senator => senator.senator_name,
+        this.singleState.senators = await this.grabSenatorsById(knex, id)
+        this.singleState.house_delegates = await this.grabDelegatesById(
+            knex,
+            id,
         )
-        this.singleState.house_delegates = (
-            await this.grabDelegatesById(knex, id)
-        ).map(delegate => delegate.delegate_name)
         return this.singleState
+    }
+    async grabNativeFieldData(knex, id, field) {
+        return await knex
+            .where('id', id)
+            .select('id')
+            .select('state_name', 'state_abbreviation')
+            .select(field)
+            .from('states')
+            .first()
+    }
+    async grabRelatedFieldData(knex, id, field) {
+        const state = await this.grabMinStateInfo(knex, id, field)
+        let returnVal = null
+        switch (field) {
+            case 'area':
+                const area = await this.grabAreaById(knex, id)
+                returnVal = { area }
+                break
+            case 'population':
+                const population = await this.grabPopulationById(knex, id)
+                returnVal = { population }
+                break
+            case 'senators':
+                const senators = await this.grabSenatorsById(knex, id)
+                returnVal = { senators }
+                break
+            case 'house_delegates':
+                const delegates = await this.grabDelegatesById(knex, id)
+                returnVal = { house_delegates: delegates }
+                break
+            default:
+                throw Error('Unable to find info on field')
+        }
+        return { state_id: Number(id), ...state, ...returnVal }
+    }
+    async grabMinStateInfo(knex, id, field) {
+        return await knex
+            .where('id', id)
+            .select('state_name', 'state_abbreviation')
+            .from('states')
+            .first()
+    }
+    async grabRelDataById(knex, id, field) {
+        if (this.nativeFields.includes(field)) {
+            return await this.grabNativeFieldData(knex, id, field)
+        } else {
+            return await this.grabRelatedFieldData(knex, id, field)
+        }
     }
 }
 
