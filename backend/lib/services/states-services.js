@@ -4,7 +4,7 @@ const fp = require('fastify-plugin')
 class StatesService {
     constructor() {
         this.allStates = []
-        this.singleState = []
+        this.singleState = {}
         this.statesAreas = {}
         this.statesPopulations = {}
         this.senators = []
@@ -80,10 +80,9 @@ class StatesService {
         this.mapDelegates()
         return this.allStates
     }
-
-    // TODO: Move Single State Service into separate
-    // Class that extends this class
-    // and is registered as a separate fastify plugin(???)
+    async grabStateById(knex, id) {
+        return await knex('states').where('id', id).first()
+    }
     async grabAreaById(knex, id) {
         return await knex
             .where('state_id', id)
@@ -111,7 +110,7 @@ class StatesService {
             .from('states_house_delegates')
     }
     async grabAllStateById(knex, id) {
-        this.singleState = await knex('states').where('id', id).first()
+        this.singleState = await this.grabStateById(knex, id)
         this.singleState.area = await this.grabAreaById(knex, id)
         this.singleState.population = await this.grabPopulationById(knex, id)
         this.singleState.senators = (await this.grabSenatorsById(knex, id)).map(
