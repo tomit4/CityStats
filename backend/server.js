@@ -13,6 +13,11 @@ const start = async () => {
         await registerServices(fastify)
         await registerSchemas(fastify)
         await registerRoutes(fastify)
+        fastify.after(() => {
+            fastify.gracefulShutdown((signal, next) => {
+                next()
+            })
+        })
         await fastify.ready()
         fastify.swagger()
         fastify.listen({ port: process.env.PORT })
