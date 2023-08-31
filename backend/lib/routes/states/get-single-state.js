@@ -22,8 +22,10 @@ module.exports = async (fastify, options, done) => {
             // NOTE: the fact that this throws shows that the
             // required field in params above is broken...
             if (!id) throw Error('No id passed within URL string')
-            const { knex, stateService } = fastify
-            return reply.send(await stateService.grabSingleStateById(knex, id))
+            const { knex, singleStateService } = fastify
+            return reply.send(
+                await singleStateService.grabSingleStateById(knex, id),
+            )
         },
     })
     done()

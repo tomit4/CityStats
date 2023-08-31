@@ -25,10 +25,12 @@ module.exports = async (fastify, options, done) => {
             // NOTE: the fact that this throws shows that the
             // required field in params above is broken...
             if (!field) throw Error('No subquery passed within URL string')
-            const { knex, stateService } = fastify
-            if (!stateService.fields.includes(field))
+            const { knex, singleStateService } = fastify
+            if (!singleStateService.fields.includes(field))
                 throw Error('Passed subquery is not found in states entity')
-            reply.send(await stateService.grabRelDataById(knex, id, field))
+            reply.send(
+                await singleStateService.grabRelDataById(knex, id, field),
+            )
         },
     })
     done()
