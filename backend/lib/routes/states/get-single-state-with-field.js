@@ -15,15 +15,12 @@ module.exports = async (fastify, options, done) => {
                     field: { type: 'string' },
                 },
             },
-            // TODO: Establish appropriate schema
-            // response: {
-            // 200: { $ref: 'singleState#/response' },
-            // },
+            response: {
+                200: { $ref: 'singleStateWithField#/' },
+            },
         },
         handler: async (request, reply) => {
             const { id, field } = request.params
-            // NOTE: the fact that this throws shows that the
-            // required field in params above is broken...
             if (!field) throw Error('No subquery passed within URL string')
             const { knex, singleStateService } = fastify
             if (!singleStateService.fields.includes(field))

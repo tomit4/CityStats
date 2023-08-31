@@ -14,13 +14,11 @@ module.exports = async (fastify, options, done) => {
                 },
             },
             response: {
-                200: { $ref: 'singleState#/response' },
+                200: { $ref: 'singleState#' },
             },
         },
         handler: async (request, reply) => {
             const { id } = request.params
-            // NOTE: the fact that this throws shows that the
-            // required field in params above is broken...
             if (!id) throw Error('No id passed within URL string')
             const { knex, singleStateService } = fastify
             return reply.send(

@@ -29,9 +29,6 @@ class SingleStateService {
         ]
         this.fields = [...this.nativeFields, ...this.relatedFields]
     }
-    // TODO: Break all this individual state methods
-    // out into it's own class/service file
-    // (multiple classes for single states and subqueries)
     async grabStateById(knex, id) {
         const state = await knex('states').where('id', id).first()
         if (!state) throw Error(`No State Found For Id: ${id}`)
@@ -123,7 +120,7 @@ class SingleStateService {
     async grabMinStateInfo(knex, id, field) {
         return await knex
             .where('id', id)
-            .select('state_name', 'state_abbreviation')
+            .select('id', 'state_name', 'state_abbreviation')
             .from('states')
             .first()
     }

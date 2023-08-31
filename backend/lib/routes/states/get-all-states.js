@@ -9,7 +9,7 @@ module.exports = async (fastify, options, done) => {
             response: {
                 200: {
                     type: 'array',
-                    items: { $ref: 'singleState#/response' },
+                    items: { $ref: 'singleState#' },
                 },
             },
         },
