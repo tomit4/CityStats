@@ -46,7 +46,7 @@ class SingleStateService {
                 .from('states_area')
                 .first()
             return area
-        } catch (error) {
+        } catch (err) {
             console.error('ERROR :=>', err)
             throw Error(`No Areas Found For Id: ${id}`)
         }

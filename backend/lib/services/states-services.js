@@ -24,7 +24,7 @@ class StatesService {
                 .select('total', 'land', 'water')
                 .from('states_area')
             this.statesAreas = statesAreas
-        } catch (error) {
+        } catch (err) {
             console.error('ERROR :=>', err)
             throw Error('No States Areas Table Found')
         }
