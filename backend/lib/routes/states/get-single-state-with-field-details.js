@@ -17,7 +17,7 @@ module.exports = async (fastify, options, done) => {
                 },
             },
             response: {
-                200: { $ref: 'singleStateWithField#/properties' },
+                200: { $ref: 'singleStateWithField#' },
             },
         },
         handler: async (request, reply) => {
