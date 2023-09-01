@@ -132,7 +132,10 @@ class SingleStateServiceDetails {
                 ...state,
                 house_delegate: delegates[Number(details - 1)],
             }
-        } else throw Error('All conditionals for field subquery failed')
+        } else
+            throw Error(
+                `No data found for subquery: '${details}' in query: '${idOrName}/${field}'`,
+            )
     }
 }
 
