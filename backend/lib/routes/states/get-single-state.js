@@ -20,6 +20,8 @@ module.exports = async (fastify, options, done) => {
         handler: async (request, reply) => {
             const { id } = request.params
             if (!id) throw Error('No id passed within URL string')
+            if (isNaN(Number(id)))
+                throw Error('Id passed into URL string is not a Number')
             const { knex, singleStateService } = fastify
             return reply.send(
                 await singleStateService.grabSingleStateById(knex, id),
