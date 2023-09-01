@@ -20,12 +20,13 @@ module.exports = async (fastify, options, done) => {
         handler: async (request, reply) => {
             const { id } = request.params
             if (!id) throw Error('No id passed within URL string')
+            // TODO: change so app checks if string is in array of all state names,
+            // if it is in the array, grabSingleStateByStateName(knex, name)
+            // else error 'Passed URL string is not a USA state name'
             if (isNaN(Number(id)))
                 throw Error('Id passed into URL string is not a Number')
-            const { knex, singleStateService } = fastify
-            return reply.send(
-                await singleStateService.grabSingleStateById(knex, id),
-            )
+            const { knex, stateService } = fastify
+            reply.send(await stateService.grabSingleStateById(knex, id))
         },
     })
     done()

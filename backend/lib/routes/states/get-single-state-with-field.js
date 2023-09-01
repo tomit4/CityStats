@@ -22,12 +22,10 @@ module.exports = async (fastify, options, done) => {
         handler: async (request, reply) => {
             const { id, field } = request.params
             if (!field) throw Error('No subquery passed within URL string')
-            const { knex, singleStateService } = fastify
-            if (!singleStateService.fields.includes(field))
+            const { knex, stateService } = fastify
+            if (!stateService.fields.includes(field))
                 throw Error('Passed subquery is not found in states entity')
-            reply.send(
-                await singleStateService.grabRelDataById(knex, id, field),
-            )
+            reply.send(await stateService.grabRelDataById(knex, id, field))
         },
     })
     done()
