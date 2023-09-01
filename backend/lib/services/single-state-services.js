@@ -34,8 +34,18 @@ class SingleStateService extends SingleStateServiceDetails {
         if (!state) throw Error(`No State Found For Id: ${id}`)
         return state
     }
+    async grabStateByName(knex, name) {
+        const state = await knex('states').where('state_name', name).first()
+        if (!state) throw Error(`No State Found By Name: ${name}`)
+        return state
+    }
+    async grabAllStateNames(knex) {
+        const allStateNames = await knex.select('state_name').from('states')
+        if (!allStateNames)
+            throw Error('Failure to retrieve all State Names from DB')
+        return allStateNames.map(state => state.state_name)
+    }
     async grabAreaById(knex, id) {
-        console.log('in here :=>')
         const area = await knex
             .where('state_id', id)
             .select('total', 'land', 'water')
@@ -70,13 +80,25 @@ class SingleStateService extends SingleStateServiceDetails {
         return delegates.map(delegate => delegate.delegate_name)
     }
     async grabSingleStateById(knex, id) {
-        this.singleState = await this.grabStateById(knex, id)
-        this.singleState.area = await this.grabAreaById(knex, id)
-        this.singleState.population = await this.grabPopulationById(knex, id)
-        this.singleState.senators = await this.grabSenatorsById(knex, id)
+        let idOrName = id
+        if (isNaN(Number(idOrName))) {
+            const allStateNames = await this.grabAllStateNames(knex)
+            if (allStateNames.includes(idOrName)) {
+                this.singleState = await this.grabStateByName(knex, idOrName)
+                idOrName = this.singleState.id
+            } else throw Error(`No State Found by Name: ${idOrName}`)
+        } else {
+            this.singleState = await this.grabStateById(knex, id)
+        }
+        this.singleState.area = await this.grabAreaById(knex, idOrName)
+        this.singleState.population = await this.grabPopulationById(
+            knex,
+            idOrName,
+        )
+        this.singleState.senators = await this.grabSenatorsById(knex, idOrName)
         this.singleState.house_delegates = await this.grabDelegatesById(
             knex,
-            id,
+            idOrName,
         )
         return this.singleState
     }
