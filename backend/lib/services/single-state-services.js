@@ -126,6 +126,7 @@ class SingleStateService {
             .from('states')
             .first()
         if (!state) throw Error(`No state info retrieved for id: ${id}`)
+        return state
     }
     async grabRelDataById(knex, id, field) {
         if (this.nativeFields.includes(field)) {
