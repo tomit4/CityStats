@@ -57,7 +57,11 @@ class StatesSchema {
         this.singleStateWithField = {
             type: 'object',
             required: ['id', 'state_name', 'state_abbreviation'],
-            properties: this.singleState.properties,
+            properties: {
+                ...this.singleState.properties,
+                senator: joi.string(),
+                house_delegate: joi.string(),
+            },
         }
     }
 }

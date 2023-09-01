@@ -9,6 +9,31 @@ class SingleStateServiceDetails {
             ...this.relatedFieldArrayKeys,
         ]
     }
+    async grabAllStateNames(knex) {
+        const allStateNames = await knex.select('state_name').from('states')
+        if (!allStateNames)
+            throw Error('Failure to retrieve all State Names from DB')
+        return allStateNames.map(state => state.state_name)
+    }
+    async grabStateIdByname(knex, name) {
+        const stateId = (
+            await knex('states').select('id').where('state_name', name).first()
+        ).id
+        if (!stateId) throw Error(`No State Id Found By Name: ${name}`)
+        return stateId
+    }
+    async grabIdByName(knex, idOrName) {
+        let id
+        if (isNaN(Number(idOrName))) {
+            const allStateNames = await this.grabAllStateNames(knex)
+            if (allStateNames.includes(idOrName)) {
+                id = await this.grabStateIdByname(knex, idOrName)
+            } else throw Error(`No State Found by Name: ${idOrName}`)
+        } else {
+            id = idOrName
+        }
+        return id
+    }
     async grabSenatorsById(knex, id) {
         const senators = await knex
             .where('state_id', id)
@@ -76,7 +101,8 @@ class SingleStateServiceDetails {
         }
     }
     // NOTE: Somewhat smelly code here, but does what it's supposed to.
-    async grabRelDataByIdWithDeets(knex, id, field, details) {
+    async grabRelDataByIdWithDeets(knex, idOrName, field, details) {
+        const id = await this.grabIdByName(knex, idOrName)
         const state = await this.grabMinStateInfo(knex, id)
         // Grabs Conditionals
         const {
@@ -98,7 +124,7 @@ class SingleStateServiceDetails {
         } else if (senFieldIsValid) {
             const senators = await this.grabSenatorsById(knex, id)
             if (deetsNotInRange(senators)) throwNoDeetsErr(details, field)
-            return { ...state, senator: senators[Number(details - 1)] }
+            return { ...state, senator: senators[details - 1] }
         } else if (delFieldIsValid) {
             const delegates = await this.grabDelegatesById(knex, id)
             if (deetsNotInRange(delegates)) throwNoDeetsErr(details, field)

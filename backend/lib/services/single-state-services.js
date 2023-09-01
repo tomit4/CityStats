@@ -34,17 +34,6 @@ class SingleStateService extends SingleStateServiceDetails {
         if (!state) throw Error(`No State Found For Id: ${id}`)
         return state
     }
-    async grabStateByName(knex, name) {
-        const state = await knex('states').where('state_name', name).first()
-        if (!state) throw Error(`No State Found By Name: ${name}`)
-        return state
-    }
-    async grabAllStateNames(knex) {
-        const allStateNames = await knex.select('state_name').from('states')
-        if (!allStateNames)
-            throw Error('Failure to retrieve all State Names from DB')
-        return allStateNames.map(state => state.state_name)
-    }
     async grabAreaById(knex, id) {
         const area = await knex
             .where('state_id', id)
@@ -63,42 +52,15 @@ class SingleStateService extends SingleStateServiceDetails {
         if (!population) throw Error(`No Populations Found For Id: ${id}`)
         return population
     }
-    async grabSenatorsById(knex, id) {
-        const senators = await knex
-            .where('state_id', id)
-            .select('senator_name')
-            .from('states_senators')
-        if (!senators) throw Error(`No Senators Found For Id: ${id}`)
-        return senators.map(senator => senator.senator_name)
-    }
-    async grabDelegatesById(knex, id) {
-        const delegates = await knex
-            .where('state_id', id)
-            .select('delegate_name')
-            .from('states_house_delegates')
-        if (!delegates) throw Error(`No Delegates Found For Id: ${id}`)
-        return delegates.map(delegate => delegate.delegate_name)
-    }
-    async grabSingleStateById(knex, id) {
-        let idOrName = id
-        if (isNaN(Number(idOrName))) {
-            const allStateNames = await this.grabAllStateNames(knex)
-            if (allStateNames.includes(idOrName)) {
-                this.singleState = await this.grabStateByName(knex, idOrName)
-                idOrName = this.singleState.id
-            } else throw Error(`No State Found by Name: ${idOrName}`)
-        } else {
-            this.singleState = await this.grabStateById(knex, id)
-        }
-        this.singleState.area = await this.grabAreaById(knex, idOrName)
-        this.singleState.population = await this.grabPopulationById(
-            knex,
-            idOrName,
-        )
-        this.singleState.senators = await this.grabSenatorsById(knex, idOrName)
+    async grabSingleStateById(knex, idOrName) {
+        const id = await this.grabIdByName(knex, idOrName)
+        this.singleState = await this.grabStateById(knex, id)
+        this.singleState.area = await this.grabAreaById(knex, id)
+        this.singleState.population = await this.grabPopulationById(knex, id)
+        this.singleState.senators = await this.grabSenatorsById(knex, id)
         this.singleState.house_delegates = await this.grabDelegatesById(
             knex,
-            idOrName,
+            id,
         )
         return this.singleState
     }
@@ -152,7 +114,8 @@ class SingleStateService extends SingleStateServiceDetails {
         if (!state) throw Error(`No state info retrieved for id: ${id}`)
         return state
     }
-    async grabRelDataById(knex, id, field) {
+    async grabRelDataById(knex, idOrName, field) {
+        const id = await this.grabIdByName(knex, idOrName)
         if (this.nativeFields.includes(field)) {
             return await this.grabNativeFieldData(knex, id, field)
         } else {
