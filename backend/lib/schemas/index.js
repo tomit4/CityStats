@@ -1,10 +1,11 @@
 'use strict'
+const schemas = require('./states')
 // TODO: Provide proper jsdocs style comments here
 module.exports = async fastify => {
-    Object.entries(require('./states')).forEach(async entry => {
-        await fastify.addSchema({
-            $id: entry[0],
-            ...entry[1],
+    for (const key in schemas) {
+        const newSchema = Object.assign({}, schemas[key], {
+            $id: key,
         })
-    })
+        fastify.addSchema(newSchema)
+    }
 }
