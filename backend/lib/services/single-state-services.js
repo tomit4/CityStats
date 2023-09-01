@@ -21,11 +21,11 @@ class SingleStateService {
             'flag_url',
             'insignia_url',
         ]
+        this.relatedFieldObjectKeys = ['area', 'population']
+        this.relatedFieldArrayKeys = ['senators', 'house_delegates']
         this.relatedFields = [
-            'area',
-            'population',
-            'senators',
-            'house_delegates',
+            ...this.relatedFieldObjectKeys,
+            ...this.relatedFieldArrayKeys,
         ]
         this.fields = [...this.nativeFields, ...this.relatedFields]
     }
@@ -80,16 +80,18 @@ class SingleStateService {
         return this.singleState
     }
     async grabNativeFieldData(knex, id, field) {
-        return await knex
+        const nativeFieldData = await knex
             .where('id', id)
             .select('id')
             .select('state_name', 'state_abbreviation')
             .select(field)
             .from('states')
             .first()
+        if (!nativeFieldData)
+            throw Error(`No data retrieved for field: ${field} at id: ${id}`)
     }
     async grabRelatedFieldData(knex, id, field) {
-        const state = await this.grabMinStateInfo(knex, id, field)
+        const state = await this.grabMinStateInfo(knex, id)
         let area = null
         let population = null
         let senators = null
@@ -117,18 +119,57 @@ class SingleStateService {
         }
         return { state_id: Number(id), ...state, ...returnVal }
     }
-    async grabMinStateInfo(knex, id, field) {
-        return await knex
+    async grabMinStateInfo(knex, id) {
+        const state = await knex
             .where('id', id)
             .select('id', 'state_name', 'state_abbreviation')
             .from('states')
             .first()
+        if (!state) throw Error(`No state info retrieved for id: ${id}`)
     }
     async grabRelDataById(knex, id, field) {
         if (this.nativeFields.includes(field)) {
             return await this.grabNativeFieldData(knex, id, field)
         } else {
             return await this.grabRelatedFieldData(knex, id, field)
+        }
+    }
+    async grabRelDataByIdWithDeets(knex, id, field, details) {
+        const stateField = `states_${field}`
+        const state = await this.grabMinStateInfo(knex, id)
+        if (
+            this.relatedFieldObjectKeys.includes(field) &&
+            !isNaN(Number(details))
+        ) {
+            const deets = await knex
+                .where('state_id', id)
+                .select(details)
+                .from(stateField)
+                .first()
+            return { ...state, ...deets }
+        } else if (
+            this.relatedFieldObjectKeys.includes(field) &&
+            isNaN(Number(details))
+        ) {
+            throw Error(`No Info on subquery: ${details} in field: ${field}`)
+        } else if (field === 'senators' && !isNaN(Number(details))) {
+            const senators = await this.grabSenatorsById(knex, id)
+            if (Number(details) > senators.length || Number(details) === 0) {
+                throw Error(
+                    `No Info on subquery: ${details} in field: ${field}`,
+                )
+            } else return { ...state, senator: senators[Number(details - 1)] }
+        } else if (field === 'house_delegates' && !isNaN(Number(details))) {
+            const delegates = await this.grabDelegatesById(knex, id)
+            if (Number(details) > delegates.length || Number(details) === 0) {
+                throw Error(
+                    `No Info on subquery: ${details} in field: ${field}`,
+                )
+            } else
+                return {
+                    ...state,
+                    house_delegate: delegates[Number(details - 1)],
+                }
         }
     }
 }
