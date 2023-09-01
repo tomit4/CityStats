@@ -135,42 +135,59 @@ class SingleStateService {
             return await this.grabRelatedFieldData(knex, id, field)
         }
     }
+    async grabDetails(knex, id, details, stateField) {
+        const deets = await knex
+            .where('state_id', id)
+            .select(details)
+            .from(stateField)
+            .first()
+        if (!deets)
+            throw Error(
+                `No detail information found for id: ${id} 
+                    in field ${stateField} for details: ${details}`,
+            )
+        return deets
+    }
     async grabRelDataByIdWithDeets(knex, id, field, details) {
         const stateField = `states_${field}`
         const state = await this.grabMinStateInfo(knex, id)
-        if (
+
+        // Conditional Statements For Parsing Details
+        const relFieldIsValid =
             this.relatedFieldObjectKeys.includes(field) &&
             !isNaN(Number(details))
-        ) {
-            const deets = await knex
-                .where('state_id', id)
-                .select(details)
-                .from(stateField)
-                .first()
-            return { ...state, ...deets }
-        } else if (
+        const relFieldIsInvalid =
             this.relatedFieldObjectKeys.includes(field) &&
             isNaN(Number(details))
-        ) {
+        const senFieldIsValid = field === 'senators' && !isNaN(Number(details))
+        const delFieldIsValid =
+            field === 'house_delegates' && !isNaN(Number(details))
+
+        // Returns either obj or array based off of details followed
+        if (relFieldIsValid) {
+            const deets = await this.grabDetails(knex, id, details, stateField)
+            return { ...state, ...deets }
+        } else if (relFieldIsInvalid) {
             throw Error(`No Info on subquery: ${details} in field: ${field}`)
-        } else if (field === 'senators' && !isNaN(Number(details))) {
+        } else if (senFieldIsValid) {
             const senators = await this.grabSenatorsById(knex, id)
             if (Number(details) > senators.length || Number(details) === 0) {
                 throw Error(
                     `No Info on subquery: ${details} in field: ${field}`,
                 )
-            } else return { ...state, senator: senators[Number(details - 1)] }
-        } else if (field === 'house_delegates' && !isNaN(Number(details))) {
+            }
+            return { ...state, senator: senators[Number(details - 1)] }
+        } else if (delFieldIsValid) {
             const delegates = await this.grabDelegatesById(knex, id)
             if (Number(details) > delegates.length || Number(details) === 0) {
                 throw Error(
                     `No Info on subquery: ${details} in field: ${field}`,
                 )
-            } else
-                return {
-                    ...state,
-                    house_delegate: delegates[Number(details - 1)],
-                }
+            }
+            return {
+                ...state,
+                house_delegate: delegates[Number(details - 1)],
+            }
         }
     }
 }
