@@ -59,7 +59,6 @@ class SingleStateServiceDetails {
         if (!state) throw Error(`No state info retrieved for id: ${id}`)
         return state
     }
-    // NOTE: Possibly extend this into its on subclass...
     async grabDetails(knex, id, details, table) {
         const field = table.split('_').pop()
         const deets = {}
