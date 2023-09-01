@@ -30,43 +30,63 @@ class SingleStateService {
         this.fields = [...this.nativeFields, ...this.relatedFields]
     }
     async grabStateById(knex, id) {
-        const state = await knex('states').where('id', id).first()
-        if (!state) throw Error(`No State Found For Id: ${id}`)
-        return state
+        try {
+            const state = await knex('states').where('id', id).first()
+            return state
+        } catch (err) {
+            console.error('ERROR :=>', err)
+            throw Error(`No State Found For Id: ${id}`)
+        }
     }
     async grabAreaById(knex, id) {
-        const area = await knex
-            .where('state_id', id)
-            .select('total', 'land', 'water')
-            .from('states_area')
-            .first()
-        if (!area) throw Error(`No Areas Found For Id: ${id}`)
-        return area
+        try {
+            const area = await knex
+                .where('state_id', id)
+                .select('total', 'land', 'water')
+                .from('states_area')
+                .first()
+            return area
+        } catch (error) {
+            console.error('ERROR :=>', err)
+            throw Error(`No Areas Found For Id: ${id}`)
+        }
     }
     async grabPopulationById(knex, id) {
-        const population = await knex
-            .where('state_id', id)
-            .select('total', 'density', 'median_household_income')
-            .from('states_population')
-            .first()
-        if (!population) throw Error(`No Populations Found For Id: ${id}`)
-        return population
+        try {
+            const population = await knex
+                .where('state_id', id)
+                .select('total', 'density', 'median_household_income')
+                .from('states_population')
+                .first()
+            return population
+        } catch (err) {
+            console.error('ERROR :=>', err)
+            throw Error(`No Populations Found For Id: ${id}`)
+        }
     }
     async grabSenatorsById(knex, id) {
-        const senators = await knex
-            .where('state_id', id)
-            .select('senator_name')
-            .from('states_senators')
-        if (!senators) throw Error(`No Senators Found For Id: ${id}`)
-        return senators.map(senator => senator.senator_name)
+        try {
+            const senators = await knex
+                .where('state_id', id)
+                .select('senator_name')
+                .from('states_senators')
+            return senators.map(senator => senator.senator_name)
+        } catch (err) {
+            console.error('ERROR :=>', err)
+            throw Error(`No Senators Found For Id: ${id}`)
+        }
     }
     async grabDelegatesById(knex, id) {
-        const delegates = await knex
-            .where('state_id', id)
-            .select('delegate_name')
-            .from('states_house_delegates')
-        if (!delegates) throw Error(`No Delegates Found For Id: ${id}`)
-        return delegates.map(delegate => delegate.delegate_name)
+        try {
+            const delegates = await knex
+                .where('state_id', id)
+                .select('delegate_name')
+                .from('states_house_delegates')
+            return delegates.map(delegate => delegate.delegate_name)
+        } catch (err) {
+            console.error('ERROR :=>', err)
+            throw Error(`No Delegates Found For Id: ${id}`)
+        }
     }
     async grabSingleStateById(knex, id) {
         this.singleState = await this.grabStateById(knex, id)
@@ -80,15 +100,19 @@ class SingleStateService {
         return this.singleState
     }
     async grabNativeFieldData(knex, id, field) {
-        const nativeFieldData = await knex
-            .where('id', id)
-            .select('id')
-            .select('state_name', 'state_abbreviation')
-            .select(field)
-            .from('states')
-            .first()
-        if (!nativeFieldData)
+        try {
+            const nativeFieldData = await knex
+                .where('id', id)
+                .select('id')
+                .select('state_name', 'state_abbreviation')
+                .select(field)
+                .from('states')
+                .first()
+            return nativeFieldData
+        } catch (err) {
+            console.error('ERROR :=>', err)
             throw Error(`No data retrieved for field: ${field} at id: ${id}`)
+        }
     }
     async grabRelatedFieldData(knex, id, field) {
         const state = await this.grabMinStateInfo(knex, id)
@@ -120,13 +144,17 @@ class SingleStateService {
         return { state_id: Number(id), ...state, ...returnVal }
     }
     async grabMinStateInfo(knex, id) {
-        const state = await knex
-            .where('id', id)
-            .select('id', 'state_name', 'state_abbreviation')
-            .from('states')
-            .first()
-        if (!state) throw Error(`No state info retrieved for id: ${id}`)
-        return state
+        try {
+            const state = await knex
+                .where('id', id)
+                .select('id', 'state_name', 'state_abbreviation')
+                .from('states')
+                .first()
+            return state
+        } catch (err) {
+            console.error('ERROR :=>', err)
+            throw Error(`No state info retrieved for id: ${id}`)
+        }
     }
     async grabRelDataById(knex, id, field) {
         if (this.nativeFields.includes(field)) {
@@ -135,60 +163,76 @@ class SingleStateService {
             return await this.grabRelatedFieldData(knex, id, field)
         }
     }
-    async grabDetails(knex, id, details, stateField) {
-        const deets = await knex
-            .where('state_id', id)
-            .select(details)
-            .from(stateField)
-            .first()
-        if (!deets)
+    // NOTE: Possibly extend this into its on subclass...
+    async grabDetails(knex, id, details, table) {
+        const field = table.split('_').pop()
+        const deets = {}
+        try {
+            deets[field] = await knex
+                .where('state_id', id)
+                .select(details)
+                .from(table)
+                .first()
+            return deets
+        } catch (err) {
+            console.error('ERROR :=>', err)
             throw Error(
-                `No detail information found for id: ${id} 
-                    in field ${stateField} for details: ${details}`,
+                `No detail information found for id: ${id} in field ${field} for details: ${details}`,
             )
-        return deets
+        }
     }
-    async grabRelDataByIdWithDeets(knex, id, field, details) {
-        const stateField = `states_${field}`
-        const state = await this.grabMinStateInfo(knex, id)
-
-        // Conditional Statements For Parsing Details
-        const relFieldIsValid =
-            this.relatedFieldObjectKeys.includes(field) &&
-            !isNaN(Number(details))
-        const relFieldIsInvalid =
-            this.relatedFieldObjectKeys.includes(field) &&
-            isNaN(Number(details))
-        const senFieldIsValid = field === 'senators' && !isNaN(Number(details))
-        const delFieldIsValid =
-            field === 'house_delegates' && !isNaN(Number(details))
-
-        // Returns either obj or array based off of details followed
-        if (relFieldIsValid) {
-            const deets = await this.grabDetails(knex, id, details, stateField)
-            return { ...state, ...deets }
-        } else if (relFieldIsInvalid) {
-            throw Error(`No Info on subquery: ${details} in field: ${field}`)
-        } else if (senFieldIsValid) {
-            const senators = await this.grabSenatorsById(knex, id)
-            if (Number(details) > senators.length || Number(details) === 0) {
-                throw Error(
+    deetConditionals(field, details) {
+        return {
+            relFieldIsValid:
+                this.relatedFieldObjectKeys.includes(field) &&
+                isNaN(Number(details)),
+            relFieldIsInvalid:
+                this.relatedFieldObjectKeys.includes(field) &&
+                !isNaN(Number(details)),
+            senFieldIsValid: field === 'senators' && !isNaN(Number(details)),
+            delFieldIsValid:
+                field === 'house_delegates' && !isNaN(Number(details)),
+            deetsNotInRange: reps =>
+                Number(details) > reps.length || Number(details) === 0,
+            throwNoDeetsErr: (details, field) => {
+                throw new Error(
                     `No Info on subquery: ${details} in field: ${field}`,
                 )
-            }
+            },
+        }
+    }
+    // NOTE: Somewhat smelly code here, but does what it's supposed to.
+    async grabRelDataByIdWithDeets(knex, id, field, details) {
+        const state = await this.grabMinStateInfo(knex, id)
+        // Grabs Conditionals
+        const {
+            relFieldIsValid,
+            relFieldIsInvalid,
+            senFieldIsValid,
+            delFieldIsValid,
+            deetsNotInRange,
+            throwNoDeetsErr,
+        } = this.deetConditionals(field, details)
+
+        // Returns either obj or array based off of details passed
+        if (relFieldIsValid) {
+            const table = `states_${field}`
+            const deets = await this.grabDetails(knex, id, details, table)
+            return { ...state, ...deets }
+        } else if (relFieldIsInvalid) {
+            throwNoDeetsErr(details, field)
+        } else if (senFieldIsValid) {
+            const senators = await this.grabSenatorsById(knex, id)
+            if (deetsNotInRange(senators)) throwNoDeetsErr(details, field)
             return { ...state, senator: senators[Number(details - 1)] }
         } else if (delFieldIsValid) {
             const delegates = await this.grabDelegatesById(knex, id)
-            if (Number(details) > delegates.length || Number(details) === 0) {
-                throw Error(
-                    `No Info on subquery: ${details} in field: ${field}`,
-                )
-            }
+            if (deetsNotInRange(delegates)) throwNoDeetsErr(details, field)
             return {
                 ...state,
                 house_delegate: delegates[Number(details - 1)],
             }
-        }
+        } else throw Error('All conditionals for field subquery failed')
     }
 }
 
