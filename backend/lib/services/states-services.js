@@ -58,6 +58,8 @@ class StatesService {
             throw Error('No States Delegates Table Found')
         }
     }
+    // NOTE: These map functions can probably
+    // be accomplished similarly using sql join in queries above
     mapAreaAndPopulation() {
         this.allStates = this.allStates.map((state, i) => {
             return {
