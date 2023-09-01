@@ -20,6 +20,7 @@ module.exports = async (fastify, options, done) => {
             },
         },
         handler: async (request, reply) => {
+            // TODO: Check if id is state_name and change accordingly...
             const { id, field } = request.params
             if (!field) throw Error('No subquery passed within URL string')
             const { knex, stateService } = fastify
