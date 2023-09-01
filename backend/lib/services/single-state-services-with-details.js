@@ -10,41 +10,29 @@ class SingleStateServiceDetails {
         ]
     }
     async grabSenatorsById(knex, id) {
-        try {
-            const senators = await knex
-                .where('state_id', id)
-                .select('senator_name')
-                .from('states_senators')
-            return senators.map(senator => senator.senator_name)
-        } catch (err) {
-            console.error('ERROR :=>', err)
-            throw Error(`No Senators Found For Id: ${id}`)
-        }
+        const senators = await knex
+            .where('state_id', id)
+            .select('senator_name')
+            .from('states_senators')
+        if (!senators) throw Error(`No Senators Found For Id: ${id}`)
+        return senators.map(senator => senator.senator_name)
     }
     async grabDelegatesById(knex, id) {
-        try {
-            const delegates = await knex
-                .where('state_id', id)
-                .select('delegate_name')
-                .from('states_house_delegates')
-            return delegates.map(delegate => delegate.delegate_name)
-        } catch (err) {
-            console.error('ERROR :=>', err)
-            throw Error(`No Delegates Found For Id: ${id}`)
-        }
+        const delegates = await knex
+            .where('state_id', id)
+            .select('delegate_name')
+            .from('states_house_delegates')
+        if (!delegates) throw Error(`No Delegates Found For Id: ${id}`)
+        return delegates.map(delegate => delegate.delegate_name)
     }
     async grabMinStateInfo(knex, id) {
-        try {
-            const state = await knex
-                .where('id', id)
-                .select('id', 'state_name', 'state_abbreviation')
-                .from('states')
-                .first()
-            return state
-        } catch (err) {
-            console.error('ERROR :=>', err)
-            throw Error(`No state info retrieved for id: ${id}`)
-        }
+        const state = await knex
+            .where('id', id)
+            .select('id', 'state_name', 'state_abbreviation')
+            .from('states')
+            .first()
+        if (!state) throw Error(`No state info retrieved for id: ${id}`)
+        return state
     }
     // NOTE: Possibly extend this into its on subclass...
     async grabDetails(knex, id, details, table) {
@@ -56,9 +44,12 @@ class SingleStateServiceDetails {
                 .select(details)
                 .from(table)
                 .first()
+            if (!deets[field])
+                throw Error(
+                    `No detail information found for id: ${id} in field ${field} for details: ${details}`,
+                )
             return deets
         } catch (err) {
-            console.error('ERROR :=>', err)
             throw Error(
                 `No detail information found for id: ${id} in field ${field} for details: ${details}`,
             )

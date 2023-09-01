@@ -1,4 +1,5 @@
 'use strict'
+const fp = require('fastify-plugin')
 const SingleStateService = require('./single-state-services')
 
 class StatesService extends SingleStateService {
@@ -11,53 +12,33 @@ class StatesService extends SingleStateService {
         this.house_delegates = []
     }
     async grabAllStateInfo(knex) {
-        try {
-            const allStates = await knex('states')
-            this.allStates = allStates
-        } catch (err) {
-            console.error('ERROR :=>', err)
-            throw Error('No States Table Found')
-        }
+        const allStates = await knex('states')
+        if (!allStates) throw Error('No States Table Found')
+        this.allStates = allStates
     }
     async grabAllStateAreas(knex) {
-        try {
-            const statesAreas = await knex
-                .select('total', 'land', 'water')
-                .from('states_area')
-            this.statesAreas = statesAreas
-        } catch (err) {
-            console.error('ERROR :=>', err)
-            throw Error('No States Areas Table Found')
-        }
+        const statesAreas = await knex
+            .select('total', 'land', 'water')
+            .from('states_area')
+        if (!statesAreas) throw Error('No States Areas Table Found')
+        this.statesAreas = statesAreas
     }
     async grabAllStatePopulations(knex) {
-        try {
-            const statesPopulations = await knex
-                .select('total', 'density', 'median_household_income')
-                .from('states_population')
-            this.statesPopulations = statesPopulations
-        } catch (err) {
-            console.error('ERROR :=>', err)
-            throw Error('No States Populations Table Found')
-        }
+        const statesPopulations = await knex
+            .select('total', 'density', 'median_household_income')
+            .from('states_population')
+        if (!statesPopulations) throw Error('No States Populations Table Found')
+        this.statesPopulations = statesPopulations
     }
     async grabAllStateSenators(knex) {
-        try {
-            const senators = await knex('states_senators')
-            this.senators = senators
-        } catch (err) {
-            console.error('ERROR :=>', err)
-            throw Error('No States Senators Table Found')
-        }
+        const senators = await knex('states_senators')
+        if (!senators) throw Error('No States Senators Table Found')
+        this.senators = senators
     }
     async grabAllHouseDelegates(knex) {
-        try {
-            const delegates = await knex('states_house_delegates')
-            this.house_delegates = delegates
-        } catch (err) {
-            console.error('ERROR :=>', err)
-            throw Error('No States Delegates Table Found')
-        }
+        const delegates = await knex('states_house_delegates')
+        if (!delegates) throw Error('No States Delegates Table Found')
+        this.house_delegates = delegates
     }
     // NOTE: These map functions can probably
     // be accomplished similarly using sql join in queries above
@@ -105,4 +86,17 @@ class StatesService extends SingleStateService {
     }
 }
 
-module.exports = StatesService
+const statesPlugin = (fastify, options, done) => {
+    if (!fastify.states) {
+        const stateService = new StatesService()
+        fastify.decorate('stateService', stateService)
+        fastify.addHook('onClose', (fastify, done) => {
+            if (fastify.states === stateService) {
+                fastify.states.destroy(done)
+            }
+        })
+    }
+    done()
+}
+
+module.exports = fp(statesPlugin, { name: 'fastify-states-plugin' })
