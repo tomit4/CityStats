@@ -4,15 +4,15 @@ const fastify = require('fastify')({ logger: true })
 require('dotenv').config()
 const registerPlugins = require('./lib/plugins')
 const registerServices = require('./lib/services')
-const registerSchemas = require('./lib/schemas')
 const registerRoutes = require('./lib/routes')
+const assignSchemas = require('./lib/schemas')
 
 const start = async () => {
     try {
         await registerPlugins(fastify)
         await registerServices(fastify)
-        await registerSchemas(fastify)
         await registerRoutes(fastify)
+        assignSchemas(fastify)
         fastify.after(() => {
             fastify.gracefulShutdown((signal, next) => {
                 next()

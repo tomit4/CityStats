@@ -1,11 +1,16 @@
 'use strict'
 const SingleStateServiceDetails = require('./single-state-services-with-details')
 
+/**
+ * Intermediary Class for new State Object
+ * @constructor
+ * returns { SingleStateService }
+ * */
 class SingleStateService extends SingleStateServiceDetails {
     constructor() {
         super()
         this.singleState = {}
-        this.nativeFields = [
+        this._nativeFields = [
             'id',
             'state_name',
             'state_abbreviation',
@@ -21,20 +26,14 @@ class SingleStateService extends SingleStateServiceDetails {
             'flag_url',
             'insignia_url',
         ]
-        this.relatedFieldObjectKeys = ['area', 'population']
-        this.relatedFieldArrayKeys = ['senators', 'house_delegates']
-        this.relatedFields = [
-            ...this.relatedFieldObjectKeys,
-            ...this.relatedFieldArrayKeys,
-        ]
-        this.fields = [...this.nativeFields, ...this.relatedFields]
+        this.fields = [...this._nativeFields, ...this.relatedFields]
     }
-    async grabStateById(knex, id) {
+    async _grabStateById(knex, id) {
         const state = await knex('states').where('id', id).first()
         if (!state) throw Error(`No State Found For Id: ${id}`)
         return state
     }
-    async grabAreaById(knex, id) {
+    async _grabAreaById(knex, id) {
         const area = await knex
             .where('state_id', id)
             .select('total', 'land', 'water')
@@ -43,7 +42,7 @@ class SingleStateService extends SingleStateServiceDetails {
         if (!area) throw Error(`No Areas Found For Id: ${id}`)
         return area
     }
-    async grabPopulationById(knex, id) {
+    async _grabPopulationById(knex, id) {
         const population = await knex
             .where('state_id', id)
             .select('total', 'density', 'median_household_income')
@@ -52,19 +51,16 @@ class SingleStateService extends SingleStateServiceDetails {
         if (!population) throw Error(`No Populations Found For Id: ${id}`)
         return population
     }
-    async grabSingleStateById(knex, idOrName) {
-        const id = await this.grabIdByName(knex, idOrName)
-        this.singleState = await this.grabStateById(knex, id)
-        this.singleState.area = await this.grabAreaById(knex, id)
-        this.singleState.population = await this.grabPopulationById(knex, id)
-        this.singleState.senators = await this.grabSenatorsById(knex, id)
-        this.singleState.house_delegates = await this.grabDelegatesById(
-            knex,
-            id,
-        )
-        return this.singleState
+    async _grabMinStateInfo(knex, id) {
+        const state = await knex
+            .where('id', id)
+            .select('id', 'state_name', 'state_abbreviation')
+            .from('states')
+            .first()
+        if (!state) throw Error(`No state info retrieved for id: ${id}`)
+        return state
     }
-    async grabNativeFieldData(knex, id, field) {
+    async _grabNativeFieldData(knex, id, field) {
         const nativeFieldData = await knex
             .where('id', id)
             .select('id')
@@ -76,8 +72,8 @@ class SingleStateService extends SingleStateServiceDetails {
             throw Error(`No data retrieved for field: ${field} at id: ${id}`)
         return nativeFieldData
     }
-    async grabRelatedFieldData(knex, id, field) {
-        const state = await this.grabMinStateInfo(knex, id)
+    async _grabRelatedFieldData(knex, id, field) {
+        const state = await this._grabMinStateInfo(knex, id)
         let area = null
         let population = null
         let senators = null
@@ -85,11 +81,11 @@ class SingleStateService extends SingleStateServiceDetails {
         let returnVal = null
         switch (field) {
             case 'area':
-                area = await this.grabAreaById(knex, id)
+                area = await this._grabAreaById(knex, id)
                 returnVal = { area }
                 break
             case 'population':
-                population = await this.grabPopulationById(knex, id)
+                population = await this._grabPopulationById(knex, id)
                 returnVal = { population }
                 break
             case 'senators':
@@ -105,21 +101,37 @@ class SingleStateService extends SingleStateServiceDetails {
         }
         return { state_id: Number(id), ...state, ...returnVal }
     }
-    async grabMinStateInfo(knex, id) {
-        const state = await knex
-            .where('id', id)
-            .select('id', 'state_name', 'state_abbreviation')
-            .from('states')
-            .first()
-        if (!state) throw Error(`No state info retrieved for id: ${id}`)
-        return state
+    /**
+     * Aggregates all state info by id
+     * @params { promise } knex
+     * @params { string } idORName
+     * returns { object } singleState
+     * */
+    async grabSingleStateById(knex, idOrName) {
+        const id = await this.grabIdByName(knex, idOrName)
+        this.singleState = await this._grabStateById(knex, id)
+        this.singleState.area = await this._grabAreaById(knex, id)
+        this.singleState.population = await this._grabPopulationById(knex, id)
+        this.singleState.senators = await this.grabSenatorsById(knex, id)
+        this.singleState.house_delegates = await this.grabDelegatesById(
+            knex,
+            id,
+        )
+        return this.singleState
     }
+    /**
+     * Aggregates min state info with single query field
+     * @params { promise } knex
+     * @params { string } idOrName
+     * @params { string } field
+     * returns { object }
+     * */
     async grabRelDataById(knex, idOrName, field) {
         const id = await this.grabIdByName(knex, idOrName)
-        if (this.nativeFields.includes(field)) {
-            return await this.grabNativeFieldData(knex, id, field)
+        if (this._nativeFields.includes(field)) {
+            return await this._grabNativeFieldData(knex, id, field)
         } else {
-            return await this.grabRelatedFieldData(knex, id, field)
+            return await this._grabRelatedFieldData(knex, id, field)
         }
     }
 }

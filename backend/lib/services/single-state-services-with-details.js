@@ -1,21 +1,22 @@
 'use strict'
 
+/** Base Class for new State Object
+ * @constructor
+ * returns { SingleStateServiceDetails }
+ * */
 class SingleStateServiceDetails {
     constructor() {
-        this.relatedFieldObjectKeys = ['area', 'population']
-        this.relatedFieldArrayKeys = ['senators', 'house_delegates']
-        this.relatedFields = [
-            ...this.relatedFieldObjectKeys,
-            ...this.relatedFieldArrayKeys,
-        ]
+        this._statsFields = ['area', 'population']
+        this._repFields = ['senators', 'house_delegates']
+        this.relatedFields = [...this._statsFields, ...this._repFields]
     }
-    async grabAllStateNames(knex) {
+    async _grabAllStateNames(knex) {
         const allStateNames = await knex.select('state_name').from('states')
         if (!allStateNames)
             throw Error('Failure to retrieve all State Names from DB')
         return allStateNames.map(state => state.state_name)
     }
-    async grabStateIdByname(knex, name) {
+    async _grabStateIdByName(knex, name) {
         const stateId = (
             await knex('states').select('id').where('state_name', name).first()
         ).id
@@ -25,9 +26,9 @@ class SingleStateServiceDetails {
     async grabIdByName(knex, idOrName) {
         let id
         if (isNaN(Number(idOrName))) {
-            const allStateNames = await this.grabAllStateNames(knex)
+            const allStateNames = await this._grabAllStateNames(knex)
             if (allStateNames.includes(idOrName)) {
-                id = await this.grabStateIdByname(knex, idOrName)
+                id = await this._grabStateIdByName(knex, idOrName)
             } else throw Error(`No State Found by Name: ${idOrName}`)
         } else {
             id = idOrName
@@ -50,7 +51,7 @@ class SingleStateServiceDetails {
         if (!delegates) throw Error(`No Delegates Found For Id: ${id}`)
         return delegates.map(delegate => delegate.delegate_name)
     }
-    async grabMinStateInfo(knex, id) {
+    async _grabMinStateInfo(knex, id) {
         const state = await knex
             .where('id', id)
             .select('id', 'state_name', 'state_abbreviation')
@@ -59,7 +60,7 @@ class SingleStateServiceDetails {
         if (!state) throw Error(`No state info retrieved for id: ${id}`)
         return state
     }
-    async grabDetails(knex, id, details, table) {
+    async _grabDetails(knex, id, details, table) {
         const field = table.split('_').pop()
         const deets = {}
         try {
@@ -79,14 +80,12 @@ class SingleStateServiceDetails {
             )
         }
     }
-    deetConditionals(field, details) {
+    _deetConditionals(field, details) {
         return {
             relFieldIsValid:
-                this.relatedFieldObjectKeys.includes(field) &&
-                isNaN(Number(details)),
+                this._statsFields.includes(field) && isNaN(Number(details)),
             relFieldIsInvalid:
-                this.relatedFieldObjectKeys.includes(field) &&
-                !isNaN(Number(details)),
+                this._statsFields.includes(field) && !isNaN(Number(details)),
             senFieldIsValid: field === 'senators' && !isNaN(Number(details)),
             delFieldIsValid:
                 field === 'house_delegates' && !isNaN(Number(details)),
@@ -99,11 +98,19 @@ class SingleStateServiceDetails {
             },
         }
     }
-    // NOTE: Somewhat smelly code here, but does what it's supposed to.
+
+    /**
+     * Aggregates Single Relational Data Point On State
+     * (i.e. specific area/total, senator/senator_id, etc.)
+     * @params { promise } knex
+     * @params { string } idOrName
+     * @ params { string } field
+     * @params { string } details
+     * returns { object }
+     * */
     async grabRelDataByIdWithDeets(knex, idOrName, field, details) {
         const id = await this.grabIdByName(knex, idOrName)
-        const state = await this.grabMinStateInfo(knex, id)
-        // Grabs Conditionals
+        const state = await this._grabMinStateInfo(knex, id)
         const {
             relFieldIsValid,
             relFieldIsInvalid,
@@ -111,12 +118,11 @@ class SingleStateServiceDetails {
             delFieldIsValid,
             deetsNotInRange,
             throwNoDeetsErr,
-        } = this.deetConditionals(field, details)
+        } = this._deetConditionals(field, details)
 
-        // Returns either obj or array based off of details passed
         if (relFieldIsValid) {
             const table = `states_${field}`
-            const deets = await this.grabDetails(knex, id, details, table)
+            const deets = await this._grabDetails(knex, id, details, table)
             return { ...state, ...deets }
         } else if (relFieldIsInvalid) {
             throwNoDeetsErr(details, field)

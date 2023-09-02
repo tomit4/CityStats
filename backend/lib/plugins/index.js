@@ -1,5 +1,5 @@
 'use strict'
-// TODO: Provide proper jsdocs style comments here
+
 module.exports = async fastify => {
     await fastify.register(require('@fastify/helmet'))
     await fastify.register(require('@fastify/rate-limit'), {

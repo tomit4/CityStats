@@ -1,6 +1,12 @@
 'use strict'
 const joi = require('./joi')
 
+/**
+ * Base class for states/single_state schemas
+ * JSON Verification For Fastify Routes
+ * @constructor { void }
+ * returns { object } StatesSchema
+ * */
 class StatesSchema {
     constructor() {
         this.singleState = {

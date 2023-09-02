@@ -21,7 +21,6 @@ module.exports = async (fastify, options, done) => {
             },
         },
         handler: async (request, reply) => {
-            // TODO: Check if id is state_name and change accordingly...
             const { id, field, details } = request.params
             if (!details)
                 throw Error('No nested subquery passed within URL string')

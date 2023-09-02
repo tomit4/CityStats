@@ -2,58 +2,63 @@
 const fp = require('fastify-plugin')
 const SingleStateService = require('./single-state-services')
 
+/** Finalized Full Class for new State Object
+ * @constructor
+ * returns { StatesService }
+ * */
 class StatesService extends SingleStateService {
     constructor() {
         super()
         this.allStates = []
-        this.statesAreas = {}
-        this.statesPopulations = {}
-        this.senators = []
-        this.house_delegates = []
+        this._statesAreas = {}
+        this._statesPopulations = {}
+        this._senators = []
+        this._house_delegates = []
     }
-    async grabAllStateInfo(knex) {
+    async _grabAllStateInfo(knex) {
         const allStates = await knex('states')
         if (!allStates) throw Error('No States Table Found')
         this.allStates = allStates
     }
-    async grabAllStateAreas(knex) {
-        const statesAreas = await knex
+    async _grabAllStateAreas(knex) {
+        const _statesAreas = await knex
             .select('total', 'land', 'water')
             .from('states_area')
-        if (!statesAreas) throw Error('No States Areas Table Found')
-        this.statesAreas = statesAreas
+        if (!_statesAreas) throw Error('No States Areas Table Found')
+        this._statesAreas = _statesAreas
     }
-    async grabAllStatePopulations(knex) {
-        const statesPopulations = await knex
+    async _grabAllStatePopulations(knex) {
+        const _statesPopulations = await knex
             .select('total', 'density', 'median_household_income')
             .from('states_population')
-        if (!statesPopulations) throw Error('No States Populations Table Found')
-        this.statesPopulations = statesPopulations
+        if (!_statesPopulations)
+            throw Error('No States Populations Table Found')
+        this._statesPopulations = _statesPopulations
     }
-    async grabAllStateSenators(knex) {
-        const senators = await knex('states_senators')
-        if (!senators) throw Error('No States Senators Table Found')
-        this.senators = senators
+    async _grabAllStateSenators(knex) {
+        const _senators = await knex('states__senators')
+        if (!_senators) throw Error('No States Senators Table Found')
+        this._senators = _senators
     }
-    async grabAllHouseDelegates(knex) {
-        const delegates = await knex('states_house_delegates')
+    async _grabAllHouseDelegates(knex) {
+        const delegates = await knex('states__house_delegates')
         if (!delegates) throw Error('No States Delegates Table Found')
-        this.house_delegates = delegates
+        this._house_delegates = delegates
     }
     // NOTE: These map functions can probably
     // be accomplished similarly using sql join in queries above
-    mapAreaAndPopulation() {
+    _mapAreaAndPopulation() {
         this.allStates = this.allStates.map((state, i) => {
             return {
                 ...state,
-                area: this.statesAreas[i],
-                population: this.statesPopulations[i],
+                area: this._statesAreas[i],
+                population: this._statesPopulations[i],
             }
         })
     }
-    mapSenators() {
+    _mapSenators() {
         this.allStates.forEach(state => {
-            state.senators = this.senators
+            state._senators = this._senators
                 .filter(senator => {
                     return state.id === senator.state_id
                 })
@@ -62,9 +67,9 @@ class StatesService extends SingleStateService {
                 })
         })
     }
-    mapDelegates() {
+    _mapDelegates() {
         this.allStates.forEach(state => {
-            state.house_delegates = this.house_delegates
+            state._house_delegates = this._house_delegates
                 .filter(delegate => {
                     return state.id === delegate.state_id
                 })
@@ -73,15 +78,20 @@ class StatesService extends SingleStateService {
                 })
         })
     }
+    /**
+     * Aggregates all states data
+     * @params { promise } knex
+     * returns { array } allStates
+     * */
     async grabAllStates(knex) {
-        await this.grabAllStateInfo(knex)
-        await this.grabAllStateAreas(knex)
-        await this.grabAllStatePopulations(knex)
-        await this.grabAllStateSenators(knex)
-        await this.grabAllHouseDelegates(knex)
-        this.mapAreaAndPopulation()
-        this.mapSenators()
-        this.mapDelegates()
+        await this._grabAllStateInfo(knex)
+        await this._grabAllStateAreas(knex)
+        await this._grabAllStatePopulations(knex)
+        await this._grabAllStateSenators(knex)
+        await this._grabAllHouseDelegates(knex)
+        this._mapAreaAndPopulation()
+        this._mapSenators()
+        this._mapDelegates()
         return this.allStates
     }
 }
