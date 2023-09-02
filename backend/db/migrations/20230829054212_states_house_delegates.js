@@ -4,9 +4,9 @@
  */
 exports.up = function (knex) {
     return knex.schema.createTable('states_house_delegates', table => {
-        table.increments()
-        table.integer('state_id')
-        table.string('delegate_name')
+        table.increments().primary()
+        table.integer('state_id').notNullable()
+        table.string('delegate_name').notNullable()
     })
 }
 

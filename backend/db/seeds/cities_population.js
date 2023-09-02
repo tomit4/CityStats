@@ -7,9 +7,14 @@ exports.seed = async function (knex) {
     await knex('cities_population').del()
     await knex('cities_population').insert([
         {
-            city: '112.09 sq mi',
-            density: '21.40 sq mi',
-            metro: '0.53 sq mi',
+            city: '125182',
+            density: '1157/sq mi',
+            metro: '170219',
+        },
+        {
+            city: '190469',
+            density: '3075.40/sq mi',
+            metro: '702219',
         },
     ])
 }

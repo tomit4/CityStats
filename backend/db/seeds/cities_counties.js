@@ -14,5 +14,9 @@ exports.seed = async function (knex) {
             city_id: 1,
             county_name: 'Jones',
         },
+        {
+            city_id: 2,
+            county_name: 'Summit',
+        },
     ])
 }

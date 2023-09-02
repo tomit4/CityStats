@@ -1,5 +1,4 @@
 'use strict'
-
 const fastify = require('fastify')({ logger: true })
 require('dotenv').config()
 const registerPlugins = require('./lib/plugins')

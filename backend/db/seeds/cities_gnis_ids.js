@@ -10,5 +10,9 @@ exports.seed = async function (knex) {
             city_id: 1,
             gnis_feature_id: '1329173',
         },
+        {
+            city_id: 2,
+            gnis_feature_id: '1064305',
+        },
     ])
 }

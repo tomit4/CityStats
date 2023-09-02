@@ -4,10 +4,10 @@
  */
 exports.up = function (knex) {
     return knex.schema.createTable('states_population', table => {
-        table.increments('state_id')
-        table.string('total')
-        table.string('density')
-        table.string('median_household_income')
+        table.increments('state_id').primary()
+        table.string('total').notNullable()
+        table.string('density').notNullable()
+        table.string('median_household_income').notNullable()
     })
 }
 

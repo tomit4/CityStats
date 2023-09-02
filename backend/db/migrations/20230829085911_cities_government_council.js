@@ -4,9 +4,9 @@
  */
 exports.up = function (knex) {
     return knex.schema.createTable('cities_government_council', table => {
-        table.increments()
-        table.integer('city_id')
-        table.string('council_member')
+        table.increments().primary()
+        table.integer('city_id').notNullable()
+        table.string('council_member').notNullable()
     })
 }
 

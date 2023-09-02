@@ -11,5 +11,10 @@ exports.seed = async function (knex) {
             land: '21.40 sq mi',
             water: '0.53 sq mi',
         },
+        {
+            city: '62.27 sq mi',
+            land: '61.93 sq mi',
+            water: '0.34 sq mi',
+        },
     ])
 }

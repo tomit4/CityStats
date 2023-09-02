@@ -4,17 +4,17 @@
  */
 exports.up = function (knex) {
     return knex.schema.createTable('cities', table => {
-        table.increments()
-        table.integer('state_id')
-        table.string('city_name')
-        table.string('state_name')
-        table.string('coordinates')
-        table.string('settled_founded')
-        table.string('incorporated')
-        table.string('elevation')
-        table.string('time_zone')
-        table.string('fips_code')
-        table.string('url')
+        table.increments().primary()
+        table.integer('state_id').notNullable()
+        table.string('city_name').notNullable()
+        table.string('state_name').notNullable()
+        table.string('coordinates').notNullable()
+        table.string('settled_founded').notNullable()
+        table.string('incorporated').notNullable()
+        table.string('elevation').notNullable()
+        table.string('time_zone').notNullable()
+        table.string('fips_code').notNullable()
+        table.string('url').notNullable()
     })
 }
 

@@ -4,10 +4,10 @@
  */
 exports.up = function (knex) {
     return knex.schema.createTable('cities_population', table => {
-        table.increments('city_id')
-        table.string('city')
-        table.string('density')
-        table.string('metro')
+        table.increments('city_id').primary()
+        table.string('city').notNullable()
+        table.string('density').notNullable()
+        table.string('metro').notNullable()
     })
 }
 

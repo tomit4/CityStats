@@ -10,5 +10,13 @@ exports.seed = async function (knex) {
             city_id: 1,
             area_code: 325,
         },
+        {
+            city_id: 2,
+            area_code: 234,
+        },
+        {
+            city_id: 2,
+            area_code: 330,
+        },
     ])
 }

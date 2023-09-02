@@ -18,5 +18,17 @@ exports.seed = async function (knex) {
             fips_code: '48-01000',
             url: 'https://www.abilenetx.gov/',
         },
+        {
+            state_id: 35,
+            city_name: 'Akron',
+            state_name: 'Ohio',
+            coordinates: '41°4′23″N 81°31′4″W',
+            settled_founded: '1825',
+            incorporated: '1865',
+            elevation: '1004 ft',
+            time_zone: 'UTC-5(EST)',
+            fips_code: '39-01000',
+            url: 'https://www.akronohio.gov/',
+        },
     ])
 }

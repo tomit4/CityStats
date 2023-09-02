@@ -8,5 +8,12 @@ exports.seed = async function (knex) {
     await knex('cities_zip_codes').insert([
         { city_id: 1, zip_code: '79601-08' },
         { city_id: 1, zip_code: '79697-99' },
+        { city_id: 2, zip_code: '44301-44321' },
+        { city_id: 2, zip_code: '44325-44326' },
+        { city_id: 2, zip_code: '44328' },
+        { city_id: 2, zip_code: '44333-44334' },
+        { city_id: 2, zip_code: '44372' },
+        { city_id: 2, zip_code: '44396' },
+        { city_id: 2, zip_code: '44398' },
     ])
 }
