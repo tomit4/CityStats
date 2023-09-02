@@ -7,4 +7,5 @@ module.exports = async fastify => {
     await fastify.register(
         require('./states/get-single-state-with-field-details'),
     )
+    await fastify.register(require('./cities/get-all-cities'))
 }

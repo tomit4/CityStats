@@ -36,12 +36,12 @@ class StatesService extends SingleStateService {
         this._statesPopulations = _statesPopulations
     }
     async _grabAllStateSenators(knex) {
-        const _senators = await knex('states__senators')
-        if (!_senators) throw Error('No States Senators Table Found')
-        this._senators = _senators
+        const senators = await knex('states_senators')
+        if (!senators) throw Error('No States Senators Table Found')
+        this._senators = senators
     }
     async _grabAllHouseDelegates(knex) {
-        const delegates = await knex('states__house_delegates')
+        const delegates = await knex('states_house_delegates')
         if (!delegates) throw Error('No States Delegates Table Found')
         this._house_delegates = delegates
     }
@@ -58,7 +58,7 @@ class StatesService extends SingleStateService {
     }
     _mapSenators() {
         this.allStates.forEach(state => {
-            state._senators = this._senators
+            state.senators = this._senators
                 .filter(senator => {
                     return state.id === senator.state_id
                 })
@@ -69,7 +69,7 @@ class StatesService extends SingleStateService {
     }
     _mapDelegates() {
         this.allStates.forEach(state => {
-            state._house_delegates = this._house_delegates
+            state.house_delegates = this._house_delegates
                 .filter(delegate => {
                     return state.id === delegate.state_id
                 })
