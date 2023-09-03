@@ -8,33 +8,23 @@ const fp = require('fastify-plugin')
 class CityService {
     constructor() {
         this.allCities = []
-        this._allCounties = []
-        this._allGovs = []
-        this._allCouncilMembers = []
-        this._allAreas = []
-        this._allPopulations = []
-        this._allZips = []
-        this._allAreaCodes = []
-        this._allGnisIds = []
     }
-    // NOTE: Try and refactor and see if you can
-    // simply return from most grab funcs
     async _grabAllCitiesInfo(knex) {
         const allCities = await knex('cities')
         if (!allCities) throw Error('No Cities Table Found')
-        this.allCities = allCities
+        return allCities
     }
     async _grabAllCounties(knex) {
         const allCounties = await knex('cities_counties')
         if (!allCounties) throw Error('No Cities Counties Table Found')
-        this._allCounties = allCounties
+        return allCounties
     }
     async _grabBaseGovInfo(knex) {
         const allGovs = await knex
             .select('type', 'mayor')
             .from('cities_government')
         if (!allGovs) throw Error('No Cities Government Table Found')
-        this._allGovs = allGovs
+        return allGovs
     }
     async _grabGovCouncilMembers(knex) {
         const allCouncilMembers = await knex
@@ -42,61 +32,60 @@ class CityService {
             .from('cities_government_council')
         if (!allCouncilMembers)
             throw Error('No Cities Government Council Table Found')
-        this._allCouncilMembers = allCouncilMembers
+        return allCouncilMembers
     }
     async _grabAllAreas(knex) {
         const allAreas = await knex
             .select('city', 'land', 'water')
             .from('cities_area')
         if (!allAreas) throw Error('No Cities Areas Table Found')
-        this._allAreas = allAreas
+        return allAreas
     }
     async _grabAllPopulations(knex) {
         const allPopulations = await knex
             .select('city', 'density', 'metro')
             .from('cities_population')
         if (!allPopulations) throw Error('No Cities Population Table Found')
-        this._allPopulations = allPopulations
+        return allPopulations
     }
     async _grabAllZipCodes(knex) {
         const allZips = await knex
             .select('city_id', 'zip_code')
             .from('cities_zip_codes')
         if (!allZips) throw Error('No Cities Zip Codes Table Found')
-        this._allZips = allZips
+        return allZips
     }
     async _grabAllAreaCodes(knex) {
         const allAreaCodes = await knex
             .select('city_id', 'area_code')
             .from('cities_area_codes')
         if (!allAreaCodes) throw Error('No Cities Area Codes Table Found')
-        this._allAreaCodes = allAreaCodes
+        return allAreaCodes
     }
     async _grabAllGnisIds(knex) {
         const allGnisIds = await knex
             .select('city_id', 'gnis_feature_id')
             .from('cities_gnis_ids')
         if (!allGnisIds) throw Error('No Cities Gnis Ids Table Found')
-        this._allGnisIds = allGnisIds
+        return allGnisIds
     }
-    // Yeah... break this up and rethink...
-    async _mapGovernmentsAndAreasAndPopulations(knex) {
-        await this._grabBaseGovInfo(knex)
-        await this._grabAllAreas(knex)
-        await this._grabAllPopulations(knex)
+    async _mapObjectFields(knex) {
+        const allGovs = await this._grabBaseGovInfo(knex)
+        const allAreas = await this._grabAllAreas(knex)
+        const allPopulations = await this._grabAllPopulations(knex)
         this.allCities = this.allCities.map((city, i) => {
             return {
                 ...city,
-                government: this._allGovs[i],
-                area: this._allAreas[i],
-                population: this._allPopulations[i],
+                government: allGovs[i],
+                area: allAreas[i],
+                population: allPopulations[i],
             }
         })
     }
     async _mapCounties(knex) {
-        await this._grabAllCounties(knex)
+        const counties = await this._grabAllCounties(knex)
         this.allCities.forEach(city => {
-            city.counties = this._allCounties
+            city.counties = counties
                 .filter(county => {
                     return city.id === county.city_id
                 })
@@ -105,76 +94,78 @@ class CityService {
                 })
         })
     }
-    // NOTE: Further refactoring needed,
-    // this is just a clone of the _aggregate func
-    // with ['government'] the only differing variable...
-    async _mapCouncilors(knex) {
-        await this._grabGovCouncilMembers(knex)
-        const holder = {}
-        this._allCouncilMembers.forEach(member => {
-            if (!Object.hasOwn(holder, member.city_id)) {
-                holder[member.city_id] = {}
-            }
-            if (!Object.hasOwn(holder[member.city_id], 'council_members')) {
-                holder[member.city_id]['council_members'] = []
-            }
-            if (member.city_id in holder) {
-                holder[member.city_id]['council_members'].push(
-                    member['council_member'],
-                )
-            }
-            this.allCities[member.city_id - 1]['government']['city_council'] =
-                holder[member.city_id]['council_members']
-        })
-    }
     async _parseCodes(knex, codesToAgg) {
         const parsedCodes = {}
         if (codesToAgg === 'zip_codes') {
-            await this._grabAllZipCodes(knex)
-            parsedCodes.table = this._allZips
+            const allZips = await this._grabAllZipCodes(knex)
+            parsedCodes.table = allZips
             parsedCodes.key = 'zip_code'
         } else if (codesToAgg === 'area_codes') {
-            await this._grabAllAreaCodes(knex)
-            parsedCodes.table = this._allAreaCodes
+            const allAreaCodes = await this._grabAllAreaCodes(knex)
+            parsedCodes.table = allAreaCodes
             parsedCodes.key = 'area_code'
         } else if (codesToAgg === 'gnis_feature_ids') {
-            await this._grabAllGnisIds(knex)
-            parsedCodes.table = this._allGnisIds
+            const allGnisIds = await this._grabAllGnisIds(knex)
+            parsedCodes.table = allGnisIds
             parsedCodes.key = 'gnis_feature_id'
+        } else if (codesToAgg === 'council_members') {
+            const allCouncilMembers = await this._grabGovCouncilMembers(knex)
+            parsedCodes.table = allCouncilMembers
+            parsedCodes.key = 'council_member'
         } else {
             throw Error(`Passed codes: ${codesToAgg} is not acceptable format`)
         }
         return parsedCodes
     }
-    // NOTE: Attempt refactor to return holder
-    // and assign to this.allCities in grabAllCities func below
-    async _aggregate(knex, codesToAgg) {
-        const holder = {}
+    async _aggregateCodes(knex, codesToAgg) {
+        const aggregated = {}
         const parsedCodes = await this._parseCodes(knex, codesToAgg)
         const tableToAgg = parsedCodes.table
         const key = parsedCodes.key
         tableToAgg.forEach(prop => {
-            if (!Object.hasOwn(holder, prop.city_id)) {
-                holder[prop.city_id] = {}
+            if (!Object.hasOwn(aggregated, prop.city_id)) {
+                aggregated[prop.city_id] = {}
             }
-            if (!Object.hasOwn(holder[prop.city_id], codesToAgg)) {
-                holder[prop.city_id][codesToAgg] = []
+            if (!Object.hasOwn(aggregated[prop.city_id], codesToAgg)) {
+                aggregated[prop.city_id][codesToAgg] = []
             }
-            if (prop.city_id in holder) {
-                holder[prop.city_id][codesToAgg].push(prop[key])
+            if (prop.city_id in aggregated) {
+                aggregated[prop.city_id][codesToAgg].push(prop[key])
             }
-            this.allCities[prop.city_id - 1][codesToAgg] =
-                holder[prop.city_id][codesToAgg]
+        })
+        return aggregated
+    }
+    async _aggregate(knex, codesToAgg) {
+        const dataToBeNested = codesToAgg === 'council_members'
+        const aggregated = await this._aggregateCodes(knex, codesToAgg)
+        const aggregatedKeys = Object.keys(aggregated).map(key => {
+            return Number(key)
+        })
+        this.allCities.forEach((city, i) => {
+            const aggregatedData =
+                aggregated[String(aggregatedKeys[i])][codesToAgg]
+            if (city.id === aggregatedKeys[i]) {
+                if (dataToBeNested) {
+                    city['government']['city_council'] = aggregatedData
+                } else {
+                    city[codesToAgg] = aggregatedData
+                }
+            }
         })
     }
+    /**
+     * Aggregates all cities data
+     * @params { promise } knex
+     * returns { array } allCities
+     * */
     async grabAllCities(knex) {
-        await this._grabAllCitiesInfo(knex)
+        this.allCities = await this._grabAllCitiesInfo(knex)
         await this._mapCounties(knex)
-        await this._mapGovernmentsAndAreasAndPopulations(knex)
-        await this._mapCouncilors(knex)
+        await this._mapObjectFields(knex)
         await this._aggregate(knex, 'zip_codes')
         await this._aggregate(knex, 'area_codes')
         await this._aggregate(knex, 'gnis_feature_ids')
+        await this._aggregate(knex, 'council_members')
         return this.allCities
     }
 }
