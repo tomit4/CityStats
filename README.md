@@ -12,7 +12,7 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 
 -   [x] Break out knex/sql statements into services folder as classes with properties/methods.
 -   [x] Integrate [fastify-helmet](https://github.com/fastify/fastify-helmet).
--   [ ] Add more nested routes for specific state data (i.e. area, population, speicific senators, etc.)
+-   [x] Add more nested routes for specific state data (i.e. area, population, speicific senators, etc.)
 -   [ ] Apply seed data for states
 -   [ ] Create routes and nested routes for cities ( same as nested routes above for cities)
 -   [ ] Apply seed data for cities
