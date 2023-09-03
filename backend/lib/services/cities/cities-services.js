@@ -8,9 +8,23 @@ const fp = require('fastify-plugin')
 class CityService {
     constructor() {
         this.allCities = []
+        this._cityTableFields = [
+            'id',
+            'city_name',
+            'state_name',
+            'coordinates',
+            'settled_founded',
+            'incorporated',
+            'elevation',
+            'time_zone',
+            'fips_code',
+            'url',
+        ]
     }
     async _grabAllCitiesInfo(knex) {
-        const allCities = await knex('cities')
+        const allCities = await knex
+            .select(...this._cityTableFields)
+            .from('cities')
         if (!allCities) throw Error('No Cities Table Found')
         return allCities
     }
