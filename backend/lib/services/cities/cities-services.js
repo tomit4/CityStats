@@ -110,22 +110,19 @@ class CityService {
     }
     async _parseCodes(knex, codesToAgg) {
         const parsedCodes = {}
+        parsedCodes.key = codesToAgg.slice(0, -1)
         if (codesToAgg === 'zip_codes') {
             const allZips = await this._grabAllZipCodes(knex)
             parsedCodes.table = allZips
-            parsedCodes.key = 'zip_code'
         } else if (codesToAgg === 'area_codes') {
             const allAreaCodes = await this._grabAllAreaCodes(knex)
             parsedCodes.table = allAreaCodes
-            parsedCodes.key = 'area_code'
         } else if (codesToAgg === 'gnis_feature_ids') {
             const allGnisIds = await this._grabAllGnisIds(knex)
             parsedCodes.table = allGnisIds
-            parsedCodes.key = 'gnis_feature_id'
         } else if (codesToAgg === 'council_members') {
             const allCouncilMembers = await this._grabGovCouncilMembers(knex)
             parsedCodes.table = allCouncilMembers
-            parsedCodes.key = 'council_member'
         } else {
             throw Error(`Passed codes: ${codesToAgg} is not acceptable format`)
         }
