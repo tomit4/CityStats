@@ -1,11 +1,6 @@
 'use strict'
 const fp = require('fastify-plugin')
 
-// TODO: Massive refactor necessary, WAY too much repetition
-// BUT!! You learned something with your aggregator functions
-// You avoided double for loops and there is good code buried here
-// REFACTOR AND FIND IT!!!
-
 /** Finalized Full Class for new City Object
  * @constructor
  * returns { CityService }
