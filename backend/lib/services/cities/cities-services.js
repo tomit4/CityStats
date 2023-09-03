@@ -147,10 +147,13 @@ class CityService {
             if (city.id === aggregatedKeys[i]) {
                 if (dataToBeNested) {
                     city['government']['city_council'] = aggregatedData
-                } else {
+                } else if (!dataToBeNested) {
                     city[codesToAgg] = aggregatedData
                 }
-            }
+            } else
+                throw Error(
+                    `No ${codesToAgg} data found for city_id: ${city.id} at aggregated_id: ${aggregatedKeys[i]}`,
+                )
         })
     }
     /**
