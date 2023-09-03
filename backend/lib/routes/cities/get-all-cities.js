@@ -6,12 +6,12 @@ module.exports = async (fastify, options, done) => {
         url: '/cities',
         schema: {
             description: 'returns all cities entities',
-            // response: {
-            // 200: {
-            // type: 'array',
-            // items: { $ref: 'singleState#' },
-            // },
-            // },
+            response: {
+                200: {
+                    type: 'array',
+                    items: { $ref: 'singleCity' },
+                },
+            },
         },
         handler: async (request, reply) => {
             const { knex, cityService } = fastify
