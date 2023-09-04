@@ -15,6 +15,7 @@ module.exports = async (fastify, options, done) => {
         },
         handler: async (request, reply) => {
             const { knex, cityService } = fastify
+            // console.log('cityService test :=>', cityService.testData)
             reply.send(await cityService.grabAllCities(knex))
         },
     })

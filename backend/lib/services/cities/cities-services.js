@@ -1,12 +1,14 @@
 'use strict'
 const fp = require('fastify-plugin')
+const SingleCityService = require('./single-city-services')
 
 /** Finalized Full Class for new City Object
  * @constructor
  * returns { CityService }
  * */
-class CityService {
+class CityService extends SingleCityService {
     constructor() {
+        super()
         this.allCities = []
         this._cityTableFields = [
             'id',
