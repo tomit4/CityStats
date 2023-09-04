@@ -3,10 +3,10 @@
 module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
-        url: '/states/:id/:field',
+        url: '/cities/:id/:field',
         schema: {
             description:
-                'returns a single state entity by id with specified field data',
+                'returns a single city entity by id with specified field data',
             params: {
                 type: 'object',
                 required: ['id', 'field'],
@@ -16,18 +16,18 @@ module.exports = async (fastify, options, done) => {
                 },
             },
             response: {
-                200: { $ref: 'singleStateWithField#' },
+                200: { $ref: 'singleCityWithField#' },
             },
         },
         handler: async (request, reply) => {
             const { id, field } = request.params
             if (!field) throw Error('No subquery passed within URL string')
-            const { knex, stateService } = fastify
-            if (!stateService.fields.includes(field))
+            const { knex, cityService } = fastify
+            if (!cityService.fields.includes(field))
                 throw Error(
                     `Passed subquery '${field}' is not found in states entity`,
                 )
-            reply.send(await stateService.grabRelDataById(knex, id, field))
+            reply.send(await cityService.grabRelDataById(knex, id, field))
         },
     })
     done()

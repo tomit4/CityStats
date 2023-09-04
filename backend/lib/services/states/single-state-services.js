@@ -26,7 +26,7 @@ class SingleStateService extends SingleStateServiceDetails {
             'flag_url',
             'insignia_url',
         ]
-        this.fields = [...this._nativeFields, ...this.relatedFields]
+        this.fields = [...this._nativeFields, ...this._relatedFields]
     }
     async _grabStateById(knex, id) {
         const state = await knex('states').where('id', id).first()
@@ -63,8 +63,7 @@ class SingleStateService extends SingleStateServiceDetails {
     async _grabNativeFieldData(knex, id, field) {
         const nativeFieldData = await knex
             .where('id', id)
-            .select('id')
-            .select('state_name', 'state_abbreviation')
+            .select('id', 'state_name', 'state_abbreviation')
             .select(field)
             .from('states')
             .first()
@@ -74,32 +73,30 @@ class SingleStateService extends SingleStateServiceDetails {
     }
     async _grabRelatedFieldData(knex, id, field) {
         const state = await this._grabMinStateInfo(knex, id)
-        let area = null
-        let population = null
-        let senators = null
-        let delegates = null
         let returnVal = null
         switch (field) {
             case 'area':
-                area = await this._grabAreaById(knex, id)
-                returnVal = { area }
+                returnVal = await this._grabAreaById(knex, id)
+                returnVal = { area: returnVal }
                 break
             case 'population':
-                population = await this._grabPopulationById(knex, id)
-                returnVal = { population }
+                returnVal = await this._grabPopulationById(knex, id)
+                returnVal = { population: returnVal }
                 break
             case 'senators':
-                senators = await this.grabSenatorsById(knex, id)
-                returnVal = { senators }
+                returnVal = await this.grabSenatorsById(knex, id)
+                returnVal = { senators: returnVal }
                 break
             case 'house_delegates':
-                delegates = await this.grabDelegatesById(knex, id)
-                returnVal = { house_delegates: delegates }
+                returnVal = await this.grabDelegatesById(knex, id)
+                returnVal = { house_delegates: returnVal }
                 break
             default:
-                throw Error('Unable to find info on field')
+                throw Error(
+                    `Unable to find state info for id: ${id} on field: ${field}`,
+                )
         }
-        return { state_id: Number(id), ...state, ...returnVal }
+        return { ...state, ...returnVal }
     }
     /**
      * Aggregates all state info by id

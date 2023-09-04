@@ -62,6 +62,13 @@ class CitiesSchema {
                 gnis_feature_ids: joi.array(),
             },
         }
+        this.singleCityWithField = {
+            type: 'object',
+            required: ['id', 'city_name', 'state_name'],
+            properties: {
+                ...this.singleCity.properties,
+            },
+        }
     }
 }
 

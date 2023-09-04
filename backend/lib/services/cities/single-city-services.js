@@ -8,6 +8,29 @@ class SingleCityService {
     constructor() {
         this.testData = 'oh hi there'
         this.singleCity = {}
+        this._nativeFields = [
+            'id',
+            'city_name',
+            'state_name',
+            'coordinates',
+            'settled_founded',
+            'incorporated',
+            'elevation',
+            'time_zone',
+            'fips_code',
+            'url',
+        ]
+        // TODO: To be put in SingleCityServiceDetails class
+        this._relatedFields = [
+            'counties',
+            'government',
+            'area',
+            'population',
+            'zip_codes',
+            'area_codes',
+            'gnis_feature_ids',
+        ]
+        this.fields = [...this._nativeFields, ...this._relatedFields]
     }
     async _grabCityById(knex, id) {
         const city = await knex
@@ -100,6 +123,66 @@ class SingleCityService {
             return id.gnis_feature_id
         })
     }
+    async _grabNativeFieldData(knex, id, field) {
+        const nativeFieldData = await knex
+            .where('id', id)
+            .select('id', 'city_name', 'state_name')
+            .select(field)
+            .from('cities')
+            .first()
+        if (!nativeFieldData)
+            throw Error(`No data retrieved for field: ${field} at id: ${id}`)
+        return nativeFieldData
+    }
+    async _grabMinCityInfo(knex, id) {
+        const city = await knex
+            .where('id', id)
+            .select('id', 'city_name', 'state_name')
+            .from('cities')
+            .first()
+        if (!city) throw Error(`No city info retrieved for id: ${id}`)
+        return city
+    }
+
+    async _grabRelatedFieldData(knex, id, field) {
+        const city = await this._grabMinCityInfo(knex, id)
+        let returnVal
+        switch (field) {
+            case 'counties':
+                returnVal = await this._grabCountiesById(knex, id)
+                returnVal = { counties: returnVal }
+                break
+            case 'government':
+                returnVal = await this._grabBaseGovInfoById(knex, id)
+                returnVal = { government: returnVal }
+                break
+            case 'area':
+                returnVal = await this._grabAreaById(knex, id)
+                returnVal = { area: returnVal }
+                break
+            case 'population':
+                returnVal = await this._grabPopulationById(knex, id)
+                returnVal = { population: returnVal }
+                break
+            case 'zip_codes':
+                returnVal = await this._grabZipCodesById(knex, id)
+                returnVal = { zip_codes: returnVal }
+                break
+            case 'area_codes':
+                returnVal = await this._grabAreaCodesById(knex, id)
+                returnVal = { area_codes: returnVal }
+                break
+            case 'gnis_feature_ids':
+                returnVal = await this._grabGnisIdsById(knex, id)
+                returnVal = { gnis_feature_ids: returnVal }
+                break
+            default:
+                throw Error(
+                    `Unable to find city info for id: ${id} on field: ${field}`,
+                )
+        }
+        return { ...city, ...returnVal }
+    }
     /**
      * Aggregates single city data
      * @params { promise } knex
@@ -115,6 +198,13 @@ class SingleCityService {
         this.singleCity.area_codes = await this._grabAreaCodesById(knex, id)
         this.singleCity.gnis_feature_ids = await this._grabGnisIdsById(knex, id)
         return this.singleCity
+    }
+    async grabRelDataById(knex, id, field) {
+        if (this._nativeFields.includes(field)) {
+            return await this._grabNativeFieldData(knex, id, field)
+        } else {
+            return await this._grabRelatedFieldData(knex, id, field)
+        }
     }
 }
 
