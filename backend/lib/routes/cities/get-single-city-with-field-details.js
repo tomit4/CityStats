@@ -16,18 +16,18 @@ module.exports = async (fastify, options, done) => {
                     details: { type: 'string' },
                 },
             },
-            // response: {
-            // 200: { $ref: 'singleCityWithField#' },
-            // },
+            response: {
+                200: { $ref: 'singleCityWithField#' },
+            },
         },
         handler: async (request, reply) => {
             const { id, field, details } = request.params
             if (!details)
-                throw Error('No nested subquery passed within URL string')
+                throw Error('No nested details passed within URL string')
             const { knex, cityService } = fastify
             if (!cityService.relatedFields.includes(field))
                 throw Error(
-                    `Passed subquery '${field}' is not found in cities entity`,
+                    `Passed field '${field}' is not found in cities entity`,
                 )
             reply.send(
                 await cityService.grabRelDataByIdWithDeets(

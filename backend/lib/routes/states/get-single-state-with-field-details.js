@@ -23,10 +23,10 @@ module.exports = async (fastify, options, done) => {
         handler: async (request, reply) => {
             const { id, field, details } = request.params
             if (!details)
-                throw Error('No nested subquery passed within URL string')
+                throw Error('No nested details passed within URL string')
             const { knex, stateService } = fastify
             if (!stateService.relatedFields.includes(field))
-                throw Error('Passed subquery is not found in states entity')
+                throw Error('Passed field is not found in states entity')
             reply.send(
                 await stateService.grabRelDataByIdWithDeets(
                     knex,

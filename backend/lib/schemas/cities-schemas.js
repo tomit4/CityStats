@@ -67,6 +67,7 @@ class CitiesSchema {
             required: ['id', 'city_name', 'state_name'],
             properties: {
                 ...this.singleCity.properties,
+                city_council: joi.array(),
             },
         }
     }
