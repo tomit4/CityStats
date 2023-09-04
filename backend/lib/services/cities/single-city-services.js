@@ -116,7 +116,7 @@ class SingleCityService extends SingleCityServiceDetails {
     async _grabGnisIdsById(knex, id) {
         const gnisIds = await knex
             .select('gnis_feature_id')
-            .from('cities_gnis_ids')
+            .from('cities_gnis_feature_ids')
             .where('city_id', id)
         if (!gnisIds)
             throw Error(`No Cities Gnis Feature Ids Data Found For Id: ${id}`)

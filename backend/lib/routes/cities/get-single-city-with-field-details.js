@@ -27,17 +27,16 @@ module.exports = async (fastify, options, done) => {
             const { knex, cityService } = fastify
             if (!cityService.relatedFields.includes(field))
                 throw Error(
-                    `Passed subquery '${field}' is not found in states entity`,
+                    `Passed subquery '${field}' is not found in cities entity`,
                 )
-            reply.send({ test: cityService.test })
-            // reply.send(
-            // await cityService.grabRelDataByIdWithDeets(
-            // knex,
-            // id,
-            // field,
-            // details,
-            // ),
-            // )
+            reply.send(
+                await cityService.grabRelDataByIdWithDeets(
+                    knex,
+                    id,
+                    field,
+                    details,
+                ),
+            )
         },
     })
     done()

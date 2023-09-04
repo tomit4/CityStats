@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-    return knex.schema.createTable('cities_gnis_ids', table => {
+    return knex.schema.createTable('cities_gnis_feature_ids', table => {
         table.increments().primary()
         table.integer('city_id').notNullable()
         table.string('gnis_feature_id').notNullable()
@@ -15,5 +15,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-    return knex.schema.dropTableIfExists('cities_gnis_ids')
+    return knex.schema.dropTableIfExists('cities_gnis_feature_ids')
 }
