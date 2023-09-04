@@ -7,7 +7,7 @@ exports.up = function (knex) {
         table.increments('city_id').primary()
         table.string('city').notNullable()
         table.string('land').notNullable()
-        table.string('water').notNullable()
+        table.string('water')
     })
 }
 

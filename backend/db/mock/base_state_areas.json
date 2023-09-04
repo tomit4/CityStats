@@ -1,0 +1,297 @@
+[
+    {
+        "state_id": 1,
+        "total": "52419 sq mi",
+        "land": "50744 sq mi",
+        "water": "1675 sq mi"
+    },
+    {
+        "state_id": 2,
+        "total": "663268 sq mi",
+        "land": "571951 sq mi",
+        "water": "91316 sq mi"
+    },
+    { "state_id": 3, "total": "113990 sq mi", "land": null, "water": null },
+    {
+        "state_id": 4,
+        "total": "53179 sq mi",
+        "land": "52035 sq mi",
+        "water": "1143 sq mi"
+    },
+    {
+        "state_id": 5,
+        "total": "163696 sq mi",
+        "land": "155959 sq mi",
+        "water": "7737 sq mi"
+    },
+    {
+        "state_id": 6,
+        "total": "104094 sq mi",
+        "land": "103718 sq mi",
+        "water": "376 sq mi"
+    },
+    {
+        "state_id": 7,
+        "total": "5567 sq mi",
+        "land": "4849 sq mi",
+        "water": "698 sq mi"
+    },
+    {
+        "state_id": 8,
+        "total": "2489 sq mi",
+        "land": "1949 sq mi",
+        "water": "540 sq mi"
+    },
+    {
+        "state_id": 9,
+        "total": "65758 sq mi",
+        "land": "53625 sq mi",
+        "water": "12133 sq mi"
+    },
+    {
+        "state_id": 10,
+        "total": "59425 sq mi",
+        "land": "57906 sq mi",
+        "water": "1519 sq mi"
+    },
+    {
+        "state_id": 11,
+        "total": "10931 sq mi",
+        "land": "6423 sq mi",
+        "water": "4507 sq mi"
+    },
+    {
+        "state_id": 12,
+        "total": "83569 sq mi",
+        "land": "83570 sq mi",
+        "water": "926 sq mi"
+    },
+    {
+        "state_id": 13,
+        "total": "57915 sq mi",
+        "land": "55593 sq mi",
+        "water": "2320 sq mi"
+    },
+    {
+        "state_id": 14,
+        "total": "36418 sq mi",
+        "land": "35868 sq mi",
+        "water": "550 sq mi"
+    },
+    {
+        "state_id": 15,
+        "total": "56273 sq mi",
+        "land": "55857 sq mi",
+        "water": "416 sq mi"
+    },
+    {
+        "state_id": 16,
+        "total": "82278 sq mi",
+        "land": "81759 sq mi",
+        "water": "520 sq mi"
+    },
+    {
+        "state_id": 17,
+        "total": "40408 sq mi",
+        "land": "39486 sq mi",
+        "water": "921 sq mi"
+    },
+    {
+        "state_id": 18,
+        "total": "52069.13 sq mi",
+        "land": "43601 sq mi",
+        "water": "8283 sq mi"
+    },
+    {
+        "state_id": 19,
+        "total": "35385 sq mi",
+        "land": "30862 sq mi",
+        "water": "4523 sq mi"
+    },
+    {
+        "state_id": 20,
+        "total": "12407 sq mi",
+        "land": "9776 sq mi",
+        "water": "2633 sq mi"
+    },
+    {
+        "state_id": 21,
+        "total": "10565 sq mi",
+        "land": "7840 sq mi",
+        "water": "2715 sq mi"
+    },
+    {
+        "state_id": 22,
+        "total": "96714 sq mi",
+        "land": "56539 sq mi",
+        "water": "40175 sq mi"
+    },
+    {
+        "state_id": 23,
+        "total": "86935.83 sq mi",
+        "land": "79626.74 sq mi",
+        "water": "7309.09 sq mi"
+    },
+    {
+        "state_id": 24,
+        "total": "48430 sq mi",
+        "land": "46952 sq mi",
+        "water": "1521 sq mi"
+    },
+    {
+        "state_id": 25,
+        "total": "69707 sq mi",
+        "land": "68742 sq mi",
+        "water": "965 sq mi"
+    },
+    {
+        "state_id": 26,
+        "total": "147040 sq mi",
+        "land": "145552 sq mi",
+        "water": "1491 sq mi"
+    },
+    {
+        "state_id": 27,
+        "total": "77358 sq mi",
+        "land": "76874 sq mi",
+        "water": "481 sq mi"
+    },
+    {
+        "state_id": 28,
+        "total": "110577 sq mi",
+        "land": "109781.18 sq mi",
+        "water": "791 sq mi"
+    },
+    {
+        "state_id": 29,
+        "total": "9349 sq mi",
+        "land": "8953 sq mi",
+        "water": "397 sq mi"
+    },
+    {
+        "state_id": 30,
+        "total": "8722.58 sq mi",
+        "land": "7354.22 sq mi",
+        "water": "1368.36 sq mi"
+    },
+    {
+        "state_id": 31,
+        "total": "121591 sq mi",
+        "land": "121298 sq mi",
+        "water": "292 sq mi"
+    },
+    {
+        "state_id": 32,
+        "total": "54555 sq mi",
+        "land": "47126 sq mi",
+        "water": "7429 sq mi"
+    },
+    {
+        "state_id": 33,
+        "total": "53819 sq mi",
+        "land": "48711 sq mi",
+        "water": "1972 sq mi"
+    },
+    {
+        "state_id": 34,
+        "total": "70705 sq mi",
+        "land": "68994 sq mi",
+        "water": "1710 sq mi"
+    },
+    {
+        "state_id": 35,
+        "total": "44825 sq mi",
+        "land": "40948 sq mi",
+        "water": "3877 sq mi"
+    },
+    {
+        "state_id": 36,
+        "total": "69898 sq mi",
+        "land": "68595 sq mi",
+        "water": "1304 sq mi"
+    },
+    {
+        "state_id": 37,
+        "total": "98381 sq mi",
+        "land": "95997 sq mi",
+        "water": "2384 sq mi"
+    },
+    {
+        "state_id": 38,
+        "total": "46055 sq mi",
+        "land": "44816.61 sq mi",
+        "water": "1239 sq mi"
+    },
+    {
+        "state_id": 39,
+        "total": "1214 sq mi",
+        "land": "1055 sq mi",
+        "water": "169 sq mi"
+    },
+    {
+        "state_id": 40,
+        "total": "32020 sq mi",
+        "land": "30109 sq mi",
+        "water": "1911 sq mi"
+    },
+    {
+        "state_id": 41,
+        "total": "77116 sq mi",
+        "land": "75811 sq mi",
+        "water": "1305 sq mi"
+    },
+    {
+        "state_id": 42,
+        "total": "42143 sq mi",
+        "land": "41217 sq mi",
+        "water": "926 sq mi"
+    },
+    {
+        "state_id": 43,
+        "total": "268596 sq mi",
+        "land": "261232 sq mi",
+        "water": "7365 sq mi"
+    },
+    {
+        "state_id": 44,
+        "total": "84899 sq mi",
+        "land": "82144 sq mi",
+        "water": "2755 sq mi"
+    },
+    {
+        "state_id": 45,
+        "total": "9616 sq mi",
+        "land": "9250 sq mi",
+        "water": "382 sq mi"
+    },
+    {
+        "state_id": 46,
+        "total": "42775 sq mi",
+        "land": "39490 sq mi",
+        "water": "400 sq mi"
+    },
+    {
+        "state_id": 47,
+        "total": "71362 sq mi",
+        "land": "66544 sq mi",
+        "water": "4757 sq mi"
+    },
+    {
+        "state_id": 48,
+        "total": "24230 sq mi",
+        "land": "24078 sq mi",
+        "water": "152 sq mi"
+    },
+    {
+        "state_id": 49,
+        "total": "65496 sq mi",
+        "land": "54158 sq mi",
+        "water": "11339 sq mi"
+    },
+    {
+        "state_id": 50,
+        "total": "97813 sq mi",
+        "land": "97093 sq mi",
+        "water": "720 sq mi"
+    }
+]

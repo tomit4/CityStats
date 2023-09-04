@@ -6,7 +6,7 @@ exports.up = function (knex) {
     return knex.schema.createTable('cities_government', table => {
         table.increments().primary()
         table.integer('city_id').notNullable()
-        table.string('type').notNullable()
+        table.string('type')
         table.string('mayor').notNullable()
     })
 }

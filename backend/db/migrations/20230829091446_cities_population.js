@@ -7,7 +7,7 @@ exports.up = function (knex) {
         table.increments('city_id').primary()
         table.string('city').notNullable()
         table.string('density').notNullable()
-        table.string('metro').notNullable()
+        table.string('metro')
     })
 }
 

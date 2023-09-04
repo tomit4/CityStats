@@ -6,10 +6,7 @@
     "capital": "Montgomery",
     "largest_city": "Huntsville",
     "govenor": "Kay Ivey",
-    "senators": [
-      "Tommy Tuberville",
-      "Katie Britt"
-    ],
+    "senators": ["Tommy Tuberville", "Katie Britt"],
     "house_delegation": [
       "Jerry Carl",
       "Barry Moore",
@@ -31,8 +28,8 @@
       "median_household_income": "$52000"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "30\u00b011' N to 35\u00b0 N",
-    "longitude": "84\u00b053' W to 88\u00b028' W",
+    "latitude": "30°11' N to 35° N",
+    "longitude": "84°53' W to 88°28' W",
     "url": "https://www.alabama.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Alabama.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Seal_of_Alabama.svg"
@@ -44,13 +41,8 @@
     "capital": "Juneau",
     "largest_city": "Anchorage",
     "govenor": "Mike Dunleavy",
-    "senators": [
-      "Lisa Murkowski",
-      "Dan Sullivan"
-    ],
-    "house_delegation": [
-      "Mary Peltola"
-    ],
+    "senators": ["Lisa Murkowski", "Dan Sullivan"],
+    "house_delegation": ["Mary Peltola"],
     "area": {
       "total": "663268 sq mi",
       "land": "571951 sq mi",
@@ -63,8 +55,8 @@
       "median_household_income": "$77800"
     },
     "time_zone": "UTC-9(AKST)",
-    "latitude": "51\u00b020'N to 71\u00b050'N",
-    "longitude": "130\u00b0W to 172\u00b0E",
+    "latitude": "51°20'N to 71°50'N",
+    "longitude": "130°W to 172°E",
     "url": "https://www.alaska.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Alaska.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/State_Seal_of_Alaska.svg"
@@ -76,10 +68,7 @@
     "capital": "Phoenix",
     "largest_city": "Phoenix",
     "govenor": "Katie Hobbs",
-    "senators": [
-      "Kyrsten Sinema",
-      "Mark Kelly"
-    ],
+    "senators": ["Kyrsten Sinema", "Mark Kelly"],
     "house_delegation": [
       "David Schweikert",
       "Eli Crane",
@@ -87,7 +76,7 @@
       "Greg Stanton",
       "Andy Biggs",
       "Juan Ciscomani",
-      "Ra\u00fal Grijalva",
+      "Raúl Grijalva",
       "Debbie Lesko",
       "Paul Gosar"
     ],
@@ -103,8 +92,8 @@
       "median_household_income": "$61500"
     },
     "time_zone": "UTC-7(MST)",
-    "latitude": "31\u00b020' N to 37\u00b0 N",
-    "longitude": "109\u00b003' W to 114\u00b049' W",
+    "latitude": "31°20' N to 37° N",
+    "longitude": "109°03' W to 114°49' W",
     "url": "https://www.alabama.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arizona.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/State_Seal_of_Arizona.svg"
@@ -116,10 +105,7 @@
     "capital": "Little Rock",
     "largest_city": "Central Arkansas",
     "govenor": "Sarah Huckabee Sanders",
-    "senators": [
-      "John Boozman",
-      "Tom Cotton"
-    ],
+    "senators": ["John Boozman", "Tom Cotton"],
     "house_delegation": [
       "Rick Crawford",
       "French Hill",
@@ -138,8 +124,8 @@
       "median_household_income": "$49500"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "33\u00b0\u200a00\u2032 N to 36\u00b0\u200a30\u2032 N",
-    "longitude": "89\u00b0\u200a39\u2032 W to 94\u00b0\u200a37\u2032 W",
+    "latitude": "33° 00′ N to 36° 30′ N",
+    "longitude": "89° 39′ W to 94° 37′ W",
     "url": "https://portal.arkansas.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Seal_of_Arkansas.svg"
@@ -151,10 +137,7 @@
     "capital": "Sacramento",
     "largest_city": "Los Angeles",
     "govenor": "Gavin Newsom",
-    "senators": [
-      "Dianne Feinstein",
-      "Alex Padilla"
-    ],
+    "senators": ["Dianne Feinstein", "Alex Padilla"],
     "house_delegation": [
       "Doug LaMalfa",
       "Jared Huffman",
@@ -184,7 +167,7 @@
       "Julia Brownley",
       "Mike Garcia",
       "Judy Chu",
-      "Tony C\u00e1rdenas",
+      "Tony Cárdenas",
       "Adam Schiff",
       "Grace Napolitano",
       "Brad Sherman",
@@ -193,13 +176,13 @@
       "Norma Torres",
       "Ted Lieu",
       "Sydney Kamlager-Dove",
-      "Linda S\u00e1nchez",
+      "Linda Sánchez",
       "Mark Takano",
       "Young Kim",
       "Ken Calvert",
       "Robert Garcia",
       "Maxine Waters",
-      "Nanette Barrag\u00e1n",
+      "Nanette Barragán",
       "Michelle Steel",
       "Lou Correa",
       "Katie Porter",
@@ -221,8 +204,8 @@
       "median_household_income": "$78700"
     },
     "time_zone": "UTC-8(PST)",
-    "latitude": "32\u00b032\u2032 N to 42\u00b0 N",
-    "longitude": "114\u00b08\u2032 W to 124\u00b026\u2032 W",
+    "latitude": "32°32′ N to 42° N",
+    "longitude": "114°8′ W to 124°26′ W",
     "url": "https://www.ca.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Great_Seal_of_California.svg"
@@ -234,12 +217,9 @@
     "capital": "Denver",
     "largest_city": "Denver",
     "govenor": "Jared Polis",
-    "senators": [
-      "Michael Bennet",
-      "John Hickenlooper"
-    ],
+    "senators": ["Michael Bennet", "John Hickenlooper"],
     "house_delegation": [
-      "Diana DeGette",
+      "Diana Degette",
       "Joe Neguse",
       "Lauren Boebert",
       "Ken Buck",
@@ -260,8 +240,8 @@
       "median_household_income": "$75200"
     },
     "time_zone": "UTC-7(MST)",
-    "latitude": "37\u00b0N to 41\u00b0N",
-    "longitude": "102\u00b002\u203248\u2033W to 109\u00b002\u203248\u2033W",
+    "latitude": "37°N to 41°N",
+    "longitude": "102°02′48″W to 109°02′48″W",
     "url": "https://www.colorado.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colorado_designed_by_Andrew_Carlisle_Carson.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Seal_of_Colorado.svg"
@@ -273,10 +253,7 @@
     "capital": "Hartford",
     "largest_city": "Bridgeport",
     "govenor": "Ned Lamont",
-    "senators": [
-      "Richard Blumenthal",
-      "Chris Murphy"
-    ],
+    "senators": ["Richard Blumenthal", "Chris Murphy"],
     "house_delegation": [
       "John B. Larson",
       "Joe Courtney",
@@ -296,8 +273,8 @@
       "median_household_income": "$79900"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "40\u00b058\u2032 N to 42\u00b003\u2032 N",
-    "longitude": "71\u00b047\u2032 W to 73\u00b044\u2032 W",
+    "latitude": "40°58′ N to 42°03′ N",
+    "longitude": "71°47′ W to 73°44′ W",
     "url": "https://portal.ct.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Flag_of_Connecticut.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Seal_of_Connecticut.svg"
@@ -309,13 +286,8 @@
     "capital": "Dover",
     "largest_city": "Wilmington",
     "govenor": "John Carney",
-    "senators": [
-      "Tom Carper",
-      "Chris Coons"
-    ],
-    "house_delegation": [
-      "Lisa Blunt Rochester"
-    ],
+    "senators": ["Tom Carper", "Chris Coons"],
+    "house_delegation": ["Lisa Blunt Rochester"],
     "area": {
       "total": "2489 sq mi",
       "land": "1949 sq mi",
@@ -328,8 +300,8 @@
       "median_household_income": "$69100"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "38\u00b0\u200a27\u2032 N to 39\u00b0\u200a50\u2032 N",
-    "longitude": "75\u00b0\u200a3\u2032 W to 75\u00b0\u200a47\u2032 W",
+    "latitude": "38° 27′ N to 39° 50′ N",
+    "longitude": "75° 3′ W to 75° 47′ W",
     "url": "https://delaware.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Flag_of_Delaware.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Seal_of_Delaware.svg"
@@ -341,10 +313,7 @@
     "capital": "Tallahassee",
     "largest_city": "Jacksonville",
     "govenor": "Ron DeSantis",
-    "senators": [
-      "Marco Rubio",
-      "Rick Scott"
-    ],
+    "senators": ["Marco Rubio", "Rick Scott"],
     "house_delegation": [
       "Matt Gaetz",
       "Neal Dunn",
@@ -365,15 +334,15 @@
       "Greg Steube",
       "Scott Franklin",
       "Byron Donalds",
-      "Sheila Cherfilus-McCormick",
+      "Scheila Cherfilus-McCormick",
       "Brian Mast",
       "Lois Frankel",
       "Jared Moskowitz",
       "Frederica Wilson",
       "Debbie Wasserman Schultz",
-      "Mario D\u00edaz-Balart",
-      "Mar\u00eda Elvira Salazar",
-      "Carlos Gim\u00e9nez"
+      "Mario Díaz-Balart",
+      "Maria Elvira Salazar",
+      "Carlos A. Giménez"
     ],
     "area": {
       "total": "65758 sq mi",
@@ -387,8 +356,8 @@
       "median_household_income": "$57700"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "24\u00b0 27' N to 31\u00b0 00' N",
-    "longitude": "80\u00b0 02' W to 87\u00b0 38' W",
+    "latitude": "24° 27' N to 31° 00' N",
+    "longitude": "80° 02' W to 87° 38' W",
     "url": "https://myflorida.com/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Seal_of_Florida.svg"
@@ -400,10 +369,7 @@
     "capital": "Atlanta",
     "largest_city": "Atlanta",
     "govenor": "Brian Kemp",
-    "senators": [
-      "Jon Ossoff",
-      "Raphael Warnock"
-    ],
+    "senators": ["John Ossoff", "Raphael Warnock"],
     "house_delegation": [
       "Buddy Carter",
       "Sanford Bishop",
@@ -416,7 +382,7 @@
       "Andrew Clyde",
       "Mike Collins",
       "Barry Loudermilk",
-      "Rick W. Allen",
+      "Rick Allen",
       "David Scott",
       "Marjorie Taylor Greene"
     ],
@@ -432,8 +398,8 @@
       "median_household_income": "$61200"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "30\u00b0 35' N to 34\u00b0 98' N",
-    "longitude": "80\u00b0 84' W to 85\u00b0 60' W",
+    "latitude": "30° 35' N to 34° 98' N",
+    "longitude": "80° 84' W to 85° 60' W",
     "url": "https://georgia.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Georgia_%28U.S._state%29.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Seal_of_Georgia.svg"
@@ -445,14 +411,8 @@
     "capital": "Honolulu",
     "largest_city": "Honolulu",
     "govenor": "Josh Green",
-    "senators": [
-      "Brian Schatz",
-      "Mazie Hirono"
-    ],
-    "house_delegation": [
-      "Ed Case",
-      "Jill Tokuda"
-    ],
+    "senators": ["Brian Schatz", "Mazie Hirono"],
+    "house_delegation": ["Ed Case", "Jill Tokuda"],
     "area": {
       "total": "10931 sq mi",
       "land": "6423 sq mi",
@@ -465,8 +425,8 @@
       "median_household_income": "$83200"
     },
     "time_zone": "UTC-10(HST)",
-    "latitude": "18\u00b0\u200a55\u2032 N to 28\u00b0\u200a27\u2032 N",
-    "longitude": "154\u00b0\u200a48\u2032 W to 178\u00b0\u200a22\u2032 W",
+    "latitude": "18° 55′ N to 28° 27′ N",
+    "longitude": "154° 48′ W to 178° 22′ W",
     "url": "https://portal.ehawaii.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Hawaii.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Seal_of_the_State_of_Hawaii.svg"
@@ -478,14 +438,8 @@
     "capital": "Boise",
     "largest_city": "Boise",
     "govenor": "Brad Little",
-    "senators": [
-      "Mike Crapo",
-      "Jim Risch"
-    ],
-    "house_delegation": [
-      "Russ Fulcher",
-      "Mike Simpson"
-    ],
+    "senators": ["Mike Crapo", "Jim Risch"],
+    "house_delegation": ["Russ Fulcher", "Mike Simpson"],
     "area": {
       "total": "83569 sq mi",
       "land": "83570 sq mi",
@@ -498,8 +452,8 @@
       "median_household_income": "$76918"
     },
     "time_zone": "UTC-7(MST)",
-    "latitude": "42\u00b0 N to 49\u00b0 N",
-    "longitude": "111\u00b003\u2032 W to 117\u00b015\u2032 W",
+    "latitude": "42° N to 49° N",
+    "longitude": "111°03′ W to 117°15′ W",
     "url": "https://www.idaho.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_Idaho.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Seal_of_Idaho.svg"
@@ -511,15 +465,12 @@
     "capital": "Springfield",
     "largest_city": "Chicago",
     "govenor": "Jay Robert Pritzker",
-    "senators": [
-      "Dick Durbin",
-      "Tammy Duckworth"
-    ],
+    "senators": ["Dick Durban", "Tammy Duckworth"],
     "house_delegation": [
       "Jonathan Jackson",
       "Robin Kelly",
       "Delia Ramirez",
-      "Jes\u00fas \"Chuy\" Garc\u00eda",
+      "Jesús \"Chuy\" García",
       "Mike Quigley",
       "Sean Casten",
       "Danny K. Davis",
@@ -546,8 +497,8 @@
       "median_household_income": "$65030"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "36\u00b0\u200a58\u2032 N to 42\u00b0\u200a30\u2032 N",
-    "longitude": "87\u00b0\u200a30\u2032 W to 91\u00b0\u200a31\u2032 W",
+    "latitude": "36° 58′ N to 42° 30′ N",
+    "longitude": "87° 30′ W to 91° 31′ W",
     "url": "https://www.illinois.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Illinois.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Seal_of_Illinois.svg"
@@ -559,10 +510,7 @@
     "capital": "Indianapolis",
     "largest_city": "Indianapolis",
     "govenor": "Eric Holcomb",
-    "senators": [
-      "Todd Young",
-      "Mike Braun"
-    ],
+    "senators": ["Todd Young", "Mike Braun"],
     "house_delegation": [
       "Frank J. Mrvan",
       "Rudy Yakym",
@@ -570,7 +518,7 @@
       "Jim Baird",
       "Victoria Spartz",
       "Greg Pence",
-      "Andr\u00e9 Carson",
+      "André Carson",
       "Larry Bucshon",
       "Erin Houchin"
     ],
@@ -586,8 +534,8 @@
       "median_household_income": "$54181"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "37\u00b0\u200a46\u2032 N to 41\u00b0\u200a46\u2032 N",
-    "longitude": "84\u00b0\u200a47\u2032 W to 88\u00b0\u200a6\u2032 W",
+    "latitude": "37° 46′ N to 41° 46′ N",
+    "longitude": "84° 47′ W to 88° 6′ W",
     "url": "https://www.in.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Flag_of_Indiana.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/State_Seal_of_Indiana.svg"
@@ -599,10 +547,7 @@
     "capital": "Des Moines",
     "largest_city": "Des Moines",
     "govenor": "Kim Reynolds",
-    "senators": [
-      "Chuck Grassley",
-      "Joni Ernst"
-    ],
+    "senators": ["Chuck Grassley", "Joni Ernst"],
     "house_delegation": [
       "Mariannette Miller-Meeks",
       "Ashley Hinson",
@@ -621,8 +566,8 @@
       "median_household_income": "$61691"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "40\u00b0\u200a23\u2032 N to 43\u00b0\u200a30\u2032 N",
-    "longitude": "90\u00b0\u200a8\u2032 W to 96\u00b0\u200a38\u2032 W",
+    "latitude": "40° 23′ N to 43° 30′ N",
+    "longitude": "90° 8′ W to 96° 38′ W",
     "url": "https://www.iowa.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Iowa.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/State_Seal_of_Iowa.svg"
@@ -634,10 +579,7 @@
     "capital": "Topeka",
     "largest_city": "Wichita",
     "govenor": "Laura Kelly",
-    "senators": [
-      "Jerry Moran",
-      "Roger Marshall"
-    ],
+    "senators": ["Jerry Moran", "Roger Marshall"],
     "house_delegation": [
       "Tracey Mann",
       "Jake LaTurner",
@@ -656,8 +598,8 @@
       "median_household_income": "$56422"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "37\u00b0 N to 40\u00b0 N",
-    "longitude": "94\u00b0\u200a35\u2032 W to 102\u00b0\u200a3\u2032 W",
+    "latitude": "37° N to 40° N",
+    "longitude": "94° 35′ W to 102° 3′ W",
     "url": "https://portal.kansas.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Kansas.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Seal_of_Kansas.svg"
@@ -669,10 +611,7 @@
     "capital": "Frankfort",
     "largest_city": "Louisville",
     "govenor": "Andy Beshear",
-    "senators": [
-      "Mitch McConnell",
-      "Rand Paul"
-    ],
+    "senators": ["Mitch McConnell", "Rand Paul"],
     "house_delegation": [
       "James Comer",
       "Brett Guthrie",
@@ -693,8 +632,8 @@
       "median_household_income": "$52295"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "36\u00b0\u200a30\u2032 N to 39\u00b0\u200a09\u2032 N",
-    "longitude": "81\u00b0\u200a58\u2032 W to 89\u00b0\u200a34\u2032 W",
+    "latitude": "36° 30′ N to 39° 09′ N",
+    "longitude": "81° 58′ W to 89° 34′ W",
     "url": "https://www.kentucky.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Flag_of_Kentucky.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Seal_of_Kentucky.svg"
@@ -706,10 +645,7 @@
     "capital": "Baton Rouge",
     "largest_city": "New Orleans",
     "govenor": "John Bel Edwards",
-    "senators": [
-      "Bill Cassidy",
-      "John Kennedy"
-    ],
+    "senators": ["Bill Cassidy", "John Kennedy"],
     "house_delegation": [
       "Steve Scalise",
       "Troy Carter",
@@ -730,8 +666,8 @@
       "median_household_income": "$49973"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "28\u00b0\u200a56\u2032 N to 33\u00b0\u200a01\u2032 N",
-    "longitude": "88\u00b0\u200a49\u2032 W to 94\u00b0\u200a03\u2032 W",
+    "latitude": "28° 56′ N to 33° 01′ N",
+    "longitude": "88° 49′ W to 94° 03′ W",
     "url": "https://www.louisiana.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Flag_of_Louisiana.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Seal_of_Louisiana.svg"
@@ -743,14 +679,8 @@
     "capital": "Augusta",
     "largest_city": "Portland",
     "govenor": "Janet Mills",
-    "senators": [
-      "Susan Collins",
-      "Angus King"
-    ],
-    "house_delegation": [
-      "Chellie Pingree",
-      "Jared Golden"
-    ],
+    "senators": ["Susan Collins", "Angus King"],
+    "house_delegation": ["Chellie Pingree", "Jared Golden"],
     "area": {
       "total": "35385 sq mi",
       "land": "30862 sq mi",
@@ -763,8 +693,8 @@
       "median_household_income": "$56277"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "42\u00b0\u200a58\u2032 N to 47\u00b0\u200a28\u2032 N",
-    "longitude": "66\u00b0\u200a57\u2032 W to 71\u00b0\u200a5\u2032 W",
+    "latitude": "42° 58′ N to 47° 28′ N",
+    "longitude": "66° 57′ W to 71° 5′ W",
     "url": "https://www.maine.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Maine.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Seal_of_Maine.svg"
@@ -776,10 +706,7 @@
     "capital": "Annapolis",
     "largest_city": "Baltimore",
     "govenor": "Wes Moore",
-    "senators": [
-      "Ben Cardin",
-      "Chris Van Hollen"
-    ],
+    "senators": ["Ben Cardin", "Chris Van Hollen"],
     "house_delegation": [
       "Andy Harris",
       "Dutch Ruppersberger",
@@ -802,8 +729,8 @@
       "median_household_income": "$87063"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "37\u00b0 53\u2032 N to 39\u00b0 43\u2032 N",
-    "longitude": "75\u00b0 03\u2032 W to 79\u00b0 29\u2032 W",
+    "latitude": "37° 53′ N to 39° 43′ N",
+    "longitude": "75° 03′ W to 79° 29′ W",
     "url": "https://www.maryland.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_Maryland.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Seal_of_Maryland_%28reverse%29.svg"
@@ -815,10 +742,7 @@
     "capital": "Boston",
     "largest_city": "Greater Boston",
     "govenor": "Maura Healey",
-    "senators": [
-      "Elizabeth Warren",
-      "Ed Markey"
-    ],
+    "senators": ["Elizabeth Warren", "Ed Markey"],
     "house_delegation": [
       "Richard Neal",
       "Jim McGovern",
@@ -827,7 +751,7 @@
       "Katherine Clark",
       "Seth Moulton",
       "Ayanna Pressley",
-      "Stephen F. Lynch",
+      "Stephen Lynch",
       "Bill Keating"
     ],
     "area": {
@@ -842,8 +766,8 @@
       "median_household_income": "$89645"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "41\u00b014\u2032 N to 42\u00b053\u2032 N",
-    "longitude": "69\u00b056\u2032 W to 73\u00b030\u2032 W",
+    "latitude": "41°14′ N to 42°53′ N",
+    "longitude": "69°56′ W to 73°30′ W",
     "url": "https://www.mass.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Massachusetts.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Seal_of_Massachusetts.svg"
@@ -855,10 +779,7 @@
     "capital": "Lansing",
     "largest_city": "Detroit",
     "govenor": "Gretchen Whitmer",
-    "senators": [
-      "Debbie Stabenow",
-      "Gary Peters"
-    ],
+    "senators": ["Debbie Stabenow", "Gary Peters"],
     "house_delegation": [
       "Jack Bergman",
       "John Moolenaar",
@@ -886,8 +807,8 @@
       "median_household_income": "$54900"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "41\u00b041\u2032 N to 48\u00b018\u2032 N",
-    "longitude": "82\u00b07\u2032 W to 90\u00b025\u2032 W",
+    "latitude": "41°41′ N to 48°18′ N",
+    "longitude": "82°7′ W to 90°25′ W",
     "url": "https://www.michigan.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flag_of_Michigan.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Seal_of_Michigan.svg"
@@ -899,16 +820,13 @@
     "capital": "Saint Paul",
     "largest_city": "Minneapolis",
     "govenor": "Tim Walz",
-    "senators": [
-      "Amy Klobuchar",
-      "Tina Smith"
-    ],
+    "senators": ["Amy Klobuchar", "Tina Smith"],
     "house_delegation": [
       "Brad Finstad",
       "Angie Craig",
       "Dean Phillips",
       "Betty McCollum",
-      "Ilhan Omar",
+      "Ilham Omar",
       "Tom Emmer",
       "Michelle Fischbach",
       "Pete Stauber"
@@ -925,8 +843,8 @@
       "median_household_income": "$74593"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "43\u00b0\u200a30\u2032 N to 49\u00b0\u200a23\u2032 N",
-    "longitude": "89\u00b0\u200a29\u2032 W to 97\u00b0\u200a14\u2032 W",
+    "latitude": "43° 30′ N to 49° 23′ N",
+    "longitude": "89° 29′ W to 97° 14′ W",
     "url": "https://mn.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Minnesota.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/State_Seal_of_Minnesota.svg"
@@ -938,10 +856,7 @@
     "capital": "Jackson",
     "largest_city": "Greater Jackson",
     "govenor": "Tate Reaves",
-    "senators": [
-      "Roger Wicker",
-      "Cindy Hyde-Smith"
-    ],
+    "senators": ["Roger Wicker", "Delbert Hosemann"],
     "house_delegation": [
       "Trent Kelly",
       "Bennie Thompson",
@@ -960,8 +875,8 @@
       "median_household_income": "$43567"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "30\u00b012\u2032 N to 35\u00b0 N",
-    "longitude": "88\u00b006\u2032 W to 91\u00b039\u2032 W",
+    "latitude": "30°12′ N to 35° N",
+    "longitude": "88°06′ W to 91°39′ W",
     "url": "https://www.ms.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_Mississippi.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Seal_of_Mississippi_%282014%E2%80%93present%29.svg"
@@ -973,17 +888,14 @@
     "capital": "Jefferson City",
     "largest_city": "Kansas City",
     "govenor": "Mike Parson",
-    "senators": [
-      "Josh Hawley",
-      "Eric Schmitt"
-    ],
+    "senators": ["Josh Hawley", "Eric Schmitt"],
     "house_delegation": [
       "Cori Bush",
       "Ann Wagner",
       "Blaine Luetkemeyer",
       "Mark Alford",
       "Emanuel Cleaver",
-      "Sam Graves",
+      "Samuel Graves",
       "Eric Burlison",
       "Jason Smith"
     ],
@@ -999,8 +911,8 @@
       "median_household_income": "$53578"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "36\u00b0 0\u2032 N to 40\u00b0 37\u2032 N",
-    "longitude": "89\u00b0 6\u2032 W to 95\u00b0 46\u2032 W",
+    "latitude": "36° 0′ N to 40° 37′ N",
+    "longitude": "89° 6′ W to 95° 46′ W",
     "url": "https://www.mo.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Missouri.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Seal_of_Missouri.svg"
@@ -1012,14 +924,8 @@
     "capital": "Helena",
     "largest_city": "Billings",
     "govenor": "Greg Gianforte",
-    "senators": [
-      "Jon Tester",
-      "Steve Daines"
-    ],
-    "house_delegation": [
-      "Ryan Zinke",
-      "Matt Rosendale"
-    ],
+    "senators": ["Jon Tester", "Steve Daines"],
+    "house_delegation": ["Ryan Zinke", "Matt Rosendale"],
     "area": {
       "total": "147040 sq mi",
       "land": "145552 sq mi",
@@ -1032,8 +938,8 @@
       "median_household_income": "$56539"
     },
     "time_zone": "UTC-7(MST)",
-    "latitude": "44\u00b0\u200a21\u2032 N to 49\u00b0 N",
-    "longitude": "104\u00b0\u200a2\u2032 W to 116\u00b0\u200a3\u2032 W",
+    "latitude": "44° 21′ N to 49° N",
+    "longitude": "104° 2′ W to 116° 3′ W",
     "url": "https://www.mt.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_Montana.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Great_Seal_of_Montana.svg"
@@ -1045,15 +951,8 @@
     "capital": "Lincoln",
     "largest_city": "Omaha",
     "govenor": "Jim Pillen",
-    "senators": [
-      "Deb Fischer",
-      "Pete Ricketts"
-    ],
-    "house_delegation": [
-      "Mike Flood",
-      "Don Bacon",
-      "Adrian Smith"
-    ],
+    "senators": ["Deb Fischer", "Pete Ricketts"],
+    "house_delegation": ["Mike Flood", "Don Bacon", "Adrian Smith"],
     "area": {
       "total": "77358 sq mi",
       "land": "76874 sq mi",
@@ -1066,8 +965,8 @@
       "median_household_income": "$59970"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "40\u00b0 N to 43\u00b0 N",
-    "longitude": "95\u00b0\u200a19\u2032 W to 104\u00b0\u200a03\u2032 W",
+    "latitude": "40° N to 43° N",
+    "longitude": "95° 19′ W to 104° 03′ W",
     "url": "https://www.nebraska.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flag_of_Nebraska.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Seal_of_Nebraska.svg"
@@ -1079,10 +978,7 @@
     "capital": "Carson City",
     "largest_city": "Las Vegas",
     "govenor": "Joe Lombardo",
-    "senators": [
-      "Catherine Cortez Masto",
-      "Jacky Rosen"
-    ],
+    "senators": ["Catherine Cortez Masto", "Jacky Rosen"],
     "house_delegation": [
       "Dina Titus",
       "Mark Amodei",
@@ -1101,8 +997,8 @@
       "median_household_income": "$60365"
     },
     "time_zone": "UTC-8(PST)",
-    "latitude": "35\u00b0 N to 42\u00b0 N",
-    "longitude": "114\u00b0\u200a2\u2032 W to 120\u00b0 W",
+    "latitude": "35° N to 42° N",
+    "longitude": "114° 2′ W to 120° W",
     "url": "https://nv.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Flag_of_Nevada.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/State_Seal_of_Nevada.svg"
@@ -1114,14 +1010,8 @@
     "capital": "Concord",
     "largest_city": "Manchester",
     "govenor": "Chris Sununu",
-    "senators": [
-      "Jeanne Shaheen",
-      "Maggie Hassan"
-    ],
-    "house_delegation": [
-      "Chris Pappas",
-      "Annie Kuster"
-    ],
+    "senators": ["Jeanne Shaheen", "Maggie Hassan"],
+    "house_delegation": ["Chris Pappas", "Annie Kuster"],
     "area": {
       "total": "9349 sq mi",
       "land": "8953 sq mi",
@@ -1134,8 +1024,8 @@
       "median_household_income": "$73381"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "42\u00b0 42\u2032 N to 45\u00b0 18\u2032 N",
-    "longitude": "70\u00b0 36\u2032 W to 72\u00b0 33\u2032 W",
+    "latitude": "42° 42′ N to 45° 18′ N",
+    "longitude": "70° 36′ W to 72° 33′ W",
     "url": "https://www.nh.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Flag_of_New_Hampshire.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Seal_of_New_Hampshire.svg"
@@ -1147,10 +1037,7 @@
     "capital": "Trenton",
     "largest_city": "Newark",
     "govenor": "Phil Murphy",
-    "senators": [
-      "Bob Menendez",
-      "Cory Booker"
-    ],
+    "senators": ["Bob Menendez", "Cory Booker"],
     "house_delegation": [
       "Donald Norcross",
       "Jeff Van Drew",
@@ -1177,8 +1064,8 @@
       "median_household_income": "$82545"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "38\u00b056\u2032 N to 41\u00b021\u2032 N",
-    "longitude": "73\u00b054\u2032 W to 75\u00b034\u2032 W",
+    "latitude": "38°56′ N to 41°21′ N",
+    "longitude": "73°54′ W to 75°34′ W",
     "url": "https://nj.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_New_Jersey.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Seal_of_New_Jersey.svg"
@@ -1190,10 +1077,7 @@
     "capital": "Santa Fe",
     "largest_city": "Albuquerque",
     "govenor": "Michelle Lujan Girsham",
-    "senators": [
-      "Martin Heinrich",
-      "Ben Ray Luj\u00e1n"
-    ],
+    "senators": ["Martin Heinrich", "Ben Ray Luján"],
     "house_delegation": [
       "Melanie Stansbury",
       "Gabe Vasquez",
@@ -1211,8 +1095,8 @@
       "median_household_income": "$51945"
     },
     "time_zone": "UTC-7(MST)",
-    "latitude": "31\u00b020\u2032 N to 37\u00b0N",
-    "longitude": "103\u00b0 W to 109\u00b03\u2032 W",
+    "latitude": "31°20′ N to 37°N",
+    "longitude": "103° W to 109°3′ W",
     "url": "https://www.nm.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_New_Mexico.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Seal_of_New_Mexico.svg"
@@ -1224,10 +1108,7 @@
     "capital": "Albany",
     "largest_city": "New York City",
     "govenor": "Kathy Hocul",
-    "senators": [
-      "Chuck Schumer",
-      "Kirsten Gillibrand"
-    ],
+    "senators": ["Chuck Schumer", "Kirsten Gillibrand"],
     "house_delegation": [
       "Nick LaLota",
       "Andrew Garbarino",
@@ -1235,7 +1116,7 @@
       "Anthony D`Esposito",
       "Gregory Meeks",
       "Grace Meng",
-      "Nydia Vel\u00e1zquez",
+      "Nydia Velázquez",
       "Hakeem Jeffries",
       "Yvette Clarke",
       "Dan Goldman",
@@ -1268,8 +1149,8 @@
       "median_household_income": "$71100"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "40\u00b0\u200a30\u2032 N to 45\u00b0\u200a1\u2032 N",
-    "longitude": "71\u00b0\u200a51\u2032 W to 79\u00b0\u200a46\u2032 W",
+    "latitude": "40° 30′ N to 45° 1′ N",
+    "longitude": "71° 51′ W to 79° 46′ W",
     "url": "https://www.ny.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_New_York.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Seal_of_New_York.svg"
@@ -1281,10 +1162,7 @@
     "capital": "Raleigh",
     "largest_city": "Charlotte",
     "govenor": "Roy Cooper",
-    "senators": [
-      "Thom Tillis",
-      "Ted Budd"
-    ],
+    "senators": ["Thom Tillis", "Ted Budd"],
     "house_delegation": [
       "Don Davis",
       "Deborah Ross",
@@ -1313,8 +1191,8 @@
       "median_household_income": "$52752"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "33\u00b0\u200a50\u2032 N to 36\u00b0\u200a35\u2032 N",
-    "longitude": "75\u00b0\u200a28\u2032 W to 84\u00b0\u200a19\u2032 W",
+    "latitude": "33° 50′ N to 36° 35′ N",
+    "longitude": "75° 28′ W to 84° 19′ W",
     "url": "https://www.nc.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Flag_of_North_Carolina.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Seal_of_North_Carolina.svg"
@@ -1326,13 +1204,8 @@
     "capital": "Bismarck",
     "largest_city": "Fargo",
     "govenor": "Doug Burgum",
-    "senators": [
-      "John Hoeven",
-      "Kevin Cramer"
-    ],
-    "house_delegation": [
-      "Kelly Armstrong"
-    ],
+    "senators": ["John Hoeven", "Kevin Cramer"],
+    "house_delegation": ["Kelly Armstrong"],
     "area": {
       "total": "70705 sq mi",
       "land": "68994 sq mi",
@@ -1345,8 +1218,8 @@
       "median_household_income": "$61843"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "45\u00b0\u200a56\u2032 N to 49\u00b0\u200a00\u2032 N",
-    "longitude": "96\u00b0\u200a33\u2032 W to 104\u00b0\u200a03\u2032 W",
+    "latitude": "45° 56′ N to 49° 00′ N",
+    "longitude": "96° 33′ W to 104° 03′ W",
     "url": "https://nd.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Flag_of_North_Dakota.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Seal_of_the_State_of_North_Dakota.svg"
@@ -1358,10 +1231,7 @@
     "capital": "Columbus",
     "largest_city": "Greater Cleveland",
     "govenor": "Mike DeWine",
-    "senators": [
-      "Sherrod Brown",
-      "J. D. Vance"
-    ],
+    "senators": ["Sherrod Brown", "J.D. Vance"],
     "house_delegation": [
       "Greg Landsman",
       "Brad Wenstrup",
@@ -1391,8 +1261,8 @@
       "median_household_income": "$54021"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "38\u00b024\u2032 N to 41\u00b059\u2032 N",
-    "longitude": "80\u00b031\u2032 W to 84\u00b049\u2032 W",
+    "latitude": "38°24′ N to 41°59′ N",
+    "longitude": "80°31′ W to 84°49′ W",
     "url": "https://ohio.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Ohio.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Seal_of_Ohio_%28Official%29.svg"
@@ -1404,10 +1274,7 @@
     "capital": "Oklahoma City",
     "largest_city": "Oklahoma City",
     "govenor": "Kevin Stitt",
-    "senators": [
-      "James Lankford",
-      "Markwayne Mullin"
-    ],
+    "senators": ["James Lankford", "Markwayne Mullin"],
     "house_delegation": [
       "Kevin Hern",
       "Josh Brecheen",
@@ -1427,8 +1294,8 @@
       "median_household_income": "$50051"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "33\u00b037' N to 37\u00b0 N",
-    "longitude": "94\u00b0\u200a26' W to 103\u00b0 W",
+    "latitude": "33°37' N to 37° N",
+    "longitude": "94° 26' W to 103° W",
     "url": "https://oklahoma.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Flag_of_Oklahoma.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Seal_of_Oklahoma.svg"
@@ -1440,10 +1307,7 @@
     "capital": "Salem",
     "largest_city": "Portland",
     "govenor": "Tina Kotek",
-    "senators": [
-      "Ron Wyden",
-      "Jeff Merkley"
-    ],
+    "senators": ["Ron Wyden", "Jeff Merkley"],
     "house_delegation": [
       "Suzanne Bonamici",
       "Cliff Bentz",
@@ -1464,8 +1328,8 @@
       "median_household_income": "$71562"
     },
     "time_zone": "UTC-8(PST)",
-    "latitude": "42\u00b0 N to 46\u00b018\u2032 N",
-    "longitude": "116\u00b028\u2032 W to 124\u00b038\u2032 W",
+    "latitude": "42° N to 46°18′ N",
+    "longitude": "116°28′ W to 124°38′ W",
     "url": "https://www.oregon.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Oregon.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Seal_of_Oregon.svg"
@@ -1477,10 +1341,7 @@
     "capital": "Harrisburg",
     "largest_city": "Philadelphia",
     "govenor": "Josh Shapiro",
-    "senators": [
-      "Bob Casey Jr.",
-      "John Fetterman"
-    ],
+    "senators": ["Bob Casey Jr.", "John Fetterman"],
     "house_delegation": [
       "Brian Fitzpatrick",
       "Brendan Boyle",
@@ -1490,7 +1351,7 @@
       "Chrissy Houlahan",
       "Susan Wild",
       "Matt Cartwright",
-      "Dan Meuser",
+      "Dan Meusuer",
       "Scott Perry",
       "Lloyd Smucker",
       "Summer Lee",
@@ -1512,8 +1373,8 @@
       "median_household_income": "$59195"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "39\u00b043\u2032 to 42\u00b016\u2032 N",
-    "longitude": "74\u00b041\u2032 to 80\u00b031\u2032 W",
+    "latitude": "39°43′ to 42°16′ N",
+    "longitude": "74°41′ to 80°31′ W",
     "url": "https://www.pa.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Pennsylvania.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Seal_of_Pennsylvania.svg"
@@ -1525,14 +1386,8 @@
     "capital": "Providence",
     "largest_city": "Greater Boston",
     "govenor": "Dan McKee",
-    "senators": [
-      "Jack Reed",
-      "Sheldon Whitehouse"
-    ],
-    "house_delegation": [
-      "VACANT",
-      "Seth Magaziner"
-    ],
+    "senators": ["Jack Reed", "Sheldon Whitehouse"],
+    "house_delegation": ["David Cicilline", "Seth Magaziner"],
     "area": {
       "total": "1214 sq mi",
       "land": "1055 sq mi",
@@ -1545,8 +1400,8 @@
       "median_household_income": "$63870"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "41\u00b0\u200a09\u2032 N to 42\u00b0\u200a01\u2032 N",
-    "longitude": "71\u00b0\u200a07\u2032 W to 71\u00b0\u200a53\u2032 W",
+    "latitude": "41° 09′ N to 42° 01′ N",
+    "longitude": "71° 07′ W to 71° 53′ W",
     "url": "https://www.ri.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Rhode_Island.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Seal_of_Rhode_Island.svg"
@@ -1558,10 +1413,7 @@
     "capital": "Columbia",
     "largest_city": "Charleston",
     "govenor": "Henry McMaster",
-    "senators": [
-      "Lindsey Graham",
-      "Tim Scott"
-    ],
+    "senators": ["Lindsey Graham", "Tim Scott"],
     "house_delegation": [
       "Nancy Mace",
       "Joe Wilson",
@@ -1583,8 +1435,8 @@
       "median_household_income": "$50570"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "32\u00b02\u2032 N to 35\u00b013\u2032 N",
-    "longitude": "78\u00b032\u2032 W to 83\u00b021\u2032 W",
+    "latitude": "32°2′ N to 35°13′ N",
+    "longitude": "78°32′ W to 83°21′ W",
     "url": "https://sc.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_South_Carolina.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Seal_of_South_Carolina.svg"
@@ -1596,13 +1448,8 @@
     "capital": "Pierre",
     "largest_city": "Sioux Falls",
     "govenor": "Kristi Noem",
-    "senators": [
-      "John Thune",
-      "Mike Rounds"
-    ],
-    "house_delegation": [
-      "Dusty Johnson"
-    ],
+    "senators": ["John Thune", "Mike Rounds"],
+    "house_delegation": ["Dusty Johnson"],
     "area": {
       "total": "77116 sq mi",
       "land": "75811 sq mi",
@@ -1615,8 +1462,8 @@
       "median_household_income": "$56521"
     },
     "time_zone": "UTC-7(MST)",
-    "latitude": "42\u00b029\u2032 N to 45\u00b056\u2032 N",
-    "longitude": "96\u00b026\u2032 W to 104\u00b003\u2032 W",
+    "latitude": "42°29′ N to 45°56′ N",
+    "longitude": "96°26′ W to 104°03′ W",
     "url": "https://www.sd.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_South_Dakota.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/State_Seal_of_South_Dakota.svg"
@@ -1628,10 +1475,7 @@
     "capital": "Nashville",
     "largest_city": "Nashville",
     "govenor": "Bill Lee",
-    "senators": [
-      "Marsha Blackburn",
-      "Bill Hagerty"
-    ],
+    "senators": ["Marsha Blackburn", "Bill Hagerty"],
     "house_delegation": [
       "Diana Harshbarger",
       "Tim Burchett",
@@ -1655,8 +1499,8 @@
       "median_household_income": "$54833"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "34\u00b059\u2032 N to 36\u00b041\u2032 N",
-    "longitude": "81\u00b039\u2032 W to 90\u00b019\u2032 W",
+    "latitude": "34°59′ N to 36°41′ N",
+    "longitude": "81°39′ W to 90°19′ W",
     "url": "https://www.tn.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Tennessee.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Seal_of_Tennessee.svg"
@@ -1668,10 +1512,7 @@
     "capital": "Austin",
     "largest_city": "Houston",
     "govenor": "Greg Abbott",
-    "senators": [
-      "John Cornyn",
-      "Ted Cruz"
-    ],
+    "senators": ["John Cornyn", "Ted Cruz"],
     "house_delegation": [
       "Nathaniel Moran",
       "Dan Crenshaw",
@@ -1679,7 +1520,7 @@
       "Pat Fallon",
       "Lance Gooden",
       "Jake Ellzey",
-      "Lizzie Pannill Fletcher",
+      "Lizzie Fletcher",
       "Morgan Luttrell",
       "Al Green",
       "Michael McCaul",
@@ -1688,7 +1529,7 @@
       "Ronny Jackson",
       "Randy Weber",
       "Monica De La Cruz",
-      "Veronica Escobar",
+      "Veronica Esocabar",
       "Pete Sessions",
       "Sheila Jackson Lee",
       "Jodey Arrington",
@@ -1698,7 +1539,7 @@
       "Tony Gonzales",
       "Beth Van Duyne",
       "Roger Williams",
-      "Michael C. Burgess",
+      "Michael Burgess",
       "Michael Cloud",
       "Henry Cuellar",
       "Sylvia Garcia",
@@ -1706,7 +1547,7 @@
       "John Carter",
       "Colin Allred",
       "Marc Veasey",
-      "Vicente Gonzalez",
+      "Vincente Gonzalez",
       "Greg Casar",
       "Brian Babin",
       "Lloyd Doggett",
@@ -1724,8 +1565,8 @@
       "median_household_income": "$64034"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "25\u00b050\u2032 N to 36\u00b030\u2032 N",
-    "longitude": "93\u00b031\u2032 W to 106\u00b039\u2032 W",
+    "latitude": "25°50′ N to 36°30′ N",
+    "longitude": "93°31′ W to 106°39′ W",
     "url": "https://www.texas.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Seal_of_Texas.svg"
@@ -1737,10 +1578,7 @@
     "capital": "Salt Lake City",
     "largest_city": "Salt Lake City",
     "govenor": "Spencer Cox",
-    "senators": [
-      "Mike Lee",
-      "Mitt Romney"
-    ],
+    "senators": ["Mike Lee", "Mitt Romney"],
     "house_delegation": [
       "Blake Moore",
       "Chris Stewart",
@@ -1759,8 +1597,8 @@
       "median_household_income": "$60365"
     },
     "time_zone": "UTC-7(MST)",
-    "latitude": "37\u00b0 N to 42\u00b0 N",
-    "longitude": "109\u00b03\u2032 W to 114\u00b03\u2032 W",
+    "latitude": "37° N to 42° N",
+    "longitude": "109°3′ W to 114°3′ W",
     "url": "https://www.utah.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Utah.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Seal_of_Utah.svg"
@@ -1772,13 +1610,8 @@
     "capital": "Montpelier",
     "largest_city": "Burlington",
     "govenor": "Phil Scott",
-    "senators": [
-      "Bernie Sanders",
-      "Peter Welch"
-    ],
-    "house_delegation": [
-      "Becca Balint"
-    ],
+    "senators": ["Bernie Sanders", "Peter Welch"],
+    "house_delegation": ["Becca Balint"],
     "area": {
       "total": "9616 sq mi",
       "land": "9250 sq mi",
@@ -1791,8 +1624,8 @@
       "median_household_income": "$56513"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "42\u00b044\u2032 N to 45\u00b01\u2032 N",
-    "longitude": "71\u00b028\u2032 W to 73\u00b026\u2032 W",
+    "latitude": "42°44′ N to 45°1′ N",
+    "longitude": "71°28′ W to 73°26′ W",
     "url": "https://www.vermont.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Vermont.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/State_Seal_of_Vermont.svg"
@@ -1804,15 +1637,11 @@
     "capital": "Richmond",
     "largest_city": "Virginia Beach",
     "govenor": "Glenn Youngkin",
-    "senators": [
-      "Mark Warner",
-      "Tim Kaine"
-    ],
+    "senators": ["Mark Warner", "Tim Kaine"],
     "house_delegation": [
       "Rob Wittman",
       "Jen Kiggans",
       "Bobby Scott",
-      "Jennifer McClellan",
       "Bob Good",
       "Ben Cline",
       "Abigail Spanberger",
@@ -1833,8 +1662,8 @@
       "median_household_income": "$80615"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "37\u00b055' to 36\u00b072' N",
-    "longitude": "78\u00b01' to 29\u00b064' W",
+    "latitude": "37°55' to 36°72' N",
+    "longitude": "78°1' to 29°64' W",
     "url": "https://www.virginia.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Virginia.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Seal_of_Virginia.svg"
@@ -1846,10 +1675,7 @@
     "capital": "Seattle",
     "largest_city": "Seattle",
     "govenor": "Jay Inslee",
-    "senators": [
-      "Patty Murray",
-      "Maria Cantwell"
-    ],
+    "senators": ["Patty Murray", "Maria Cantwell"],
     "house_delegation": [
       "Suzan DelBene",
       "Rick Larsen",
@@ -1874,8 +1700,8 @@
       "median_household_income": "$70979"
     },
     "time_zone": "UTC-8(PST)",
-    "latitude": "45\u00b033\u2032 N to 49\u00b0 N",
-    "longitude": "116\u00b055\u2032 W to 124\u00b046\u2032 W",
+    "latitude": "45°33′ N to 49° N",
+    "longitude": "116°55′ W to 124°46′ W",
     "url": "https://wa.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Washington.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Seal_of_Washington.svg"
@@ -1887,14 +1713,8 @@
     "capital": "Charleston",
     "largest_city": "Charleston-Huntington",
     "govenor": "Jim Justice",
-    "senators": [
-      "Joe Manchin",
-      "Shelley Moore Capito"
-    ],
-    "house_delegation": [
-      "Carol Miller",
-      "Alex Mooney"
-    ],
+    "senators": ["Joe Manchin", "Shelley Moore Capito"],
+    "house_delegation": ["Carol Miller", "Alex Mooney"],
     "area": {
       "total": "24230 sq mi",
       "land": "24078 sq mi",
@@ -1907,8 +1727,8 @@
       "median_household_income": "$43469"
     },
     "time_zone": "UTC-5(EST)",
-    "latitude": "37\u00b012\u2032 N to 40\u00b039\u2032 N",
-    "longitude": "77\u00b043\u2032 W to 82\u00b039\u2032 W",
+    "latitude": "37°12′ N to 40°39′ N",
+    "longitude": "77°43′ W to 82°39′ W",
     "url": "https://www.wv.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Flag_of_West_Virginia.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Seal_of_West_Virginia.svg"
@@ -1920,16 +1740,13 @@
     "capital": "Madison",
     "largest_city": "Milwaukee",
     "govenor": "Tony Evers",
-    "senators": [
-      "Ron Johnson",
-      "Tammy Baldwin"
-    ],
+    "senators": ["Ron Johnson", "Tammy Baldwin"],
     "house_delegation": [
       "Bryan Steil",
       "Mark Pocan",
       "Derrick Van Orden",
       "Gwen Moore",
-      "Scott Fitzgerald",
+      "Scott L. Fitzgerald",
       "Glenn Grothman",
       "Tom Tiffany",
       "Mike Gallagher"
@@ -1946,8 +1763,8 @@
       "median_household_income": "$64168"
     },
     "time_zone": "UTC-6(CST)",
-    "latitude": "42\u00b0\u200a30' N to 47\u00b0\u200a05\u2032 N",
-    "longitude": "86\u00b0\u200a46\u2032 W to 92\u00b0\u200a54\u2032 W",
+    "latitude": "42° 30' N to 47° 05′ N",
+    "longitude": "86° 46′ W to 92° 54′ W",
     "url": "https://www.wisconsin.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Flag_of_Wisconsin.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Seal_of_Wisconsin.svg"
@@ -1959,13 +1776,8 @@
     "capital": "Cheyenne",
     "largest_city": "Cheyenne",
     "govenor": "Mark Gordon",
-    "senators": [
-      "John Barrasso",
-      "Cynthia Lummis"
-    ],
-    "house_delegation": [
-      "Harriet Hageman"
-    ],
+    "senators": ["John Barrasso", "Cynthia Lummis"],
+    "house_delegation": ["Harriet Hageman"],
     "area": {
       "total": "97813 sq mi",
       "land": "97093 sq mi",
@@ -1978,8 +1790,8 @@
       "median_household_income": "$62268"
     },
     "time_zone": "UTC-7(MST)",
-    "latitude": "41\u00b0N to 45\u00b0N",
-    "longitude": "104\u00b03'W to 111\u00b03'W",
+    "latitude": "41°N to 45°N",
+    "longitude": "104°3'W to 111°3'W",
     "url": "https://www.wyo.gov/",
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Wyoming.svg",
     "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Seal_of_Wyoming.svg"

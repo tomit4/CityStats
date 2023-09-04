@@ -146,7 +146,7 @@
         "city_name": "Alexandria",
         "state_name": "Virginia",
         "coordinates": "38°49′13″N 77°03′01″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": "1749",
         "incorporated": "1779",
         "government": {
@@ -364,7 +364,7 @@
         "city_name": "Anchorage",
         "state_name": "Alaska",
         "coordinates": "61°13′00″N 149°53′37″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": "1914",
         "incorporated": "1920",
         "government": {
@@ -400,7 +400,7 @@
         "zip_codes": ["99501–99524", "99529–99530", "99599"],
         "area_codes": [907],
         "fips_code": "02-03000",
-        "gnis_feature_ids": null,
+        "gnis_feature_ids": [null],
         "url": "https://www.muni.org/"
     },
     {
@@ -593,7 +593,7 @@
         "zip_codes": ["30601-30609", "30612"],
         "area_codes": [706],
         "fips_code": "13-03440",
-        "gnis_feature_ids": null,
+        "gnis_feature_ids": [null],
         "url": "https://www.accgov.com/"
     },
     {
@@ -908,7 +908,7 @@
         "city_name": "Baltimore",
         "state_name": "Maryland",
         "coordinates": "39°17′22″N 76°36′55″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": "1729",
         "incorporated": "1797",
         "government": {
@@ -959,7 +959,7 @@
         "city_name": "Baton_Rouge",
         "state_name": "Louisiana",
         "coordinates": "30°26′51″N 91°10′43″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": "1699",
         "incorporated": "1721",
         "government": {
@@ -2206,7 +2206,7 @@
         "city_name": "Chesapeake",
         "state_name": "Virginia",
         "coordinates": "36°42′51″N 76°14′18″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": "1963",
         "incorporated": null,
         "government": {
@@ -5187,7 +5187,7 @@
         "city_name": "Hampton",
         "state_name": "Virginia",
         "coordinates": "37.034946°N 76.360126°W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": "1610",
         "incorporated": "1849",
         "government": {
@@ -8678,7 +8678,7 @@
         "city_name": "Newport_News",
         "state_name": "Virginia",
         "coordinates": "37°4′15″N 76°29′4″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": "1691",
         "incorporated": "1896",
         "government": {
@@ -8797,7 +8797,7 @@
         "city_name": "Norfolk",
         "state_name": "Virginia",
         "coordinates": "36°50′49″N 76°17′07″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": "1682",
         "incorporated": "1736",
         "government": {
@@ -10562,7 +10562,7 @@
         "state_name": "California",
         "coordinates": "37°56′09″N 122°20′52″W",
         "counties": ["Contra Costa"],
-        "settled_founded": null,
+        "settled_founded": [null],
         "incorporated": "1905",
         "government": {
             "type": "Council-Manager",
@@ -10606,7 +10606,7 @@
         "city_name": "Richmond",
         "state_name": "Virginia",
         "coordinates": "37°32′27″N 77°26′12″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": null,
         "incorporated": "1742",
         "government": {
@@ -12439,7 +12439,7 @@
         "city_name": "St._Louis",
         "state_name": "Missouri",
         "coordinates": "38°37′38″N 90°11′52″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": "1764",
         "incorporated": "1822",
         "government": {
@@ -13504,7 +13504,7 @@
         "city_name": "Virginia_Beach",
         "state_name": "Virginia",
         "coordinates": "36°51′00″N 75°58′40″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": null,
         "incorporated": "1952",
         "government": {
@@ -13662,7 +13662,7 @@
         "city_name": "Washington,_D.C.",
         "state_name": null,
         "coordinates": "38°54′17″N 77°00′59″W",
-        "counties": null,
+        "counties": [null],
         "settled_founded": null,
         "incorporated": "1800",
         "government": {

@@ -3,3 +3,4 @@ node_modules
 *.db
 .prettierrc
 *.vim
+backend/test_scripts/base*
