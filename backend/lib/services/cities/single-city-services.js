@@ -34,115 +34,168 @@ class SingleCityService extends SingleCityServiceDetails {
         this.fields = [...this._nativeFields, ...this.relatedFields]
     }
     async _grabCityById(knex, id) {
-        const city = await knex
-            .select(...this._cityTableFields)
-            .from('cities')
-            .where('id', id)
-            .first()
-        if (!city) throw Error(`No City Found For Id: ${id}`)
-        return city
+        try {
+            const city = await knex
+                .select(...this._cityTableFields)
+                .from('cities')
+                .where('id', id)
+                .first()
+            if (!city) throw Error(`No City Found For Id: ${id}`)
+            return city
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabCountiesById(knex, id) {
-        const counties = await knex('cities_counties').where('city_id', id)
-        if (!counties) throw Error(`No Counties Data Found Id: ${id}`)
-        return counties.map(county => {
-            return county.county_name
-        })
+        try {
+            const counties = await knex('cities_counties').where('city_id', id)
+            if (!counties) throw Error(`No Counties Data Found Id: ${id}`)
+            return counties.map(county => {
+                return county.county_name
+            })
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabGovCouncilMembersById(knex, id) {
-        const councilMembers = await knex
-            .select('council_member')
-            .from('cities_government_council')
-            .where('city_id', id)
-        if (!councilMembers)
-            throw Error(
-                `No Cities Government Council Members Found For Id: ${id}`,
-            )
-        return councilMembers.map(member => {
-            return member.council_member
-        })
+        try {
+            const councilMembers = await knex
+                .select('council_member')
+                .from('cities_government_council')
+                .where('city_id', id)
+            if (!councilMembers)
+                throw Error(
+                    `No Cities Government Council Members Found For Id: ${id}`,
+                )
+            return councilMembers.map(member => {
+                return member.council_member
+            })
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabBaseGovInfoById(knex, id) {
-        const councilMembers = await this._grabGovCouncilMembersById(knex, id)
-        const gov = await knex
-            .select('type', 'mayor')
-            .from('cities_government')
-            .where('id', id)
-            .first()
-        if (!gov) throw Error(`No Cities Government Data Found For Id: ${id}`)
-        gov.city_council = councilMembers
-        return gov
+        try {
+            const councilMembers = await this._grabGovCouncilMembersById(
+                knex,
+                id,
+            )
+            const gov = await knex
+                .select('type', 'mayor')
+                .from('cities_government')
+                .where('id', id)
+                .first()
+            if (!gov)
+                throw Error(`No Cities Government Data Found For Id: ${id}`)
+            gov.city_council = councilMembers
+            return gov
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAreaById(knex, id) {
-        const area = await knex
-            .select('city', 'land', 'water')
-            .from('cities_area')
-            .where('city_id', id)
-            .first()
-        if (!area) throw Error(`No Cities Area Data Found For Id: ${id}`)
-        return area
+        try {
+            const area = await knex
+                .select('city', 'land', 'water')
+                .from('cities_area')
+                .where('city_id', id)
+                .first()
+            if (!area) throw Error(`No Cities Area Data Found For Id: ${id}`)
+            return area
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabPopulationById(knex, id) {
-        const population = await knex
-            .select('city', 'density', 'metro')
-            .from('cities_population')
-            .where('city_id', id)
-            .first()
-        if (!population)
-            throw Error(`No Cities Population Data Found For Id: ${id}`)
-        return population
+        try {
+            const population = await knex
+                .select('city', 'density', 'metro')
+                .from('cities_population')
+                .where('city_id', id)
+                .first()
+            if (!population)
+                throw Error(`No Cities Population Data Found For Id: ${id}`)
+            return population
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabZipCodesById(knex, id) {
-        const zips = await knex
-            .select('zip_code')
-            .from('cities_zip_codes')
-            .where('city_id', id)
-        if (!zips) throw Error(`No Cities Zip Codes Data Found For Id: ${id}`)
-        return zips.map(zip => {
-            return zip.zip_code
-        })
+        try {
+            const zips = await knex
+                .select('zip_code')
+                .from('cities_zip_codes')
+                .where('city_id', id)
+            if (!zips)
+                throw Error(`No Cities Zip Codes Data Found For Id: ${id}`)
+            return zips.map(zip => {
+                return zip.zip_code
+            })
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAreaCodesById(knex, id) {
-        const areaCodes = await knex
-            .select('area_code')
-            .from('cities_area_codes')
-            .where('city_id', id)
-        if (!areaCodes)
-            throw Error(`No Cities Area Codes Data Found For Id: ${id}`)
-        return areaCodes.map(code => {
-            return code.area_code
-        })
+        try {
+            const areaCodes = await knex
+                .select('area_code')
+                .from('cities_area_codes')
+                .where('city_id', id)
+            if (!areaCodes)
+                throw Error(`No Cities Area Codes Data Found For Id: ${id}`)
+            return areaCodes.map(code => {
+                return code.area_code
+            })
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabGnisIdsById(knex, id) {
-        const gnisIds = await knex
-            .select('gnis_feature_id')
-            .from('cities_gnis_feature_ids')
-            .where('city_id', id)
-        if (!gnisIds)
-            throw Error(`No Cities Gnis Feature Ids Data Found For Id: ${id}`)
-        return gnisIds.map(id => {
-            return id.gnis_feature_id
-        })
+        try {
+            const gnisIds = await knex
+                .select('gnis_feature_id')
+                .from('cities_gnis_feature_ids')
+                .where('city_id', id)
+            if (!gnisIds)
+                throw Error(
+                    `No Cities Gnis Feature Ids Data Found For Id: ${id}`,
+                )
+            return gnisIds.map(id => {
+                return id.gnis_feature_id
+            })
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabNativeFieldData(knex, id, field) {
-        const nativeFieldData = await knex
-            .where('id', id)
-            .select('id', 'city_name', 'state_name')
-            .select(field)
-            .from('cities')
-            .first()
-        if (!nativeFieldData)
-            throw Error(`No data retrieved for field: ${field} at id: ${id}`)
-        return nativeFieldData
+        try {
+            const nativeFieldData = await knex
+                .where('id', id)
+                .select('id', 'city_name', 'state_name')
+                .select(field)
+                .from('cities')
+                .first()
+            if (!nativeFieldData)
+                throw Error(
+                    `No data retrieved for field: ${field} at id: ${id}`,
+                )
+            return nativeFieldData
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabMinCityInfo(knex, id) {
-        const city = await knex
-            .where('id', id)
-            .select('id', 'city_name', 'state_name')
-            .from('cities')
-            .first()
-        if (!city) throw Error(`No city info retrieved for id: ${id}`)
-        return city
+        try {
+            const city = await knex
+                .where('id', id)
+                .select('id', 'city_name', 'state_name')
+                .from('cities')
+                .first()
+            if (!city) throw Error(`No city info retrieved for id: ${id}`)
+            return city
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
 
     async _grabRelatedFieldData(knex, id, field) {

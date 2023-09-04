@@ -29,47 +29,69 @@ class SingleStateService extends SingleStateServiceDetails {
         this.fields = [...this._nativeFields, ...this.relatedFields]
     }
     async _grabStateById(knex, id) {
-        const state = await knex('states').where('id', id).first()
-        if (!state) throw Error(`No State Found For Id: ${id}`)
-        return state
+        try {
+            const state = await knex('states').where('id', id).first()
+            if (!state) throw Error(`No State Found For Id: ${id}`)
+            return state
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAreaById(knex, id) {
-        const area = await knex
-            .where('state_id', id)
-            .select('total', 'land', 'water')
-            .from('states_area')
-            .first()
-        if (!area) throw Error(`No Areas Found For Id: ${id}`)
-        return area
+        try {
+            const area = await knex
+                .where('state_id', id)
+                .select('total', 'land', 'water')
+                .from('states_area')
+                .first()
+            if (!area) throw Error(`No Areas Found For Id: ${id}`)
+            return area
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabPopulationById(knex, id) {
-        const population = await knex
-            .where('state_id', id)
-            .select('total', 'density', 'median_household_income')
-            .from('states_population')
-            .first()
-        if (!population) throw Error(`No Populations Found For Id: ${id}`)
-        return population
+        try {
+            const population = await knex
+                .where('state_id', id)
+                .select('total', 'density', 'median_household_income')
+                .from('states_population')
+                .first()
+            if (!population) throw Error(`No Populations Found For Id: ${id}`)
+            return population
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabMinStateInfo(knex, id) {
-        const state = await knex
-            .where('id', id)
-            .select('id', 'state_name', 'state_abbreviation')
-            .from('states')
-            .first()
-        if (!state) throw Error(`No state info retrieved for id: ${id}`)
-        return state
+        try {
+            const state = await knex
+                .where('id', id)
+                .select('id', 'state_name', 'state_abbreviation')
+                .from('states')
+                .first()
+            if (!state) throw Error(`No state info retrieved for id: ${id}`)
+            return state
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabNativeFieldData(knex, id, field) {
-        const nativeFieldData = await knex
-            .where('id', id)
-            .select('id', 'state_name', 'state_abbreviation')
-            .select(field)
-            .from('states')
-            .first()
-        if (!nativeFieldData)
-            throw Error(`No data retrieved for field: ${field} at id: ${id}`)
-        return nativeFieldData
+        try {
+            const nativeFieldData = await knex
+                .where('id', id)
+                .select('id', 'state_name', 'state_abbreviation')
+                .select(field)
+                .from('states')
+                .first()
+            if (!nativeFieldData)
+                throw Error(
+                    `No data retrieved for field: ${field} at id: ${id}`,
+                )
+            return nativeFieldData
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabRelatedFieldData(knex, id, field) {
         const state = await this._grabMinStateInfo(knex, id)

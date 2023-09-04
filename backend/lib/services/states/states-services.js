@@ -19,34 +19,54 @@ class StatesService extends SingleStateService {
     // ERROR HANDLING: try/catch/throw is necessary on all db queries,
     // see grabSingleCouncilMember() for proper implementation
     async _grabAllStateInfo(knex) {
-        const allStates = await knex('states')
-        if (!allStates) throw Error('No States Table Found')
-        this.allStates = allStates
+        try {
+            const allStates = await knex('states')
+            if (!allStates) throw Error('No States Table Found')
+            this.allStates = allStates
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllStateAreas(knex) {
-        const _statesAreas = await knex
-            .select('total', 'land', 'water')
-            .from('states_area')
-        if (!_statesAreas) throw Error('No States Areas Table Found')
-        this._statesAreas = _statesAreas
+        try {
+            const _statesAreas = await knex
+                .select('total', 'land', 'water')
+                .from('states_area')
+            if (!_statesAreas) throw Error('No States Areas Table Found')
+            this._statesAreas = _statesAreas
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllStatePopulations(knex) {
-        const _statesPopulations = await knex
-            .select('total', 'density', 'median_household_income')
-            .from('states_population')
-        if (!_statesPopulations)
-            throw Error('No States Populations Table Found')
-        this._statesPopulations = _statesPopulations
+        try {
+            const _statesPopulations = await knex
+                .select('total', 'density', 'median_household_income')
+                .from('states_population')
+            if (!_statesPopulations)
+                throw Error('No States Populations Table Found')
+            this._statesPopulations = _statesPopulations
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllStateSenators(knex) {
-        const senators = await knex('states_senators')
-        if (!senators) throw Error('No States Senators Table Found')
-        this._senators = senators
+        try {
+            const senators = await knex('states_senators')
+            if (!senators) throw Error('No States Senators Table Found')
+            this._senators = senators
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllHouseDelegates(knex) {
-        const delegates = await knex('states_house_delegates')
-        if (!delegates) throw Error('No States Delegates Table Found')
-        this._house_delegates = delegates
+        try {
+            const delegates = await knex('states_house_delegates')
+            if (!delegates) throw Error('No States Delegates Table Found')
+            this._house_delegates = delegates
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     // NOTE: These map functions can probably
     // be accomplished similarly using sql join in queries above

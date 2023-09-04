@@ -11,54 +11,81 @@ class SingleStateServiceDetails {
         this.relatedFields = [...this._statsFields, ...this._repFields]
     }
     async _grabAllStateNames(knex) {
-        const allStateNames = await knex.select('state_name').from('states')
-        if (!allStateNames)
-            throw Error('Failure to retrieve all State Names from DB')
-        return allStateNames.map(state => state.state_name)
+        try {
+            const allStateNames = await knex.select('state_name').from('states')
+            if (!allStateNames)
+                throw Error('Failure to retrieve all State Names from DB')
+            return allStateNames.map(state => state.state_name)
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabStateIdByName(knex, name) {
-        const stateId = (
-            await knex('states').select('id').where('state_name', name).first()
-        ).id
-        if (!stateId) throw Error(`No State Id Found By Name: ${name}`)
-        return stateId
+        try {
+            const stateId = (
+                await knex('states')
+                    .select('id')
+                    .where('state_name', name)
+                    .first()
+            ).id
+            if (!stateId) throw Error(`No State Id Found By Name: ${name}`)
+            return stateId
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async grabIdByName(knex, idOrName) {
-        let id
-        if (isNaN(Number(idOrName))) {
-            const allStateNames = await this._grabAllStateNames(knex)
-            if (allStateNames.includes(idOrName)) {
-                id = await this._grabStateIdByName(knex, idOrName)
-            } else throw Error(`No State Found by Name: ${idOrName}`)
-        } else {
-            id = idOrName
+        try {
+            let id
+            if (isNaN(Number(idOrName))) {
+                const allStateNames = await this._grabAllStateNames(knex)
+                if (allStateNames.includes(idOrName)) {
+                    id = await this._grabStateIdByName(knex, idOrName)
+                } else throw Error(`No State Found by Name: ${idOrName}`)
+            } else {
+                id = idOrName
+            }
+            return id
+        } catch (err) {
+            console.error('ERROR :=>', err)
         }
-        return id
     }
     async grabSenatorsById(knex, id) {
-        const senators = await knex
-            .where('state_id', id)
-            .select('senator_name')
-            .from('states_senators')
-        if (!senators) throw Error(`No Senators Found For Id: ${id}`)
-        return senators.map(senator => senator.senator_name)
+        try {
+            const senators = await knex
+                .where('state_id', id)
+                .select('senator_name')
+                .from('states_senators')
+            if (!senators) throw Error(`No Senators Found For Id: ${id}`)
+            return senators.map(senator => senator.senator_name)
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async grabDelegatesById(knex, id) {
-        const delegates = await knex
-            .where('state_id', id)
-            .select('delegate_name')
-            .from('states_house_delegates')
-        if (!delegates) throw Error(`No Delegates Found For Id: ${id}`)
-        return delegates.map(delegate => delegate.delegate_name)
+        try {
+            const delegates = await knex
+                .where('state_id', id)
+                .select('delegate_name')
+                .from('states_house_delegates')
+            if (!delegates) throw Error(`No Delegates Found For Id: ${id}`)
+            return delegates.map(delegate => delegate.delegate_name)
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabMinStateInfo(knex, id) {
-        const state = await knex
-            .where('id', id)
-            .select('id', 'state_name', 'state_abbreviation')
-            .from('states')
-            .first()
-        if (!state) throw Error(`No state info retrieved for id: ${id}`)
-        return state
+        try {
+            const state = await knex
+                .where('id', id)
+                .select('id', 'state_name', 'state_abbreviation')
+                .from('states')
+                .first()
+            if (!state) throw Error(`No state info retrieved for id: ${id}`)
+            return state
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabDetails(knex, id, details, table) {
         const field = table.split('_').pop()

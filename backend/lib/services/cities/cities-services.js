@@ -27,66 +27,102 @@ class CityService extends SingleCityService {
     // ERROR HANDLING: try/catch/throw is necessary on all db queries,
     // see grabSingleCouncilMember() for proper implementation
     async _grabAllCitiesInfo(knex) {
-        const allCities = await knex
-            .select(...this._cityTableFields)
-            .from('cities')
-        if (!allCities) throw Error('No Cities Table Found')
-        return allCities
+        try {
+            const allCities = await knex
+                .select(...this._cityTableFields)
+                .from('cities')
+            if (!allCities) throw Error('No Cities Table Found')
+            return allCities
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllCounties(knex) {
-        const allCounties = await knex('cities_counties')
-        if (!allCounties) throw Error('No Cities Counties Table Found')
-        return allCounties
+        try {
+            const allCounties = await knex('cities_counties')
+            if (!allCounties) throw Error('No Cities Counties Table Found')
+            return allCounties
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabBaseGovInfo(knex) {
-        const allGovs = await knex
-            .select('type', 'mayor')
-            .from('cities_government')
-        if (!allGovs) throw Error('No Cities Government Table Found')
-        return allGovs
+        try {
+            const allGovs = await knex
+                .select('type', 'mayor')
+                .from('cities_government')
+            if (!allGovs) throw Error('No Cities Government Table Found')
+            return allGovs
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabGovCouncilMembers(knex) {
-        const allCouncilMembers = await knex
-            .select('city_id', 'council_member')
-            .from('cities_government_council')
-        if (!allCouncilMembers)
-            throw Error('No Cities Government Council Table Found')
-        return allCouncilMembers
+        try {
+            const allCouncilMembers = await knex
+                .select('city_id', 'council_member')
+                .from('cities_government_council')
+            if (!allCouncilMembers)
+                throw Error('No Cities Government Council Table Found')
+            return allCouncilMembers
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllAreas(knex) {
-        const allAreas = await knex
-            .select('city', 'land', 'water')
-            .from('cities_area')
-        if (!allAreas) throw Error('No Cities Areas Table Found')
-        return allAreas
+        try {
+            const allAreas = await knex
+                .select('city', 'land', 'water')
+                .from('cities_area')
+            if (!allAreas) throw Error('No Cities Areas Table Found')
+            return allAreas
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllPopulations(knex) {
-        const allPopulations = await knex
-            .select('city', 'density', 'metro')
-            .from('cities_population')
-        if (!allPopulations) throw Error('No Cities Population Table Found')
-        return allPopulations
+        try {
+            const allPopulations = await knex
+                .select('city', 'density', 'metro')
+                .from('cities_population')
+            if (!allPopulations) throw Error('No Cities Population Table Found')
+            return allPopulations
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllZipCodes(knex) {
-        const allZips = await knex
-            .select('city_id', 'zip_code')
-            .from('cities_zip_codes')
-        if (!allZips) throw Error('No Cities Zip Codes Table Found')
-        return allZips
+        try {
+            const allZips = await knex
+                .select('city_id', 'zip_code')
+                .from('cities_zip_codes')
+            if (!allZips) throw Error('No Cities Zip Codes Table Found')
+            return allZips
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllAreaCodes(knex) {
-        const allAreaCodes = await knex
-            .select('city_id', 'area_code')
-            .from('cities_area_codes')
-        if (!allAreaCodes) throw Error('No Cities Area Codes Table Found')
-        return allAreaCodes
+        try {
+            const allAreaCodes = await knex
+                .select('city_id', 'area_code')
+                .from('cities_area_codes')
+            if (!allAreaCodes) throw Error('No Cities Area Codes Table Found')
+            return allAreaCodes
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _grabAllGnisIds(knex) {
-        const allGnisIds = await knex
-            .select('city_id', 'gnis_feature_id')
-            .from('cities_gnis_feature_ids')
-        if (!allGnisIds) throw Error('No Cities Gnis Ids Table Found')
-        return allGnisIds
+        try {
+            const allGnisIds = await knex
+                .select('city_id', 'gnis_feature_id')
+                .from('cities_gnis_feature_ids')
+            if (!allGnisIds) throw Error('No Cities Gnis Ids Table Found')
+            return allGnisIds
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
     async _mapObjectFields(knex) {
         const allGovs = await this._grabBaseGovInfo(knex)

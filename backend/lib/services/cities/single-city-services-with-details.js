@@ -17,44 +17,52 @@ class SingleCityServiceDetails {
         this.fieldWithNested = ['government']
     }
     async _grabObjDetails(knex, id, details, table) {
-        let field = null
-        const deets = {}
-        if (details !== 'city_council') {
-            field = table.split('_').pop()
-            deets[field] = await knex
-                .where('city_id', id)
-                .select(details)
-                .from(table)
-                .first()
-        } else {
-            field = details
-            deets[field] = await this._grabGovCouncilMembersById(knex, id)
+        try {
+            let field = null
+            const deets = {}
+            if (details !== 'city_council') {
+                field = table.split('_').pop()
+                deets[field] = await knex
+                    .where('city_id', id)
+                    .select(details)
+                    .from(table)
+                    .first()
+            } else {
+                field = details
+                deets[field] = await this._grabGovCouncilMembersById(knex, id)
+            }
+            if (!deets[field])
+                throw Error(
+                    `No detail information for city id: ${id} in field ${field} for details: ${details}`,
+                )
+            return deets
+        } catch (err) {
+            console.error('ERROR :=>', err)
         }
-        if (!deets[field])
-            throw Error(
-                `No detail information for city id: ${id} in field ${field} for details: ${details}`,
-            )
-        return deets
     }
     async _grabArrDetails(knex, id, index, fieldName) {
-        const deets = {}
-        const table = `cities_${fieldName}s`
-        const data = (
-            await knex
-                .select(fieldName)
-                .from(table)
-                .where('city_id', id)
-                .limit(1)
-                .offset(index)
-        ).map(result => {
-            return result[fieldName]
-        })
-        if (!data.length)
-            throw Error(
-                `No Details Found at Index: ${index} for Field: ${fieldName}s`,
-            )
-        deets[fieldName] = data
-        return deets
+        try {
+            const deets = {}
+            const table = `cities_${fieldName}s`
+            const data = (
+                await knex
+                    .select(fieldName)
+                    .from(table)
+                    .where('city_id', id)
+                    .limit(1)
+                    .offset(index)
+            ).map(result => {
+                return result[fieldName]
+            })
+            if (!data.length)
+                throw Error(
+                    `No Details Found at Index: ${index} for Field: ${fieldName}s`,
+                )
+            deets[fieldName] = data
+            return deets
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
     }
 
     /**
