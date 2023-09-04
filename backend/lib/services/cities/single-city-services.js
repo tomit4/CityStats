@@ -1,12 +1,13 @@
 'use strict'
+const SingleCityServiceDetails = require('./single-city-services-with-details')
 
 /** Intermediary Class for Single City Object
  * @constructor
  * returns { SingleCityService }
  * */
-class SingleCityService {
+class SingleCityService extends SingleCityServiceDetails {
     constructor() {
-        this.testData = 'oh hi there'
+        super()
         this.singleCity = {}
         this._nativeFields = [
             'id',
@@ -21,7 +22,7 @@ class SingleCityService {
             'url',
         ]
         // TODO: To be put in SingleCityServiceDetails class
-        this._relatedFields = [
+        this.relatedFields = [
             'counties',
             'government',
             'area',
@@ -30,7 +31,7 @@ class SingleCityService {
             'area_codes',
             'gnis_feature_ids',
         ]
-        this.fields = [...this._nativeFields, ...this._relatedFields]
+        this.fields = [...this._nativeFields, ...this.relatedFields]
     }
     async _grabCityById(knex, id) {
         const city = await knex
@@ -199,6 +200,13 @@ class SingleCityService {
         this.singleCity.gnis_feature_ids = await this._grabGnisIdsById(knex, id)
         return this.singleCity
     }
+    /**
+     * Aggregates min city info with single query field
+     * @params { promise } knex
+     * @params { string } id
+     * @params { string } field
+     * returns { object }
+     * */
     async grabRelDataById(knex, id, field) {
         if (this._nativeFields.includes(field)) {
             return await this._grabNativeFieldData(knex, id, field)

@@ -8,7 +8,7 @@ class SingleStateServiceDetails {
     constructor() {
         this._statsFields = ['area', 'population']
         this._repFields = ['senators', 'house_delegates']
-        this._relatedFields = [...this._statsFields, ...this._repFields]
+        this.relatedFields = [...this._statsFields, ...this._repFields]
     }
     async _grabAllStateNames(knex) {
         const allStateNames = await knex.select('state_name').from('states')

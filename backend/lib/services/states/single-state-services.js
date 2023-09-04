@@ -26,7 +26,7 @@ class SingleStateService extends SingleStateServiceDetails {
             'flag_url',
             'insignia_url',
         ]
-        this.fields = [...this._nativeFields, ...this._relatedFields]
+        this.fields = [...this._nativeFields, ...this.relatedFields]
     }
     async _grabStateById(knex, id) {
         const state = await knex('states').where('id', id).first()
