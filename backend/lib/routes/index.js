@@ -13,4 +13,7 @@ module.exports = async fastify => {
     await fastify.register(
         require('./cities/get-single-city-with-field-details'),
     )
+    await fastify.register(
+        require('./cities/get-single-city-with-field-details-query'),
+    )
 }

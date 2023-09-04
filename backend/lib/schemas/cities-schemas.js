@@ -68,6 +68,7 @@ class CitiesSchema {
             properties: {
                 ...this.singleCity.properties,
                 city_council: joi.array(),
+                council_member: joi.string(),
             },
         }
     }

@@ -14,6 +14,7 @@ class SingleCityServiceDetails {
             'area_codes',
             'gnis_feature_ids',
         ]
+        this.fieldWithNested = ['government']
     }
     async _grabObjDetails(knex, id, details, table) {
         let field = null
@@ -55,8 +56,18 @@ class SingleCityServiceDetails {
         deets[fieldName] = data
         return deets
     }
-    // TODO: More extensive jsdocs here
+
+    /**
+     * Aggregates Single Relational Data Point On City
+     * (i.e. specific government/area/population, counties, zip_codes, area_codes, gnis_feature_ids, etc.)
+     * @params { promise } knex
+     * @params { string } id
+     * @ params { string } field
+     * @params { string } details
+     * returns { object }
+     * */
     async grabRelDataByIdWithDeets(knex, id, field, details) {
+        // TODO: Change id to idOrName and pass it appropriately
         const city = await this._grabMinCityInfo(knex, id)
         if (this._objFields.includes(field) && isNaN(Number(details))) {
             const table = `cities_${field}`
@@ -69,7 +80,42 @@ class SingleCityServiceDetails {
             return { ...city, ...deets }
         }
     }
-    // async grabSingleCouncilMember(knex, id, index) {}
+
+    /**
+     * Grabs Single Government Council Member by Index
+     * @params { promise } knex
+     * @params { string } id
+     * @params { string } query
+     * returns { object }
+     * */
+    async grabSingleCouncilMember(knex, id, query) {
+        // TODO: Change id to idOrName and pass it appropriately
+        if (isNaN(Number(query)))
+            throw Error(`Query: ${query} must be a number`)
+        const city = await this._grabMinCityInfo(knex, id)
+        try {
+            const councilMember = (
+                await knex
+                    .where('city_id', id)
+                    .select('council_member')
+                    .from('cities_government_council')
+                    .limit(1)
+                    .offset(query - 1)
+            ).map(member => {
+                return member.council_member
+            })
+            if (!councilMember.length)
+                throw Error(
+                    `No Council Member returned for Queried Index: ${query}`,
+                )
+            return { ...city, council_member: councilMember[0] }
+        } catch (err) {
+            console.error('ERROR :=>', err)
+            throw Error(
+                `No Council Member returned for Queried Index: ${query}`,
+            )
+        }
+    }
 }
 
 module.exports = SingleCityServiceDetails

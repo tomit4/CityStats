@@ -15,6 +15,9 @@ class StatesService extends SingleStateService {
         this._senators = []
         this._house_delegates = []
     }
+    // TODO:
+    // ERROR HANDLING: try/catch/throw is necessary on all db queries,
+    // see grabSingleCouncilMember() for proper implementation
     async _grabAllStateInfo(knex) {
         const allStates = await knex('states')
         if (!allStates) throw Error('No States Table Found')

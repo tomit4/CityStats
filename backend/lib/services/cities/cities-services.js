@@ -23,6 +23,9 @@ class CityService extends SingleCityService {
             'url',
         ]
     }
+    // TODO:
+    // ERROR HANDLING: try/catch/throw is necessary on all db queries,
+    // see grabSingleCouncilMember() for proper implementation
     async _grabAllCitiesInfo(knex) {
         const allCities = await knex
             .select(...this._cityTableFields)
