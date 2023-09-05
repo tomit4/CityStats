@@ -11,7 +11,8 @@
         "km-up": "rm ./db/city_stats.db && knex migrate:latest",
         "km-down": "knex migrate:down",
         "ks-make": "knex seed:make",
-        "ks-reseed": "knex seed:run"
+        "ks-reseed": "knex seed:run",
+        "test": "nyc --reporter=text ava && rm -r ./.nyc_output"
     },
     "keywords": [],
     "author": "Brian Hayes",
@@ -29,7 +30,9 @@
         "pino-pretty": "^10.2.0"
     },
     "devDependencies": {
+        "ava": "^5.3.1",
         "dotenv": "^16.3.1",
-        "nodemon": "^3.0.1"
+        "nodemon": "^3.0.1",
+        "nyc": "^15.1.0"
     }
 }

@@ -5,3 +5,4 @@ node_modules
 *.vim
 backend/test_scripts/base*
 backend/nginx
+.nyc_output
