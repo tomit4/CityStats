@@ -1,3 +1,5 @@
+// TODO: For very large data sets like zip_codes,
+// divide up by entires of 500 for sqlite3 limitations on single insert statement
 const fs = require('fs')
 
 const statesData = require('./states.json')
