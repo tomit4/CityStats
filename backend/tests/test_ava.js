@@ -34,3 +34,4 @@ test('requests the "/" route', async t => {
 // REFERENCE:
 // https://fastify.dev/docs/latest/Guides/Testing
 // https://github.com/avajs/ava/tree/main/docs
+// https://www.sitepoint.com/sinon-tutorial-javascript-testing-mocks-spies-stubs/
