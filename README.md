@@ -13,9 +13,9 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 -   [x] Break out knex/sql statements into services folder as classes with properties/methods.
 -   [x] Integrate [fastify-helmet](https://github.com/fastify/fastify-helmet).
 -   [x] Add more nested routes for specific state data (i.e. area, population, speicific senators, etc.)
--   [ ] Apply seed data for states
--   [ ] Create routes and nested routes for cities ( same as nested routes above for cities)
--   [ ] Apply seed data for cities
+-   [x] Apply seed data for states
+-   [x] Create routes and nested routes for cities ( same as nested routes above for cities)
+-   [x] Apply seed data for cities
 -   [ ] Add more data about senators/house_delegates (i.e. age, years in office, wiki to profile photo, etc.)
 -   [ ] Write unit tests using ava(and sinon??). Consider using [fastify's testing guide](https://fastify.dev/docs/latest/Guides/Testing)
 -   [ ] Integrate making JWT/API keys with long lasting expiration(1 year), and auth all routes to backend with this. See [fastify-jwt](https://github.com/fastify/fastify-jwt).
@@ -34,5 +34,17 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 
 **Devops:**
 
--   [ ] Dockerize Entire App
+-   [x] Dockerize Entire App
 -   [ ] Deploy to Linode, re-establish ssl certs, etc.
+
+**Note:**
+
+See your nginx configs for how to redirect docker containers (pretty easy)
+
+To spin up the docker container locally simply navigate to backend and invoke:
+
+```
+docker-compose up -d citystats
+```
+
+And navigate to localhost:$DOCKERPORT

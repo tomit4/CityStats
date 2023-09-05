@@ -20,7 +20,7 @@ const start = async () => {
         })
         await fastify.ready()
         fastify.swagger()
-        fastify.listen({ port: process.env.PORT || 6969 })
+        fastify.listen({ port: process.env.PORT || 6969, host: '::' })
     } catch (error) {
         fastify.log.error(error)
         process.exit(1)

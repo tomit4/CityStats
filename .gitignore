@@ -4,3 +4,4 @@ node_modules
 .prettierrc
 *.vim
 backend/test_scripts/base*
+backend/nginx

@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "nodemon server",
-        "start": "nodemon server",
+        "start": "node server",
         "knex": "knex",
         "km-make": "knex migrate:make",
         "km-up": "rm ./db/city_stats.db && knex migrate:latest",

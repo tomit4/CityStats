@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+    citystats:
+        container_name: citystats
+        image: citystats
+        restart: 'no'
+        env_file: .env
+        ports:
+            - '${DOCKERPORT}:${PORT}'
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: citystats
