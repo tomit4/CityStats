@@ -1,5 +1,8 @@
 module.exports = {
     transport: {
-        target: '@fastify/one-line-logger',
+        target: 'pino-pretty',
+        options: {
+            minimumLevell: 'trace',
+        },
     },
 }
