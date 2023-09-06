@@ -5,6 +5,7 @@ const fp = require('fastify-plugin')
 const { stub } = require('sinon')
 const StatesService = require('../../lib/services/states/states-services')
 
+// consider also bringing in knex here to actually test against db
 const statesPlugin = (fastify, options, done) => {
     if (!fastify.states) {
         const stateService = new StatesService()
@@ -33,6 +34,8 @@ const registerRoute = async fastify => {
 
 // Example Sinon stub to be expanded upon
 // and used with our registered StatesService
+// Use when return value is too large like in this case
+// (see note about knex above for other smaller return value cases)
 // https://sinonjs.org/releases/v15/stubs/
 const other = stub({ returnHello: 'world' }, 'returnHello').returns({
     hello: 'world',
