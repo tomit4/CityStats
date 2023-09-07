@@ -1,34 +1,8 @@
 'use strict'
-// const fs = require('fs')
+const registerPlugins = require('../../../test_utils/state-utils.js')
 const fastify = require('fastify')()
 const test = require('ava')
-const fp = require('fastify-plugin')
-const knexFile = require('../../../knexfile').development
-const knex = require('knex')(knexFile)
-const StatesService = require('../../../lib/services/states/states-services')
 const mock = require('../../mocks/mock_get-single-state-with-field-details_senators_1.json')
-
-const statesPlugin = (fastify, options, done) => {
-    if (!fastify.states) {
-        const stateService = new StatesService()
-        fastify.decorate('stateService', stateService)
-    }
-    done()
-}
-
-const knexPlugin = (fastify, options, done) => {
-    if (!fastify.knex) {
-        fastify.decorate('knex', knex)
-    }
-    done()
-}
-
-const registerPlugins = async fastify => {
-    const statePlug = fp(statesPlugin, { name: 'fastify-states-plugin' })
-    const knexPlug = fp(knexPlugin, { name: 'fastify-knex-plugin' })
-    await fastify.register(statePlug)
-    await fastify.register(knexPlug)
-}
 
 const registerRoute = async fastify => {
     const newRoute = async fastify => {
@@ -62,14 +36,6 @@ test('requests the /states route with param id of 5 and field of senators and de
         method: 'GET',
         url: '/states/5/senators/1',
     })
-
-    // fs.writeFileSync(
-    // './tests/mocks/mock_get-single-state-with-field-details_senators_1.json',
-    // JSON.stringify(response.payload),
-    // err => {
-    // if (err) throw err
-    // },
-    // )
 
     t.is(response.statusCode, 200)
     t.is(response.headers['content-type'], 'application/json; charset=utf-8')

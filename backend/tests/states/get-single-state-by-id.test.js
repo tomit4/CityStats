@@ -1,25 +1,25 @@
 'use strict'
-const registerPlugins = require('../../../test_utils/state-utils.js')
+const registerPlugins = require('../../test_utils/state-utils.js')
 const fastify = require('fastify')()
 const test = require('ava')
-const mock = require('../../mocks/mock_get-single-state-with-field_govenor.json')
+const mock = require('../mocks/mock_get-single-state.json')
 
 const registerRoute = async fastify => {
     const newRoute = async fastify => {
         await fastify.route({
             method: 'GET',
-            url: '/states/:id/:field',
+            url: '/states/:id',
             handler: async (request, reply) => {
-                const { id, field } = request.params
+                const { id } = request.params
                 const { knex, stateService } = fastify
-                reply.send(await stateService.grabRelDataById(knex, id, field))
+                reply.send(await stateService.grabSingleStateById(knex, id))
             },
         })
     }
     fastify.register(newRoute)
 }
 
-test('requests the /states route with param id of 5 and field of govenor', async t => {
+test('requests the /states route with param id of 5', async t => {
     t.plan(3)
     await registerPlugins(fastify)
     await registerRoute(fastify)
@@ -28,7 +28,7 @@ test('requests the /states route with param id of 5 and field of govenor', async
 
     const response = await fastify.inject({
         method: 'GET',
-        url: '/states/5/govenor',
+        url: '/states/5',
     })
 
     t.is(response.statusCode, 200)
