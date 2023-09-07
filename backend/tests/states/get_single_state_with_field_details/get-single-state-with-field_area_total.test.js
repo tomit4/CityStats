@@ -2,7 +2,7 @@
 const registerPlugins = require('../../../test_utils/state-utils.js')
 const fastify = require('fastify')()
 const test = require('ava')
-const mock = require('../../mocks/mock_get-single-state-with-field-details_area_total.json')
+const mock = require('../../mocks/states/mock_get-single-state-with-field-details_area_total.json')
 
 const registerRoute = async fastify => {
     const newRoute = async fastify => {
