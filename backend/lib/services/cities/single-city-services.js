@@ -33,6 +33,30 @@ class SingleCityService extends SingleCityServiceDetails {
         ]
         this.fields = [...this._nativeFields, ...this.relatedFields]
     }
+    async _grabAllCityNames(knex) {
+        try {
+            const allCityNames = await knex.select('city_name').from('cities')
+            if (!allCityNames)
+                throw Error('Failure to retrieve all City Names from DB')
+            return allCityNames.map(city => city.city_name)
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
+    }
+    async _grabCityIdByName(knex, name) {
+        try {
+            const cityId = (
+                await knex('cities')
+                    .select('id')
+                    .where('city_name', name)
+                    .first()
+            ).id
+            if (!cityId) throw Error(`No City Id Found By Name: ${name}`)
+            return cityId
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
+    }
     async _grabCityById(knex, id) {
         try {
             const city = await knex
@@ -42,6 +66,22 @@ class SingleCityService extends SingleCityServiceDetails {
                 .first()
             if (!city) throw Error(`No City Found For Id: ${id}`)
             return city
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
+    }
+    async grabCityIdByName(knex, idOrName) {
+        try {
+            let id
+            if (isNaN(Number(idOrName))) {
+                const allCityNames = await this._grabAllCityNames(knex)
+                if (allCityNames.includes(idOrName)) {
+                    id = await this._grabCityIdByName(knex, idOrName)
+                } else throw Error(`No City Found by Name: ${idOrName}`)
+            } else {
+                id = idOrName
+            }
+            return id
         } catch (err) {
             console.error('ERROR :=>', err)
         }
@@ -242,7 +282,8 @@ class SingleCityService extends SingleCityServiceDetails {
      * @params { promise } knex
      * returns { object } singleCity
      * */
-    async grabSingleCityById(knex, id) {
+    async grabSingleCityById(knex, idOrName) {
+        const id = await this.grabCityIdByName(knex, idOrName)
         this.singleCity = await this._grabCityById(knex, id)
         this.singleCity.counties = await this._grabCountiesById(knex, id)
         this.singleCity.government = await this._grabBaseGovInfoById(knex, id)
@@ -260,7 +301,8 @@ class SingleCityService extends SingleCityServiceDetails {
      * @params { string } field
      * returns { object }
      * */
-    async grabRelDataById(knex, id, field) {
+    async grabRelDataById(knex, idOrName, field) {
+        const id = await this.grabCityIdByName(knex, idOrName)
         if (this._nativeFields.includes(field)) {
             return await this._grabNativeFieldData(knex, id, field)
         } else {
