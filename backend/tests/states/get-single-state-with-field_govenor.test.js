@@ -5,7 +5,7 @@ const fp = require('fastify-plugin')
 const knexFile = require('../../knexfile').development
 const knex = require('knex')(knexFile)
 const StatesService = require('../../lib/services/states/states-services')
-const mock = require('../mocks/mock_get-all-states.json')
+const mock = require('../mocks/mock_get-single-state-with-field_govenor.json')
 
 const statesPlugin = (fastify, options, done) => {
     if (!fastify.states) {
@@ -33,17 +33,18 @@ const registerRoute = async fastify => {
     const newRoute = async fastify => {
         await fastify.route({
             method: 'GET',
-            url: '/states',
+            url: '/states/:id/:field',
             handler: async (request, reply) => {
+                const { id } = request.params
                 const { knex, stateService } = fastify
-                reply.send(await stateService.grabAllStates(knex))
+                reply.send(await stateService.grabSingleStateById(knex, id))
             },
         })
     }
     fastify.register(newRoute)
 }
 
-test('requests the /states route', async t => {
+test('requests the /states route with param id of 5 and field of govenor', async t => {
     t.plan(3)
     await registerPlugins(fastify)
     await registerRoute(fastify)
@@ -52,7 +53,7 @@ test('requests the /states route', async t => {
 
     const response = await fastify.inject({
         method: 'GET',
-        url: '/states',
+        url: '/states/5/govenor',
     })
 
     t.is(response.statusCode, 200)
