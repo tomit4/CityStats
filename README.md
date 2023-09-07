@@ -17,7 +17,7 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 -   [x] Create routes and nested routes for cities ( same as nested routes above for cities)
 -   [x] Apply seed data for cities
 -   [ ] Add more data about senators/house_delegates (i.e. age, years in office, wiki to profile photo, etc.)
--   [ ] Write unit tests using ava(and sinon??). Consider using [fastify's testing guide](https://fastify.dev/docs/latest/Guides/Testing)
+-   [x] Write unit tests using ava. Consider using [fastify's testing guide](https://fastify.dev/docs/latest/Guides/Testing)
 -   [ ] Integrate making JWT/API keys with long lasting expiration(1 year), and auth all routes to backend with this. See [fastify-jwt](https://github.com/fastify/fastify-jwt).
 
 **Frontend:**
