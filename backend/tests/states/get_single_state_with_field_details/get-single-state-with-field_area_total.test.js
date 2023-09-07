@@ -1,11 +1,12 @@
 'use strict'
+// const fs = require('fs')
 const fastify = require('fastify')()
 const test = require('ava')
 const fp = require('fastify-plugin')
-const knexFile = require('../../knexfile').development
+const knexFile = require('../../../knexfile').development
 const knex = require('knex')(knexFile)
-const StatesService = require('../../lib/services/states/states-services')
-const mock = require('../mocks/mock_get-single-state-with-field_govenor.json')
+const StatesService = require('../../../lib/services/states/states-services')
+const mock = require('../../mocks/mock_get-single-state-with-field-details_area_total.json')
 
 const statesPlugin = (fastify, options, done) => {
     if (!fastify.states) {
@@ -33,18 +34,24 @@ const registerRoute = async fastify => {
     const newRoute = async fastify => {
         await fastify.route({
             method: 'GET',
-            url: '/states/:id/:field',
+            url: '/states/:id/:field/:details',
             handler: async (request, reply) => {
-                const { id } = request.params
+                const { id, field, details } = request.params
                 const { knex, stateService } = fastify
-                reply.send(await stateService.grabSingleStateById(knex, id))
+                const payload = await stateService.grabRelDataByIdWithDeets(
+                    knex,
+                    id,
+                    field,
+                    details,
+                )
+                reply.send(payload)
             },
         })
     }
     fastify.register(newRoute)
 }
 
-test('requests the /states route with param id of 5 and field of govenor', async t => {
+test('requests the /states route with param id of 5 and field of area and details of total', async t => {
     t.plan(3)
     await registerPlugins(fastify)
     await registerRoute(fastify)
@@ -53,8 +60,16 @@ test('requests the /states route with param id of 5 and field of govenor', async
 
     const response = await fastify.inject({
         method: 'GET',
-        url: '/states/5/govenor',
+        url: '/states/5/area/total',
     })
+
+    // fs.writeFileSync(
+    // './tests/mocks/mock_get-single-state-with-field-details_area_total.json',
+    // JSON.stringify(response.payload),
+    // err => {
+    // if (err) throw err
+    // },
+    // )
 
     t.is(response.statusCode, 200)
     t.is(response.headers['content-type'], 'application/json; charset=utf-8')

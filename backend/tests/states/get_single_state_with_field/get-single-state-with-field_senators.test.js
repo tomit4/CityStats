@@ -1,11 +1,12 @@
 'use strict'
+// const fs = require('fs')
 const fastify = require('fastify')()
 const test = require('ava')
 const fp = require('fastify-plugin')
-const knexFile = require('../../knexfile').development
+const knexFile = require('../../../knexfile').development
 const knex = require('knex')(knexFile)
-const StatesService = require('../../lib/services/states/states-services')
-const mock = require('../mocks/mock_get-single-state-with-field_area.json')
+const StatesService = require('../../../lib/services/states/states-services')
+const mock = require('../../mocks/mock_get-single-state-with-field_senators.json')
 
 const statesPlugin = (fastify, options, done) => {
     if (!fastify.states) {
@@ -35,7 +36,7 @@ const registerRoute = async fastify => {
             method: 'GET',
             url: '/states/:id/:field',
             handler: async (request, reply) => {
-                const { id } = request.params
+                const { id, field } = request.params
                 const { knex, stateService } = fastify
                 reply.send(await stateService.grabSingleStateById(knex, id))
             },
@@ -44,7 +45,7 @@ const registerRoute = async fastify => {
     fastify.register(newRoute)
 }
 
-test('requests the /states route with param id of 5 and field of area', async t => {
+test('requests the /states route with param id of 5 and field of senators', async t => {
     t.plan(3)
     await registerPlugins(fastify)
     await registerRoute(fastify)
@@ -53,9 +54,16 @@ test('requests the /states route with param id of 5 and field of area', async t 
 
     const response = await fastify.inject({
         method: 'GET',
-        url: '/states/5/area',
+        url: '/states/5/senators',
     })
 
+    // fs.writeFileSync(
+    // './tests/mocks/mock_get-single-state-with-field_senators.json',
+    // JSON.stringify(response.payload),
+    // err => {
+    // if (err) throw err
+    // },
+    // )
     t.is(response.statusCode, 200)
     t.is(response.headers['content-type'], 'application/json; charset=utf-8')
     t.is(response.payload, mock)
