@@ -6,7 +6,6 @@
  * */
 class SingleCityServiceDetails {
     constructor() {
-        this.test = 'oh hi there'
         this._objFields = ['government', 'area', 'population']
         this._arrFields = [
             'counties',

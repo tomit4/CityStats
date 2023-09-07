@@ -1,5 +1,5 @@
 'use strict'
-const registerPlugins = require('../../../test_utils/state-utils.js')
+const registerPlugins = require('../../../test_utils/state-utils')
 const fastify = require('fastify')()
 const test = require('ava')
 const mock = require('../../mocks/states/mock_get-single-state-with-field_area.json')

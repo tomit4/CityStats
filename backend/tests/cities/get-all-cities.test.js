@@ -1,25 +1,25 @@
 'use strict'
-const registerPlugins = require('../../test_utils/state-utils')
+// const fs = require('fs')
+const registerPlugins = require('../../test_utils/city-utils')
 const fastify = require('fastify')()
 const test = require('ava')
-const mock = require('../mocks/states/mock_get-single-state.json')
+const mock = require('../mocks/cities/mock_get-all-cities.json')
 
 const registerRoute = async fastify => {
     const newRoute = async fastify => {
         await fastify.route({
             method: 'GET',
-            url: '/states/:id',
+            url: '/cities',
             handler: async (request, reply) => {
-                const { id } = request.params
-                const { knex, stateService } = fastify
-                reply.send(await stateService.grabSingleStateById(knex, id))
+                const { knex, cityService } = fastify
+                reply.send(await cityService.grabAllCities(knex))
             },
         })
     }
     fastify.register(newRoute)
 }
 
-test('requests the /states route with param id of California', async t => {
+test('requests the /cities route', async t => {
     t.plan(3)
     await registerPlugins(fastify)
     await registerRoute(fastify)
@@ -28,9 +28,17 @@ test('requests the /states route with param id of California', async t => {
 
     const response = await fastify.inject({
         method: 'GET',
-        url: '/states/California',
+        url: '/cities',
     })
-
+    // fs.writeFileSync(
+    // './tests/mocks/cities/mock_get-all-cities.json',
+    // JSON.stringify(response.payload),
+    // err => {
+    // if (err) {
+    // throw err
+    // }
+    // },
+    // )
     t.is(response.statusCode, 200)
     t.is(response.headers['content-type'], 'application/json; charset=utf-8')
     t.is(response.payload, mock)
