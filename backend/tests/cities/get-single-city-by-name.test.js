@@ -2,23 +2,24 @@
 const registerPlugins = require('../../test_utils/city-utils')
 const fastify = require('fastify')()
 const test = require('ava')
-const mock = require('../mocks/cities/mock_get-all-cities.json')
+const mock = require('../mocks/cities/mock_get-single-city-by-name.json')
 
 const registerRoute = async fastify => {
     const newRoute = async fastify => {
         await fastify.route({
             method: 'GET',
-            url: '/cities',
+            url: '/cities/:id',
             handler: async (request, reply) => {
+                const { id } = request.params
                 const { knex, cityService } = fastify
-                reply.send(await cityService.grabAllCities(knex))
+                reply.send(await cityService.grabSingleCityById(knex, id))
             },
         })
     }
     fastify.register(newRoute)
 }
 
-test('requests the /cities route', async t => {
+test('requests the /cities route with param id of Rockford', async t => {
     t.plan(3)
     await registerPlugins(fastify)
     await registerRoute(fastify)
@@ -27,7 +28,7 @@ test('requests the /cities route', async t => {
 
     const response = await fastify.inject({
         method: 'GET',
-        url: '/cities',
+        url: '/cities/Rockford',
     })
 
     t.is(response.statusCode, 200)
