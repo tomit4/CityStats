@@ -2,10 +2,11 @@
 const fastify = require('fastify')()
 const test = require('ava')
 const fp = require('fastify-plugin')
-const { stub } = require('sinon')
 const StatesService = require('../../lib/services/states/states-services')
+const knexFile = require('../../knexfile').development
+const knex = require('knex')(knexFile)
+const mock = require('../mocks/mock_get-all-states.json')
 
-// consider also bringing in knex here to actually test against db
 const statesPlugin = (fastify, options, done) => {
     if (!fastify.states) {
         const stateService = new StatesService()
@@ -14,48 +15,48 @@ const statesPlugin = (fastify, options, done) => {
     done()
 }
 
-const registerPlugin = async fastify => {
-    const plugin = fp(statesPlugin, { name: 'fastify-states-plugin' })
-    await fastify.register(plugin)
+const knexPlugin = (fastify, options, done) => {
+    if (!fastify.knex) {
+        fastify.decorate('knex', knex)
+    }
+    done()
+}
+
+const registerPlugins = async fastify => {
+    const statePlug = fp(statesPlugin, { name: 'fastify-states-plugin' })
+    const knexPlug = fp(knexPlugin, { name: 'fastify-knex-plugin' })
+    await fastify.register(statePlug)
+    await fastify.register(knexPlug)
 }
 
 const registerRoute = async fastify => {
     const newRoute = async fastify => {
         await fastify.route({
             method: 'GET',
-            url: '/',
+            url: '/states',
             handler: async (request, reply) => {
-                await reply.send({ hello: 'world' })
+                const { knex, stateService } = fastify
+                reply.send(await stateService.grabAllStates(knex))
             },
         })
     }
     fastify.register(newRoute)
 }
 
-// Example Sinon stub to be expanded upon
-// and used with our registered StatesService
-// Use when return value is too large like in this case
-// (see note about knex above for other smaller return value cases)
-// https://sinonjs.org/releases/v15/stubs/
-const other = stub({ returnHello: 'world' }, 'returnHello').returns({
-    hello: 'world',
-})()
-console.log('other :=>', other) // { hello: 'world' }
-
-test('requests the "/" route', async t => {
+test('requests the "/states" route', async t => {
     t.plan(3)
-    await registerPlugin(fastify)
+    await registerPlugins(fastify)
     await registerRoute(fastify)
     await fastify.listen()
     await fastify.ready()
 
     const response = await fastify.inject({
         method: 'GET',
-        url: '/',
+        url: '/states',
     })
 
     t.is(response.statusCode, 200)
     t.is(response.headers['content-type'], 'application/json; charset=utf-8')
-    t.is(response.payload, '{"hello":"world"}')
+    t.is(response.payload, mock)
     await fastify.close()
 })
