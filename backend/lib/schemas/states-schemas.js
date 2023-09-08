@@ -48,8 +48,8 @@ class StatesSchema {
                 insignia_url: joi.string(),
                 area: joi.object({
                     total: joi.string(),
-                    land: joi.string(),
-                    water: joi.string(),
+                    land: { type: 'string', nullable: true },
+                    water: { type: 'string', nullable: true },
                 }),
                 population: joi.object({
                     total: joi.string(),
