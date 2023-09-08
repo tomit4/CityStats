@@ -16,6 +16,7 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 -   [x] Apply seed data for states
 -   [x] Create routes and nested routes for cities ( same as nested routes above for cities)
 -   [x] Apply seed data for cities
+-   [ ] Add more functionality where cities with duplicate names, all cities are returned, not just the first one that matches the name.
 -   [ ] Add more data about senators/house_delegates (i.e. age, years in office, wiki to profile photo, etc.)
 -   [x] Write unit tests using ava. Consider using [fastify's testing guide](https://fastify.dev/docs/latest/Guides/Testing)
 -   [ ] Add [fastify-static](https://github.com/fastify/fastify-static) for image hosting of senator/house_delegates/mayors/city_counselors images
@@ -30,8 +31,9 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 
 **Automation:**
 
+-   [ ] Adjust initial scripts already written to catch beautiful soup errors and log them to the log.txt file for easy finding of where beautiful soup failed (this way we can quickly find the city site that failed and adjust our sraping script accordingly).
 -   [ ] Automate updating the database of city councilors, senators, house_delegates, populations, etc. based off of web scraping wikipedia/government sites(see test_scripts/city_council_scrapers dir).
--   [ ] Use Python to accomplish this using stuff like pandas, etc.
+-   [ ] Since there will be a LOT of python scripts to run, the script to pass to cron/celery will need to run every \*.py file within our scraping directory, investigate [run-parts command](https://unix.stackexchange.com/questions/189118/sanely-run-all-scripts-in-a-directory)
 -   [ ] Investigate python/celery for "super cron" jobs.
 
 **Devops:**
