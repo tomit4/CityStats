@@ -28,7 +28,7 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 
 **Automation:**
 
--   [ ] Automate updating the database of city councilors, senators, house_delegates, populations, etc. based off of web scraping wikipedia/government sites(see test_scripts dir/update_states.py for latest attempts).
+-   [ ] Automate updating the database of city councilors, senators, house_delegates, populations, etc. based off of web scraping wikipedia/government sites(see test_scripts/city_council_scrapers dir).
 -   [ ] Use Python to accomplish this using stuff like pandas, etc.
 -   [ ] Investigate python/celery for "super cron" jobs.
 
