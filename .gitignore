@@ -6,6 +6,7 @@ node_modules
 *.jpg
 *.jpeg
 *.png
+backend/test_scripts/city_council_scrapers/log.txt
 backend/test_scripts/city_council_scrapers/new_council_members/img/
 backend/test_scripts/base*
 backend/nginx
