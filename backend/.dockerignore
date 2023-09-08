@@ -1,6 +1,7 @@
 node_modules
 npm-debug.log
-test_scripts
+test_scripts/city_council_scrapers/new_council_members/img
+test_scripts/city_council_scrapers/log.txt
 tests
 .nyc_output
 nginx

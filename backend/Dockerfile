@@ -8,6 +8,10 @@ WORKDIR /usr/src/citystats
 # copied where available (npm@5+)
 COPY package*.json ./
 
+RUN apt update
+RUN apt install -y python3-requests python3-bs4 
+# RUN apt install python3-pandas
+
 RUN rm -rf node_modules && npm install
 # If you are building your code for production
 # RUN npm ci --omit=dev

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Consider rewriting to not use pandas? large installation for simple script...use beautiful soup instead?
 import json
 import requests
 import pandas as pd
