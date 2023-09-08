@@ -18,6 +18,8 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 -   [x] Apply seed data for cities
 -   [ ] Add more data about senators/house_delegates (i.e. age, years in office, wiki to profile photo, etc.)
 -   [x] Write unit tests using ava. Consider using [fastify's testing guide](https://fastify.dev/docs/latest/Guides/Testing)
+-   [ ] Add [fastify-static](https://github.com/fastify/fastify-static) for image hosting of senator/house_delegates/mayors/city_counselors images
+-   [ ] Set up appropriate route for image filepath (i.e cities/1/government/city_council/1/image)
 -   [ ] Integrate making JWT/API keys with long lasting expiration(1 year), and auth all routes to backend with this. See [fastify-jwt](https://github.com/fastify/fastify-jwt).
 
 **Frontend:**
