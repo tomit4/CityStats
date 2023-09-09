@@ -19,9 +19,10 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 -   [ ] Add more functionality where cities with duplicate names, all cities are returned, not just the first one that matches the name.
 -   [ ] Add more data about senators/house_delegates (i.e. age, years in office, wiki to profile photo, etc.)
 -   [x] Write unit tests using ava. Consider using [fastify's testing guide](https://fastify.dev/docs/latest/Guides/Testing)
--   [ ] Add [fastify-static](https://github.com/fastify/fastify-static) for image hosting of senator/house_delegates/mayors/city_counselors images
+-   [x] Add [fastify-static](https://github.com/fastify/fastify-static) for image hosting of senator/house_delegates/mayors/city_counselors images
 -   [ ] Set up appropriate route for image filepath (i.e cities/1/government/city_council/1/image) (half done)
 -   [ ] Set up imagemagick script to scale images (reasonable sizes for frontend display)
+-   [ ] Grab an image for each city and state (map for state, image for city) and format appropriately for front end.
 -   [ ] Integrate making JWT/API keys with long lasting expiration(1 year), and auth all routes to backend with this. See [fastify-jwt](https://github.com/fastify/fastify-jwt).
 
 **Frontend:**
