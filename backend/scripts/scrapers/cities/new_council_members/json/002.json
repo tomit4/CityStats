@@ -1,1 +1,67 @@
-[{"city_id": 2, "council_member": "Nancy Holland"}, {"city_id": 2, "council_member": "Phil Lombardo"}, {"city_id": 2, "council_member": "Margo Sommerville"}, {"city_id": 2, "council_member": "Russel C. Neal, Jr."}, {"city_id": 2, "council_member": "Tara Mosley"}, {"city_id": 2, "council_member": "Brad McKitrick"}, {"city_id": 2, "council_member": "Donnie Kammer"}, {"city_id": 2, "council_member": "Shammas Malik"}, {"city_id": 2, "council_member": "Mike Freeman"}, {"city_id": 2, "council_member": "Sharon Connor"}, {"city_id": 2, "council_member": "Jeff Fusco"}, {"city_id": 2, "council_member": "Linda F. R. Omobien"}, {"city_id": 2, "council_member": "Ginger Baylor"}]
+[
+    {
+        "city_id": 2,
+        "council_member": "Nancy Holland",
+        "img_url": "https://www.citystats.xyz/images/cities/2/mayor"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Phil Lombardo",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/1"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Margo Sommerville",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/2"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Russel C. Neal, Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/3"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Tara Mosley",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/4"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Brad McKitrick",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/5"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Donnie Kammer",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/6"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Shammas Malik",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/7"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Mike Freeman",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/8"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Sharon Connor",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/9"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Jeff Fusco",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/10"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Linda F. R. Omobien",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/11"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Ginger Baylor",
+        "img_url": "https://www.citystats.xyz/images/cities/2/city_council/12"
+    }
+]

@@ -1,1 +1,37 @@
-[{"city_id": 1, "council_member": "Weldon Hurt"}, {"city_id": 1, "council_member": "Shane Price"}, {"city_id": 1, "council_member": "Lynn Beard"}, {"city_id": 1, "council_member": "Blaise Regan"}, {"city_id": 1, "council_member": "Brian Yates"}, {"city_id": 1, "council_member": "Kyle McAlister"}, {"city_id": 1, "council_member": "Travis Craver"}]
+[
+    {
+        "city_id": 1,
+        "council_member": "Weldon Hurt",
+        "img_url": "https://www.citystats.xyz/images/cities/1/mayor"
+    },
+    {
+        "city_id": 1,
+        "council_member": "Shane Price",
+        "img_url": "https://www.citystats.xyz/images/cities/1/city_council/1"
+    },
+    {
+        "city_id": 1,
+        "council_member": "Lynn Beard",
+        "img_url": "https://www.citystats.xyz/images/cities/1/city_council/2"
+    },
+    {
+        "city_id": 1,
+        "council_member": "Blaise Regan",
+        "img_url": "https://www.citystats.xyz/images/cities/1/city_council/3"
+    },
+    {
+        "city_id": 1,
+        "council_member": "Brian Yates",
+        "img_url": "https://www.citystats.xyz/images/cities/1/city_council/4"
+    },
+    {
+        "city_id": 1,
+        "council_member": "Kyle McAlister",
+        "img_url": "https://www.citystats.xyz/images/cities/1/city_council/5"
+    },
+    {
+        "city_id": 1,
+        "council_member": "Travis Craver",
+        "img_url": "https://www.citystats.xyz/images/cities/1/city_council/6"
+    }
+]

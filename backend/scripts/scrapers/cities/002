@@ -8,6 +8,7 @@ from datetime import datetime
 city_id = 2
 base_url = 'https://www.akroncitycouncil.org'
 city_council_url = 'https://www.akroncitycouncil.org/members'
+base_img_path = 'https://www.citystats.xyz/images/cities/' + str(city_id)
 
 path_id = '00' + str(city_id)
 img_path = './new_council_members/img/' + str(path_id) + '/'
@@ -20,19 +21,24 @@ def scrape_data():
     results = soup.findAll('div', {"class": "item"})
     finalArr = []
     imgArr = []
+
     # generates JSON data and creates img urls for downloading
     for i, result in enumerate(results):
         name = result.find('div', attrs={'class': 'name'})
         data = {}
         data['city_id'] = city_id
         data['council_member'] = name.contents[0]
-        # generates production url for image
-        #  data['img'] = 'https://citystats.xyz/images/cities/' + str(
-        #  city_id) + '/city_councilors/' + str(i - 1)
         finalArr.append(data)
         img = result.find('img')
         img_url = base_url + img['src']
         imgArr.append(img_url)
+
+    # apply image url to data objects
+    for i, data in enumerate(finalArr):
+        if i == 0:
+            data['img_url'] = base_img_path + '/mayor'
+        else:
+            data['img_url'] = base_img_path + '/city_council/' + str(i)
 
     # logs when download of image starts
     dt_string = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
