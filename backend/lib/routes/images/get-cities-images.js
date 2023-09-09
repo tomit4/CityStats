@@ -5,6 +5,10 @@ module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
         url: '/images/cities/:id/:govBody/:imageId?',
+
+        // url: '/images/cities/:id/:body/:imageId?',
+        // body can be mayor, city_council, or img (image of city)
+
         // QUESTION: needs schema?
         handler: async (request, reply) => {
             // TODO: Possibly put logic into service files
