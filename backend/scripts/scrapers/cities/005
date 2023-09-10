@@ -48,7 +48,8 @@ def grab_img_urls(results):
             img_url = f"{BASE_URL}{img['src']}"
             img_arr.append(img_url)
         except Exception as e:
-            logging.error(f'Error grabbing image URL: {str(e)}')
+            logging.error(
+                f'Error at city_id: {CITY_ID} grabbing image URL: {str(e)}')
             pass
     return img_arr
 
@@ -75,7 +76,8 @@ def parse_json(results):
             data['council_member'] = ' '.join(data['council_member'])
             json_arr.append(data)
         except Exception as e:
-            logging.error(f'Error parsing JSON: {str(e)}')
+            logging.error(
+                f'Error at city_id: {CITY_ID} parsing JSON: {str(e)}')
             pass
     for i, data in enumerate(json_arr):
         if i == 0:
@@ -94,7 +96,7 @@ def scrape_data():
         results = soup.findAll('h2', {"class": "subhead1"})[1:]
         return results
     except Exception as e:
-        logging.error(f'Error during scraping: {str(e)}')
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
 
 
@@ -106,7 +108,7 @@ def scrape_img():
         results = soup.findAll('img', {"class": "fr-fic"})
         return results
     except Exception as e:
-        logging.error(f'Error during scraping: {str(e)}')
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
 
 
