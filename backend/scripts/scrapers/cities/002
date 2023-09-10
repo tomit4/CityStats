@@ -74,7 +74,7 @@ def parse_json(results):
             data['img_url'] = f'{BASE_IMG_PATH}/mayor'
         else:
             data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
-    with open('./new_council_members/json/001.json', 'w') as writeJSON:
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
         json.dump(json_arr, writeJSON, ensure_ascii=False)
 
 

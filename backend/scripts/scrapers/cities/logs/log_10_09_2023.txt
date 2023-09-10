@@ -1,0 +1,50 @@
+2023-09-10 00:03:30,315 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:03:31,011 - INFO - Downloaded image for city_id: 3, 1 of 9
+2023-09-10 00:03:31,143 - INFO - Downloaded image for city_id: 3, 2 of 9
+2023-09-10 00:03:36,323 - INFO - Downloaded image for city_id: 3, 3 of 9
+2023-09-10 00:03:37,654 - INFO - Downloaded image for city_id: 3, 4 of 9
+2023-09-10 00:03:39,717 - INFO - Downloaded image for city_id: 3, 5 of 9
+2023-09-10 00:03:41,647 - INFO - Downloaded image for city_id: 3, 6 of 9
+2023-09-10 00:03:48,421 - INFO - Downloaded image for city_id: 3, 7 of 9
+2023-09-10 00:03:54,741 - INFO - Downloaded image for city_id: 3, 8 of 9
+2023-09-10 00:04:00,066 - INFO - Downloaded image for city_id: 3, 9 of 9
+2023-09-10 00:04:50,316 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:04:51,390 - INFO - Downloaded image for city_id: 3, 1 of 9
+2023-09-10 00:04:51,577 - INFO - Downloaded image for city_id: 3, 2 of 9
+2023-09-10 00:04:51,765 - INFO - Downloaded image for city_id: 3, 3 of 9
+2023-09-10 00:04:53,018 - INFO - Downloaded image for city_id: 3, 4 of 9
+2023-09-10 00:04:53,724 - INFO - Downloaded image for city_id: 3, 5 of 9
+2023-09-10 00:05:00,585 - INFO - Downloaded image for city_id: 3, 6 of 9
+2023-09-10 00:05:12,494 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:05:13,157 - INFO - Downloaded image for city_id: 3, 1 of 9
+2023-09-10 00:05:13,298 - INFO - Downloaded image for city_id: 3, 2 of 9
+2023-09-10 00:05:13,739 - INFO - Downloaded image for city_id: 3, 3 of 9
+2023-09-10 00:05:16,385 - INFO - Downloaded image for city_id: 3, 4 of 9
+2023-09-10 00:05:18,250 - INFO - Downloaded image for city_id: 3, 5 of 9
+2023-09-10 00:05:19,894 - INFO - Downloaded image for city_id: 3, 6 of 9
+2023-09-10 00:05:25,707 - INFO - Downloaded image for city_id: 3, 7 of 9
+2023-09-10 00:05:26,950 - INFO - Downloaded image for city_id: 3, 8 of 9
+2023-09-10 00:05:32,479 - INFO - Downloaded image for city_id: 3, 9 of 9
+2023-09-10 00:05:59,485 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:06:00,288 - INFO - Downloaded image for city_id: 3, 1 of 9
+2023-09-10 00:06:01,463 - INFO - Downloaded image for city_id: 3, 2 of 9
+2023-09-10 00:06:01,672 - INFO - Downloaded image for city_id: 3, 3 of 9
+2023-09-10 00:06:03,580 - INFO - Downloaded image for city_id: 3, 4 of 9
+2023-09-10 00:06:09,399 - INFO - Downloaded image for city_id: 3, 5 of 9
+2023-09-10 00:06:16,061 - INFO - Downloaded image for city_id: 3, 6 of 9
+2023-09-10 00:06:33,598 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:07:23,656 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:13:19,332 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:14:34,597 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:15:23,644 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:19:28,008 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 00:19:28,221 - INFO - Downloaded image for city_id: 3, 1 of 10
+2023-09-10 00:19:28,818 - INFO - Downloaded image for city_id: 3, 2 of 10
+2023-09-10 00:19:28,928 - INFO - Downloaded image for city_id: 3, 3 of 10
+2023-09-10 00:19:29,069 - INFO - Downloaded image for city_id: 3, 4 of 10
+2023-09-10 00:19:31,362 - INFO - Downloaded image for city_id: 3, 5 of 10
+2023-09-10 00:19:38,138 - INFO - Downloaded image for city_id: 3, 6 of 10
+2023-09-10 00:19:39,924 - INFO - Downloaded image for city_id: 3, 7 of 10
+2023-09-10 00:19:40,788 - INFO - Downloaded image for city_id: 3, 8 of 10
+2023-09-10 00:19:41,901 - INFO - Downloaded image for city_id: 3, 9 of 10
+2023-09-10 00:19:47,240 - INFO - Downloaded image for city_id: 3, 10 of 10

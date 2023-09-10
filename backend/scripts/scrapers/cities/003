@@ -1,0 +1,137 @@
+#!/usr/bin/env python3
+# NOTE: Albuquerque site unscrapable...
+# scrapes council member names and images.
+import os
+import json
+import requests
+import logging
+from datetime import datetime
+from bs4 import BeautifulSoup as BS
+
+# Change based off of which site being scraped
+CITY_ID = 3
+BASE_URL = 'https://www.cabq.gov'
+#  CITY_COUNCIL_URL = 'https://www.cabq.gov/council/find-your-councilor/albuquerque-city-councilors'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
+mayor_url = 'https://www.cabq.gov/mayor'
+mayor_img_url = 'https://www.cabq.gov/mayor/images/mayor-tim-keller-headshot.jpg/@@images/e9d5134c-8ce1-4fd1-8b26-7df63ad1bb1f.jpeg'
+city_council_urls = [
+    'https://www.cabq.gov/council/find-your-councilor/district-1',
+    'https://www.cabq.gov/council/find-your-councilor/district-2',
+    'https://www.cabq.gov/council/find-your-councilor/district-3',
+    'https://www.cabq.gov/council/find-your-councilor/district-4',
+    'https://www.cabq.gov/council/find-your-councilor/district-5',
+    'https://www.cabq.gov/council/find-your-councilor/district-6',
+    'https://www.cabq.gov/council/find-your-councilor/district-7',
+    'https://www.cabq.gov/council/find-your-councilor/district-8',
+    'https://www.cabq.gov/council/find-your-councilor/district-9',
+]
+# Note: City site is unscrapable for images, even alt tags are not consistent text
+img_arr = [
+    'https://www.cabq.gov/council/images/louie-sanchez-city-council-district-1-2022.jpg',
+    'https://www.cabq.gov/council/images/07-09/benton200.jpg',
+    'https://www.cabq.gov/council/images/klarissa-pena.jpg',
+    'https://www.cabq.gov/council/images/bassan-headshot.jpg',
+    'https://www.cabq.gov/council/images/dan-lewis-city-council-district-5-2022.jpg',
+    'https://www.cabq.gov/council/images/davis-pat-2074.jpg/',
+    'https://www.cabq.gov/council/images/tammy-fiebelkorn-city-council-district-7.jpg',
+    'https://www.cabq.gov/council/images/jones-trudy-5648square.jpg',
+    'https://www.cabq.gov/council/images/renee-grout-city-council-district-9-2022.jpg',
+]
+PATH_ID = f'00{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_arr):
+    for i, img_url in enumerate(img_arr):
+        file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+        img_data = requests.get(img_url).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(
+            f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+        )
+
+
+def grab_img_urls(results):
+    img_arr = []
+    for result in results:
+        try:
+            img = result.find('img')
+            img_url = f"{BASE_URL}{img['src']}"
+            img_arr.append(img_url)
+        except Exception as e:
+            logging.error(f'Error grabbing image URL: {str(e)}')
+            pass
+    return img_arr
+
+
+def parse_json(results):
+    #  mayor_info = grab_mayor(mayor_url)
+    #  print(f'mayor_info: {mayor_info}')
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        try:
+            #  council_member usually needs to be changed
+            data['council_member'] = result
+            json_arr.append(data)
+        except Exception as e:
+            logging.error(f'Error parsing JSON: {str(e)}')
+            pass
+    for i, data in enumerate(json_arr):
+        data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i + 1}'
+    mayor_info = {
+        'city_id': CITY_ID,
+        'council_member': grab_mayor(mayor_url),
+        'img_url': mayor_img_url
+    }
+    json_arr.insert(0, mayor_info)
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def scrape_name(url):
+    try:
+        html = requests.get(url).content
+        soup = BS(html, 'lxml')
+        # results is usually what needs to get changed
+        council_name = soup.findAll('h1')[0].text.split(' ', 2)[-1]
+        return council_name
+
+    except Exception as e:
+        logging.error(f'Error during scraping: {str(e)}')
+        return False
+
+
+def grab_mayor(url):
+    html = requests.get(url).content
+    soup = BS(html, 'lxml')
+    mayor_name = ' '.join(soup.findAll('h1')[0].text.split(' ', 2)[-2:])
+    return mayor_name
+
+
+if __name__ == "__main__":
+    council_names = []
+    for url in city_council_urls:
+        name = scrape_name(url)
+        council_names.append(name)
+    if len(council_names):
+        parse_json(council_names)
+    logging.error(f'WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE')
+    img_arr.insert(0, mayor_img_url)
+    download_images(img_arr)
