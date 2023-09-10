@@ -1,78 +1,98 @@
 #!/usr/bin/env python3
+# scrapes council member names and images.
+import os
 import json
 import requests
-from bs4 import BeautifulSoup as BS
-import os
+import logging
 from datetime import datetime
+from bs4 import BeautifulSoup as BS
 
-city_id = 2
-base_url = 'https://www.akroncitycouncil.org'
-city_council_url = 'https://www.akroncitycouncil.org/members'
-base_img_path = 'https://www.citystats.xyz/images/cities/' + str(city_id)
+# Change based off of which site being scraped
+CITY_ID = 2
+BASE_URL = 'https://www.akroncitycouncil.org'
+CITY_COUNCIL_URL = 'https://www.akroncitycouncil.org/members'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
-path_id = '00' + str(city_id)
-img_path = './new_council_members/img/' + str(path_id) + '/'
-os.makedirs(os.path.dirname(img_path), exist_ok=True)
+PATH_ID = f'00{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_arr):
+    for i, img_url in enumerate(img_arr):
+        file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+        img_data = requests.get(img_url).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(
+            f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+        )
+
+
+def grab_img_urls(results):
+    img_arr = []
+    for result in results:
+        try:
+            img = result.find('img')
+            img_url = f"{BASE_URL}{img['src']}"
+            img_arr.append(img_url)
+        except Exception as e:
+            logging.error(f'Error grabbing image URL: {str(e)}')
+            pass
+    return img_arr
+
+
+def parse_json(results):
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        try:
+            # council_member usually needs to be changed
+            data['council_member'] = result.find('div',
+                                                 attrs={
+                                                     'class': 'name'
+                                                 }).contents[0]
+            json_arr.append(data)
+        except Exception as e:
+            logging.error(f'Error parsing JSON: {str(e)}')
+            pass
+    for i, data in enumerate(json_arr):
+        if i == 0:
+            data['img_url'] = f'{BASE_IMG_PATH}/mayor'
+        else:
+            data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
+    with open('./new_council_members/json/001.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
 
 
 def scrape_data():
-    html = requests.get(city_council_url).content
-    soup = BS(html, 'lxml')
-    results = soup.findAll('div', {"class": "item"})
-    finalArr = []
-    imgArr = []
-
-    # generates JSON data and creates img urls for downloading
-    for i, result in enumerate(results):
-        name = result.find('div', attrs={'class': 'name'})
-        data = {}
-        data['city_id'] = city_id
-        data['council_member'] = name.contents[0]
-        finalArr.append(data)
-        img = result.find('img')
-        img_url = base_url + img['src']
-        imgArr.append(img_url)
-
-    # apply image url to data objects
-    for i, data in enumerate(finalArr):
-        if i == 0:
-            data['img_url'] = base_img_path + '/mayor'
-        else:
-            data['img_url'] = base_img_path + '/city_council/' + str(i)
-
-    # logs when download of image starts
-    dt_string = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-    print(dt_string, ': downloading images for city_id: ', str(city_id))
-    with open("./log.txt", "a") as f:
-        print(dt_string,
-              ': downloading images for city_id: ',
-              str(city_id),
-              file=f)
-
-    # downloads images
-    for i, img_url in enumerate(imgArr):
-        img_data = requests.get(img_url).content
-        file = open(
-            './new_council_members/img/' + str(path_id) + '/' + str(path_id) +
-            '_' + str(i) + '.jpg', 'wb')
-        file.write(img_data)
-        file.close()
-
-    # logs when download of image is completed
-    dt_string = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-    print(dt_string, ': images for city_id: ', str(city_id), ' are downloaded')
-    with open("./log.txt", "a") as f:
-        print(dt_string,
-              ': images for city_id: ',
-              str(city_id),
-              ' are downloaded',
-              file=f)
-
-    # writes json to file
-    with open('./new_council_members/json/' + str(path_id) + '.json',
-              'w') as writeJSON:
-        json.dump(finalArr, writeJSON, ensure_ascii=False)
+    try:
+        html = requests.get(CITY_COUNCIL_URL).content
+        soup = BS(html, 'lxml')
+        # results is usually what needs to get changed
+        results = soup.findAll('div', {"class": "item"})
+        return results
+    except Exception as e:
+        logging.error(f'Error during scraping: {str(e)}')
+        return False
 
 
 if __name__ == "__main__":
-    scrape_data()
+    results = scrape_data()
+    if results:
+        parse_json(results)
+        img_arr = grab_img_urls(results)
+        download_images(img_arr)

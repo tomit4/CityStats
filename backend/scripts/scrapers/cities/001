@@ -9,6 +9,7 @@ import logging
 from datetime import datetime
 from bs4 import BeautifulSoup as BS
 
+# Change based off of which site being scraped
 CITY_ID = 1
 BASE_URL = 'https://www.abilenetx.gov'
 CITY_COUNCIL_URL = 'https://www.abilenetx.gov/526/City-Council'
@@ -69,6 +70,7 @@ def parse_json(results):
         data = {}
         data['city_id'] = CITY_ID
         try:
+            # council_member usually needs to be changed
             data['council_member'] = result.find('h3').contents[0]
             json_arr.append(data)
         except Exception as e:
@@ -87,6 +89,7 @@ def scrape_data():
     try:
         html = requests.get(CITY_COUNCIL_URL).content
         soup = BS(html, 'lxml')
+        # results is usually what needs to get changed
         results = soup.findAll('td')
         return results
     except Exception as e:
