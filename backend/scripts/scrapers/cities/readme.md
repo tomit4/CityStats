@@ -17,26 +17,3 @@ run-parts .
 ```
 
 Note that run-parts will not run anything with an extension (hence no .py extensions).
-
-**CONSIDER**:
-
-Changing the structure of the city_council array, right now it is:
-
-```
-city_council: [ 'council_name1', 'council_name2'...]
-```
-
-When we could change it to:
-
-```
-city_council: [
-    {
-        counselor_name: 'council_name1',
-        counselor_img: 'https://citystats.xyz/states/state_id/city_council/images/1'
-    },
-    {
-        counselor_name: 'council_name2',
-        counselor_img: 'https://citystats.xyz/states/state_id/city_council/images/2'
-    }
-]
-```
