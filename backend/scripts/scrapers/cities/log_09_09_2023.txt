@@ -1,0 +1,11 @@
+2023-09-09 21:22:34,290 - ERROR - Error parsing JSON: 'NoneType' object has no attribute 'contents'
+2023-09-09 21:22:34,290 - ERROR - Error parsing JSON: 'NoneType' object has no attribute 'contents'
+2023-09-09 21:22:34,290 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-09 21:22:34,290 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-09 21:22:40,077 - INFO - Downloaded image for city_id: 1, 1 of 7
+2023-09-09 21:22:40,825 - INFO - Downloaded image for city_id: 1, 2 of 7
+2023-09-09 21:22:46,887 - INFO - Downloaded image for city_id: 1, 3 of 7
+2023-09-09 21:22:47,719 - INFO - Downloaded image for city_id: 1, 4 of 7
+2023-09-09 21:22:48,337 - INFO - Downloaded image for city_id: 1, 5 of 7
+2023-09-09 21:22:49,056 - INFO - Downloaded image for city_id: 1, 6 of 7
+2023-09-09 21:22:49,650 - INFO - Downloaded image for city_id: 1, 7 of 7

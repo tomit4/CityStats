@@ -4,6 +4,9 @@ module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
         url: '/cities',
+        decompress: {
+            forceRequestEncoding: 'gzip',
+        },
         schema: {
             description: 'returns all cities entities',
             response: {

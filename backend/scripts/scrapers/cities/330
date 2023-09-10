@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# Function to resize and compress images in a directory
+resize_and_compress_images_in_directory() {
+    local dir="$1"
+    local max_size_kb="$2"
+
+    # Check if the provided directory exists
+    if [ ! -d "$dir" ]; then
+        echo "Directory '$dir' does not exist."
+        return 1
+    fi
+
+    # Loop through all image files in the directory and resize/compress them if needed
+    for image_file in "$dir"/*.{jpg,jpeg,png,gif}; do
+        if [ -f "$image_file" ]; then
+            # Get the file size in kilobytes
+            size_kb=$(du -k "$image_file" | cut -f1)
+
+            if [ "$size_kb" -gt "$max_size_kb" ]; then
+                # Reduce image quality by 80 percent
+                magick "$image_file" -resize 800 -quality 80 "$image_file"
+                echo "Resized and compressed $image_file (size: $size_kb KB)"
+            else
+                echo "Skipping $image_file (size: $size_kb KB)"
+            fi
+        fi
+    done
+}
+
+# Define the directory where numbered directories are located
+base_directory="./new_council_members/img"
+
+# Check if the base directory exists
+if [ ! -d "$base_directory" ]; then
+    echo "Base directory '$base_directory' does not exist."
+    exit 1
+fi
+
+# Find all numbered directories within the base directory
+numbered_dirs=$(find "$base_directory" -maxdepth 1 -type d -regex '.*/[0-9][0-9][0-9]$')
+
+# Iterate through the found numbered directories and call resize_and_compress_images_in_directory function
+for directory in $numbered_dirs; do
+    resize_and_compress_images_in_directory "$directory" 100 # Adjust the maximum size as needed
+done

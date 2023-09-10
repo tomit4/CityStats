@@ -8,7 +8,9 @@ module.exports = async (fastify, options, done) => {
 
         // url: '/images/cities/:id/:body/:imageId?',
         // body can be mayor, city_council, or img (image of city)
-
+        decompress: {
+            forceRequestEncoding: 'gzip',
+        },
         // QUESTION: needs schema?
         handler: async (request, reply) => {
             // TODO: Possibly put logic into service files
@@ -30,6 +32,11 @@ module.exports = async (fastify, options, done) => {
             } else if (govBody === 'city_council' && imageId !== '0') {
                 imgPath = `cities/${folderId}/${folderId}_${imageId}.jpg`
             }
+
+            fastify.log.info(
+                `Serving image: ${imgPath}, Compression: ${request.headers['accept-encoding']}`,
+            )
+
             return reply.sendFile(imgPath)
         },
     })
