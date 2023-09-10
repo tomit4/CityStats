@@ -4,6 +4,9 @@ module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
         url: '/states/:id/:field',
+        decompress: {
+            forceRequestEncoding: 'gzip',
+        },
         schema: {
             description:
                 'returns a single state entity by id with specified field data',
