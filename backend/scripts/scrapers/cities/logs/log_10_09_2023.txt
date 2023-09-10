@@ -1,50 +1,112 @@
-2023-09-10 00:03:30,315 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:03:31,011 - INFO - Downloaded image for city_id: 3, 1 of 9
-2023-09-10 00:03:31,143 - INFO - Downloaded image for city_id: 3, 2 of 9
-2023-09-10 00:03:36,323 - INFO - Downloaded image for city_id: 3, 3 of 9
-2023-09-10 00:03:37,654 - INFO - Downloaded image for city_id: 3, 4 of 9
-2023-09-10 00:03:39,717 - INFO - Downloaded image for city_id: 3, 5 of 9
-2023-09-10 00:03:41,647 - INFO - Downloaded image for city_id: 3, 6 of 9
-2023-09-10 00:03:48,421 - INFO - Downloaded image for city_id: 3, 7 of 9
-2023-09-10 00:03:54,741 - INFO - Downloaded image for city_id: 3, 8 of 9
-2023-09-10 00:04:00,066 - INFO - Downloaded image for city_id: 3, 9 of 9
-2023-09-10 00:04:50,316 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:04:51,390 - INFO - Downloaded image for city_id: 3, 1 of 9
-2023-09-10 00:04:51,577 - INFO - Downloaded image for city_id: 3, 2 of 9
-2023-09-10 00:04:51,765 - INFO - Downloaded image for city_id: 3, 3 of 9
-2023-09-10 00:04:53,018 - INFO - Downloaded image for city_id: 3, 4 of 9
-2023-09-10 00:04:53,724 - INFO - Downloaded image for city_id: 3, 5 of 9
-2023-09-10 00:05:00,585 - INFO - Downloaded image for city_id: 3, 6 of 9
-2023-09-10 00:05:12,494 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:05:13,157 - INFO - Downloaded image for city_id: 3, 1 of 9
-2023-09-10 00:05:13,298 - INFO - Downloaded image for city_id: 3, 2 of 9
-2023-09-10 00:05:13,739 - INFO - Downloaded image for city_id: 3, 3 of 9
-2023-09-10 00:05:16,385 - INFO - Downloaded image for city_id: 3, 4 of 9
-2023-09-10 00:05:18,250 - INFO - Downloaded image for city_id: 3, 5 of 9
-2023-09-10 00:05:19,894 - INFO - Downloaded image for city_id: 3, 6 of 9
-2023-09-10 00:05:25,707 - INFO - Downloaded image for city_id: 3, 7 of 9
-2023-09-10 00:05:26,950 - INFO - Downloaded image for city_id: 3, 8 of 9
-2023-09-10 00:05:32,479 - INFO - Downloaded image for city_id: 3, 9 of 9
-2023-09-10 00:05:59,485 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:06:00,288 - INFO - Downloaded image for city_id: 3, 1 of 9
-2023-09-10 00:06:01,463 - INFO - Downloaded image for city_id: 3, 2 of 9
-2023-09-10 00:06:01,672 - INFO - Downloaded image for city_id: 3, 3 of 9
-2023-09-10 00:06:03,580 - INFO - Downloaded image for city_id: 3, 4 of 9
-2023-09-10 00:06:09,399 - INFO - Downloaded image for city_id: 3, 5 of 9
-2023-09-10 00:06:16,061 - INFO - Downloaded image for city_id: 3, 6 of 9
-2023-09-10 00:06:33,598 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:07:23,656 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:13:19,332 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:14:34,597 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:15:23,644 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:19:28,008 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
-2023-09-10 00:19:28,221 - INFO - Downloaded image for city_id: 3, 1 of 10
-2023-09-10 00:19:28,818 - INFO - Downloaded image for city_id: 3, 2 of 10
-2023-09-10 00:19:28,928 - INFO - Downloaded image for city_id: 3, 3 of 10
-2023-09-10 00:19:29,069 - INFO - Downloaded image for city_id: 3, 4 of 10
-2023-09-10 00:19:31,362 - INFO - Downloaded image for city_id: 3, 5 of 10
-2023-09-10 00:19:38,138 - INFO - Downloaded image for city_id: 3, 6 of 10
-2023-09-10 00:19:39,924 - INFO - Downloaded image for city_id: 3, 7 of 10
-2023-09-10 00:19:40,788 - INFO - Downloaded image for city_id: 3, 8 of 10
-2023-09-10 00:19:41,901 - INFO - Downloaded image for city_id: 3, 9 of 10
-2023-09-10 00:19:47,240 - INFO - Downloaded image for city_id: 3, 10 of 10
+2023-09-10 01:15:45,888 - ERROR - Error parsing JSON: 'NoneType' object has no attribute 'contents'
+2023-09-10 01:15:45,888 - ERROR - Error parsing JSON: 'NoneType' object has no attribute 'contents'
+2023-09-10 01:15:45,889 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-10 01:15:45,889 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-10 01:15:48,021 - INFO - Downloaded image for city_id: 1, 1 of 7
+2023-09-10 01:15:48,599 - INFO - Downloaded image for city_id: 1, 2 of 7
+2023-09-10 01:15:49,363 - INFO - Downloaded image for city_id: 1, 3 of 7
+2023-09-10 01:15:55,256 - INFO - Downloaded image for city_id: 1, 4 of 7
+2023-09-10 01:15:56,333 - INFO - Downloaded image for city_id: 1, 5 of 7
+2023-09-10 01:15:56,862 - INFO - Downloaded image for city_id: 1, 6 of 7
+2023-09-10 01:15:57,635 - INFO - Downloaded image for city_id: 1, 7 of 7
+2023-09-10 01:15:58,586 - INFO - Downloaded image for city_id: 2, 1 of 13
+2023-09-10 01:15:58,852 - INFO - Downloaded image for city_id: 2, 2 of 13
+2023-09-10 01:15:59,116 - INFO - Downloaded image for city_id: 2, 3 of 13
+2023-09-10 01:15:59,393 - INFO - Downloaded image for city_id: 2, 4 of 13
+2023-09-10 01:15:59,697 - INFO - Downloaded image for city_id: 2, 5 of 13
+2023-09-10 01:16:00,034 - INFO - Downloaded image for city_id: 2, 6 of 13
+2023-09-10 01:16:00,216 - INFO - Downloaded image for city_id: 2, 7 of 13
+2023-09-10 01:16:00,401 - INFO - Downloaded image for city_id: 2, 8 of 13
+2023-09-10 01:16:00,562 - INFO - Downloaded image for city_id: 2, 9 of 13
+2023-09-10 01:16:00,898 - INFO - Downloaded image for city_id: 2, 10 of 13
+2023-09-10 01:16:01,033 - INFO - Downloaded image for city_id: 2, 11 of 13
+2023-09-10 01:16:01,195 - INFO - Downloaded image for city_id: 2, 12 of 13
+2023-09-10 01:16:01,316 - INFO - Downloaded image for city_id: 2, 13 of 13
+2023-09-10 01:16:06,850 - ERROR - WARNING: City of Albuquerque INVALID SCRAPING TECHNIQUE
+2023-09-10 01:16:07,292 - INFO - Downloaded image for city_id: 3, 1 of 10
+2023-09-10 01:16:07,793 - INFO - Downloaded image for city_id: 3, 2 of 10
+2023-09-10 01:16:08,215 - INFO - Downloaded image for city_id: 3, 3 of 10
+2023-09-10 01:16:08,361 - INFO - Downloaded image for city_id: 3, 4 of 10
+2023-09-10 01:16:10,217 - INFO - Downloaded image for city_id: 3, 5 of 10
+2023-09-10 01:16:16,581 - INFO - Downloaded image for city_id: 3, 6 of 10
+2023-09-10 01:16:23,052 - INFO - Downloaded image for city_id: 3, 7 of 10
+2023-09-10 01:16:23,727 - INFO - Downloaded image for city_id: 3, 8 of 10
+2023-09-10 01:16:30,460 - INFO - Downloaded image for city_id: 3, 9 of 10
+2023-09-10 01:16:37,117 - INFO - Downloaded image for city_id: 3, 10 of 10
+2023-09-10 01:16:37,876 - INFO - Downloaded image for city_id: 4, 1 of 7
+2023-09-10 01:16:38,159 - INFO - Downloaded image for city_id: 4, 2 of 7
+2023-09-10 01:16:38,349 - INFO - Downloaded image for city_id: 4, 3 of 7
+2023-09-10 01:16:38,594 - INFO - Downloaded image for city_id: 4, 4 of 7
+2023-09-10 01:16:38,807 - INFO - Downloaded image for city_id: 4, 5 of 7
+2023-09-10 01:16:39,007 - INFO - Downloaded image for city_id: 4, 6 of 7
+2023-09-10 01:16:39,169 - INFO - Downloaded image for city_id: 4, 7 of 7
+2023-09-10 01:28:11,658 - ERROR - Error parsing JSON: 'list' object has no attribute 'upper'
+2023-09-10 01:28:11,658 - ERROR - Error parsing JSON: 'list' object has no attribute 'upper'
+2023-09-10 01:28:11,658 - ERROR - Error parsing JSON: 'list' object has no attribute 'upper'
+2023-09-10 01:28:11,658 - ERROR - Error parsing JSON: 'list' object has no attribute 'upper'
+2023-09-10 01:28:11,658 - ERROR - Error parsing JSON: 'list' object has no attribute 'upper'
+2023-09-10 01:28:11,658 - ERROR - Error parsing JSON: 'list' object has no attribute 'upper'
+2023-09-10 01:28:11,658 - ERROR - Error parsing JSON: 'list' object has no attribute 'upper'
+2023-09-10 01:40:39,973 - ERROR - Error parsing JSON: 'list' object has no attribute 'findAll'
+2023-09-10 01:40:39,973 - ERROR - Error parsing JSON: 'list' object has no attribute 'findAll'
+2023-09-10 01:40:39,973 - ERROR - Error parsing JSON: 'list' object has no attribute 'findAll'
+2023-09-10 01:40:39,973 - ERROR - Error parsing JSON: 'list' object has no attribute 'findAll'
+2023-09-10 01:40:39,973 - ERROR - Error parsing JSON: 'list' object has no attribute 'findAll'
+2023-09-10 01:40:39,973 - ERROR - Error parsing JSON: 'list' object has no attribute 'findAll'
+2023-09-10 01:40:39,973 - ERROR - Error parsing JSON: 'list' object has no attribute 'findAll'
+2023-09-10 01:40:50,369 - ERROR - Error parsing JSON: 'list' object has no attribute 'find'
+2023-09-10 01:40:50,369 - ERROR - Error parsing JSON: 'list' object has no attribute 'find'
+2023-09-10 01:40:50,369 - ERROR - Error parsing JSON: 'list' object has no attribute 'find'
+2023-09-10 01:40:50,369 - ERROR - Error parsing JSON: 'list' object has no attribute 'find'
+2023-09-10 01:40:50,369 - ERROR - Error parsing JSON: 'list' object has no attribute 'find'
+2023-09-10 01:40:50,369 - ERROR - Error parsing JSON: 'list' object has no attribute 'find'
+2023-09-10 01:40:50,369 - ERROR - Error parsing JSON: 'list' object has no attribute 'find'
+2023-09-10 01:43:46,608 - ERROR - Error parsing JSON: list index out of range
+2023-09-10 01:43:46,608 - ERROR - Error parsing JSON: list index out of range
+2023-09-10 01:44:22,446 - ERROR - Error parsing JSON: list index out of range
+2023-09-10 01:44:22,446 - ERROR - Error parsing JSON: list index out of range
+2023-09-10 01:44:56,302 - ERROR - Error parsing JSON: list index out of range
+2023-09-10 01:44:56,302 - ERROR - Error parsing JSON: list index out of range
+2023-09-10 01:45:13,323 - ERROR - Error parsing JSON: list index out of range
+2023-09-10 01:45:13,323 - ERROR - Error parsing JSON: list index out of range
+2023-09-10 01:47:36,907 - ERROR - Error parsing JSON: list.remove(x): x not in list
+2023-09-10 01:47:36,908 - ERROR - Error parsing JSON: list.remove(x): x not in list
+2023-09-10 01:48:21,041 - ERROR - Error parsing JSON: list.remove(x): x not in list
+2023-09-10 01:48:21,042 - ERROR - Error parsing JSON: list.remove(x): x not in list
+2023-09-10 01:48:48,820 - ERROR - Error parsing JSON: 'list' object has no attribute 'startswith'
+2023-09-10 01:48:48,820 - ERROR - Error parsing JSON: 'list' object has no attribute 'startswith'
+2023-09-10 01:48:48,820 - ERROR - Error parsing JSON: 'list' object has no attribute 'startswith'
+2023-09-10 01:48:48,820 - ERROR - Error parsing JSON: 'list' object has no attribute 'startswith'
+2023-09-10 01:48:48,820 - ERROR - Error parsing JSON: 'list' object has no attribute 'startswith'
+2023-09-10 01:48:48,820 - ERROR - Error parsing JSON: 'list' object has no attribute 'startswith'
+2023-09-10 01:48:48,820 - ERROR - Error parsing JSON: 'list' object has no attribute 'startswith'
+2023-09-10 01:48:57,699 - ERROR - Error parsing JSON: list.remove(x): x not in list
+2023-09-10 01:48:57,699 - ERROR - Error parsing JSON: list.remove(x): x not in list
+2023-09-10 01:51:50,042 - ERROR - Error parsing JSON: 'list' object has no attribute 'lower'
+2023-09-10 01:51:50,042 - ERROR - Error parsing JSON: 'list' object has no attribute 'lower'
+2023-09-10 01:51:50,042 - ERROR - Error parsing JSON: 'list' object has no attribute 'lower'
+2023-09-10 01:51:50,043 - ERROR - Error parsing JSON: 'list' object has no attribute 'lower'
+2023-09-10 01:51:50,043 - ERROR - Error parsing JSON: 'list' object has no attribute 'lower'
+2023-09-10 01:51:50,043 - ERROR - Error parsing JSON: 'list' object has no attribute 'lower'
+2023-09-10 01:51:50,043 - ERROR - Error parsing JSON: 'list' object has no attribute 'lower'
+2023-09-10 01:56:45,753 - ERROR - Error parsing JSON: 'list' object has no attribute 'split'
+2023-09-10 01:56:45,753 - ERROR - Error parsing JSON: 'list' object has no attribute 'split'
+2023-09-10 01:56:45,759 - ERROR - Error parsing JSON: 'list' object has no attribute 'split'
+2023-09-10 01:56:45,759 - ERROR - Error parsing JSON: 'list' object has no attribute 'split'
+2023-09-10 01:56:45,759 - ERROR - Error parsing JSON: 'list' object has no attribute 'split'
+2023-09-10 01:56:57,460 - ERROR - Error parsing JSON: 'list' object has no attribute 'split'
+2023-09-10 01:56:57,461 - ERROR - Error parsing JSON: 'list' object has no attribute 'split'
+2023-09-10 02:02:38,228 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-10 02:02:38,228 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-10 02:02:38,228 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-10 02:02:38,228 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-10 02:02:38,228 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-10 02:02:38,228 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-10 02:02:38,228 - ERROR - Error grabbing image URL: 'NoneType' object is not subscriptable
+2023-09-10 02:03:14,969 - INFO - Downloaded image for city_id: 5, 1 of 7
+2023-09-10 02:03:20,601 - INFO - Downloaded image for city_id: 5, 2 of 7
+2023-09-10 02:03:21,239 - INFO - Downloaded image for city_id: 5, 3 of 7
+2023-09-10 02:03:21,775 - INFO - Downloaded image for city_id: 5, 4 of 7
+2023-09-10 02:03:22,373 - INFO - Downloaded image for city_id: 5, 5 of 7
+2023-09-10 02:03:31,119 - INFO - Downloaded image for city_id: 5, 6 of 7
+2023-09-10 02:03:33,684 - INFO - Downloaded image for city_id: 5, 7 of 7

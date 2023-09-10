@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 5,
+        "council_member": "Baine Brooks",
+        "img_url": "https://www.citystats.xyz/images/cities/5/mayor"
+    },
+    {
+        "city_id": 5,
+        "council_member": "Daren Meis",
+        "img_url": "https://www.citystats.xyz/images/cities/5/city_council/1"
+    },
+    {
+        "city_id": 5,
+        "council_member": "Tommy Baril",
+        "img_url": "https://www.citystats.xyz/images/cities/5/city_council/2"
+    },
+    {
+        "city_id": 5,
+        "council_member": "Dave Cornette",
+        "img_url": "https://www.citystats.xyz/images/cities/5/city_council/3"
+    },
+    {
+        "city_id": 5,
+        "council_member": "Chris Schulmeister",
+        "img_url": "https://www.citystats.xyz/images/cities/5/city_council/4"
+    },
+    {
+        "city_id": 5,
+        "council_member": "Dave Shafer",
+        "img_url": "https://www.citystats.xyz/images/cities/5/city_council/5"
+    },
+    {
+        "city_id": 5,
+        "council_member": "Ben Trahan",
+        "img_url": "https://www.citystats.xyz/images/cities/5/city_council/6"
+    }
+]
