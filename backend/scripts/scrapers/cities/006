@@ -1,0 +1,136 @@
+#!/usr/bin/env python3
+# scrapes council member names and images.
+import os
+import json
+import requests
+import logging
+from datetime import datetime
+from bs4 import BeautifulSoup as BS
+
+# Change based off of which site being scraped
+CITY_ID = 6
+BASE_URL = 'https://www.allentownpa.gov'
+CITY_COUNCIL_URL = 'https://www.allentownpa.gov/Government/City-Council/Council-Members'
+MAYOR_URL = 'https://www.allentownpa.gov/Government/Mayors-Office'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
+
+PATH_ID = f'00{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_arr):
+    for i, img_url in enumerate(img_arr):
+        file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+        img_data = requests.get(img_url).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(
+            f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+        )
+
+
+def grab_img_urls(results):
+    img_arr = []
+    for result in results:
+        try:
+            try:
+                img = result.find('img')
+                img_url = f"{BASE_URL}{img['src']}"
+                img_arr.append(img_url)
+            except:
+                pass
+        except Exception as e:
+            logging.error(
+                f'Error at city_id: {CITY_ID} grabbing image URL: {str(e)}')
+            pass
+    del img_arr[-1]
+    return img_arr
+
+
+def parse_mayor():
+    results = scrape_mayor()
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        try:
+            # council_member usually needs to be changed
+            try:
+                data['council_member'] = result.find('h2').contents[0].split(
+                    ',')[0]
+                data['img_url'] = f'{BASE_IMG_PATH}/mayor'
+                return data
+            except:
+                pass
+        except Exception as e:
+            logging.error(
+                f'Error at city_id: {CITY_ID} parsing JSON: {str(e)}')
+            pass
+
+
+def parse_json(results):
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        try:
+            # council_member usually needs to be changed
+            try:
+                data['council_member'] = result.find('h4').contents[0].split(
+                    ',')[0]
+                json_arr.append(data)
+            except:
+                pass
+        except Exception as e:
+            logging.error(
+                f'Error at city_id: {CITY_ID} parsing JSON: {str(e)}')
+            pass
+    for data in json_arr:
+        data['img_url'] = None
+    mayor_info = parse_mayor()
+    json_arr.insert(0, mayor_info)
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def scrape_data():
+    try:
+        html = requests.get(CITY_COUNCIL_URL).content
+        soup = BS(html, 'lxml')
+        # results is usually what needs to get changed
+        results = soup.findAll('div', {"class": "Normal"})
+        return results
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def scrape_mayor():
+    html = requests.get(MAYOR_URL).content
+    soup = BS(html, 'lxml')
+    # results is usually what needs to get changed
+    results = soup.findAll('div', {"class": "Normal"})
+    return results
+
+
+if __name__ == "__main__":
+    results = scrape_data()
+    #  print(results)
+    if results:
+        parse_json(results)
+    mayor_results = scrape_mayor()
+    if mayor_results:
+        img_arr = grab_img_urls(mayor_results)
+        download_images(img_arr)
