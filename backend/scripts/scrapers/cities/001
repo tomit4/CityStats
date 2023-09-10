@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""
+A script for scraping data from a city council website, downloading images,
+and organizing logs with minimal comments.
+"""
 import os
 import glob
 import shutil
