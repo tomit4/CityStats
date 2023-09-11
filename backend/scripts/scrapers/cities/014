@@ -8,18 +8,19 @@ from datetime import datetime
 from bs4 import BeautifulSoup as BS
 
 # Change based off of which site being scraped
-CITY_ID = 11
-BASE_URL = 'https://www.antiochca.gov'
-CITY_COUNCIL_URL = 'https://www.antiochca.gov/government/city-council/'
+CITY_ID = 14
+BASE_URL = 'https://www.accgov.com'
+CITY_COUNCIL_URL = 'https://www.accgov.com/168/Commission-Information-Biographies'
+MAYOR_URL = 'https://en.wikipedia.org/wiki/Athens_georgia'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
-#  IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
 
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
 
-#  os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
 
 log_format = '%(asctime)s - %(levelname)s - %(message)s'
 logging.basicConfig(filename=LOG_FILENAME,
@@ -35,7 +36,6 @@ def parse_json(results):
     for result in results:
         data = {}
         data['city_id'] = CITY_ID
-        # council_member usually needs to be changed
         data['council_member'] = result
         data['img_url'] = None
         json_arr.append(data)
@@ -48,18 +48,35 @@ def scrape_data():
         html = requests.get(CITY_COUNCIL_URL).content
         soup = BS(html, 'lxml')
         # results is usually what needs to get changed
-        results = soup.findAll('div', {"class": "vc_col-sm-2"})
+        results = soup.findAll('h4', {"class": "p-name"})
         data = []
         for result in results:
-            data.append(result.findAll('span')[1].contents[0])
+            data.append(result.contents[0].strip())
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
 
 
+def append_mayor(members_arr):
+    try:
+        html = requests.get(MAYOR_URL).content
+        soup = BS(html, 'lxml')
+        # results is usually what needs to get changed
+        results = soup.findAll('table', {"class": "infobox"})
+        for result in results:
+            res = result.findAll(
+                'tr', {"class": "mergedrow"})[5].contents[1].contents[0].text
+            if res:
+                members_arr.insert(0, res)
+                return members_arr
+    except:
+        pass
+
+
 if __name__ == "__main__":
     results = scrape_data()
+    results = append_mayor(results)
     if results:
         parse_json(results)
         logging.info(f'No images scraped for city_id: {CITY_ID}')

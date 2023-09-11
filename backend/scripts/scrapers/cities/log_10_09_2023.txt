@@ -114,3 +114,4 @@
 2023-09-10 23:21:20,071 - ERROR - Error at city_id: 11 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
 2023-09-10 23:25:07,293 - INFO - No images scraped for city_id: 11
 2023-09-10 23:25:37,730 - INFO - No images scraped for city_id: 11
+2023-09-10 23:53:39,338 - ERROR - Error at city_id: 12 during scraping: '_asyncio.Future' object has no attribute 'content'

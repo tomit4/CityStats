@@ -1,0 +1,15 @@
+[
+    { "city_id": 12, "council_member": "Jim Ross", "img_url": null },
+    { "city_id": 12, "council_member": "Helen Moise", "img_url": null },
+    { "city_id": 12, "council_member": "Raul H. Gonzalez", "img_url": null },
+    { "city_id": 12, "council_member": "Nikkie Hunter", "img_url": null },
+    { "city_id": 12, "council_member": "Andrew Piel", "img_url": null },
+    { "city_id": 12, "council_member": "Rebecca Boxall", "img_url": null },
+    { "city_id": 12, "council_member": "Long Pham", "img_url": null },
+    { "city_id": 12, "council_member": "Bowie Hogg", "img_url": null },
+    {
+        "city_id": 12,
+        "council_member": "Dr. Barbara Odom-Wesley",
+        "img_url": null
+    }
+]

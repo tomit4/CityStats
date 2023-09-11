@@ -5,12 +5,18 @@ import json
 import requests
 import logging
 from datetime import datetime
+# Use requests_html when JS is required on website
+# https://requests.readthedocs.io/projects/requests-html/en/latest/
+from requests_html import HTMLSession
+
+session = HTMLSession()
+
 from bs4 import BeautifulSoup as BS
 
 # Change based off of which site being scraped
-CITY_ID = 11
-BASE_URL = 'https://www.antiochca.gov'
-CITY_COUNCIL_URL = 'https://www.antiochca.gov/government/city-council/'
+CITY_ID = 12
+BASE_URL = 'https://www.arlingtontx.gov'
+CITY_COUNCIL_URL = 'https://www.arlingtontx.gov/city_hall/government/city_council/members'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
@@ -29,6 +35,16 @@ console_handler = logging.StreamHandler()
 console_handler.setFormatter(logging.Formatter(log_format))
 logging.getLogger().addHandler(console_handler)
 
+#  def download_images(img_arr):
+#  for i, img_url in enumerate(img_arr):
+#  file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+#  img_data = requests.get(img_url).content
+#  file = open(f'{file_name}', 'wb')
+#  file.write(img_data)
+#  logging.info(
+#  f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+#  )
+
 
 def parse_json(results):
     json_arr = []
@@ -45,21 +61,38 @@ def parse_json(results):
 
 def scrape_data():
     try:
-        html = requests.get(CITY_COUNCIL_URL).content
-        soup = BS(html, 'lxml')
-        # results is usually what needs to get changed
-        results = soup.findAll('div', {"class": "vc_col-sm-2"})
-        data = []
-        for result in results:
-            data.append(result.findAll('span')[1].contents[0])
-        return data
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        title_elems = r.html.find('.title')
+        titles = []
+        for title in title_elems:
+            text = title.text
+            if 'Mayor' in title.text:
+                split_title = title.text.split('Mayor')
+                text = split_title[1].strip()
+            elif '\n' in title.text:
+                split_title = title.text.split('\n')
+                text = split_title[0]
+            titles.append(text)
+        return titles
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
 
+
+#  def grab_img_urls():
+#  img_arr = []
+#  r = session.get(CITY_COUNCIL_URL)
+#  img_divs = r.html.find('.image')
+#  for i_div in img_divs:
+#  img_tags = i_div.find('img')[0]
+#  img_arr.append(img_tags.attrs['src'])
+#  return img_arr
 
 if __name__ == "__main__":
     results = scrape_data()
     if results:
         parse_json(results)
         logging.info(f'No images scraped for city_id: {CITY_ID}')
+    #  img_arr = grab_img_urls()
+    #  download_images(img_arr)

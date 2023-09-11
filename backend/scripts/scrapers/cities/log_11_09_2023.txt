@@ -1,0 +1,57 @@
+2023-09-11 00:00:57,816 - ERROR - Error at city_id: 12 during scraping: 'HTMLResponse' object has no attribute 'tag'
+2023-09-11 00:01:13,268 - ERROR - Error at city_id: 12 during scraping: 'HTMLResponse' object has no attribute 'find'
+2023-09-11 00:02:53,532 - ERROR - Error at city_id: 12 during scraping: 'list' object has no attribute 'text'
+2023-09-11 00:09:34,807 - ERROR - Error at city_id: 12 during scraping: 'str' object has no attribute 'text'
+2023-09-11 00:09:48,485 - ERROR - Error at city_id: 12 during scraping: 'str' object has no attribute 'text'
+2023-09-11 00:23:37,738 - INFO - Downloaded image for city_id: 12, 1 of 9
+2023-09-11 00:23:38,017 - INFO - Downloaded image for city_id: 12, 2 of 9
+2023-09-11 00:23:38,618 - INFO - Downloaded image for city_id: 12, 3 of 9
+2023-09-11 00:23:38,894 - INFO - Downloaded image for city_id: 12, 4 of 9
+2023-09-11 00:23:39,086 - INFO - Downloaded image for city_id: 12, 5 of 9
+2023-09-11 00:23:39,273 - INFO - Downloaded image for city_id: 12, 6 of 9
+2023-09-11 00:23:44,460 - INFO - Downloaded image for city_id: 12, 7 of 9
+2023-09-11 00:23:44,619 - INFO - Downloaded image for city_id: 12, 8 of 9
+2023-09-11 00:23:45,047 - INFO - Downloaded image for city_id: 12, 9 of 9
+2023-09-11 00:25:50,297 - INFO - No images scraped for city_id: 12
+2023-09-11 00:31:36,757 - ERROR - Error at city_id: 13 during scraping: 0
+2023-09-11 00:31:42,602 - ERROR - Error at city_id: 13 during scraping: 'list' object has no attribute 'strip'
+2023-09-11 00:35:02,048 - INFO - No images scraped for city_id: 13
+2023-09-11 00:37:14,578 - INFO - No images scraped for city_id: 11
+2023-09-11 00:37:16,979 - INFO - No images scraped for city_id: 12
+2023-09-11 00:37:17,807 - INFO - No images scraped for city_id: 13
+2023-09-11 00:38:08,106 - INFO - No images scraped for city_id: 11
+2023-09-11 00:38:09,928 - INFO - No images scraped for city_id: 12
+2023-09-11 00:38:10,269 - INFO - No images scraped for city_id: 13
+2023-09-11 00:55:24,749 - ERROR - Error at city_id: 14 during scraping: 0
+2023-09-11 00:57:01,332 - ERROR - Error at city_id: 14 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 00:57:06,527 - ERROR - Error at city_id: 14 during scraping: ResultSet object has no attribute 'content'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 00:57:19,061 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 00:57:34,546 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 00:57:46,741 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 00:58:04,876 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 00:59:27,078 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 00:59:34,382 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 00:59:46,557 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:00:11,754 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:00:24,608 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:00:34,344 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:01:13,946 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:01:37,805 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:03:18,555 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:05:30,762 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:06:06,695 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:06:30,216 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:06:59,822 - ERROR - Error at city_id: 14 during scraping: 'list' object has no attribute 'text'
+2023-09-11 01:07:07,896 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:07:25,109 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:07:49,149 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:08:07,762 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:09:12,772 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:09:33,678 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:09:49,496 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:10:19,597 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:10:52,406 - ERROR - Error at city_id: 14 during scraping: 'str' object cannot be interpreted as an integer
+2023-09-11 01:11:30,840 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:11:47,967 - ERROR - Error at city_id: 14 during scraping: list index out of range
+2023-09-11 01:25:47,714 - INFO - No images scraped for city_id: 14
+2023-09-11 01:26:19,407 - INFO - No images scraped for city_id: 14

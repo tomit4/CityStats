@@ -8,13 +8,13 @@ from datetime import datetime
 from bs4 import BeautifulSoup as BS
 
 # Change based off of which site being scraped
-CITY_ID = 11
-BASE_URL = 'https://www.antiochca.gov'
-CITY_COUNCIL_URL = 'https://www.antiochca.gov/government/city-council/'
+CITY_ID = 13
+BASE_URL = 'https://www.arvadaco.gov'
+CITY_COUNCIL_URL = 'https://www.arvadaco.gov/157/City-Council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
-#  IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
 
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
@@ -48,10 +48,11 @@ def scrape_data():
         html = requests.get(CITY_COUNCIL_URL).content
         soup = BS(html, 'lxml')
         # results is usually what needs to get changed
-        results = soup.findAll('div', {"class": "vc_col-sm-2"})
+        results = soup.findAll('h4', {"class": "p-name"})
         data = []
         for result in results:
-            data.append(result.findAll('span')[1].contents[0])
+            data.append(result.contents[0].strip())
+
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
