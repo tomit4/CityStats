@@ -60,3 +60,30 @@
 2023-09-10 21:09:18,222 - INFO - Downloaded image for city_id: 8, 5 of 7
 2023-09-10 21:09:18,527 - INFO - Downloaded image for city_id: 8, 6 of 7
 2023-09-10 21:09:19,435 - INFO - Downloaded image for city_id: 8, 7 of 7
+2023-09-10 21:19:51,989 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:20:03,161 - ERROR - Error at city_id: 9 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-10 21:20:36,919 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:22:13,600 - ERROR - Error at city_id: 9 during scraping: ResultSet object has no attribute 'findAll'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-10 21:22:20,008 - ERROR - Error at city_id: 9 during scraping: list indices must be integers or slices, not str
+2023-09-10 21:23:53,090 - ERROR - Error at city_id: 9 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-10 21:27:53,541 - ERROR - Error at city_id: 9 during scraping: 'NavigableString' object has no attribute 'findAll'
+2023-09-10 21:29:30,216 - ERROR - Error at city_id: 9 during scraping: 1
+2023-09-10 21:31:13,985 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:32:00,390 - ERROR - Error at city_id: 9 during scraping: 'NavigableString' object has no attribute 'findAll'
+2023-09-10 21:32:08,724 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:32:24,037 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:36:08,960 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:36:19,668 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:38:21,564 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:38:27,052 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:38:30,779 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:38:57,703 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:39:31,736 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:39:54,441 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:40:09,694 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:41:07,657 - ERROR - Error at city_id: 9 during scraping: 'NavigableString' object has no attribute 'findAll'
+2023-09-10 21:41:50,813 - ERROR - Error at city_id: 9 during scraping: list index out of range
+2023-09-10 21:42:51,494 - ERROR - Error at city_id: 9 during scraping: 'list' object has no attribute 'findAll'
+2023-09-10 21:43:18,482 - ERROR - Error at city_id: 9 during scraping: 'list' object has no attribute 'find'
+2023-09-10 22:17:51,890 - INFO - Downloaded image for city_id: 9, 1 of 1
+2023-09-10 22:18:01,766 - INFO - Downloaded image for city_id: 9, 1 of 1

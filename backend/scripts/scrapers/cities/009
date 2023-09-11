@@ -1,0 +1,128 @@
+#!/usr/bin/env python3
+# scrapes council member names and images.
+import os
+import json
+from re import A
+import requests
+import logging
+from datetime import datetime
+from unidecode import unidecode
+from bs4 import BeautifulSoup as BS
+
+# Change based off of which site being scraped
+CITY_ID = 9
+BASE_URL = 'https://www.communitycouncils.org'
+CITY_COUNCIL_URL = 'https://www.communitycouncils.org/servlet/content/assembly_members.html'
+MAYOR_URL = 'https://www.muni.org/Departments/Mayor/Pages/default.aspx'
+BASE_MAYOR_URL = 'https://www.muni.org'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
+
+PATH_ID = f'00{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_arr):
+    for i, img_url in enumerate(img_arr):
+        file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+        img_data = requests.get(img_url).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(
+            f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+        )
+
+
+def grab_img_urls(results):
+    img_arr = []
+    for img in results:
+        img_url = f"{BASE_MAYOR_URL}{img}"
+        img_arr.append(img_url)
+    return img_arr
+
+
+def parse_json(results):
+    json_arr = []
+    for i, result in enumerate(results):
+        data = {}
+        data['city_id'] = CITY_ID
+        data['council_member'] = result
+        if i == 0:
+            data['img_url'] = f'{BASE_IMG_PATH}/mayor'
+        else:
+            data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
+        json_arr.append(data)
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def scrape_data():
+    try:
+        html = requests.get(CITY_COUNCIL_URL).content
+        soup = BS(html, 'lxml')
+        # results is usually what needs to get changed
+        results = soup.findAll('tr')
+        member_res = []
+        for row in results:
+            try:
+                result = row.findAll('td')[1].contents
+                result = result[:-1]
+                if len(result):
+                    member_res.append(result[1].contents[0])
+                    member_res.append(result[5].contents[0])
+            except:
+                pass
+        return member_res
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def append_mayor(results_arr):
+    html = requests.get(MAYOR_URL).content
+    soup = BS(html, 'lxml')
+    results = soup.findAll(
+        'div',
+        {"id": "ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField"})
+    mayor_arr = []
+    for result in results:
+        res = result.findAll('span')[0].contents
+        mayor_string = unidecode(res[0]).split(' ')
+        for m_str in mayor_string:
+            if len(m_str):
+                mayor_arr.append(m_str)
+    mayor_str = f'{mayor_arr[1]} {mayor_arr[2]}'
+    results_arr.insert(0, mayor_str)
+    return results_arr
+
+
+def grab_mayor_img_url():
+    html = requests.get(MAYOR_URL).content
+    soup = BS(html, 'lxml')
+    results = soup.findAll('img', {"class": "mayorpic"})
+    img_urls = []
+    for res in results:
+        img_urls.append(res['src'])
+    return img_urls
+
+
+if __name__ == "__main__":
+    results = scrape_data()
+    results = append_mayor(results)
+    if results:
+        parse_json(results)
+    img_arr = grab_mayor_img_url()
+    img_arr = grab_img_urls(img_arr)
+    download_images(img_arr)
