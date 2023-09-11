@@ -1,0 +1,21 @@
+[
+    {
+        "city_id": 16,
+        "council_member": "Garnett Johnson",
+        "img_url": "https://www.citystats.xyz/images/cities/16/mayor"
+    },
+    { "city_id": 16, "council_member": "Jordan Johnson", "img_url": null },
+    { "city_id": 16, "council_member": "Tony LewisTerm", "img_url": null },
+    { "city_id": 16, "council_member": "Stacy PulliamTerm", "img_url": null },
+    { "city_id": 16, "council_member": "Sean Frantom", "img_url": null },
+    {
+        "city_id": 16,
+        "council_member": "Catherine Smith McknightTerm",
+        "img_url": null
+    },
+    { "city_id": 16, "council_member": "Brandon GarrettTerm", "img_url": null },
+    { "city_id": 16, "council_member": "Alvin MasonTerm", "img_url": null },
+    { "city_id": 16, "council_member": "Francine Scott", "img_url": null },
+    { "city_id": 16, "council_member": "Bobby WilliamsTerm", "img_url": null },
+    { "city_id": 16, "council_member": "Wayne GuilfoyleTerm", "img_url": null }
+]

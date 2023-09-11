@@ -189,3 +189,24 @@
 2023-09-11 02:13:12,774 - INFO - Downloaded image for city_id: 15, 15 of 17
 2023-09-11 02:13:13,543 - INFO - Downloaded image for city_id: 15, 16 of 17
 2023-09-11 02:13:14,045 - INFO - Downloaded image for city_id: 15, 17 of 17
+2023-09-11 02:23:57,143 - ERROR - Error at city_id: 16 during scraping: ResultSet object has no attribute 'next_sibling'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:28:36,732 - ERROR - Error at city_id: 16 during scraping: 0
+2023-09-11 02:28:54,488 - ERROR - Error at city_id: 16 during scraping: 'NavigableString' object has no attribute 'contents'
+2023-09-11 02:29:40,061 - ERROR - Error at city_id: 16 during scraping: 0
+2023-09-11 02:30:05,838 - ERROR - Error at city_id: 16 during scraping: 'list' object has no attribute 'nextsibling'
+2023-09-11 02:30:14,458 - ERROR - Error at city_id: 16 during scraping: 'NoneType' object is not subscriptable
+2023-09-11 02:30:38,388 - ERROR - Error at city_id: 16 during scraping: 0
+2023-09-11 02:30:49,759 - ERROR - Error at city_id: 16 during scraping: 'NavigableString' object has no attribute 'contents'
+2023-09-11 02:31:17,585 - ERROR - Error at city_id: 16 during scraping: list index out of range
+2023-09-11 02:33:46,583 - ERROR - Error at city_id: 16 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:36:25,747 - ERROR - Error at city_id: 16 during scraping: 0
+2023-09-11 02:37:06,474 - ERROR - Error at city_id: 16 during scraping: 'Comment' object has no attribute 'contents'
+2023-09-11 02:37:16,364 - ERROR - Error at city_id: 16 during scraping: 'Comment' object has no attribute 'contents'
+2023-09-11 02:37:56,858 - ERROR - Error at city_id: 16 during scraping: 'NoneType' object has no attribute 'text'
+2023-09-11 02:38:01,759 - ERROR - Error at city_id: 16 during scraping: 'NavigableString' object has no attribute 'prev_sibling'
+2023-09-11 02:38:39,128 - ERROR - Error at city_id: 16 during scraping: 'NavigableString' object has no attribute 'contents'
+2023-09-11 02:49:06,225 - ERROR - Error at city_id: 16 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:49:13,928 - ERROR - Error at city_id: 16 during scraping: list index out of range
+2023-09-11 02:51:55,273 - ERROR - Error at city_id: 16 during scraping: 'list' object has no attribute 'split'
+2023-09-11 02:58:10,960 - ERROR - Error at city_id: 16 during scraping: list indices must be integers or slices, not str
+2023-09-11 03:00:32,517 - INFO - Downloaded image for city_id: 16, 1 of 1
