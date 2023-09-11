@@ -55,3 +55,137 @@
 2023-09-11 01:11:47,967 - ERROR - Error at city_id: 14 during scraping: list index out of range
 2023-09-11 01:25:47,714 - INFO - No images scraped for city_id: 14
 2023-09-11 01:26:19,407 - INFO - No images scraped for city_id: 14
+2023-09-11 01:39:59,072 - ERROR - Error at city_id: 15 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,375 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,376 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,376 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,376 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,376 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,376 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:55:51,376 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,457 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,457 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,457 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,457 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,457 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,457 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:56:21,458 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:01,981 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,177 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,177 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,177 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,177 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,177 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,177 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 01:57:23,178 - ERROR - Error at city_id: 15 grabbing image URL: 'str' object has no attribute 'findAll'
+2023-09-11 02:03:51,115 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:51,325 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:51,869 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:52,071 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:52,299 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:52,443 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:52,588 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:52,737 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:52,907 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:53,289 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:53,742 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:54,150 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:54,355 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:54,520 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:54,679 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:03:54,836 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:04:07,356 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:04:07,580 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:04:07,998 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:04:08,198 - ERROR - Error at city_id: 15 grabbing image URL: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 02:04:12,831 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:13,027 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:13,410 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:13,603 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:13,765 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:13,951 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:14,112 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:14,277 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:14,445 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:14,804 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:15,388 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:15,997 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:16,163 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:16,350 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:16,553 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:16,752 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:45,234 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:45,757 - ERROR - Error at city_id: 15 grabbing image URL: list indices must be integers or slices, not str
+2023-09-11 02:04:55,506 - ERROR - Error at city_id: 15 grabbing image URL: list index out of range
+2023-09-11 02:04:55,698 - ERROR - Error at city_id: 15 grabbing image URL: list index out of range
+2023-09-11 02:04:56,180 - ERROR - Error at city_id: 15 grabbing image URL: list index out of range
+2023-09-11 02:04:56,387 - ERROR - Error at city_id: 15 grabbing image URL: list index out of range
+2023-09-11 02:06:14,987 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:06:15,202 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:06:15,632 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:06:15,880 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:06:16,293 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:06:16,512 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:06:16,689 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:06:16,841 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:06:17,013 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:06:17,451 - ERROR - Error at city_id: 15 grabbing image URL: string indices must be integers, not 'str'
+2023-09-11 02:12:54,216 - INFO - Downloaded image for city_id: 15, 1 of 17
+2023-09-11 02:12:54,500 - INFO - Downloaded image for city_id: 15, 2 of 17
+2023-09-11 02:13:00,094 - INFO - Downloaded image for city_id: 15, 3 of 17
+2023-09-11 02:13:00,264 - INFO - Downloaded image for city_id: 15, 4 of 17
+2023-09-11 02:13:01,037 - INFO - Downloaded image for city_id: 15, 5 of 17
+2023-09-11 02:13:01,664 - INFO - Downloaded image for city_id: 15, 6 of 17
+2023-09-11 02:13:02,295 - INFO - Downloaded image for city_id: 15, 7 of 17
+2023-09-11 02:13:03,309 - INFO - Downloaded image for city_id: 15, 8 of 17
+2023-09-11 02:13:09,201 - INFO - Downloaded image for city_id: 15, 9 of 17
+2023-09-11 02:13:09,998 - INFO - Downloaded image for city_id: 15, 10 of 17
+2023-09-11 02:13:10,614 - INFO - Downloaded image for city_id: 15, 11 of 17
+2023-09-11 02:13:10,747 - INFO - Downloaded image for city_id: 15, 12 of 17
+2023-09-11 02:13:11,376 - INFO - Downloaded image for city_id: 15, 13 of 17
+2023-09-11 02:13:11,747 - INFO - Downloaded image for city_id: 15, 14 of 17
+2023-09-11 02:13:12,774 - INFO - Downloaded image for city_id: 15, 15 of 17
+2023-09-11 02:13:13,543 - INFO - Downloaded image for city_id: 15, 16 of 17
+2023-09-11 02:13:14,045 - INFO - Downloaded image for city_id: 15, 17 of 17
