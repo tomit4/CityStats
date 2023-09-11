@@ -87,3 +87,25 @@
 2023-09-10 21:43:18,482 - ERROR - Error at city_id: 9 during scraping: 'list' object has no attribute 'find'
 2023-09-10 22:17:51,890 - INFO - Downloaded image for city_id: 9, 1 of 1
 2023-09-10 22:18:01,766 - INFO - Downloaded image for city_id: 9, 1 of 1
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,450 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:27:48,451 - ERROR - Error at city_id: 10 parsing JSON: 'NoneType' object has no attribute 'split'
+2023-09-10 22:30:34,116 - INFO - Downloaded image for city_id: 10, 1 of 11
+2023-09-10 22:30:34,562 - INFO - Downloaded image for city_id: 10, 2 of 11
+2023-09-10 22:30:34,894 - INFO - Downloaded image for city_id: 10, 3 of 11
+2023-09-10 22:30:35,244 - INFO - Downloaded image for city_id: 10, 4 of 11
+2023-09-10 22:30:35,794 - INFO - Downloaded image for city_id: 10, 5 of 11
+2023-09-10 22:30:36,052 - INFO - Downloaded image for city_id: 10, 6 of 11
+2023-09-10 22:30:36,533 - INFO - Downloaded image for city_id: 10, 7 of 11
+2023-09-10 22:30:37,858 - INFO - Downloaded image for city_id: 10, 8 of 11
+2023-09-10 22:30:38,127 - INFO - Downloaded image for city_id: 10, 9 of 11
+2023-09-10 22:30:43,885 - INFO - Downloaded image for city_id: 10, 10 of 11
+2023-09-10 22:30:49,222 - INFO - Downloaded image for city_id: 10, 11 of 11
