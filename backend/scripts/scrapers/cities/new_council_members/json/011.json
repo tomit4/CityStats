@@ -1,0 +1,11 @@
+[
+    { "city_id": 11, "council_member": "Lamar Thorpe", "img_url": null },
+    {
+        "city_id": 11,
+        "council_member": "Tamisha Torres-Walker",
+        "img_url": null
+    },
+    { "city_id": 11, "council_member": "Michael Barbanica", "img_url": null },
+    { "city_id": 11, "council_member": "Lori Ogorchock", "img_url": null },
+    { "city_id": 11, "council_member": "Monica E. Wilson", "img_url": null }
+]
