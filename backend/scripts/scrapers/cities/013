@@ -11,15 +11,11 @@ from bs4 import BeautifulSoup as BS
 CITY_ID = 13
 BASE_URL = 'https://www.arvadaco.gov'
 CITY_COUNCIL_URL = 'https://www.arvadaco.gov/157/City-Council'
-BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
-IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
 
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
-
-#  os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
 
 log_format = '%(asctime)s - %(levelname)s - %(message)s'
 logging.basicConfig(filename=LOG_FILENAME,

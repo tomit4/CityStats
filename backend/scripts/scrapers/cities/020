@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # scrapes council member names and images.
+import os
 import json
 import requests
 import logging
@@ -7,9 +8,8 @@ from datetime import datetime
 from bs4 import BeautifulSoup as BS
 
 # Change based off of which site being scraped
-CITY_ID = 19
-BASE_URL = 'https://www.austintexas.gov'
-CITY_COUNCIL_URL = 'https://www.austintexas.gov/austin-city-council'
+CITY_ID = 20
+CITY_COUNCIL_URL = 'https://en.wikipedia.org/wiki/Bakersfield_City_Council'
 
 PATH_ID = f'0{CITY_ID}'
 
@@ -30,6 +30,7 @@ def parse_json(results):
     for result in results:
         data = {}
         data['city_id'] = CITY_ID
+        # council_member usually needs to be changed
         data['council_member'] = result
         data['img_url'] = None
         json_arr.append(data)
@@ -42,10 +43,22 @@ def scrape_data():
         html = requests.get(CITY_COUNCIL_URL).content
         soup = BS(html, 'lxml')
         # results is usually what needs to get changed
-        results = soup.findAll('h3', {"class": "member-name"})
-        data = []
+        results = soup.findAll('table', {"class": "wikitable"})
+        inter_arr = []
         for result in results:
-            data.append(result.contents[0])
+            res = result.findAll('td')
+            for r in res:
+                if len(r.text.strip()):
+                    inter_arr.append(r.text.strip())
+        data = []
+        data.append(inter_arr[1])
+        for i, el in enumerate(inter_arr):
+            if el.isdigit():
+                data.append(inter_arr[i + 1])
+        for i, d in enumerate(data):
+            if '(' in d:
+                d = d.split('(')[0].strip()
+                data[i] = d
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
