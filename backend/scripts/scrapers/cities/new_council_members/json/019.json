@@ -1,0 +1,21 @@
+[
+    { "city_id": 19, "council_member": "Kirk Watson", "img_url": null },
+    {
+        "city_id": 19,
+        "council_member": "Natasha Harper-Madison",
+        "img_url": null
+    },
+    { "city_id": 19, "council_member": "Vanessa Fuentes", "img_url": null },
+    { "city_id": 19, "council_member": "José Velásquez ", "img_url": null },
+    { "city_id": 19, "council_member": "José “Chito” Vela", "img_url": null },
+    { "city_id": 19, "council_member": "Ryan Alter", "img_url": null },
+    { "city_id": 19, "council_member": "Mackenzie Kelly", "img_url": null },
+    { "city_id": 19, "council_member": "Leslie Pool", "img_url": null },
+    { "city_id": 19, "council_member": "Paige Ellis", "img_url": null },
+    {
+        "city_id": 19,
+        "council_member": "Zohaib \"Zo\" Qadri ",
+        "img_url": null
+    },
+    { "city_id": 19, "council_member": "Alison Alter", "img_url": null }
+]
