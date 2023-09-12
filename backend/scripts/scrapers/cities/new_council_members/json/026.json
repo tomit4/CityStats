@@ -1,0 +1,15 @@
+[
+    {
+        "city_id": 26,
+        "council_member": "Jesse Arreguín",
+        "img_url": "https://www.citystats.xyz/images/cities/26/mayor"
+    },
+    { "city_id": 26, "council_member": "Rashi Kesarwani", "img_url": null },
+    { "city_id": 26, "council_member": "Terry Taplin", "img_url": null },
+    { "city_id": 26, "council_member": "Ben Bartlett", "img_url": null },
+    { "city_id": 26, "council_member": "Kate Harrison", "img_url": null },
+    { "city_id": 26, "council_member": "Sophie Hahn", "img_url": null },
+    { "city_id": 26, "council_member": "Susan Wengraf", "img_url": null },
+    { "city_id": 26, "council_member": "Rigel Robinson", "img_url": null },
+    { "city_id": 26, "council_member": "Mark Humbert", "img_url": null }
+]

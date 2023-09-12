@@ -159,3 +159,5 @@
 2023-09-12 01:31:44,388 - ERROR - Error at city_id: 25 during scraping: 'list' object has no attribute 'capitalize'
 2023-09-12 01:32:42,851 - ERROR - Error at city_id: 25 during scraping: 'list' object has no attribute 'capitalize'
 2023-09-12 01:34:03,402 - INFO - No images scraped for city_id: 25
+2023-09-12 01:52:03,304 - ERROR - Error at city_id: 26 during scraping: 0
+2023-09-12 01:59:51,641 - INFO - Downloaded image for city_id: 26, 1 of 1
