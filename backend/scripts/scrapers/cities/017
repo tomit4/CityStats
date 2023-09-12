@@ -109,7 +109,6 @@ def scrape_img_urls_from_member_urls(members_urls):
         for result in results:
             for r in result.find('img'):
                 img_urls.append(r.attrs['src'])
-    print(img_urls)
     return img_urls
 
 

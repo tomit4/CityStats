@@ -1,10 +1,1 @@
-[
-    { "city_id": 20, "council_member": "Karen K. Goh", "img_url": null },
-    { "city_id": 20, "council_member": "Eric Arias", "img_url": null },
-    { "city_id": 20, "council_member": "Andrae Gonzales", "img_url": null },
-    { "city_id": 20, "council_member": "Ken Weir", "img_url": null },
-    { "city_id": 20, "council_member": "Bob Smith", "img_url": null },
-    { "city_id": 20, "council_member": "Bruce Freeman", "img_url": null },
-    { "city_id": 20, "council_member": "Patty Gray", "img_url": null },
-    { "city_id": 20, "council_member": "Manpreet Kaur", "img_url": null }
-]
+[{"city_id": 20, "council_member": "Karen K. Goh", "img_url": null}, {"city_id": 20, "council_member": "Eric Arias", "img_url": null}, {"city_id": 20, "council_member": "Andrae Gonzales", "img_url": null}, {"city_id": 20, "council_member": "Ken Weir", "img_url": null}, {"city_id": 20, "council_member": "Bob Smith", "img_url": null}, {"city_id": 20, "council_member": "Bruce Freeman", "img_url": null}, {"city_id": 20, "council_member": "Patty Gray", "img_url": null}, {"city_id": 20, "council_member": "Manpreet Kaur", "img_url": null}]

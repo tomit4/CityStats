@@ -1,9 +1,1 @@
-[
-    { "city_id": 24, "council_member": "Lynne Robinson", "img_url": null },
-    { "city_id": 24, "council_member": "Jared Nieuwenhuis", "img_url": null },
-    { "city_id": 24, "council_member": "Jeremy Barksdale", "img_url": null },
-    { "city_id": 24, "council_member": "Conrad Lee", "img_url": null },
-    { "city_id": 24, "council_member": "Jennifer Robertson", "img_url": null },
-    { "city_id": 24, "council_member": "John Stokes", "img_url": null },
-    { "city_id": 24, "council_member": "Janice Zahn", "img_url": null }
-]
+[{"city_id": 24, "council_member": "Lynne Robinson", "img_url": null}, {"city_id": 24, "council_member": "Jared Nieuwenhuis", "img_url": null}, {"city_id": 24, "council_member": "Jeremy Barksdale", "img_url": null}, {"city_id": 24, "council_member": "Conrad Lee", "img_url": null}, {"city_id": 24, "council_member": "Jennifer Robertson", "img_url": null}, {"city_id": 24, "council_member": "John Stokes", "img_url": null}, {"city_id": 24, "council_member": "Janice Zahn", "img_url": null}]
