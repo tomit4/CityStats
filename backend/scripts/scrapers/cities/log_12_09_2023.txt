@@ -146,3 +146,59 @@
 2023-09-12 02:09:48,163 - INFO - Downloaded image for city_id: 26, 1 of 1
 2023-09-12 02:25:05,127 - ERROR - Error at city_id: 27 during scraping: 'str' object has no attribute 'remove'
 2023-09-12 02:28:16,773 - INFO - No images scraped for city_id: 27
+2023-09-12 02:35:07,564 - ERROR - Error at city_id: 28 during scraping: pop from empty list
+2023-09-12 02:35:23,629 - ERROR - Error at city_id: 28 during scraping: pop from empty list
+2023-09-12 02:38:45,503 - ERROR - Error at city_id: 28 during scraping: list indices must be integers or slices, not str
+2023-09-12 02:39:11,327 - ERROR - Error at city_id: 28 during scraping: list indices must be integers or slices, not str
+2023-09-12 02:39:31,609 - ERROR - Error at city_id: 28 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 02:40:05,459 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:40:29,902 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:40:48,244 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:42:27,905 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:42:50,009 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:43:03,927 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:43:07,997 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:43:22,859 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:44:42,705 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:45:59,532 - ERROR - Error at city_id: 28 during scraping: 'href'
+2023-09-12 02:46:33,079 - ERROR - Error at city_id: 28 during scraping: 0
+2023-09-12 02:54:13,374 - ERROR - Error at city_id: 28 during scraping: 0
+2023-09-12 03:04:25,017 - ERROR - Error at city_id: 28 during scraping: list assignment index out of range
+2023-09-12 03:18:06,919 - ERROR - Error at city_id: 28 during scraping: ResultSet object has no attribute 'next_sibling'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 03:18:41,782 - ERROR - Error at city_id: 28 during scraping: 'NoneType' object has no attribute 'next_sibling'
+2023-09-12 03:20:19,275 - ERROR - Error at city_id: 28 during scraping: ResultSet object has no attribute 'findAll'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 03:21:21,321 - ERROR - Error at city_id: 28 during scraping: list index out of range
+2023-09-12 03:31:16,297 - ERROR - Error at city_id: 28 during scraping: 'NoneType' object is not subscriptable
+2023-09-12 03:31:39,363 - ERROR - Error at city_id: 28 during scraping: 'NoneType' object is not iterable
+2023-09-12 03:32:08,526 - ERROR - Error at city_id: 28 during scraping: 'data-src'
+2023-09-12 03:52:27,555 - INFO - Downloaded image for city_id: 28, 1 of 10
+2023-09-12 03:52:29,260 - INFO - Downloaded image for city_id: 28, 2 of 10
+2023-09-12 03:52:30,728 - INFO - Downloaded image for city_id: 28, 3 of 10
+2023-09-12 03:52:31,263 - INFO - Downloaded image for city_id: 28, 4 of 10
+2023-09-12 03:52:32,385 - INFO - Downloaded image for city_id: 28, 5 of 10
+2023-09-12 03:52:33,546 - INFO - Downloaded image for city_id: 28, 6 of 10
+2023-09-12 03:52:35,066 - INFO - Downloaded image for city_id: 28, 7 of 10
+2023-09-12 03:52:37,063 - INFO - Downloaded image for city_id: 28, 8 of 10
+2023-09-12 03:52:43,137 - INFO - Downloaded image for city_id: 28, 9 of 10
+2023-09-12 03:52:44,417 - INFO - Downloaded image for city_id: 28, 10 of 10
+2023-09-12 03:55:29,362 - INFO - Downloaded image for city_id: 28, 1 of 10
+2023-09-12 03:55:39,306 - INFO - Downloaded image for city_id: 28, 2 of 10
+2023-09-12 03:55:45,830 - INFO - Downloaded image for city_id: 28, 3 of 10
+2023-09-12 03:55:51,371 - INFO - Downloaded image for city_id: 28, 4 of 10
+2023-09-12 03:55:52,540 - INFO - Downloaded image for city_id: 28, 5 of 10
+2023-09-12 03:55:53,694 - INFO - Downloaded image for city_id: 28, 6 of 10
+2023-09-12 03:55:55,275 - INFO - Downloaded image for city_id: 28, 7 of 10
+2023-09-12 03:55:57,242 - INFO - Downloaded image for city_id: 28, 8 of 10
+2023-09-12 03:55:58,718 - INFO - Downloaded image for city_id: 28, 9 of 10
+2023-09-12 03:56:01,038 - INFO - Downloaded image for city_id: 28, 10 of 10
+2023-09-12 03:59:25,865 - ERROR - Error at city_id: 28 during scraping: ResultSet object has no attribute 'attrs'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 04:12:43,088 - INFO - Downloaded image for city_id: 28, 1 of 10
+2023-09-12 04:12:44,684 - INFO - Downloaded image for city_id: 28, 2 of 10
+2023-09-12 04:12:48,498 - INFO - Downloaded image for city_id: 28, 3 of 10
+2023-09-12 04:12:49,042 - INFO - Downloaded image for city_id: 28, 4 of 10
+2023-09-12 04:12:50,510 - INFO - Downloaded image for city_id: 28, 5 of 10
+2023-09-12 04:12:56,680 - INFO - Downloaded image for city_id: 28, 6 of 10
+2023-09-12 04:13:03,176 - INFO - Downloaded image for city_id: 28, 7 of 10
+2023-09-12 04:13:04,991 - INFO - Downloaded image for city_id: 28, 8 of 10
+2023-09-12 04:13:06,578 - INFO - Downloaded image for city_id: 28, 9 of 10
+2023-09-12 04:13:07,767 - INFO - Downloaded image for city_id: 28, 10 of 10
