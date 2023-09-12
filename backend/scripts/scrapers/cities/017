@@ -1,0 +1,122 @@
+#!/usr/bin/env python3
+# scrapes council member names and images.
+import json
+import requests
+import logging
+from datetime import datetime
+# Use requests_html when JS is required on website
+# https://requests.readthedocs.io/projects/requests-html/en/latest/
+from requests_html import HTMLSession
+
+session = HTMLSession()
+
+from bs4 import BeautifulSoup as BS
+
+# Change based off of which site being scraped
+CITY_ID = 17
+BASE_URL = 'https://www.auroragov.org'
+CITY_COUNCIL_URL = 'https://www.auroragov.org/city_hall/mayor___city_council/mayor___council_members'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
+
+PATH_ID = f'0{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+#  os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_arr):
+    for i, img_url in enumerate(img_arr):
+        file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+        img_data = requests.get(img_url).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(
+            f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+        )
+
+
+#  def grab_img_urls():
+#  img_arr = []
+#  r = session.get(CITY_COUNCIL_URL)
+#  img_divs = r.html.find('.image')
+#  for i_div in img_divs:
+#  img_tags = i_div.find('img')[0]
+#  img_arr.append(img_tags.attrs['src'])
+#  return img_arr
+
+
+def parse_json(results):
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        # council_member usually needs to be changed
+        data['council_member'] = result
+        json_arr.append(data)
+    for i, data in enumerate(json_arr):
+        if i == 0:
+            data['img_url'] = f'{BASE_IMG_PATH}/mayor'
+        else:
+            data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def scrape_data():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('.buttonText')
+        data = []
+        for result in results:
+            data.append(' '.join(result.text.split()[0:2]))
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def scrape_anchors():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('.imageButton')
+        data = []
+        for result in results:
+            data.append(f"{BASE_URL}{result.attrs['href']}")
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def scrape_img_urls_from_member_urls(members_urls):
+    img_urls = []
+    for url in members_urls:
+        r = session.get(url)
+        results = r.html.find('#ctl00_ContentPlaceHolder1_ctl10_divContent')
+        for result in results:
+            for r in result.find('img'):
+                img_urls.append(r.attrs['src'])
+    print(img_urls)
+    return img_urls
+
+
+if __name__ == "__main__":
+    results = scrape_data()
+    members_urls = scrape_anchors()
+    if results:
+        parse_json(results)
+    img_arr = scrape_img_urls_from_member_urls(members_urls)
+    download_images(img_arr)

@@ -210,3 +210,32 @@
 2023-09-11 02:51:55,273 - ERROR - Error at city_id: 16 during scraping: 'list' object has no attribute 'split'
 2023-09-11 02:58:10,960 - ERROR - Error at city_id: 16 during scraping: list indices must be integers or slices, not str
 2023-09-11 03:00:32,517 - INFO - Downloaded image for city_id: 16, 1 of 1
+2023-09-11 19:34:14,063 - ERROR - Error at city_id: 12 during scraping: name 'results' is not defined
+2023-09-11 19:35:41,292 - ERROR - Error at city_id: 12 during scraping: 'function' object has no attribute 'links'
+2023-09-11 19:37:20,444 - ERROR - Error at city_id: 12 during scraping: 'HTML' object has no attribute 'attrs'
+2023-09-11 19:38:38,935 - ERROR - Error at city_id: 12 during scraping: BaseParser.find() takes from 1 to 2 positional arguments but 3 were given
+2023-09-11 19:40:19,443 - ERROR - Error at city_id: 12 during scraping: 'HTMLResponse' object has no attribute 'attrs'
+2023-09-11 19:41:44,007 - ERROR - Error at city_id: 12 during scraping: 'list' object has no attribute 'attrs'
+2023-09-11 19:42:38,570 - ERROR - Error at city_id: 12 during scraping: 'list' object has no attribute 'attrs'
+2023-09-11 19:43:00,222 - ERROR - Error at city_id: 12 during scraping: 'list' object has no attribute 'text'
+2023-09-11 19:46:14,938 - ERROR - Error at city_id: 12 during scraping: 'list' object has no attribute 'text'
+2023-09-11 20:35:30,523 - ERROR - Error at city_id: 17 during scraping: 'Element' object has no attribute 'href'
+2023-09-11 20:36:53,608 - ERROR - Error at city_id: 17 during scraping: 'HTMLResponse' object has no attribute 'xpath'
+2023-09-11 20:37:13,079 - ERROR - Error at city_id: 17 during scraping: 'function' object has no attribute 'find'
+2023-09-11 20:37:39,105 - ERROR - Error at city_id: 17 during scraping: Invalid expression
+2023-09-11 20:38:51,478 - ERROR - Error at city_id: 17 during scraping: 'Element' object is not subscriptable
+2023-09-11 20:52:25,061 - INFO - Downloaded image for city_id: 17, 1 of 1
+2023-09-11 20:52:49,898 - INFO - Downloaded image for city_id: 17, 1 of 1
+2023-09-11 20:53:35,285 - INFO - Downloaded image for city_id: 17, 1 of 1
+2023-09-11 20:54:37,039 - INFO - Downloaded image for city_id: 17, 1 of 11
+2023-09-11 20:54:37,264 - INFO - Downloaded image for city_id: 17, 2 of 11
+2023-09-11 20:54:37,433 - INFO - Downloaded image for city_id: 17, 3 of 11
+2023-09-11 20:54:37,602 - INFO - Downloaded image for city_id: 17, 4 of 11
+2023-09-11 20:54:37,797 - INFO - Downloaded image for city_id: 17, 5 of 11
+2023-09-11 20:54:43,325 - INFO - Downloaded image for city_id: 17, 6 of 11
+2023-09-11 20:54:43,808 - INFO - Downloaded image for city_id: 17, 7 of 11
+2023-09-11 20:54:49,080 - INFO - Downloaded image for city_id: 17, 8 of 11
+2023-09-11 20:54:49,328 - INFO - Downloaded image for city_id: 17, 9 of 11
+2023-09-11 20:54:49,564 - INFO - Downloaded image for city_id: 17, 10 of 11
+2023-09-11 20:54:49,801 - INFO - Downloaded image for city_id: 17, 11 of 11
+2023-09-11 20:57:03,882 - INFO - No images scraped for city_id: 12
