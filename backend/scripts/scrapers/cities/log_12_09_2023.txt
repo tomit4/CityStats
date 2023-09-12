@@ -150,3 +150,12 @@
 2023-09-12 00:51:32,924 - INFO - Downloaded image for city_id: 23, 6 of 7
 2023-09-12 00:51:33,453 - INFO - Downloaded image for city_id: 23, 7 of 7
 2023-09-12 01:04:13,919 - INFO - No images scraped for city_id: 24
+2023-09-12 01:14:25,642 - ERROR - Error at city_id: 25 during scraping: list index out of range
+2023-09-12 01:14:29,763 - ERROR - Error at city_id: 25 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 01:14:38,658 - ERROR - Error at city_id: 25 during scraping: 'NavigableString' object has no attribute 'findAll'
+2023-09-12 01:15:02,927 - ERROR - Error at city_id: 25 during scraping: 'NoneType' object is not callable
+2023-09-12 01:15:07,195 - ERROR - Error at city_id: 25 during scraping: 0
+2023-09-12 01:16:31,772 - ERROR - Error at city_id: 25 during scraping: ResultSet object has no attribute 'text'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 01:31:44,388 - ERROR - Error at city_id: 25 during scraping: 'list' object has no attribute 'capitalize'
+2023-09-12 01:32:42,851 - ERROR - Error at city_id: 25 during scraping: 'list' object has no attribute 'capitalize'
+2023-09-12 01:34:03,402 - INFO - No images scraped for city_id: 25
