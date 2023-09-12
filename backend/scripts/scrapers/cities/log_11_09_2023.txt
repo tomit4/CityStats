@@ -282,3 +282,31 @@
 2023-09-11 22:52:36,722 - INFO - No images scraped for city_id: 21
 2023-09-11 22:59:21,383 - ERROR - Error at city_id: 21 during scraping: string index out of range
 2023-09-11 23:01:25,562 - INFO - No images scraped for city_id: 21
+2023-09-11 23:32:23,411 - ERROR - Error at city_id: 22 during scraping: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2023-09-11 23:44:29,966 - ERROR - Error at city_id: 22 during scraping: ResultSet object has no attribute 'next_sibling'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 23:44:55,811 - ERROR - Error at city_id: 22 during scraping: 'NoneType' object has no attribute 'next_sibling'
+2023-09-11 23:55:36,705 - INFO - Downloaded image for city_id: 22, 1 of 12
+2023-09-11 23:55:37,526 - INFO - Downloaded image for city_id: 22, 2 of 12
+2023-09-11 23:55:43,596 - INFO - Downloaded image for city_id: 22, 3 of 12
+2023-09-11 23:55:44,388 - INFO - Downloaded image for city_id: 22, 4 of 12
+2023-09-11 23:55:45,029 - INFO - Downloaded image for city_id: 22, 5 of 12
+2023-09-11 23:55:46,911 - INFO - Downloaded image for city_id: 22, 6 of 12
+2023-09-11 23:55:47,631 - INFO - Downloaded image for city_id: 22, 7 of 12
+2023-09-11 23:55:48,279 - INFO - Downloaded image for city_id: 22, 8 of 12
+2023-09-11 23:55:48,939 - INFO - Downloaded image for city_id: 22, 9 of 12
+2023-09-11 23:55:49,619 - INFO - Downloaded image for city_id: 22, 10 of 12
+2023-09-11 23:55:50,271 - INFO - Downloaded image for city_id: 22, 11 of 12
+2023-09-11 23:55:50,920 - INFO - Downloaded image for city_id: 22, 12 of 12
+2023-09-11 23:59:13,656 - INFO - Downloaded image for city_id: 22, 1 of 13
+2023-09-11 23:59:15,520 - INFO - Downloaded image for city_id: 22, 2 of 13
+2023-09-11 23:59:16,256 - INFO - Downloaded image for city_id: 22, 3 of 13
+2023-09-11 23:59:17,048 - INFO - Downloaded image for city_id: 22, 4 of 13
+2023-09-11 23:59:17,878 - INFO - Downloaded image for city_id: 22, 5 of 13
+2023-09-11 23:59:18,597 - INFO - Downloaded image for city_id: 22, 6 of 13
+2023-09-11 23:59:19,152 - INFO - Downloaded image for city_id: 22, 7 of 13
+2023-09-11 23:59:19,771 - INFO - Downloaded image for city_id: 22, 8 of 13
+2023-09-11 23:59:20,365 - INFO - Downloaded image for city_id: 22, 9 of 13
+2023-09-11 23:59:26,018 - INFO - Downloaded image for city_id: 22, 10 of 13
+2023-09-11 23:59:26,683 - INFO - Downloaded image for city_id: 22, 11 of 13
+2023-09-11 23:59:32,351 - INFO - Downloaded image for city_id: 22, 12 of 13
+2023-09-11 23:59:33,005 - INFO - Downloaded image for city_id: 22, 13 of 13
