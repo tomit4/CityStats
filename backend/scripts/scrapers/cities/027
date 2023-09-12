@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+# scrapes council member names and images.
+import os
+import json
+import requests
+import logging
+from datetime import datetime
+from bs4 import BeautifulSoup as BS
+
+# Change based off of which site being scraped
+CITY_ID = 27
+BASE_URL = 'https://www.billingsmt.gov/159/City-Council-Members'
+CITY_COUNCIL_URL = 'https://www.billingsmt.gov/159/City-Council-Members'
+PATH_ID = f'0{CITY_ID}'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def parse_json(results):
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        # council_member usually needs to be changed
+        data['council_member'] = result
+        data['img_url'] = None
+        json_arr.append(data)
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def scrape_data():
+    try:
+        html = requests.get(CITY_COUNCIL_URL).content
+        soup = BS(html, 'lxml')
+        # results is usually what needs to get changed
+        results = soup.findAll('li', {"class": "bullet2"})
+        inter_arr = []
+        for result in results:
+            inter_arr.append(result.findAll('a')[0].text.strip())
+        data = []
+        for inter in inter_arr:
+            if 'Mayor' in inter:
+                new_inter = ' '.join(inter.split(' ')[1:3])
+                data.insert(0, new_inter)
+            else:
+                data.append(inter)
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+if __name__ == "__main__":
+    results = scrape_data()
+    if results:
+        parse_json(results)
+    logging.info(f'No images scraped for city_id: {CITY_ID}')

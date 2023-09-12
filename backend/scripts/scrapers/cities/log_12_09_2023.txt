@@ -144,3 +144,5 @@
 2023-09-12 02:09:45,828 - INFO - No images scraped for city_id: 24
 2023-09-12 02:09:46,181 - INFO - No images scraped for city_id: 25
 2023-09-12 02:09:48,163 - INFO - Downloaded image for city_id: 26, 1 of 1
+2023-09-12 02:25:05,127 - ERROR - Error at city_id: 27 during scraping: 'str' object has no attribute 'remove'
+2023-09-12 02:28:16,773 - INFO - No images scraped for city_id: 27
