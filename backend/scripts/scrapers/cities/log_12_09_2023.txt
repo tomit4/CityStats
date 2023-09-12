@@ -141,3 +141,11 @@
 2023-09-12 00:40:34,199 - INFO - Downloaded image for city_id: 22, 11 of 13
 2023-09-12 00:40:34,446 - INFO - Downloaded image for city_id: 22, 12 of 13
 2023-09-12 00:40:34,708 - INFO - Downloaded image for city_id: 22, 13 of 13
+2023-09-12 00:45:13,718 - ERROR - Error at city_id: 23 during scraping: 'list' object has no attribute 'strip'
+2023-09-12 00:51:15,052 - INFO - Downloaded image for city_id: 23, 1 of 7
+2023-09-12 00:51:15,532 - INFO - Downloaded image for city_id: 23, 2 of 7
+2023-09-12 00:51:26,030 - INFO - Downloaded image for city_id: 23, 3 of 7
+2023-09-12 00:51:26,625 - INFO - Downloaded image for city_id: 23, 4 of 7
+2023-09-12 00:51:27,349 - INFO - Downloaded image for city_id: 23, 5 of 7
+2023-09-12 00:51:32,924 - INFO - Downloaded image for city_id: 23, 6 of 7
+2023-09-12 00:51:33,453 - INFO - Downloaded image for city_id: 23, 7 of 7
