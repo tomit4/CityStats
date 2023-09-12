@@ -272,3 +272,13 @@
 2023-09-11 22:23:39,158 - ERROR - Error at city_id: 20 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
 2023-09-11 22:24:25,168 - ERROR - Error at city_id: 20 during scraping: 'NavigableString' object has no attribute 'contents'
 2023-09-11 22:34:32,809 - INFO - No images scraped for city_id: 20
+2023-09-11 22:45:19,509 - ERROR - Error at city_id: 21 during scraping: list index out of range
+2023-09-11 22:45:23,255 - ERROR - Error at city_id: 21 during scraping: 'NavigableString' object has no attribute 'findAll'
+2023-09-11 22:45:43,483 - ERROR - Error at city_id: 21 during scraping: 8
+2023-09-11 22:45:47,063 - ERROR - Error at city_id: 21 during scraping: 7
+2023-09-11 22:45:50,973 - ERROR - Error at city_id: 21 during scraping: 0
+2023-09-11 22:45:57,815 - ERROR - Error at city_id: 21 during scraping: 'NavigableString' object has no attribute 'findAll'
+2023-09-11 22:51:10,116 - ERROR - Error at city_id: 21 during scraping: ResultSet object has no attribute 'text'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-11 22:52:36,722 - INFO - No images scraped for city_id: 21
+2023-09-11 22:59:21,383 - ERROR - Error at city_id: 21 during scraping: string index out of range
+2023-09-11 23:01:25,562 - INFO - No images scraped for city_id: 21
