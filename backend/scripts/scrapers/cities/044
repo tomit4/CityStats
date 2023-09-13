@@ -4,6 +4,7 @@ import os
 from urllib.parse import unquote
 import json
 import logging
+from pandas.core.interchange.dataframe_protocol import enum
 import requests
 from datetime import datetime
 # Use requests_html when JS is required on website
@@ -12,12 +13,10 @@ from requests_html import HTMLSession
 
 session = HTMLSession()
 
-from bs4 import BeautifulSoup as BS
-
 # Change based off of which site being scraped
-CITY_ID = 43
-BASE_URL = 'https://www.cityofcarrollton.com'
-CITY_COUNCIL_URL = 'https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/city-council-191'
+CITY_ID = 44
+BASE_URL = 'https://www.carync.gov'
+CITY_COUNCIL_URL = 'https://www.carync.gov/mayor-council/town-council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
@@ -72,16 +71,19 @@ def parse_json(results):
         json.dump(json_arr, writeJSON, ensure_ascii=False)
 
 
-def scrape_member_img_urls():
+def scrape_member_img_urls(member_urls):
     try:
-        r = session.get(CITY_COUNCIL_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('td')
-        for result in results:
-            res = result.find('img')
-            for r in res:
-                data.append(r.attrs['src'])
+        for url in member_urls:
+            r = session.get(url)
+            # r.html actually works, lsp doesn't like it for some reason...
+            results = r.html.find('.content_area')
+            for result in results:
+                res = result.find('img')
+                if len(res):
+                    data.append(res[0])
+        for i, d in enumerate(data):
+            data[i] = d.attrs['src']
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -93,14 +95,37 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('tr')
+        results = r.html.find('#widget_4_1359_1403')
         for result in results:
-            res = result.find('strong')
+            res = result.find('p')
             for r in res:
-                if len(r.text):
-                    data.append(r.text)
-        for i, d in enumerate(data):
-            data[i] = d.split(', ')[0]
+                if len(r.find('a')):
+                    for tag in r.find('a'):
+                        if 'Councilmember' not in tag.text and '@' not in tag.text and 'policy' not in tag.text and 'email' not in tag.text:
+                            data.append(tag.text)
+        data.insert(0, data[3])
+        del data[4]
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def grab_member_urls():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        data = []
+        results = r.html.find('#widget_4_1359_1403')
+        for result in results:
+            res = result.find('p')
+            for r in res:
+                if len(r.find('a')):
+                    for tag in r.find('a'):
+                        if 'Councilmember' not in tag.text and '@' not in tag.text and 'policy' not in tag.text and 'email' not in tag.text:
+                            data.append(tag.attrs['href'])
+        data.insert(0, data[3])
+        del data[4]
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -111,8 +136,6 @@ if __name__ == "__main__":
     results = scrape_data()
     if results:
         parse_json(results)
-    img_urls = scrape_member_img_urls()
+    member_urls = grab_member_urls()
+    img_urls = scrape_member_img_urls(member_urls)
     download_images(img_urls)
-    logging.warning(
-        f'Certain images give generic Not Found Template For city_id: {CITY_ID}'
-    )

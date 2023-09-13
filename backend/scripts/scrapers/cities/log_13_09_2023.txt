@@ -107,3 +107,46 @@
 2023-09-13 01:57:28,260 - INFO - Downloaded image for city_id: 43, 7 of 8
 2023-09-13 01:57:28,458 - INFO - Downloaded image for city_id: 43, 8 of 8
 2023-09-13 01:57:28,458 - WARNING - Certain images give generic Not Found Template For city_id: 43
+2023-09-13 02:07:50,342 - ERROR - Error at city_id: 44 during scraping: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2023-09-13 02:09:23,322 - ERROR - Error at city_id: 44 during scraping: 'list' object has no attribute 'text'
+2023-09-13 02:09:43,370 - ERROR - Error at city_id: 44 during scraping: 'list' object has no attribute 'find'
+2023-09-13 02:11:58,051 - ERROR - Error at city_id: 44 during scraping: 'list' object has no attribute 'text'
+2023-09-13 02:18:32,773 - ERROR - Error at city_id: 44 during scraping: 'Element' object is not subscriptable
+2023-09-13 02:18:55,530 - ERROR - Error at city_id: 44 during scraping: 'Element' object is not subscriptable
+2023-09-13 02:19:00,253 - ERROR - Error at city_id: 44 during scraping: 'Element' object is not subscriptable
+2023-09-13 02:21:27,603 - ERROR - Error at city_id: 44 during scraping: list index out of range
+2023-09-13 02:22:08,953 - ERROR - Error at city_id: 44 during scraping: 'list' object has no attribute 'attrs'
+2023-09-13 02:23:24,912 - ERROR - Error at city_id: 44 during scraping: 'list' object has no attribute 'attrs'
+2023-09-13 02:24:25,005 - ERROR - Error at city_id: 44 during scraping: 'Element' object is not subscriptable
+2023-09-13 02:25:15,763 - INFO - Downloaded image for city_id: 44, 1 of 14
+2023-09-13 02:25:16,104 - INFO - Downloaded image for city_id: 44, 2 of 14
+2023-09-13 02:25:16,514 - INFO - Downloaded image for city_id: 44, 3 of 14
+2023-09-13 02:25:16,859 - INFO - Downloaded image for city_id: 44, 4 of 14
+2023-09-13 02:25:18,980 - INFO - Downloaded image for city_id: 44, 5 of 14
+2023-09-13 02:25:19,493 - INFO - Downloaded image for city_id: 44, 6 of 14
+2023-09-13 02:25:20,091 - INFO - Downloaded image for city_id: 44, 7 of 14
+2023-09-13 02:25:20,350 - INFO - Downloaded image for city_id: 44, 8 of 14
+2023-09-13 02:25:21,910 - INFO - Downloaded image for city_id: 44, 9 of 14
+2023-09-13 02:25:27,740 - INFO - Downloaded image for city_id: 44, 10 of 14
+2023-09-13 02:25:28,738 - INFO - Downloaded image for city_id: 44, 11 of 14
+2023-09-13 02:25:29,058 - INFO - Downloaded image for city_id: 44, 12 of 14
+2023-09-13 02:25:29,666 - INFO - Downloaded image for city_id: 44, 13 of 14
+2023-09-13 02:25:29,937 - INFO - Downloaded image for city_id: 44, 14 of 14
+2023-09-13 02:26:23,341 - INFO - Downloaded image for city_id: 44, 1 of 14
+2023-09-13 02:26:23,706 - INFO - Downloaded image for city_id: 44, 2 of 14
+2023-09-13 02:26:24,056 - INFO - Downloaded image for city_id: 44, 3 of 14
+2023-09-13 02:26:24,370 - INFO - Downloaded image for city_id: 44, 4 of 14
+2023-09-13 02:26:24,639 - INFO - Downloaded image for city_id: 44, 5 of 14
+2023-09-13 02:26:24,867 - INFO - Downloaded image for city_id: 44, 6 of 14
+2023-09-13 02:26:25,099 - INFO - Downloaded image for city_id: 44, 7 of 14
+2023-09-13 02:26:30,413 - INFO - Downloaded image for city_id: 44, 8 of 14
+2023-09-13 02:30:33,319 - ERROR - Error at city_id: 44 during scraping: 'list' object has no attribute 'attrs'
+2023-09-13 02:30:55,385 - ERROR - Error at city_id: 44 during scraping: 'list' object has no attribute 'attrs'
+2023-09-13 02:33:53,680 - ERROR - Error at city_id: 44 during scraping: 'list' object has no attribute 'attrs'
+2023-09-13 02:35:05,580 - INFO - Downloaded image for city_id: 44, 1 of 7
+2023-09-13 02:35:07,471 - INFO - Downloaded image for city_id: 44, 2 of 7
+2023-09-13 02:35:12,884 - INFO - Downloaded image for city_id: 44, 3 of 7
+2023-09-13 02:35:13,650 - INFO - Downloaded image for city_id: 44, 4 of 7
+2023-09-13 02:35:14,416 - INFO - Downloaded image for city_id: 44, 5 of 7
+2023-09-13 02:35:15,095 - INFO - Downloaded image for city_id: 44, 6 of 7
+2023-09-13 02:35:15,523 - INFO - Downloaded image for city_id: 44, 7 of 7
