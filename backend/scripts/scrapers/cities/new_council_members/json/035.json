@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 35,
+        "council_member": "John  Cowen, Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/35/mayor"
+    },
+    {
+        "city_id": 35,
+        "council_member": "Tino  Villarreal, Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/35/city_council/1"
+    },
+    {
+        "city_id": 35,
+        "council_member": "Rose M. Z. Gowen, M.D.",
+        "img_url": "https://www.citystats.xyz/images/cities/35/city_council/2"
+    },
+    {
+        "city_id": 35,
+        "council_member": "Bryan L. Martinez",
+        "img_url": "https://www.citystats.xyz/images/cities/35/city_council/3"
+    },
+    {
+        "city_id": 35,
+        "council_member": "Linda C. Macias",
+        "img_url": "https://www.citystats.xyz/images/cities/35/city_council/4"
+    },
+    {
+        "city_id": 35,
+        "council_member": "Roy De los Santos",
+        "img_url": "https://www.citystats.xyz/images/cities/35/city_council/5"
+    },
+    {
+        "city_id": 35,
+        "council_member": "Pedro Cardenas",
+        "img_url": "https://www.citystats.xyz/images/cities/35/city_council/6"
+    }
+]

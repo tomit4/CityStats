@@ -285,3 +285,23 @@
 2023-09-12 22:39:23,028 - ERROR - Error at city_id: 34 during scraping: too many values to unpack (expected 2)
 2023-09-12 22:39:45,749 - ERROR - Error at city_id: 34 during scraping: too many values to unpack (expected 2)
 2023-09-12 22:41:43,014 - INFO - No images scraped for city_id: 34
+2023-09-12 22:51:18,326 - INFO - Downloaded image for city_id: 35, 1 of 7
+2023-09-12 22:51:23,909 - INFO - Downloaded image for city_id: 35, 2 of 7
+2023-09-12 22:51:24,509 - INFO - Downloaded image for city_id: 35, 3 of 7
+2023-09-12 22:51:30,796 - INFO - Downloaded image for city_id: 35, 4 of 7
+2023-09-12 22:51:32,794 - INFO - Downloaded image for city_id: 35, 5 of 7
+2023-09-12 22:51:38,751 - INFO - Downloaded image for city_id: 35, 6 of 7
+2023-09-12 22:51:44,707 - INFO - Downloaded image for city_id: 35, 7 of 7
+2023-09-12 23:01:14,626 - INFO - Downloaded image for city_id: 36, 1 of 6
+2023-09-12 23:01:15,477 - INFO - Downloaded image for city_id: 36, 2 of 6
+2023-09-12 23:01:20,981 - INFO - Downloaded image for city_id: 36, 3 of 6
+2023-09-12 23:01:21,252 - INFO - Downloaded image for city_id: 36, 4 of 6
+2023-09-12 23:01:21,644 - INFO - Downloaded image for city_id: 36, 5 of 6
+2023-09-12 23:01:22,407 - INFO - Downloaded image for city_id: 36, 6 of 6
+2023-09-12 23:08:00,855 - INFO - Downloaded image for city_id: 36, 1 of 7
+2023-09-12 23:08:01,329 - INFO - Downloaded image for city_id: 36, 2 of 7
+2023-09-12 23:08:07,329 - INFO - Downloaded image for city_id: 36, 3 of 7
+2023-09-12 23:08:13,051 - INFO - Downloaded image for city_id: 36, 4 of 7
+2023-09-12 23:08:13,751 - INFO - Downloaded image for city_id: 36, 5 of 7
+2023-09-12 23:08:14,402 - INFO - Downloaded image for city_id: 36, 6 of 7
+2023-09-12 23:08:14,877 - INFO - Downloaded image for city_id: 36, 7 of 7
