@@ -4,7 +4,6 @@ import os
 from urllib.parse import unquote
 import json
 import logging
-from pandas.core.interchange.dataframe_protocol import enum
 import requests
 from datetime import datetime
 # Use requests_html when JS is required on website
