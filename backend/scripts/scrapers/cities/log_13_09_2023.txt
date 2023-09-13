@@ -68,3 +68,42 @@
 2023-09-13 01:43:57,913 - INFO - Downloaded image for city_id: 42, 7 of 9
 2023-09-13 01:43:58,239 - INFO - Downloaded image for city_id: 42, 8 of 9
 2023-09-13 01:43:59,087 - INFO - Downloaded image for city_id: 42, 9 of 9
+2023-09-13 01:48:45,031 - ERROR - Error at city_id: 43 during scraping: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2023-09-13 01:54:04,450 - ERROR - Error at city_id: 43 during scraping: 'Element' object is not subscriptable
+2023-09-13 01:54:25,047 - ERROR - Error at city_id: 43 during scraping: 'Element' object is not subscriptable
+2023-09-13 01:54:33,680 - ERROR - Error at city_id: 43 during scraping: 'Element' object is not subscriptable
+2023-09-13 01:55:32,184 - INFO - Downloaded image for city_id: 43, 1 of 8
+2023-09-13 01:55:33,662 - INFO - Downloaded image for city_id: 43, 2 of 8
+2023-09-13 01:55:38,880 - INFO - Downloaded image for city_id: 43, 3 of 8
+2023-09-13 01:55:39,233 - INFO - Downloaded image for city_id: 43, 4 of 8
+2023-09-13 01:55:39,511 - INFO - Downloaded image for city_id: 43, 5 of 8
+2023-09-13 01:55:39,845 - INFO - Downloaded image for city_id: 43, 6 of 8
+2023-09-13 01:55:40,024 - INFO - Downloaded image for city_id: 43, 7 of 8
+2023-09-13 01:55:40,235 - INFO - Downloaded image for city_id: 43, 8 of 8
+2023-09-13 01:56:43,203 - INFO - Downloaded image for city_id: 43, 1 of 8
+2023-09-13 01:56:43,504 - INFO - Downloaded image for city_id: 43, 2 of 8
+2023-09-13 01:56:43,714 - INFO - Downloaded image for city_id: 43, 3 of 8
+2023-09-13 01:56:45,349 - INFO - Downloaded image for city_id: 43, 4 of 8
+2023-09-13 01:56:45,601 - INFO - Downloaded image for city_id: 43, 5 of 8
+2023-09-13 01:56:45,814 - INFO - Downloaded image for city_id: 43, 6 of 8
+2023-09-13 01:56:45,978 - INFO - Downloaded image for city_id: 43, 7 of 8
+2023-09-13 01:56:46,167 - INFO - Downloaded image for city_id: 43, 8 of 8
+2023-09-13 01:56:46,167 - ERROR - Certain images give generic Not Found Template For city_id: 43
+2023-09-13 01:57:18,566 - INFO - Downloaded image for city_id: 43, 1 of 8
+2023-09-13 01:57:19,032 - INFO - Downloaded image for city_id: 43, 2 of 8
+2023-09-13 01:57:19,156 - INFO - Downloaded image for city_id: 43, 3 of 8
+2023-09-13 01:57:19,379 - INFO - Downloaded image for city_id: 43, 4 of 8
+2023-09-13 01:57:19,618 - INFO - Downloaded image for city_id: 43, 5 of 8
+2023-09-13 01:57:19,879 - INFO - Downloaded image for city_id: 43, 6 of 8
+2023-09-13 01:57:20,273 - INFO - Downloaded image for city_id: 43, 7 of 8
+2023-09-13 01:57:20,456 - INFO - Downloaded image for city_id: 43, 8 of 8
+2023-09-13 01:57:20,456 - WARNING - Certain images give generic Not Found Template For city_id: 43
+2023-09-13 01:57:26,742 - INFO - Downloaded image for city_id: 43, 1 of 8
+2023-09-13 01:57:26,992 - INFO - Downloaded image for city_id: 43, 2 of 8
+2023-09-13 01:57:27,126 - INFO - Downloaded image for city_id: 43, 3 of 8
+2023-09-13 01:57:27,538 - INFO - Downloaded image for city_id: 43, 4 of 8
+2023-09-13 01:57:27,937 - INFO - Downloaded image for city_id: 43, 5 of 8
+2023-09-13 01:57:28,128 - INFO - Downloaded image for city_id: 43, 6 of 8
+2023-09-13 01:57:28,260 - INFO - Downloaded image for city_id: 43, 7 of 8
+2023-09-13 01:57:28,458 - INFO - Downloaded image for city_id: 43, 8 of 8
+2023-09-13 01:57:28,458 - WARNING - Certain images give generic Not Found Template For city_id: 43

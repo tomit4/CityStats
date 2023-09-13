@@ -15,10 +15,9 @@ session = HTMLSession()
 from bs4 import BeautifulSoup as BS
 
 # Change based off of which site being scraped
-CITY_ID = 42
-BASE_URL = 'https://www.carmel.in.gov'
-CITY_COUNCIL_URL = 'https://www.carmel.in.gov/government/city-council'
-MAYOR_URL = 'https://www.carmel.in.gov/government/mayor'
+CITY_ID = 43
+BASE_URL = 'https://www.cityofcarrollton.com'
+CITY_COUNCIL_URL = 'https://www.cityofcarrollton.com/government/city-manager-s-office/city-secretary/city-council-191'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
@@ -66,7 +65,7 @@ def parse_json(results):
         json_arr.append(data)
     for i, data in enumerate(json_arr):
         if i == 0:
-            data['img_url'] = None
+            data['img_url'] = f'{BASE_IMG_PATH}/mayor'
         else:
             data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
     with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
@@ -80,23 +79,10 @@ def scrape_member_img_urls():
         data = []
         results = r.html.find('td')
         for result in results:
-            res = result.find('img')[0].attrs['src']
-            data.append(res)
+            res = result.find('img')
+            for r in res:
+                data.append(r.attrs['src'])
         return data
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
-def append_mayor_name(member_names):
-    try:
-        r = session.get(MAYOR_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('tr')
-        for result in results:
-            if len((result.find('strong'))):
-                member_names.insert(0, ' '.join(result.text.split()[0:2]))
-        return member_names
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
@@ -107,12 +93,14 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('td')
+        results = r.html.find('tr')
         for result in results:
-            for res in result.find('a'):
-                if len(res.text):
-                    if '#' not in res.text and '@' not in res.text:
-                        data.append(res.text)
+            res = result.find('strong')
+            for r in res:
+                if len(r.text):
+                    data.append(r.text)
+        for i, d in enumerate(data):
+            data[i] = d.split(', ')[0]
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -120,9 +108,11 @@ def scrape_data():
 
 
 if __name__ == "__main__":
-    member_names = scrape_data()
-    results = append_mayor_name(member_names)
+    results = scrape_data()
     if results:
         parse_json(results)
     img_urls = scrape_member_img_urls()
     download_images(img_urls)
+    logging.warning(
+        f'Certain images give generic Not Found Template For city_id: {CITY_ID}'
+    )
