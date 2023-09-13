@@ -12,8 +12,6 @@ from requests_html import HTMLSession
 
 session = HTMLSession()
 
-from bs4 import BeautifulSoup as BS
-
 # Change based off of which site being scraped
 CITY_ID = 43
 BASE_URL = 'https://www.cityofcarrollton.com'
