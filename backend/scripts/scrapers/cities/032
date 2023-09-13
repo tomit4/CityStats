@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+# scrapes council member names and images.
+import os
+import json
+import requests
+import logging
+from datetime import datetime
+from bs4 import BeautifulSoup as BS
+
+# Change based off of which site being scraped
+CITY_ID = 32
+BASE_URL = 'https://www.bridgeportct.gov'
+CITY_COUNCIL_URL = 'https://www.bridgeportct.gov/government/departments/city-council'
+PATH_ID = f'0{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+
+MAYOR_URL = 'https://www.bridgeportct.gov/government/departments/mayors-office'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_arr):
+    for i, img_url in enumerate(img_arr):
+        file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+        img_data = requests.get(img_url).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(
+            f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+        )
+
+
+def parse_json(results):
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        # council_member usually needs to be changed
+        data['council_member'] = result
+        json_arr.append(data)
+    for i, data in enumerate(json_arr):
+        if i == 0:
+            data['img_url'] = f'{BASE_IMG_PATH}/mayor'
+        else:
+            data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def scrape_member_img_urls(member_urls):
+    try:
+        member_img_urls = []
+        for url in member_urls:
+            html = requests.get(url).content
+            soup = BS(html, 'lxml')
+            # results is usually what needs to get changed
+            results = soup.findAll('div', {"class": "col-first"})
+            for result in results:
+                res = result.findAll('img')
+                if (len(res)):
+                    if 'src' in res[0].attrs:
+                        member_img_urls.append(f"{BASE_URL}{res[0]['src']}")
+        return member_img_urls
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def grab_member_names(member_urls):
+    try:
+        data = []
+        member_urls.insert(0, MAYOR_URL)
+        for url in member_urls:
+            html = requests.get(url).content
+            soup = BS(html, 'lxml')
+            # results is usually what needs to get changed
+            results = soup.findAll('h2', {"class": "rich-text__h2"})
+            member_names = []
+            for result in results:
+                member_names.append(result.contents[0].strip())
+            for name in member_names:
+                if 'VACANT' in name:
+                    del name
+                elif 'Mayor' in name:
+                    name = ' '.join(name.split(' ')[1:4])
+                    data.append(name)
+                else:
+                    name = name.split('(')
+                    data.append(name[0].strip())
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def scrape_data():
+    try:
+        member_urls = []
+        html = requests.get(CITY_COUNCIL_URL).content
+        soup = BS(html, 'lxml')
+        # results is usually what needs to get changed
+        results = soup.findAll('li', {"class": "menu__item"})
+        for result in results:
+            res = result.findAll('a', {"class": "link--large"})
+            for r in res:
+                if 'href' in r.attrs:
+                    member_urls.append(f"{BASE_URL}{r.attrs['href']}")
+        member_urls.pop()
+        member_urls.pop()
+        return member_urls
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+if __name__ == "__main__":
+    member_urls = scrape_data()
+    results = grab_member_names(member_urls)
+    if results:
+        parse_json(results)
+    img_urls = scrape_member_img_urls(member_urls)
+    download_images(img_urls)

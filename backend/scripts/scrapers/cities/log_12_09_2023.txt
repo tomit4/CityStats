@@ -221,3 +221,54 @@
 2023-09-12 20:56:38,798 - ERROR - Error at city_id: 30 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
 2023-09-12 20:56:55,197 - ERROR - Error at city_id: 30 during scraping: 0
 2023-09-12 21:03:05,208 - INFO - No images scraped for city_id: 30
+2023-09-12 21:19:55,198 - INFO - No images scraped for city_id: 31
+2023-09-12 21:41:56,978 - ERROR - Error at city_id: 32 during scraping: ResultSet object has no attribute 'attrs'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 21:42:04,625 - ERROR - Error at city_id: 32 during scraping: ResultSet object has no attribute 'attrs'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 21:42:11,215 - ERROR - Error at city_id: 32 during scraping: ResultSet object has no attribute 'attrs'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 21:42:18,695 - ERROR - Error at city_id: 32 during scraping: list index out of range
+2023-09-12 21:42:25,632 - ERROR - Error at city_id: 32 during scraping: list index out of range
+2023-09-12 21:42:44,027 - ERROR - Error at city_id: 32 during scraping: list indices must be integers or slices, not str
+2023-09-12 21:42:52,858 - ERROR - Error at city_id: 32 during scraping: list index out of range
+2023-09-12 21:55:07,953 - ERROR - Error at city_id: 32 during scraping: 'NoneType' object is not iterable
+2023-09-12 22:05:07,363 - ERROR - Error at city_id: 32 during scraping: ResultSet object has no attribute 'attrs'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 22:05:19,855 - ERROR - Error at city_id: 32 during scraping: ResultSet object has no attribute 'attrs'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 22:05:32,329 - ERROR - Error at city_id: 32 during scraping: ResultSet object has no attribute 'attrs'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 22:07:08,931 - INFO - Downloaded image for city_id: 32, 1 of 20
+2023-09-12 22:07:09,089 - INFO - Downloaded image for city_id: 32, 2 of 20
+2023-09-12 22:07:09,240 - INFO - Downloaded image for city_id: 32, 3 of 20
+2023-09-12 22:07:09,420 - INFO - Downloaded image for city_id: 32, 4 of 20
+2023-09-12 22:07:09,587 - INFO - Downloaded image for city_id: 32, 5 of 20
+2023-09-12 22:07:09,749 - INFO - Downloaded image for city_id: 32, 6 of 20
+2023-09-12 22:07:09,971 - INFO - Downloaded image for city_id: 32, 7 of 20
+2023-09-12 22:07:10,185 - INFO - Downloaded image for city_id: 32, 8 of 20
+2023-09-12 22:07:10,403 - INFO - Downloaded image for city_id: 32, 9 of 20
+2023-09-12 22:07:10,605 - INFO - Downloaded image for city_id: 32, 10 of 20
+2023-09-12 22:07:10,829 - INFO - Downloaded image for city_id: 32, 11 of 20
+2023-09-12 22:07:11,059 - INFO - Downloaded image for city_id: 32, 12 of 20
+2023-09-12 22:07:11,276 - INFO - Downloaded image for city_id: 32, 13 of 20
+2023-09-12 22:07:11,479 - INFO - Downloaded image for city_id: 32, 14 of 20
+2023-09-12 22:07:11,687 - INFO - Downloaded image for city_id: 32, 15 of 20
+2023-09-12 22:07:11,859 - INFO - Downloaded image for city_id: 32, 16 of 20
+2023-09-12 22:07:12,046 - INFO - Downloaded image for city_id: 32, 17 of 20
+2023-09-12 22:07:12,248 - INFO - Downloaded image for city_id: 32, 18 of 20
+2023-09-12 22:07:12,523 - INFO - Downloaded image for city_id: 32, 19 of 20
+2023-09-12 22:07:12,692 - INFO - Downloaded image for city_id: 32, 20 of 20
+2023-09-12 22:08:27,472 - INFO - Downloaded image for city_id: 32, 1 of 19
+2023-09-12 22:08:27,649 - INFO - Downloaded image for city_id: 32, 2 of 19
+2023-09-12 22:08:27,850 - INFO - Downloaded image for city_id: 32, 3 of 19
+2023-09-12 22:08:28,047 - INFO - Downloaded image for city_id: 32, 4 of 19
+2023-09-12 22:08:28,224 - INFO - Downloaded image for city_id: 32, 5 of 19
+2023-09-12 22:08:28,394 - INFO - Downloaded image for city_id: 32, 6 of 19
+2023-09-12 22:08:33,693 - INFO - Downloaded image for city_id: 32, 7 of 19
+2023-09-12 22:08:33,896 - INFO - Downloaded image for city_id: 32, 8 of 19
+2023-09-12 22:08:34,093 - INFO - Downloaded image for city_id: 32, 9 of 19
+2023-09-12 22:08:34,266 - INFO - Downloaded image for city_id: 32, 10 of 19
+2023-09-12 22:08:34,449 - INFO - Downloaded image for city_id: 32, 11 of 19
+2023-09-12 22:08:34,659 - INFO - Downloaded image for city_id: 32, 12 of 19
+2023-09-12 22:08:39,867 - INFO - Downloaded image for city_id: 32, 13 of 19
+2023-09-12 22:08:40,157 - INFO - Downloaded image for city_id: 32, 14 of 19
+2023-09-12 22:08:40,637 - INFO - Downloaded image for city_id: 32, 15 of 19
+2023-09-12 22:08:40,953 - INFO - Downloaded image for city_id: 32, 16 of 19
+2023-09-12 22:08:41,433 - INFO - Downloaded image for city_id: 32, 17 of 19
+2023-09-12 22:08:46,697 - INFO - Downloaded image for city_id: 32, 18 of 19
+2023-09-12 22:08:51,895 - INFO - Downloaded image for city_id: 32, 19 of 19
