@@ -54,3 +54,5 @@
 2023-09-13 01:05:21,153 - INFO - Downloaded image for city_id: 40, 6 of 8
 2023-09-13 01:05:26,924 - INFO - Downloaded image for city_id: 40, 7 of 8
 2023-09-13 01:05:27,657 - INFO - Downloaded image for city_id: 40, 8 of 8
+2023-09-13 01:16:32,828 - ERROR - Error at city_id: 41 during scraping: 'list' object has no attribute 'attrs'
+2023-09-13 01:21:48,263 - INFO - No images scraped for city_id: 41

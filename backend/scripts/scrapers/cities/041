@@ -3,6 +3,7 @@
 import json
 import logging
 from datetime import datetime
+from pandas.core.computation.pytables import ast
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
 from requests_html import HTMLSession
@@ -12,9 +13,9 @@ session = HTMLSession()
 from bs4 import BeautifulSoup as BS
 
 # Change based off of which site being scraped
-CITY_ID = 39
-BASE_URL = 'https://www.cambridgema.gov'
-CITY_COUNCIL_URL = 'https://www.cambridgema.gov/citydirectory?page=1&department={4469559C-2AE6-483F-A00E-8F15B9797D78}&resultsPerPage=-1'
+CITY_ID = 41
+BASE_URL = 'https://www.carlsbadca.gov'
+CITY_COUNCIL_URL = 'https://www.carlsbadca.gov/city-hall/city-council'
 
 PATH_ID = f'0{CITY_ID}'
 
@@ -48,22 +49,15 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('tr')
+        results = r.html.find('ul')
         for result in results:
-            td = result.find('td')
-            if len(td):
-                if td[2].text == 'Mayor':
-                    data.insert(0, td[0].text)
-                elif td[2].text == 'Vice-Mayor':
-                    data.insert(0, td[0].text)
-                elif td[2].text == 'City Councillor':
-                    data.append(td[0].text)
-        # names are reversed, putting them in order...
+            resul = result.find('li')
+            for res in resul:
+                re = res.find('a')
+                if 'data-uw-rm-brl' in re[0].attrs:
+                    data.append(re[0].text)
         for i, d in enumerate(data):
-            temp = d.split(',')
-            temp.insert(0, temp[-1].strip())
-            temp.pop()
-            data[i] = ' '.join(temp)
+            data[i] = ' '.join(d.split(' ')[-2:])
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
