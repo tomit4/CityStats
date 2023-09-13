@@ -272,3 +272,11 @@
 2023-09-12 22:08:41,433 - INFO - Downloaded image for city_id: 32, 17 of 19
 2023-09-12 22:08:46,697 - INFO - Downloaded image for city_id: 32, 18 of 19
 2023-09-12 22:08:51,895 - INFO - Downloaded image for city_id: 32, 19 of 19
+2023-09-12 22:18:52,370 - ERROR - Error at city_id: 33 during scraping: Invalid URL '': No scheme supplied. Perhaps you meant https://?
+2023-09-12 22:19:23,683 - ERROR - Error at city_id: 33 during scraping: 'list' object has no attribute 'contents'
+2023-09-12 22:19:38,511 - ERROR - Error at city_id: 33 during scraping: 'Element' object has no attribute 'contents'
+2023-09-12 22:21:15,614 - ERROR - Error at city_id: 33 during scraping: 'list' object has no attribute 'attrs'
+2023-09-12 22:21:33,320 - ERROR - Error at city_id: 33 during scraping: 'list' object has no attribute 'attrs'
+2023-09-12 22:22:14,622 - ERROR - Error at city_id: 33 during scraping: 'Element' object has no attribute 'contents'
+2023-09-12 22:25:28,097 - ERROR - Error at city_id: 33 during scraping: 'list' object has no attribute 'text'
+2023-09-12 22:26:39,385 - INFO - No images scraped for city_id: 33
