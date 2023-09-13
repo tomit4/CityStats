@@ -210,3 +210,14 @@
 2023-09-12 20:23:23,226 - INFO - Downloaded image for city_id: 29, 5 of 7
 2023-09-12 20:23:23,818 - INFO - Downloaded image for city_id: 29, 6 of 7
 2023-09-12 20:23:24,404 - INFO - Downloaded image for city_id: 29, 7 of 7
+2023-09-12 20:33:21,323 - ERROR - Error at city_id: 30 during scraping: list index out of range
+2023-09-12 20:36:41,962 - ERROR - Error at city_id: 30 during scraping: list index out of range
+2023-09-12 20:40:09,566 - ERROR - Error at city_id: 30 during scraping: list index out of range
+2023-09-12 20:40:50,034 - ERROR - Error at city_id: 30 during scraping: 1
+2023-09-12 20:42:28,452 - ERROR - Error at city_id: 30 during scraping: ResultSet object has no attribute 'findAll'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 20:43:42,400 - ERROR - Error at city_id: 30 during scraping: list index out of range
+2023-09-12 20:50:32,226 - ERROR - Error at city_id: 30 during scraping: 'NoneType' object is not subscriptable
+2023-09-12 20:52:03,314 - ERROR - Error at city_id: 30 during scraping: 0
+2023-09-12 20:56:38,798 - ERROR - Error at city_id: 30 during scraping: ResultSet object has no attribute 'contents'. You're probably treating a list of elements like a single element. Did you call find_all() when you meant to call find()?
+2023-09-12 20:56:55,197 - ERROR - Error at city_id: 30 during scraping: 0
+2023-09-12 21:03:05,208 - INFO - No images scraped for city_id: 30
