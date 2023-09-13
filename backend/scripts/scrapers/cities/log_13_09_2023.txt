@@ -10,3 +10,10 @@
 2023-09-13 00:02:51,565 - INFO - Downloaded image for city_id: 38, 3 of 5
 2023-09-13 00:02:52,839 - INFO - Downloaded image for city_id: 38, 4 of 5
 2023-09-13 00:03:00,159 - INFO - Downloaded image for city_id: 38, 5 of 5
+2023-09-13 00:12:52,165 - ERROR - Error at city_id: 39 during scraping: 'list' object has no attribute 'title'
+2023-09-13 00:13:02,882 - ERROR - Error at city_id: 39 during scraping: 'list' object has no attribute 'attrs'
+2023-09-13 00:13:18,242 - ERROR - Error at city_id: 39 during scraping: list index out of range
+2023-09-13 00:14:03,264 - ERROR - Error at city_id: 39 during scraping: 'list' object has no attribute 'attrs'
+2023-09-13 00:14:08,525 - ERROR - Error at city_id: 39 during scraping: 'list' object has no attribute 'text'
+2023-09-13 00:26:43,353 - ERROR - Error at city_id: 39 during scraping: too many values to unpack (expected 2)
+2023-09-13 00:30:44,875 - INFO - No images scraped for city_id: 39
