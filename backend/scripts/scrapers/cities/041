@@ -3,7 +3,6 @@
 import json
 import logging
 from datetime import datetime
-from pandas.core.computation.pytables import ast
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
 from requests_html import HTMLSession
