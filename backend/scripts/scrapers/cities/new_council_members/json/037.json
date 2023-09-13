@@ -1,0 +1,53 @@
+[
+    { "city_id": 37, "council_member": "Byron W. Brown", "img_url": null },
+    {
+        "city_id": 37,
+        "council_member": "Darius G. Pridgen",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/1"
+    },
+    {
+        "city_id": 37,
+        "council_member": "David A. Rivera",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/2"
+    },
+    {
+        "city_id": 37,
+        "council_member": "Christopher Scanlon",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/3"
+    },
+    {
+        "city_id": 37,
+        "council_member": "Joel P. Feroleto",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/4"
+    },
+    {
+        "city_id": 37,
+        "council_member": "",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/5"
+    },
+    {
+        "city_id": 37,
+        "council_member": "Bryan Bollman",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/6"
+    },
+    {
+        "city_id": 37,
+        "council_member": "Mitch Nowakowski",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/7"
+    },
+    {
+        "city_id": 37,
+        "council_member": "Joseph Golombek, Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/8"
+    },
+    {
+        "city_id": 37,
+        "council_member": "Ulysees O. Wingo, Sr.",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/9"
+    },
+    {
+        "city_id": 37,
+        "council_member": "Rasheed Wyatt",
+        "img_url": "https://www.citystats.xyz/images/cities/37/city_council/10"
+    }
+]
