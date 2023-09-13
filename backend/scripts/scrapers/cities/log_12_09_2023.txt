@@ -202,3 +202,11 @@
 2023-09-12 04:13:04,991 - INFO - Downloaded image for city_id: 28, 8 of 10
 2023-09-12 04:13:06,578 - INFO - Downloaded image for city_id: 28, 9 of 10
 2023-09-12 04:13:07,767 - INFO - Downloaded image for city_id: 28, 10 of 10
+2023-09-12 20:15:03,619 - ERROR - Error at city_id: 29 during scraping: 'list' object has no attribute 'split'
+2023-09-12 20:23:05,316 - INFO - Downloaded image for city_id: 29, 1 of 7
+2023-09-12 20:23:06,014 - INFO - Downloaded image for city_id: 29, 2 of 7
+2023-09-12 20:23:11,658 - INFO - Downloaded image for city_id: 29, 3 of 7
+2023-09-12 20:23:17,584 - INFO - Downloaded image for city_id: 29, 4 of 7
+2023-09-12 20:23:23,226 - INFO - Downloaded image for city_id: 29, 5 of 7
+2023-09-12 20:23:23,818 - INFO - Downloaded image for city_id: 29, 6 of 7
+2023-09-12 20:23:24,404 - INFO - Downloaded image for city_id: 29, 7 of 7
