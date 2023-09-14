@@ -73,3 +73,25 @@
 2023-09-14 02:33:37,776 - INFO - Downloaded image for city_id: 57, 3 of 5
 2023-09-14 02:33:43,102 - INFO - Downloaded image for city_id: 57, 4 of 5
 2023-09-14 02:33:44,800 - INFO - Downloaded image for city_id: 57, 5 of 5
+2023-09-14 02:39:17,435 - ERROR - Error at city_id: 58 during scraping: 'list' object has no attribute 'find'
+2023-09-14 02:40:21,320 - ERROR - Error at city_id: 58 during scraping: 'list' object has no attribute 'text'
+2023-09-14 02:45:35,424 - ERROR - Error at city_id: 58 during scraping: 'Element' object has no attribute 'next_sibling'
+2023-09-14 02:49:30,066 - ERROR - Error at city_id: 58 during scraping: 'Element' object is not subscriptable
+2023-09-14 02:55:14,879 - INFO - Downloaded image for city_id: 58, 1 of 18
+2023-09-14 02:55:15,090 - INFO - Downloaded image for city_id: 58, 2 of 18
+2023-09-14 02:55:15,276 - INFO - Downloaded image for city_id: 58, 3 of 18
+2023-09-14 02:55:15,493 - INFO - Downloaded image for city_id: 58, 4 of 18
+2023-09-14 02:55:15,674 - INFO - Downloaded image for city_id: 58, 5 of 18
+2023-09-14 02:55:15,819 - INFO - Downloaded image for city_id: 58, 6 of 18
+2023-09-14 02:55:15,956 - INFO - Downloaded image for city_id: 58, 7 of 18
+2023-09-14 02:55:16,142 - INFO - Downloaded image for city_id: 58, 8 of 18
+2023-09-14 02:55:16,367 - INFO - Downloaded image for city_id: 58, 9 of 18
+2023-09-14 02:55:16,527 - INFO - Downloaded image for city_id: 58, 10 of 18
+2023-09-14 02:55:16,654 - INFO - Downloaded image for city_id: 58, 11 of 18
+2023-09-14 02:55:16,782 - INFO - Downloaded image for city_id: 58, 12 of 18
+2023-09-14 02:55:16,921 - INFO - Downloaded image for city_id: 58, 13 of 18
+2023-09-14 02:55:17,077 - INFO - Downloaded image for city_id: 58, 14 of 18
+2023-09-14 02:55:17,228 - INFO - Downloaded image for city_id: 58, 15 of 18
+2023-09-14 02:55:17,353 - INFO - Downloaded image for city_id: 58, 16 of 18
+2023-09-14 02:55:17,475 - INFO - Downloaded image for city_id: 58, 17 of 18
+2023-09-14 02:55:17,623 - INFO - Downloaded image for city_id: 58, 18 of 18
