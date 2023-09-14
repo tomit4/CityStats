@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+# scrapes council member names and images.
+import os
+from urllib.parse import unquote
+import json
+import logging
+import requests
+from datetime import datetime
+# Use requests_html when JS is required on website
+# https://requests.readthedocs.io/projects/requests-html/en/latest/
+from requests_html import HTMLSession
+
+session = HTMLSession()
+
+# Change based off of which site being scraped
+CITY_ID = 47
+BASE_URL = 'https://www.chandleraz.gov'
+CITY_COUNCIL_URL = 'https://www.chandleraz.gov/government/mayor-and-council'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
+
+PATH_ID = f'0{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def parse_json(results):
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        # council_member usually needs to be changed
+        data['council_member'] = result
+        data['img_url'] = None
+        json_arr.append(data)
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def scrape_data():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        data = []
+        results = r.html.find('.field--item')
+        for result in results:
+            res = result.find('a')
+            for r in res:
+                if 'mailto' in r.attrs['href'] and len(r.text):
+                    data.append(r.text)
+        data_set = set()
+        for d in data:
+            if '&' not in d and 'Mayor and' not in d:
+                data_set.add(d)
+        data_list = list(data_set)
+        new_list = []
+        for i, d in enumerate(data_list):
+            if 'Email Mayor ' in d:
+                new_list.insert(0, d)
+            else:
+                new_list.append(d)
+        for i, d in enumerate(new_list):
+            new_list[i] = ' '.join(d.split(' ')[-2:])
+        return new_list
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+if __name__ == "__main__":
+    results = scrape_data()
+    if results:
+        parse_json(results)
+    logging.info(f'No images scraped for city_id: {CITY_ID}')

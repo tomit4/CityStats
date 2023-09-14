@@ -166,3 +166,6 @@
 2023-09-13 22:16:49,587 - INFO - Downloaded image for city_id: 46, 7 of 9
 2023-09-13 22:16:54,781 - INFO - Downloaded image for city_id: 46, 8 of 9
 2023-09-13 22:16:56,508 - INFO - Downloaded image for city_id: 46, 9 of 9
+2023-09-13 23:06:52,459 - ERROR - Error at city_id: 47 during scraping: too many values to unpack (expected 2)
+2023-09-13 23:08:39,646 - INFO - No images scraped for city_id: 47
+2023-09-13 23:09:09,624 - INFO - No images scraped for city_id: 47
