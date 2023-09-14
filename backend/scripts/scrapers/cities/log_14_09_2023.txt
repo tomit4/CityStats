@@ -63,3 +63,4 @@
 2023-09-14 01:56:30,229 - ERROR - Error at city_id: 55 during scraping: object of type 'Element' has no len()
 2023-09-14 01:56:47,172 - ERROR - Error at city_id: 55 during scraping: list index out of range
 2023-09-14 02:00:43,547 - INFO - No images scraped for city_id: 55
+2023-09-14 02:19:25,427 - INFO - Downloaded image for city_id: 56, 1 of 1
