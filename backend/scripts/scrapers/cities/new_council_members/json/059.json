@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 59,
+        "council_member": "Lynne Ashbeck",
+        "img_url": "https://www.citystats.xyz/images/cities/59/mayor"
+    },
+    {
+        "city_id": 59,
+        "council_member": "Vong Mouanoutoua",
+        "img_url": "https://www.citystats.xyz/images/cities/59/city_council/1"
+    },
+    {
+        "city_id": 59,
+        "council_member": "Matt Basgall",
+        "img_url": "https://www.citystats.xyz/images/cities/59/city_council/2"
+    },
+    {
+        "city_id": 59,
+        "council_member": "Drew Bessinger",
+        "img_url": "https://www.citystats.xyz/images/cities/59/city_council/3"
+    },
+    {
+        "city_id": 59,
+        "council_member": "Diane Pearce",
+        "img_url": "https://www.citystats.xyz/images/cities/59/city_council/4"
+    }
+]
