@@ -154,3 +154,15 @@
 2023-09-13 02:40:43,545 - ERROR - Error at city_id: 45 during scraping: 'list' object has no attribute 'text'
 2023-09-13 02:41:28,734 - ERROR - Error at city_id: 45 during scraping: 'dict' object has no attribute 'href'
 2023-09-13 02:41:48,118 - ERROR - Error at city_id: 45 during scraping: 0
+2023-09-13 22:10:06,045 - ERROR - Error at city_id: 46 during scraping: No connection adapters were found for 'mailto:spiko@centennialco.gov'
+2023-09-13 22:10:21,739 - ERROR - Error at city_id: 46 during scraping: No connection adapters were found for 'mailto:spiko@centennialco.gov'
+2023-09-13 22:10:56,576 - ERROR - Error at city_id: 46 during scraping: No connection adapters were found for 'mailto:spiko@centennialco.gov'
+2023-09-13 22:15:23,114 - INFO - Downloaded image for city_id: 46, 1 of 9
+2023-09-13 22:16:36,377 - INFO - Downloaded image for city_id: 46, 2 of 9
+2023-09-13 22:16:36,724 - INFO - Downloaded image for city_id: 46, 3 of 9
+2023-09-13 22:16:36,979 - INFO - Downloaded image for city_id: 46, 4 of 9
+2023-09-13 22:16:42,972 - INFO - Downloaded image for city_id: 46, 5 of 9
+2023-09-13 22:16:47,580 - INFO - Downloaded image for city_id: 46, 6 of 9
+2023-09-13 22:16:49,587 - INFO - Downloaded image for city_id: 46, 7 of 9
+2023-09-13 22:16:54,781 - INFO - Downloaded image for city_id: 46, 8 of 9
+2023-09-13 22:16:56,508 - INFO - Downloaded image for city_id: 46, 9 of 9
