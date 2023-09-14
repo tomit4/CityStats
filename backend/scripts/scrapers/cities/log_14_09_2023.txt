@@ -64,3 +64,12 @@
 2023-09-14 01:56:47,172 - ERROR - Error at city_id: 55 during scraping: list index out of range
 2023-09-14 02:00:43,547 - INFO - No images scraped for city_id: 55
 2023-09-14 02:19:25,427 - INFO - Downloaded image for city_id: 56, 1 of 1
+2023-09-14 02:27:07,637 - ERROR - Error at city_id: 57 during scraping: object of type 'Element' has no len()
+2023-09-14 02:28:54,536 - ERROR - Error at city_id: 57 during scraping: 'list' object has no attribute 'attrs'
+2023-09-14 02:31:20,866 - ERROR - Error at city_id: 57 during scraping: name 'img_urls' is not defined
+2023-09-14 02:31:41,504 - ERROR - Error at city_id: 57 during scraping: name 'img_urls' is not defined
+2023-09-14 02:33:32,218 - INFO - Downloaded image for city_id: 57, 1 of 5
+2023-09-14 02:33:37,395 - INFO - Downloaded image for city_id: 57, 2 of 5
+2023-09-14 02:33:37,776 - INFO - Downloaded image for city_id: 57, 3 of 5
+2023-09-14 02:33:43,102 - INFO - Downloaded image for city_id: 57, 4 of 5
+2023-09-14 02:33:44,800 - INFO - Downloaded image for city_id: 57, 5 of 5
