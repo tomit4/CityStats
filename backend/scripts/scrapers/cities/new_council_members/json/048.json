@@ -1,0 +1,23 @@
+[
+    { "city_id": 48, "council_member": "John Tecklenburg", "img_url": null },
+    { "city_id": 48, "council_member": "Boyd Gregg", "img_url": null },
+    { "city_id": 48, "council_member": "Kevin Shealy", "img_url": null },
+    { "city_id": 48, "council_member": "Jason Sakran", "img_url": null },
+    { "city_id": 48, "council_member": "Robert M. Mitchell", "img_url": null },
+    { "city_id": 48, "council_member": "Karl L. Brady, Jr.", "img_url": null },
+    {
+        "city_id": 48,
+        "council_member": "William Dudley Gregorie",
+        "img_url": null
+    },
+    { "city_id": 48, "council_member": "Perry K. Waring", "img_url": null },
+    { "city_id": 48, "council_member": "Michael S. Seekings", "img_url": null },
+    {
+        "city_id": 48,
+        "council_member": "A. Peter Shahid, Jr.",
+        "img_url": null
+    },
+    { "city_id": 48, "council_member": "Stephen Bowden", "img_url": null },
+    { "city_id": 48, "council_member": "Ross A. Appel", "img_url": null },
+    { "city_id": 48, "council_member": "Caroline Parker", "img_url": null }
+]

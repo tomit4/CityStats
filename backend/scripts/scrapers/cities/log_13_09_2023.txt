@@ -169,3 +169,11 @@
 2023-09-13 23:06:52,459 - ERROR - Error at city_id: 47 during scraping: too many values to unpack (expected 2)
 2023-09-13 23:08:39,646 - INFO - No images scraped for city_id: 47
 2023-09-13 23:09:09,624 - INFO - No images scraped for city_id: 47
+2023-09-13 23:15:39,046 - ERROR - Error at city_id: 48 during scraping: 'list' object has no attribute 'text'
+2023-09-13 23:23:00,414 - ERROR - Error at city_id: 48 during scraping: 'list' object has no attribute 'join'
+2023-09-13 23:27:49,902 - ERROR - Error at city_id: 48 during scraping: Invalid URL '/1129/District-2-Councilmember': No scheme supplied. Perhaps you meant https:///1129/District-2-Councilmember?
+2023-09-13 23:35:10,432 - ERROR - Error at city_id: 48 during scraping: 'list' object has no attribute 'text'
+2023-09-13 23:35:27,151 - ERROR - Error at city_id: 48 during scraping: 'list' object has no attribute 'attrs'
+2023-09-13 23:43:08,743 - ERROR - Error at city_id: 48 during scraping: 'class'
+2023-09-13 23:43:55,368 - ERROR - Error at city_id: 48 during scraping: 'class'
+2023-09-13 23:51:00,559 - INFO - No images scraped for city_id: 48
