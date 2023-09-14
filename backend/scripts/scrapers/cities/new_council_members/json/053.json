@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 53,
+        "council_member": "Andrew Coolidge",
+        "img_url": "https://www.citystats.xyz/images/cities/53/mayor"
+    },
+    {
+        "city_id": 53,
+        "council_member": "Sean Morgan",
+        "img_url": "https://www.citystats.xyz/images/cities/53/city_council/1"
+    },
+    {
+        "city_id": 53,
+        "council_member": "Kasey Reynolds",
+        "img_url": "https://www.citystats.xyz/images/cities/53/city_council/2"
+    },
+    {
+        "city_id": 53,
+        "council_member": "Dale Bennett",
+        "img_url": "https://www.citystats.xyz/images/cities/53/city_council/3"
+    },
+    {
+        "city_id": 53,
+        "council_member": "Addison Winslow",
+        "img_url": "https://www.citystats.xyz/images/cities/53/city_council/4"
+    },
+    {
+        "city_id": 53,
+        "council_member": "Tom van Overbeek",
+        "img_url": "https://www.citystats.xyz/images/cities/53/city_council/5"
+    },
+    {
+        "city_id": 53,
+        "council_member": "Deepika Tandon",
+        "img_url": "https://www.citystats.xyz/images/cities/53/city_council/6"
+    }
+]

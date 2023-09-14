@@ -29,3 +29,25 @@
 2023-09-14 00:59:14,516 - ERROR - Error at city_id: 52 during scraping: 'list' object has no attribute 'text'
 2023-09-14 01:04:08,340 - ERROR - Error at city_id: 52 during scraping: 'builtin_function_or_method' object is not subscriptable
 2023-09-14 01:08:03,567 - INFO - No images scraped for city_id: 52
+2023-09-14 01:14:44,284 - ERROR - Error at city_id: 53 during scraping: 'list' object has no attribute 'find'
+2023-09-14 01:15:05,750 - ERROR - Error at city_id: 53 during scraping: 'list' object has no attribute 'text'
+2023-09-14 01:15:30,164 - ERROR - Error at city_id: 53 during scraping: 'list' object has no attribute 'attrs'
+2023-09-14 01:16:13,433 - ERROR - Error at city_id: 53 during scraping: name 'a_rag' is not defined
+2023-09-14 01:16:22,044 - ERROR - Error at city_id: 53 during scraping: 'list' object has no attribute 'text'
+2023-09-14 01:16:31,004 - ERROR - Error at city_id: 53 during scraping: 'list' object has no attribute 'text'
+2023-09-14 01:17:49,277 - ERROR - Error at city_id: 53 during scraping: 'list' object has no attribute 'text'
+2023-09-14 01:17:59,358 - ERROR - Error at city_id: 53 during scraping: list index out of range
+2023-09-14 01:27:38,878 - INFO - Downloaded image for city_id: 53, 1 of 7
+2023-09-14 01:27:39,030 - INFO - Downloaded image for city_id: 53, 2 of 7
+2023-09-14 01:27:39,139 - INFO - Downloaded image for city_id: 53, 3 of 7
+2023-09-14 01:27:39,337 - INFO - Downloaded image for city_id: 53, 4 of 7
+2023-09-14 01:27:44,601 - INFO - Downloaded image for city_id: 53, 5 of 7
+2023-09-14 01:27:44,831 - INFO - Downloaded image for city_id: 53, 6 of 7
+2023-09-14 01:27:45,039 - INFO - Downloaded image for city_id: 53, 7 of 7
+2023-09-14 01:29:36,461 - INFO - Downloaded image for city_id: 53, 1 of 7
+2023-09-14 01:29:36,606 - INFO - Downloaded image for city_id: 53, 2 of 7
+2023-09-14 01:29:36,781 - INFO - Downloaded image for city_id: 53, 3 of 7
+2023-09-14 01:29:36,935 - INFO - Downloaded image for city_id: 53, 4 of 7
+2023-09-14 01:29:37,094 - INFO - Downloaded image for city_id: 53, 5 of 7
+2023-09-14 01:29:37,219 - INFO - Downloaded image for city_id: 53, 6 of 7
+2023-09-14 01:29:37,343 - INFO - Downloaded image for city_id: 53, 7 of 7
