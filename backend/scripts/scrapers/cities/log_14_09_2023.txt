@@ -1,0 +1,7 @@
+2023-09-14 00:04:44,617 - ERROR - Error at city_id: 49 during scraping: 'str' object is not an iterator
+2023-09-14 00:06:08,299 - ERROR - Error at city_id: 49 during scraping: 'int' object is not an iterator
+2023-09-14 00:06:19,968 - ERROR - Error at city_id: 49 during scraping: cannot unpack non-iterable Element object
+2023-09-14 00:07:16,780 - ERROR - Error at city_id: 49 during scraping: cannot unpack non-iterable Element object
+2023-09-14 00:21:18,804 - INFO - No images scraped for city_id: 49
+2023-09-14 00:22:26,095 - INFO - No images scraped for city_id: 49
+2023-09-14 00:22:53,165 - INFO - No images scraped for city_id: 49

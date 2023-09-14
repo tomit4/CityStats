@@ -177,3 +177,4 @@
 2023-09-13 23:43:08,743 - ERROR - Error at city_id: 48 during scraping: 'class'
 2023-09-13 23:43:55,368 - ERROR - Error at city_id: 48 during scraping: 'class'
 2023-09-13 23:51:00,559 - INFO - No images scraped for city_id: 48
+2023-09-13 23:56:46,994 - ERROR - Error at city_id: 49 during scraping: 'list' object has no attribute 'text'

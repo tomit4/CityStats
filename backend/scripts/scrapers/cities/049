@@ -10,9 +10,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 47
-BASE_URL = 'https://www.chandleraz.gov'
-CITY_COUNCIL_URL = 'https://www.chandleraz.gov/government/mayor-and-council'
+CITY_ID = 49
+BASE_URL = 'https://www.charlottenc.gov'
+CITY_COUNCIL_URL = 'https://www.charlottenc.gov/City-Government/Leadership/City-Council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
@@ -47,26 +47,13 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.field--item')
+        results = r.html.find('p.list-item-title')
         for result in results:
-            res = result.find('a')
-            for r in res:
-                if 'mailto' in r.attrs['href'] and len(r.text):
-                    data.append(r.text)
-        data_set = set()
-        for d in data:
-            if '&' not in d and 'Mayor and' not in d:
-                data_set.add(d)
-        data_list = list(data_set)
-        new_list = []
-        for i, d in enumerate(data_list):
-            if 'Email Mayor ' in d:
-                new_list.insert(0, d)
-            else:
-                new_list.append(d)
-        for i, d in enumerate(new_list):
-            new_list[i] = ' '.join(d.split(' ')[-2:])
-        return new_list
+            res = result.find('strong')
+            if len(res):
+                for r in res:
+                    data.append(r.text.split('\n')[0])
+        return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
@@ -74,6 +61,7 @@ def scrape_data():
 
 if __name__ == "__main__":
     results = scrape_data()
+
     if results:
         parse_json(results)
     logging.info(f'No images scraped for city_id: {CITY_ID}')
