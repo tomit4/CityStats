@@ -1,0 +1,16 @@
+[
+    { "city_id": 55, "council_member": "Aftab Pureval", "img_url": null },
+    {
+        "city_id": 55,
+        "council_member": "Jan-Michele Lemon Kearney",
+        "img_url": null
+    },
+    { "city_id": 55, "council_member": "Victoria Parks", "img_url": null },
+    { "city_id": 55, "council_member": "Jeff Cramerding", "img_url": null },
+    { "city_id": 55, "council_member": "Reggie Harris", "img_url": null },
+    { "city_id": 55, "council_member": "Mark Jeffreys", "img_url": null },
+    { "city_id": 55, "council_member": "Scotty Johnson", "img_url": null },
+    { "city_id": 55, "council_member": "Liz Keating", "img_url": null },
+    { "city_id": 55, "council_member": "Seth Walsh", "img_url": null },
+    { "city_id": 55, "council_member": "Meeka Owens", "img_url": null }
+]
