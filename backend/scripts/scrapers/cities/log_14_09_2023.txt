@@ -24,3 +24,5 @@
 2023-09-14 00:47:50,436 - ERROR - Error at city_id: 50 during scraping: list index out of range
 2023-09-14 00:48:28,924 - ERROR - Error at city_id: 50 during scraping: 'list' object has no attribute 'text'
 2023-09-14 00:50:12,907 - INFO - No images scraped for city_id: 50
+2023-09-14 00:53:15,421 - ERROR - Error at city_id: 51 during scraping: 'Element' object is not subscriptable
+2023-09-14 00:54:03,861 - INFO - No images scraped for city_id: 51

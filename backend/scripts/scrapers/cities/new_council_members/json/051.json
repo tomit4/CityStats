@@ -1,0 +1,19 @@
+[
+    {
+        "city_id": 51,
+        "council_member": "Dr. Richard W. \"Rick\" West",
+        "img_url": null
+    },
+    { "city_id": 51, "council_member": "John de Triquet", "img_url": null },
+    { "city_id": 51, "council_member": "C. Jeff Bunn", "img_url": null },
+    { "city_id": 51, "council_member": "Don J. Carey III", "img_url": null },
+    { "city_id": 51, "council_member": "Robert C. Ike, Jr.", "img_url": null },
+    { "city_id": 51, "council_member": "Amanda L. Newins", "img_url": null },
+    {
+        "city_id": 51,
+        "council_member": "S.Z. \"Debbie\" Ritter",
+        "img_url": null
+    },
+    { "city_id": 51, "council_member": "Dr. Ella P. Ward", "img_url": null },
+    { "city_id": 51, "council_member": "Daniel W. Whitaker", "img_url": null }
+]
