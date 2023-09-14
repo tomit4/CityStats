@@ -51,3 +51,4 @@
 2023-09-14 01:29:37,094 - INFO - Downloaded image for city_id: 53, 5 of 7
 2023-09-14 01:29:37,219 - INFO - Downloaded image for city_id: 53, 6 of 7
 2023-09-14 01:29:37,343 - INFO - Downloaded image for city_id: 53, 7 of 7
+2023-09-14 01:38:35,179 - INFO - No images scraped for city_id: 54
