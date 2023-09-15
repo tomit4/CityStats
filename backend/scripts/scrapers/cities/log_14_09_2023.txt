@@ -141,3 +141,18 @@
 2023-09-14 22:17:40,316 - INFO - Downloaded image for city_id: 63, 5 of 7
 2023-09-14 22:17:45,876 - INFO - Downloaded image for city_id: 63, 6 of 7
 2023-09-14 22:17:46,353 - INFO - Downloaded image for city_id: 63, 7 of 7
+2023-09-14 22:24:28,415 - ERROR - Error at city_id: 64 during scraping: 'list' object has no attribute 'text'
+2023-09-14 22:27:36,231 - ERROR - Error at city_id: 64 during scraping: 'list' object has no attribute 'text'
+2023-09-14 22:35:48,395 - ERROR - Error at city_id: 64 during scraping: 'dict' object is not callable
+2023-09-14 22:35:48,395 - ERROR - Error at city_id: 64 during scraping: 'bool' object is not iterable
+2023-09-14 22:36:03,004 - ERROR - Error at city_id: 64 during scraping: 'dict' object is not callable
+2023-09-14 22:36:03,005 - ERROR - Error at city_id: 64 during scraping: 'bool' object is not iterable
+2023-09-14 22:46:03,566 - ERROR - Error at city_id: 64 during scraping: object of type 'Element' has no len()
+2023-09-14 22:48:40,821 - INFO - Downloaded image for city_id: 64, 1 of 8
+2023-09-14 22:48:42,079 - INFO - Downloaded image for city_id: 64, 2 of 8
+2023-09-14 22:48:42,314 - INFO - Downloaded image for city_id: 64, 3 of 8
+2023-09-14 22:48:43,099 - INFO - Downloaded image for city_id: 64, 4 of 8
+2023-09-14 22:48:43,548 - INFO - Downloaded image for city_id: 64, 5 of 8
+2023-09-14 22:48:59,839 - INFO - Downloaded image for city_id: 64, 6 of 8
+2023-09-14 22:49:00,354 - INFO - Downloaded image for city_id: 64, 7 of 8
+2023-09-14 22:49:00,732 - INFO - Downloaded image for city_id: 64, 8 of 8
