@@ -19,3 +19,7 @@
 2023-09-15 00:45:30,444 - INFO - Downloaded image for city_id: 71, 5 of 7
 2023-09-15 00:45:37,246 - INFO - Downloaded image for city_id: 71, 6 of 7
 2023-09-15 00:45:45,335 - INFO - Downloaded image for city_id: 71, 7 of 7
+2023-09-15 01:03:32,235 - ERROR - Error at city_id: 72 during scraping: normalize expected 2 arguments, got 1
+2023-09-15 01:33:55,469 - ERROR - Error at city_id: 72 during scraping: 'in <string>' requires string as left operand, not list
+2023-09-15 01:44:34,363 - INFO - No images scraped for city_id: 72
+2023-09-15 01:44:58,546 - INFO - No images scraped for city_id: 72
