@@ -158,3 +158,5 @@
 2023-09-14 22:49:00,732 - INFO - Downloaded image for city_id: 64, 8 of 8
 2023-09-14 22:56:36,316 - INFO - No images scraped for city_id: 65
 2023-09-14 22:59:56,708 - INFO - No images scraped for city_id: 65
+2023-09-14 23:06:10,458 - ERROR - Error at city_id: 66 during scraping: 'list' object has no attribute 'text'
+2023-09-14 23:09:08,843 - INFO - No images scraped for city_id: 66
