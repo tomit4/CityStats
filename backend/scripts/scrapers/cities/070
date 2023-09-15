@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+# scrapes council member names and images.
+import os
+from urllib.parse import unquote
+import json
+from unicodedata import normalize
+import logging
+import requests
+from datetime import datetime
+# Use requests_html when JS is required on website
+# https://requests.readthedocs.io/projects/requests-html/en/latest/
+from requests_html import HTMLSession
+
+session = HTMLSession()
+
+# Change based off of which site being scraped
+CITY_ID = 70
+BASE_URL = 'https://www.cctexas.com'
+CITY_COUNCIL_URL = 'https://www.cctexas.com/council-members'
+MAYOR_URL = 'https://www.cctexas.com/mayor'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
+
+PATH_ID = f'0{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_arr):
+    for i, img_url in enumerate(img_arr):
+        # uri string conversion (i.e. %20 spaces %3F question marks, etc.)
+        img_url = unquote(img_url)
+        if '.png' in img_url:
+            file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.png'
+        else:
+            file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+        # 403 passed without user agent string
+        img_data = requests.get(img_url,
+                                stream=True,
+                                headers={
+                                    'User-agent': 'Mozilla/5.0'
+                                }).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(
+            f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+        )
+
+
+def parse_json(results):
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        # council_member usually needs to be changed
+        data['council_member'] = result
+        json_arr.append(data)
+    for i, data in enumerate(json_arr):
+        if i == 0:
+            data['img_url'] = f'{BASE_IMG_PATH}/mayor'
+        else:
+            data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def scrape_member_img_urls(member_urls):
+    try:
+        data = []
+        for url in member_urls:
+            r = session.get(url)
+            #  r.html actually works, lsp doesn't like it for some reason...
+            results = r.html.find('.side-box-section')
+            for result in results:
+                res = result.find('img')
+                if len(res):
+                    data.append(res[0])
+        for i, d in enumerate(data):
+            data[i] = f"{BASE_URL}{d.attrs['src']}"
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def grab_img_urls(member_urls, mayor_img_url):
+    try:
+        img_urls = []
+        for url in member_urls:
+            r = session.get(url)
+            # r.html actually works, lsp doesn't like it for some reason...
+            results = r.html.find('.body')
+            for result in results:
+                res = result.find('img')
+                for r in res:
+                    if 'src' in r.attrs:
+                        if 'icons' not in r.attrs['src']:
+                            img_urls.append(r.attrs['src'])
+        img_urls.insert(0, mayor_img_url)
+        return img_urls
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def scrape_data():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        data = []
+        results = r.html.find('.body')
+        for result in results:
+            res = result.find('strong')
+            for r in res:
+                #  if r.text.isupper():
+                if '\n' in r.text:
+                    data.append(r.text.splitlines()[0])
+        for i, d in enumerate(data):
+            d_lower = d.lower().split(' ')
+            for j, dl in enumerate(d_lower):
+                d_lower[j] = dl.capitalize()
+            data[i] = ' '.join(d_lower)
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def grab_member_urls():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        data = []
+        results = r.html.find('.body')
+        for result in results:
+            res = result.find('a')
+            for r in res:
+                if 'href' in r.attrs and 'council-member' in r.attrs['href']:
+                    if r.attrs['href'] not in data:
+                        data.append(r.attrs['href'])
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def append_mayor(member_names):
+    try:
+        r = session.get(MAYOR_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('.header')
+        for result in results:
+            res = result.find('h1')
+            for r in res:
+                if 'Mayor' in r.text:
+                    member_names.insert(0, r.text.split('Mayor ')[1])
+        return member_names
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def grab_mayor_img_url():
+    try:
+        r = session.get(MAYOR_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('.body')
+        mayor_img_url = ''
+        for result in results:
+            res = result.find('img')
+            for r in res:
+                if 'src' in r.attrs and 'Mayor' in r.attrs['src']:
+                    mayor_img_url = r.attrs['src']
+        return mayor_img_url
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+if __name__ == "__main__":
+    member_names = scrape_data()
+    results = append_mayor(member_names)
+    if results:
+        parse_json(results)
+    member_urls = grab_member_urls()
+    mayor_img_url = grab_mayor_img_url()
+    img_urls = grab_img_urls(member_urls, mayor_img_url)
+    download_images(img_urls)
