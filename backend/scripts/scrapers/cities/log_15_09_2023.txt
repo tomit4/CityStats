@@ -23,3 +23,10 @@
 2023-09-15 01:33:55,469 - ERROR - Error at city_id: 72 during scraping: 'in <string>' requires string as left operand, not list
 2023-09-15 01:44:34,363 - INFO - No images scraped for city_id: 72
 2023-09-15 01:44:58,546 - INFO - No images scraped for city_id: 72
+2023-09-15 01:55:32,219 - ERROR - Error at city_id: 73 during scraping: 'list' object has no attribute 'strip'
+2023-09-15 02:02:46,615 - ERROR - Error at city_id: 73 during scraping: name 'img_urls' is not defined
+2023-09-15 02:05:49,094 - INFO - Downloaded image for city_id: 73, 1 of 5
+2023-09-15 02:05:49,849 - INFO - Downloaded image for city_id: 73, 2 of 5
+2023-09-15 02:05:51,297 - INFO - Downloaded image for city_id: 73, 3 of 5
+2023-09-15 02:05:56,930 - INFO - Downloaded image for city_id: 73, 4 of 5
+2023-09-15 02:05:57,662 - INFO - Downloaded image for city_id: 73, 5 of 5
