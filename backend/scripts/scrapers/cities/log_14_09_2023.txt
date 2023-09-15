@@ -160,3 +160,14 @@
 2023-09-14 22:59:56,708 - INFO - No images scraped for city_id: 65
 2023-09-14 23:06:10,458 - ERROR - Error at city_id: 66 during scraping: 'list' object has no attribute 'text'
 2023-09-14 23:09:08,843 - INFO - No images scraped for city_id: 66
+2023-09-14 23:16:00,830 - ERROR - Error at city_id: 67 during scraping: object of type 'Element' has no len()
+2023-09-14 23:17:11,030 - ERROR - Error at city_id: 67 during scraping: list index out of range
+2023-09-14 23:24:28,861 - INFO - Downloaded image for city_id: 67, 1 of 8
+2023-09-14 23:24:44,347 - INFO - Downloaded image for city_id: 67, 1 of 8
+2023-09-14 23:24:45,537 - INFO - Downloaded image for city_id: 67, 2 of 8
+2023-09-14 23:24:46,524 - INFO - Downloaded image for city_id: 67, 3 of 8
+2023-09-14 23:25:02,554 - INFO - Downloaded image for city_id: 67, 4 of 8
+2023-09-14 23:25:03,775 - INFO - Downloaded image for city_id: 67, 5 of 8
+2023-09-14 23:25:06,209 - INFO - Downloaded image for city_id: 67, 6 of 8
+2023-09-14 23:25:07,214 - INFO - Downloaded image for city_id: 67, 7 of 8
+2023-09-14 23:25:13,524 - INFO - Downloaded image for city_id: 67, 8 of 8
