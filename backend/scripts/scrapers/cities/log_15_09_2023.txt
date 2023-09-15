@@ -10,3 +10,12 @@
 2023-09-15 00:19:55,197 - INFO - Downloaded image for city_id: 70, 7 of 9
 2023-09-15 00:19:56,811 - INFO - Downloaded image for city_id: 70, 8 of 9
 2023-09-15 00:19:57,372 - INFO - Downloaded image for city_id: 70, 9 of 9
+2023-09-15 00:40:14,826 - ERROR - Error at city_id: 71 during scraping: Invalid URL '/government/mayor-city-council/mayor-john-stephens': No scheme supplied. Perhaps you meant https:///government/mayor-city-council/mayor-john-stephens?
+2023-09-15 00:40:56,272 - ERROR - Error at city_id: 71 during scraping: Invalid URL '/government/mayor-city-council/mayor-john-stephens': No scheme supplied. Perhaps you meant https:///government/mayor-city-council/mayor-john-stephens?
+2023-09-15 00:45:13,866 - INFO - Downloaded image for city_id: 71, 1 of 7
+2023-09-15 00:45:15,752 - INFO - Downloaded image for city_id: 71, 2 of 7
+2023-09-15 00:45:22,896 - INFO - Downloaded image for city_id: 71, 3 of 7
+2023-09-15 00:45:23,841 - INFO - Downloaded image for city_id: 71, 4 of 7
+2023-09-15 00:45:30,444 - INFO - Downloaded image for city_id: 71, 5 of 7
+2023-09-15 00:45:37,246 - INFO - Downloaded image for city_id: 71, 6 of 7
+2023-09-15 00:45:45,335 - INFO - Downloaded image for city_id: 71, 7 of 7
