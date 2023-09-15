@@ -1,0 +1,21 @@
+[
+    {
+        "city_id": 65,
+        "council_member": "B. H. \"Skip\" Henderson III",
+        "img_url": null
+    },
+    {
+        "city_id": 65,
+        "council_member": "Jerry \"Pops\" Barnes",
+        "img_url": null
+    },
+    { "city_id": 65, "council_member": "Glenn Davis", "img_url": null },
+    { "city_id": 65, "council_member": "Bruce Huff", "img_url": null },
+    { "city_id": 65, "council_member": "Toyia Tucker", "img_url": null },
+    { "city_id": 65, "council_member": "Charmaine Crabb", "img_url": null },
+    { "city_id": 65, "council_member": "Gary Allen", "img_url": null },
+    { "city_id": 65, "council_member": "JoAnne Cogle", "img_url": null },
+    { "city_id": 65, "council_member": "Walker Garrett", "img_url": null },
+    { "city_id": 65, "council_member": "Judy Thomas", "img_url": null },
+    { "city_id": 65, "council_member": "Tyson Begly", "img_url": null }
+]
