@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # scrapes council member names and images.
 import json
-from unicodedata import normalize
 import logging
 from datetime import datetime
 # Use requests_html when JS is required on website

@@ -117,3 +117,19 @@
 2023-09-14 03:34:14,550 - INFO - Downloaded image for city_id: 60, 5 of 7
 2023-09-14 03:34:26,104 - INFO - Downloaded image for city_id: 60, 6 of 7
 2023-09-14 03:34:31,235 - INFO - Downloaded image for city_id: 60, 7 of 7
+2023-09-14 21:24:58,076 - ERROR - Error at city_id: 61 during scraping: name 'res' is not defined
+2023-09-14 21:33:27,028 - ERROR - Error at city_id: 61 during scraping: normalize expected 2 arguments, got 1
+2023-09-14 21:34:27,239 - ERROR - Error at city_id: 61 during scraping: 'list' object has no attribute 'split'
+2023-09-14 21:37:39,608 - ERROR - Error at city_id: 61 during scraping: 'list' object has no attribute 'attrs'
+2023-09-14 21:42:09,674 - ERROR - Error at city_id: 61 during scraping: 'list' object has no attribute 'attrs'
+2023-09-14 21:43:02,667 - ERROR - Error at city_id: 61 during scraping: 'Element' object is not iterable
+2023-09-14 21:48:35,084 - INFO - Downloaded image for city_id: 61, 1 of 10
+2023-09-14 21:48:35,572 - INFO - Downloaded image for city_id: 61, 2 of 10
+2023-09-14 21:48:41,121 - INFO - Downloaded image for city_id: 61, 3 of 10
+2023-09-14 21:48:41,648 - INFO - Downloaded image for city_id: 61, 4 of 10
+2023-09-14 21:48:42,249 - INFO - Downloaded image for city_id: 61, 5 of 10
+2023-09-14 21:48:42,877 - INFO - Downloaded image for city_id: 61, 6 of 10
+2023-09-14 21:48:43,533 - INFO - Downloaded image for city_id: 61, 7 of 10
+2023-09-14 21:48:44,055 - INFO - Downloaded image for city_id: 61, 8 of 10
+2023-09-14 21:48:44,749 - INFO - Downloaded image for city_id: 61, 9 of 10
+2023-09-14 21:48:50,283 - INFO - Downloaded image for city_id: 61, 10 of 10
