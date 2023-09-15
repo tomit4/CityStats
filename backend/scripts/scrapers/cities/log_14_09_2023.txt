@@ -171,3 +171,10 @@
 2023-09-14 23:25:06,209 - INFO - Downloaded image for city_id: 67, 6 of 8
 2023-09-14 23:25:07,214 - INFO - Downloaded image for city_id: 67, 7 of 8
 2023-09-14 23:25:13,524 - INFO - Downloaded image for city_id: 67, 8 of 8
+2023-09-14 23:29:19,479 - ERROR - Error at city_id: 68 during scraping: object of type 'Element' has no len()
+2023-09-14 23:41:09,009 - ERROR - Error at city_id: 68 during scraping: name 'url' is not defined
+2023-09-14 23:43:04,363 - INFO - Downloaded image for city_id: 68, 1 of 5
+2023-09-14 23:43:04,600 - INFO - Downloaded image for city_id: 68, 2 of 5
+2023-09-14 23:43:04,931 - INFO - Downloaded image for city_id: 68, 3 of 5
+2023-09-14 23:43:05,255 - INFO - Downloaded image for city_id: 68, 4 of 5
+2023-09-14 23:43:05,613 - INFO - Downloaded image for city_id: 68, 5 of 5
