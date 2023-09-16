@@ -30,3 +30,4 @@
 2023-09-15 02:05:51,297 - INFO - Downloaded image for city_id: 73, 3 of 5
 2023-09-15 02:05:56,930 - INFO - Downloaded image for city_id: 73, 4 of 5
 2023-09-15 02:05:57,662 - INFO - Downloaded image for city_id: 73, 5 of 5
+2023-09-15 20:35:46,172 - INFO - No images scraped for city_id: 74

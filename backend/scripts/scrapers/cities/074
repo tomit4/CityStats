@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # scrapes council member names and images.
+from enum import member
 import json
-from unicodedata import normalize
 import logging
-import requests
 from datetime import datetime
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
@@ -12,10 +11,10 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 72
-BASE_URL = 'https://dallascityhall.com'
-CITY_COUNCIL_URL = 'https://dallascityhall.com/government/Pages/city-council.aspx'
-MAYOR_URL = 'https://dallascityhall.com/government/citymayor/Pages/default.aspx'
+CITY_ID = 74
+BASE_URL = 'https://www.davenportiowa.com'
+CITY_COUNCIL_URL = 'https://www.davenportiowa.com/government/mayor_council/city_council'
+MAYOR_URL = 'https://www.davenportiowa.com/government/mayor_council/mayors_office/mayors_bio'
 
 PATH_ID = f'0{CITY_ID}'
 
@@ -49,39 +48,59 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.ms-rtestate-field')
+        results = r.html.find('ul.sidenav')
         for result in results:
-            res = result.find('h2')
-            if len(res):
-                for r in res:
-                    if r.text not in data:
-                        data.append(r.text)
+            res = result.find('a')
+            for r in res:
+                if 'href' in r.attrs:
+                    data.append(f"{BASE_URL}{r.attrs['href']}")
+        data.insert(0, MAYOR_URL)
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
 
 
-def append_mayor(member_names):
+def grab_names_from(member_urls):
     try:
-        r = session.get(MAYOR_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('#mainContainer')
-        for result in results:
-            res = result.find('p')
-            for r in res:
-                if len(r.text):
-                    if 'Mayor' not in r.text:
-                        member_names.insert(0, normalize("NFKD", r.text))
-        return member_names
+        data = []
+        for url in member_urls:
+            r = session.get(url)
+            # r.html actually works, lsp doesn't like it for some reason...
+            results = r.html.find(
+                '#ctl00_ContentPlaceHolder1_ctl10_divContent')
+            for result in results:
+                res = result.find('h2')
+                for r in res:
+                    data.append(r.text)
+        for i, d in enumerate(data):
+            if '(' in d:
+                new_d = d.replace('(', '')
+                data[i] = new_d.replace(')', '')
+            elif 'vacant' in d.lower():
+                del data[i]
+        for i, d in enumerate(data):
+            if 'Mayor' in d:
+                inter_arr = d.split('Mayor ')[1].lower().split(' ')
+                temp = []
+                for word in inter_arr:
+                    temp.append(word.capitalize())
+                data[i] = ' '.join(temp)
+            else:
+                inter_arr = d.split(',')[0].lower().split(' ')
+                temp = []
+                for word in inter_arr:
+                    temp.append(word.capitalize())
+                data[i] = ' '.join(temp)
+        return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
 
 
 if __name__ == "__main__":
-    member_names = scrape_data()
-    results = append_mayor(member_names)
+    member_urls = scrape_data()
+    results = grab_names_from(member_urls)
     if results:
         parse_json(results)
     logging.info(f'No images scraped for city_id: {CITY_ID}')

@@ -1,0 +1,16 @@
+[
+    { "city_id": 74, "council_member": "Mike Matson", "img_url": null },
+    { "city_id": 74, "council_member": "Kyle Gripp", "img_url": null },
+    { "city_id": 74, "council_member": "Jj Condon", "img_url": null },
+    { "city_id": 74, "council_member": "Rick Dunn", "img_url": null },
+    { "city_id": 74, "council_member": "Maria Dickmann", "img_url": null },
+    {
+        "city_id": 74,
+        "council_member": "Frances Marion Meginnis",
+        "img_url": null
+    },
+    { "city_id": 74, "council_member": "Robby Ortiz", "img_url": null },
+    { "city_id": 74, "council_member": "Tim Kelly", "img_url": null },
+    { "city_id": 74, "council_member": "Ben Jobgen", "img_url": null },
+    { "city_id": 74, "council_member": "Judith Lee", "img_url": null }
+]
