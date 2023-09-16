@@ -78,3 +78,14 @@
 2023-09-15 22:49:51,844 - INFO - Downloaded image for city_id: 80, 4 of 6
 2023-09-15 22:49:52,371 - INFO - Downloaded image for city_id: 80, 5 of 6
 2023-09-15 22:49:52,698 - INFO - Downloaded image for city_id: 80, 6 of 6
+2023-09-15 22:55:37,300 - ERROR - Error at city_id: 81 during scraping: too many values to unpack (expected 2)
+2023-09-15 23:12:14,831 - INFO - Downloaded image for city_id: 81, 1 of 10
+2023-09-15 23:12:15,425 - INFO - Downloaded image for city_id: 81, 2 of 10
+2023-09-15 23:12:16,033 - INFO - Downloaded image for city_id: 81, 3 of 10
+2023-09-15 23:12:16,631 - INFO - Downloaded image for city_id: 81, 4 of 10
+2023-09-15 23:12:17,185 - INFO - Downloaded image for city_id: 81, 5 of 10
+2023-09-15 23:12:17,790 - INFO - Downloaded image for city_id: 81, 6 of 10
+2023-09-15 23:12:18,419 - INFO - Downloaded image for city_id: 81, 7 of 10
+2023-09-15 23:12:19,018 - INFO - Downloaded image for city_id: 81, 8 of 10
+2023-09-15 23:12:19,833 - INFO - Downloaded image for city_id: 81, 9 of 10
+2023-09-15 23:12:20,438 - INFO - Downloaded image for city_id: 81, 10 of 10
