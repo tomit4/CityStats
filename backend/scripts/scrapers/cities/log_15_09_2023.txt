@@ -39,3 +39,14 @@
 2023-09-15 20:54:54,489 - INFO - Downloaded image for city_id: 75, 3 of 5
 2023-09-15 20:54:55,962 - INFO - Downloaded image for city_id: 75, 4 of 5
 2023-09-15 20:55:08,411 - INFO - Downloaded image for city_id: 75, 5 of 5
+2023-09-15 21:05:28,286 - WARNING - Site for city_id: 76, not scrapable.
+2023-09-15 21:05:57,739 - ERROR - Error at city_id: 77 during scraping: 'Element' object is not iterable
+2023-09-15 21:34:04,655 - WARNING - Site for city_id: 76, not scrapable.
+2023-09-15 21:36:00,627 - INFO - Downloaded image for city_id: 77, 1 of 8
+2023-09-15 21:36:01,302 - INFO - Downloaded image for city_id: 77, 2 of 8
+2023-09-15 21:36:02,808 - INFO - Downloaded image for city_id: 77, 3 of 8
+2023-09-15 21:36:03,551 - INFO - Downloaded image for city_id: 77, 4 of 8
+2023-09-15 21:36:14,357 - INFO - Downloaded image for city_id: 77, 5 of 8
+2023-09-15 21:36:20,129 - INFO - Downloaded image for city_id: 77, 6 of 8
+2023-09-15 21:36:21,596 - INFO - Downloaded image for city_id: 77, 7 of 8
+2023-09-15 21:36:22,328 - INFO - Downloaded image for city_id: 77, 8 of 8
