@@ -127,3 +127,9 @@
 2023-09-15 23:34:37,200 - INFO - Downloaded image for city_id: 83, 5 of 7
 2023-09-15 23:34:37,513 - INFO - Downloaded image for city_id: 83, 6 of 7
 2023-09-15 23:34:37,705 - INFO - Downloaded image for city_id: 83, 7 of 7
+2023-09-15 23:39:09,513 - ERROR - Error at city_id: 84 during scraping: 'list' object has no attribute 'text'
+2023-09-15 23:51:56,352 - INFO - Downloaded image for city_id: 84, 1 of 5
+2023-09-15 23:51:56,597 - INFO - Downloaded image for city_id: 84, 2 of 5
+2023-09-15 23:51:58,973 - INFO - Downloaded image for city_id: 84, 3 of 5
+2023-09-15 23:51:59,685 - INFO - Downloaded image for city_id: 84, 4 of 5
+2023-09-15 23:52:05,971 - INFO - Downloaded image for city_id: 84, 5 of 5

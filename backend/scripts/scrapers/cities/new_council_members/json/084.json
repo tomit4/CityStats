@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 84,
+        "council_member": "Ramiro Garza Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/84/mayor"
+    },
+    {
+        "city_id": 84,
+        "council_member": "David White",
+        "img_url": "https://www.citystats.xyz/images/cities/84/city_council/1"
+    },
+    {
+        "city_id": 84,
+        "council_member": "Daniel 'Dan' Diaz",
+        "img_url": "https://www.citystats.xyz/images/cities/84/city_council/2"
+    },
+    {
+        "city_id": 84,
+        "council_member": "Jason De Leon",
+        "img_url": "https://www.citystats.xyz/images/cities/84/city_council/3"
+    },
+    {
+        "city_id": 84,
+        "council_member": "Johnny Garcia",
+        "img_url": "https://www.citystats.xyz/images/cities/84/city_council/4"
+    }
+]
