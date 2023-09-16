@@ -10,3 +10,4 @@
 2023-09-16 00:33:54,969 - INFO - No images scraped for city_id: 87
 2023-09-16 00:36:34,293 - INFO - No images scraped for city_id: 88
 2023-09-16 00:36:40,437 - INFO - No images scraped for city_id: 88
+2023-09-16 00:39:38,835 - INFO - No images scraped for city_id: 89
