@@ -18,3 +18,12 @@
 2023-09-16 01:07:01,080 - INFO - Downloaded image for city_id: 92, 3 of 5
 2023-09-16 01:07:11,925 - INFO - Downloaded image for city_id: 92, 4 of 5
 2023-09-16 01:07:12,470 - INFO - Downloaded image for city_id: 92, 5 of 5
+2023-09-16 01:11:20,348 - ERROR - Error at city_id: 93 during scraping: name 'a_rag' is not defined
+2023-09-16 01:11:24,199 - ERROR - Error at city_id: 93 during scraping: object of type 'Element' has no len()
+2023-09-16 01:25:00,752 - INFO - Downloaded image for city_id: 93, 1 of 6
+2023-09-16 01:25:01,187 - INFO - Downloaded image for city_id: 93, 2 of 6
+2023-09-16 01:25:01,526 - INFO - Downloaded image for city_id: 93, 3 of 6
+2023-09-16 01:25:06,858 - INFO - Downloaded image for city_id: 93, 4 of 6
+2023-09-16 01:25:07,251 - INFO - Downloaded image for city_id: 93, 5 of 6
+2023-09-16 01:25:07,566 - INFO - Downloaded image for city_id: 93, 6 of 6
+2023-09-16 01:29:10,442 - INFO - No images scraped for city_id: 93
