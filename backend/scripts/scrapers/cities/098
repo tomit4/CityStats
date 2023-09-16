@@ -2,6 +2,7 @@
 # scrapes council member names and images.
 import json
 import logging
+import requests
 from datetime import datetime
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
@@ -10,13 +11,12 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 96
-BASE_URL = 'https://www.fairfield.ca.gov'
-CITY_COUNCIL_URL = 'https://www.fairfield.ca.gov/government/city-council/city-councilmembers'
+CITY_ID = 98
+BASE_URL = 'https://www.fayettevillenc.gov'
+CITY_COUNCIL_URL = 'https://www.fayettevillenc.gov/city-council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
-IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
 
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
@@ -48,11 +48,20 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.vi-layout-center')
+        results = r.html.find('.inner-content')
         for result in results:
-            res = result.find('h2')
+            res = result.find('a')
             for r in res:
-                data.append(r.text)
+                if 'Mayor ' in r.text or '(District ' in r.text:
+                    data.append(r.text)
+        data.pop()
+        for i, d in enumerate(data):
+            if 'Mayor Pro' in d:
+                data[i] = d.split('Mayor Pro Tem ')[1].split(' (')[0]
+            elif 'Mayor' in d:
+                data[i] = d.split('Mayor ')[1]
+            else:
+                data[i] = d.split(' (District')[0]
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
