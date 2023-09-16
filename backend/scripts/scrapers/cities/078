@@ -14,10 +14,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 77
-BASE_URL = 'https://cityofdearborn.org'
-CITY_COUNCIL_URL = 'https://cityofdearborn.org/government/city-council'
-MAYOR_URL = 'https://cityofdearborn.org/government/meet-the-mayor-3'
+CITY_ID = 78
+BASE_URL = 'https://www.cityofdenton.com'
+CITY_COUNCIL_URL = 'https://www.cityofdenton.com/413/City-Council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
@@ -80,29 +79,14 @@ def grab_img_urls():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         img_urls = []
-        results = r.html.find('.item-page')
+        results = r.html.find('img.fr-fil')
         for result in results:
-            res = result.find('img')
-            for r in res:
-                if 'src' in r.attrs:
-                    img_urls.append(f"{BASE_URL}{r.attrs['src']}")
+            if 'src' in result.attrs:
+                if 'https' not in result.attrs['src']:
+                    img_urls.append(f"{BASE_URL}{result.attrs['src']}")
+                else:
+                    img_urls.append(result.attrs['src'])
         return img_urls
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
-def prepend_mayor_img_to(member_img_urls):
-    try:
-        r = session.get(MAYOR_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('.item-page')
-        for result in results:
-            res = result.find('img')
-            for r in res:
-                if 'src' in r.attrs:
-                    member_img_urls.insert(0, f"{BASE_URL}{r.attrs['src']}")
-        return member_img_urls
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
@@ -113,39 +97,17 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         member_names = []
-        results = r.html.find('.item-page')
+        results = r.html.find('.fr-view')
         for result in results:
-            res = result.find('strong')
+            res = result.find('h3')
             for r in res:
-                member_names.append(normalize('NFKD', r.text))
-        member_names.pop()
-        for i, mn in enumerate(member_names):
-            if ' (' in mn:
-                member_names[i] = mn.split(' (')[0]
-        for i, mn in enumerate(member_names):
-            if 'Click' in mn:
-                del member_names[i]
-        del member_names[4]
+                if len(r.text):
+                    member_names.append(r.text.strip())
         for i, name in enumerate(member_names):
-            if 'Pro Tem' in name:
-                member_names[i] = ' '.join(name.split(' ')[4:])
-            else:
-                member_names[i] = ' '.join(name.split(' ')[2:])
-        return member_names
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
-def prepend_mayor_to(member_names):
-    try:
-        r = session.get(MAYOR_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('.page-header')
-        for result in results:
-            res = result.find('h2')
-            for r in res:
-                member_names.insert(0, r.text.split(': ')[1])
+            member_names[i] = (name.split('\n')[0])
+        for i, name in enumerate(member_names):
+            if 'District' in name:
+                del member_names[i]
         return member_names
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -153,10 +115,8 @@ def prepend_mayor_to(member_names):
 
 
 if __name__ == "__main__":
-    member_names = scrape_data()
-    results = prepend_mayor_to(member_names)
+    results = scrape_data()
     if results:
         parse_json(results)
-    member_img_urls = grab_img_urls()
-    img_urls = prepend_mayor_img_to(member_img_urls)
+    img_urls = grab_img_urls()
     download_images(img_urls)
