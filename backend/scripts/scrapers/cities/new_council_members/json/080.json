@@ -1,0 +1,32 @@
+[
+    {
+        "city_id": 80,
+        "council_member": "T.M. Franklin Cownie",
+        "img_url": "https://www.citystats.xyz/images/cities/80/mayor"
+    },
+    {
+        "city_id": 80,
+        "council_member": "Carl Voss",
+        "img_url": "https://www.citystats.xyz/images/cities/80/city_council/1"
+    },
+    {
+        "city_id": 80,
+        "council_member": "Connie Boesen",
+        "img_url": "https://www.citystats.xyz/images/cities/80/city_council/2"
+    },
+    {
+        "city_id": 80,
+        "council_member": "Linda Westergaard",
+        "img_url": "https://www.citystats.xyz/images/cities/80/city_council/3"
+    },
+    {
+        "city_id": 80,
+        "council_member": "Josh Mandelbaum",
+        "img_url": "https://www.citystats.xyz/images/cities/80/city_council/4"
+    },
+    {
+        "city_id": 80,
+        "council_member": "Joe Gatto",
+        "img_url": "https://www.citystats.xyz/images/cities/80/city_council/5"
+    }
+]

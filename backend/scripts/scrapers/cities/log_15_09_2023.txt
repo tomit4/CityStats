@@ -66,3 +66,15 @@
 2023-09-15 22:23:07,786 - ERROR - Error at city_id: 79 during scraping: 'Element' object has no attribute 'data'
 2023-09-15 22:25:01,249 - INFO - No images scraped for city_id: 79
 2023-09-15 22:25:06,511 - INFO - No images scraped for city_id: 79
+2023-09-15 22:49:05,070 - INFO - Downloaded image for city_id: 80, 1 of 6
+2023-09-15 22:49:05,403 - INFO - Downloaded image for city_id: 80, 2 of 6
+2023-09-15 22:49:05,811 - INFO - Downloaded image for city_id: 80, 3 of 6
+2023-09-15 22:49:06,175 - INFO - Downloaded image for city_id: 80, 4 of 6
+2023-09-15 22:49:06,509 - INFO - Downloaded image for city_id: 80, 5 of 6
+2023-09-15 22:49:11,891 - INFO - Downloaded image for city_id: 80, 6 of 6
+2023-09-15 22:49:45,692 - INFO - Downloaded image for city_id: 80, 1 of 6
+2023-09-15 22:49:46,046 - INFO - Downloaded image for city_id: 80, 2 of 6
+2023-09-15 22:49:46,462 - INFO - Downloaded image for city_id: 80, 3 of 6
+2023-09-15 22:49:51,844 - INFO - Downloaded image for city_id: 80, 4 of 6
+2023-09-15 22:49:52,371 - INFO - Downloaded image for city_id: 80, 5 of 6
+2023-09-15 22:49:52,698 - INFO - Downloaded image for city_id: 80, 6 of 6
