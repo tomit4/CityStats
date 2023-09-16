@@ -1,0 +1,19 @@
+[
+    {
+        "city_id": 88,
+        "council_member": "Patricia Perkins-Auguste",
+        "img_url": null
+    },
+    { "city_id": 88, "council_member": "Frank Cuesta", "img_url": null },
+    { "city_id": 88, "council_member": "Manny Grova, Jr.", "img_url": null },
+    { "city_id": 88, "council_member": "Carlos Torres", "img_url": null },
+    { "city_id": 88, "council_member": "Nelson Gonzalez", "img_url": null },
+    { "city_id": 88, "council_member": "Kevin Kiniery", "img_url": null },
+    { "city_id": 88, "council_member": "Carlos Cedeño", "img_url": null },
+    {
+        "city_id": 88,
+        "council_member": "William Gallman, Jr.",
+        "img_url": null
+    },
+    { "city_id": 88, "council_member": "Frank O. Mazza", "img_url": null }
+]
