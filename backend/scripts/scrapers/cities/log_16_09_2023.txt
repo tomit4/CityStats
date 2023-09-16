@@ -30,3 +30,11 @@
 2023-09-16 01:32:44,465 - WARNING - Site for city_id: 94, not scrapable.
 2023-09-16 01:39:42,988 - INFO - No images scraped for city_id: 95
 2023-09-16 01:43:56,151 - INFO - No images scraped for city_id: 96
+2023-09-16 01:49:16,777 - ERROR - Error at city_id: 97 during scraping: too many values to unpack (expected 2)
+2023-09-16 01:49:33,043 - ERROR - Error at city_id: 97 during scraping: too many values to unpack (expected 2)
+2023-09-16 01:52:21,150 - ERROR - Error at city_id: 97 during scraping: name 'a' is not defined
+2023-09-16 02:00:33,183 - INFO - Downloaded image for city_id: 97, 1 of 5
+2023-09-16 02:00:34,176 - INFO - Downloaded image for city_id: 97, 2 of 5
+2023-09-16 02:00:40,150 - INFO - Downloaded image for city_id: 97, 3 of 5
+2023-09-16 02:00:42,896 - INFO - Downloaded image for city_id: 97, 4 of 5
+2023-09-16 02:00:43,984 - INFO - Downloaded image for city_id: 97, 5 of 5

@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 97,
+        "council_member": "Tim Mahoney",
+        "img_url": "https://www.citystats.xyz/images/cities/97/mayor"
+    },
+    {
+        "city_id": 97,
+        "council_member": "Arlette Preston",
+        "img_url": "https://www.citystats.xyz/images/cities/97/city_council/1"
+    },
+    {
+        "city_id": 97,
+        "council_member": "Denise Kolpack",
+        "img_url": "https://www.citystats.xyz/images/cities/97/city_council/2"
+    },
+    {
+        "city_id": 97,
+        "council_member": "Dave Piepkorn",
+        "img_url": "https://www.citystats.xyz/images/cities/97/city_council/3"
+    },
+    {
+        "city_id": 97,
+        "council_member": "John Strand",
+        "img_url": "https://www.citystats.xyz/images/cities/97/city_council/4"
+    }
+]
