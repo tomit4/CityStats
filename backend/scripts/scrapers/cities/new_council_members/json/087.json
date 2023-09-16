@@ -1,0 +1,15 @@
+[
+    { "city_id": 87, "council_member": "David Kaptain", "img_url": null },
+    { "city_id": 87, "council_member": "Corey Dixon", "img_url": null },
+    { "city_id": 87, "council_member": "Dustin Good", "img_url": null },
+    { "city_id": 87, "council_member": "Rosamaria Martinez", "img_url": null },
+    { "city_id": 87, "council_member": "Anthony Ortiz", "img_url": null },
+    { "city_id": 87, "council_member": "Tish S. Powell", "img_url": null },
+    {
+        "city_id": 87,
+        "council_member": "Carol J. Rauschenberger",
+        "img_url": null
+    },
+    { "city_id": 87, "council_member": "F. John Steffen", "img_url": null },
+    { "city_id": 87, "council_member": "Steven Thoren", "img_url": null }
+]
