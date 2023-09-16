@@ -57,3 +57,12 @@
 2023-09-15 21:51:41,784 - INFO - Downloaded image for city_id: 78, 5 of 7
 2023-09-15 21:51:42,003 - INFO - Downloaded image for city_id: 78, 6 of 7
 2023-09-15 21:51:42,231 - INFO - Downloaded image for city_id: 78, 7 of 7
+2023-09-15 22:04:11,037 - INFO - No images scraped for city_id: 79
+2023-09-15 22:04:33,531 - INFO - No images scraped for city_id: 79
+2023-09-15 22:06:11,200 - ERROR - Error at city_id: 79 during scraping: list index out of range
+2023-09-15 22:13:39,259 - ERROR - Error at city_id: 79 during scraping: 'list' object has no attribute 'next_sibling'
+2023-09-15 22:13:47,435 - ERROR - Error at city_id: 79 during scraping: 'Element' object has no attribute 'next_sibling'
+2023-09-15 22:17:55,734 - ERROR - Error at city_id: 79 during scraping: 'Element' object has no attribute 'next'
+2023-09-15 22:23:07,786 - ERROR - Error at city_id: 79 during scraping: 'Element' object has no attribute 'data'
+2023-09-15 22:25:01,249 - INFO - No images scraped for city_id: 79
+2023-09-15 22:25:06,511 - INFO - No images scraped for city_id: 79

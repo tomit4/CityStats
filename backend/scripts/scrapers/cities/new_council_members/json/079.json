@@ -1,0 +1,18 @@
+[
+    { "city_id": 79, "council_member": "Mike Johnston", "img_url": null },
+    { "city_id": 79, "council_member": "Amanda Sandoval", "img_url": null },
+    { "city_id": 79, "council_member": "Kevin Flynn", "img_url": null },
+    { "city_id": 79, "council_member": "Jamie Torres", "img_url": null },
+    {
+        "city_id": 79,
+        "council_member": "Diana Romero Campbell",
+        "img_url": null
+    },
+    { "city_id": 79, "council_member": "Amanda Sawyer", "img_url": null },
+    { "city_id": 79, "council_member": "Paul Kashmann", "img_url": null },
+    { "city_id": 79, "council_member": "Flor Alvidrez", "img_url": null },
+    { "city_id": 79, "council_member": "Shontel Lewis", "img_url": null },
+    { "city_id": 79, "council_member": "Darrell Watson", "img_url": null },
+    { "city_id": 79, "council_member": "Christopher Hinds", "img_url": null },
+    { "city_id": 79, "council_member": "Stacie Gilmore", "img_url": null }
+]
