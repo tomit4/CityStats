@@ -3,7 +3,6 @@
 import os
 from urllib.parse import unquote
 import json
-from unicodedata import normalize
 import logging
 import requests
 from datetime import datetime

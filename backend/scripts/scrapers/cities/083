@@ -13,9 +13,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 82
-BASE_URL = 'https://www.downeyca.org'
-CITY_COUNCIL_URL = 'https://www.downeyca.org/our-city/mayor-city-council'
+CITY_ID = 83
+BASE_URL = 'https://www.durhamnc.gov'
+CITY_COUNCIL_URL = 'https://www.durhamnc.gov/1323/City-Council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'0{CITY_ID}'
@@ -78,16 +78,16 @@ def grab_img_urls():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         img_urls = []
-        results = r.html.find('tbody')
+        results = r.html.find('.row')
         for result in results:
-            res = result.find('img')
+            res = result.find('a')
             for r in res:
-                if 'src' in r.attrs:
-                    img_urls.append(r.attrs['src'])
-
-        img_urls = img_urls[0:4]
-        img_urls.insert(0, img_urls[2])
-        del img_urls[3]
+                img_tag = r.find('img')
+                for img in img_tag:
+                    if 'src' in img.attrs:
+                        if f"{BASE_URL}{img.attrs['src']}" not in img_urls:
+                            img_urls.append(f"{BASE_URL}{img.attrs['src']}")
+        del img_urls[0]
         return img_urls
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -99,14 +99,14 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('tbody')
+        results = r.html.find('.row')
         for result in results:
-            res = result.find('h1')
+            res = result.find('h3.subhead2')
             for r in res:
-                data.append(r.text)
-
-        data.insert(0, data[2])
-        del data[3]
+                a_tag = r.find('a')
+                for txt in a_tag:
+                    if txt.text not in data:
+                        data.append(txt.text)
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
