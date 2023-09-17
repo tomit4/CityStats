@@ -1,0 +1,11 @@
+[
+    { "city_id": 102, "council_member": "Dean J. Trantalis", "img_url": null },
+    { "city_id": 102, "council_member": "John C. Herbst", "img_url": null },
+    { "city_id": 102, "council_member": "Steven Glassman", "img_url": null },
+    {
+        "city_id": 102,
+        "council_member": "Pamela Beasley-Pittman",
+        "img_url": null
+    },
+    { "city_id": 102, "council_member": "Warren Sturman", "img_url": null }
+]
