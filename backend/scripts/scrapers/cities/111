@@ -10,9 +10,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 107
-BASE_URL = 'https://www.friscotexas.gov'
-CITY_COUNCIL_URL = 'https://www.friscotexas.gov/585/City-Council'
+CITY_ID = 111
+BASE_URL = 'https://www.garlandtx.gov'
+CITY_COUNCIL_URL = 'https://www.garlandtx.gov/758/City-Council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -47,13 +47,28 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('tbody')
+        results = r.html.find('h3.subhead2')
         for result in results:
             res = result.find('a')
             for r in res:
                 if len(r.text):
-                    if 'Email' not in r.text:
-                        data.append(r.text.strip())
+                    data.append(r.text.strip().split('\n')[0])
+        for i, d in enumerate(data):
+            if 'District' in d:
+                del data[i]
+            if '-' in d:
+                del data[i]
+        for i, d in enumerate(data):
+            if '-' in d:
+                del data[i]
+            if 'mayor' in d.lower():
+                data[i] = d.split('MAYOR ')[1]
+        for i, d in enumerate(data):
+            temp = d.lower().split(' ')
+            temp_str = []
+            for string in temp:
+                temp_str.append(string.capitalize())
+            data[i] = ' '.join(temp_str)
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')

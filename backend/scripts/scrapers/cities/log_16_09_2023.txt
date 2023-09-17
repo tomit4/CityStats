@@ -112,3 +112,6 @@
 2023-09-16 23:30:22,863 - INFO - Downloaded image for city_id: 110, 5 of 7
 2023-09-16 23:30:23,273 - INFO - Downloaded image for city_id: 110, 6 of 7
 2023-09-16 23:30:23,699 - INFO - Downloaded image for city_id: 110, 7 of 7
+2023-09-16 23:36:24,324 - ERROR - Error at city_id: 111 during scraping: too many values to unpack (expected 2)
+2023-09-16 23:45:19,214 - ERROR - Error at city_id: 111 during scraping: list index out of range
+2023-09-16 23:49:06,161 - INFO - No images scraped for city_id: 111
