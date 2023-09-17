@@ -115,3 +115,10 @@
 2023-09-16 23:36:24,324 - ERROR - Error at city_id: 111 during scraping: too many values to unpack (expected 2)
 2023-09-16 23:45:19,214 - ERROR - Error at city_id: 111 during scraping: list index out of range
 2023-09-16 23:49:06,161 - INFO - No images scraped for city_id: 111
+2023-09-16 23:55:58,354 - INFO - Downloaded image for city_id: 112, 1 of 7
+2023-09-16 23:55:58,620 - INFO - Downloaded image for city_id: 112, 2 of 7
+2023-09-16 23:55:58,809 - INFO - Downloaded image for city_id: 112, 3 of 7
+2023-09-16 23:55:59,248 - INFO - Downloaded image for city_id: 112, 4 of 7
+2023-09-16 23:55:59,465 - INFO - Downloaded image for city_id: 112, 5 of 7
+2023-09-16 23:55:59,661 - INFO - Downloaded image for city_id: 112, 6 of 7
+2023-09-16 23:55:59,866 - INFO - Downloaded image for city_id: 112, 7 of 7

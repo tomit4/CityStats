@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+# scrapes council member names and images.
+import os
+import json
+import logging
+import requests
+from datetime import datetime
+# Use requests_html when JS is required on website
+# https://requests.readthedocs.io/projects/requests-html/en/latest/
+from requests_html import HTMLSession
+
+session = HTMLSession()
+
+# Change based off of which site being scraped
+CITY_ID = 112
+BASE_URL = 'https://www.gilbertaz.gov'
+CITY_COUNCIL_URL = 'https://www.gilbertaz.gov/departments/town-hall/mayor-town-council'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
+
+PATH_ID = f'{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_arr):
+    for i, img_url in enumerate(img_arr):
+        # uri string conversion (i.e. %20 spaces %3F question marks, etc.)
+        if '.png' in img_url:
+            file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.png'
+        else:
+            file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+        # 403 passed without user agent string
+        img_data = requests.get(img_url,
+                                stream=True,
+                                headers={
+                                    'User-agent': 'Mozilla/5.0'
+                                }).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(
+            f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+        )
+
+
+def parse_json(results):
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        # council_member usually needs to be changed
+        data['council_member'] = result
+        json_arr.append(data)
+    for i, data in enumerate(json_arr):
+        if i == 0:
+            data['img_url'] = f'{BASE_IMG_PATH}/mayor'
+        else:
+            data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def grab_img_urls():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        data = []
+        results = r.html.find('tbody')
+        for result in results:
+            res = result.find('img')
+            for r in res:
+                if 'src' in r.attrs:
+                    data.append(r.attrs['src'])
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def scrape_data():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        data = []
+        results = r.html.find('tbody')
+        for result in results:
+            res = result.find('a')
+            for r in res:
+                if 'Mayor' in r.text or 'Councilmember' in r.text:
+                    data.append(r.text)
+        for i, d in enumerate(data):
+            if 'Mayor' in d:
+                data[i] = d.split('Mayor ')[1]
+            if 'Councilmember' in d:
+                data[i] = d.split('Councilmember ')[1]
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+if __name__ == "__main__":
+    results = scrape_data()
+    if results:
+        parse_json(results)
+    img_urls = grab_img_urls()
+    download_images(img_urls)

@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 112,
+        "council_member": "Brigette Peterson",
+        "img_url": "https://www.citystats.xyz/images/cities/112/mayor"
+    },
+    {
+        "city_id": 112,
+        "council_member": "Kathy Tilque",
+        "img_url": "https://www.citystats.xyz/images/cities/112/city_council/1"
+    },
+    {
+        "city_id": 112,
+        "council_member": "Scott Anderson",
+        "img_url": "https://www.citystats.xyz/images/cities/112/city_council/2"
+    },
+    {
+        "city_id": 112,
+        "council_member": "Chuck Bongiovanni",
+        "img_url": "https://www.citystats.xyz/images/cities/112/city_council/3"
+    },
+    {
+        "city_id": 112,
+        "council_member": "Yung Koprowski",
+        "img_url": "https://www.citystats.xyz/images/cities/112/city_council/4"
+    },
+    {
+        "city_id": 112,
+        "council_member": "Bobbi Buchli",
+        "img_url": "https://www.citystats.xyz/images/cities/112/city_council/5"
+    },
+    {
+        "city_id": 112,
+        "council_member": "Jim Torgeson",
+        "img_url": "https://www.citystats.xyz/images/cities/112/city_council/6"
+    }
+]
