@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 100,
+        "council_member": "Acquanetta Warren",
+        "img_url": "https://www.citystats.xyz/images/cities/100/mayor"
+    },
+    {
+        "city_id": 100,
+        "council_member": "Peter A. Garcia",
+        "img_url": "https://www.citystats.xyz/images/cities/100/city_council/1"
+    },
+    {
+        "city_id": 100,
+        "council_member": "John B. Roberts",
+        "img_url": "https://www.citystats.xyz/images/cities/100/city_council/2"
+    },
+    {
+        "city_id": 100,
+        "council_member": "Jesse Sandoval",
+        "img_url": "https://www.citystats.xyz/images/cities/100/city_council/3"
+    },
+    {
+        "city_id": 100,
+        "council_member": "Phillip W. Cothran",
+        "img_url": "https://www.citystats.xyz/images/cities/100/city_council/4"
+    }
+]

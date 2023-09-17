@@ -45,3 +45,8 @@
 2023-09-16 20:59:54,541 - INFO - Downloaded image for city_id: 99, 4 of 6
 2023-09-16 21:00:01,619 - INFO - Downloaded image for city_id: 99, 5 of 6
 2023-09-16 21:00:04,376 - INFO - Downloaded image for city_id: 99, 6 of 6
+2023-09-16 21:14:43,436 - INFO - Downloaded image for city_id: 100, 1 of 5
+2023-09-16 21:14:43,965 - INFO - Downloaded image for city_id: 100, 2 of 5
+2023-09-16 21:14:44,451 - INFO - Downloaded image for city_id: 100, 3 of 5
+2023-09-16 21:14:45,059 - INFO - Downloaded image for city_id: 100, 4 of 5
+2023-09-16 21:14:50,662 - INFO - Downloaded image for city_id: 100, 5 of 5
