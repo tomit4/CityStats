@@ -93,3 +93,8 @@
 2023-09-16 22:45:43,855 - ERROR - Error at city_id: 107 during scraping: HTTPSConnectionPool(host='www.friscotexas.govhttps', port=443): Max retries exceeded with url: //www.friscotexas.gov/1298/Bill-Woodard (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f34c1019ad0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
 2023-09-16 22:48:02,929 - ERROR - Error at city_id: 107 during scraping: HTTPSConnectionPool(host='www.friscotexas.govhttps', port=443): Max retries exceeded with url: //www.friscotexas.gov/1298/Bill-Woodard (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa89b2c92d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
 2023-09-16 22:48:52,232 - ERROR - Error at city_id: 107 during scraping: HTTPSConnectionPool(host='www.friscotexas.govhttps', port=443): Max retries exceeded with url: //www.friscotexas.gov/1298/Bill-Woodard (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f45074c9290>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-09-16 22:56:47,674 - INFO - Downloaded image for city_id: 108, 1 of 5
+2023-09-16 22:56:53,460 - INFO - Downloaded image for city_id: 108, 2 of 5
+2023-09-16 22:56:54,420 - INFO - Downloaded image for city_id: 108, 3 of 5
+2023-09-16 22:56:56,213 - INFO - Downloaded image for city_id: 108, 4 of 5
+2023-09-16 22:56:56,924 - INFO - Downloaded image for city_id: 108, 5 of 5
