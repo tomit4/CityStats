@@ -1,0 +1,48 @@
+[
+    { "city_id": 99, "council_member": "Scott Fadness", "img_url": null },
+    {
+        "city_id": 99,
+        "council_member": "John Weingardt",
+        "img_url": "https://www.citystats.xyz/images/cities/99/city_council/1"
+    },
+    {
+        "city_id": 99,
+        "council_member": "Cecilia Coble",
+        "img_url": "https://www.citystats.xyz/images/cities/99/city_council/2"
+    },
+    {
+        "city_id": 99,
+        "council_member": "Brad DeReamer",
+        "img_url": "https://www.citystats.xyz/images/cities/99/city_council/3"
+    },
+    {
+        "city_id": 99,
+        "council_member": "David Giffel",
+        "img_url": "https://www.citystats.xyz/images/cities/99/city_council/4"
+    },
+    {
+        "city_id": 99,
+        "council_member": "Crystal Neumann",
+        "img_url": "https://www.citystats.xyz/images/cities/99/city_council/5"
+    },
+    {
+        "city_id": 99,
+        "council_member": "Pete Peterson",
+        "img_url": "https://www.citystats.xyz/images/cities/99/city_council/6"
+    },
+    {
+        "city_id": 99,
+        "council_member": "Selina Stoller",
+        "img_url": "https://www.citystats.xyz/images/cities/99/city_council/7"
+    },
+    {
+        "city_id": 99,
+        "council_member": "Jocelyn Vare",
+        "img_url": "https://www.citystats.xyz/images/cities/99/city_council/8"
+    },
+    {
+        "city_id": 99,
+        "council_member": "Todd Zimmerman",
+        "img_url": "https://www.citystats.xyz/images/cities/99/city_council/9"
+    }
+]
