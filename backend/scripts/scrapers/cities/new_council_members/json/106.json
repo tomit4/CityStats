@@ -1,0 +1,42 @@
+[
+    {
+        "city_id": 106,
+        "council_member": "Jerry Dyer",
+        "img_url": "https://www.citystats.xyz/images/cities/106/mayor"
+    },
+    {
+        "city_id": 106,
+        "council_member": "Tyler Maxwell",
+        "img_url": "https://www.citystats.xyz/images/cities/106/city_council/1"
+    },
+    {
+        "city_id": 106,
+        "council_member": "Annalisa Perea",
+        "img_url": "https://www.citystats.xyz/images/cities/106/city_council/2"
+    },
+    {
+        "city_id": 106,
+        "council_member": "Mike Karbassi",
+        "img_url": "https://www.citystats.xyz/images/cities/106/city_council/3"
+    },
+    {
+        "city_id": 106,
+        "council_member": "Miguel Arias",
+        "img_url": "https://www.citystats.xyz/images/cities/106/city_council/4"
+    },
+    {
+        "city_id": 106,
+        "council_member": "Luis Chavez",
+        "img_url": "https://www.citystats.xyz/images/cities/106/city_council/5"
+    },
+    {
+        "city_id": 106,
+        "council_member": "Garry Bredefeld",
+        "img_url": "https://www.citystats.xyz/images/cities/106/city_council/6"
+    },
+    {
+        "city_id": 106,
+        "council_member": "Nelson Esparza",
+        "img_url": "https://www.citystats.xyz/images/cities/106/city_council/7"
+    }
+]
