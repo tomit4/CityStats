@@ -1,0 +1,15 @@
+[
+    { "city_id": 120, "council_member": "Nancy Vaughan", "img_url": null },
+    { "city_id": 120, "council_member": "Yvonne J. Johnson", "img_url": null },
+    { "city_id": 120, "council_member": "Marikay Abuzuaiter", "img_url": null },
+    { "city_id": 120, "council_member": "Hugh Holston", "img_url": null },
+    { "city_id": 120, "council_member": "Sharon Hightower", "img_url": null },
+    {
+        "city_id": 120,
+        "council_member": "Dr. Goldie F. Wells",
+        "img_url": null
+    },
+    { "city_id": 120, "council_member": "Zack Matheny", "img_url": null },
+    { "city_id": 120, "council_member": "Nancy Hoffmann", "img_url": null },
+    { "city_id": 120, "council_member": "Tammi Thurm", "img_url": null }
+]
