@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 113,
+        "council_member": "Jerry P. Weiers",
+        "img_url": "https://www.citystats.xyz/images/cities/113/mayor"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Joyce Clark",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/1"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Jamie Aldama",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/2"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Ian Hugh",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/3"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Ray Malnar",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/4"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Lauren Tolmachoff",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/5"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Bart Turner",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/6"
+    }
+]

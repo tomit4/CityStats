@@ -5,6 +5,7 @@ import json
 import logging
 import requests
 from datetime import datetime
+from unicodedata import normalize
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
 from requests_html import HTMLSession
@@ -12,9 +13,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 114
-BASE_URL = 'https://www.glendaleca.gov'
-CITY_COUNCIL_URL = 'https://www.glendaleca.gov/government/city-council'
+CITY_ID = 113
+BASE_URL = 'https://www.glendaleaz.com'
+CITY_COUNCIL_URL = 'https://www.glendaleaz.com/your_government/city_council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -76,13 +77,13 @@ def grab_img_urls():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('main')
+        results = r.html.find('.image')
         for result in results:
-            res = result.find('img')
-            for r in res:
-                if 'src' in r.attrs:
-                    data.append(r.attrs['src'])
-        data.pop()
+            if 'style' in result.attrs:
+                if 'Your Government' in result.attrs['style']:
+                    data.append(
+                        BASE_URL +
+                        result.attrs['style'].split("url('")[1].strip()[:-2])
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -94,12 +95,23 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('main')
+        results = r.html.find('.ptl_portlet_horizontal')
         for result in results:
-            res = result.find('a')
+            res = result.find('span')
             for r in res:
-                if 'View' not in r.text and 'Certificates' not in r.text and 'Commendation' not in r.text and 'Council' not in r.text and 'Click' not in r.text:
-                    data.append(r.text)
+                if len(r.text):
+                    if 'Mayor' in r.text or 'Councilmember' in r.text:
+                        if len(r.text.split(' ')) < 7:
+                            data.append(r.text.strip())
+        for i, d in enumerate(data):
+            if 'Mayor' in d:
+                data[i] = d.split('Mayor ')[1]
+            elif 'Councilmember' in d:
+                data[i] = d.split('Councilmember ')[1]
+        for i, d in enumerate(data):
+            if 'District' in d:
+                data[i] = d.split(' District')[0]
+                data[i] = ' '.join(data[i].split(' ')[:-1])
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
