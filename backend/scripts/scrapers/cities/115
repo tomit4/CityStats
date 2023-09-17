@@ -10,7 +10,7 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 114
+CITY_ID = 115
 BASE_URL = 'https://www.goodyearaz.gov'
 CITY_COUNCIL_URL = 'https://www.goodyearaz.gov/government/mayor-and-council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
