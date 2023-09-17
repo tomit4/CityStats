@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 101,
+        "council_member": "Jeni Arndt",
+        "img_url": "https://www.citystats.xyz/images/cities/101/mayor"
+    },
+    {
+        "city_id": 101,
+        "council_member": "Susan Gutowsky",
+        "img_url": "https://www.citystats.xyz/images/cities/101/city_council/1"
+    },
+    {
+        "city_id": 101,
+        "council_member": "Julie Pignataro",
+        "img_url": "https://www.citystats.xyz/images/cities/101/city_council/2"
+    },
+    {
+        "city_id": 101,
+        "council_member": "Tricia Canonico",
+        "img_url": "https://www.citystats.xyz/images/cities/101/city_council/3"
+    },
+    {
+        "city_id": 101,
+        "council_member": "Shirley Peel",
+        "img_url": "https://www.citystats.xyz/images/cities/101/city_council/4"
+    },
+    {
+        "city_id": 101,
+        "council_member": "Kelly Ohlson",
+        "img_url": "https://www.citystats.xyz/images/cities/101/city_council/5"
+    },
+    {
+        "city_id": 101,
+        "council_member": "Emily Francis",
+        "img_url": "https://www.citystats.xyz/images/cities/101/city_council/6"
+    }
+]
