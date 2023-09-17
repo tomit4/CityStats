@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 113,
+        "council_member": "Daniel Brotman",
+        "img_url": "https://www.citystats.xyz/images/cities/113/mayor"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Ara Najarian",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/1"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Paula Devine",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/2"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Ardy Kassakhian",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/3"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Elen Asatryan",
+        "img_url": "https://www.citystats.xyz/images/cities/113/city_council/4"
+    }
+]

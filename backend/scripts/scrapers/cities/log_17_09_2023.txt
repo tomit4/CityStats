@@ -1,0 +1,12 @@
+2023-09-17 00:01:24,868 - INFO - Downloaded image for city_id: 113, 1 of 5
+2023-09-17 00:01:26,311 - INFO - Downloaded image for city_id: 113, 2 of 5
+2023-09-17 00:01:26,807 - INFO - Downloaded image for city_id: 113, 3 of 5
+2023-09-17 00:01:32,007 - INFO - Downloaded image for city_id: 113, 4 of 5
+2023-09-17 00:01:32,409 - INFO - Downloaded image for city_id: 113, 5 of 5
+2023-09-17 00:10:57,341 - ERROR - Error at city_id: 114 during scraping: 'Element' object is not iterable
+2023-09-17 00:11:05,163 - ERROR - Error at city_id: 114 during scraping: 'Element' object is not iterable
+2023-09-17 00:12:32,141 - ERROR - Error at city_id: 114 during scraping: 'Element' object is not iterable
+2023-09-17 00:13:01,184 - ERROR - Error at city_id: 114 during scraping: 'Element' object has no attribute 'split'
+2023-09-17 00:15:21,275 - ERROR - Error at city_id: 114 during scraping: too many values to unpack (expected 2)
+2023-09-17 00:16:14,318 - ERROR - Error at city_id: 114 during scraping: too many values to unpack (expected 2)
+2023-09-17 00:18:00,877 - INFO - No images scraped for city_id: 114
