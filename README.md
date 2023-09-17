@@ -25,6 +25,11 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 -   [ ] Grab an image for each city and state (map for state, image for city) and format appropriately for front end.
 -   [ ] Integrate making JWT/API keys with long lasting expiration(1 year), and auth all routes to backend with this. See [fastify-jwt](https://github.com/fastify/fastify-jwt).
 
+**BUG_FIXES**:
+
+-   [ ] Remove all underscore characters from city (and state?) names, instead normalize the url string (%20 for spaces, etc.). This will make it easier for front end communications in the long run (curl fans won't like it I guess, but hey, an occasional backslash never hurt anyone I guess...)
+-   [ ] Allow for multiple cities of the same name to be returned by a single city query (yeah, bad naming convention then...)
+
 **Frontend:**
 
 -   [ ] Decide on frontend framework (React or Vue), and use it to dynamically render info about page.
