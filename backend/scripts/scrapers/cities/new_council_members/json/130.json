@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 130,
+        "council_member": "Josh Levy",
+        "img_url": "https://www.citystats.xyz/images/cities/130/mayor"
+    },
+    {
+        "city_id": 130,
+        "council_member": "Caryl S. Shuham",
+        "img_url": "https://www.citystats.xyz/images/cities/130/city_council/1"
+    },
+    {
+        "city_id": 130,
+        "council_member": "Linda Hill Anderson",
+        "img_url": "https://www.citystats.xyz/images/cities/130/city_council/2"
+    },
+    {
+        "city_id": 130,
+        "council_member": "Traci L. Callari",
+        "img_url": "https://www.citystats.xyz/images/cities/130/city_council/3"
+    },
+    {
+        "city_id": 130,
+        "council_member": "Adam Gruber",
+        "img_url": "https://www.citystats.xyz/images/cities/130/city_council/4"
+    },
+    {
+        "city_id": 130,
+        "council_member": "Kevin D. Biederman",
+        "img_url": "https://www.citystats.xyz/images/cities/130/city_council/5"
+    },
+    {
+        "city_id": 130,
+        "council_member": "Idelma Quintana",
+        "img_url": "https://www.citystats.xyz/images/cities/130/city_council/6"
+    }
+]

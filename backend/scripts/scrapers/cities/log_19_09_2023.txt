@@ -18,3 +18,10 @@
 2023-09-19 00:37:14,504 - INFO - Downloaded image for city_id: 128, 8 of 9
 2023-09-19 00:37:15,838 - INFO - Downloaded image for city_id: 128, 9 of 9
 2023-09-19 00:40:36,037 - INFO - No images scraped for city_id: 129
+2023-09-19 00:48:50,569 - INFO - Downloaded image for city_id: 130, 1 of 7
+2023-09-19 00:48:51,016 - INFO - Downloaded image for city_id: 130, 2 of 7
+2023-09-19 00:48:51,529 - INFO - Downloaded image for city_id: 130, 3 of 7
+2023-09-19 00:48:57,054 - INFO - Downloaded image for city_id: 130, 4 of 7
+2023-09-19 00:48:57,523 - INFO - Downloaded image for city_id: 130, 5 of 7
+2023-09-19 00:48:57,909 - INFO - Downloaded image for city_id: 130, 6 of 7
+2023-09-19 00:48:58,367 - INFO - Downloaded image for city_id: 130, 7 of 7
