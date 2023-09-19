@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 122,
+        "council_member": "Donnie Tuck",
+        "img_url": "https://www.citystats.xyz/images/cities/122/mayor"
+    },
+    {
+        "city_id": 122,
+        "council_member": "Jimmy Gray",
+        "img_url": "https://www.citystats.xyz/images/cities/122/city_council/1"
+    },
+    {
+        "city_id": 122,
+        "council_member": "Chris Bowman",
+        "img_url": "https://www.citystats.xyz/images/cities/122/city_council/2"
+    },
+    {
+        "city_id": 122,
+        "council_member": "Steven L. Brown",
+        "img_url": "https://www.citystats.xyz/images/cities/122/city_council/3"
+    },
+    {
+        "city_id": 122,
+        "council_member": "Hope L. Harper",
+        "img_url": "https://www.citystats.xyz/images/cities/122/city_council/4"
+    },
+    {
+        "city_id": 122,
+        "council_member": "Billy Hobbs",
+        "img_url": "https://www.citystats.xyz/images/cities/122/city_council/5"
+    },
+    {
+        "city_id": 122,
+        "council_member": "Martha Mugler",
+        "img_url": "https://www.citystats.xyz/images/cities/122/city_council/6"
+    }
+]
