@@ -10,9 +10,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 124
-BASE_URL = 'https://www.hayward-ca.gov'
-CITY_COUNCIL_URL = 'https://www.hayward-ca.gov/your-government/city-council'
+CITY_ID = 125
+BASE_URL = 'https://www.cityofhenderson.com'
+CITY_COUNCIL_URL = 'https://www.cityofhenderson.com/government/departments/mayor-and-council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -47,17 +47,19 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('li.leaf')
+        results = r.html.find('li.sidenav_haschildren')
         for result in results:
-            data.append(result.text)
+            res = result.find('a')
+            for r in res:
+                if 'Mayor' in r.text or 'Ward' in r.text:
+                    data.append(r.text)
+        del data[0]
         for i, d in enumerate(data):
-            if 'Mayor Pro Tempore' in d:
-                data[i] = d.split('Tempore ')[1]
-            elif 'Mayor' in d:
+            if 'Mayor' in d:
                 data[i] = d.split('Mayor ')[1]
-            elif 'Councilmember' in d:
-                data[i] = d.split('Councilmember ')[1]
-        return data[:-3]
+            elif 'Ward' in d:
+                data[i] = d.split('- ')[1]
+        return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False

@@ -31,3 +31,4 @@
 2023-09-18 23:42:18,543 - INFO - No images scraped for city_id: 123
 2023-09-18 23:50:49,843 - ERROR - Error at city_id: 124 during scraping: too many values to unpack (expected 2)
 2023-09-18 23:51:17,688 - INFO - No images scraped for city_id: 124
+2023-09-18 23:59:43,882 - INFO - No images scraped for city_id: 125
