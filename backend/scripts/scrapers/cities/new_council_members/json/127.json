@@ -1,0 +1,42 @@
+[
+    {
+        "city_id": 127,
+        "council_member": "Esteban Bovo, Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/127/mayor"
+    },
+    {
+        "city_id": 127,
+        "council_member": "Monica Perez",
+        "img_url": "https://www.citystats.xyz/images/cities/127/city_council/1"
+    },
+    {
+        "city_id": 127,
+        "council_member": "Jacqueline Garcia-Roves",
+        "img_url": "https://www.citystats.xyz/images/cities/127/city_council/2"
+    },
+    {
+        "city_id": 127,
+        "council_member": "Bryan Calvo",
+        "img_url": "https://www.citystats.xyz/images/cities/127/city_council/3"
+    },
+    {
+        "city_id": 127,
+        "council_member": "Vivian Casals-Muñoz",
+        "img_url": "https://www.citystats.xyz/images/cities/127/city_council/4"
+    },
+    {
+        "city_id": 127,
+        "council_member": "Luis Rodriguez",
+        "img_url": "https://www.citystats.xyz/images/cities/127/city_council/5"
+    },
+    {
+        "city_id": 127,
+        "council_member": "Jesus Tundidor",
+        "img_url": "https://www.citystats.xyz/images/cities/127/city_council/6"
+    },
+    {
+        "city_id": 127,
+        "council_member": "Carl Zogby",
+        "img_url": "https://www.citystats.xyz/images/cities/127/city_council/7"
+    }
+]

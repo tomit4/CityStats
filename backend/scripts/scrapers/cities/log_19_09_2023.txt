@@ -1,1 +1,10 @@
 2023-09-19 00:03:55,386 - WARNING - Site for city_id: 126, not scrapable, website down...
+2023-09-19 00:12:38,787 - ERROR - Error at city_id: 127 during scraping: name 'CITY_COUNCIL_IMG_URL' is not defined
+2023-09-19 00:22:47,391 - INFO - Downloaded image for city_id: 127, 1 of 8
+2023-09-19 00:22:49,338 - INFO - Downloaded image for city_id: 127, 2 of 8
+2023-09-19 00:22:56,172 - INFO - Downloaded image for city_id: 127, 3 of 8
+2023-09-19 00:22:57,557 - INFO - Downloaded image for city_id: 127, 4 of 8
+2023-09-19 00:23:04,035 - INFO - Downloaded image for city_id: 127, 5 of 8
+2023-09-19 00:23:15,536 - INFO - Downloaded image for city_id: 127, 6 of 8
+2023-09-19 00:23:21,273 - INFO - Downloaded image for city_id: 127, 7 of 8
+2023-09-19 00:23:23,302 - INFO - Downloaded image for city_id: 127, 8 of 8
