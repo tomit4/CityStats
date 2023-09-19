@@ -1,0 +1,13 @@
+[
+    { "city_id": 121, "council_member": "Travis Stovall", "img_url": null },
+    { "city_id": 121, "council_member": "Dina DiNucci", "img_url": null },
+    { "city_id": 121, "council_member": "Eddy Morales", "img_url": null },
+    { "city_id": 121, "council_member": "Vince Jones-Dixon", "img_url": null },
+    { "city_id": 121, "council_member": "Jerry Hinton", "img_url": null },
+    {
+        "city_id": 121,
+        "council_member": "Sue Piazza, Council President",
+        "img_url": null
+    },
+    { "city_id": 121, "council_member": "Janine Gladfelter", "img_url": null }
+]
