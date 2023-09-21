@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 135,
+        "council_member": "Rory Rowland",
+        "img_url": "https://www.citystats.xyz/images/cities/135/mayor"
+    },
+    {
+        "city_id": 135,
+        "council_member": "John Perkins",
+        "img_url": "https://www.citystats.xyz/images/cities/135/city_council/1"
+    },
+    {
+        "city_id": 135,
+        "council_member": "Brice Stewart",
+        "img_url": "https://www.citystats.xyz/images/cities/135/city_council/2"
+    },
+    {
+        "city_id": 135,
+        "council_member": "Michael Steinmeyer",
+        "img_url": "https://www.citystats.xyz/images/cities/135/city_council/3"
+    },
+    {
+        "city_id": 135,
+        "council_member": "Dan Hobart",
+        "img_url": "https://www.citystats.xyz/images/cities/135/city_council/4"
+    },
+    {
+        "city_id": 135,
+        "council_member": "Jared Fears",
+        "img_url": "https://www.citystats.xyz/images/cities/135/city_council/5"
+    },
+    {
+        "city_id": 135,
+        "council_member": "Dr. Bridget McCandless",
+        "img_url": "https://www.citystats.xyz/images/cities/135/city_council/6"
+    }
+]
