@@ -1,0 +1,11 @@
+2023-09-20 20:35:08,563 - ERROR - Error at city_id: 133 during scraping: object of type 'Element' has no len()
+2023-09-20 20:40:07,163 - ERROR - Error at city_id: 133 during scraping: HTTPSConnectionPool(host='huntingtonbeachca.govhttps', port=443): Max retries exceeded with url: //www.huntingtonbeachca.gov/government/elected_officials/city_council/council_bios/vandermark.cfm (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4c72c3c150>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-09-20 20:41:03,731 - ERROR - Error at city_id: 133 during scraping: HTTPSConnectionPool(host='huntingtonbeachca.govhttps', port=443): Max retries exceeded with url: //www.huntingtonbeachca.gov/government/elected_officials/city_council/council_bios/vandermark.cfm (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f32d4110390>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-09-20 20:41:30,602 - ERROR - Error at city_id: 133 during scraping: HTTPSConnectionPool(host='huntingtonbeachca.govhttps', port=443): Max retries exceeded with url: //www.huntingtonbeachca.gov/government/elected_officials/city_council/council_bios/vandermark.cfm (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fada9524750>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-09-20 20:45:21,139 - INFO - Downloaded image for city_id: 133, 1 of 7
+2023-09-20 20:45:21,808 - INFO - Downloaded image for city_id: 133, 2 of 7
+2023-09-20 20:45:35,107 - INFO - Downloaded image for city_id: 133, 3 of 7
+2023-09-20 20:45:35,291 - INFO - Downloaded image for city_id: 133, 4 of 7
+2023-09-20 20:45:35,592 - INFO - Downloaded image for city_id: 133, 5 of 7
+2023-09-20 20:45:35,935 - INFO - Downloaded image for city_id: 133, 6 of 7
+2023-09-20 20:45:41,401 - INFO - Downloaded image for city_id: 133, 7 of 7
