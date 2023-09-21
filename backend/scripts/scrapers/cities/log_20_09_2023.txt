@@ -32,3 +32,10 @@
 2023-09-20 22:35:40,062 - ERROR - Error at city_id: 139 during scraping: list index out of range
 2023-09-20 22:39:32,994 - ERROR - Error at city_id: 139 during scraping: list assignment index out of range
 2023-09-20 22:42:56,742 - INFO - No images scraped for city_id: 139
+2023-09-20 23:02:24,460 - INFO - Downloaded image for city_id: 140, 1 of 7
+2023-09-20 23:02:30,085 - INFO - Downloaded image for city_id: 140, 2 of 7
+2023-09-20 23:02:30,785 - INFO - Downloaded image for city_id: 140, 3 of 7
+2023-09-20 23:02:31,278 - INFO - Downloaded image for city_id: 140, 4 of 7
+2023-09-20 23:02:37,486 - INFO - Downloaded image for city_id: 140, 5 of 7
+2023-09-20 23:02:38,123 - INFO - Downloaded image for city_id: 140, 6 of 7
+2023-09-20 23:02:38,733 - INFO - Downloaded image for city_id: 140, 7 of 7
