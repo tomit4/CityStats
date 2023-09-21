@@ -22,3 +22,10 @@
 2023-09-20 22:00:54,037 - WARNING - Site for city_id: 136, not scrapable.
 2023-09-20 22:04:17,647 - ERROR - Error at city_id: 137 during scraping: Invalid URL '': No scheme supplied. Perhaps you meant https://?
 2023-09-20 22:06:50,558 - INFO - No images scraped for city_id: 137
+2023-09-20 22:09:33,327 - ERROR - Error at city_id: 138 during scraping: HTTPSConnectionPool(host='www.cityofirvine.org', port=443): Max retries exceeded with url: /city-council (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)')))
+2023-09-20 22:10:10,275 - ERROR - Error at city_id: 138 during scraping: HTTPSConnectionPool(host='www.cityofirvine.org', port=443): Max retries exceeded with url: /city-council (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)')))
+2023-09-20 22:21:25,105 - INFO - Downloaded image for city_id: 138, 1 of 5
+2023-09-20 22:21:25,275 - INFO - Downloaded image for city_id: 138, 2 of 5
+2023-09-20 22:21:25,542 - INFO - Downloaded image for city_id: 138, 3 of 5
+2023-09-20 22:21:25,702 - INFO - Downloaded image for city_id: 138, 4 of 5
+2023-09-20 22:21:26,987 - INFO - Downloaded image for city_id: 138, 5 of 5
