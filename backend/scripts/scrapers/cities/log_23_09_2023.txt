@@ -19,3 +19,8 @@
 2023-09-23 01:21:02,052 - INFO - Downloaded image for city_id: 143, 7 of 9
 2023-09-23 01:21:03,052 - INFO - Downloaded image for city_id: 143, 8 of 9
 2023-09-23 01:21:03,727 - INFO - Downloaded image for city_id: 143, 9 of 9
+2023-09-23 01:26:26,292 - INFO - Downloaded image for city_id: 144, 1 of 5
+2023-09-23 01:26:27,565 - INFO - Downloaded image for city_id: 144, 2 of 5
+2023-09-23 01:26:28,564 - INFO - Downloaded image for city_id: 144, 3 of 5
+2023-09-23 01:26:32,475 - INFO - Downloaded image for city_id: 144, 4 of 5
+2023-09-23 01:26:38,897 - INFO - Downloaded image for city_id: 144, 5 of 5
