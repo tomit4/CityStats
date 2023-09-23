@@ -1,0 +1,30 @@
+[
+    { "city_id": 141, "council_member": "Donna Deegan", "img_url": null },
+    { "city_id": 141, "council_member": "Ken Amaro", "img_url": null },
+    { "city_id": 141, "council_member": "Mike Gay", "img_url": null },
+    { "city_id": 141, "council_member": "Will Lahnen", "img_url": null },
+    { "city_id": 141, "council_member": "Kevin Carrico", "img_url": null },
+    { "city_id": 141, "council_member": "Joe Carlucci", "img_url": null },
+    { "city_id": 141, "council_member": "Michael Boylan", "img_url": null },
+    { "city_id": 141, "council_member": "Jimmy Peluso", "img_url": null },
+    {
+        "city_id": 141,
+        "council_member": "Reggie Gaffney, Jr.",
+        "img_url": null
+    },
+    {
+        "city_id": 141,
+        "council_member": "Tyrona Clark-Murray",
+        "img_url": null
+    },
+    { "city_id": 141, "council_member": "Ju'Coby Pittman", "img_url": null },
+    { "city_id": 141, "council_member": "Raul Arias", "img_url": null },
+    { "city_id": 141, "council_member": "Randy White", "img_url": null },
+    { "city_id": 141, "council_member": "Rory Diamond", "img_url": null },
+    { "city_id": 141, "council_member": "Rahman Johnson", "img_url": null },
+    { "city_id": 141, "council_member": "Terrance Freeman", "img_url": null },
+    { "city_id": 141, "council_member": "Ronald B. Salem", "img_url": null },
+    { "city_id": 141, "council_member": "Nick Howland", "img_url": null },
+    { "city_id": 141, "council_member": "Matt Carlucci", "img_url": null },
+    { "city_id": 141, "council_member": "Chris Miller", "img_url": null }
+]

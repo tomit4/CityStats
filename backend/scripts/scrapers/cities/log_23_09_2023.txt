@@ -1,0 +1,2 @@
+2023-09-23 00:44:40,258 - ERROR - Error at city_id: 141 during scraping: 'list' object has no attribute 'attrs'
+2023-09-23 00:52:34,377 - INFO - No images scraped for city_id: 141
