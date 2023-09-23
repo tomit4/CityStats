@@ -1,0 +1,19 @@
+[
+    { "city_id": 145, "council_member": "Quinton Lucas", "img_url": null },
+    { "city_id": 145, "council_member": "Kevin O'Neill", "img_url": null },
+    { "city_id": 145, "council_member": "Nathan Willett", "img_url": null },
+    { "city_id": 145, "council_member": "Lindsay French", "img_url": null },
+    { "city_id": 145, "council_member": "Wes Rogers", "img_url": null },
+    {
+        "city_id": 145,
+        "council_member": "Melissa Patterson Hazley",
+        "img_url": null
+    },
+    { "city_id": 145, "council_member": "Melissa Robinson", "img_url": null },
+    { "city_id": 145, "council_member": "Crispin Rea", "img_url": null },
+    { "city_id": 145, "council_member": "Eric Bunch", "img_url": null },
+    { "city_id": 145, "council_member": "Darrell Curls", "img_url": null },
+    { "city_id": 145, "council_member": "Ryana Parks-Shaw", "img_url": null },
+    { "city_id": 145, "council_member": "Andrea Bough", "img_url": null },
+    { "city_id": 145, "council_member": "Johnathan Duncan", "img_url": null }
+]
