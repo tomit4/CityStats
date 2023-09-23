@@ -1,2 +1,12 @@
 2023-09-23 00:44:40,258 - ERROR - Error at city_id: 141 during scraping: 'list' object has no attribute 'attrs'
 2023-09-23 00:52:34,377 - INFO - No images scraped for city_id: 141
+2023-09-23 01:07:22,302 - ERROR - Error at city_id: 142 during scraping: Expected ident, got <DELIM '/' at 1>
+2023-09-23 01:11:59,035 - INFO - Downloaded image for city_id: 142, 1 of 9
+2023-09-23 01:11:59,447 - INFO - Downloaded image for city_id: 142, 2 of 9
+2023-09-23 01:12:00,016 - INFO - Downloaded image for city_id: 142, 3 of 9
+2023-09-23 01:12:00,769 - INFO - Downloaded image for city_id: 142, 4 of 9
+2023-09-23 01:12:02,200 - INFO - Downloaded image for city_id: 142, 5 of 9
+2023-09-23 01:12:03,920 - INFO - Downloaded image for city_id: 142, 6 of 9
+2023-09-23 01:12:10,052 - INFO - Downloaded image for city_id: 142, 7 of 9
+2023-09-23 01:12:16,563 - INFO - Downloaded image for city_id: 142, 8 of 9
+2023-09-23 01:12:19,915 - INFO - Downloaded image for city_id: 142, 9 of 9
