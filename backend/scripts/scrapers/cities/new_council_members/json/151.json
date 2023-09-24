@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 151,
+        "council_member": "William \"Bill\" Mutz",
+        "img_url": "https://www.citystats.xyz/images/cities/151/mayor"
+    },
+    {
+        "city_id": 151,
+        "council_member": "Stephanie Madden",
+        "img_url": "https://www.citystats.xyz/images/cities/151/city_council/1"
+    },
+    {
+        "city_id": 151,
+        "council_member": "Sara Roberts McCarley",
+        "img_url": "https://www.citystats.xyz/images/cities/151/city_council/2"
+    },
+    {
+        "city_id": 151,
+        "council_member": "Chad McLeod",
+        "img_url": "https://www.citystats.xyz/images/cities/151/city_council/3"
+    },
+    {
+        "city_id": 151,
+        "council_member": "Mike Musick",
+        "img_url": "https://www.citystats.xyz/images/cities/151/city_council/4"
+    },
+    {
+        "city_id": 151,
+        "council_member": "Bill Read",
+        "img_url": "https://www.citystats.xyz/images/cities/151/city_council/5"
+    },
+    {
+        "city_id": 151,
+        "council_member": "Sam Simmons",
+        "img_url": "https://www.citystats.xyz/images/cities/151/city_council/6"
+    }
+]
