@@ -1,0 +1,1 @@
+2023-09-24 00:03:14,408 - INFO - No images scraped for city_id: 166

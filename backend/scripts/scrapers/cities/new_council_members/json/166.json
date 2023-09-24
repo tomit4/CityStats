@@ -1,0 +1,14 @@
+[
+    { "city_id": 166, "council_member": "Joan Peck", "img_url": null },
+    {
+        "city_id": 166,
+        "council_member": "Susie Hidalgo-Fahring",
+        "img_url": null
+    },
+    { "city_id": 166, "council_member": "Marcia Martin", "img_url": null },
+    { "city_id": 166, "council_member": "Sean McCoy", "img_url": null },
+    { "city_id": 166, "council_member": "Joan Peck", "img_url": null },
+    { "city_id": 166, "council_member": "Aren Rodriguez", "img_url": null },
+    { "city_id": 166, "council_member": "Tim Waters", "img_url": null },
+    { "city_id": 166, "council_member": "Shiquita Yarbrough", "img_url": null }
+]
