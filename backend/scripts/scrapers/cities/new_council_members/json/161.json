@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 161,
+        "council_member": "TJ Gilmore",
+        "img_url": "https://www.citystats.xyz/images/cities/161/mayor"
+    },
+    {
+        "city_id": 161,
+        "council_member": "Bob Troyer",
+        "img_url": "https://www.citystats.xyz/images/cities/161/city_council/1"
+    },
+    {
+        "city_id": 161,
+        "council_member": "William J. Meridith",
+        "img_url": "https://www.citystats.xyz/images/cities/161/city_council/2"
+    },
+    {
+        "city_id": 161,
+        "council_member": "Ronni Cade",
+        "img_url": "https://www.citystats.xyz/images/cities/161/city_council/3"
+    },
+    {
+        "city_id": 161,
+        "council_member": "Brandon Jones",
+        "img_url": "https://www.citystats.xyz/images/cities/161/city_council/4"
+    },
+    {
+        "city_id": 161,
+        "council_member": "Kristin Green",
+        "img_url": "https://www.citystats.xyz/images/cities/161/city_council/5"
+    },
+    {
+        "city_id": 161,
+        "council_member": "Patrick Kelly",
+        "img_url": "https://www.citystats.xyz/images/cities/161/city_council/6"
+    }
+]
