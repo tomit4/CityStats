@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 154,
+        "council_member": "R. Rex Parris",
+        "img_url": "https://www.citystats.xyz/images/cities/154/mayor"
+    },
+    {
+        "city_id": 154,
+        "council_member": ". Rex Parris",
+        "img_url": "https://www.citystats.xyz/images/cities/154/city_council/1"
+    },
+    {
+        "city_id": 154,
+        "council_member": "Ken Mann",
+        "img_url": "https://www.citystats.xyz/images/cities/154/city_council/2"
+    },
+    {
+        "city_id": 154,
+        "council_member": "Raj Malhi",
+        "img_url": "https://www.citystats.xyz/images/cities/154/city_council/3"
+    },
+    {
+        "city_id": 154,
+        "council_member": "Lauren Hughes-Leslie",
+        "img_url": "https://www.citystats.xyz/images/cities/154/city_council/4"
+    }
+]
