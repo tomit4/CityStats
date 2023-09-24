@@ -1,0 +1,165 @@
+#!/usr/bin/env python3
+# scrapes council member names and images.
+import os
+import json
+import logging
+import requests
+from datetime import datetime
+# Use requests_html when JS is required on website
+# https://requests.readthedocs.io/projects/requests-html/en/latest/
+from requests_html import HTMLSession
+
+session = HTMLSession()
+
+# Change based off of which site being scraped
+CITY_ID = 163
+BASE_URL = 'https://www.lincoln.ne.gov'
+CITY_COUNCIL_URL = 'https://www.lincoln.ne.gov/City/City-Council/Council-Members'
+MAYOR_URL = 'https://en.wikipedia.org/wiki/Lincoln,_Nebraska'
+MAYOR_IMG_URL = 'https://www.lincoln.ne.gov/City/Mayor'
+BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
+
+PATH_ID = f'{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
+PATH_ID = f'{CITY_ID}'
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_arr):
+    for i, img_url in enumerate(img_arr):
+        # uri string conversion (i.e. %20 spaces %3F question marks, etc.)
+        if '.png' in img_url:
+            file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.png'
+        else:
+            file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
+        # 403 passed without user agent string
+        img_data = requests.get(
+            img_url,
+            stream=True,
+            headers={
+                'User-agent': 'Mozilla/5.0'
+            },
+        ).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(
+            f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
+        )
+
+
+def parse_json(results):
+    json_arr = []
+    for result in results:
+        data = {}
+        data['city_id'] = CITY_ID
+        # council_member usually needs to be changed
+        data['council_member'] = result
+        json_arr.append(data)
+    for i, data in enumerate(json_arr):
+        if i == 0:
+            data['img_url'] = f'{BASE_IMG_PATH}/mayor'
+        else:
+            data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
+    with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
+        json.dump(json_arr, writeJSON, ensure_ascii=False)
+
+
+def prepend_mayor_img_url_to(member_img_urls):
+    try:
+        r = session.get(MAYOR_IMG_URL)
+        images = r.html.find('.main-page-image')
+        for image in images:
+            if 'src' in image.attrs:
+                member_img_urls.insert(0, f"{BASE_URL}{image.attrs['src']}")
+        return member_img_urls
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def grab_img_urls_from(member_urls):
+    try:
+        data = []
+        for url in member_urls:
+            r = session.get(url)
+            images = r.html.find('.main-page-image')
+            for image in images:
+                if 'src' in image.attrs:
+                    data.append(f"{BASE_URL}{image.attrs['src']}")
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def grab_member_urls():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        data = []
+        results = r.html.find('header')
+        for result in results:
+            a_tags = result.find('a')
+            for a_tag in a_tags:
+                if 'href' in a_tag.attrs:
+                    if 'district-' in a_tag.attrs['href'].lower(
+                    ) or 'at-large-' in a_tag.attrs['href'].lower():
+                        data.append(a_tag.attrs['href'])
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def prepend_mayor_to(member_names):
+    try:
+        r = session.get(MAYOR_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('.mergedrow')
+        for result in results:
+            ths = result.find('th')
+            for th in ths:
+                if 'Mayor' in th.text:
+                    tds = result.find('.infobox-data')
+                    for td in tds:
+                        member_names.insert(0, td.text.split(' (')[0])
+        return member_names
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def scrape_data():
+    try:
+        r = session.get(CITY_COUNCIL_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        data = []
+        results = r.html.find('.list-item-title')
+        for result in results:
+            data.append(result.text)
+        return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+if __name__ == "__main__":
+    member_names = scrape_data()
+    results = prepend_mayor_to(member_names)
+    if results:
+        parse_json(results)
+    member_urls = grab_member_urls()
+    member_img_urls = grab_img_urls_from(member_urls)
+    img_urls = prepend_mayor_img_url_to(member_img_urls)
+    download_images(img_urls)
