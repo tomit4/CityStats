@@ -1,0 +1,42 @@
+[
+    {
+        "city_id": 159,
+        "council_member": "Nick Long",
+        "img_url": "https://www.citystats.xyz/images/cities/159/mayor"
+    },
+    {
+        "city_id": 159,
+        "council_member": "Andy Mann",
+        "img_url": "https://www.citystats.xyz/images/cities/159/city_council/1"
+    },
+    {
+        "city_id": 159,
+        "council_member": "Tommy Cones",
+        "img_url": "https://www.citystats.xyz/images/cities/159/city_council/2"
+    },
+    {
+        "city_id": 159,
+        "council_member": "Tom Crews",
+        "img_url": "https://www.citystats.xyz/images/cities/159/city_council/3"
+    },
+    {
+        "city_id": 159,
+        "council_member": "John Bowen",
+        "img_url": "https://www.citystats.xyz/images/cities/159/city_council/4"
+    },
+    {
+        "city_id": 159,
+        "council_member": "Justin Hicks",
+        "img_url": "https://www.citystats.xyz/images/cities/159/city_council/5"
+    },
+    {
+        "city_id": 159,
+        "council_member": "Chad Tressler",
+        "img_url": "https://www.citystats.xyz/images/cities/159/city_council/6"
+    },
+    {
+        "city_id": 159,
+        "council_member": "Sean Saunders",
+        "img_url": "https://www.citystats.xyz/images/cities/159/city_council/7"
+    }
+]
