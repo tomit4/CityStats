@@ -1,0 +1,6 @@
+2023-09-25 00:08:18,363 - INFO - Downloaded image for city_id: 194, 1 of 6
+2023-09-25 00:08:19,024 - INFO - Downloaded image for city_id: 194, 2 of 6
+2023-09-25 00:08:19,969 - INFO - Downloaded image for city_id: 194, 3 of 6
+2023-09-25 00:08:26,268 - INFO - Downloaded image for city_id: 194, 4 of 6
+2023-09-25 00:08:28,394 - INFO - Downloaded image for city_id: 194, 5 of 6
+2023-09-25 00:08:29,903 - INFO - Downloaded image for city_id: 194, 6 of 6
