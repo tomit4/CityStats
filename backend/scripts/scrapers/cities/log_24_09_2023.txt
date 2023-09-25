@@ -149,3 +149,17 @@
 2023-09-24 21:35:08,190 - INFO - Downloaded image for city_id: 188, 7 of 8
 2023-09-24 21:35:09,394 - INFO - Downloaded image for city_id: 188, 8 of 8
 2023-09-24 21:39:31,069 - INFO - No images scraped for city_id: 189
+2023-09-24 21:42:46,672 - ERROR - Error at city_id: 190 during scraping: list index out of range
+2023-09-24 21:43:32,780 - ERROR - Error at city_id: 190 during scraping: list index out of range
+2023-09-24 21:43:49,497 - ERROR - Error at city_id: 190 during scraping: list index out of range
+2023-09-24 21:44:17,229 - ERROR - Error at city_id: 190 during scraping: list index out of range
+2023-09-24 21:53:49,694 - INFO - Downloaded image for city_id: 190, 1 of 10
+2023-09-24 21:53:55,196 - INFO - Downloaded image for city_id: 190, 2 of 10
+2023-09-24 21:54:00,482 - INFO - Downloaded image for city_id: 190, 3 of 10
+2023-09-24 21:54:01,050 - INFO - Downloaded image for city_id: 190, 4 of 10
+2023-09-24 21:54:01,418 - INFO - Downloaded image for city_id: 190, 5 of 10
+2023-09-24 21:54:10,187 - INFO - Downloaded image for city_id: 190, 6 of 10
+2023-09-24 21:54:15,640 - INFO - Downloaded image for city_id: 190, 7 of 10
+2023-09-24 21:54:16,004 - INFO - Downloaded image for city_id: 190, 8 of 10
+2023-09-24 21:54:16,233 - INFO - Downloaded image for city_id: 190, 9 of 10
+2023-09-24 21:54:16,952 - INFO - Downloaded image for city_id: 190, 10 of 10
