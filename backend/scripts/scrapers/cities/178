@@ -12,10 +12,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 177
-BASE_URL = 'https://www.memphistn.gov'
-CITY_COUNCIL_URL = 'https://www.memphistn.gov/city-council/'
-MAYOR_URL = 'https://www.memphistn.gov/mayor/'
+CITY_ID = 178
+BASE_URL = 'https://www.cityofmenifee.us'
+CITY_COUNCIL_URL = 'https://www.cityofmenifee.us/89/City-Council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -67,7 +66,7 @@ def parse_json(results):
         json_arr.append(data)
     for i, data in enumerate(json_arr):
         if i == 0:
-            data['img_url'] = None
+            data['img_url'] = f'{BASE_IMG_PATH}/mayor'
         else:
             data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
     with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
@@ -79,29 +78,16 @@ def grab_img_urls():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.et_pb_team_member_image')
+        results = r.html.find('.widgetBody')
         for result in results:
             images = result.find('img')
             for image in images:
-                if 'src' in image.attrs:
-                    data.append(image.attrs['src'])
+                if 'src' in image.attrs and 'alt' in image.attrs:
+                    if 'Mayor' in image.attrs[
+                            'alt'] or 'Councilmember' in image.attrs['alt']:
+                        if f"{BASE_URL}{image.attrs['src']}" not in data:
+                            data.append(f"{BASE_URL}{image.attrs['src']}")
         return data
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
-def prepend_mayor_to(member_names):
-    try:
-        r = session.get(MAYOR_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('.et_pb_text_inner')
-        for result in results:
-            h2s = result.find('h2')
-            for h2 in h2s:
-                if 'Mayor' in h2.text:
-                    member_names.insert(0, h2.text.split('Mayor ')[1])
-        return member_names
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
@@ -112,11 +98,17 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.et_pb_team_member_description')
+        results = r.html.find('.fr-view')
         for result in results:
-            h2s = result.find('h2')
-            for h2 in h2s:
-                data.append(h2.text)
+            strongs = result.find('strong')
+            for strong in strongs:
+                if 'District' not in strong.text:
+                    data.append(strong.text)
+        for i, d in enumerate(data):
+            if 'Mayor Pro' in d:
+                data[i] = d.split('Mayor Pro ')[1]
+            elif "Mayor" in d:
+                data[i] = d.split('Mayor ')[1]
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -124,8 +116,7 @@ def scrape_data():
 
 
 if __name__ == "__main__":
-    member_names = scrape_data()
-    results = prepend_mayor_to(member_names)
+    results = scrape_data()
     if results:
         parse_json(results)
     img_urls = grab_img_urls()

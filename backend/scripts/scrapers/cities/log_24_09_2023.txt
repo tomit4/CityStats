@@ -31,3 +31,23 @@
 2023-09-24 19:26:04,549 - INFO - Downloaded image for city_id: 177, 11 of 13
 2023-09-24 19:26:05,125 - INFO - Downloaded image for city_id: 177, 12 of 13
 2023-09-24 19:26:05,918 - INFO - Downloaded image for city_id: 177, 13 of 13
+2023-09-24 19:33:24,087 - INFO - Downloaded image for city_id: 178, 1 of 8
+2023-09-24 19:33:25,353 - INFO - Downloaded image for city_id: 178, 2 of 8
+2023-09-24 19:33:26,507 - INFO - Downloaded image for city_id: 178, 3 of 8
+2023-09-24 19:33:32,543 - INFO - Downloaded image for city_id: 178, 4 of 8
+2023-09-24 19:33:38,373 - INFO - Downloaded image for city_id: 178, 5 of 8
+2023-09-24 19:33:39,165 - INFO - Downloaded image for city_id: 178, 6 of 8
+2023-09-24 19:33:39,917 - INFO - Downloaded image for city_id: 178, 7 of 8
+2023-09-24 19:33:49,122 - INFO - Downloaded image for city_id: 178, 8 of 8
+2023-09-24 19:35:34,729 - ERROR - Error at city_id: 178 during scraping: name 'iamge' is not defined
+2023-09-24 19:35:52,290 - INFO - Downloaded image for city_id: 178, 1 of 6
+2023-09-24 19:35:53,534 - INFO - Downloaded image for city_id: 178, 2 of 6
+2023-09-24 19:35:59,398 - INFO - Downloaded image for city_id: 178, 3 of 6
+2023-09-24 19:36:00,153 - INFO - Downloaded image for city_id: 178, 4 of 6
+2023-09-24 19:36:04,124 - INFO - Downloaded image for city_id: 178, 5 of 6
+2023-09-24 19:36:04,985 - INFO - Downloaded image for city_id: 178, 6 of 6
+2023-09-24 19:37:18,240 - INFO - Downloaded image for city_id: 178, 1 of 5
+2023-09-24 19:37:22,451 - INFO - Downloaded image for city_id: 178, 2 of 5
+2023-09-24 19:37:23,205 - INFO - Downloaded image for city_id: 178, 3 of 5
+2023-09-24 19:37:23,984 - INFO - Downloaded image for city_id: 178, 4 of 5
+2023-09-24 19:37:24,827 - INFO - Downloaded image for city_id: 178, 5 of 5
