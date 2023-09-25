@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 191,
+        "council_member": "Ulises Cabrera",
+        "img_url": "https://www.citystats.xyz/images/cities/191/mayor"
+    },
+    {
+        "city_id": 191,
+        "council_member": "Elena Baca-Santa Cruz",
+        "img_url": "https://www.citystats.xyz/images/cities/191/city_council/1"
+    },
+    {
+        "city_id": 191,
+        "council_member": "Ed A. Delgado",
+        "img_url": "https://www.citystats.xyz/images/cities/191/city_council/2"
+    },
+    {
+        "city_id": 191,
+        "council_member": "David Marquez",
+        "img_url": "https://www.citystats.xyz/images/cities/191/city_council/3"
+    },
+    {
+        "city_id": 191,
+        "council_member": "Cheylynda Barnard",
+        "img_url": "https://www.citystats.xyz/images/cities/191/city_council/4"
+    }
+]
