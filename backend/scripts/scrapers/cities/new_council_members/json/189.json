@@ -1,0 +1,17 @@
+[
+    { "city_id": 189, "council_member": "Sue Zwahlen", "img_url": null },
+    {
+        "city_id": 189,
+        "council_member": "Rosa Escutia-Braaton",
+        "img_url": null
+    },
+    { "city_id": 189, "council_member": "Eric E. Alvarez", "img_url": null },
+    {
+        "city_id": 189,
+        "council_member": "Chris Ricci, District 3",
+        "img_url": null
+    },
+    { "city_id": 189, "council_member": "Nick Bavaro", "img_url": null },
+    { "city_id": 189, "council_member": "Jeremiah Williams", "img_url": null },
+    { "city_id": 189, "council_member": "David Wright", "img_url": null }
+]

@@ -148,3 +148,4 @@
 2023-09-24 21:35:06,977 - INFO - Downloaded image for city_id: 188, 6 of 8
 2023-09-24 21:35:08,190 - INFO - Downloaded image for city_id: 188, 7 of 8
 2023-09-24 21:35:09,394 - INFO - Downloaded image for city_id: 188, 8 of 8
+2023-09-24 21:39:31,069 - INFO - No images scraped for city_id: 189
