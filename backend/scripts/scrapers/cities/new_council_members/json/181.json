@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 181,
+        "council_member": "Daniel Alemán Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/181/mayor"
+    },
+    {
+        "city_id": 181,
+        "council_member": "Jeff Casper",
+        "img_url": "https://www.citystats.xyz/images/cities/181/city_council/1"
+    },
+    {
+        "city_id": 181,
+        "council_member": "Kenny Green",
+        "img_url": "https://www.citystats.xyz/images/cities/181/city_council/2"
+    },
+    {
+        "city_id": 181,
+        "council_member": "Jennifer Vidler",
+        "img_url": "https://www.citystats.xyz/images/cities/181/city_council/3"
+    },
+    {
+        "city_id": 181,
+        "council_member": "Tandy Boroughs",
+        "img_url": "https://www.citystats.xyz/images/cities/181/city_council/4"
+    },
+    {
+        "city_id": 181,
+        "council_member": "B.W. Smith",
+        "img_url": "https://www.citystats.xyz/images/cities/181/city_council/5"
+    },
+    {
+        "city_id": 181,
+        "council_member": "Debbie Anderson",
+        "img_url": "https://www.citystats.xyz/images/cities/181/city_council/6"
+    }
+]

@@ -19,7 +19,6 @@ BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
 IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
-PATH_ID = f'{CITY_ID}'
 
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
