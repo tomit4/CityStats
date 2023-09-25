@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 193,
+        "council_member": "Lisa DeForest",
+        "img_url": "https://www.citystats.xyz/images/cities/193/mayor"
+    },
+    {
+        "city_id": 193,
+        "council_member": "Lori Stone",
+        "img_url": "https://www.citystats.xyz/images/cities/193/city_council/1"
+    },
+    {
+        "city_id": 193,
+        "council_member": "Jon Levell",
+        "img_url": "https://www.citystats.xyz/images/cities/193/city_council/2"
+    },
+    {
+        "city_id": 193,
+        "council_member": "Ron Holliday",
+        "img_url": "https://www.citystats.xyz/images/cities/193/city_council/3"
+    },
+    {
+        "city_id": 193,
+        "council_member": "Cindy Warren",
+        "img_url": "https://www.citystats.xyz/images/cities/193/city_council/4"
+    }
+]
