@@ -17,3 +17,17 @@
 2023-09-24 19:00:49,991 - INFO - No images scraped for city_id: 174
 2023-09-24 19:07:28,074 - INFO - No images scraped for city_id: 175
 2023-09-24 19:11:56,595 - INFO - No images scraped for city_id: 176
+2023-09-24 19:17:04,880 - ERROR - Error at city_id: 177 during scraping: name 'results' is not defined
+2023-09-24 19:25:55,231 - INFO - Downloaded image for city_id: 177, 1 of 13
+2023-09-24 19:25:55,595 - INFO - Downloaded image for city_id: 177, 2 of 13
+2023-09-24 19:25:56,023 - INFO - Downloaded image for city_id: 177, 3 of 13
+2023-09-24 19:25:56,483 - INFO - Downloaded image for city_id: 177, 4 of 13
+2023-09-24 19:25:56,830 - INFO - Downloaded image for city_id: 177, 5 of 13
+2023-09-24 19:25:57,165 - INFO - Downloaded image for city_id: 177, 6 of 13
+2023-09-24 19:25:57,724 - INFO - Downloaded image for city_id: 177, 7 of 13
+2023-09-24 19:26:03,453 - INFO - Downloaded image for city_id: 177, 8 of 13
+2023-09-24 19:26:03,949 - INFO - Downloaded image for city_id: 177, 9 of 13
+2023-09-24 19:26:04,156 - INFO - Downloaded image for city_id: 177, 10 of 13
+2023-09-24 19:26:04,549 - INFO - Downloaded image for city_id: 177, 11 of 13
+2023-09-24 19:26:05,125 - INFO - Downloaded image for city_id: 177, 12 of 13
+2023-09-24 19:26:05,918 - INFO - Downloaded image for city_id: 177, 13 of 13
