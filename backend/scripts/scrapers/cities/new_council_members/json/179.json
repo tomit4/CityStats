@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 179,
+        "council_member": "Robert Simison",
+        "img_url": "https://www.citystats.xyz/images/cities/179/mayor"
+    },
+    {
+        "city_id": 179,
+        "council_member": "Brad Hoaglun",
+        "img_url": "https://www.citystats.xyz/images/cities/179/city_council/1"
+    },
+    {
+        "city_id": 179,
+        "council_member": "Joe Borton",
+        "img_url": "https://www.citystats.xyz/images/cities/179/city_council/2"
+    },
+    {
+        "city_id": 179,
+        "council_member": "Liz Strader",
+        "img_url": "https://www.citystats.xyz/images/cities/179/city_council/3"
+    },
+    {
+        "city_id": 179,
+        "council_member": "John Overton",
+        "img_url": "https://www.citystats.xyz/images/cities/179/city_council/4"
+    },
+    {
+        "city_id": 179,
+        "council_member": "Jessica Perreault",
+        "img_url": "https://www.citystats.xyz/images/cities/179/city_council/5"
+    },
+    {
+        "city_id": 179,
+        "council_member": "Luke Cavener",
+        "img_url": "https://www.citystats.xyz/images/cities/179/city_council/6"
+    }
+]
