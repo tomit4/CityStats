@@ -16,3 +16,4 @@
 2023-09-24 18:57:55,990 - ERROR - Error at city_id: 174 during scraping: 'Element' object has no attribute 'textt'
 2023-09-24 19:00:49,991 - INFO - No images scraped for city_id: 174
 2023-09-24 19:07:28,074 - INFO - No images scraped for city_id: 175
+2023-09-24 19:11:56,595 - INFO - No images scraped for city_id: 176
