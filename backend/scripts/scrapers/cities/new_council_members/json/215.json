@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 215,
+        "council_member": "Dan Slater",
+        "img_url": "https://www.citystats.xyz/images/cities/215/mayor"
+    },
+    {
+        "city_id": 215,
+        "council_member": "Arianna Barrios",
+        "img_url": "https://www.citystats.xyz/images/cities/215/city_council/1"
+    },
+    {
+        "city_id": 215,
+        "council_member": "Jon Dumitru",
+        "img_url": "https://www.citystats.xyz/images/cities/215/city_council/2"
+    },
+    {
+        "city_id": 215,
+        "council_member": "Kathy Tavoularis",
+        "img_url": "https://www.citystats.xyz/images/cities/215/city_council/3"
+    },
+    {
+        "city_id": 215,
+        "council_member": "Denis Bilodeau",
+        "img_url": "https://www.citystats.xyz/images/cities/215/city_council/4"
+    },
+    {
+        "city_id": 215,
+        "council_member": "Ana Gutierrez",
+        "img_url": "https://www.citystats.xyz/images/cities/215/city_council/5"
+    },
+    {
+        "city_id": 215,
+        "council_member": "John Gyllenhammer",
+        "img_url": "https://www.citystats.xyz/images/cities/215/city_council/6"
+    }
+]
