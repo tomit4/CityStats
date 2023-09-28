@@ -7,3 +7,11 @@
 2023-09-28 02:02:10,218 - INFO - Downloaded image for city_id: 211, 7 of 9
 2023-09-28 02:02:10,731 - INFO - Downloaded image for city_id: 211, 8 of 9
 2023-09-28 02:02:11,442 - INFO - Downloaded image for city_id: 211, 9 of 9
+2023-09-28 02:11:40,922 - ERROR - Error at city_id: 212 during scraping: 'list' object has no attribute 'find'
+2023-09-28 02:16:09,494 - INFO - Downloaded image for city_id: 212, 1 of 7
+2023-09-28 02:16:11,088 - INFO - Downloaded image for city_id: 212, 2 of 7
+2023-09-28 02:16:25,174 - INFO - Downloaded image for city_id: 212, 3 of 7
+2023-09-28 02:16:25,872 - INFO - Downloaded image for city_id: 212, 4 of 7
+2023-09-28 02:16:26,589 - INFO - Downloaded image for city_id: 212, 5 of 7
+2023-09-28 02:16:26,983 - INFO - Downloaded image for city_id: 212, 6 of 7
+2023-09-28 02:16:32,546 - INFO - Downloaded image for city_id: 212, 7 of 7
