@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 207,
+        "council_member": "Ana Valencia",
+        "img_url": "https://www.citystats.xyz/images/cities/207/mayor"
+    },
+    {
+        "city_id": 207,
+        "council_member": "Margarita L. Rios",
+        "img_url": "https://www.citystats.xyz/images/cities/207/city_council/1"
+    },
+    {
+        "city_id": 207,
+        "council_member": "Tony Ayala",
+        "img_url": "https://www.citystats.xyz/images/cities/207/city_council/2"
+    },
+    {
+        "city_id": 207,
+        "council_member": "Jennifer Perez",
+        "img_url": "https://www.citystats.xyz/images/cities/207/city_council/3"
+    },
+    {
+        "city_id": 207,
+        "council_member": "Rick Ramirez",
+        "img_url": "https://www.citystats.xyz/images/cities/207/city_council/4"
+    }
+]
