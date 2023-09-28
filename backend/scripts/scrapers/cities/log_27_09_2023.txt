@@ -1,1 +1,2 @@
 2023-09-27 20:51:14,639 - INFO - No images scraped for city_id: 201
+2023-09-27 20:59:31,681 - INFO - No images scraped for city_id: 202
