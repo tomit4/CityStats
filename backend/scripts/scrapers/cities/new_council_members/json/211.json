@@ -1,0 +1,47 @@
+[
+    {
+        "city_id": 211,
+        "council_member": "David Holt",
+        "img_url": "https://www.citystats.xyz/images/cities/211/mayor"
+    },
+    {
+        "city_id": 211,
+        "council_member": "Bradley Carter",
+        "img_url": "https://www.citystats.xyz/images/cities/211/city_council/1"
+    },
+    {
+        "city_id": 211,
+        "council_member": "James Cooper",
+        "img_url": "https://www.citystats.xyz/images/cities/211/city_council/2"
+    },
+    {
+        "city_id": 211,
+        "council_member": "Barbara Peck",
+        "img_url": "https://www.citystats.xyz/images/cities/211/city_council/3"
+    },
+    {
+        "city_id": 211,
+        "council_member": "Todd Stone",
+        "img_url": "https://www.citystats.xyz/images/cities/211/city_council/4"
+    },
+    {
+        "city_id": 211,
+        "council_member": "Matt Hinkle",
+        "img_url": "https://www.citystats.xyz/images/cities/211/city_council/5"
+    },
+    {
+        "city_id": 211,
+        "council_member": "JoBeth Hamon",
+        "img_url": "https://www.citystats.xyz/images/cities/211/city_council/6"
+    },
+    {
+        "city_id": 211,
+        "council_member": "Nikki Nice",
+        "img_url": "https://www.citystats.xyz/images/cities/211/city_council/7"
+    },
+    {
+        "city_id": 211,
+        "council_member": "Mark K. Stonecipher",
+        "img_url": "https://www.citystats.xyz/images/cities/211/city_council/8"
+    }
+]

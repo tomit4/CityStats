@@ -1,0 +1,9 @@
+2023-09-28 02:02:01,742 - INFO - Downloaded image for city_id: 211, 1 of 9
+2023-09-28 02:02:02,067 - INFO - Downloaded image for city_id: 211, 2 of 9
+2023-09-28 02:02:02,597 - INFO - Downloaded image for city_id: 211, 3 of 9
+2023-09-28 02:02:03,242 - INFO - Downloaded image for city_id: 211, 4 of 9
+2023-09-28 02:02:03,804 - INFO - Downloaded image for city_id: 211, 5 of 9
+2023-09-28 02:02:04,207 - INFO - Downloaded image for city_id: 211, 6 of 9
+2023-09-28 02:02:10,218 - INFO - Downloaded image for city_id: 211, 7 of 9
+2023-09-28 02:02:10,731 - INFO - Downloaded image for city_id: 211, 8 of 9
+2023-09-28 02:02:11,442 - INFO - Downloaded image for city_id: 211, 9 of 9
