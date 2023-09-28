@@ -122,7 +122,6 @@ def scrape_data():
             for a_tag in a_tags:
                 if 'Mayor' in a_tag.text or 'Councilmember' in a_tag.text:
                     data.append(a_tag.attrs['href'])
-                    #  data.append(a_tag.text)
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
