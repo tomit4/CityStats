@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 214,
+        "council_member": "Paul S. Leon",
+        "img_url": "https://www.citystats.xyz/images/cities/214/mayor"
+    },
+    {
+        "city_id": 214,
+        "council_member": "Debra Porada",
+        "img_url": "https://www.citystats.xyz/images/cities/214/city_council/1"
+    },
+    {
+        "city_id": 214,
+        "council_member": "Alan D. Wapner",
+        "img_url": "https://www.citystats.xyz/images/cities/214/city_council/2"
+    },
+    {
+        "city_id": 214,
+        "council_member": "Jim W. Bowman",
+        "img_url": "https://www.citystats.xyz/images/cities/214/city_council/3"
+    },
+    {
+        "city_id": 214,
+        "council_member": "Ruben Valencia",
+        "img_url": "https://www.citystats.xyz/images/cities/214/city_council/4"
+    }
+]
