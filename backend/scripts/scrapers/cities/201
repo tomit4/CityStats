@@ -10,10 +10,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 200
-BASE_URL = 'https://council.nola.gov'
-CITY_COUNCIL_URL = 'https://council.nola.gov/councilmembers/'
-MAYOR_URL = 'https://en.wikipedia.org/wiki/New_Orleans'
+CITY_ID = 201
+BASE_URL = 'https://nngov.civicweb.net'
+CITY_COUNCIL_URL = 'https://nngov.civicweb.net/portal/members.aspx?id=10'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -43,35 +42,14 @@ def parse_json(results):
         json.dump(json_arr, writeJSON, ensure_ascii=False)
 
 
-def prepend_mayor_to(member_names):
-    try:
-        r = session.get(MAYOR_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('.mergedrow')
-        for result in results:
-            infobox = result.find('.infobox-label')
-            for info in infobox:
-                if 'Mayor' in info.text and 'Deputy' not in info.text:
-                    info_data = result.find('.infobox-data')
-                    for info_d in info_data:
-                        member_names.insert(0, info_d.text.split(' (')[0])
-        return member_names
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
 def scrape_data():
     try:
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.col-sm-12')
-        #  'h4.card-title'
+        results = r.html.find('.member-name')
         for result in results:
-            cards = result.find('h4.card-title')
-            for card in cards:
-                data.append(card.text.split('\n')[0])
+            data.append(result.text)
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -79,8 +57,7 @@ def scrape_data():
 
 
 if __name__ == "__main__":
-    member_names = scrape_data()
-    results = prepend_mayor_to(member_names)
+    results = scrape_data()
     if results:
         parse_json(results)
     logging.info(f'No images scraped for city_id: {CITY_ID}')
