@@ -2,7 +2,6 @@
 # scrapes council member names and images.
 import os
 import json
-from unicodedata import normalize
 import logging
 import requests
 from datetime import datetime
