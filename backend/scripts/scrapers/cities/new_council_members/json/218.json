@@ -1,0 +1,13 @@
+[
+    { "city_id": 218, "council_member": "John C. Zaragoza", "img_url": null },
+    { "city_id": 218, "council_member": "Bryan A. MacDonald", "img_url": null },
+    { "city_id": 218, "council_member": "Bert E. Perello", "img_url": null },
+    { "city_id": 218, "council_member": "Gabe Teran", "img_url": null },
+    { "city_id": 218, "council_member": "Oscar Madrigal", "img_url": null },
+    { "city_id": 218, "council_member": "Gabriela Basua", "img_url": null },
+    {
+        "city_id": 218,
+        "council_member": "Arthur Valenzuela Zavala",
+        "img_url": null
+    }
+]

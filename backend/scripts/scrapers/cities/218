@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # scrapes council member names and images.
 import json
 import logging
@@ -10,10 +10,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 217
-BASE_URL = 'https://www.opkansas.org'
-CITY_COUNCIL_URL = 'https://www.opkansas.org/city-government/city-council-committees/city-council/'
-MAYOR_URL = 'https://en.wikipedia.org/wiki/Overland_Park,_Kansas'
+CITY_ID = 218
+BASE_URL = 'https://www.oxnard.org'
+CITY_COUNCIL_URL = 'https://www.oxnard.org/city-department/city-council/city-council-members/'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -44,37 +43,22 @@ def parse_json(results):
         json.dump(json_arr, writeJSON, ensure_ascii=False)
 
 
-def prepend_mayor_to(member_names):
-    try:
-        r = session.get(MAYOR_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('.mergedrow')
-        for result in results:
-            ths = result.find('th')
-            for th in ths:
-                if 'Mayor' in th.text:
-                    tds = result.find('.infobox-data')
-                    for td in tds:
-                        member_names.insert(0, td.text.split('[')[0])
-        return member_names
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
 def scrape_data():
     try:
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.link-list')
+        results = r.html.find('h4')
         for result in results:
-            lis = result.find('li')
-            for li in lis:
-                a_tags = li.find('a')
-                for a_tag in a_tags:
-                    if 'href' in a_tag.attrs:
-                        data.append(a_tag.text.split('Council Member ')[1])
+            if len(result.text):
+                data.append(result.text)
+        for i, d in enumerate(data):
+            if ', Mayor' in d:
+                data[i] = d.split(', Mayor')[0]
+            elif ', Councilmember' in d:
+                data[i] = d.split(', Councilmember')[0]
+            elif ', Councilwoman' in d:
+                data[i] = d.split(', Councilwoman')[0]
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -82,8 +66,7 @@ def scrape_data():
 
 
 if __name__ == "__main__":
-    member_names = scrape_data()
-    results = prepend_mayor_to(member_names)
+    results = scrape_data()
     if results:
         parse_json(results)
     logging.info(f'No images scraped for city_id: {CITY_ID}')
