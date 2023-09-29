@@ -52,3 +52,9 @@
 2023-09-29 01:50:27,469 - INFO - Downloaded image for city_id: 243, 6 of 8
 2023-09-29 01:50:27,644 - INFO - Downloaded image for city_id: 243, 7 of 8
 2023-09-29 01:50:27,892 - INFO - Downloaded image for city_id: 243, 8 of 8
+2023-09-29 01:55:06,746 - ERROR - Error at city_id: 244 during scraping: pop from empty list
+2023-09-29 01:56:52,425 - INFO - Downloaded image for city_id: 244, 1 of 5
+2023-09-29 01:56:52,725 - INFO - Downloaded image for city_id: 244, 2 of 5
+2023-09-29 01:56:53,024 - INFO - Downloaded image for city_id: 244, 3 of 5
+2023-09-29 01:56:53,483 - INFO - Downloaded image for city_id: 244, 4 of 5
+2023-09-29 01:56:54,147 - INFO - Downloaded image for city_id: 244, 5 of 5
