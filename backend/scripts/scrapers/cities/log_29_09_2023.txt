@@ -36,3 +36,19 @@
 2023-09-29 01:21:54,551 - INFO - Downloaded image for city_id: 241, 5 of 5
 2023-09-29 01:29:34,653 - ERROR - Error at city_id: 242 during scraping: 'tabindex'
 2023-09-29 01:33:51,880 - INFO - Downloaded image for city_id: 242, 1 of 1
+2023-09-29 01:49:12,694 - INFO - Downloaded image for city_id: 243, 1 of 8
+2023-09-29 01:49:12,879 - INFO - Downloaded image for city_id: 243, 2 of 8
+2023-09-29 01:49:13,063 - INFO - Downloaded image for city_id: 243, 3 of 8
+2023-09-29 01:49:13,215 - INFO - Downloaded image for city_id: 243, 4 of 8
+2023-09-29 01:49:13,359 - INFO - Downloaded image for city_id: 243, 5 of 8
+2023-09-29 01:49:13,516 - INFO - Downloaded image for city_id: 243, 6 of 8
+2023-09-29 01:49:13,660 - INFO - Downloaded image for city_id: 243, 7 of 8
+2023-09-29 01:49:13,856 - INFO - Downloaded image for city_id: 243, 8 of 8
+2023-09-29 01:50:26,325 - INFO - Downloaded image for city_id: 243, 1 of 8
+2023-09-29 01:50:26,493 - INFO - Downloaded image for city_id: 243, 2 of 8
+2023-09-29 01:50:26,989 - INFO - Downloaded image for city_id: 243, 3 of 8
+2023-09-29 01:50:27,156 - INFO - Downloaded image for city_id: 243, 4 of 8
+2023-09-29 01:50:27,320 - INFO - Downloaded image for city_id: 243, 5 of 8
+2023-09-29 01:50:27,469 - INFO - Downloaded image for city_id: 243, 6 of 8
+2023-09-29 01:50:27,644 - INFO - Downloaded image for city_id: 243, 7 of 8
+2023-09-29 01:50:27,892 - INFO - Downloaded image for city_id: 243, 8 of 8
