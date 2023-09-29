@@ -64,3 +64,13 @@
 2023-09-28 21:16:51,011 - INFO - No images scraped for city_id: 220
 2023-09-28 21:23:53,808 - INFO - No images scraped for city_id: 221
 2023-09-28 21:23:57,654 - INFO - No images scraped for city_id: 221
+2023-09-28 21:33:44,814 - ERROR - Error at city_id: 222 during scraping: name 'MAYOR_URL' is not defined
+2023-09-28 21:44:06,114 - INFO - Downloaded image for city_id: 222, 1 of 9
+2023-09-28 21:44:06,926 - INFO - Downloaded image for city_id: 222, 2 of 9
+2023-09-28 21:44:07,846 - INFO - Downloaded image for city_id: 222, 3 of 9
+2023-09-28 21:44:08,723 - INFO - Downloaded image for city_id: 222, 4 of 9
+2023-09-28 21:44:09,439 - INFO - Downloaded image for city_id: 222, 5 of 9
+2023-09-28 21:44:10,336 - INFO - Downloaded image for city_id: 222, 6 of 9
+2023-09-28 21:44:11,234 - INFO - Downloaded image for city_id: 222, 7 of 9
+2023-09-28 21:44:16,996 - INFO - Downloaded image for city_id: 222, 8 of 9
+2023-09-28 21:44:17,751 - INFO - Downloaded image for city_id: 222, 9 of 9

@@ -1,0 +1,47 @@
+[
+    {
+        "city_id": 222,
+        "council_member": "Jeff Wagner",
+        "img_url": "https://www.citystats.xyz/images/cities/222/mayor"
+    },
+    {
+        "city_id": 222,
+        "council_member": "Ruben Villarreal",
+        "img_url": "https://www.citystats.xyz/images/cities/222/city_council/1"
+    },
+    {
+        "city_id": 222,
+        "council_member": "Bianca Valerio",
+        "img_url": "https://www.citystats.xyz/images/cities/222/city_council/2"
+    },
+    {
+        "city_id": 222,
+        "council_member": "Emmanuel Guerrero",
+        "img_url": "https://www.citystats.xyz/images/cities/222/city_council/3"
+    },
+    {
+        "city_id": 222,
+        "council_member": "Pat Van Houte",
+        "img_url": "https://www.citystats.xyz/images/cities/222/city_council/4"
+    },
+    {
+        "city_id": 222,
+        "council_member": "Jonathan Estrada",
+        "img_url": "https://www.citystats.xyz/images/cities/222/city_council/5"
+    },
+    {
+        "city_id": 222,
+        "council_member": "Dolan Dow",
+        "img_url": "https://www.citystats.xyz/images/cities/222/city_council/6"
+    },
+    {
+        "city_id": 222,
+        "council_member": "Ornaldo Ybarra",
+        "img_url": "https://www.citystats.xyz/images/cities/222/city_council/7"
+    },
+    {
+        "city_id": 222,
+        "council_member": "Thomas Schoenbein",
+        "img_url": "https://www.citystats.xyz/images/cities/222/city_council/8"
+    }
+]
