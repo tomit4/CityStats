@@ -1,0 +1,21 @@
+[
+    { "city_id": 227, "council_member": "Rita Ali", "img_url": null },
+    { "city_id": 227, "council_member": "Denise Jackson", "img_url": null },
+    { "city_id": 227, "council_member": "Charles V. Grayeb", "img_url": null },
+    { "city_id": 227, "council_member": "Timothy Riggenbach", "img_url": null },
+    { "city_id": 227, "council_member": "Andre W. Allen", "img_url": null },
+    { "city_id": 227, "council_member": "Denis Cyr", "img_url": null },
+    { "city_id": 227, "council_member": "John L. Kelly", "img_url": null },
+    { "city_id": 227, "council_member": "Zachary M. Oyler", "img_url": null },
+    {
+        "city_id": 227,
+        "council_member": "Dr. Kiran Velpula, PhD, MBA",
+        "img_url": null
+    },
+    {
+        "city_id": 227,
+        "council_member": "Dr. Bernice Gordon-Young PhD, LCPC",
+        "img_url": null
+    },
+    { "city_id": 227, "council_member": "Michael P. Vespa", "img_url": null }
+]
