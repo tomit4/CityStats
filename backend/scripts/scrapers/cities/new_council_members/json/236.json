@@ -1,0 +1,78 @@
+[
+    { "city_id": 236, "council_member": "Brett Smiley", "img_url": null },
+    {
+        "city_id": 236,
+        "council_member": "Rachel Miller",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/1"
+    },
+    {
+        "city_id": 236,
+        "council_member": "John Goncalves",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/2"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Helen Anthony",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/3"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Sue AnderBois",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/4"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Justin Roias",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/5"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Jo-Ann Ryan",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/6"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Miguel Sanchez",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/7"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Ana Vargas",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/8"
+    },
+    {
+        "city_id": 236,
+        "council_member": "James Taylor",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/9"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Juan M. Pichardo",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/10"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Pedro Espinal",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/11"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Mary Kay Harris",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/12"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Althea Graves",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/13"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Shelley Peterson",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/14"
+    },
+    {
+        "city_id": 236,
+        "council_member": "Oscar Vargas",
+        "img_url": "https://www.citystats.xyz/images/cities/236/city_council/15"
+    }
+]
