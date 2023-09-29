@@ -81,3 +81,12 @@
 2023-09-29 02:41:53,703 - INFO - No images scraped for city_id: 248
 2023-09-29 02:42:09,267 - INFO - No images scraped for city_id: 248
 2023-09-29 02:44:06,516 - INFO - No images scraped for city_id: 248
+2023-09-29 02:49:57,788 - ERROR - Error at city_id: 249 during scraping: name 'url' is not defined
+2023-09-29 02:50:54,990 - INFO - Downloaded image for city_id: 249, 1 of 8
+2023-09-29 02:50:55,104 - INFO - Downloaded image for city_id: 249, 2 of 8
+2023-09-29 02:50:55,322 - INFO - Downloaded image for city_id: 249, 3 of 8
+2023-09-29 02:50:55,587 - INFO - Downloaded image for city_id: 249, 4 of 8
+2023-09-29 02:50:55,724 - INFO - Downloaded image for city_id: 249, 5 of 8
+2023-09-29 02:50:55,841 - INFO - Downloaded image for city_id: 249, 6 of 8
+2023-09-29 02:50:56,047 - INFO - Downloaded image for city_id: 249, 7 of 8
+2023-09-29 02:50:56,323 - INFO - Downloaded image for city_id: 249, 8 of 8
