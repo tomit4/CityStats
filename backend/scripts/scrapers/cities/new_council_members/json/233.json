@@ -1,0 +1,32 @@
+[
+    {
+        "city_id": 233,
+        "council_member": "Rex Hardin",
+        "img_url": "https://www.citystats.xyz/images/cities/233/mayor"
+    },
+    {
+        "city_id": 233,
+        "council_member": "Andrea McGee",
+        "img_url": "https://www.citystats.xyz/images/cities/233/city_council/1"
+    },
+    {
+        "city_id": 233,
+        "council_member": "Rhonda Sigerson-Eaton",
+        "img_url": "https://www.citystats.xyz/images/cities/233/city_council/2"
+    },
+    {
+        "city_id": 233,
+        "council_member": "Alison Fournier",
+        "img_url": "https://www.citystats.xyz/images/cities/233/city_council/3"
+    },
+    {
+        "city_id": 233,
+        "council_member": "Beverly Perkins",
+        "img_url": "https://www.citystats.xyz/images/cities/233/city_council/4"
+    },
+    {
+        "city_id": 233,
+        "council_member": "Barry Moss",
+        "img_url": "https://www.citystats.xyz/images/cities/233/city_council/5"
+    }
+]

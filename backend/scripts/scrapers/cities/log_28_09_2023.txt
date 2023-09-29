@@ -114,3 +114,9 @@
 2023-09-28 23:46:09,005 - ERROR - Error at city_id: 232 during scraping: list index out of range
 2023-09-28 23:49:28,526 - ERROR - Error at city_id: 232 during scraping: list index out of range
 2023-09-28 23:50:45,058 - INFO - No images scraped for city_id: 232
+2023-09-28 23:59:07,485 - INFO - Downloaded image for city_id: 233, 1 of 6
+2023-09-28 23:59:07,642 - INFO - Downloaded image for city_id: 233, 2 of 6
+2023-09-28 23:59:07,874 - INFO - Downloaded image for city_id: 233, 3 of 6
+2023-09-28 23:59:08,037 - INFO - Downloaded image for city_id: 233, 4 of 6
+2023-09-28 23:59:08,186 - INFO - Downloaded image for city_id: 233, 5 of 6
+2023-09-28 23:59:08,934 - INFO - Downloaded image for city_id: 233, 6 of 6
