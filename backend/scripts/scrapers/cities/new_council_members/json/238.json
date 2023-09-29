@@ -1,0 +1,25 @@
+[
+    { "city_id": 238, "council_member": "Nick Gradisar", "img_url": null },
+    { "city_id": 238, "council_member": "Regina Maestri", "img_url": null },
+    {
+        "city_id": 238,
+        "council_member": "Vicente Martinez Ortega",
+        "img_url": null
+    },
+    { "city_id": 238, "council_member": "Larry Atencio", "img_url": null },
+    { "city_id": 238, "council_member": "Sarah Martinez", "img_url": null },
+    { "city_id": 238, "council_member": "Dennis Flores", "img_url": null },
+    { "city_id": 238, "council_member": "Lori Winner", "img_url": null },
+    { "city_id": 238, "council_member": "Heather Graham", "img_url": null },
+    { "city_id": 238, "council_member": "Regina Maestri", "img_url": null },
+    { "city_id": 238, "council_member": "Larry Atencio", "img_url": null },
+    { "city_id": 238, "council_member": "Sarah Martinez", "img_url": null },
+    {
+        "city_id": 238,
+        "council_member": "Vicente Martinez Ortega",
+        "img_url": null
+    },
+    { "city_id": 238, "council_member": "Dennis Flores", "img_url": null },
+    { "city_id": 238, "council_member": "Lori Winner", "img_url": null },
+    { "city_id": 238, "council_member": "Heather Graham", "img_url": null }
+]
