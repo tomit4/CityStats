@@ -29,3 +29,8 @@
 2023-09-29 01:03:24,984 - INFO - No images scraped for city_id: 239
 2023-09-29 01:03:37,397 - INFO - No images scraped for city_id: 240
 2023-09-29 01:04:06,166 - INFO - No images scraped for city_id: 239
+2023-09-29 01:21:53,534 - INFO - Downloaded image for city_id: 241, 1 of 5
+2023-09-29 01:21:53,767 - INFO - Downloaded image for city_id: 241, 2 of 5
+2023-09-29 01:21:54,054 - INFO - Downloaded image for city_id: 241, 3 of 5
+2023-09-29 01:21:54,287 - INFO - Downloaded image for city_id: 241, 4 of 5
+2023-09-29 01:21:54,551 - INFO - Downloaded image for city_id: 241, 5 of 5
