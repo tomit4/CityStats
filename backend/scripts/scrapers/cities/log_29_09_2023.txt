@@ -68,3 +68,13 @@
 2023-09-29 02:10:53,712 - INFO - Downloaded image for city_id: 245, 7 of 7
 2023-09-29 02:21:00,712 - ERROR - Error at city_id: 246 during scraping: name 'noramlize' is not defined
 2023-09-29 02:23:36,078 - INFO - No images scraped for city_id: 246
+2023-09-29 02:37:09,533 - INFO - Downloaded image for city_id: 247, 1 of 10
+2023-09-29 02:37:10,362 - INFO - Downloaded image for city_id: 247, 2 of 10
+2023-09-29 02:37:11,457 - INFO - Downloaded image for city_id: 247, 3 of 10
+2023-09-29 02:37:12,316 - INFO - Downloaded image for city_id: 247, 4 of 10
+2023-09-29 02:37:13,281 - INFO - Downloaded image for city_id: 247, 5 of 10
+2023-09-29 02:37:14,106 - INFO - Downloaded image for city_id: 247, 6 of 10
+2023-09-29 02:37:15,116 - INFO - Downloaded image for city_id: 247, 7 of 10
+2023-09-29 02:37:15,872 - INFO - Downloaded image for city_id: 247, 8 of 10
+2023-09-29 02:37:16,565 - INFO - Downloaded image for city_id: 247, 9 of 10
+2023-09-29 02:37:17,344 - INFO - Downloaded image for city_id: 247, 10 of 10
