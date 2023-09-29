@@ -1,0 +1,42 @@
+[
+    {
+        "city_id": 250,
+        "council_member": "Kim Norton",
+        "img_url": "https://www.citystats.xyz/images/cities/250/mayor"
+    },
+    {
+        "city_id": 250,
+        "council_member": "Brooke Carlson",
+        "img_url": "https://www.citystats.xyz/images/cities/250/city_council/1"
+    },
+    {
+        "city_id": 250,
+        "council_member": "Patrick Keane",
+        "img_url": "https://www.citystats.xyz/images/cities/250/city_council/2"
+    },
+    {
+        "city_id": 250,
+        "council_member": "Mark Bransford",
+        "img_url": "https://www.citystats.xyz/images/cities/250/city_council/3"
+    },
+    {
+        "city_id": 250,
+        "council_member": "Norman Wahl",
+        "img_url": "https://www.citystats.xyz/images/cities/250/city_council/4"
+    },
+    {
+        "city_id": 250,
+        "council_member": "Kelly Rae Kirkpatrick",
+        "img_url": "https://www.citystats.xyz/images/cities/250/city_council/5"
+    },
+    {
+        "city_id": 250,
+        "council_member": "Shaun C. Palmer",
+        "img_url": "https://www.citystats.xyz/images/cities/250/city_council/6"
+    },
+    {
+        "city_id": 250,
+        "council_member": "Molly Dennis",
+        "img_url": "https://www.citystats.xyz/images/cities/250/city_council/7"
+    }
+]
