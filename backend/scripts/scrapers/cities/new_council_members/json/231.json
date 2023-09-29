@@ -1,0 +1,14 @@
+[
+    { "city_id": 231, "council_member": "John B. Muns", "img_url": null },
+    { "city_id": 231, "council_member": "Tem Kayci Prince", "img_url": null },
+    { "city_id": 231, "council_member": "Tem Maria Tu", "img_url": null },
+    {
+        "city_id": 231,
+        "council_member": "Anthony Ricciardelli",
+        "img_url": null
+    },
+    { "city_id": 231, "council_member": "Rick Horne", "img_url": null },
+    { "city_id": 231, "council_member": "Shelby Williams", "img_url": null },
+    { "city_id": 231, "council_member": "Julie Holmer", "img_url": null },
+    { "city_id": 231, "council_member": "Rick Smith", "img_url": null }
+]
