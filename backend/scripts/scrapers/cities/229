@@ -12,10 +12,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 228
-BASE_URL = 'https://phlcouncil.com'
-CITY_COUNCIL_URL = 'https://phlcouncil.com/council-members/'
-MAYOR_URL = 'https://en.wikipedia.org/wiki/Philadelphia_Pennsylvania'
+CITY_ID = 229
+BASE_URL = 'https://www.phoenix.gov'
+CITY_COUNCIL_URL = 'https://www.phoenix.gov/mayorcouncil'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -63,50 +62,10 @@ def parse_json(results):
         data['city_id'] = CITY_ID
         # council_member usually needs to be changed
         data['council_member'] = result
+        data['img_url'] = None
         json_arr.append(data)
-    for i, data in enumerate(json_arr):
-        if i == 0:
-            data['img_url'] = None
-        else:
-            data['img_url'] = f'{BASE_IMG_PATH}/city_council/{i}'
     with open(f'./new_council_members/json/{PATH_ID}.json', 'w') as writeJSON:
         json.dump(json_arr, writeJSON, ensure_ascii=False)
-
-
-def grab_img():
-    try:
-        r = session.get(CITY_COUNCIL_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        data = []
-        results = r.html.find('.x-face-graphic')
-        for result in results:
-            images = result.find('img')
-            for image in images:
-                if 'src' in image.attrs:
-                    if '-banner-' not in image.attrs['src']:
-                        data.append(image.attrs['src'])
-        return data
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
-def prepend_mayor_to(member_names):
-    try:
-        r = session.get(MAYOR_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('.mergedrow')
-        for result in results:
-            ths = result.find('th')
-            for th in ths:
-                if 'Mayor' in th.text:
-                    tds = result.find('.infobox-data')
-                    for td in tds:
-                        member_names.insert(0, td.text.split(' (')[0])
-        return member_names
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
 
 
 def scrape_data():
@@ -114,12 +73,17 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.x-face-title')
+        results = r.html.find('.cop-rteTable-default')
         for result in results:
             strongs = result.find('strong')
             for strong in strongs:
-                if 'Vacant' not in strong.text:
+                if strong.text not in data:
                     data.append(strong.text)
+        for i, d in enumerate(data):
+            if 'Mayor' in d:
+                data[i] = d.split('Mayor ')[1]
+            elif 'Councilmember ' in d:
+                data[i] = d.split('Councilmember ')[1]
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -127,9 +91,7 @@ def scrape_data():
 
 
 if __name__ == "__main__":
-    member_names = scrape_data()
-    results = prepend_mayor_to(member_names)
+    results = scrape_data()
     if results:
         parse_json(results)
-    img_urls = grab_img()
-    download_images(img_urls)
+    logging.info(f'No images scraped for city_id: {CITY_ID}')
