@@ -108,3 +108,9 @@
 2023-09-28 23:19:29,510 - ERROR - Error at city_id: 230 during scraping: name 'MAYOR_URL' is not defined
 2023-09-28 23:20:07,542 - INFO - No images scraped for city_id: 230
 2023-09-28 23:39:13,976 - INFO - No images scraped for city_id: 231
+2023-09-28 23:44:15,454 - ERROR - Error at city_id: 232 during scraping: list index out of range
+2023-09-28 23:44:47,784 - ERROR - Error at city_id: 232 during scraping: list index out of range
+2023-09-28 23:45:56,038 - ERROR - Error at city_id: 232 during scraping: list index out of range
+2023-09-28 23:46:09,005 - ERROR - Error at city_id: 232 during scraping: list index out of range
+2023-09-28 23:49:28,526 - ERROR - Error at city_id: 232 during scraping: list index out of range
+2023-09-28 23:50:45,058 - INFO - No images scraped for city_id: 232

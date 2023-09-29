@@ -1,0 +1,13 @@
+[
+    { "city_id": 232, "council_member": "Tim Sandoval", "img_url": null },
+    { "city_id": 232, "council_member": "John Nolte", "img_url": null },
+    { "city_id": 232, "council_member": "Victor Preciado", "img_url": null },
+    { "city_id": 232, "council_member": "District 3", "img_url": null },
+    {
+        "city_id": 232,
+        "council_member": "Elizabeth Ontiveros-Cole",
+        "img_url": null
+    },
+    { "city_id": 232, "council_member": "Steve Lustro", "img_url": null },
+    { "city_id": 232, "council_member": "Robert Torres", "img_url": null }
+]
