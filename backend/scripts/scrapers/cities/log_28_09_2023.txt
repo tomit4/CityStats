@@ -77,3 +77,12 @@
 2023-09-28 21:49:21,746 - INFO - No images scraped for city_id: 223
 2023-09-28 21:50:16,026 - INFO - No images scraped for city_id: 223
 2023-09-28 21:53:09,428 - INFO - No images scraped for city_id: 223
+2023-09-28 22:02:29,651 - ERROR - Error at city_id: 224 during scraping: Invalid URL '/home': No scheme supplied. Perhaps you meant https:///home?
+2023-09-28 22:06:41,090 - INFO - Downloaded image for city_id: 224, 1 of 8
+2023-09-28 22:06:41,554 - INFO - Downloaded image for city_id: 224, 2 of 8
+2023-09-28 22:06:42,718 - INFO - Downloaded image for city_id: 224, 3 of 8
+2023-09-28 22:06:43,015 - INFO - Downloaded image for city_id: 224, 4 of 8
+2023-09-28 22:06:43,311 - INFO - Downloaded image for city_id: 224, 5 of 8
+2023-09-28 22:06:43,732 - INFO - Downloaded image for city_id: 224, 6 of 8
+2023-09-28 22:06:45,386 - INFO - Downloaded image for city_id: 224, 7 of 8
+2023-09-28 22:06:52,202 - INFO - Downloaded image for city_id: 224, 8 of 8

@@ -1,0 +1,42 @@
+[
+    {
+        "city_id": 224,
+        "council_member": "Kevin Cole",
+        "img_url": "https://www.citystats.xyz/images/cities/224/mayor"
+    },
+    {
+        "city_id": 224,
+        "council_member": "Tony Carbone",
+        "img_url": "https://www.citystats.xyz/images/cities/224/city_council/1"
+    },
+    {
+        "city_id": 224,
+        "council_member": "Joseph Koza",
+        "img_url": "https://www.citystats.xyz/images/cities/224/city_council/2"
+    },
+    {
+        "city_id": 224,
+        "council_member": "Alex Kamkar",
+        "img_url": "https://www.citystats.xyz/images/cities/224/city_council/3"
+    },
+    {
+        "city_id": 224,
+        "council_member": "Adrian Hernandez",
+        "img_url": "https://www.citystats.xyz/images/cities/224/city_council/4"
+    },
+    {
+        "city_id": 224,
+        "council_member": "Layni Cade",
+        "img_url": "https://www.citystats.xyz/images/cities/224/city_council/5"
+    },
+    {
+        "city_id": 224,
+        "council_member": "Jeffrey Barry",
+        "img_url": "https://www.citystats.xyz/images/cities/224/city_council/6"
+    },
+    {
+        "city_id": 224,
+        "council_member": "Rushi Patel",
+        "img_url": "https://www.citystats.xyz/images/cities/224/city_council/7"
+    }
+]
