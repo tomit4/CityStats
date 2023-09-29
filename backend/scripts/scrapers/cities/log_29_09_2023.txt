@@ -26,3 +26,6 @@
 2023-09-29 00:51:39,091 - INFO - No images scraped for city_id: 238
 2023-09-29 00:55:48,437 - ERROR - Error at city_id: 239 during scraping: name 'member_names' is not defined
 2023-09-29 00:58:20,174 - INFO - No images scraped for city_id: 239
+2023-09-29 01:03:24,984 - INFO - No images scraped for city_id: 239
+2023-09-29 01:03:37,397 - INFO - No images scraped for city_id: 240
+2023-09-29 01:04:06,166 - INFO - No images scraped for city_id: 239
