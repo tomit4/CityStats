@@ -62,3 +62,5 @@
 2023-09-28 20:56:46,135 - INFO - No images scraped for city_id: 218
 2023-09-28 20:59:42,674 - WARNING - Site for city_id: 219, not scrapable.
 2023-09-28 21:16:51,011 - INFO - No images scraped for city_id: 220
+2023-09-28 21:23:53,808 - INFO - No images scraped for city_id: 221
+2023-09-28 21:23:57,654 - INFO - No images scraped for city_id: 221
