@@ -105,3 +105,5 @@
 2023-09-28 22:34:33,705 - INFO - Downloaded image for city_id: 228, 14 of 15
 2023-09-28 22:34:35,146 - INFO - Downloaded image for city_id: 228, 15 of 15
 2023-09-28 22:46:28,198 - INFO - No images scraped for city_id: 229
+2023-09-28 23:19:29,510 - ERROR - Error at city_id: 230 during scraping: name 'MAYOR_URL' is not defined
+2023-09-28 23:20:07,542 - INFO - No images scraped for city_id: 230
