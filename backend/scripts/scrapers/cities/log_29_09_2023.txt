@@ -1,1 +1,2 @@
 2023-09-29 00:15:42,317 - INFO - No images scraped for city_id: 234
+2023-09-29 00:19:45,570 - INFO - No images scraped for city_id: 235
