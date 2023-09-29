@@ -66,3 +66,5 @@
 2023-09-29 02:10:53,066 - INFO - Downloaded image for city_id: 245, 5 of 7
 2023-09-29 02:10:53,531 - INFO - Downloaded image for city_id: 245, 6 of 7
 2023-09-29 02:10:53,712 - INFO - Downloaded image for city_id: 245, 7 of 7
+2023-09-29 02:21:00,712 - ERROR - Error at city_id: 246 during scraping: name 'noramlize' is not defined
+2023-09-29 02:23:36,078 - INFO - No images scraped for city_id: 246

@@ -3,6 +3,7 @@
 import json
 import logging
 from datetime import datetime
+from unicodedata import normalize
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
 from requests_html import HTMLSession
@@ -10,12 +11,13 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 157
-BASE_URL = 'https://www.lascruces.gov'
-CITY_COUNCIL_URL = 'https://www.lascruces.gov/1487/City-Council'
+CITY_ID = 246
+BASE_URL = 'https://www.ci.richmond.ca.us'
+CITY_COUNCIL_URL = 'https://www.ci.richmond.ca.us/29/City-Council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
+IMG_PATH = f'./new_council_members/img/{PATH_ID}/'
 
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
@@ -46,14 +48,19 @@ def scrape_data():
     try:
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('.fr-view')
         data = []
-        results = r.html.find('.widgetHeader')
         for result in results:
-            h3s = result.find('h3')
-            for h3 in h3s:
-                if ', mayor' in h3.text.lower(
-                ) or ', council' in h3.text.lower():
-                    data.append(h3.text.split(', ')[0])
+            lis = result.find('li')
+            for li in lis:
+                if len(li.text):
+                    if 'Mayor' in li.text or 'Councilmember' in li.text:
+                        data.append(normalize("NFKD", li.text))
+        for i, d in enumerate(data):
+            if ' -' in d:
+                data[i] = d.split(' -')[0]
+            else:
+                data[i] = d.split('  –')[0]
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
