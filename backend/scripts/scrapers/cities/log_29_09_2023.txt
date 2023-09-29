@@ -34,3 +34,5 @@
 2023-09-29 01:21:54,054 - INFO - Downloaded image for city_id: 241, 3 of 5
 2023-09-29 01:21:54,287 - INFO - Downloaded image for city_id: 241, 4 of 5
 2023-09-29 01:21:54,551 - INFO - Downloaded image for city_id: 241, 5 of 5
+2023-09-29 01:29:34,653 - ERROR - Error at city_id: 242 during scraping: 'tabindex'
+2023-09-29 01:33:51,880 - INFO - Downloaded image for city_id: 242, 1 of 1
