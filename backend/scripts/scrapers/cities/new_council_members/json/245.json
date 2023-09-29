@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 245,
+        "council_member": "Bob Dubey",
+        "img_url": "https://www.citystats.xyz/images/cities/245/mayor"
+    },
+    {
+        "city_id": 245,
+        "council_member": "Arefin Shamsul",
+        "img_url": "https://www.citystats.xyz/images/cities/245/city_council/1"
+    },
+    {
+        "city_id": 245,
+        "council_member": "Curtis Dorian",
+        "img_url": "https://www.citystats.xyz/images/cities/245/city_council/2"
+    },
+    {
+        "city_id": 245,
+        "council_member": "Jennifer Justice",
+        "img_url": "https://www.citystats.xyz/images/cities/245/city_council/3"
+    },
+    {
+        "city_id": 245,
+        "council_member": "Dan Barrios",
+        "img_url": "https://www.citystats.xyz/images/cities/245/city_council/4"
+    },
+    {
+        "city_id": 245,
+        "council_member": "Joe Corcoran",
+        "img_url": "https://www.citystats.xyz/images/cities/245/city_council/5"
+    },
+    {
+        "city_id": 245,
+        "council_member": "Ken Hutchenrider",
+        "img_url": "https://www.citystats.xyz/images/cities/245/city_council/6"
+    }
+]
