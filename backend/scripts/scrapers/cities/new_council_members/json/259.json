@@ -1,0 +1,38 @@
+[
+    { "city_id": 259, "council_member": "Erin Mendenhall", "img_url": null },
+    {
+        "city_id": 259,
+        "council_member": "Victoria Petro",
+        "img_url": "https://www.citystats.xyz/images/cities/259/city_council/1"
+    },
+    {
+        "city_id": 259,
+        "council_member": "Alejandro Puy",
+        "img_url": "https://www.citystats.xyz/images/cities/259/city_council/2"
+    },
+    {
+        "city_id": 259,
+        "council_member": "Chris Wharton",
+        "img_url": "https://www.citystats.xyz/images/cities/259/city_council/3"
+    },
+    {
+        "city_id": 259,
+        "council_member": "Ana Valdemoros",
+        "img_url": "https://www.citystats.xyz/images/cities/259/city_council/4"
+    },
+    {
+        "city_id": 259,
+        "council_member": "Darin Mano",
+        "img_url": "https://www.citystats.xyz/images/cities/259/city_council/5"
+    },
+    {
+        "city_id": 259,
+        "council_member": "Dan Dugan",
+        "img_url": "https://www.citystats.xyz/images/cities/259/city_council/6"
+    },
+    {
+        "city_id": 259,
+        "council_member": "Sarah Young",
+        "img_url": "https://www.citystats.xyz/images/cities/259/city_council/7"
+    }
+]

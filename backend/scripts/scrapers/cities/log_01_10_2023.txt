@@ -58,3 +58,10 @@
 2023-10-01 04:35:37,760 - INFO - Downloaded image for city_id: 257, 9 of 9
 2023-10-01 04:38:22,517 - ERROR - Error at city_id: 258 during scraping: Invalid URL '': No scheme supplied. Perhaps you meant https://?
 2023-10-01 04:38:49,892 - INFO - No images scraped for city_id: 258
+2023-10-01 04:45:55,177 - INFO - Downloaded image for city_id: 259, 1 of 7
+2023-10-01 04:45:56,639 - INFO - Downloaded image for city_id: 259, 2 of 7
+2023-10-01 04:45:58,169 - INFO - Downloaded image for city_id: 259, 3 of 7
+2023-10-01 04:46:03,844 - INFO - Downloaded image for city_id: 259, 4 of 7
+2023-10-01 04:46:04,760 - INFO - Downloaded image for city_id: 259, 5 of 7
+2023-10-01 04:46:05,604 - INFO - Downloaded image for city_id: 259, 6 of 7
+2023-10-01 04:46:07,025 - INFO - Downloaded image for city_id: 259, 7 of 7
