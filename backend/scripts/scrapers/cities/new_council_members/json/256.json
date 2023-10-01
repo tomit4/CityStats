@@ -1,0 +1,38 @@
+[
+    { "city_id": 256, "council_member": "Melvin Carter", "img_url": null },
+    {
+        "city_id": 256,
+        "council_member": "Russel Balenger",
+        "img_url": "https://www.citystats.xyz/images/cities/256/city_council/1"
+    },
+    {
+        "city_id": 256,
+        "council_member": "Rebecca Noecker",
+        "img_url": "https://www.citystats.xyz/images/cities/256/city_council/2"
+    },
+    {
+        "city_id": 256,
+        "council_member": "Chris Tolbert",
+        "img_url": "https://www.citystats.xyz/images/cities/256/city_council/3"
+    },
+    {
+        "city_id": 256,
+        "council_member": "Mitra Jalali",
+        "img_url": "https://www.citystats.xyz/images/cities/256/city_council/4"
+    },
+    {
+        "city_id": 256,
+        "council_member": "Amy Brendmoen",
+        "img_url": "https://www.citystats.xyz/images/cities/256/city_council/5"
+    },
+    {
+        "city_id": 256,
+        "council_member": "Nelsie Yang",
+        "img_url": "https://www.citystats.xyz/images/cities/256/city_council/6"
+    },
+    {
+        "city_id": 256,
+        "council_member": "Jane L. Prince",
+        "img_url": "https://www.citystats.xyz/images/cities/256/city_council/7"
+    }
+]

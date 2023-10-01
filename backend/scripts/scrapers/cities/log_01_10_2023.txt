@@ -28,3 +28,12 @@
 2023-10-01 04:06:10,906 - INFO - Downloaded image for city_id: 255, 7 of 9
 2023-10-01 04:06:11,956 - INFO - Downloaded image for city_id: 255, 8 of 9
 2023-10-01 04:06:12,438 - INFO - Downloaded image for city_id: 255, 9 of 9
+2023-10-01 04:20:16,036 - ERROR - Error at city_id: 256 during scraping: 'NoneType' object has no attribute 'insert'
+2023-10-01 04:21:44,556 - ERROR - Error at city_id: 256 during scraping: 'NoneType' object has no attribute 'insert'
+2023-10-01 04:24:43,375 - INFO - Downloaded image for city_id: 256, 1 of 7
+2023-10-01 04:24:43,630 - INFO - Downloaded image for city_id: 256, 2 of 7
+2023-10-01 04:24:43,795 - INFO - Downloaded image for city_id: 256, 3 of 7
+2023-10-01 04:24:43,983 - INFO - Downloaded image for city_id: 256, 4 of 7
+2023-10-01 04:24:44,291 - INFO - Downloaded image for city_id: 256, 5 of 7
+2023-10-01 04:24:44,444 - INFO - Downloaded image for city_id: 256, 6 of 7
+2023-10-01 04:24:44,612 - INFO - Downloaded image for city_id: 256, 7 of 7
