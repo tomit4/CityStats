@@ -6,3 +6,10 @@
 2023-10-01 03:39:21,390 - INFO - Downloaded image for city_id: 253, 3 of 5
 2023-10-01 03:39:21,846 - INFO - Downloaded image for city_id: 253, 4 of 5
 2023-10-01 03:39:22,017 - INFO - Downloaded image for city_id: 253, 5 of 5
+2023-10-01 03:47:32,754 - INFO - Downloaded image for city_id: 254, 1 of 7
+2023-10-01 03:47:33,014 - INFO - Downloaded image for city_id: 254, 2 of 7
+2023-10-01 03:47:33,269 - INFO - Downloaded image for city_id: 254, 3 of 7
+2023-10-01 03:47:34,578 - INFO - Downloaded image for city_id: 254, 4 of 7
+2023-10-01 03:47:34,958 - INFO - Downloaded image for city_id: 254, 5 of 7
+2023-10-01 03:47:35,315 - INFO - Downloaded image for city_id: 254, 6 of 7
+2023-10-01 03:47:35,598 - INFO - Downloaded image for city_id: 254, 7 of 7
