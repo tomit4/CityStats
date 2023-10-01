@@ -10,10 +10,10 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 248
-BASE_URL = 'https://rrnm.gov'
-CITY_COUNCIL_URL = 'https://rrnm.gov/29/Governing-Body'
-MAYOR_URL = 'https://en.wikipedia.org/wiki/Rio_Rancho,_New_Mexico'
+CITY_ID = 252
+BASE_URL = 'https://rockfordil.gov'
+CITY_COUNCIL_URL = 'https://rockfordil.gov/516/About-the-City-Council'
+MAYOR_URL = 'https://en.wikipedia.org/wiki/Rockford_Illinois'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -66,14 +66,13 @@ def scrape_data():
     try:
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('.fr-view')
+        results = r.html.find('.textContent')
         data = []
         for result in results:
-            lis = result.find('li')
-            for li in lis:
-                if len(li.text):
-                    if 'District' in li.text:
-                        data.append(li.text.split('- ')[1].split(' (')[0])
+            a_tags = result.find('a')
+            for a_tag in a_tags:
+                if 'href' in a_tag.attrs:
+                    data.append(a_tag.text)
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
