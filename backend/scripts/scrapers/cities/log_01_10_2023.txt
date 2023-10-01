@@ -13,3 +13,18 @@
 2023-10-01 03:47:34,958 - INFO - Downloaded image for city_id: 254, 5 of 7
 2023-10-01 03:47:35,315 - INFO - Downloaded image for city_id: 254, 6 of 7
 2023-10-01 03:47:35,598 - INFO - Downloaded image for city_id: 254, 7 of 7
+2023-10-01 03:58:23,147 - ERROR - Error at city_id: 255 during scraping: 'NoneType' object is not iterable
+2023-10-01 03:58:48,174 - ERROR - Error at city_id: 255 during scraping: 'NoneType' object is not iterable
+2023-10-01 03:59:05,073 - ERROR - Error at city_id: 255 during scraping: 'NoneType' object is not iterable
+2023-10-01 03:59:28,695 - ERROR - Error at city_id: 255 during scraping: 'NoneType' object is not iterable
+2023-10-01 03:59:50,201 - ERROR - Error at city_id: 255 during scraping: 'NoneType' object is not iterable
+2023-10-01 04:00:01,177 - ERROR - Error at city_id: 255 during scraping: 'NoneType' object is not iterable
+2023-10-01 04:06:09,010 - INFO - Downloaded image for city_id: 255, 1 of 9
+2023-10-01 04:06:09,465 - INFO - Downloaded image for city_id: 255, 2 of 9
+2023-10-01 04:06:09,768 - INFO - Downloaded image for city_id: 255, 3 of 9
+2023-10-01 04:06:10,032 - INFO - Downloaded image for city_id: 255, 4 of 9
+2023-10-01 04:06:10,394 - INFO - Downloaded image for city_id: 255, 5 of 9
+2023-10-01 04:06:10,566 - INFO - Downloaded image for city_id: 255, 6 of 9
+2023-10-01 04:06:10,906 - INFO - Downloaded image for city_id: 255, 7 of 9
+2023-10-01 04:06:11,956 - INFO - Downloaded image for city_id: 255, 8 of 9
+2023-10-01 04:06:12,438 - INFO - Downloaded image for city_id: 255, 9 of 9
