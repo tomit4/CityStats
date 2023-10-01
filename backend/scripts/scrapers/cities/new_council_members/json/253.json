@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 253,
+        "council_member": "Bruce Houdesheldt",
+        "img_url": "https://www.citystats.xyz/images/cities/253/mayor"
+    },
+    {
+        "city_id": 253,
+        "council_member": "Krista Bernasconi",
+        "img_url": "https://www.citystats.xyz/images/cities/253/city_council/1"
+    },
+    {
+        "city_id": 253,
+        "council_member": "Scott Alvord",
+        "img_url": "https://www.citystats.xyz/images/cities/253/city_council/2"
+    },
+    {
+        "city_id": 253,
+        "council_member": "Pauline Roccucci",
+        "img_url": "https://www.citystats.xyz/images/cities/253/city_council/3"
+    },
+    {
+        "city_id": 253,
+        "council_member": "Tracy Mendonsa",
+        "img_url": "https://www.citystats.xyz/images/cities/253/city_council/4"
+    }
+]

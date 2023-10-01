@@ -1,2 +1,8 @@
 2023-10-01 03:27:55,641 - WARNING - Site for city_id: 251, not scrapable.
 2023-10-01 03:32:02,261 - INFO - No images scraped for city_id: 252
+2023-10-01 03:34:51,836 - ERROR - Error at city_id: 253 during scraping: name 'strongs' is not defined
+2023-10-01 03:39:20,708 - INFO - Downloaded image for city_id: 253, 1 of 5
+2023-10-01 03:39:20,925 - INFO - Downloaded image for city_id: 253, 2 of 5
+2023-10-01 03:39:21,390 - INFO - Downloaded image for city_id: 253, 3 of 5
+2023-10-01 03:39:21,846 - INFO - Downloaded image for city_id: 253, 4 of 5
+2023-10-01 03:39:22,017 - INFO - Downloaded image for city_id: 253, 5 of 5
