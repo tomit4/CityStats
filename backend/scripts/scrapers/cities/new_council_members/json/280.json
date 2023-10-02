@@ -1,0 +1,32 @@
+[
+    {
+        "city_id": 280,
+        "council_member": "Ed Lawson",
+        "img_url": "https://www.citystats.xyz/images/cities/280/mayor"
+    },
+    {
+        "city_id": 280,
+        "council_member": "Donald Abbott",
+        "img_url": "https://www.citystats.xyz/images/cities/280/city_council/1"
+    },
+    {
+        "city_id": 280,
+        "council_member": "Dian VanderWell",
+        "img_url": "https://www.citystats.xyz/images/cities/280/city_council/2"
+    },
+    {
+        "city_id": 280,
+        "council_member": "Paul Anderson",
+        "img_url": "https://www.citystats.xyz/images/cities/280/city_council/3"
+    },
+    {
+        "city_id": 280,
+        "council_member": "Charlene Bybee",
+        "img_url": "https://www.citystats.xyz/images/cities/280/city_council/4"
+    },
+    {
+        "city_id": 280,
+        "council_member": "Kristopher Dahir",
+        "img_url": "https://www.citystats.xyz/images/cities/280/city_council/5"
+    }
+]
