@@ -76,3 +76,4 @@
 2023-10-01 05:07:30,279 - INFO - Downloaded image for city_id: 260, 9 of 10
 2023-10-01 05:07:30,499 - INFO - Downloaded image for city_id: 260, 10 of 10
 2023-10-01 23:18:49,911 - INFO - No images scraped for city_id: 261
+2023-10-01 23:23:13,902 - INFO - No images scraped for city_id: 262
