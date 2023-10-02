@@ -57,3 +57,5 @@
 2023-10-02 01:53:47,253 - INFO - Downloaded image for city_id: 273, 6 of 7
 2023-10-02 01:53:47,662 - INFO - Downloaded image for city_id: 273, 7 of 7
 2023-10-02 01:58:02,729 - INFO - No images scraped for city_id: 274
+2023-10-02 02:02:49,796 - ERROR - Error at city_id: 275 during scraping: list index out of range
+2023-10-02 02:06:31,364 - INFO - No images scraped for city_id: 275
