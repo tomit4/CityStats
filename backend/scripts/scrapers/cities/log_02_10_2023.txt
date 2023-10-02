@@ -1,1 +1,3 @@
 2023-10-02 00:02:17,313 - INFO - No images scraped for city_id: 265
+2023-10-02 00:04:27,164 - ERROR - Error at city_id: 266 during scraping: pop from empty list
+2023-10-02 00:06:01,253 - INFO - No images scraped for city_id: 266
