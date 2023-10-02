@@ -102,3 +102,22 @@
 2023-10-02 02:42:57,429 - INFO - Downloaded image for city_id: 278, 8 of 10
 2023-10-02 02:42:58,736 - INFO - Downloaded image for city_id: 278, 9 of 10
 2023-10-02 02:42:59,914 - INFO - Downloaded image for city_id: 278, 10 of 10
+2023-10-02 02:55:37,492 - ERROR - Error at city_id: 279 during scraping: 'list' object has no attribute 'capitalize'
+2023-10-02 02:56:46,969 - ERROR - Error at city_id: 279 during scraping: 'list' object has no attribute 'capitalize'
+2023-10-02 02:57:20,879 - ERROR - Error at city_id: 279 during scraping: 'list' object has no attribute 'capitalize'
+2023-10-02 03:00:04,304 - ERROR - Error at city_id: 279 during scraping: 'str' object has no attribute 'caplitalize'
+2023-10-02 03:00:08,688 - ERROR - Error at city_id: 279 during scraping: 'str' object has no attribute 'caplitalize'
+2023-10-02 03:04:42,744 - INFO - Downloaded image for city_id: 279, 1 of 19
+2023-10-02 03:04:45,315 - INFO - Downloaded image for city_id: 279, 2 of 19
+2023-10-02 03:04:45,722 - INFO - Downloaded image for city_id: 279, 3 of 19
+2023-10-02 03:04:46,133 - INFO - Downloaded image for city_id: 279, 4 of 19
+2023-10-02 03:04:46,646 - INFO - Downloaded image for city_id: 279, 5 of 19
+2023-10-02 03:04:47,158 - INFO - Downloaded image for city_id: 279, 6 of 19
+2023-10-02 03:06:17,205 - INFO - Downloaded image for city_id: 279, 1 of 8
+2023-10-02 03:06:18,089 - INFO - Downloaded image for city_id: 279, 2 of 8
+2023-10-02 03:06:18,962 - INFO - Downloaded image for city_id: 279, 3 of 8
+2023-10-02 03:06:19,786 - INFO - Downloaded image for city_id: 279, 4 of 8
+2023-10-02 03:06:20,890 - INFO - Downloaded image for city_id: 279, 5 of 8
+2023-10-02 03:06:22,270 - INFO - Downloaded image for city_id: 279, 6 of 8
+2023-10-02 03:06:23,198 - INFO - Downloaded image for city_id: 279, 7 of 8
+2023-10-02 03:06:24,244 - INFO - Downloaded image for city_id: 279, 8 of 8
