@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 269,
+        "council_member": "Jason Gibbs",
+        "img_url": "https://www.citystats.xyz/images/cities/269/mayor"
+    },
+    {
+        "city_id": 269,
+        "council_member": "Cameron Smyth",
+        "img_url": "https://www.citystats.xyz/images/cities/269/city_council/1"
+    },
+    {
+        "city_id": 269,
+        "council_member": "Laurene Weste",
+        "img_url": "https://www.citystats.xyz/images/cities/269/city_council/2"
+    },
+    {
+        "city_id": 269,
+        "council_member": "Marsha McLean",
+        "img_url": "https://www.citystats.xyz/images/cities/269/city_council/3"
+    },
+    {
+        "city_id": 269,
+        "council_member": "Bill Miranda",
+        "img_url": "https://www.citystats.xyz/images/cities/269/city_council/4"
+    }
+]
