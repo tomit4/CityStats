@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 270,
+        "council_member": "Alice Patino",
+        "img_url": "https://www.citystats.xyz/images/cities/270/mayor"
+    },
+    {
+        "city_id": 270,
+        "council_member": "Gloria Soto",
+        "img_url": "https://www.citystats.xyz/images/cities/270/city_council/1"
+    },
+    {
+        "city_id": 270,
+        "council_member": "Maribel Aguilera-Hernandez",
+        "img_url": "https://www.citystats.xyz/images/cities/270/city_council/2"
+    },
+    {
+        "city_id": 270,
+        "council_member": "Carlos Escobedo",
+        "img_url": "https://www.citystats.xyz/images/cities/270/city_council/3"
+    },
+    {
+        "city_id": 270,
+        "council_member": "Mike Cordero",
+        "img_url": "https://www.citystats.xyz/images/cities/270/city_council/4"
+    }
+]
