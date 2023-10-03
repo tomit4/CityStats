@@ -35,3 +35,21 @@
 2023-10-03 01:20:44,572 - ERROR - Error at city_id: 289 during scraping: 'list' object has no attribute 'split'
 2023-10-03 01:23:52,982 - INFO - No images scraped for city_id: 289
 2023-10-03 01:28:11,834 - INFO - No images scraped for city_id: 290
+2023-10-03 01:40:32,413 - ERROR - Error at city_id: 291 during scraping: Invalid URL '/172/Mayor': No scheme supplied. Perhaps you meant https:///172/Mayor?
+2023-10-03 01:50:42,300 - ERROR - Error at city_id: 291 during scraping: 'title'
+2023-10-03 01:54:08,941 - INFO - Downloaded image for city_id: 291, 1 of 9
+2023-10-03 01:54:09,462 - INFO - Downloaded image for city_id: 291, 2 of 9
+2023-10-03 01:54:09,822 - INFO - Downloaded image for city_id: 291, 3 of 9
+2023-10-03 01:54:10,402 - INFO - Downloaded image for city_id: 291, 4 of 9
+2023-10-03 01:54:10,773 - INFO - Downloaded image for city_id: 291, 5 of 9
+2023-10-03 01:54:16,160 - INFO - Downloaded image for city_id: 291, 6 of 9
+2023-10-03 01:54:16,547 - INFO - Downloaded image for city_id: 291, 7 of 9
+2023-10-03 01:54:16,943 - INFO - Downloaded image for city_id: 291, 8 of 9
+2023-10-03 01:54:17,540 - INFO - Downloaded image for city_id: 291, 9 of 9
+2023-10-03 01:55:00,600 - INFO - Downloaded image for city_id: 291, 1 of 7
+2023-10-03 01:55:00,977 - INFO - Downloaded image for city_id: 291, 2 of 7
+2023-10-03 01:55:01,563 - INFO - Downloaded image for city_id: 291, 3 of 7
+2023-10-03 01:55:01,931 - INFO - Downloaded image for city_id: 291, 4 of 7
+2023-10-03 01:55:02,299 - INFO - Downloaded image for city_id: 291, 5 of 7
+2023-10-03 01:55:02,668 - INFO - Downloaded image for city_id: 291, 6 of 7
+2023-10-03 01:55:03,099 - INFO - Downloaded image for city_id: 291, 7 of 7
