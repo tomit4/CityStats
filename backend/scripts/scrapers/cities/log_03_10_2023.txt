@@ -53,3 +53,4 @@
 2023-10-03 01:55:02,299 - INFO - Downloaded image for city_id: 291, 5 of 7
 2023-10-03 01:55:02,668 - INFO - Downloaded image for city_id: 291, 6 of 7
 2023-10-03 01:55:03,099 - INFO - Downloaded image for city_id: 291, 7 of 7
+2023-10-03 01:58:13,065 - INFO - No images scraped for city_id: 292
