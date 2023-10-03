@@ -56,3 +56,14 @@
 2023-10-03 01:58:13,065 - INFO - No images scraped for city_id: 292
 2023-10-03 02:00:29,320 - ERROR - Error at city_id: 293 during scraping: HTTPSConnectionPool(host='surpriseaz.gov', port=443): Max retries exceeded with url: /732/City-Council (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)')))
 2023-10-03 02:01:22,594 - WARNING - Site for city_id: 293, not scrapable.
+2023-10-03 02:11:23,107 - INFO - Downloaded image for city_id: 294, 1 of 11
+2023-10-03 02:11:23,347 - INFO - Downloaded image for city_id: 294, 2 of 11
+2023-10-03 02:11:23,659 - INFO - Downloaded image for city_id: 294, 3 of 11
+2023-10-03 02:11:23,920 - INFO - Downloaded image for city_id: 294, 4 of 11
+2023-10-03 02:11:24,220 - INFO - Downloaded image for city_id: 294, 5 of 11
+2023-10-03 02:11:24,675 - INFO - Downloaded image for city_id: 294, 6 of 11
+2023-10-03 02:11:25,223 - INFO - Downloaded image for city_id: 294, 7 of 11
+2023-10-03 02:11:25,698 - INFO - Downloaded image for city_id: 294, 8 of 11
+2023-10-03 02:11:26,041 - INFO - Downloaded image for city_id: 294, 9 of 11
+2023-10-03 02:11:26,574 - INFO - Downloaded image for city_id: 294, 10 of 11
+2023-10-03 02:11:26,829 - INFO - Downloaded image for city_id: 294, 11 of 11
