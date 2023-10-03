@@ -1,0 +1,33 @@
+[
+    { "city_id": 287, "council_member": "Michael C. Taylor", "img_url": null },
+    {
+        "city_id": 287,
+        "council_member": "Liz Sierawski",
+        "img_url": "https://www.citystats.xyz/images/cities/287/city_council/1"
+    },
+    {
+        "city_id": 287,
+        "council_member": "Deanna Koski",
+        "img_url": "https://www.citystats.xyz/images/cities/287/city_council/2"
+    },
+    {
+        "city_id": 287,
+        "council_member": "Michael V. Radtke Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/287/city_council/3"
+    },
+    {
+        "city_id": 287,
+        "council_member": "Maria G. Schmidt",
+        "img_url": "https://www.citystats.xyz/images/cities/287/city_council/4"
+    },
+    {
+        "city_id": 287,
+        "council_member": "Henry Yanez",
+        "img_url": "https://www.citystats.xyz/images/cities/287/city_council/5"
+    },
+    {
+        "city_id": 287,
+        "council_member": "Barbara A. Ziarko",
+        "img_url": "https://www.citystats.xyz/images/cities/287/city_council/6"
+    }
+]
