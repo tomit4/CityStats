@@ -1,0 +1,42 @@
+[
+    {
+        "city_id": 297,
+        "council_member": "Jane Castor",
+        "img_url": "https://www.citystats.xyz/images/cities/297/mayor"
+    },
+    {
+        "city_id": 297,
+        "council_member": "Alan Clendenin",
+        "img_url": "https://www.citystats.xyz/images/cities/297/city_council/1"
+    },
+    {
+        "city_id": 297,
+        "council_member": "Guido Maniscalco",
+        "img_url": "https://www.citystats.xyz/images/cities/297/city_council/2"
+    },
+    {
+        "city_id": 297,
+        "council_member": "Lynn Hurtak",
+        "img_url": "https://www.citystats.xyz/images/cities/297/city_council/3"
+    },
+    {
+        "city_id": 297,
+        "council_member": "Bill Carlson",
+        "img_url": "https://www.citystats.xyz/images/cities/297/city_council/4"
+    },
+    {
+        "city_id": 297,
+        "council_member": "Gwendolyn Henderson",
+        "img_url": "https://www.citystats.xyz/images/cities/297/city_council/5"
+    },
+    {
+        "city_id": 297,
+        "council_member": "Charlie Miranda",
+        "img_url": "https://www.citystats.xyz/images/cities/297/city_council/6"
+    },
+    {
+        "city_id": 297,
+        "council_member": "Luis Viera",
+        "img_url": "https://www.citystats.xyz/images/cities/297/city_council/7"
+    }
+]
