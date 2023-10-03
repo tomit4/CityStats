@@ -77,3 +77,9 @@
 2023-10-03 02:21:29,124 - INFO - Downloaded image for city_id: 295, 7 of 9
 2023-10-03 02:21:29,345 - INFO - Downloaded image for city_id: 295, 8 of 9
 2023-10-03 02:21:29,514 - INFO - Downloaded image for city_id: 295, 9 of 9
+2023-10-03 02:26:04,035 - ERROR - Error at city_id: 296 during scraping: too many values to unpack (expected 2)
+2023-10-03 02:35:26,534 - INFO - Downloaded image for city_id: 296, 1 of 5
+2023-10-03 02:35:29,017 - INFO - Downloaded image for city_id: 296, 2 of 5
+2023-10-03 02:35:29,381 - INFO - Downloaded image for city_id: 296, 3 of 5
+2023-10-03 02:35:29,810 - INFO - Downloaded image for city_id: 296, 4 of 5
+2023-10-03 02:35:30,199 - INFO - Downloaded image for city_id: 296, 5 of 5
