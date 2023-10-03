@@ -1,0 +1,16 @@
+[
+    { "city_id": 305, "council_member": "G. T. Bynum", "img_url": null },
+    {
+        "city_id": 305,
+        "council_member": "Vanessa Hall-Harper",
+        "img_url": null
+    },
+    { "city_id": 305, "council_member": "Jeannie Cue", "img_url": null },
+    { "city_id": 305, "council_member": "Crista Patrick", "img_url": null },
+    { "city_id": 305, "council_member": "Laura Bellis", "img_url": null },
+    { "city_id": 305, "council_member": "Grant Miller", "img_url": null },
+    { "city_id": 305, "council_member": "Christian Bengel", "img_url": null },
+    { "city_id": 305, "council_member": "Lori Decter Wright", "img_url": null },
+    { "city_id": 305, "council_member": "Phil Lakin, Jr.Â", "img_url": null },
+    { "city_id": 305, "council_member": "Jayme Fowler", "img_url": null }
+]
