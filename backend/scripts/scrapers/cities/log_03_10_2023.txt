@@ -133,3 +133,30 @@
 2023-10-03 03:20:42,102 - INFO - Downloaded image for city_id: 301, 3 of 5
 2023-10-03 03:20:42,807 - INFO - Downloaded image for city_id: 301, 4 of 5
 2023-10-03 03:20:43,489 - INFO - Downloaded image for city_id: 301, 5 of 5
+2023-10-03 03:36:17,064 - ERROR - Error at city_id: 302 during scraping: 'str' object has no attribute 'pop'
+2023-10-03 03:42:35,991 - ERROR - Error at city_id: 302 during scraping: string index out of range
+2023-10-03 03:42:47,584 - ERROR - Error at city_id: 302 during scraping: string index out of range
+2023-10-03 03:59:41,498 - INFO - Downloaded image for city_id: 302, 1 of 12
+2023-10-03 03:59:46,911 - INFO - Downloaded image for city_id: 302, 2 of 12
+2023-10-03 03:59:47,259 - INFO - Downloaded image for city_id: 302, 3 of 12
+2023-10-03 03:59:49,432 - INFO - Downloaded image for city_id: 302, 4 of 12
+2023-10-03 03:59:50,937 - INFO - Downloaded image for city_id: 302, 5 of 12
+2023-10-03 03:59:52,672 - INFO - Downloaded image for city_id: 302, 6 of 12
+2023-10-03 03:59:59,704 - INFO - Downloaded image for city_id: 302, 7 of 12
+2023-10-03 04:00:00,775 - INFO - Downloaded image for city_id: 302, 8 of 12
+2023-10-03 04:00:03,392 - INFO - Downloaded image for city_id: 302, 9 of 12
+2023-10-03 04:00:06,384 - INFO - Downloaded image for city_id: 302, 10 of 12
+2023-10-03 04:00:07,690 - INFO - Downloaded image for city_id: 302, 11 of 12
+2023-10-03 04:00:09,340 - INFO - Downloaded image for city_id: 302, 12 of 12
+2023-10-03 04:02:02,981 - INFO - Downloaded image for city_id: 302, 1 of 12
+2023-10-03 04:02:04,964 - INFO - Downloaded image for city_id: 302, 2 of 12
+2023-10-03 04:02:07,242 - INFO - Downloaded image for city_id: 302, 3 of 12
+2023-10-03 04:02:09,292 - INFO - Downloaded image for city_id: 302, 4 of 12
+2023-10-03 04:02:10,507 - INFO - Downloaded image for city_id: 302, 5 of 12
+2023-10-03 04:02:12,326 - INFO - Downloaded image for city_id: 302, 6 of 12
+2023-10-03 04:02:12,572 - INFO - Downloaded image for city_id: 302, 7 of 12
+2023-10-03 04:02:14,454 - INFO - Downloaded image for city_id: 302, 8 of 12
+2023-10-03 04:02:16,355 - INFO - Downloaded image for city_id: 302, 9 of 12
+2023-10-03 04:02:16,672 - INFO - Downloaded image for city_id: 302, 10 of 12
+2023-10-03 04:02:17,923 - INFO - Downloaded image for city_id: 302, 11 of 12
+2023-10-03 04:02:18,108 - INFO - Downloaded image for city_id: 302, 12 of 12
