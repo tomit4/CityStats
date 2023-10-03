@@ -34,3 +34,4 @@
 2023-10-03 01:19:58,333 - ERROR - Error at city_id: 289 during scraping: 'builtin_function_or_method' object has no attribute 'split'
 2023-10-03 01:20:44,572 - ERROR - Error at city_id: 289 during scraping: 'list' object has no attribute 'split'
 2023-10-03 01:23:52,982 - INFO - No images scraped for city_id: 289
+2023-10-03 01:28:11,834 - INFO - No images scraped for city_id: 290

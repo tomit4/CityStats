@@ -1,0 +1,15 @@
+[
+    { "city_id": 290, "council_member": "Ken Welch", "img_url": null },
+    { "city_id": 290, "council_member": "Copley Gerdes", "img_url": null },
+    { "city_id": 290, "council_member": "Brandi Gabbard", "img_url": null },
+    { "city_id": 290, "council_member": "Ed Montanari", "img_url": null },
+    { "city_id": 290, "council_member": "Lisset Hanewicz", "img_url": null },
+    {
+        "city_id": 290,
+        "council_member": "Deborah Figgs-Sanders",
+        "img_url": null
+    },
+    { "city_id": 290, "council_member": "Gina Driscoll", "img_url": null },
+    { "city_id": 290, "council_member": "John Muhammad", "img_url": null },
+    { "city_id": 290, "council_member": "Richie Floyd", "img_url": null }
+]
