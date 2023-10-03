@@ -10,10 +10,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 281
-BASE_URL = 'https://www.spokanevalleywa.gov'
-CITY_COUNCIL_URL = 'https://www.spokanevalleywa.gov/193/City-Council'
-MAYOR_URL = 'https://en.wikipedia.org/wiki/Spokane_Valley,_Washington'
+CITY_ID = 285
+BASE_URL = 'https://www.springfieldmo.gov'
+CITY_COUNCIL_URL = 'https://www.springfieldmo.gov/145/City-Council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -44,41 +43,18 @@ def parse_json(results):
         json.dump(json_arr, writeJSON, ensure_ascii=False)
 
 
-def prepend_mayor_to(member_names):
-    try:
-        r = session.get(MAYOR_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('.mergedrow')
-        for result in results:
-            ths = result.find('th')
-            for th in ths:
-                if 'Mayor' in th.text:
-                    tds = result.find('.infobox-data')
-                    for td in tds:
-                        member_names.insert(0, td.text.split('[')[0])
-        return member_names
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
 def scrape_data():
     try:
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.hyperlink')
+        results = r.html.find('.fr-view')
         for result in results:
             a_tags = result.find('a')
             for a_tag in a_tags:
                 if 'href' in a_tag.attrs:
-                    if a_tag.text not in data:
-                        data.append(a_tag.text)
-        for i, d in enumerate(data):
-            data[i] = d.split(': ')[1]
-        for i, d in enumerate(data):
-            if '(' in d:
-                data[i] = d.split(' (')[0]
+                    data.append(a_tag.text)
+        data = data[4:13]
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -86,8 +62,7 @@ def scrape_data():
 
 
 if __name__ == "__main__":
-    member_names = scrape_data()
-    results = prepend_mayor_to(member_names)
+    results = scrape_data()
     if results:
         parse_json(results)
     logging.info(f'No images scraped for city_id: {CITY_ID}')

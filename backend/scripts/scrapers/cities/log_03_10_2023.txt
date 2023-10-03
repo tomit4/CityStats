@@ -22,3 +22,4 @@
 2023-10-03 00:34:20,865 - ERROR - Error at city_id: 284 during scraping: HTTPSConnectionPool(host='www.springfield-ma.gov', port=443): Max retries exceeded with url: /cos/council-2014 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)')))
 2023-10-03 00:40:57,353 - ERROR - Error at city_id: 284 during scraping: HTTPSConnectionPool(host='www.springfield-ma.gov', port=443): Max retries exceeded with url: /cos/council-2014 (Caused by SSLError(SSLError(524297, '[SSL] PEM lib (_ssl.c:3905)')))
 2023-10-03 00:41:38,961 - ERROR - Error at city_id: 284 during scraping: HTTPSConnectionPool(host='www.springfield-ma.gov', port=443): Max retries exceeded with url: /cos/council-2014 (Caused by SSLError(SSLError(524297, '[SSL] PEM lib (_ssl.c:3905)')))
+2023-10-03 00:48:51,669 - INFO - No images scraped for city_id: 285
