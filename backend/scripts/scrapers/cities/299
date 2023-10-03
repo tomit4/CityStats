@@ -73,40 +73,6 @@ def parse_json(results):
         json.dump(json_arr, writeJSON, ensure_ascii=False)
 
 
-def grab_img_from(member_urls):
-    try:
-        data = []
-        for url in member_urls:
-            r = session.get(url)
-            # r.html actually works, lsp doesn't like it for some reason...
-            results = r.html.find('.u-photo')
-            for result in results:
-                if 'src' in result.attrs:
-                    data.append(f"{BASE_URL}{result.attrs['src']}")
-        return data
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
-def grab_member_urls():
-    try:
-        r = session.get(CITY_COUNCIL_URL)
-        # r.html actually works, lsp doesn't like it for some reason...
-        data = []
-        results = r.html.find('.siteNav')
-        for result in results:
-            a_tags = result.find('a')
-            for a_tag in a_tags:
-                if 'href' in a_tag.attrs:
-                    if 'Mayor' in a_tag.text or 'Council Member' in a_tag.text:
-                        data.append(f"{BASE_URL}{a_tag.attrs['href']}")
-        return data
-    except Exception as e:
-        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-        return False
-
-
 def grab_img():
     try:
         r = session.get(CITY_COUNCIL_URL)
@@ -149,6 +115,4 @@ if __name__ == "__main__":
     if results:
         parse_json(results)
     img_urls = grab_img()
-    #  member_urls = grab_member_urls()
-    #  img_urls = grab_img_from(member_urls)
     download_images(img_urls)
