@@ -67,3 +67,13 @@
 2023-10-03 02:11:26,041 - INFO - Downloaded image for city_id: 294, 9 of 11
 2023-10-03 02:11:26,574 - INFO - Downloaded image for city_id: 294, 10 of 11
 2023-10-03 02:11:26,829 - INFO - Downloaded image for city_id: 294, 11 of 11
+2023-10-03 02:17:21,332 - ERROR - Error at city_id: 295 during scraping: 'str' object has no attribute 'spl'
+2023-10-03 02:21:27,903 - INFO - Downloaded image for city_id: 295, 1 of 9
+2023-10-03 02:21:28,182 - INFO - Downloaded image for city_id: 295, 2 of 9
+2023-10-03 02:21:28,349 - INFO - Downloaded image for city_id: 295, 3 of 9
+2023-10-03 02:21:28,571 - INFO - Downloaded image for city_id: 295, 4 of 9
+2023-10-03 02:21:28,768 - INFO - Downloaded image for city_id: 295, 5 of 9
+2023-10-03 02:21:28,933 - INFO - Downloaded image for city_id: 295, 6 of 9
+2023-10-03 02:21:29,124 - INFO - Downloaded image for city_id: 295, 7 of 9
+2023-10-03 02:21:29,345 - INFO - Downloaded image for city_id: 295, 8 of 9
+2023-10-03 02:21:29,514 - INFO - Downloaded image for city_id: 295, 9 of 9
