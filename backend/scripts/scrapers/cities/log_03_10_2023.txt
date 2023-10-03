@@ -108,3 +108,8 @@
 2023-10-03 02:56:29,001 - INFO - Downloaded image for city_id: 297, 6 of 8
 2023-10-03 02:56:29,279 - INFO - Downloaded image for city_id: 297, 7 of 8
 2023-10-03 02:56:29,486 - INFO - Downloaded image for city_id: 297, 8 of 8
+2023-10-03 03:03:54,015 - INFO - Downloaded image for city_id: 298, 1 of 5
+2023-10-03 03:03:54,435 - INFO - Downloaded image for city_id: 298, 2 of 5
+2023-10-03 03:03:55,083 - INFO - Downloaded image for city_id: 298, 3 of 5
+2023-10-03 03:03:55,731 - INFO - Downloaded image for city_id: 298, 4 of 5
+2023-10-03 03:03:56,292 - INFO - Downloaded image for city_id: 298, 5 of 5

@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 298,
+        "council_member": "Zak Schwank",
+        "img_url": "https://www.citystats.xyz/images/cities/298/mayor"
+    },
+    {
+        "city_id": 298,
+        "council_member": "James \"Stew\" Stewart",
+        "img_url": "https://www.citystats.xyz/images/cities/298/city_council/1"
+    },
+    {
+        "city_id": 298,
+        "council_member": "Jessica Alexander",
+        "img_url": "https://www.citystats.xyz/images/cities/298/city_council/2"
+    },
+    {
+        "city_id": 298,
+        "council_member": "Curtis Brown",
+        "img_url": "https://www.citystats.xyz/images/cities/298/city_council/3"
+    },
+    {
+        "city_id": 298,
+        "council_member": "Brenden Kalfus",
+        "img_url": "https://www.citystats.xyz/images/cities/298/city_council/4"
+    }
+]

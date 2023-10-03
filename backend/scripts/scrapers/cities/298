@@ -13,9 +13,9 @@ from requests_html import HTMLSession
 session = HTMLSession()
 
 # Change based off of which site being scraped
-CITY_ID = 296
-BASE_URL = 'https://www.talgov.com'
-CITY_COUNCIL_URL = 'https://www.talgov.com/Main/Home'
+CITY_ID = 298
+BASE_URL = 'https://temeculaca.gov'
+CITY_COUNCIL_URL = 'https://temeculaca.gov/173/City-Council'
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
@@ -79,12 +79,10 @@ def grab_img_from(member_urls):
         for url in member_urls:
             r = session.get(url)
             # r.html actually works, lsp doesn't like it for some reason...
-            results = r.html.find('.page-content')
+            results = r.html.find('.u-photo')
             for result in results:
-                images = result.find('img.thirtythree')
-                for image in images:
-                    if 'src' in image.attrs:
-                        data.append(f"{BASE_URL}{image.attrs['src']}")
+                if 'src' in result.attrs:
+                    data.append(f"{BASE_URL}{result.attrs['src']}")
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -96,16 +94,13 @@ def grab_member_urls():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('footer')
+        results = r.html.find('.siteNav')
         for result in results:
-            col2 = result.find('.col-2')
-            for col in col2:
-                a_tags = col.find('a')
-                for a_tag in a_tags:
-                    if 'href' in a_tag.attrs and 'cityleadership' in a_tag.attrs[
-                            'href']:
+            a_tags = result.find('a')
+            for a_tag in a_tags:
+                if 'href' in a_tag.attrs:
+                    if 'Mayor' in a_tag.text or 'Council Member' in a_tag.text:
                         data.append(f"{BASE_URL}{a_tag.attrs['href']}")
-        data.pop()
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -117,16 +112,20 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('footer')
+        results = r.html.find('.siteNav')
         for result in results:
-            col2 = result.find('.col-2')
-            for col in col2:
-                names = col.find('.child')
-                for name in names:
-                    data.append(name.text)
+            a_tags = result.find('a')
+            for a_tag in a_tags:
+                if 'href' in a_tag.attrs:
+                    if 'Mayor' in a_tag.text or 'Council Member' in a_tag.text:
+                        data.append(a_tag.text)
         for i, d in enumerate(data):
-            if 'Mayor' in d:
-                data[i] = d.split(' Mayor')[0]
+            if 'Mayor Pro Tem' in d:
+                data[i] = d.split('Mayor Pro Tem ')[1]
+            elif 'Mayor' in d:
+                data[i] = d.split('Mayor ')[1]
+            else:
+                data[i] = d.split('Council Member ')[1]
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
