@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 304,
+        "council_member": "Regina Romero",
+        "img_url": "https://www.citystats.xyz/images/cities/304/mayor"
+    },
+    {
+        "city_id": 304,
+        "council_member": "Lane Santa Cruz",
+        "img_url": "https://www.citystats.xyz/images/cities/304/city_council/1"
+    },
+    {
+        "city_id": 304,
+        "council_member": "Paul Cunningham",
+        "img_url": "https://www.citystats.xyz/images/cities/304/city_council/2"
+    },
+    {
+        "city_id": 304,
+        "council_member": "Kevin Dahl",
+        "img_url": "https://www.citystats.xyz/images/cities/304/city_council/3"
+    },
+    {
+        "city_id": 304,
+        "council_member": "Nikki Lee",
+        "img_url": "https://www.citystats.xyz/images/cities/304/city_council/4"
+    },
+    {
+        "city_id": 304,
+        "council_member": "Richard Fimbres",
+        "img_url": "https://www.citystats.xyz/images/cities/304/city_council/5"
+    },
+    {
+        "city_id": 304,
+        "council_member": "Steve Kozachik",
+        "img_url": "https://www.citystats.xyz/images/cities/304/city_council/6"
+    }
+]
