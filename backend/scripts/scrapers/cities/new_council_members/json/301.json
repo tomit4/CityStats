@@ -1,0 +1,27 @@
+[
+    {
+        "city_id": 301,
+        "council_member": "Kevin McNamee",
+        "img_url": "https://www.citystats.xyz/images/cities/301/mayor"
+    },
+    {
+        "city_id": 301,
+        "council_member": "Al Adam",
+        "img_url": "https://www.citystats.xyz/images/cities/301/city_council/1"
+    },
+    {
+        "city_id": 301,
+        "council_member": "Bob Engler",
+        "img_url": "https://www.citystats.xyz/images/cities/301/city_council/2"
+    },
+    {
+        "city_id": 301,
+        "council_member": "David Newman",
+        "img_url": "https://www.citystats.xyz/images/cities/301/city_council/3"
+    },
+    {
+        "city_id": 301,
+        "council_member": "Mikey Taylor",
+        "img_url": "https://www.citystats.xyz/images/cities/301/city_council/4"
+    }
+]

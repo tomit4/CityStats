@@ -128,3 +128,8 @@
 2023-10-03 03:11:32,968 - INFO - Downloaded image for city_id: 299, 7 of 7
 2023-10-03 03:14:56,834 - ERROR - Error at city_id: 300 during scraping: HTTPSConnectionPool(host='www.thorntonco.gov', port=443): Max retries exceeded with url: /government/city-council/Pages/default.aspx (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
 2023-10-03 03:16:33,091 - WARNING - Site for city_id: 300, not scrapable.
+2023-10-03 03:20:39,466 - INFO - Downloaded image for city_id: 301, 1 of 5
+2023-10-03 03:20:40,377 - INFO - Downloaded image for city_id: 301, 2 of 5
+2023-10-03 03:20:42,102 - INFO - Downloaded image for city_id: 301, 3 of 5
+2023-10-03 03:20:42,807 - INFO - Downloaded image for city_id: 301, 4 of 5
+2023-10-03 03:20:43,489 - INFO - Downloaded image for city_id: 301, 5 of 5
