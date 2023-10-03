@@ -1,0 +1,21 @@
+[
+    { "city_id": 288, "council_member": "Tishaura Jones", "img_url": null },
+    { "city_id": 288, "council_member": "Anne Schweitzer", "img_url": null },
+    { "city_id": 288, "council_member": "Tom Oldenburg", "img_url": null },
+    { "city_id": 288, "council_member": "Shane Cohn", "img_url": null },
+    { "city_id": 288, "council_member": "Bret Narayan", "img_url": null },
+    { "city_id": 288, "council_member": "Joseph Vollmer", "img_url": null },
+    { "city_id": 288, "council_member": "Daniela Velazquez", "img_url": null },
+    { "city_id": 288, "council_member": "Alisha Sonnier", "img_url": null },
+    { "city_id": 288, "council_member": "Cara Spencer", "img_url": null },
+    { "city_id": 288, "council_member": "Michael Browning", "img_url": null },
+    {
+        "city_id": 288,
+        "council_member": "Shameem Clark Hubbard",
+        "img_url": null
+    },
+    { "city_id": 288, "council_member": "Laura Keys", "img_url": null },
+    { "city_id": 288, "council_member": "Sharon Tyus", "img_url": null },
+    { "city_id": 288, "council_member": "Pamela Boyd", "img_url": null },
+    { "city_id": 288, "council_member": "Rasheen Aldridge", "img_url": null }
+]
