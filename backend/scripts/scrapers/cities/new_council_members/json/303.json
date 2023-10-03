@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 303,
+        "council_member": "George K. Chen",
+        "img_url": "https://www.citystats.xyz/images/cities/303/mayor"
+    },
+    {
+        "city_id": 303,
+        "council_member": "Jon Kaji",
+        "img_url": "https://www.citystats.xyz/images/cities/303/city_council/1"
+    },
+    {
+        "city_id": 303,
+        "council_member": "Bridgett Lewis",
+        "img_url": "https://www.citystats.xyz/images/cities/303/city_council/2"
+    },
+    {
+        "city_id": 303,
+        "council_member": "Asam Sheikh",
+        "img_url": "https://www.citystats.xyz/images/cities/303/city_council/3"
+    },
+    {
+        "city_id": 303,
+        "council_member": "Sharon Kalani",
+        "img_url": "https://www.citystats.xyz/images/cities/303/city_council/4"
+    },
+    {
+        "city_id": 303,
+        "council_member": "Aurelio Mattucci",
+        "img_url": "https://www.citystats.xyz/images/cities/303/city_council/5"
+    },
+    {
+        "city_id": 303,
+        "council_member": "Mike Griffiths",
+        "img_url": "https://www.citystats.xyz/images/cities/303/city_council/6"
+    }
+]

@@ -160,3 +160,17 @@
 2023-10-03 04:02:16,672 - INFO - Downloaded image for city_id: 302, 10 of 12
 2023-10-03 04:02:17,923 - INFO - Downloaded image for city_id: 302, 11 of 12
 2023-10-03 04:02:18,108 - INFO - Downloaded image for city_id: 302, 12 of 12
+2023-10-03 04:12:49,743 - INFO - Downloaded image for city_id: 303, 1 of 7
+2023-10-03 04:12:50,520 - INFO - Downloaded image for city_id: 303, 2 of 7
+2023-10-03 04:12:50,998 - INFO - Downloaded image for city_id: 303, 3 of 7
+2023-10-03 04:12:51,378 - INFO - Downloaded image for city_id: 303, 4 of 7
+2023-10-03 04:12:51,796 - INFO - Downloaded image for city_id: 303, 5 of 7
+2023-10-03 04:12:52,584 - INFO - Downloaded image for city_id: 303, 6 of 7
+2023-10-03 04:12:53,400 - INFO - Downloaded image for city_id: 303, 7 of 7
+2023-10-03 04:13:20,519 - INFO - Downloaded image for city_id: 303, 1 of 7
+2023-10-03 04:13:20,819 - INFO - Downloaded image for city_id: 303, 2 of 7
+2023-10-03 04:13:21,082 - INFO - Downloaded image for city_id: 303, 3 of 7
+2023-10-03 04:13:21,360 - INFO - Downloaded image for city_id: 303, 4 of 7
+2023-10-03 04:13:21,600 - INFO - Downloaded image for city_id: 303, 5 of 7
+2023-10-03 04:13:21,818 - INFO - Downloaded image for city_id: 303, 6 of 7
+2023-10-03 04:13:22,698 - INFO - Downloaded image for city_id: 303, 7 of 7

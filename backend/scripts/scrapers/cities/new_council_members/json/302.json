@@ -1,1 +1,63 @@
-[{"city_id": 302, "council_member": "Wade Kapszukiewicz", "img_url": null}, {"city_id": 302, "council_member": "John Hobbs III", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/1"}, {"city_id": 302, "council_member": "Matt Cherry", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/2"}, {"city_id": 302, "council_member": "Theresa Gadus", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/3"}, {"city_id": 302, "council_member": "Vanice S. Williams", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/4"}, {"city_id": 302, "council_member": "Sam Melden", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/5"}, {"city_id": 302, "council_member": "Theresa Morris", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/6"}, {"city_id": 302, "council_member": "Carrie Hartman", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/7"}, {"city_id": 302, "council_member": "Nick Komives", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/8"}, {"city_id": 302, "council_member": "Cerssandra McPherson", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/9"}, {"city_id": 302, "council_member": "Katie Moline", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/10"}, {"city_id": 302, "council_member": "George Sarantou", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/11"}, {"city_id": 302, "council_member": "Dr. Tiffany M. Preston Whitman", "img_url": "https://www.citystats.xyz/images/cities/302/city_council/12"}]
+[
+    { "city_id": 302, "council_member": "Wade Kapszukiewicz", "img_url": null },
+    {
+        "city_id": 302,
+        "council_member": "John Hobbs III",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/1"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Matt Cherry",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/2"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Theresa Gadus",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/3"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Vanice S. Williams",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/4"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Sam Melden",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/5"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Theresa Morris",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/6"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Carrie Hartman",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/7"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Nick Komives",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/8"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Cerssandra McPherson",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/9"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Katie Moline",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/10"
+    },
+    {
+        "city_id": 302,
+        "council_member": "George Sarantou",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/11"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Dr. Tiffany M. Preston Whitman",
+        "img_url": "https://www.citystats.xyz/images/cities/302/city_council/12"
+    }
+]
