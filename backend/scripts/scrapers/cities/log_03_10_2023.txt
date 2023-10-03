@@ -30,3 +30,7 @@
 2023-10-03 01:04:26,914 - INFO - Downloaded image for city_id: 287, 5 of 6
 2023-10-03 01:04:27,648 - INFO - Downloaded image for city_id: 287, 6 of 6
 2023-10-03 01:09:29,544 - INFO - No images scraped for city_id: 288
+2023-10-03 01:18:50,339 - ERROR - Error at city_id: 289 during scraping: name 'MAYOR_URL' is not defined
+2023-10-03 01:19:58,333 - ERROR - Error at city_id: 289 during scraping: 'builtin_function_or_method' object has no attribute 'split'
+2023-10-03 01:20:44,572 - ERROR - Error at city_id: 289 during scraping: 'list' object has no attribute 'split'
+2023-10-03 01:23:52,982 - INFO - No images scraped for city_id: 289
