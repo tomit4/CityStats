@@ -124,3 +124,13 @@
 2023-10-05 03:21:51,976 - INFO - Downloaded image for city_id: 328, 8 of 9
 2023-10-05 03:21:52,648 - INFO - Downloaded image for city_id: 328, 9 of 9
 2023-10-05 03:26:04,200 - INFO - No images scraped for city_id: 329
+2023-10-05 03:39:25,940 - ERROR - Error at city_id: 330 during scraping: list index out of range
+2023-10-05 03:51:51,901 - ERROR - Error at city_id: 330 during scraping: name 'data' is not defined
+2023-10-05 03:53:14,154 - INFO - Downloaded image for city_id: 330, 1 of 8
+2023-10-05 03:53:14,639 - INFO - Downloaded image for city_id: 330, 2 of 8
+2023-10-05 03:53:15,262 - INFO - Downloaded image for city_id: 330, 3 of 8
+2023-10-05 03:53:15,817 - INFO - Downloaded image for city_id: 330, 4 of 8
+2023-10-05 03:53:15,943 - INFO - Downloaded image for city_id: 330, 5 of 8
+2023-10-05 03:53:16,139 - INFO - Downloaded image for city_id: 330, 6 of 8
+2023-10-05 03:53:16,395 - INFO - Downloaded image for city_id: 330, 7 of 8
+2023-10-05 03:53:16,531 - INFO - Downloaded image for city_id: 330, 8 of 8
