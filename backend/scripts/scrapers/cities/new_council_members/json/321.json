@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 321,
+        "council_member": "Nancy McNally",
+        "img_url": "https://www.citystats.xyz/images/cities/321/mayor"
+    },
+    {
+        "city_id": 321,
+        "council_member": "David DeMott",
+        "img_url": "https://www.citystats.xyz/images/cities/321/city_council/1"
+    },
+    {
+        "city_id": 321,
+        "council_member": "Bruce Baker",
+        "img_url": "https://www.citystats.xyz/images/cities/321/city_council/2"
+    },
+    {
+        "city_id": 321,
+        "council_member": "Lindsey Emmons",
+        "img_url": "https://www.citystats.xyz/images/cities/321/city_council/3"
+    },
+    {
+        "city_id": 321,
+        "council_member": "Obi Ezeadi",
+        "img_url": "https://www.citystats.xyz/images/cities/321/city_council/4"
+    },
+    {
+        "city_id": 321,
+        "council_member": "Sarah Nurmela",
+        "img_url": "https://www.citystats.xyz/images/cities/321/city_council/5"
+    },
+    {
+        "city_id": 321,
+        "council_member": "Rich Seymour",
+        "img_url": "https://www.citystats.xyz/images/cities/321/city_council/6"
+    }
+]
