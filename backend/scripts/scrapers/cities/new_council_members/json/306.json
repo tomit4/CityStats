@@ -1,0 +1,42 @@
+[
+    {
+        "city_id": 306,
+        "council_member": "Walt Maddox",
+        "img_url": "https://www.citystats.xyz/images/cities/306/mayor"
+    },
+    {
+        "city_id": 306,
+        "council_member": "Matthew Wilson",
+        "img_url": "https://www.citystats.xyz/images/cities/306/city_council/1"
+    },
+    {
+        "city_id": 306,
+        "council_member": "Raevan Howard",
+        "img_url": "https://www.citystats.xyz/images/cities/306/city_council/2"
+    },
+    {
+        "city_id": 306,
+        "council_member": "Norman Crow",
+        "img_url": "https://www.citystats.xyz/images/cities/306/city_council/3"
+    },
+    {
+        "city_id": 306,
+        "council_member": "Lee Busby",
+        "img_url": "https://www.citystats.xyz/images/cities/306/city_council/4"
+    },
+    {
+        "city_id": 306,
+        "council_member": "Kip Tyner",
+        "img_url": "https://www.citystats.xyz/images/cities/306/city_council/5"
+    },
+    {
+        "city_id": 306,
+        "council_member": "John Faile",
+        "img_url": "https://www.citystats.xyz/images/cities/306/city_council/6"
+    },
+    {
+        "city_id": 306,
+        "council_member": "Cassius Lanier",
+        "img_url": "https://www.citystats.xyz/images/cities/306/city_council/7"
+    }
+]
