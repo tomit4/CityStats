@@ -1,0 +1,42 @@
+[
+    {
+        "city_id": 320,
+        "council_member": "Dirk Burton",
+        "img_url": "https://www.citystats.xyz/images/cities/320/mayor"
+    },
+    {
+        "city_id": 320,
+        "council_member": "Pamela Bloom",
+        "img_url": "https://www.citystats.xyz/images/cities/320/city_council/1"
+    },
+    {
+        "city_id": 320,
+        "council_member": "Kelvin Green",
+        "img_url": "https://www.citystats.xyz/images/cities/320/city_council/2"
+    },
+    {
+        "city_id": 320,
+        "council_member": "Kayleen Whitelock",
+        "img_url": "https://www.citystats.xyz/images/cities/320/city_council/3"
+    },
+    {
+        "city_id": 320,
+        "council_member": "Chris McConnehey",
+        "img_url": "https://www.citystats.xyz/images/cities/320/city_council/4"
+    },
+    {
+        "city_id": 320,
+        "council_member": "Melissa Worthen",
+        "img_url": "https://www.citystats.xyz/images/cities/320/city_council/5"
+    },
+    {
+        "city_id": 320,
+        "council_member": "Zach Jacob",
+        "img_url": "https://www.citystats.xyz/images/cities/320/city_council/6"
+    },
+    {
+        "city_id": 320,
+        "council_member": "David Pack",
+        "img_url": "https://www.citystats.xyz/images/cities/320/city_council/7"
+    }
+]
