@@ -1,0 +1,17 @@
+[
+    { "city_id": 329, "council_member": "Joseph M. Petty", "img_url": null },
+    { "city_id": 329, "council_member": "Morris A. Bergman", "img_url": null },
+    { "city_id": 329, "council_member": "Donna M. Colorio", "img_url": null },
+    { "city_id": 329, "council_member": "Khrystian E. King", "img_url": null },
+    { "city_id": 329, "council_member": "Thu Nguyen", "img_url": null },
+    { "city_id": 329, "council_member": "Kathleen M. Toomey", "img_url": null },
+    { "city_id": 329, "council_member": "Sean M. Rose", "img_url": null },
+    {
+        "city_id": 329,
+        "council_member": "Candy F. Mero-Carlson",
+        "img_url": null
+    },
+    { "city_id": 329, "council_member": "George J. Russell", "img_url": null },
+    { "city_id": 329, "council_member": "Sarai Rivera", "img_url": null },
+    { "city_id": 329, "council_member": "Etel Haxhiaj", "img_url": null }
+]
