@@ -28,3 +28,4 @@
 2023-10-05 00:20:45,536 - INFO - Downloaded image for city_id: 308, 5 of 7
 2023-10-05 00:20:46,035 - INFO - Downloaded image for city_id: 308, 6 of 7
 2023-10-05 00:20:46,264 - INFO - Downloaded image for city_id: 308, 7 of 7
+2023-10-05 00:40:46,702 - INFO - No images scraped for city_id: 309

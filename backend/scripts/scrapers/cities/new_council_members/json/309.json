@@ -1,0 +1,21 @@
+[
+    {
+        "city_id": 309,
+        "council_member": "Robert H. Mcconnell",
+        "img_url": null
+    },
+    {
+        "city_id": 309,
+        "council_member": "Rozzana Verder-Aliga",
+        "img_url": null
+    },
+    {
+        "city_id": 309,
+        "council_member": "Diosdado \"Jr\" Matulac",
+        "img_url": null
+    },
+    { "city_id": 309, "council_member": "Mina Loera-Diaz", "img_url": null },
+    { "city_id": 309, "council_member": "Charles Palmares", "img_url": null },
+    { "city_id": 309, "council_member": "Peter Bregenzer", "img_url": null },
+    { "city_id": 309, "council_member": "Cristina Arriola", "img_url": null }
+]
