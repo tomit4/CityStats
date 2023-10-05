@@ -1,0 +1,17 @@
+[
+    { "city_id": 326, "council_member": "Bill Saffo", "img_url": null },
+    { "city_id": 326, "council_member": "Margaret Haynes", "img_url": null },
+    {
+        "city_id": 326,
+        "council_member": "Charles H. Rivenbark",
+        "img_url": null
+    },
+    { "city_id": 326, "council_member": "Neil Anderson", "img_url": null },
+    {
+        "city_id": 326,
+        "council_member": "Clifford D. Barnett, Sr.",
+        "img_url": null
+    },
+    { "city_id": 326, "council_member": "Kevin Spears", "img_url": null },
+    { "city_id": 326, "council_member": "Luke Waddell", "img_url": null }
+]
