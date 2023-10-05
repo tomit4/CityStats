@@ -1,0 +1,37 @@
+[
+    {
+        "city_id": 310,
+        "council_member": "Anne McEnerny-Ogle",
+        "img_url": "https://www.citystats.xyz/images/cities/310/mayor"
+    },
+    {
+        "city_id": 310,
+        "council_member": "Kim D. Harless",
+        "img_url": "https://www.citystats.xyz/images/cities/310/city_council/1"
+    },
+    {
+        "city_id": 310,
+        "council_member": "Erik Paulsen",
+        "img_url": "https://www.citystats.xyz/images/cities/310/city_council/2"
+    },
+    {
+        "city_id": 310,
+        "council_member": "Diana H. Perez",
+        "img_url": "https://www.citystats.xyz/images/cities/310/city_council/3"
+    },
+    {
+        "city_id": 310,
+        "council_member": "Bart Hansen",
+        "img_url": "https://www.citystats.xyz/images/cities/310/city_council/4"
+    },
+    {
+        "city_id": 310,
+        "council_member": "Ty Stober",
+        "img_url": "https://www.citystats.xyz/images/cities/310/city_council/5"
+    },
+    {
+        "city_id": 310,
+        "council_member": "Sarah J. Fox",
+        "img_url": "https://www.citystats.xyz/images/cities/310/city_council/6"
+    }
+]
