@@ -1,0 +1,33 @@
+[
+    { "city_id": 318, "council_member": "Neil O'Leary", "img_url": null },
+    {
+        "city_id": 318,
+        "council_member": "Paul Pernerewski, Jr.",
+        "img_url": null
+    },
+    { "city_id": 318, "council_member": "Ernest M. Brunelli", "img_url": null },
+    { "city_id": 318, "council_member": "Christian D’Orso", "img_url": null },
+    { "city_id": 318, "council_member": "Belinda Weaver", "img_url": null },
+    { "city_id": 318, "council_member": "Victor Lopez, Jr.", "img_url": null },
+    { "city_id": 318, "council_member": "Michael R. Salvio", "img_url": null },
+    { "city_id": 318, "council_member": "Jeffrey A. Hunter", "img_url": null },
+    {
+        "city_id": 318,
+        "council_member": "Michael DiGiovancarlo",
+        "img_url": null
+    },
+    {
+        "city_id": 318,
+        "council_member": "Sandra Martinez-McCarthy",
+        "img_url": null
+    },
+    { "city_id": 318, "council_member": "Geraldo Reyes Jr.", "img_url": null },
+    { "city_id": 318, "council_member": "George Noujaim", "img_url": null },
+    { "city_id": 318, "council_member": "Mary Grace Cavallo", "img_url": null },
+    {
+        "city_id": 318,
+        "council_member": "Vernon R. Matthews, Jr.",
+        "img_url": null
+    },
+    { "city_id": 318, "council_member": "Kelly Zimmermann", "img_url": null }
+]
