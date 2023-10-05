@@ -57,3 +57,8 @@
 2023-10-05 01:37:56,845 - INFO - Downloaded image for city_id: 315, 5 of 6
 2023-10-05 01:37:57,080 - INFO - Downloaded image for city_id: 315, 6 of 6
 2023-10-05 01:45:52,055 - INFO - No images scraped for city_id: 316
+2023-10-05 01:48:50,010 - ERROR - Error at city_id: 317 during scraping: name 'member_names' is not defined
+2023-10-05 01:52:29,155 - ERROR - Error at city_id: 317 during scraping: normalize() argument 2 must be str, not list
+2023-10-05 01:54:45,403 - ERROR - Error at city_id: 317 during scraping: list index out of range
+2023-10-05 01:54:57,151 - ERROR - Error at city_id: 317 during scraping: list index out of range
+2023-10-05 01:57:38,700 - INFO - No images scraped for city_id: 317
