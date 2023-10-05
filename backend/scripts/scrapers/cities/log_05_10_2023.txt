@@ -48,3 +48,4 @@
 2023-10-05 01:18:16,383 - INFO - Downloaded image for city_id: 312, 3 of 5
 2023-10-05 01:18:17,058 - INFO - Downloaded image for city_id: 312, 4 of 5
 2023-10-05 01:18:17,729 - INFO - Downloaded image for city_id: 312, 5 of 5
+2023-10-05 01:22:21,838 - WARNING - Site for city_id: 313, not scrapable.
