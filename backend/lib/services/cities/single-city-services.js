@@ -9,6 +9,7 @@ class SingleCityService extends SingleCityServiceDetails {
     constructor() {
         super()
         this.singleCity = {}
+        this.multipleCities = []
         this._nativeFields = [
             'id',
             'city_name',
@@ -43,16 +44,13 @@ class SingleCityService extends SingleCityServiceDetails {
             console.error('ERROR :=>', err)
         }
     }
-    async _grabCityIdByName(knex, name) {
+    async _grabCityIdsByName(knex, name) {
         try {
-            const cityId = (
-                await knex('cities')
-                    .select('id')
-                    .where('city_name', name)
-                    .first()
-            ).id
-            if (!cityId) throw Error(`No City Id Found By Name: ${name}`)
-            return cityId
+            const citiesByName = await knex('cities')
+                .select('id')
+                .where('city_name', name)
+            if (!citiesByName) throw Error(`No City Id Found By Name: ${name}`)
+            return citiesByName
         } catch (err) {
             console.error('ERROR :=>', err)
         }
@@ -72,16 +70,12 @@ class SingleCityService extends SingleCityServiceDetails {
     }
     async grabCityIdByName(knex, idOrName) {
         try {
-            let id
             if (isNaN(Number(idOrName))) {
                 const allCityNames = await this._grabAllCityNames(knex)
                 if (allCityNames.includes(idOrName)) {
-                    id = await this._grabCityIdByName(knex, idOrName)
+                    return await this._grabCityIdsByName(knex, idOrName)
                 } else throw Error(`No City Found by Name: ${idOrName}`)
-            } else {
-                id = idOrName
-            }
-            return id
+            } else return idOrName
         } catch (err) {
             console.error('ERROR :=>', err)
         }
@@ -237,7 +231,6 @@ class SingleCityService extends SingleCityServiceDetails {
             console.error('ERROR :=>', err)
         }
     }
-
     async _grabRelatedFieldData(knex, id, field) {
         const city = await this._grabMinCityInfo(knex, id)
         let returnVal
@@ -277,13 +270,7 @@ class SingleCityService extends SingleCityServiceDetails {
         }
         return { ...city, ...returnVal }
     }
-    /**
-     * Aggregates single city data
-     * @params { promise } knex
-     * returns { object } singleCity
-     * */
-    async grabSingleCityById(knex, idOrName) {
-        const id = await this.grabCityIdByName(knex, idOrName)
+    async _grabCityDetails(knex, id) {
         this.singleCity = await this._grabCityById(knex, id)
         this.singleCity.counties = await this._grabCountiesById(knex, id)
         this.singleCity.government = await this._grabBaseGovInfoById(knex, id)
@@ -292,7 +279,28 @@ class SingleCityService extends SingleCityServiceDetails {
         this.singleCity.zip_codes = await this._grabZipCodesById(knex, id)
         this.singleCity.area_codes = await this._grabAreaCodesById(knex, id)
         this.singleCity.gnis_feature_ids = await this._grabGnisIdsById(knex, id)
-        return this.singleCity
+    }
+    /**
+     * TODO: break this out into separate sub class??
+     * Aggregates single or multiple cities data
+     * @params { promise } knex
+     * returns { object } singleCity
+     * */
+    async grabCitiesById(knex, idOrName) {
+        const ids = await this.grabCityIdByName(knex, idOrName)
+        if (typeof ids === 'string') {
+            await this._grabCityDetails(knex, ids)
+            return this.singleCity
+        } else {
+            const cityIds = ids.map(cityId => {
+                return cityId.id
+            })
+            for (const cityId of cityIds) {
+                await this._grabCityDetails(knex, cityId)
+                this.multipleCities.push(this.singleCity)
+            }
+            return this.multipleCities
+        }
     }
     /**
      * Aggregates min city info with single query field
