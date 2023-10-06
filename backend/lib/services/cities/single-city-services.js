@@ -292,6 +292,10 @@ class SingleCityService extends SingleCityServiceDetails {
             await this._grabCityDetails(knex, ids)
             return this.singleCity
         } else {
+            // Reset application state
+            if (this.multipleCities.length) {
+                this.multipleCities = []
+            }
             const cityIds = ids.map(cityId => {
                 return cityId.id
             })
