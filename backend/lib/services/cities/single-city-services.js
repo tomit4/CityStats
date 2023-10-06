@@ -271,6 +271,8 @@ class SingleCityService extends SingleCityServiceDetails {
         return { ...city, ...returnVal }
     }
     async _grabCityDetails(knex, id) {
+        // Reset application state
+        this.singleCity = {}
         this.singleCity = await this._grabCityById(knex, id)
         this.singleCity.counties = await this._grabCountiesById(knex, id)
         this.singleCity.government = await this._grabBaseGovInfoById(knex, id)
@@ -281,7 +283,6 @@ class SingleCityService extends SingleCityServiceDetails {
         this.singleCity.gnis_feature_ids = await this._grabGnisIdsById(knex, id)
     }
     /**
-     * TODO: break this out into separate sub class??
      * Aggregates single or multiple cities data
      * @params { promise } knex
      * returns { object } singleCity
@@ -292,21 +293,27 @@ class SingleCityService extends SingleCityServiceDetails {
             await this._grabCityDetails(knex, ids)
             return this.singleCity
         } else {
-            // Reset application state
-            if (this.multipleCities.length) {
-                this.multipleCities = []
+            try {
+                // Reset application state
+                if (this.multipleCities.length) {
+                    this.multipleCities = []
+                }
+                const cityIds = ids.map(cityId => {
+                    return cityId.id
+                })
+                for (const cityId of cityIds) {
+                    await this._grabCityDetails(knex, cityId)
+                    this.multipleCities.push(this.singleCity)
+                }
+                return this.multipleCities
+            } catch (err) {
+                throw Error(`No Cities Found By Name: ${idOrName}`)
             }
-            const cityIds = ids.map(cityId => {
-                return cityId.id
-            })
-            for (const cityId of cityIds) {
-                await this._grabCityDetails(knex, cityId)
-                this.multipleCities.push(this.singleCity)
-            }
-            return this.multipleCities
         }
     }
     /**
+     * TODO: break out this function into two based off
+     * of return value of grabCityIdByName like above
      * Aggregates min city info with single query field
      * @params { promise } knex
      * @params { string } id
