@@ -8,8 +8,6 @@ const SingleCityServiceDetails = require('./single-city-services-with-details')
 class SingleCityService extends SingleCityServiceDetails {
     constructor() {
         super()
-        this.singleCity = {}
-        this.multipleCities = []
         this._nativeFields = [
             'id',
             'city_name',
@@ -271,16 +269,15 @@ class SingleCityService extends SingleCityServiceDetails {
         return { ...city, ...returnVal }
     }
     async _grabCityDetails(knex, id) {
-        // Reset application state
-        this.singleCity = {}
-        this.singleCity = await this._grabCityById(knex, id)
-        this.singleCity.counties = await this._grabCountiesById(knex, id)
-        this.singleCity.government = await this._grabBaseGovInfoById(knex, id)
-        this.singleCity.area = await this._grabAreaById(knex, id)
-        this.singleCity.population = await this._grabPopulationById(knex, id)
-        this.singleCity.zip_codes = await this._grabZipCodesById(knex, id)
-        this.singleCity.area_codes = await this._grabAreaCodesById(knex, id)
-        this.singleCity.gnis_feature_ids = await this._grabGnisIdsById(knex, id)
+        const singleCity = await this._grabCityById(knex, id)
+        singleCity.counties = await this._grabCountiesById(knex, id)
+        singleCity.government = await this._grabBaseGovInfoById(knex, id)
+        singleCity.area = await this._grabAreaById(knex, id)
+        singleCity.population = await this._grabPopulationById(knex, id)
+        singleCity.zip_codes = await this._grabZipCodesById(knex, id)
+        singleCity.area_codes = await this._grabAreaCodesById(knex, id)
+        singleCity.gnis_feature_ids = await this._grabGnisIdsById(knex, id)
+        return singleCity
     }
     /**
      * Aggregates single or multiple cities data
@@ -289,23 +286,19 @@ class SingleCityService extends SingleCityServiceDetails {
      * */
     async grabCitiesById(knex, idOrName) {
         const ids = await this.grabCityIdByName(knex, idOrName)
-        if (typeof ids === 'string') {
-            await this._grabCityDetails(knex, ids)
-            return this.singleCity
+        const cityIds =
+            typeof ids === 'object' ? ids.map(cityId => cityId.id) : []
+        if (!cityIds.length) {
+            return await this._grabCityDetails(knex, ids)
         } else {
             try {
-                // Reset application state
-                if (this.multipleCities.length) {
-                    this.multipleCities = []
-                }
-                const cityIds = ids.map(cityId => {
-                    return cityId.id
-                })
+                const multipleCities = []
                 for (const cityId of cityIds) {
-                    await this._grabCityDetails(knex, cityId)
-                    this.multipleCities.push(this.singleCity)
+                    multipleCities.push(
+                        await this._grabCityDetails(knex, cityId),
+                    )
                 }
-                return this.multipleCities
+                return multipleCities
             } catch (err) {
                 throw Error(`No Cities Found By Name: ${idOrName}`)
             }
@@ -321,11 +314,29 @@ class SingleCityService extends SingleCityServiceDetails {
      * returns { object }
      * */
     async grabRelDataById(knex, idOrName, field) {
-        const id = await this.grabCityIdByName(knex, idOrName)
-        if (this._nativeFields.includes(field)) {
-            return await this._grabNativeFieldData(knex, id, field)
+        const ids = await this.grabCityIdByName(knex, idOrName)
+        const cityIds =
+            typeof ids === 'object' ? ids.map(cityId => cityId.id) : []
+        if (!cityIds.length) {
+            if (this._nativeFields.includes(field))
+                return await this._grabNativeFieldData(knex, ids, field)
+            else return await this._grabRelatedFieldData(knex, ids, field)
         } else {
-            return await this._grabRelatedFieldData(knex, id, field)
+            const multipleCities = []
+            if (this._nativeFields.includes(field)) {
+                for (const cityId of cityIds) {
+                    multipleCities.push(
+                        await this._grabNativeFieldData(knex, cityId, field),
+                    )
+                }
+            } else {
+                for (const cityId of cityIds) {
+                    multipleCities.push(
+                        await this._grabRelatedFieldData(knex, cityId, field),
+                    )
+                }
+            }
+            return multipleCities
         }
     }
 }
