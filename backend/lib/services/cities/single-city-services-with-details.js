@@ -118,7 +118,7 @@ class SingleCityServiceDetails {
                     )
                     if (!deets)
                         throw Error(
-                            `No details for ${id} at ${fieldName} at ${table}.`,
+                            `No details for id: ${id} at field: ${fieldName} at table: ${table}.`,
                         )
                     multipleCities.push({ ...city, ...deets })
                 } else if (
@@ -135,7 +135,7 @@ class SingleCityServiceDetails {
                     )
                     if (!deets)
                         throw Error(
-                            `No details for ${id} at ${fieldName} at ${index}.`,
+                            `No details for id: ${id} at field: ${fieldName} at index: ${index}.`,
                         )
                     console.log('deets :=>', deets)
                     multipleCities.push({ ...city, ...deets })
