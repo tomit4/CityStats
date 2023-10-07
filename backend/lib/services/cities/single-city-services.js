@@ -48,7 +48,7 @@ class SingleCityService extends SingleCityServiceDetails {
                 .select('id')
                 .where('city_name', name)
             if (!citiesByName) throw Error(`No City Id Found By Name: ${name}`)
-            return citiesByName
+            return citiesByName.length === 1 ? citiesByName[0].id : citiesByName
         } catch (err) {
             console.error('ERROR :=>', err)
         }

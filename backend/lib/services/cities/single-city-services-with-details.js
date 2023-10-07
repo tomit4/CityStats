@@ -65,6 +65,7 @@ class SingleCityServiceDetails {
     }
 
     /**
+     * TODO: Refactor to not be so long...
      * Aggregates Single Relational Data Point On City
      * (i.e. specific government/area/population, counties, zip_codes, area_codes, gnis_feature_ids, etc.)
      * @params { promise } knex
@@ -73,18 +74,74 @@ class SingleCityServiceDetails {
      * @params { string } details
      * returns { object }
      * */
-    async grabRelDataByIdWithDeets(knex, id, field, details) {
+    async grabRelDataByIdWithDeets(knex, idOrName, field, details) {
+        const id = await this.grabCityIdByName(knex, idOrName)
+        const cityIds =
+            typeof id === 'object' ? id.map(cityId => cityId.id) : []
         // TODO: Change id to idOrName and pass it appropriately
-        const city = await this._grabMinCityInfo(knex, id)
-        if (this._objFields.includes(field) && isNaN(Number(details))) {
-            const table = `cities_${field}`
-            const deets = await this._grabObjDetails(knex, id, details, table)
-            return { ...city, ...deets }
-        } else if (this._arrFields.includes(field) && !isNaN(Number(details))) {
-            const index = details - 1
-            const fieldName = field.slice(0, -1)
-            const deets = await this._grabArrDetails(knex, id, index, fieldName)
-            return { ...city, ...deets }
+        if (!cityIds.length) {
+            const city = await this._grabMinCityInfo(knex, id)
+            if (this._objFields.includes(field) && isNaN(Number(details))) {
+                const table = `cities_${field}`
+                const deets = await this._grabObjDetails(
+                    knex,
+                    id,
+                    details,
+                    table,
+                )
+                return { ...city, ...deets }
+            } else if (
+                this._arrFields.includes(field) &&
+                !isNaN(Number(details))
+            ) {
+                const index = details - 1
+                const fieldName = field.slice(0, -1)
+                const deets = await this._grabArrDetails(
+                    knex,
+                    id,
+                    index,
+                    fieldName,
+                )
+                return { ...city, ...deets }
+            }
+        } else {
+            const multipleCities = []
+            for (const id of cityIds) {
+                const city = await this._grabMinCityInfo(knex, id)
+                if (this._objFields.includes(field) && isNaN(Number(details))) {
+                    const table = `cities_${field}`
+                    const deets = await this._grabObjDetails(
+                        knex,
+                        id,
+                        details,
+                        table,
+                    )
+                    if (!deets)
+                        throw Error(
+                            `No details for ${id} at ${fieldName} at ${table}.`,
+                        )
+                    multipleCities.push({ ...city, ...deets })
+                } else if (
+                    this._arrFields.includes(field) &&
+                    !isNaN(Number(details))
+                ) {
+                    const index = details - 1
+                    const fieldName = field.slice(0, -1)
+                    const deets = await this._grabArrDetails(
+                        knex,
+                        id,
+                        index,
+                        fieldName,
+                    )
+                    if (!deets)
+                        throw Error(
+                            `No details for ${id} at ${fieldName} at ${index}.`,
+                        )
+                    console.log('deets :=>', deets)
+                    multipleCities.push({ ...city, ...deets })
+                }
+            }
+            return multipleCities
         }
     }
 

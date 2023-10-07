@@ -19,9 +19,9 @@ module.exports = async (fastify, options, done) => {
                     details: { type: 'string' },
                 },
             },
-            response: {
-                200: { $ref: 'singleCityWithField#' },
-            },
+            // response: {
+            // 200: { $ref: 'singleCityWithField#' },
+            // },
         },
         handler: async (request, reply) => {
             const { id, field, details } = request.params
