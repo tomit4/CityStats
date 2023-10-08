@@ -1,5 +1,3 @@
-'use strict'
-
 /** Base Class for new State Object
  * @constructor
  * returns { SingleStateServiceDetails }

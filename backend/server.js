@@ -1,4 +1,3 @@
-'use strict'
 const logOpts = require('./lib/plugins/logger')
 const fastify = require('fastify')({ logger: logOpts })
 require('dotenv').config()

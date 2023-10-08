@@ -1,4 +1,3 @@
-'use strict'
 const statesSchemas = require('./states-schemas')
 const citiesSchemas = require('./cities-schemas')
 const schemas = { ...statesSchemas, ...citiesSchemas }

@@ -1,5 +1,3 @@
-'use strict'
-
 // TODO: copy for /images/states route as well
 module.exports = async (fastify, options, done) => {
     await fastify.route({

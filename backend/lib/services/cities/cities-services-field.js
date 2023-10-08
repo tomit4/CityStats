@@ -1,11 +1,10 @@
-'use strict'
-const SingleCityServiceDetails = require('./single-city-services-with-details')
+const CityServiceDetails = require('./cities-services-details')
 
 /** Intermediary Class for Single City Object
  * @constructor
  * returns { SingleCityService }
  * */
-class SingleCityService extends SingleCityServiceDetails {
+class CityServiceField extends CityServiceDetails {
     constructor() {
         super()
         this._nativeFields = [
@@ -325,4 +324,4 @@ class SingleCityService extends SingleCityServiceDetails {
     }
 }
 
-module.exports = SingleCityService
+module.exports = CityServiceField

@@ -1,4 +1,3 @@
-'use strict'
 const registerPlugins = require('../../test_utils/state-utils')
 const fastify = require('fastify')()
 const test = require('ava')

@@ -1,5 +1,3 @@
-'use strict'
-
 const fp = require('fastify-plugin')
 const knexFile = require('../../knexfile').development
 const knex = require('knex')(knexFile)

@@ -1,4 +1,3 @@
-'use strict'
 const SingleStateServiceDetails = require('./single-state-services-with-details')
 
 /**

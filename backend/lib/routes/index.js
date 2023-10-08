@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = async fastify => {
     // States
     await fastify.register(require('./states/get-all-states'))
@@ -10,14 +8,10 @@ module.exports = async fastify => {
     )
     // Cities
     await fastify.register(require('./cities/get-all-cities'))
-    await fastify.register(require('./cities/get-single-city'))
-    await fastify.register(require('./cities/get-single-city-with-field'))
-    await fastify.register(
-        require('./cities/get-single-city-with-field-details'),
-    )
-    await fastify.register(
-        require('./cities/get-single-city-with-field-details-query'),
-    )
+    await fastify.register(require('./cities/get-cities.js'))
+    await fastify.register(require('./cities/get-cities-with-field'))
+    await fastify.register(require('./cities/get-cities-with-details'))
+    await fastify.register(require('./cities/get-cities-with-query'))
     // Images
     await fastify.register(require('./images/get-cities-images'))
 }

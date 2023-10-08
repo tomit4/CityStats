@@ -4,7 +4,7 @@
  * @constructor
  * returns { SingleCityService }
  * */
-class SingleCityServiceDetails {
+class CityServiceDetails {
     constructor() {
         this._objFields = ['government', 'area', 'population']
         this._arrFields = [
@@ -144,4 +144,4 @@ class SingleCityServiceDetails {
     }
 }
 
-module.exports = SingleCityServiceDetails
+module.exports = CityServiceDetails

@@ -1,11 +1,10 @@
-'use strict'
-const SingleCityService = require('./single-city-services')
+const CityServiceField = require('./cities-services-field')
 
 /** Finalized Full Class for new City Object
  * @constructor
  * returns { CityService }
  * */
-class CityService extends SingleCityService {
+class CityService extends CityServiceField {
     constructor() {
         super()
         this.allCities = []

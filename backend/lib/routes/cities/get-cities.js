@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',

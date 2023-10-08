@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
     string: () => {
         return { type: 'string' }

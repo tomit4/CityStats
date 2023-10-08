@@ -1,4 +1,3 @@
-'use strict'
 const SingleStateService = require('./single-state-services')
 
 /** Finalized Full Class for new State Object
