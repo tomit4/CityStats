@@ -12,7 +12,7 @@ module.exports = async (fastify, options, done) => {
             response: {
                 200: {
                     type: 'array',
-                    items: { $ref: 'singleCity' },
+                    items: { $ref: 'singleCity#' },
                 },
             },
         },
