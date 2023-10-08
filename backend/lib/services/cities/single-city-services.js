@@ -280,7 +280,7 @@ class SingleCityService extends SingleCityServiceDetails {
         return singleCity
     }
     /**
-     * Aggregates single or multiple cities data
+     * Aggregates city/cities data
      * @params { promise } knex
      * returns { object } singleCity
      * */
@@ -305,9 +305,7 @@ class SingleCityService extends SingleCityServiceDetails {
         }
     }
     /**
-     * TODO: break out this function into two based off
-     * of return value of grabCityIdByName like above
-     * Aggregates min city info with single query field
+     * Aggregates min city/cities info with single query field
      * @params { promise } knex
      * @params { string } id
      * @params { string } field

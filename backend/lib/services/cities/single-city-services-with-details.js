@@ -64,9 +64,21 @@ class SingleCityServiceDetails {
         }
     }
 
+    async _grabSingleCityDeets(knex, id, details, field) {
+        const city = await this._grabMinCityInfo(knex, id)
+        let deets = {}
+        if (this._objFields.includes(field) && isNaN(Number(details))) {
+            const table = `cities_${field}`
+            deets = await this._grabObjDetails(knex, id, details, table)
+        } else if (this._arrFields.includes(field) && !isNaN(Number(details))) {
+            const index = details - 1
+            const fieldName = field.slice(0, -1)
+            deets = await this._grabArrDetails(knex, id, index, fieldName)
+        }
+        return { ...city, ...deets }
+    }
     /**
-     * TODO: Refactor to not be so long...
-     * Aggregates Single Relational Data Point On City
+     * Aggregates Single Relational Data Point On City/Cities
      * (i.e. specific government/area/population, counties, zip_codes, area_codes, gnis_feature_ids, etc.)
      * @params { promise } knex
      * @params { string } id
@@ -80,66 +92,17 @@ class SingleCityServiceDetails {
             typeof id === 'object' ? id.map(cityId => cityId.id) : []
         // TODO: Change id to idOrName and pass it appropriately
         if (!cityIds.length) {
-            const city = await this._grabMinCityInfo(knex, id)
-            if (this._objFields.includes(field) && isNaN(Number(details))) {
-                const table = `cities_${field}`
-                const deets = await this._grabObjDetails(
-                    knex,
-                    id,
-                    details,
-                    table,
-                )
-                return { ...city, ...deets }
-            } else if (
-                this._arrFields.includes(field) &&
-                !isNaN(Number(details))
-            ) {
-                const index = details - 1
-                const fieldName = field.slice(0, -1)
-                const deets = await this._grabArrDetails(
-                    knex,
-                    id,
-                    index,
-                    fieldName,
-                )
-                return { ...city, ...deets }
-            }
+            return await this._grabSingleCityDeets(knex, id, details, field)
         } else {
             const multipleCities = []
             for (const id of cityIds) {
-                const city = await this._grabMinCityInfo(knex, id)
-                if (this._objFields.includes(field) && isNaN(Number(details))) {
-                    const table = `cities_${field}`
-                    const deets = await this._grabObjDetails(
-                        knex,
-                        id,
-                        details,
-                        table,
-                    )
-                    if (!deets)
-                        throw Error(
-                            `No details for id: ${id} at field: ${fieldName} at table: ${table}.`,
-                        )
-                    multipleCities.push({ ...city, ...deets })
-                } else if (
-                    this._arrFields.includes(field) &&
-                    !isNaN(Number(details))
-                ) {
-                    const index = details - 1
-                    const fieldName = field.slice(0, -1)
-                    const deets = await this._grabArrDetails(
-                        knex,
-                        id,
-                        index,
-                        fieldName,
-                    )
-                    if (!deets)
-                        throw Error(
-                            `No details for id: ${id} at field: ${fieldName} at index: ${index}.`,
-                        )
-                    console.log('deets :=>', deets)
-                    multipleCities.push({ ...city, ...deets })
-                }
+                const singleCityDeets = await this._grabSingleCityDeets(
+                    knex,
+                    id,
+                    details,
+                    field,
+                )
+                multipleCities.push(singleCityDeets)
             }
             return multipleCities
         }
@@ -147,6 +110,7 @@ class SingleCityServiceDetails {
 
     /**
      * Grabs Single Government Council Member by Index
+     * NOTE: Does not work when queried by name with multiple results
      * @params { promise } knex
      * @params { string } id
      * @params { string } query
