@@ -20,9 +20,12 @@ module.exports = async (fastify, options, done) => {
                     query: { type: 'string' },
                 },
             },
-            // response: {
-            // 200: { $ref: 'singleCityWithField#' },
-            // },
+            response: {
+                200: {
+                    type: 'array',
+                    items: { $ref: 'singleCityWithField#' },
+                },
+            },
         },
         handler: async (request, reply) => {
             const { id, field, details, query } = request.params

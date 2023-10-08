@@ -16,16 +16,13 @@ module.exports = async (fastify, options, done) => {
                     id: { type: 'string' },
                 },
             },
-            // TODO: once multiple-cities route/logic is written
-            // add multipleCities# schema and uncomment:
-            // response: {
-            // 200: { $ref: 'singleCity#' },
-            // },
+            response: {
+                200: {
+                    type: 'array',
+                    items: { $ref: 'singleState#' },
+                },
+            },
         },
-        // TODO: in single-city-services.js,
-        // we have implemented multiple city returns by same name logic
-        // Break this logic out to separate cities/:ids route and figure out how to parse
-        // the ids in url (should reply.redirect() from here)
         handler: async (request, reply) => {
             const { id } = request.params
             if (!id) throw Error('No id passed within URL string')
