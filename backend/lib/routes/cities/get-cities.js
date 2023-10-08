@@ -6,7 +6,7 @@ module.exports = async (fastify, options, done) => {
             forceRequestEncoding: 'gzip',
         },
         schema: {
-            description: 'returns a city entities by id or name',
+            description: 'returns city entities by id or name',
             params: {
                 type: 'object',
                 required: ['id'],

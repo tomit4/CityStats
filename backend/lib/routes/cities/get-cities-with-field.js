@@ -7,7 +7,7 @@ module.exports = async (fastify, options, done) => {
         },
         schema: {
             description:
-                'returns a single city entity by id with specified field data',
+                'returns a city entities by id with specified field data',
             params: {
                 type: 'object',
                 required: ['id', 'field'],
@@ -29,7 +29,7 @@ module.exports = async (fastify, options, done) => {
             const { knex, cityService } = fastify
             if (!cityService.fields.includes(field))
                 throw Error(
-                    `Passed subquery '${field}' is not found in states entity`,
+                    `Passed subquery '${field}' is not found in city entities`,
                 )
             reply.send(await cityService.grabRelDataById(knex, id, field))
         },

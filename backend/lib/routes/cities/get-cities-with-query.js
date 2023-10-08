@@ -7,7 +7,7 @@ module.exports = async (fastify, options, done) => {
         },
         schema: {
             description:
-                'returns a single city entity by id with specified field data and nested data details and specific subquery',
+                'returns city entities by id with specified field data and nested data details and specific subquery',
             params: {
                 type: 'object',
                 required: ['id', 'field', 'details', 'query'],
