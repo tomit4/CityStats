@@ -48,7 +48,7 @@ class SingleCityService extends SingleCityServiceDetails {
                 .select('id')
                 .where('city_name', name)
             if (!citiesByName) throw Error(`No City Id Found By Name: ${name}`)
-            return citiesByName.length === 1 ? citiesByName[0].id : citiesByName
+            return citiesByName.map(city => city.id)
         } catch (err) {
             console.error('ERROR :=>', err)
         }
@@ -286,22 +286,15 @@ class SingleCityService extends SingleCityServiceDetails {
      * */
     async grabCitiesById(knex, idOrName) {
         const ids = await this.grabCityIdByName(knex, idOrName)
-        const cityIds =
-            typeof ids === 'object' ? ids.map(cityId => cityId.id) : []
-        if (!cityIds.length) {
-            return await this._grabCityDetails(knex, ids)
-        } else {
-            try {
-                const multipleCities = []
-                for (const cityId of cityIds) {
-                    multipleCities.push(
-                        await this._grabCityDetails(knex, cityId),
-                    )
-                }
-                return multipleCities
-            } catch (err) {
-                throw Error(`No Cities Found By Name: ${idOrName}`)
+        const cityIds = typeof ids === 'string' ? [ids] : ids
+        try {
+            const cities = []
+            for (const cityId of cityIds) {
+                cities.push(await this._grabCityDetails(knex, cityId))
             }
+            return cities
+        } catch (err) {
+            throw Error(`No Cities Found By Name: ${idOrName}`)
         }
     }
     /**
@@ -313,29 +306,22 @@ class SingleCityService extends SingleCityServiceDetails {
      * */
     async grabRelDataById(knex, idOrName, field) {
         const ids = await this.grabCityIdByName(knex, idOrName)
-        const cityIds =
-            typeof ids === 'object' ? ids.map(cityId => cityId.id) : []
-        if (!cityIds.length) {
-            if (this._nativeFields.includes(field))
-                return await this._grabNativeFieldData(knex, ids, field)
-            else return await this._grabRelatedFieldData(knex, ids, field)
-        } else {
-            const multipleCities = []
-            if (this._nativeFields.includes(field)) {
-                for (const cityId of cityIds) {
-                    multipleCities.push(
-                        await this._grabNativeFieldData(knex, cityId, field),
-                    )
-                }
-            } else {
-                for (const cityId of cityIds) {
-                    multipleCities.push(
-                        await this._grabRelatedFieldData(knex, cityId, field),
-                    )
-                }
+        const cityIds = typeof ids === 'string' ? [ids] : ids
+        const cities = []
+        if (this._nativeFields.includes(field)) {
+            for (const cityId of cityIds) {
+                cities.push(
+                    await this._grabNativeFieldData(knex, cityId, field),
+                )
             }
-            return multipleCities
+        } else {
+            for (const cityId of cityIds) {
+                cities.push(
+                    await this._grabRelatedFieldData(knex, cityId, field),
+                )
+            }
         }
+        return cities
     }
 }
 

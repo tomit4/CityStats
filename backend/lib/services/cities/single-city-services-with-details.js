@@ -87,62 +87,60 @@ class SingleCityServiceDetails {
      * returns { object }
      * */
     async grabRelDataByIdWithDeets(knex, idOrName, field, details) {
-        const id = await this.grabCityIdByName(knex, idOrName)
-        const cityIds =
-            typeof id === 'object' ? id.map(cityId => cityId.id) : []
-        // TODO: Change id to idOrName and pass it appropriately
-        if (!cityIds.length) {
-            return await this._grabSingleCityDeets(knex, id, details, field)
-        } else {
-            const multipleCities = []
-            for (const id of cityIds) {
-                const singleCityDeets = await this._grabSingleCityDeets(
-                    knex,
-                    id,
-                    details,
-                    field,
-                )
-                multipleCities.push(singleCityDeets)
-            }
-            return multipleCities
+        const ids = await this.grabCityIdByName(knex, idOrName)
+        const cityIds = typeof ids === 'string' ? [ids] : ids
+        const cities = []
+        for (const id of cityIds) {
+            const singleCityDeets = await this._grabSingleCityDeets(
+                knex,
+                id,
+                details,
+                field,
+            )
+            cities.push(singleCityDeets)
         }
+        return cities
     }
 
     /**
      * Grabs Single Government Council Member by Index
-     * NOTE: Does not work when queried by name with multiple results
      * @params { promise } knex
      * @params { string } id
      * @params { string } query
      * returns { object }
      * */
-    async grabSingleCouncilMember(knex, id, query) {
-        // TODO: Change id to idOrName and pass it appropriately
+    async grabSingleCouncilMember(knex, idOrName, query) {
+        const ids = await this.grabCityIdByName(knex, idOrName)
+        const cityIds = typeof ids === 'string' ? [ids] : ids
+        const cities = []
         if (isNaN(Number(query)))
             throw Error(`Query: ${query} must be a number`)
-        const city = await this._grabMinCityInfo(knex, id)
-        try {
-            const councilMember = (
-                await knex
-                    .where('city_id', id)
-                    .select('council_member')
-                    .from('cities_government_council')
-                    .limit(1)
-                    .offset(query - 1)
-            ).map(member => {
-                return member.council_member
-            })
-            if (!councilMember.length)
+        for (const id of cityIds) {
+            const city = await this._grabMinCityInfo(knex, id)
+            try {
+                const councilMember = (
+                    await knex
+                        .where('city_id', id)
+                        .select('council_member')
+                        .from('cities_government_council')
+                        .limit(1)
+                        .offset(query - 1)
+                ).map(member => {
+                    return member.council_member
+                })
+                if (!councilMember.length)
+                    throw Error(
+                        `No Council Member returned for Queried Index: ${query} for city id: ${id}`,
+                    )
+                cities.push({ ...city, council_member: councilMember[0] })
+            } catch (err) {
+                console.error('ERROR :=>', err)
                 throw Error(
-                    `No Council Member returned for Queried Index: ${query}`,
+                    `No Council Member returned for Queried Index: ${query} for city id: ${id}`,
                 )
-            return { ...city, council_member: councilMember[0] }
-        } catch (err) {
-            console.error('ERROR :=>', err)
-            throw Error(
-                `No Council Member returned for Queried Index: ${query}`,
-            )
+            }
         }
+        return cities
     }
 }
 
