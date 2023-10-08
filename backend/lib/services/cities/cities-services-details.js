@@ -1,5 +1,3 @@
-'use strict'
-
 /** Base Class for Single City Object
  * @constructor
  * returns { SingleCityService }
@@ -63,7 +61,6 @@ class CityServiceDetails {
             console.error('ERROR :=>', err)
         }
     }
-
     async _grabSingleCityDeets(knex, id, details, field) {
         const city = await this._grabMinCityInfo(knex, id)
         let deets = {}
@@ -101,7 +98,6 @@ class CityServiceDetails {
         }
         return cities
     }
-
     /**
      * Grabs Single Government Council Member by Index
      * @params { promise } knex
