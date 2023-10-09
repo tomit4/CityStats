@@ -11,7 +11,7 @@ const registerRoute = async fastify => {
             handler: async (request, reply) => {
                 const { id } = request.params
                 const { knex, cityService } = fastify
-                reply.send(await cityService.grabSingleCityById(knex, id))
+                reply.send(await cityService.grabCitiesById(knex, id))
             },
         })
     }
