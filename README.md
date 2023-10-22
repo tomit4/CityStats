@@ -41,6 +41,7 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 
 -   [x] Adjust initial scripts already written to catch beautiful soup errors and log them to the log.txt file for easy finding of where beautiful soup failed (this way we can quickly find the city site that failed and adjust our sraping script accordingly).
 -   [x] Since there will be a LOT of python scripts to run, the script to pass to cron/celery will need to run every \*.py file within our scraping directory, investigate [run-parts command](https://unix.stackexchange.com/questions/189118/sanely-run-all-scripts-in-a-directory)
+-   [ ] Set up scripts in their own separate directory (i.e backend, frontend, data)
 -   [ ] Investigate python/celery for "super cron" jobs.
 
 **Devops:**
