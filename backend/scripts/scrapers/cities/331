@@ -37,6 +37,9 @@ if [ ! -d "$base_directory" ]; then
     exit 1
 fi
 
+# Remove all empty directories within base directory
+find "$base_directory" -depth -empty -delete
+
 # Find all numbered directories within the base directory
 numbered_dirs=$(find "$base_directory" -maxdepth 1 -type d -regex '.*/[0-9][0-9][0-9]$')
 
