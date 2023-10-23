@@ -1,16 +1,1 @@
-[
-    { "city_id": 223, "council_member": "Andre Sayegh", "img_url": null },
-    { "city_id": 223, "council_member": "Michael Jackson", "img_url": null },
-    { "city_id": 223, "council_member": "Shahin Khalique", "img_url": null },
-    { "city_id": 223, "council_member": "Alex Mendez", "img_url": null },
-    { "city_id": 223, "council_member": "Ruby Cotton", "img_url": null },
-    { "city_id": 223, "council_member": "Luis Velez", "img_url": null },
-    {
-        "city_id": 223,
-        "council_member": "Alaa \"Al\" Abdelaziz",
-        "img_url": null
-    },
-    { "city_id": 223, "council_member": "Maritza Davila", "img_url": null },
-    { "city_id": 223, "council_member": "Dr. Lilisa Mimms", "img_url": null },
-    { "city_id": 223, "council_member": "MD Forid Uddin", "img_url": null }
-]
+[{"city_id": 223, "council_member": "Andre Sayegh", "img_url": null}, {"city_id": 223, "council_member": "Michael Jackson", "img_url": null}, {"city_id": 223, "council_member": "Shahin Khalique", "img_url": null}, {"city_id": 223, "council_member": "Alex Mendez", "img_url": null}, {"city_id": 223, "council_member": "Ruby Cotton", "img_url": null}, {"city_id": 223, "council_member": "Luis Velez", "img_url": null}, {"city_id": 223, "council_member": "Alaa \"Al\" Abdelaziz", "img_url": null}, {"city_id": 223, "council_member": "Maritza Davila", "img_url": null}, {"city_id": 223, "council_member": "Dr. Lilisa Mimms", "img_url": null}, {"city_id": 223, "council_member": "MD Forid Uddin", "img_url": null}]

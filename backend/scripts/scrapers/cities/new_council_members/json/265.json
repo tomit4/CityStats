@@ -1,11 +1,1 @@
-[
-    { "city_id": 265, "council_member": "Matt Mahan", "img_url": null },
-    { "city_id": 265, "council_member": "Rosemary Kamei", "img_url": null },
-    { "city_id": 265, "council_member": "Sergio Jimenez", "img_url": null },
-    { "city_id": 265, "council_member": "Omar Torres", "img_url": null },
-    { "city_id": 265, "council_member": "Peter Ortiz", "img_url": null },
-    { "city_id": 265, "council_member": "Bien Doan", "img_url": null },
-    { "city_id": 265, "council_member": "Domingo Candelas", "img_url": null },
-    { "city_id": 265, "council_member": "Pam Foley", "img_url": null },
-    { "city_id": 265, "council_member": "Arjun Batra", "img_url": null }
-]
+[{"city_id": 265, "council_member": "Matt Mahan", "img_url": null}, {"city_id": 265, "council_member": "Rosemary Kamei", "img_url": null}, {"city_id": 265, "council_member": "Sergio Jimenez", "img_url": null}, {"city_id": 265, "council_member": "Omar Torres", "img_url": null}, {"city_id": 265, "council_member": "Peter Ortiz", "img_url": null}, {"city_id": 265, "council_member": "Bien Doan", "img_url": null}, {"city_id": 265, "council_member": "Domingo Candelas", "img_url": null}, {"city_id": 265, "council_member": "Pam Foley", "img_url": null}, {"city_id": 265, "council_member": "Arjun Batra", "img_url": null}]

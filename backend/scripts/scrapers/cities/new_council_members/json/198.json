@@ -1,18 +1,1 @@
-[
-    { "city_id": 198, "council_member": "Jon Mitchell", "img_url": null },
-    { "city_id": 198, "council_member": "Ian Abreu", "img_url": null },
-    {
-        "city_id": 198,
-        "council_member": "William Brad Markey",
-        "img_url": null
-    },
-    { "city_id": 198, "council_member": "Naomi R. A. Carney", "img_url": null },
-    { "city_id": 198, "council_member": "Maria E. Giesta", "img_url": null },
-    { "city_id": 198, "council_member": "Shane Burgo", "img_url": null },
-    { "city_id": 198, "council_member": "Shawn Oliver", "img_url": null },
-    { "city_id": 198, "council_member": "Brian K. Gomes", "img_url": null },
-    { "city_id": 198, "council_member": "Derek Baptiste", "img_url": null },
-    { "city_id": 198, "council_member": "Linda M. Morad", "img_url": null },
-    { "city_id": 198, "council_member": "Scott J. Lima", "img_url": null },
-    { "city_id": 198, "council_member": "Ryan Pereira", "img_url": null }
-]
+[{"city_id": 198, "council_member": "Jon Mitchell", "img_url": null}, {"city_id": 198, "council_member": "Ian Abreu", "img_url": null}, {"city_id": 198, "council_member": "William Brad Markey", "img_url": null}, {"city_id": 198, "council_member": "Naomi R. A. Carney", "img_url": null}, {"city_id": 198, "council_member": "Maria E. Giesta", "img_url": null}, {"city_id": 198, "council_member": "Shane Burgo", "img_url": null}, {"city_id": 198, "council_member": "Shawn Oliver", "img_url": null}, {"city_id": 198, "council_member": "Brian K. Gomes", "img_url": null}, {"city_id": 198, "council_member": "Derek Baptiste", "img_url": null}, {"city_id": 198, "council_member": "Linda M. Morad", "img_url": null}, {"city_id": 198, "council_member": "Scott J. Lima", "img_url": null}, {"city_id": 198, "council_member": "Ryan Pereira", "img_url": null}]

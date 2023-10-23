@@ -1,9 +1,1 @@
-[
-    { "city_id": 176, "council_member": "George Fuller", "img_url": null },
-    { "city_id": 176, "council_member": "Charlie Philips", "img_url": null },
-    { "city_id": 176, "council_member": "Justin Beller", "img_url": null },
-    { "city_id": 176, "council_member": "Patrick Cloutier", "img_url": null },
-    { "city_id": 176, "council_member": "Geré Feltus", "img_url": null },
-    { "city_id": 176, "council_member": "Rick Franklin", "img_url": null },
-    { "city_id": 176, "council_member": "Michael Jones", "img_url": null }
-]
+[{"city_id": 176, "council_member": "George Fuller", "img_url": null}, {"city_id": 176, "council_member": "Charlie Philips", "img_url": null}, {"city_id": 176, "council_member": "Justin Beller", "img_url": null}, {"city_id": 176, "council_member": "Patrick Cloutier", "img_url": null}, {"city_id": 176, "council_member": "Geré Feltus", "img_url": null}, {"city_id": 176, "council_member": "Rick Franklin", "img_url": null}, {"city_id": 176, "council_member": "Michael Jones", "img_url": null}]

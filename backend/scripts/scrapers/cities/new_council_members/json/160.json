@@ -1,15 +1,1 @@
-[
-    {
-        "city_id": 160,
-        "council_member": "William A. Baird",
-        "img_url": "https://www.citystats.xyz/images/cities/160/mayor"
-    },
-    { "city_id": 160, "council_member": "Mia Prier", "img_url": null },
-    { "city_id": 160, "council_member": "Hillary Shields", "img_url": null },
-    { "city_id": 160, "council_member": "John Lovell", "img_url": null },
-    { "city_id": 160, "council_member": "Andrew S. Felker", "img_url": null },
-    { "city_id": 160, "council_member": "Phyllis Q. Edson", "img_url": null },
-    { "city_id": 160, "council_member": "Beto Lopez", "img_url": null },
-    { "city_id": 160, "council_member": "Fred DeMoro", "img_url": null },
-    { "city_id": 160, "council_member": "Faith Hodges", "img_url": null }
-]
+[{"city_id": 160, "council_member": "William A. Baird", "img_url": "https://www.citystats.xyz/images/cities/160/mayor"}, {"city_id": 160, "council_member": "Mia Prier", "img_url": null}, {"city_id": 160, "council_member": "Hillary Shields", "img_url": null}, {"city_id": 160, "council_member": "John Lovell", "img_url": null}, {"city_id": 160, "council_member": "Andrew S. Felker", "img_url": null}, {"city_id": 160, "council_member": "Phyllis Q. Edson", "img_url": null}, {"city_id": 160, "council_member": "Beto Lopez", "img_url": null}, {"city_id": 160, "council_member": "Fred DeMoro", "img_url": null}, {"city_id": 160, "council_member": "Faith Hodges", "img_url": null}]

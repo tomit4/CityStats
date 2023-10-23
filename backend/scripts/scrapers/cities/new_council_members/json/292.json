@@ -1,9 +1,1 @@
-[
-    { "city_id": 292, "council_member": "Larry Klein", "img_url": null },
-    { "city_id": 292, "council_member": "Omar Din", "img_url": null },
-    { "city_id": 292, "council_member": "Russ Melton", "img_url": null },
-    { "city_id": 292, "council_member": "Alysa Cisneros", "img_url": null },
-    { "city_id": 292, "council_member": "Richard Mehlinger", "img_url": null },
-    { "city_id": 292, "council_member": "Murali Srinivasan", "img_url": null },
-    { "city_id": 292, "council_member": "Linda Sell", "img_url": null }
-]
+[{"city_id": 292, "council_member": "Larry Klein", "img_url": null}, {"city_id": 292, "council_member": "Omar Din", "img_url": null}, {"city_id": 292, "council_member": "Russ Melton", "img_url": null}, {"city_id": 292, "council_member": "Alysa Cisneros", "img_url": null}, {"city_id": 292, "council_member": "Richard Mehlinger", "img_url": null}, {"city_id": 292, "council_member": "Murali Srinivasan", "img_url": null}, {"city_id": 292, "council_member": "Linda Sell", "img_url": null}]

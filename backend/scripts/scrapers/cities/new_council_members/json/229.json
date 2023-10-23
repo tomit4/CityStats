@@ -1,15 +1,1 @@
-[
-    { "city_id": 229, "council_member": "Kate Gallego", "img_url": null },
-    { "city_id": 229, "council_member": "Ann O’Brien", "img_url": null },
-    { "city_id": 229, "council_member": "Jim Waring", "img_url": null },
-    { "city_id": 229, "council_member": "Debra Stark", "img_url": null },
-    { "city_id": 229, "council_member": "Laura Pastor", "img_url": null },
-    { "city_id": 229, "council_member": "Betty Guardado", "img_url": null },
-    { "city_id": 229, "council_member": "Kevin Robinson", "img_url": null },
-    { "city_id": 229, "council_member": "Yassamin Ansari", "img_url": null },
-    {
-        "city_id": 229,
-        "council_member": "Kesha Hodge Washington",
-        "img_url": null
-    }
-]
+[{"city_id": 229, "council_member": "Kate Gallego", "img_url": null}, {"city_id": 229, "council_member": "Ann O’Brien", "img_url": null}, {"city_id": 229, "council_member": "Jim Waring", "img_url": null}, {"city_id": 229, "council_member": "Debra Stark", "img_url": null}, {"city_id": 229, "council_member": "Laura Pastor", "img_url": null}, {"city_id": 229, "council_member": "Betty Guardado", "img_url": null}, {"city_id": 229, "council_member": "Kevin Robinson", "img_url": null}, {"city_id": 229, "council_member": "Yassamin Ansari", "img_url": null}, {"city_id": 229, "council_member": "Kesha Hodge Washington", "img_url": null}]

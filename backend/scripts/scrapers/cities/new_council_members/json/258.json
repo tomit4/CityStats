@@ -1,13 +1,1 @@
-[
-    { "city_id": 258, "council_member": "Kimbley Craig", "img_url": null },
-    {
-        "city_id": 258,
-        "council_member": "Carla Viviana González",
-        "img_url": null
-    },
-    { "city_id": 258, "council_member": "Tony Barrera", "img_url": null },
-    { "city_id": 258, "council_member": "Steve McShane", "img_url": null },
-    { "city_id": 258, "council_member": "Orlando Osornio", "img_url": null },
-    { "city_id": 258, "council_member": "Andrew Sandoval", "img_url": null },
-    { "city_id": 258, "council_member": "Anthony Rocha", "img_url": null }
-]
+[{"city_id": 258, "council_member": "Kimbley Craig", "img_url": null}, {"city_id": 258, "council_member": "Carla Viviana González", "img_url": null}, {"city_id": 258, "council_member": "Tony Barrera", "img_url": null}, {"city_id": 258, "council_member": "Steve McShane", "img_url": null}, {"city_id": 258, "council_member": "Orlando Osornio", "img_url": null}, {"city_id": 258, "council_member": "Andrew Sandoval", "img_url": null}, {"city_id": 258, "council_member": "Anthony Rocha", "img_url": null}]

@@ -1,16 +1,1 @@
-[
-    { "city_id": 172, "council_member": "Lester Miller", "img_url": null },
-    { "city_id": 172, "council_member": "Seth Clark", "img_url": null },
-    { "city_id": 172, "council_member": "Valerie Wynn", "img_url": null },
-    { "city_id": 172, "council_member": "Paul Bronson", "img_url": null },
-    { "city_id": 172, "council_member": "Elaine Lucas", "img_url": null },
-    { "city_id": 172, "council_member": "Mallory Jones, III", "img_url": null },
-    { "city_id": 172, "council_member": "Raymond Wilder", "img_url": null },
-    { "city_id": 172, "council_member": "Bill Howell", "img_url": null },
-    {
-        "city_id": 172,
-        "council_member": "Virgil Watkins, Jr.",
-        "img_url": null
-    },
-    { "city_id": 172, "council_member": "Al Tillman", "img_url": null }
-]
+[{"city_id": 172, "council_member": "Lester Miller", "img_url": null}, {"city_id": 172, "council_member": "Seth Clark", "img_url": null}, {"city_id": 172, "council_member": "Valerie Wynn", "img_url": null}, {"city_id": 172, "council_member": "Paul Bronson", "img_url": null}, {"city_id": 172, "council_member": "Elaine Lucas", "img_url": null}, {"city_id": 172, "council_member": "Mallory Jones, III", "img_url": null}, {"city_id": 172, "council_member": "Raymond Wilder", "img_url": null}, {"city_id": 172, "council_member": "Bill Howell", "img_url": null}, {"city_id": 172, "council_member": "Virgil Watkins, Jr.", "img_url": null}, {"city_id": 172, "council_member": "Al Tillman", "img_url": null}]

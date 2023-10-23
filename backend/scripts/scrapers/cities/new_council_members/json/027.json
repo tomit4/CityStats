@@ -1,11 +1,1 @@
-[
-    { "city_id": 27, "council_member": "Bill Cole", "img_url": null },
-    { "city_id": 27, "council_member": "Kendra Shaw", "img_url": null },
-    { "city_id": 27, "council_member": "Ed Gulick", "img_url": null },
-    { "city_id": 27, "council_member": "Jennifer Owen", "img_url": null },
-    { "city_id": 27, "council_member": "Roy Neese", "img_url": null },
-    { "city_id": 27, "council_member": "Pam Purinton", "img_url": null },
-    { "city_id": 27, "council_member": "Daniel Tidswell", "img_url": null },
-    { "city_id": 27, "council_member": "Mike Boyett", "img_url": null },
-    { "city_id": 27, "council_member": "Tom Rupsis", "img_url": null }
-]
+[{"city_id": 27, "council_member": "Bill Cole", "img_url": null}, {"city_id": 27, "council_member": "Kendra Shaw", "img_url": null}, {"city_id": 27, "council_member": "Ed Gulick", "img_url": null}, {"city_id": 27, "council_member": "Jennifer Owen", "img_url": null}, {"city_id": 27, "council_member": "Roy Neese", "img_url": null}, {"city_id": 27, "council_member": "Pam Purinton", "img_url": null}, {"city_id": 27, "council_member": "Daniel Tidswell", "img_url": null}, {"city_id": 27, "council_member": "Mike Boyett", "img_url": null}, {"city_id": 27, "council_member": "Tom Rupsis", "img_url": null}]

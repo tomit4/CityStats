@@ -1,10 +1,1 @@
-[
-    { "city_id": 240, "council_member": "Mary-Ann Baldwin", "img_url": null },
-    { "city_id": 240, "council_member": "Stormie D. Forte", "img_url": null },
-    { "city_id": 240, "council_member": "Jonathan Melton", "img_url": null },
-    { "city_id": 240, "council_member": "Mary Black", "img_url": null },
-    { "city_id": 240, "council_member": "Megan Patton", "img_url": null },
-    { "city_id": 240, "council_member": "Corey Branch", "img_url": null },
-    { "city_id": 240, "council_member": "Jane Harrison", "img_url": null },
-    { "city_id": 240, "council_member": "Christina Jones", "img_url": null }
-]
+[{"city_id": 240, "council_member": "Mary-Ann Baldwin", "img_url": null}, {"city_id": 240, "council_member": "Stormie D. Forte", "img_url": null}, {"city_id": 240, "council_member": "Jonathan Melton", "img_url": null}, {"city_id": 240, "council_member": "Mary Black", "img_url": null}, {"city_id": 240, "council_member": "Megan Patton", "img_url": null}, {"city_id": 240, "council_member": "Corey Branch", "img_url": null}, {"city_id": 240, "council_member": "Jane Harrison", "img_url": null}, {"city_id": 240, "council_member": "Christina Jones", "img_url": null}]

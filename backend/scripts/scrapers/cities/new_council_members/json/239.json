@@ -1,16 +1,1 @@
-[
-    { "city_id": 239, "council_member": "Thomas P. Koch", "img_url": null },
-    { "city_id": 239, "council_member": "Noel DiBona", "img_url": null },
-    { "city_id": 239, "council_member": "Nina Liang", "img_url": null },
-    { "city_id": 239, "council_member": "Anne M. Mahoney", "img_url": null },
-    { "city_id": 239, "council_member": "David F. McCarthy", "img_url": null },
-    { "city_id": 239, "council_member": "Anthony Andronico", "img_url": null },
-    { "city_id": 239, "council_member": "Ian C. Cain", "img_url": null },
-    { "city_id": 239, "council_member": "James Devine", "img_url": null },
-    {
-        "city_id": 239,
-        "council_member": "Charles J. Phelan Jr.",
-        "img_url": null
-    },
-    { "city_id": 239, "council_member": "William P. Harris", "img_url": null }
-]
+[{"city_id": 239, "council_member": "Thomas P. Koch", "img_url": null}, {"city_id": 239, "council_member": "Noel DiBona", "img_url": null}, {"city_id": 239, "council_member": "Nina Liang", "img_url": null}, {"city_id": 239, "council_member": "Anne M. Mahoney", "img_url": null}, {"city_id": 239, "council_member": "David F. McCarthy", "img_url": null}, {"city_id": 239, "council_member": "Anthony Andronico", "img_url": null}, {"city_id": 239, "council_member": "Ian C. Cain", "img_url": null}, {"city_id": 239, "council_member": "James Devine", "img_url": null}, {"city_id": 239, "council_member": "Charles J. Phelan Jr.", "img_url": null}, {"city_id": 239, "council_member": "William P. Harris", "img_url": null}]

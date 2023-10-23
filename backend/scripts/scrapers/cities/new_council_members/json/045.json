@@ -1,11 +1,1 @@
-[
-    { "city_id": 45, "council_member": "Tiffany O'Donnell", "img_url": null },
-    { "city_id": 45, "council_member": "Tyler Olson", "img_url": null },
-    { "city_id": 45, "council_member": "Ann Poe", "img_url": null },
-    { "city_id": 45, "council_member": "Patrick Loeffler", "img_url": null },
-    { "city_id": 45, "council_member": "Marty Hoeger", "img_url": null },
-    { "city_id": 45, "council_member": "Scott Overland", "img_url": null },
-    { "city_id": 45, "council_member": "Dale Todd", "img_url": null },
-    { "city_id": 45, "council_member": "Scott Olson", "img_url": null },
-    { "city_id": 45, "council_member": "Ashley Vanorny", "img_url": null }
-]
+[{"city_id": 45, "council_member": "Tiffany O'Donnell", "img_url": null}, {"city_id": 45, "council_member": "Tyler Olson", "img_url": null}, {"city_id": 45, "council_member": "Ann Poe", "img_url": null}, {"city_id": 45, "council_member": "Patrick Loeffler", "img_url": null}, {"city_id": 45, "council_member": "Marty Hoeger", "img_url": null}, {"city_id": 45, "council_member": "Scott Overland", "img_url": null}, {"city_id": 45, "council_member": "Dale Todd", "img_url": null}, {"city_id": 45, "council_member": "Scott Olson", "img_url": null}, {"city_id": 45, "council_member": "Ashley Vanorny", "img_url": null}]

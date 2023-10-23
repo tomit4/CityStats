@@ -1,9 +1,1 @@
-[
-    { "city_id": 246, "council_member": "Eduardo Martinez", "img_url": null },
-    { "city_id": 246, "council_member": "Soheila Bana", "img_url": null },
-    { "city_id": 246, "council_member": "Claudia Jimenez", "img_url": null },
-    { "city_id": 246, "council_member": "Gayle McLaughlin", "img_url": null },
-    { "city_id": 246, "council_member": "Doria Robinson", "img_url": null },
-    { "city_id": 246, "council_member": "Melvin Willis", "img_url": null },
-    { "city_id": 246, "council_member": "Cesar Zepeda", "img_url": null }
-]
+[{"city_id": 246, "council_member": "Eduardo Martinez", "img_url": null}, {"city_id": 246, "council_member": "Soheila Bana", "img_url": null}, {"city_id": 246, "council_member": "Claudia Jimenez", "img_url": null}, {"city_id": 246, "council_member": "Gayle McLaughlin", "img_url": null}, {"city_id": 246, "council_member": "Doria Robinson", "img_url": null}, {"city_id": 246, "council_member": "Melvin Willis", "img_url": null}, {"city_id": 246, "council_member": "Cesar Zepeda", "img_url": null}]

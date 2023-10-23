@@ -1,14 +1,1 @@
-[
-    { "city_id": 264, "council_member": "London Breed", "img_url": null },
-    { "city_id": 264, "council_member": "Aaron Peskin", "img_url": null },
-    { "city_id": 264, "council_member": "Connie Chan", "img_url": null },
-    { "city_id": 264, "council_member": "Catherine Stefani", "img_url": null },
-    { "city_id": 264, "council_member": "Joel Engardio", "img_url": null },
-    { "city_id": 264, "council_member": "Dean Preston", "img_url": null },
-    { "city_id": 264, "council_member": "Matt Dorsey", "img_url": null },
-    { "city_id": 264, "council_member": "Myrna Melgar", "img_url": null },
-    { "city_id": 264, "council_member": "Rafael Mandelman", "img_url": null },
-    { "city_id": 264, "council_member": "Hillary Ronen", "img_url": null },
-    { "city_id": 264, "council_member": "Shamann Walton", "img_url": null },
-    { "city_id": 264, "council_member": "Ahsha Safai", "img_url": null }
-]
+[{"city_id": 264, "council_member": "London Breed", "img_url": null}, {"city_id": 264, "council_member": "Aaron Peskin", "img_url": null}, {"city_id": 264, "council_member": "Connie Chan", "img_url": null}, {"city_id": 264, "council_member": "Catherine Stefani", "img_url": null}, {"city_id": 264, "council_member": "Joel Engardio", "img_url": null}, {"city_id": 264, "council_member": "Dean Preston", "img_url": null}, {"city_id": 264, "council_member": "Matt Dorsey", "img_url": null}, {"city_id": 264, "council_member": "Myrna Melgar", "img_url": null}, {"city_id": 264, "council_member": "Rafael Mandelman", "img_url": null}, {"city_id": 264, "council_member": "Hillary Ronen", "img_url": null}, {"city_id": 264, "council_member": "Shamann Walton", "img_url": null}, {"city_id": 264, "council_member": "Ahsha Safai", "img_url": null}]

@@ -1,13 +1,1 @@
-[
-    { "city_id": 129, "council_member": "Steve Callaway", "img_url": null },
-    { "city_id": 129, "council_member": "Anthony Martin", "img_url": null },
-    { "city_id": 129, "council_member": "Olivia Alcaire", "img_url": null },
-    { "city_id": 129, "council_member": "Rick Van Beveren", "img_url": null },
-    { "city_id": 129, "council_member": "Beach Pace", "img_url": null },
-    {
-        "city_id": 129,
-        "council_member": "Gina Sanchez Roletto",
-        "img_url": null
-    },
-    { "city_id": 129, "council_member": "Kipperlyn Sinclair", "img_url": null }
-]
+[{"city_id": 129, "council_member": "Steve Callaway", "img_url": null}, {"city_id": 129, "council_member": "Anthony Martin", "img_url": null}, {"city_id": 129, "council_member": "Olivia Alcaire", "img_url": null}, {"city_id": 129, "council_member": "Rick Van Beveren", "img_url": null}, {"city_id": 129, "council_member": "Beach Pace", "img_url": null}, {"city_id": 129, "council_member": "Gina Sanchez Roletto", "img_url": null}, {"city_id": 129, "council_member": "Kipperlyn Sinclair", "img_url": null}]

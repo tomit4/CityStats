@@ -1,10 +1,1 @@
-[
-    { "city_id": 95, "council_member": "Cassie Franklin", "img_url": null },
-    { "city_id": 95, "council_member": "Brenda Stonecipher", "img_url": null },
-    { "city_id": 95, "council_member": "Judy Tuohy", "img_url": null },
-    { "city_id": 95, "council_member": "Mary Fosse", "img_url": null },
-    { "city_id": 95, "council_member": "Paula Rhyne", "img_url": null },
-    { "city_id": 95, "council_member": "Don Schwab", "img_url": null },
-    { "city_id": 95, "council_member": "Liz Vogeli", "img_url": null },
-    { "city_id": 95, "council_member": "Ben Zarlingo", "img_url": null }
-]
+[{"city_id": 95, "council_member": "Cassie Franklin", "img_url": null}, {"city_id": 95, "council_member": "Brenda Stonecipher", "img_url": null}, {"city_id": 95, "council_member": "Judy Tuohy", "img_url": null}, {"city_id": 95, "council_member": "Mary Fosse", "img_url": null}, {"city_id": 95, "council_member": "Paula Rhyne", "img_url": null}, {"city_id": 95, "council_member": "Don Schwab", "img_url": null}, {"city_id": 95, "council_member": "Liz Vogeli", "img_url": null}, {"city_id": 95, "council_member": "Ben Zarlingo", "img_url": null}]

@@ -1,7 +1,1 @@
-[
-    { "city_id": 234, "council_member": "Ted Wheeler", "img_url": null },
-    { "city_id": 234, "council_member": "Mingus Mapps", "img_url": null },
-    { "city_id": 234, "council_member": "Carmen Rubio", "img_url": null },
-    { "city_id": 234, "council_member": "Dan Ryan", "img_url": null },
-    { "city_id": 234, "council_member": "Rene Gonzalez", "img_url": null }
-]
+[{"city_id": 234, "council_member": "Ted Wheeler", "img_url": null}, {"city_id": 234, "council_member": "Mingus Mapps", "img_url": null}, {"city_id": 234, "council_member": "Carmen Rubio", "img_url": null}, {"city_id": 234, "council_member": "Dan Ryan", "img_url": null}, {"city_id": 234, "council_member": "Rene Gonzalez", "img_url": null}]

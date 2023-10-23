@@ -1,7 +1,1 @@
-[
-    { "city_id": 89, "council_member": "Bobbie Singh-Allen", "img_url": null },
-    { "city_id": 89, "council_member": "Darren Suen", "img_url": null },
-    { "city_id": 89, "council_member": "Rod Brewer", "img_url": null },
-    { "city_id": 89, "council_member": "Kevin Spease", "img_url": null },
-    { "city_id": 89, "council_member": "Sergio Robles", "img_url": null }
-]
+[{"city_id": 89, "council_member": "Bobbie Singh-Allen", "img_url": null}, {"city_id": 89, "council_member": "Darren Suen", "img_url": null}, {"city_id": 89, "council_member": "Rod Brewer", "img_url": null}, {"city_id": 89, "council_member": "Kevin Spease", "img_url": null}, {"city_id": 89, "council_member": "Sergio Robles", "img_url": null}]

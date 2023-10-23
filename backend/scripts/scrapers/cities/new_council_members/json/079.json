@@ -1,18 +1,1 @@
-[
-    { "city_id": 79, "council_member": "Mike Johnston", "img_url": null },
-    { "city_id": 79, "council_member": "Amanda Sandoval", "img_url": null },
-    { "city_id": 79, "council_member": "Kevin Flynn", "img_url": null },
-    { "city_id": 79, "council_member": "Jamie Torres", "img_url": null },
-    {
-        "city_id": 79,
-        "council_member": "Diana Romero Campbell",
-        "img_url": null
-    },
-    { "city_id": 79, "council_member": "Amanda Sawyer", "img_url": null },
-    { "city_id": 79, "council_member": "Paul Kashmann", "img_url": null },
-    { "city_id": 79, "council_member": "Flor Alvidrez", "img_url": null },
-    { "city_id": 79, "council_member": "Shontel Lewis", "img_url": null },
-    { "city_id": 79, "council_member": "Darrell Watson", "img_url": null },
-    { "city_id": 79, "council_member": "Christopher Hinds", "img_url": null },
-    { "city_id": 79, "council_member": "Stacie Gilmore", "img_url": null }
-]
+[{"city_id": 79, "council_member": "Mike Johnston", "img_url": null}, {"city_id": 79, "council_member": "Amanda Sandoval[1]", "img_url": null}, {"city_id": 79, "council_member": "Kevin Flynn[2]", "img_url": null}, {"city_id": 79, "council_member": "Jamie Torres[3]", "img_url": null}, {"city_id": 79, "council_member": "Diana Romero Campbell[4]", "img_url": null}, {"city_id": 79, "council_member": "Amanda Sawyer[5]", "img_url": null}, {"city_id": 79, "council_member": "Paul Kashmann[6]", "img_url": null}, {"city_id": 79, "council_member": "Flor Alvidrez[7]", "img_url": null}, {"city_id": 79, "council_member": "Shontel Lewis[8]", "img_url": null}, {"city_id": 79, "council_member": "Darrell Watson[9]", "img_url": null}, {"city_id": 79, "council_member": "Christopher Hinds[10]", "img_url": null}, {"city_id": 79, "council_member": "Stacie Gilmore[11]", "img_url": null}]

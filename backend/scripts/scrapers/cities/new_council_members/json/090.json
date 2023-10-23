@@ -1,13 +1,1 @@
-[
-    { "city_id": 90, "council_member": "Jessica Ancona", "img_url": null },
-    { "city_id": 90, "council_member": "Martin Herrera", "img_url": null },
-    { "city_id": 90, "council_member": "Marisol Cortez", "img_url": null },
-    {
-        "city_id": 90,
-        "council_member": "Victoria Martinez Muela",
-        "img_url": null
-    },
-    { "city_id": 90, "council_member": "Alma Puente", "img_url": null },
-    { "city_id": 90, "council_member": "Richard Rojo", "img_url": null },
-    { "city_id": 90, "council_member": "Dr. Julia Ruedas", "img_url": null }
-]
+[{"city_id": 90, "council_member": "Jessica Ancona", "img_url": null}, {"city_id": 90, "council_member": "Martin Herrera", "img_url": null}, {"city_id": 90, "council_member": "Marisol Cortez", "img_url": null}, {"city_id": 90, "council_member": "Victoria Martinez Muela", "img_url": null}, {"city_id": 90, "council_member": "Alma Puente", "img_url": null}, {"city_id": 90, "council_member": "Richard Rojo", "img_url": null}, {"city_id": 90, "council_member": "Dr. Julia Ruedas", "img_url": null}]

@@ -1,13 +1,1 @@
-[
-    { "city_id": 170, "council_member": "Tray Payne", "img_url": null },
-    { "city_id": 170, "council_member": "Christy Martinez", "img_url": null },
-    {
-        "city_id": 170,
-        "council_member": "Shelia Patterson Harris",
-        "img_url": null
-    },
-    { "city_id": 170, "council_member": "Mark McBrayer", "img_url": null },
-    { "city_id": 170, "council_member": "Steve Massengale", "img_url": null },
-    { "city_id": 170, "council_member": "Jennifer Wilson", "img_url": null },
-    { "city_id": 170, "council_member": "Latrelle Joy", "img_url": null }
-]
+[{"city_id": 170, "council_member": "Tray Payne", "img_url": null}, {"city_id": 170, "council_member": "Christy Martinez", "img_url": null}, {"city_id": 170, "council_member": "Shelia Patterson Harris", "img_url": null}, {"city_id": 170, "council_member": "Mark McBrayer", "img_url": null}, {"city_id": 170, "council_member": "Steve Massengale", "img_url": null}, {"city_id": 170, "council_member": "Jennifer Wilson", "img_url": null}, {"city_id": 170, "council_member": "Latrelle Joy", "img_url": null}]

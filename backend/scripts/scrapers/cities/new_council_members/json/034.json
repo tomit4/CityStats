@@ -1,15 +1,1 @@
-[
-    { "city_id": 34, "council_member": "Debra Wimpee", "img_url": null },
-    { "city_id": 34, "council_member": "Christi Gillespie", "img_url": null },
-    {
-        "city_id": 34,
-        "council_member": "Councilor Johnnie Parks",
-        "img_url": null
-    },
-    { "city_id": 34, "council_member": "Councilor Lisa Ford", "img_url": null },
-    {
-        "city_id": 34,
-        "council_member": "Councilor Justin Green",
-        "img_url": null
-    }
-]
+[{"city_id": 34, "council_member": "Debra Wimpee", "img_url": null}, {"city_id": 34, "council_member": "Christi Gillespie", "img_url": null}, {"city_id": 34, "council_member": "Councilor Johnnie Parks", "img_url": null}, {"city_id": 34, "council_member": "Councilor Lisa Ford", "img_url": null}, {"city_id": 34, "council_member": "Councilor Justin Green", "img_url": null}]

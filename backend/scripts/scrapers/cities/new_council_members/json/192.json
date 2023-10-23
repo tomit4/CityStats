@@ -1,13 +1,1 @@
-[
-    { "city_id": 192, "council_member": "Shane McFarland", "img_url": null },
-    { "city_id": 192, "council_member": "Bill Shacklett", "img_url": null },
-    { "city_id": 192, "council_member": "Jami Averwater", "img_url": null },
-    {
-        "city_id": 192,
-        "council_member": "Madelyn Scales Harris",
-        "img_url": null
-    },
-    { "city_id": 192, "council_member": "Austin Maxwell", "img_url": null },
-    { "city_id": 192, "council_member": "Kirt Wade", "img_url": null },
-    { "city_id": 192, "council_member": "Shawn Wright", "img_url": null }
-]
+[{"city_id": 192, "council_member": "Shane McFarland", "img_url": null}, {"city_id": 192, "council_member": "Bill Shacklett", "img_url": null}, {"city_id": 192, "council_member": "Jami Averwater", "img_url": null}, {"city_id": 192, "council_member": "Madelyn Scales Harris", "img_url": null}, {"city_id": 192, "council_member": "Austin Maxwell", "img_url": null}, {"city_id": 192, "council_member": "Kirt Wade", "img_url": null}, {"city_id": 192, "council_member": "Shawn Wright", "img_url": null}]

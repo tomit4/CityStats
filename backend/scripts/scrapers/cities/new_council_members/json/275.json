@@ -1,14 +1,1 @@
-[
-    { "city_id": 275, "council_member": "Tom Arceneaux", "img_url": null },
-    { "city_id": 275, "council_member": "Tabatha H. Taylor", "img_url": null },
-    { "city_id": 275, "council_member": "Jim Taliaferro", "img_url": null },
-    {
-        "city_id": 275,
-        "council_member": "Dr. Alan Jackson, Jr.",
-        "img_url": null
-    },
-    { "city_id": 275, "council_member": "Ursula Bowman", "img_url": null },
-    { "city_id": 275, "council_member": "Gary Brooks", "img_url": null },
-    { "city_id": 275, "council_member": "Grayson Boucher", "img_url": null },
-    { "city_id": 275, "council_member": "James Green", "img_url": null }
-]
+[{"city_id": 275, "council_member": "Tom Arceneaux", "img_url": null}, {"city_id": 275, "council_member": "Tabatha H. Taylor", "img_url": null}, {"city_id": 275, "council_member": "Jim Taliaferro", "img_url": null}, {"city_id": 275, "council_member": "Dr. Alan Jackson, Jr.", "img_url": null}, {"city_id": 275, "council_member": "Ursula Bowman", "img_url": null}, {"city_id": 275, "council_member": "Gary Brooks", "img_url": null}, {"city_id": 275, "council_member": "Grayson Boucher", "img_url": null}, {"city_id": 275, "council_member": "James Green", "img_url": null}]

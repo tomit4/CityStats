@@ -1,13 +1,1 @@
-[
-    {
-        "city_id": 289,
-        "council_member": "Kevin J. Lincoln, II",
-        "img_url": null
-    },
-    { "city_id": 289, "council_member": "Michele Padilla", "img_url": null },
-    { "city_id": 289, "council_member": "Daniel Wright", "img_url": null },
-    { "city_id": 289, "council_member": "Michael Blower", "img_url": null },
-    { "city_id": 289, "council_member": "Susan Lenz", "img_url": null },
-    { "city_id": 289, "council_member": "Brando Villapudua", "img_url": null },
-    { "city_id": 289, "council_member": "Kimberly Warmsley", "img_url": null }
-]
+[{"city_id": 289, "council_member": "Kevin J. Lincoln, II", "img_url": null}, {"city_id": 289, "council_member": "Michele Padilla", "img_url": null}, {"city_id": 289, "council_member": "Daniel Wright", "img_url": null}, {"city_id": 289, "council_member": "Michael Blower", "img_url": null}, {"city_id": 289, "council_member": "Susan Lenz", "img_url": null}, {"city_id": 289, "council_member": "Brando Villapudua", "img_url": null}, {"city_id": 289, "council_member": "Kimberly Warmsley", "img_url": null}]

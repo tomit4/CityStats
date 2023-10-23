@@ -1,7 +1,1 @@
-[
-    { "city_id": 266, "council_member": "Amourence Lee", "img_url": null },
-    { "city_id": 266, "council_member": "Lisa Diaz Nash", "img_url": null },
-    { "city_id": 266, "council_member": "Adam Loraine", "img_url": null },
-    { "city_id": 266, "council_member": "Rob Newsom Jr.", "img_url": null },
-    { "city_id": 266, "council_member": "Rich Hedges", "img_url": null }
-]
+[{"city_id": 266, "council_member": "Amourence Lee", "img_url": null}, {"city_id": 266, "council_member": "Lisa Diaz Nash", "img_url": null}, {"city_id": 266, "council_member": "Adam Loraine", "img_url": null}, {"city_id": 266, "council_member": "Rob Newsom Jr.", "img_url": null}, {"city_id": 266, "council_member": "Rich Hedges", "img_url": null}]

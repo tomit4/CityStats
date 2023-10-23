@@ -1,11 +1,1 @@
-[
-    { "city_id": 155, "council_member": "Andy Schor", "img_url": null },
-    { "city_id": 155, "council_member": "Jeffrey Brown", "img_url": null },
-    { "city_id": 155, "council_member": "Peter Spadafore", "img_url": null },
-    { "city_id": 155, "council_member": "Patricia Spitzley", "img_url": null },
-    { "city_id": 155, "council_member": "Carol Wood", "img_url": null },
-    { "city_id": 155, "council_member": "Ryan Kost", "img_url": null },
-    { "city_id": 155, "council_member": "Jeremy Garza", "img_url": null },
-    { "city_id": 155, "council_member": "Adam Hussain", "img_url": null },
-    { "city_id": 155, "council_member": "Brian Jackson", "img_url": null }
-]
+[{"city_id": 155, "council_member": "Andy Schor", "img_url": null}, {"city_id": 155, "council_member": "Jeffrey Brown", "img_url": null}, {"city_id": 155, "council_member": "Peter Spadafore", "img_url": null}, {"city_id": 155, "council_member": "Patricia Spitzley", "img_url": null}, {"city_id": 155, "council_member": "Carol Wood", "img_url": null}, {"city_id": 155, "council_member": "Ryan Kost", "img_url": null}, {"city_id": 155, "council_member": "Jeremy Garza", "img_url": null}, {"city_id": 155, "council_member": "Adam Hussain", "img_url": null}, {"city_id": 155, "council_member": "Brian Jackson", "img_url": null}]

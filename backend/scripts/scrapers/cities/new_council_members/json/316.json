@@ -1,10 +1,1 @@
-[
-    { "city_id": 316, "council_member": "James R. Fouts", "img_url": null },
-    { "city_id": 316, "council_member": "Patrick Green", "img_url": null },
-    { "city_id": 316, "council_member": "Garry Watts", "img_url": null },
-    { "city_id": 316, "council_member": "Mindy Moore", "img_url": null },
-    { "city_id": 316, "council_member": "Jonathan Lafferty", "img_url": null },
-    { "city_id": 316, "council_member": "Angela Rogensues", "img_url": null },
-    { "city_id": 316, "council_member": "Ron Papandrea", "img_url": null },
-    { "city_id": 316, "council_member": "Eddie Kabacinski", "img_url": null }
-]
+[{"city_id": 316, "council_member": "James R. Fouts", "img_url": null}, {"city_id": 316, "council_member": "Patrick Green", "img_url": null}, {"city_id": 316, "council_member": "Garry Watts", "img_url": null}, {"city_id": 316, "council_member": "Mindy Moore", "img_url": null}, {"city_id": 316, "council_member": "Jonathan Lafferty", "img_url": null}, {"city_id": 316, "council_member": "Angela Rogensues", "img_url": null}, {"city_id": 316, "council_member": "Ron Papandrea", "img_url": null}, {"city_id": 316, "council_member": "Eddie Kabacinski", "img_url": null}]

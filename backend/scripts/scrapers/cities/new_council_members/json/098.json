@@ -1,16 +1,1 @@
-[
-    { "city_id": 98, "council_member": "Mitch Colvin", "img_url": null },
-    { "city_id": 98, "council_member": "Johnny Dawkins", "img_url": null },
-    { "city_id": 98, "council_member": "Kathy Jensen", "img_url": null },
-    { "city_id": 98, "council_member": "Shakeyla Ingram", "img_url": null },
-    { "city_id": 98, "council_member": "Mario Benavente", "img_url": null },
-    { "city_id": 98, "council_member": "D.J. Haire", "img_url": null },
-    { "city_id": 98, "council_member": "Derrick Thompson", "img_url": null },
-    { "city_id": 98, "council_member": "Brenda McNair", "img_url": null },
-    {
-        "city_id": 98,
-        "council_member": "Courtney Banks-McLaughlin",
-        "img_url": null
-    },
-    { "city_id": 98, "council_member": "Deno Hondros", "img_url": null }
-]
+[{"city_id": 98, "council_member": "Mitch Colvin", "img_url": null}, {"city_id": 98, "council_member": "Johnny Dawkins", "img_url": null}, {"city_id": 98, "council_member": "Kathy Jensen", "img_url": null}, {"city_id": 98, "council_member": "Shakeyla Ingram", "img_url": null}, {"city_id": 98, "council_member": "Mario Benavente", "img_url": null}, {"city_id": 98, "council_member": "D.J. Haire", "img_url": null}, {"city_id": 98, "council_member": "Derrick Thompson", "img_url": null}, {"city_id": 98, "council_member": "Brenda McNair", "img_url": null}, {"city_id": 98, "council_member": "Courtney Banks-McLaughlin", "img_url": null}, {"city_id": 98, "council_member": "Deno Hondros", "img_url": null}]

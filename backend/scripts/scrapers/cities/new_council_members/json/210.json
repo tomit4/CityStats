@@ -1,9 +1,1 @@
-[
-    { "city_id": 210, "council_member": "Javier Joven", "img_url": null },
-    { "city_id": 210, "council_member": "Denise Swanner", "img_url": null },
-    { "city_id": 210, "council_member": "Mark Matta", "img_url": null },
-    { "city_id": 210, "council_member": "Steven P Thompson", "img_url": null },
-    { "city_id": 210, "council_member": "Gilbert Vasquez", "img_url": null },
-    { "city_id": 210, "council_member": "Greg Connell", "img_url": null },
-    { "city_id": 210, "council_member": "Chris Hanie", "img_url": null }
-]
+[{"city_id": 210, "council_member": "Javier Joven", "img_url": null}, {"city_id": 210, "council_member": "Denise Swanner", "img_url": null}, {"city_id": 210, "council_member": "Mark Matta", "img_url": null}, {"city_id": 210, "council_member": "Steven P Thompson", "img_url": null}, {"city_id": 210, "council_member": "Gilbert Vasquez", "img_url": null}, {"city_id": 210, "council_member": "Greg Connell", "img_url": null}, {"city_id": 210, "council_member": "Chris Hanie", "img_url": null}]

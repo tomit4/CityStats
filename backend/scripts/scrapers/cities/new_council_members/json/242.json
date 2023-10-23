@@ -1,13 +1,1 @@
-[
-    {
-        "city_id": 242,
-        "council_member": "Hillary Schieve",
-        "img_url": "https://www.citystats.xyz/images/cities/242/mayor"
-    },
-    { "city_id": 242, "council_member": "Devon Reese", "img_url": null },
-    { "city_id": 242, "council_member": "Jenny Brekhus", "img_url": null },
-    { "city_id": 242, "council_member": "Naomi Duerr", "img_url": null },
-    { "city_id": 242, "council_member": "Miguel Martinez", "img_url": null },
-    { "city_id": 242, "council_member": "Meghan Ebert", "img_url": null },
-    { "city_id": 242, "council_member": "Kathleen Taylor", "img_url": null }
-]
+[{"city_id": 242, "council_member": "Hillary Schieve", "img_url": "https://www.citystats.xyz/images/cities/242/mayor"}, {"city_id": 242, "council_member": "Devon Reese", "img_url": null}, {"city_id": 242, "council_member": "Jenny Brekhus", "img_url": null}, {"city_id": 242, "council_member": "Naomi Duerr", "img_url": null}, {"city_id": 242, "council_member": "Miguel Martinez", "img_url": null}, {"city_id": 242, "council_member": "Meghan Ebert", "img_url": null}, {"city_id": 242, "council_member": "Kathleen Taylor", "img_url": null}]

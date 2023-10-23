@@ -1,11 +1,1 @@
-[
-    { "city_id": 91, "council_member": "Oscar Leeser", "img_url": null },
-    { "city_id": 91, "council_member": "Brian Kennedy", "img_url": null },
-    { "city_id": 91, "council_member": "Alexsandra Annello", "img_url": null },
-    { "city_id": 91, "council_member": "Cassandra Hernandez", "img_url": null },
-    { "city_id": 91, "council_member": "Joe Molinar", "img_url": null },
-    { "city_id": 91, "council_member": "Isabel Salcido", "img_url": null },
-    { "city_id": 91, "council_member": "Art Fierro", "img_url": null },
-    { "city_id": 91, "council_member": "Henry Rivera", "img_url": null },
-    { "city_id": 91, "council_member": "Chris Canales", "img_url": null }
-]
+[{"city_id": 91, "council_member": "Oscar Leeser", "img_url": null}, {"city_id": 91, "council_member": "Brian Kennedy", "img_url": null}, {"city_id": 91, "council_member": "Alexsandra Annello", "img_url": null}, {"city_id": 91, "council_member": "Cassandra Hernandez", "img_url": null}, {"city_id": 91, "council_member": "Joe Molinar", "img_url": null}, {"city_id": 91, "council_member": "Isabel Salcido", "img_url": null}, {"city_id": 91, "council_member": "Art Fierro", "img_url": null}, {"city_id": 91, "council_member": "Henry Rivera", "img_url": null}, {"city_id": 91, "council_member": "Chris Canales", "img_url": null}]

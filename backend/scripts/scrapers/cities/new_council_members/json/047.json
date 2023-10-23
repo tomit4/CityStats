@@ -1,9 +1,1 @@
-[
-    { "city_id": 47, "council_member": "Kevin Hartke", "img_url": null },
-    { "city_id": 47, "council_member": "Christine Ellis", "img_url": null },
-    { "city_id": 47, "council_member": "Matt Orlando", "img_url": null },
-    { "city_id": 47, "council_member": "Mark Stewart", "img_url": null },
-    { "city_id": 47, "council_member": "Angel Encinas", "img_url": null },
-    { "city_id": 47, "council_member": "Jane Poston", "img_url": null },
-    { "city_id": 47, "council_member": "OD Harris", "img_url": null }
-]
+[{"city_id": 47, "council_member": "Kevin Hartke", "img_url": null}, {"city_id": 47, "council_member": "Matt Orlando", "img_url": null}, {"city_id": 47, "council_member": "OD Harris", "img_url": null}, {"city_id": 47, "council_member": "Christine Ellis", "img_url": null}, {"city_id": 47, "council_member": "Mark Stewart", "img_url": null}, {"city_id": 47, "council_member": "Jane Poston", "img_url": null}, {"city_id": 47, "council_member": "Angel Encinas", "img_url": null}]

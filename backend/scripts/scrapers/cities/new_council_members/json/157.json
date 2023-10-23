@@ -1,9 +1,1 @@
-[
-    { "city_id": 157, "council_member": "Ken Miyagishima", "img_url": null },
-    { "city_id": 157, "council_member": "Kasandra Gandara", "img_url": null },
-    { "city_id": 157, "council_member": "Tessa Abeyta", "img_url": null },
-    { "city_id": 157, "council_member": "Becki Graham", "img_url": null },
-    { "city_id": 157, "council_member": "Johana Bencomo", "img_url": null },
-    { "city_id": 157, "council_member": "Becky Corran", "img_url": null },
-    { "city_id": 157, "council_member": "Yvonne Flores", "img_url": null }
-]
+[{"city_id": 157, "council_member": "Ken Miyagishima", "img_url": null}, {"city_id": 157, "council_member": "Kasandra Gandara", "img_url": null}, {"city_id": 157, "council_member": "Tessa Abeyta", "img_url": null}, {"city_id": 157, "council_member": "Becki Graham", "img_url": null}, {"city_id": 157, "council_member": "Johana Bencomo", "img_url": null}, {"city_id": 157, "council_member": "Becky Corran", "img_url": null}, {"city_id": 157, "council_member": "Yvonne Flores", "img_url": null}]

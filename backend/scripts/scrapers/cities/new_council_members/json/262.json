@@ -1,16 +1,1 @@
-[
-    { "city_id": 262, "council_member": "Todd Gloria", "img_url": null },
-    { "city_id": 262, "council_member": "Joe LaCava", "img_url": null },
-    { "city_id": 262, "council_member": "Jennifer Campbell", "img_url": null },
-    { "city_id": 262, "council_member": "Stephen Whitburn", "img_url": null },
-    {
-        "city_id": 262,
-        "council_member": "Monica Montgomery Steppe",
-        "img_url": null
-    },
-    { "city_id": 262, "council_member": "Marni von Wilpert", "img_url": null },
-    { "city_id": 262, "council_member": "Kent Lee", "img_url": null },
-    { "city_id": 262, "council_member": "Raul Campillo", "img_url": null },
-    { "city_id": 262, "council_member": "Vivian Moreno", "img_url": null },
-    { "city_id": 262, "council_member": "Sean Elo-Rivera", "img_url": null }
-]
+[{"city_id": 262, "council_member": "Todd Gloria", "img_url": null}, {"city_id": 262, "council_member": "Joe LaCava", "img_url": null}, {"city_id": 262, "council_member": "Jennifer Campbell", "img_url": null}, {"city_id": 262, "council_member": "Stephen Whitburn", "img_url": null}, {"city_id": 262, "council_member": "Monica Montgomery Steppe", "img_url": null}, {"city_id": 262, "council_member": "Marni von Wilpert", "img_url": null}, {"city_id": 262, "council_member": "Kent Lee", "img_url": null}, {"city_id": 262, "council_member": "Raul Campillo", "img_url": null}, {"city_id": 262, "council_member": "Vivian Moreno", "img_url": null}, {"city_id": 262, "council_member": "Sean Elo-Rivera", "img_url": null}]

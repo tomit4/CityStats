@@ -1,7 +1,1 @@
-[
-    { "city_id": 209, "council_member": "Esther C. Sanchez", "img_url": null },
-    { "city_id": 209, "council_member": "Ryan Keim", "img_url": null },
-    { "city_id": 209, "council_member": "Eric Joyce", "img_url": null },
-    { "city_id": 209, "council_member": "Rick Robinson", "img_url": null },
-    { "city_id": 209, "council_member": "Peter Weiss", "img_url": null }
-]
+[{"city_id": 209, "council_member": "Esther C. Sanchez", "img_url": null}, {"city_id": 209, "council_member": "Ryan Keim", "img_url": null}, {"city_id": 209, "council_member": "Eric Joyce", "img_url": null}, {"city_id": 209, "council_member": "Rick Robinson", "img_url": null}, {"city_id": 209, "council_member": "Peter Weiss", "img_url": null}]

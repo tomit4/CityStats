@@ -1,11 +1,1 @@
-[
-    { "city_id": 139, "council_member": "Rick Stopfer", "img_url": null },
-    { "city_id": 139, "council_member": "John Bloch", "img_url": null },
-    { "city_id": 139, "council_member": "Brad M. LaMorgese", "img_url": null },
-    { "city_id": 139, "council_member": "Abdul Khabeer", "img_url": null },
-    { "city_id": 139, "council_member": "Phil Riddle", "img_url": null },
-    { "city_id": 139, "council_member": "Mark Cronenwett", "img_url": null },
-    { "city_id": 139, "council_member": "Al Zapanta", "img_url": null },
-    { "city_id": 139, "council_member": "Kyle Taylor", "img_url": null },
-    { "city_id": 139, "council_member": "Dennis Webb", "img_url": null }
-]
+[{"city_id": 139, "council_member": "Rick Stopfer", "img_url": null}, {"city_id": 139, "council_member": "John Bloch", "img_url": null}, {"city_id": 139, "council_member": "Brad M. LaMorgese", "img_url": null}, {"city_id": 139, "council_member": "Abdul Khabeer", "img_url": null}, {"city_id": 139, "council_member": "Phil Riddle", "img_url": null}, {"city_id": 139, "council_member": "Mark Cronenwett", "img_url": null}, {"city_id": 139, "council_member": "Al Zapanta", "img_url": null}, {"city_id": 139, "council_member": "Kyle Taylor", "img_url": null}, {"city_id": 139, "council_member": "Dennis Webb", "img_url": null}]

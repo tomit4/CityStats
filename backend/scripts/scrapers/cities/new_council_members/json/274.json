@@ -1,12 +1,1 @@
-[
-    { "city_id": 274, "council_member": "Bruce Harrell", "img_url": null },
-    { "city_id": 274, "council_member": "Debora Juarez", "img_url": null },
-    { "city_id": 274, "council_member": "Lisa Herbold", "img_url": null },
-    { "city_id": 274, "council_member": "Andrew J. Lewis", "img_url": null },
-    { "city_id": 274, "council_member": "Tammy J. Morales", "img_url": null },
-    { "city_id": 274, "council_member": "Teresa Mosqueda", "img_url": null },
-    { "city_id": 274, "council_member": "Sara Nelson", "img_url": null },
-    { "city_id": 274, "council_member": "Alex Pedersen", "img_url": null },
-    { "city_id": 274, "council_member": "Kshama Sawant", "img_url": null },
-    { "city_id": 274, "council_member": "Dan Strauss", "img_url": null }
-]
+[{"city_id": 274, "council_member": "Bruce Harrell", "img_url": null}, {"city_id": 274, "council_member": "Debora Juarez", "img_url": null}, {"city_id": 274, "council_member": "Lisa Herbold", "img_url": null}, {"city_id": 274, "council_member": "Andrew J. Lewis", "img_url": null}, {"city_id": 274, "council_member": "Tammy J. Morales", "img_url": null}, {"city_id": 274, "council_member": "Teresa Mosqueda", "img_url": null}, {"city_id": 274, "council_member": "Sara Nelson", "img_url": null}, {"city_id": 274, "council_member": "Alex Pedersen", "img_url": null}, {"city_id": 274, "council_member": "Kshama Sawant", "img_url": null}, {"city_id": 274, "council_member": "Dan Strauss", "img_url": null}]

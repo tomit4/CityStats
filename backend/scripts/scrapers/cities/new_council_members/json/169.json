@@ -1,13 +1,1 @@
-[
-    { "city_id": 169, "council_member": "Sokhary Chau", "img_url": null },
-    { "city_id": 169, "council_member": "John Drinkwater", "img_url": null },
-    { "city_id": 169, "council_member": "Erik Gitschier", "img_url": null },
-    { "city_id": 169, "council_member": "Wayne Jenness", "img_url": null },
-    { "city_id": 169, "council_member": "John J. Leahy", "img_url": null },
-    { "city_id": 169, "council_member": "Rita Mercier", "img_url": null },
-    { "city_id": 169, "council_member": "Vesna Nuon", "img_url": null },
-    { "city_id": 169, "council_member": "Corey Robinson", "img_url": null },
-    { "city_id": 169, "council_member": "Daniel Rourke", "img_url": null },
-    { "city_id": 169, "council_member": "Kimberly Scott", "img_url": null },
-    { "city_id": 169, "council_member": "Paul Ratha Yem", "img_url": null }
-]
+[{"city_id": 169, "council_member": "Sokhary Chau", "img_url": null}, {"city_id": 169, "council_member": "John Drinkwater", "img_url": null}, {"city_id": 169, "council_member": "Erik Gitschier", "img_url": null}, {"city_id": 169, "council_member": "Wayne Jenness", "img_url": null}, {"city_id": 169, "council_member": "John J. Leahy", "img_url": null}, {"city_id": 169, "council_member": "Rita Mercier", "img_url": null}, {"city_id": 169, "council_member": "Vesna Nuon", "img_url": null}, {"city_id": 169, "council_member": "Corey Robinson", "img_url": null}, {"city_id": 169, "council_member": "Daniel Rourke", "img_url": null}, {"city_id": 169, "council_member": "Kimberly Scott", "img_url": null}, {"city_id": 169, "council_member": "Paul Ratha Yem", "img_url": null}]
