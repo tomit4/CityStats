@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Define the directory path where the JSON files are located
+json_dir="./new_council_members/json/"
+
+# Define the output filename with the current date
+output_file="warnings_$(date +'%d_%m_%Y').txt"
+
+# Create an array to hold the expected file names
+expected_files=($(printf "%03d.json " {1..330}))
+
+# Check for missing files and save them to the output file
+missing_files=()
+for file in "${expected_files[@]}"; do
+    if [ ! -e "${json_dir}/${file}" ]; then
+        missing_files+=("${file%.json}")
+    fi
+done
+
+# Write the missing files to the output file
+if [ ${#missing_files[@]} -eq 0 ]; then
+    echo "No missing files found." >"$output_file"
+else
+    echo "Missing files:" >"$output_file"
+    for missing_file in "${missing_files[@]}"; do
+        echo "$missing_file" >>"$output_file"
+    done
+fi
+
+echo "Missing files list saved to $output_file"

@@ -10,9 +10,8 @@ from datetime import datetime
 
 # Change based off of which site being scraped
 CITY_ID = 219
-BASE_URL = 'https://www.indy.gov'
-CITY_COUNCIL_URL = 'https://www.indy.gov/activity/city-county-council-members'
-
+BASE_URL = 'https://www.palmbayflorida.org'
+CITY_COUNCIL_URL = 'https://www.palmbayflorida.org/government/city-departments-f-to-z/legislative/mayor-city-council'
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
 

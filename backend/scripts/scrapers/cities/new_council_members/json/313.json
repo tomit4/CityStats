@@ -1,0 +1,33 @@
+[
+    {
+        "city_id": 313,
+        "council_member": "Robert M. \"Bobby\" Dyer",
+        "img_url": null
+    },
+    { "city_id": 313, "council_member": "Rosemary A. Wilson", "img_url": null },
+    {
+        "city_id": 313,
+        "council_member": "Amelia Ross-Hammond",
+        "img_url": null
+    },
+    {
+        "city_id": 313,
+        "council_member": "N.D. \"Rocky\" Holcomb",
+        "img_url": null
+    },
+    { "city_id": 313, "council_member": "Sabrina D. Wooten", "img_url": null },
+    {
+        "city_id": 313,
+        "council_member": "Robert W. \"Worth\"  Remick",
+        "img_url": null
+    },
+    { "city_id": 313, "council_member": "Michael Berlucchi", "img_url": null },
+    { "city_id": 313, "council_member": "Barbara M. Henley", "img_url": null },
+    { "city_id": 313, "council_member": "Jennifer V. Rouse", "img_url": null },
+    {
+        "city_id": 313,
+        "council_member": "Joashua F. \"Joash\" Schulman",
+        "img_url": null
+    },
+    { "city_id": 313, "council_member": "Crhis Taylor", "img_url": null }
+]

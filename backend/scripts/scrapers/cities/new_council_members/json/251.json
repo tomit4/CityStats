@@ -1,0 +1,16 @@
+[
+    { "city_id": 251, "council_member": "Malik Evans", "img_url": null },
+    { "city_id": 251, "council_member": "Miguel Meléndez", "img_url": null },
+    { "city_id": 251, "council_member": "Mary Lupien", "img_url": null },
+    { "city_id": 251, "council_member": "Willie Lightfoot", "img_url": null },
+    { "city_id": 251, "council_member": "Mitchell D. Gruber", "img_url": null },
+    { "city_id": 251, "council_member": "Stanley Martin", "img_url": null },
+    { "city_id": 251, "council_member": "Kim Smith", "img_url": null },
+    {
+        "city_id": 251,
+        "council_member": "Michael A. Patterson",
+        "img_url": null
+    },
+    { "city_id": 251, "council_member": "LaShay Harris", "img_url": null },
+    { "city_id": 251, "council_member": "Jose Peo", "img_url": null }
+]

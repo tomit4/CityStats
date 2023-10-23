@@ -11,7 +11,7 @@ from datetime import datetime
 # Change based off of which site being scraped
 CITY_ID = 94
 BASE_URL = 'https://www.evansvillegov.org'
-CITY_COUNCIL_URL = 'https://www.evansvillegov.org/egov/documents/1674848168_98892.pdf'
+CITY_COUNCIL_URL = 'https://www.evansvillegov.org/egov/documents/1695156555_17784.pdf'
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
 

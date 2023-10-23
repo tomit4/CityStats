@@ -1,0 +1,16 @@
+[
+    { "city_id": 94, "council_member": "Lloyd Winnecke", "img_url": null },
+    { "city_id": 94, "council_member": "Ben Trockman", "img_url": null },
+    { "city_id": 94, "council_member": "Missy Mosby", "img_url": null },
+    { "city_id": 94, "council_member": "Zac Heronemus", "img_url": null },
+    { "city_id": 94, "council_member": "Alex Burton", "img_url": null },
+    {
+        "city_id": 94,
+        "council_member": "Angela Koehler Lindsey",
+        "img_url": null
+    },
+    { "city_id": 94, "council_member": "Jim Brinkmeyer", "img_url": null },
+    { "city_id": 94, "council_member": "Ron Beane", "img_url": null },
+    { "city_id": 94, "council_member": "Kaitlin Moore", "img_url": null }
+    { "city_id": 94, "council_member": "Jonathan Weaver", "img_url": null }
+]

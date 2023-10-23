@@ -13,7 +13,6 @@ session = HTMLSession()
 CITY_ID = 174
 BASE_URL = 'https://en.wikipedia.org/wiki/Manchester,_New_Hampshire'
 CITY_COUNCIL_URL = 'https://en.wikipedia.org/wiki/Manchester,_New_Hampshire'
-BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
 PATH_ID = f'{CITY_ID}'
 

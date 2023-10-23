@@ -1,0 +1,46 @@
+[
+    {
+        "city_id": 173,
+        "council_member": "Satya Rhodes-Conway",
+        "img_url": null
+    },
+    { "city_id": 173, "council_member": "John Duncan", "img_url": null },
+    { "city_id": 173, "council_member": "Derek Field", "img_url": null },
+    { "city_id": 173, "council_member": "Mike Verveer", "img_url": null },
+    { "city_id": 173, "council_member": "Regina Vidaver", "img_url": null },
+    { "city_id": 173, "council_member": "Marsha Rummel", "img_url": null },
+    { "city_id": 173, "council_member": "Nasra Wehelie", "img_url": null },
+    {
+        "city_id": 173,
+        "council_member": "Muralidharan (MGR) Govindarajan",
+        "img_url": null
+    },
+    { "city_id": 173, "council_member": "Nikki Conklin", "img_url": null },
+    {
+        "city_id": 173,
+        "council_member": "Yannette Figueroa Cole",
+        "img_url": null
+    },
+    { "city_id": 173, "council_member": "Bill Tishler", "img_url": null },
+    {
+        "city_id": 173,
+        "council_member": "Amani Latimer Burris",
+        "img_url": null
+    },
+    { "city_id": 173, "council_member": "Tag Evers", "img_url": null },
+    { "city_id": 173, "council_member": "Isadore Knox Jr.", "img_url": null },
+    {
+        "city_id": 173,
+        "council_member": "Dina Nina Martinez-Rutherford",
+        "img_url": null
+    },
+    { "city_id": 173, "council_member": "Jael Currie", "img_url": null },
+    { "city_id": 173, "council_member": "Sabrina Madison", "img_url": null },
+    { "city_id": 173, "council_member": "Charles Myadze", "img_url": null },
+    { "city_id": 173, "council_member": "Kristen Slack", "img_url": null },
+    {
+        "city_id": 173,
+        "council_member": "Barbara Harrington-McKinney",
+        "img_url": null
+    }
+]

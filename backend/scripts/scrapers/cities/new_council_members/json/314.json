@@ -1,0 +1,11 @@
+[
+    { "city_id": 314, "council_member": "Brian Poochigian", "img_url": null },
+    { "city_id": 314, "council_member": "Brett Taylor", "img_url": null },
+    { "city_id": 314, "council_member": "Steve Nelson", "img_url": null },
+    { "city_id": 314, "council_member": "Liz Wynn", "img_url": null },
+    {
+        "city_id": 314,
+        "council_member": "Emmanuel Hernandez Soto",
+        "img_url": null
+    }
+]
