@@ -7,6 +7,7 @@ exports.up = function (knex) {
         table.increments().primary()
         table.integer('city_id').notNullable()
         table.string('council_member').notNullable()
+        table.string('img_url')
     })
 }
 

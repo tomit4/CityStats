@@ -12,9 +12,9 @@
         "img_url": null
     },
     { "city_id": 284, "council_member": "Zaida Govan", "img_url": null },
-    { "city_id": 284, "council_member": "Sean Curran", "img_url": null }
-    { "city_id": 284, "council_member": "Justin Hurst", "img_url": null }
-    { "city_id": 284, "council_member": "Jesse Lederman", "img_url": null }
-    { "city_id": 284, "council_member": "Kateri Walsh", "img_url": null }
+    { "city_id": 284, "council_member": "Sean Curran", "img_url": null },
+    { "city_id": 284, "council_member": "Justin Hurst", "img_url": null },
+    { "city_id": 284, "council_member": "Jesse Lederman", "img_url": null },
+    { "city_id": 284, "council_member": "Kateri Walsh", "img_url": null },
     { "city_id": 284, "council_member": "Tracye Whitfield", "img_url": null }
 ]

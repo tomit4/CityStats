@@ -1,1 +1,37 @@
-[{"city_id": 4, "council_member": "Justin Wilson", "img_url": "https://www.citystats.xyz/images/cities/4/mayor"}, {"city_id": 4, "council_member": "Amy Jackson", "img_url": "https://www.citystats.xyz/images/cities/4/city_council/1"}, {"city_id": 4, "council_member": "Canek Aguirre", "img_url": "https://www.citystats.xyz/images/cities/4/city_council/2"}, {"city_id": 4, "council_member": "Sarah Bagley", "img_url": "https://www.citystats.xyz/images/cities/4/city_council/3"}, {"city_id": 4, "council_member": "John Chapman", "img_url": "https://www.citystats.xyz/images/cities/4/city_council/4"}, {"city_id": 4, "council_member": "Alyia Gaskins", "img_url": "https://www.citystats.xyz/images/cities/4/city_council/5"}, {"city_id": 4, "council_member": "R. Kirk McPike", "img_url": "https://www.citystats.xyz/images/cities/4/city_council/6"}]
+[
+    {
+        "city_id": 4,
+        "council_member": "Justin Wilson",
+        "img_url": "https://www.citystats.xyz/images/cities/4/mayor"
+    },
+    {
+        "city_id": 4,
+        "council_member": "Amy Jackson",
+        "img_url": "https://www.citystats.xyz/images/cities/4/city_council/1"
+    },
+    {
+        "city_id": 4,
+        "council_member": "Canek Aguirre",
+        "img_url": "https://www.citystats.xyz/images/cities/4/city_council/2"
+    },
+    {
+        "city_id": 4,
+        "council_member": "Sarah Bagley",
+        "img_url": "https://www.citystats.xyz/images/cities/4/city_council/3"
+    },
+    {
+        "city_id": 4,
+        "council_member": "John Chapman",
+        "img_url": "https://www.citystats.xyz/images/cities/4/city_council/4"
+    },
+    {
+        "city_id": 4,
+        "council_member": "Alyia Gaskins",
+        "img_url": "https://www.citystats.xyz/images/cities/4/city_council/5"
+    },
+    {
+        "city_id": 4,
+        "council_member": "R. Kirk McPike",
+        "img_url": "https://www.citystats.xyz/images/cities/4/city_council/6"
+    }
+]

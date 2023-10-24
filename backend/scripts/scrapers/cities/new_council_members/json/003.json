@@ -1,1 +1,52 @@
-[{"city_id": 3, "council_member": "Tim Keller", "img_url": "https://www.cabq.gov/mayor/images/mayor-tim-keller-headshot.jpg/@@images/e9d5134c-8ce1-4fd1-8b26-7df63ad1bb1f.jpeg"}, {"city_id": 3, "council_member": "Louie Sanchez", "img_url": "https://www.citystats.xyz/images/cities/3/city_council/1"}, {"city_id": 3, "council_member": "Isaac Benton", "img_url": "https://www.citystats.xyz/images/cities/3/city_council/2"}, {"city_id": 3, "council_member": "Klarissa J. Peña", "img_url": "https://www.citystats.xyz/images/cities/3/city_council/3"}, {"city_id": 3, "council_member": "Brook Bassan", "img_url": "https://www.citystats.xyz/images/cities/3/city_council/4"}, {"city_id": 3, "council_member": "Dan Lewis", "img_url": "https://www.citystats.xyz/images/cities/3/city_council/5"}, {"city_id": 3, "council_member": "Pat Davis", "img_url": "https://www.citystats.xyz/images/cities/3/city_council/6"}, {"city_id": 3, "council_member": "Tammy Fiebelkorn", "img_url": "https://www.citystats.xyz/images/cities/3/city_council/7"}, {"city_id": 3, "council_member": "Trudy Jones", "img_url": "https://www.citystats.xyz/images/cities/3/city_council/8"}, {"city_id": 3, "council_member": "Renee Grout", "img_url": "https://www.citystats.xyz/images/cities/3/city_council/9"}]
+[
+    {
+        "city_id": 3,
+        "council_member": "Tim Keller",
+        "img_url": "https://www.citystats.xyz/images/cities/3/mayor"
+    },
+    {
+        "city_id": 3,
+        "council_member": "Louie Sanchez",
+        "img_url": "https://www.citystats.xyz/images/cities/3/city_council/1"
+    },
+    {
+        "city_id": 3,
+        "council_member": "Isaac Benton",
+        "img_url": "https://www.citystats.xyz/images/cities/3/city_council/2"
+    },
+    {
+        "city_id": 3,
+        "council_member": "Klarissa J. Peña",
+        "img_url": "https://www.citystats.xyz/images/cities/3/city_council/3"
+    },
+    {
+        "city_id": 3,
+        "council_member": "Brook Bassan",
+        "img_url": "https://www.citystats.xyz/images/cities/3/city_council/4"
+    },
+    {
+        "city_id": 3,
+        "council_member": "Dan Lewis",
+        "img_url": "https://www.citystats.xyz/images/cities/3/city_council/5"
+    },
+    {
+        "city_id": 3,
+        "council_member": "Pat Davis",
+        "img_url": "https://www.citystats.xyz/images/cities/3/city_council/6"
+    },
+    {
+        "city_id": 3,
+        "council_member": "Tammy Fiebelkorn",
+        "img_url": "https://www.citystats.xyz/images/cities/3/city_council/7"
+    },
+    {
+        "city_id": 3,
+        "council_member": "Trudy Jones",
+        "img_url": "https://www.citystats.xyz/images/cities/3/city_council/8"
+    },
+    {
+        "city_id": 3,
+        "council_member": "Renee Grout",
+        "img_url": "https://www.citystats.xyz/images/cities/3/city_council/9"
+    }
+]
