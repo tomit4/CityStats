@@ -48,8 +48,8 @@ def download_images(senate_ids_img_urls):
             ).content
             file = open(f'{file_name}', 'wb')
             file.write(img_data)
-        logging.info(
-            f"Downloaded image for state_id: {senate_info['state_id']}")
+            logging.info(
+                f"Downloaded image for state_id: {senate_info['state_id']}")
 
 
 def grab_img_urls_from(base_img_urls):
@@ -66,7 +66,6 @@ def grab_img_urls_from(base_img_urls):
     url_pairs = []
     for url1, url2 in zip(urls[::2], urls[1::2]):
         url_pairs.append([url1, url2])
-
     for i in range(len(base_img_urls)):
         base_img_urls[i]['state_id'] = i + 1
         base_img_urls[i]['urls'] = url_pairs[i]
@@ -116,7 +115,6 @@ def scrape_urls():
         results = r.html.find('#senators')
         state_data = []
         urls = []
-
         for result in results:
             trs = result.find('tr')
             for tr in trs:
@@ -136,7 +134,6 @@ def scrape_urls():
         url_pairs = []
         for url1, url2 in zip(urls[::2], urls[1::2]):
             url_pairs.append([url1, url2])
-
         for i in range(len(state_data)):
             state_data[i]['state_id'] = i + 1
             state_data[i]['urls'] = url_pairs[i]
