@@ -97,7 +97,6 @@ def scrape_data():
                     if 'rowspan' in td.attrs:
                         data['state_name'] = td.text
                         state_names.append(td.text)
-
                 ths = tr.find('th')
                 for th in ths:
                     v_cards = th.find('.vcard')
@@ -118,9 +117,19 @@ def scrape_data():
                 if data['state_name'] == id_name['state_name']:
                     state_data[i]['state_id'] = id_name['id']
             del state_data[i]['state_name']
+        try:
+            for i, data in enumerate(state_data):
+                next = state_data[i + 1]
+                if state_data[i]['state_id'] == next['state_id']:
+                    state_data[i][
+                        'img_url'] = f"https://www.citystats.xyz/images/states/{state_data[i]['state_id']}/senators/1"
+                    state_data[i + 1][
+                        'img_url'] = f"https://www.citystats.xyz/images/states/{state_data[i]['state_id']}/senators/2"
+        except IndexError:
+            None
         return state_data
     except Exception as e:
-        logging.error(f'Error at during scraping: {str(e)}')
+        logging.error(f'Error during scraping: {str(e)}')
         return False
 
 
