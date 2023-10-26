@@ -119,8 +119,7 @@ def scrape_data():
             del state_data[i]['state_name']
         try:
             for i, data in enumerate(state_data):
-                next = state_data[i + 1]
-                if state_data[i]['state_id'] == next['state_id']:
+                if state_data[i]['state_id'] == state_data[i + 1]['state_id']:
                     state_data[i][
                         'img_url'] = f"https://www.citystats.xyz/images/states/{state_data[i]['state_id']}/senators/1"
                     state_data[i + 1][
