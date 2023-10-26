@@ -4,6 +4,7 @@ import os
 import json
 import logging
 import copy
+import requests
 from datetime import datetime
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
@@ -13,8 +14,8 @@ session = HTMLSession()
 
 # Change based off of which site being scraped
 BASE_URL = 'https://en.wikipedia.org/w/index.php?title=List_of_current_United_States_senators'
-# TODO: dynamically generate state ids
-#  BASE_IMG_PATH = f'https://www.citystats.xyz/images/states/{STATE_ID}/senator/'
+WIKI_URL = 'https://en.wikipedia.org'
+IMG_PATH = './new_congress/img/'
 
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
@@ -28,56 +29,122 @@ console_handler = logging.StreamHandler()
 console_handler.setFormatter(logging.Formatter(log_format))
 logging.getLogger().addHandler(console_handler)
 
-#  def download_images(img_arr):
-#  for i, img_url in enumerate(img_arr):
-#  # uri string conversion (i.e. %20 spaces %3F question marks, etc.)
-#  if '.png' in img_url:
-#  file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.png'
-#  else:
-#  file_name = f'./new_council_members/img/{PATH_ID}/{PATH_ID}_{i}.jpg'
-#  # 403 passed without user agent string
-#  img_data = requests.get(
-#  img_url,
-#  stream=True,
-#  headers={
-#  'User-agent': 'Mozilla/5.0'
-#  },
-#  ).content
-#  file = open(f'{file_name}', 'wb')
-#  file.write(img_data)
-#  logging.info(
-#  f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
-#  )
 
-#  def parse_json(results):
-#  json_arr = []
-#  for result in results:
-#  data = {}
-#  # TODO: dynamically generate state ids
-#  #  data['state_id'] = STATE_ID
-#  data['senator'] = result
-#  json_arr.append(data)
-#  for i, data in enumerate(json_arr):
-#  data['img_url'] = f'{BASE_IMG_PATH}/{i}'
-#  with open(f'./new_senate_members/json/{PATH_ID}.json', 'w') as writeJSON:
-#  json.dump(json_arr, writeJSON, ensure_ascii=False)
+def download_images(senate_ids_img_urls):
+    for senate_info in senate_ids_img_urls:
+        dir_id = ''
+        if senate_info['state_id'] < 10:
+            dir_id = f"0{senate_info['state_id']}"
+        else:
+            dir_id = str(senate_info['state_id'])
+        for i, img_url in enumerate(senate_info['urls']):
+            file_name = f'./new_congress/img/{dir_id}/0{i}.jpg'
+            img_data = requests.get(
+                img_url,
+                stream=True,
+                headers={
+                    'User-agent': 'Mozilla/5.0'
+                },
+            ).content
+            file = open(f'{file_name}', 'wb')
+            file.write(img_data)
+        logging.info(
+            f"Downloaded image for state_id: {senate_info['state_id']}")
 
-#  def grab_member_img():
-#  try:
-#  r = session.get(CITY_COUNCIL_URL)
-#  # r.html actually works, lsp doesn't like it for some reason...
-#  data = []
-#  results = r.html.find('.clearfix')
-#  for result in results:
-#  images = result.find('img')
-#  for image in images:
-#  if 'src' in image.attrs:
-#  if image.attrs['src'] not in data:
-#  data.append(image.attrs['src'])
-#  return data
-#  except Exception as e:
-#  logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
-#  return False
+
+def grab_img_urls_from(base_img_urls):
+    urls = []
+    for senate_img_info in base_img_urls:
+        for url in senate_img_info['urls']:
+            r = session.get(url)
+            results = r.html.find('.fullImageLink')
+            for result in results:
+                images = result.find('img')
+                for img in images:
+                    if 'src' in img.attrs:
+                        urls.append(f"https:{img.attrs['src']}")
+    url_pairs = []
+    for url1, url2 in zip(urls[::2], urls[1::2]):
+        url_pairs.append([url1, url2])
+
+    for i in range(len(base_img_urls)):
+        base_img_urls[i]['state_id'] = i + 1
+        base_img_urls[i]['urls'] = url_pairs[i]
+    return base_img_urls
+
+
+def grab_base_img_urls_from(senate_ids_urls):
+    urls = []
+    for senate_info in senate_ids_urls:
+        for url in senate_info['urls']:
+            try:
+                r = session.get(url)
+                results = r.html.find('.infobox-image')
+                for result in results:
+                    a_tags = result.find('a')
+                    for a_tag in a_tags:
+                        if 'href' in a_tag.attrs and 'logo' not in a_tag.attrs[
+                                'href'] and '_by_Gage_Skidmore' not in a_tag.attrs[
+                                    'href']:
+                            urls.append(f"{WIKI_URL}{a_tag.attrs['href']}")
+            except Exception as e:
+                logging.error(f'Error during scraping: {str(e)}')
+                return False
+    url_pairs = []
+    for url1, url2 in zip(urls[::2], urls[1::2]):
+        url_pairs.append([url1, url2])
+    for i in range(len(senate_ids_urls)):
+        senate_ids_urls[i]['state_id'] = i + 1
+        senate_ids_urls[i]['urls'] = url_pairs[i]
+    return senate_ids_urls
+
+
+def make_img_dirs(senate_ids_urls):
+    for senate_info in senate_ids_urls:
+        dir_id = ''
+        if senate_info['state_id'] < 10:
+            dir_id = f"0{senate_info['state_id']}"
+        else:
+            dir_id = str(senate_info['state_id'])
+        os.makedirs(f'./new_congress/img/{dir_id}', exist_ok=True)
+
+
+def scrape_urls():
+    try:
+        r = session.get(BASE_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('#senators')
+        state_data = []
+        urls = []
+
+        for result in results:
+            trs = result.find('tr')
+            for tr in trs:
+                tds = tr.find('td')
+                for td in tds:
+                    shallow_data = {}
+                    if 'rowspan' in td.attrs:
+                        shallow_data['state_name'] = td.text
+                        state_data.append(shallow_data)
+                ths = tr.find('th')
+                for th in ths:
+                    fns = th.find('.fn')
+                    for fn in fns:
+                        a_tags = fn.find('a')
+                        for a_tag in a_tags:
+                            urls.append(f"{WIKI_URL}{a_tag.attrs['href']}")
+        url_pairs = []
+        for url1, url2 in zip(urls[::2], urls[1::2]):
+            url_pairs.append([url1, url2])
+
+        for i in range(len(state_data)):
+            state_data[i]['state_id'] = i + 1
+            state_data[i]['urls'] = url_pairs[i]
+            del state_data[i]['state_name']
+        return state_data
+    except Exception as e:
+        logging.error(f'Error during scraping: {str(e)}')
+        return False
 
 
 def scrape_data():
@@ -138,8 +205,8 @@ if __name__ == "__main__":
         with open(f'./new_congress/json/base_state_senators.json',
                   'w') as writeJSON:
             json.dump(senator_names, writeJSON, ensure_ascii=False)
-    #  if results:
-    #  parse_json(results)
-    #  member_img_urls = grab_member_img()
-    #  img_urls = prepend_mayor_img_url_to(member_img_urls)
-    #  download_images(img_urls)
+    senate_ids_urls = scrape_urls()
+    make_img_dirs(senate_ids_urls)
+    base_img_urls = grab_base_img_urls_from(senate_ids_urls)
+    senate_ids_img_urls = grab_img_urls_from(base_img_urls)
+    download_images(senate_ids_img_urls)
