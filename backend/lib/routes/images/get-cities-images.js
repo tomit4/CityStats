@@ -14,6 +14,7 @@ module.exports = async (fastify, options, done) => {
             // TODO: Possibly put logic into service files
             // TODO: refactor for custom error message??
             // TODO: use knex to grab stateId by Name?
+            // TODO: grab id by idOrName method
             // (i.e. images/cities/Abilene/city_council/1 etc.)
             const { id, govBody, imageId } = request.params
             let folderId

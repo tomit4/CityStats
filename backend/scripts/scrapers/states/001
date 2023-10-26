@@ -3,6 +3,7 @@
 import os
 import json
 import logging
+import copy
 from datetime import datetime
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
@@ -15,13 +16,9 @@ BASE_URL = 'https://en.wikipedia.org/w/index.php?title=List_of_current_United_St
 # TODO: dynamically generate state ids
 #  BASE_IMG_PATH = f'https://www.citystats.xyz/images/states/{STATE_ID}/senator/'
 
-# TODO: dynamically generate state ids
-PATH_ID = f'{STATE_ID}'
-IMG_PATH = f'./new_senate_members/img/{PATH_ID}/'
-
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
-os.makedirs(os.path.dirname(IMG_PATH), exist_ok=True)
+os.makedirs(f'./new_congress/json/', exist_ok=True)
 
 log_format = '%(asctime)s - %(levelname)s - %(message)s'
 logging.basicConfig(filename=LOG_FILENAME,
@@ -52,20 +49,18 @@ logging.getLogger().addHandler(console_handler)
 #  f'Downloaded image for city_id: {CITY_ID}, {i + 1} of {len(img_arr)}'
 #  )
 
-
-def parse_json(results):
-    json_arr = []
-    for result in results:
-        data = {}
-        # TODO: dynamically generate state ids
-        #  data['state_id'] = STATE_ID
-        data['senator'] = result
-        json_arr.append(data)
-    for i, data in enumerate(json_arr):
-        data['img_url'] = f'{BASE_IMG_PATH}/{i}'
-    with open(f'./new_senate_members/json/{PATH_ID}.json', 'w') as writeJSON:
-        json.dump(json_arr, writeJSON, ensure_ascii=False)
-
+#  def parse_json(results):
+#  json_arr = []
+#  for result in results:
+#  data = {}
+#  # TODO: dynamically generate state ids
+#  #  data['state_id'] = STATE_ID
+#  data['senator'] = result
+#  json_arr.append(data)
+#  for i, data in enumerate(json_arr):
+#  data['img_url'] = f'{BASE_IMG_PATH}/{i}'
+#  with open(f'./new_senate_members/json/{PATH_ID}.json', 'w') as writeJSON:
+#  json.dump(json_arr, writeJSON, ensure_ascii=False)
 
 #  def grab_member_img():
 #  try:
@@ -89,33 +84,52 @@ def scrape_data():
     try:
         r = session.get(BASE_URL)
         # r.html actually works, lsp doesn't like it for some reason...
-        data = []
-        results = r.html.find('.sidenav_expanded')
+        results = r.html.find('#senators')
+        state_data = []
+        state_names = []
+        new_data = {}
         for result in results:
-            a_tags = result.find('a')
-            for a_tag in a_tags:
-                if 'href' in a_tag.attrs and 'city-council-members' in a_tag.attrs[
-                        'href']:
-                    if len(a_tag.text) and a_tag.text not in data:
-                        data.append(a_tag.text)
-        del data[0]
-        for i, d in enumerate(data):
-            if 'President' in d:
-                data[i] = d.split('President ')[1]
-            elif 'Majority' in d or 'Minority' in d:
-                data[i] = d.split(', ')[1]
-            else:
-                data[i] = d.split(', ')[0]
-        return data
+            trs = result.find('tr')
+            data = {'state_name': '', 'senator_name': ''}
+            for tr in trs:
+                tds = tr.find('td')
+                for i, td in enumerate(tds):
+                    if 'rowspan' in td.attrs:
+                        data['state_name'] = td.text
+                        state_names.append(td.text)
+
+                ths = tr.find('th')
+                for th in ths:
+                    v_cards = th.find('.vcard')
+                    for v_card in v_cards:
+                        data['senator_name'] = v_card.text
+                        new_data = data
+                if new_data:
+                    state_data.append(copy.deepcopy(new_data))
+        ids_names = []
+        id_name = {}
+        for i, sn in enumerate(state_names):
+            id_name['id'] = i + 1
+            id_name['state_name'] = sn
+            ids_names.append(copy.deepcopy(id_name))
+
+        for i, data in enumerate(state_data):
+            for id_name in ids_names:
+                if data['state_name'] == id_name['state_name']:
+                    state_data[i]['state_id'] = id_name['id']
+            del state_data[i]['state_name']
+        return state_data
     except Exception as e:
-        logging.error(
-            # TODO: dynamically generate state ids
-            f'Error at city_id: {STATE_ID} during scraping: {str(e)}')
+        logging.error(f'Error at during scraping: {str(e)}')
         return False
 
 
 if __name__ == "__main__":
     senator_names = scrape_data()
+    if senator_names:
+        with open(f'./new_congress/json/base_state_senators.json',
+                  'w') as writeJSON:
+            json.dump(senator_names, writeJSON, ensure_ascii=False)
     #  if results:
     #  parse_json(results)
     #  member_img_urls = grab_member_img()
