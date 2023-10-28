@@ -5,7 +5,7 @@ import json
 import logging
 import copy
 from unicodedata import normalize
-#  import requests
+import requests
 from datetime import datetime
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
@@ -30,114 +30,99 @@ console_handler = logging.StreamHandler()
 console_handler.setFormatter(logging.Formatter(log_format))
 logging.getLogger().addHandler(console_handler)
 
-#  def download_images(senate_ids_img_urls):
-#  for senate_info in senate_ids_img_urls:
-#  dir_id = ''
-#  if senate_info['state_id'] < 10:
-#  dir_id = f"0{senate_info['state_id']}"
-#  else:
-#  dir_id = str(senate_info['state_id'])
-#  for i, img_url in enumerate(senate_info['urls']):
-#  file_name = f'./new_house/img/{dir_id}/0{i}.jpg'
-#  img_data = requests.get(
-#  img_url,
-#  stream=True,
-#  headers={
-#  'User-agent': 'Mozilla/5.0'
-#  },
-#  ).content
-#  file = open(f'{file_name}', 'wb')
-#  file.write(img_data)
-#  logging.info(
-#  f"Downloaded image for state_id: {senate_info['state_id']}")
 
-#  def grab_img_urls_from(base_img_urls):
-#  urls = []
-#  for senate_img_info in base_img_urls:
-#  for url in senate_img_info['urls']:
-#  r = session.get(url)
-#  results = r.html.find('.fullImageLink')
-#  for result in results:
-#  images = result.find('img')
-#  for img in images:
-#  if 'src' in img.attrs:
-#  urls.append(f"https:{img.attrs['src']}")
-#  url_pairs = []
-#  for url1, url2 in zip(urls[::2], urls[1::2]):
-#  url_pairs.append([url1, url2])
-#  for i in range(len(base_img_urls)):
-#  base_img_urls[i]['state_id'] = i + 1
-#  base_img_urls[i]['urls'] = url_pairs[i]
-#  return base_img_urls
+def download_images(img_urls):
+    for k in img_urls.keys():
+        if k < 10:
+            dir_number = f"0{k}"
+        else:
+            dir_number = k
+        os.makedirs(f'./new_house/img/{dir_number}', exist_ok=True)
+        for i, url in enumerate(img_urls[k]):
+            img_number = ''
+            if i < 10:
+                img_number = f"0{i+1}"
+            else:
+                img_number = f"{i+1}"
+            file_name = f"./new_house/img/{dir_number}/{img_number}.jpg"
+            img_data = requests.get(
+                url,
+                stream=True,
+                headers={
+                    'User-agent': 'Mozilla/5.0'
+                },
+            ).content
+            file = open(f'{file_name}', 'wb')
+            file.write(img_data)
+            logging.info(f"Downloaded image for state_id: {k}")
 
-#  def grab_base_img_urls_from(senate_ids_urls):
-#  urls = []
-#  for senate_info in senate_ids_urls:
-#  for url in senate_info['urls']:
-#  try:
-#  r = session.get(url)
-#  results = r.html.find('.infobox-image')
-#  for result in results:
-#  a_tags = result.find('a')
-#  for a_tag in a_tags:
-#  if 'href' in a_tag.attrs and 'logo' not in a_tag.attrs[
-#  'href'] and '_by_Gage_Skidmore' not in a_tag.attrs[
-#  'href']:
-#  urls.append(f"{WIKI_URL}{a_tag.attrs['href']}")
-#  except Exception as e:
-#  logging.error(f'Error during scraping: {str(e)}')
-#  return False
-#  url_pairs = []
-#  for url1, url2 in zip(urls[::2], urls[1::2]):
-#  url_pairs.append([url1, url2])
-#  for i in range(len(senate_ids_urls)):
-#  senate_ids_urls[i]['state_id'] = i + 1
-#  senate_ids_urls[i]['urls'] = url_pairs[i]
-#  return senate_ids_urls
 
-#  def make_img_dirs(senate_ids_urls):
-#  for senate_info in senate_ids_urls:
-#  dir_id = ''
-#  if senate_info['state_id'] < 10:
-#  dir_id = f"0{senate_info['state_id']}"
-#  else:
-#  dir_id = str(senate_info['state_id'])
-#  os.makedirs(f'./new_house/img/{dir_id}', exist_ok=True)
-
-#  def scrape_urls():
-#  try:
-#  r = session.get(BASE_URL)
-#  # r.html actually works, lsp doesn't like it for some reason...
-#  results = r.html.find('#senators')
-#  state_data = []
-#  urls = []
-#  for result in results:
-#  trs = result.find('tr')
-#  for tr in trs:
-#  tds = tr.find('td')
-#  for td in tds:
-#  shallow_data = {}
-#  if 'rowspan' in td.attrs:
-#  shallow_data['state_name'] = td.text
-#  state_data.append(shallow_data)
-#  ths = tr.find('th')
-#  for th in ths:
-#  fns = th.find('.fn')
-#  for fn in fns:
-#  a_tags = fn.find('a')
-#  for a_tag in a_tags:
-#  urls.append(f"{WIKI_URL}{a_tag.attrs['href']}")
-#  url_pairs = []
-#  for url1, url2 in zip(urls[::2], urls[1::2]):
-#  url_pairs.append([url1, url2])
-#  for i in range(len(state_data)):
-#  state_data[i]['state_id'] = i + 1
-#  state_data[i]['urls'] = url_pairs[i]
-#  del state_data[i]['state_name']
-#  return state_data
-#  except Exception as e:
-#  logging.error(f'Error during scraping: {str(e)}')
-#  return False
+def scrape_img_urls():
+    try:
+        f = open('./base_states_ids_names.json')
+        states_by_id = json.load(f)
+        r = session.get(BASE_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('#votingmembers')
+        #  image_urls = []
+        data = []
+        for result in results:
+            trs = result.find('tr')
+            for tr in trs:
+                ths = tr.find('th')
+                tds = tr.find('td')
+                dict = {}
+                for th in ths:
+                    if 'scope' in th.attrs and th.attrs['scope'] == 'row':
+                        a_tags = th.find('a')
+                        for a_tag in a_tags:
+                            dict['state_name'] = copy.deepcopy(
+                                normalize("NFKD", a_tag.text))
+                for td in tds:
+                    imgs = td.find('img')
+                    for img in imgs:
+                        if 'jpg' in img.attrs['src']:
+                            url = img.attrs['src'].split('.jpg')[0].replace(
+                                'thumb/', '')
+                            dict['wiki_img_url'] = copy.deepcopy(
+                                f"https:{url}.jpg")
+                        elif 'JPG' in img.attrs['src']:
+                            url = img.attrs['src'].split('.JPG')[0].replace(
+                                'thumb/', '')
+                            dict['wiki_img_url'] = copy.deepcopy(
+                                f"https:{url}.JPG")
+                        elif 'jpeg' in img.attrs['src']:
+                            url = img.attrs['src'].split('.jpeg')[0].replace(
+                                'thumb/', '')
+                            dict['wiki_img_url'] = copy.deepcopy(
+                                f"https:{url}.jpeg")
+                        elif 'png' in img.attrs['src']:
+                            url = img.attrs['src'].split('.png')[0].replace(
+                                'thumb/', '')
+                            dict['wiki_img_url'] = copy.deepcopy(
+                                f"https:{url}.png")
+                if dict:
+                    data.append(dict)
+        for i, d in enumerate(data):
+            for state in states_by_id:
+                if state['state_name'] in d['state_name']:
+                    data[i]['state_id'] = state['state_id']
+            if 'wiki_img_url' not in data[i].keys():
+                data[i]['wiki_img_url'] = None
+            del data[i]['state_name']
+        img_by_id = {}
+        for i, d in enumerate(data):
+            if d['state_id'] not in img_by_id:
+                img_by_id[d['state_id']] = []
+        for k in img_by_id.keys():
+            for i, d in enumerate(data):
+                if d['state_id'] == k:
+                    if d['wiki_img_url'] != None:
+                        img_by_id[k].append(d['wiki_img_url'])
+        return img_by_id
+    except Exception as e:
+        logging.error(f'Error during scraping: {str(e)}')
+        return False
 
 
 def scrape_data():
@@ -165,13 +150,17 @@ def scrape_data():
                     for b in bs:
                         a_tags = b.find('a')
                         for a_tag in a_tags:
-                            dict['delegate_name'] = copy.deepcopy(a_tag.text)
+                            if len(a_tag.text):
+                                dict['delegate_name'] = copy.deepcopy(
+                                    a_tag.text)
                 if dict:
                     data.append(dict)
         for i, d in enumerate(data):
             for state in states_by_id:
                 if state['state_name'] in d['state_name']:
                     data[i]['state_id'] = state['state_id']
+            if 'delegate_name' not in data[i].keys():
+                data[i]['delegate_name'] = None
             del data[i]['state_name']
         try:
             count = 0
@@ -203,8 +192,9 @@ if __name__ == "__main__":
         with open(f'./new_house/json/base_state_delegates.json',
                   'w') as writeJSON:
             json.dump(delegates_names, writeJSON, ensure_ascii=False)
+    img_urls = scrape_img_urls()
     #  senate_ids_urls = scrape_urls()
     #  make_img_dirs(senate_ids_urls)
     #  base_img_urls = grab_base_img_urls_from(senate_ids_urls)
     #  senate_ids_img_urls = grab_img_urls_from(base_img_urls)
-    #  download_images(senate_ids_img_urls)
+    download_images(img_urls)
