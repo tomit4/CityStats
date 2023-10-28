@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # scrapes new senators names and images.
-#  import os
-#  import json
+import os
+import json
 import logging
-#  import copy
+import copy
+from unicodedata import normalize
 #  import requests
 from datetime import datetime
 # Use requests_html when JS is required on website
@@ -19,7 +20,7 @@ IMG_PATH = './new_house/img/'
 
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
-#  os.makedirs(f'./new_house/json/', exist_ok=True)
+os.makedirs(f'./new_house/json/', exist_ok=True)
 
 log_format = '%(asctime)s - %(levelname)s - %(message)s'
 logging.basicConfig(filename=LOG_FILENAME,
@@ -141,9 +142,40 @@ logging.getLogger().addHandler(console_handler)
 
 def scrape_data():
     try:
+        f = open('./base_states_ids_names.json')
+        states_by_id = json.load(f)
         r = session.get(BASE_URL)
         # r.html actually works, lsp doesn't like it for some reason...
-        results = r.html.find('')
+        results = r.html.find('#votingmembers')
+        data = []
+        for result in results:
+            trs = result.find('tr')
+            for tr in trs:
+                ths = tr.find('th')
+                tds = tr.find('td')
+                dict = {}
+                for th in ths:
+                    if 'scope' in th.attrs and th.attrs['scope'] == 'row':
+                        a_tags = th.find('a')
+                        for a_tag in a_tags:
+                            dict['state_name'] = copy.deepcopy(
+                                normalize("NFKD", a_tag.text))
+                for td in tds:
+                    bs = td.find('b')
+                    for b in bs:
+                        a_tags = b.find('a')
+                        for a_tag in a_tags:
+                            dict['delegate_name'] = copy.deepcopy(a_tag.text)
+                if dict:
+                    data.append(dict)
+        for i, d in enumerate(data):
+            for state in states_by_id:
+                if state['state_name'] in d['state_name']:
+                    data[i]['state_id'] = state['state_id']
+            del data[i]['state_name']
+        f.close()
+        return data
+
     except Exception as e:
         logging.error(f'Error during scraping: {str(e)}')
         return False
@@ -151,10 +183,10 @@ def scrape_data():
 
 if __name__ == "__main__":
     delegates_names = scrape_data()
-    #  if senator_names:
-    #  with open(f'./new_house/json/base_state_senators.json',
-    #  'w') as writeJSON:
-    #  json.dump(senator_names, writeJSON, ensure_ascii=False)
+    if delegates_names:
+        with open(f'./new_house/json/base_state_delegates.json',
+                  'w') as writeJSON:
+            json.dump(delegates_names, writeJSON, ensure_ascii=False)
     #  senate_ids_urls = scrape_urls()
     #  make_img_dirs(senate_ids_urls)
     #  base_img_urls = grab_base_img_urls_from(senate_ids_urls)
