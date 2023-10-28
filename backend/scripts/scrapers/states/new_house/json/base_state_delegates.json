@@ -2167,5 +2167,9 @@
         "state_id": 49,
         "img_url": "https://citystats.xyz/images/states/49/house_delegation/8"
     },
-    { "delegate_name": "Harriet Hageman", "state_id": 50 }
+    {
+        "delegate_name": "Harriet Hageman",
+        "state_id": 50,
+        "img_url": "https://citystats.xyz/images/states/50/house_delegation/1"
+    }
 ]
