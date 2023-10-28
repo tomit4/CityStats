@@ -1,3 +1,0 @@
-2023-10-27 22:09:10,912 - ERROR - Error during scraping: 'state_name'
-2023-10-27 22:10:09,209 - ERROR - Error during scraping: 'state_name'
-2023-10-27 22:10:44,673 - ERROR - Error during scraping: 'state_name'

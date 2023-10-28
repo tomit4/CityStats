@@ -173,6 +173,20 @@ def scrape_data():
                 if state['state_name'] in d['state_name']:
                     data[i]['state_id'] = state['state_id']
             del data[i]['state_name']
+
+        try:
+            count = 0
+            for i, d in enumerate(data):
+                count = count + 1
+                if data[i]['state_id'] == data[i + 1]['state_id']:
+                    data[i][
+                        'img_url'] = f"https://citystats.xyz/images/states/{data[i]['state_id']}/house_delegation/{count}"
+                else:
+                    data[i][
+                        'img_url'] = f"https://citystats.xyz/images/states/{data[i]['state_id']}/house_delegation/{count}"
+                    count = 0
+        except IndexError:
+            None
         f.close()
         return data
 
