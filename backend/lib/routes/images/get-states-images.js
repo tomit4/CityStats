@@ -2,7 +2,7 @@
 module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
-        url: '/images/cities/:id/:govBody/:imageId?',
+        url: '/images/states/:id/:govBody/:imageId?',
         decompress: {
             forceRequestEncoding: 'gzip',
         },
@@ -11,27 +11,19 @@ module.exports = async (fastify, options, done) => {
             // TODO: refactor for custom error message??
             // TODO: use knex to grab stateId by Name?
             // TODO: grab id by idOrName method
-            // (i.e. images/cities/Abilene/city_council/1 etc.)
+            // (i.e. images/states/Alabama/senators/1 etc.)
             const { id, govBody, imageId } = request.params
-            let folderId
-            let imgPath
-            if (Number(id) < 10) {
-                folderId = `00${id}`
-            } else if (Number(id) < 100) {
-                folderId = `0${id}`
-            } else {
-                folderId = id
-            }
-            if (govBody === 'mayor') {
-                imgPath = `cities/${folderId}/${folderId}_0.jpg`
-            } else if (govBody === 'city_council' && imageId !== '0') {
-                imgPath = `cities/${folderId}/${folderId}_${imageId}.jpg`
-            }
-
+            const folderId = Number(id) < 10 ? `0${id}` : `${id}`
+            const imgId = Number(imageId) < 10 ? `0${imageId}` : `${imageId}`
+            console.log('imgId :=>', imgId)
+            const imgPath =
+                govBody === 'senators'
+                    ? `states/senators/${folderId}/${imgId}.jpg`
+                    : `states/delegates/${folderId}/${imgId}.jpg`
+            console.log('imgPath :=>', imgPath)
             fastify.log.info(
                 `Serving image: ${imgPath}, Compression: ${request.headers['accept-encoding']}`,
             )
-
             return reply.sendFile(imgPath)
         },
     })

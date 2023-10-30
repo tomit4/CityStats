@@ -38,7 +38,7 @@ def download_images(senate_ids_img_urls):
         else:
             dir_id = str(senate_info['state_id'])
         for i, img_url in enumerate(senate_info['urls']):
-            file_name = f'./new_congress/img/{dir_id}/0{i}.jpg'
+            file_name = f'./new_congress/img/{dir_id}/0{i+1}.jpg'
             img_data = requests.get(
                 img_url,
                 stream=True,

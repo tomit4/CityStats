@@ -14,4 +14,5 @@ module.exports = async fastify => {
     await fastify.register(require('./cities/get-cities-with-query'))
     // Images
     await fastify.register(require('./images/get-cities-images'))
+    await fastify.register(require('./images/get-states-images'))
 }
