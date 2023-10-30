@@ -1705,14 +1705,9 @@
         "img_url": "https://citystats.xyz/images/states/38/house_delegation/17"
     },
     {
-        "state_id": 39,
-        "delegate_name": null,
-        "img_url": "https://citystats.xyz/images/states/39/house_delegation/1"
-    },
-    {
         "delegate_name": "Seth Magaziner",
         "state_id": 39,
-        "img_url": "https://citystats.xyz/images/states/39/house_delegation/2"
+        "img_url": "https://citystats.xyz/images/states/39/house_delegation/1"
     },
     {
         "delegate_name": "Nancy Mace",
@@ -1995,19 +1990,14 @@
         "img_url": "https://citystats.xyz/images/states/44/house_delegation/1"
     },
     {
-        "state_id": 44,
-        "delegate_name": null,
-        "img_url": "https://citystats.xyz/images/states/44/house_delegation/2"
-    },
-    {
         "delegate_name": "John Curtis",
         "state_id": 44,
-        "img_url": "https://citystats.xyz/images/states/44/house_delegation/3"
+        "img_url": "https://citystats.xyz/images/states/44/house_delegation/2"
     },
     {
         "delegate_name": "Burgess Owens",
         "state_id": 44,
-        "img_url": "https://citystats.xyz/images/states/44/house_delegation/4"
+        "img_url": "https://citystats.xyz/images/states/44/house_delegation/3"
     },
     {
         "delegate_name": "Becca Balint",

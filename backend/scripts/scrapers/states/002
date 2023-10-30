@@ -64,7 +64,6 @@ def scrape_img_urls():
         r = session.get(BASE_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         results = r.html.find('#votingmembers')
-        #  image_urls = []
         data = []
         for result in results:
             trs = result.find('tr')
@@ -159,9 +158,10 @@ def scrape_data():
             for state in states_by_id:
                 if state['state_name'] in d['state_name']:
                     data[i]['state_id'] = state['state_id']
-            if 'delegate_name' not in data[i].keys():
-                data[i]['delegate_name'] = None
             del data[i]['state_name']
+        for i, d in enumerate(data):
+            if 'delegate_name' not in data[i].keys():
+                data.remove(data[i])
         try:
             count = 0
             for i, d in enumerate(data):
@@ -173,14 +173,13 @@ def scrape_data():
                     data[i][
                         'img_url'] = f"https://citystats.xyz/images/states/{data[i]['state_id']}/house_delegation/{count}"
                     count = 0
-                # Handle Out of Index Edge Case where data[i+1] doesn't exist at last element
+            # Handle Out of Index Edge Case where data[i+1] doesn't exist at last element
                 data[-1][
                     'img_url'] = f"https://citystats.xyz/images/states/{data[i+1]['state_id']}/house_delegation/{count+1}"
         except IndexError:
             None
         f.close()
         return data
-
     except Exception as e:
         logging.error(f'Error during scraping: {str(e)}')
         return False
@@ -193,8 +192,4 @@ if __name__ == "__main__":
                   'w') as writeJSON:
             json.dump(delegates_names, writeJSON, ensure_ascii=False)
     img_urls = scrape_img_urls()
-    #  senate_ids_urls = scrape_urls()
-    #  make_img_dirs(senate_ids_urls)
-    #  base_img_urls = grab_base_img_urls_from(senate_ids_urls)
-    #  senate_ids_img_urls = grab_img_urls_from(base_img_urls)
     download_images(img_urls)
