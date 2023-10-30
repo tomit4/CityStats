@@ -1,4 +1,3 @@
-// TODO: copy for /images/states route as well
 module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
@@ -7,8 +6,6 @@ module.exports = async (fastify, options, done) => {
             forceRequestEncoding: 'gzip',
         },
         handler: async (request, reply) => {
-            // TODO: Possibly put logic into service files
-            // TODO: refactor for custom error message??
             // TODO: use knex to grab stateId by Name?
             // TODO: grab id by idOrName method
             // (i.e. images/cities/Abilene/city_council/1 etc.)
@@ -26,8 +23,12 @@ module.exports = async (fastify, options, done) => {
                 imgPath = `cities/${folderId}/${folderId}_0.jpg`
             } else if (govBody === 'city_council' && imageId !== '0') {
                 imgPath = `cities/${folderId}/${folderId}_${imageId}.jpg`
+            } else {
+                reply.code(500)
+                return new Error(
+                    `Governing Body: ${govBody} not acceptable format. Please use senators or delegates as appropriate governing body query string.`,
+                )
             }
-
             fastify.log.info(
                 `Serving image: ${imgPath}, Compression: ${request.headers['accept-encoding']}`,
             )
