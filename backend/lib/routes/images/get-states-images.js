@@ -15,12 +15,17 @@ module.exports = async (fastify, options, done) => {
             const { id, govBody, imageId } = request.params
             const folderId = Number(id) < 10 ? `0${id}` : `${id}`
             const imgId = Number(imageId) < 10 ? `0${imageId}` : `${imageId}`
-            console.log('imgId :=>', imgId)
-            const imgPath =
-                govBody === 'senators'
-                    ? `states/senators/${folderId}/${imgId}.jpg`
-                    : `states/delegates/${folderId}/${imgId}.jpg`
-            console.log('imgPath :=>', imgPath)
+            let imgPath
+            if (govBody === 'senators') {
+                imgPath = `states/senators/${folderId}/${imgId}.jpg`
+            } else if (govBody === 'delegates') {
+                imgPath = `states/delegates/${folderId}/${imgId}.jpg`
+            } else {
+                reply.code(500)
+                return new Error(
+                    `Governing Body: ${govBody} not acceptable format. Please use senators or delegates as appropriate governing body query string.`,
+                )
+            }
             fastify.log.info(
                 `Serving image: ${imgPath}, Compression: ${request.headers['accept-encoding']}`,
             )

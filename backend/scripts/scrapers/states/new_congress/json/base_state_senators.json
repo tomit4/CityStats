@@ -1,1 +1,502 @@
-[{"senator_name": "Tommy Tuberville", "state_id": 1, "img_url": "https://www.citystats.xyz/images/states/1/senators/1"}, {"senator_name": "Katie Britt", "state_id": 1, "img_url": "https://www.citystats.xyz/images/states/1/senators/2"}, {"senator_name": "Lisa Murkowski", "state_id": 2, "img_url": "https://www.citystats.xyz/images/states/2/senators/1"}, {"senator_name": "Dan Sullivan", "state_id": 2, "img_url": "https://www.citystats.xyz/images/states/2/senators/2"}, {"senator_name": "Kyrsten Sinema", "state_id": 3, "img_url": "https://www.citystats.xyz/images/states/3/senators/1"}, {"senator_name": "Mark Kelly", "state_id": 3, "img_url": "https://www.citystats.xyz/images/states/3/senators/2"}, {"senator_name": "John Boozman", "state_id": 4, "img_url": "https://www.citystats.xyz/images/states/4/senators/1"}, {"senator_name": "Tom Cotton", "state_id": 4, "img_url": "https://www.citystats.xyz/images/states/4/senators/2"}, {"senator_name": "Alex Padilla", "state_id": 5, "img_url": "https://www.citystats.xyz/images/states/5/senators/1"}, {"senator_name": "Laphonza Butler", "state_id": 5, "img_url": "https://www.citystats.xyz/images/states/5/senators/2"}, {"senator_name": "Michael Bennet", "state_id": 6, "img_url": "https://www.citystats.xyz/images/states/6/senators/1"}, {"senator_name": "John Hickenlooper", "state_id": 6, "img_url": "https://www.citystats.xyz/images/states/6/senators/2"}, {"senator_name": "Richard Blumenthal", "state_id": 7, "img_url": "https://www.citystats.xyz/images/states/7/senators/1"}, {"senator_name": "Chris Murphy", "state_id": 7, "img_url": "https://www.citystats.xyz/images/states/7/senators/2"}, {"senator_name": "Tom Carper", "state_id": 8, "img_url": "https://www.citystats.xyz/images/states/8/senators/1"}, {"senator_name": "Chris Coons", "state_id": 8, "img_url": "https://www.citystats.xyz/images/states/8/senators/2"}, {"senator_name": "Marco Rubio", "state_id": 9, "img_url": "https://www.citystats.xyz/images/states/9/senators/1"}, {"senator_name": "Rick Scott", "state_id": 9, "img_url": "https://www.citystats.xyz/images/states/9/senators/2"}, {"senator_name": "Jon Ossoff", "state_id": 10, "img_url": "https://www.citystats.xyz/images/states/10/senators/1"}, {"senator_name": "Raphael Warnock", "state_id": 10, "img_url": "https://www.citystats.xyz/images/states/10/senators/2"}, {"senator_name": "Brian Schatz", "state_id": 11, "img_url": "https://www.citystats.xyz/images/states/11/senators/1"}, {"senator_name": "Mazie Hirono", "state_id": 11, "img_url": "https://www.citystats.xyz/images/states/11/senators/2"}, {"senator_name": "Mike Crapo", "state_id": 12, "img_url": "https://www.citystats.xyz/images/states/12/senators/1"}, {"senator_name": "Jim Risch", "state_id": 12, "img_url": "https://www.citystats.xyz/images/states/12/senators/2"}, {"senator_name": "Dick Durbin", "state_id": 13, "img_url": "https://www.citystats.xyz/images/states/13/senators/1"}, {"senator_name": "Tammy Duckworth", "state_id": 13, "img_url": "https://www.citystats.xyz/images/states/13/senators/2"}, {"senator_name": "Todd Young", "state_id": 14, "img_url": "https://www.citystats.xyz/images/states/14/senators/1"}, {"senator_name": "Mike Braun", "state_id": 14, "img_url": "https://www.citystats.xyz/images/states/14/senators/2"}, {"senator_name": "Chuck Grassley", "state_id": 15, "img_url": "https://www.citystats.xyz/images/states/15/senators/1"}, {"senator_name": "Joni Ernst", "state_id": 15, "img_url": "https://www.citystats.xyz/images/states/15/senators/2"}, {"senator_name": "Jerry Moran", "state_id": 16, "img_url": "https://www.citystats.xyz/images/states/16/senators/1"}, {"senator_name": "Roger Marshall", "state_id": 16, "img_url": "https://www.citystats.xyz/images/states/16/senators/2"}, {"senator_name": "Mitch McConnell", "state_id": 17, "img_url": "https://www.citystats.xyz/images/states/17/senators/1"}, {"senator_name": "Rand Paul", "state_id": 17, "img_url": "https://www.citystats.xyz/images/states/17/senators/2"}, {"senator_name": "Bill Cassidy", "state_id": 18, "img_url": "https://www.citystats.xyz/images/states/18/senators/1"}, {"senator_name": "John Kennedy", "state_id": 18, "img_url": "https://www.citystats.xyz/images/states/18/senators/2"}, {"senator_name": "Susan Collins", "state_id": 19, "img_url": "https://www.citystats.xyz/images/states/19/senators/1"}, {"senator_name": "Angus King", "state_id": 19, "img_url": "https://www.citystats.xyz/images/states/19/senators/2"}, {"senator_name": "Ben Cardin", "state_id": 20, "img_url": "https://www.citystats.xyz/images/states/20/senators/1"}, {"senator_name": "Chris Van Hollen", "state_id": 20, "img_url": "https://www.citystats.xyz/images/states/20/senators/2"}, {"senator_name": "Elizabeth Warren", "state_id": 21, "img_url": "https://www.citystats.xyz/images/states/21/senators/1"}, {"senator_name": "Ed Markey", "state_id": 21, "img_url": "https://www.citystats.xyz/images/states/21/senators/2"}, {"senator_name": "Debbie Stabenow", "state_id": 22, "img_url": "https://www.citystats.xyz/images/states/22/senators/1"}, {"senator_name": "Gary Peters", "state_id": 22, "img_url": "https://www.citystats.xyz/images/states/22/senators/2"}, {"senator_name": "Amy Klobuchar", "state_id": 23, "img_url": "https://www.citystats.xyz/images/states/23/senators/1"}, {"senator_name": "Tina Smith", "state_id": 23, "img_url": "https://www.citystats.xyz/images/states/23/senators/2"}, {"senator_name": "Roger Wicker", "state_id": 24, "img_url": "https://www.citystats.xyz/images/states/24/senators/1"}, {"senator_name": "Cindy Hyde-Smith", "state_id": 24, "img_url": "https://www.citystats.xyz/images/states/24/senators/2"}, {"senator_name": "Josh Hawley", "state_id": 25, "img_url": "https://www.citystats.xyz/images/states/25/senators/1"}, {"senator_name": "Eric Schmitt", "state_id": 25, "img_url": "https://www.citystats.xyz/images/states/25/senators/2"}, {"senator_name": "Jon Tester", "state_id": 26, "img_url": "https://www.citystats.xyz/images/states/26/senators/1"}, {"senator_name": "Steve Daines", "state_id": 26, "img_url": "https://www.citystats.xyz/images/states/26/senators/2"}, {"senator_name": "Deb Fischer", "state_id": 27, "img_url": "https://www.citystats.xyz/images/states/27/senators/1"}, {"senator_name": "Pete Ricketts", "state_id": 27, "img_url": "https://www.citystats.xyz/images/states/27/senators/2"}, {"senator_name": "Catherine Cortez Masto", "state_id": 28, "img_url": "https://www.citystats.xyz/images/states/28/senators/1"}, {"senator_name": "Jacky Rosen", "state_id": 28, "img_url": "https://www.citystats.xyz/images/states/28/senators/2"}, {"senator_name": "Jeanne Shaheen", "state_id": 29, "img_url": "https://www.citystats.xyz/images/states/29/senators/1"}, {"senator_name": "Maggie Hassan", "state_id": 29, "img_url": "https://www.citystats.xyz/images/states/29/senators/2"}, {"senator_name": "Bob Menendez", "state_id": 30, "img_url": "https://www.citystats.xyz/images/states/30/senators/1"}, {"senator_name": "Cory Booker", "state_id": 30, "img_url": "https://www.citystats.xyz/images/states/30/senators/2"}, {"senator_name": "Martin Heinrich", "state_id": 31, "img_url": "https://www.citystats.xyz/images/states/31/senators/1"}, {"senator_name": "Ben Ray Luján", "state_id": 31, "img_url": "https://www.citystats.xyz/images/states/31/senators/2"}, {"senator_name": "Chuck Schumer", "state_id": 32, "img_url": "https://www.citystats.xyz/images/states/32/senators/1"}, {"senator_name": "Kirsten Gillibrand", "state_id": 32, "img_url": "https://www.citystats.xyz/images/states/32/senators/2"}, {"senator_name": "Thom Tillis", "state_id": 33, "img_url": "https://www.citystats.xyz/images/states/33/senators/1"}, {"senator_name": "Ted Budd", "state_id": 33, "img_url": "https://www.citystats.xyz/images/states/33/senators/2"}, {"senator_name": "John Hoeven", "state_id": 34, "img_url": "https://www.citystats.xyz/images/states/34/senators/1"}, {"senator_name": "Kevin Cramer", "state_id": 34, "img_url": "https://www.citystats.xyz/images/states/34/senators/2"}, {"senator_name": "Sherrod Brown", "state_id": 35, "img_url": "https://www.citystats.xyz/images/states/35/senators/1"}, {"senator_name": "J. D. Vance", "state_id": 35, "img_url": "https://www.citystats.xyz/images/states/35/senators/2"}, {"senator_name": "James Lankford", "state_id": 36, "img_url": "https://www.citystats.xyz/images/states/36/senators/1"}, {"senator_name": "Markwayne Mullin", "state_id": 36, "img_url": "https://www.citystats.xyz/images/states/36/senators/2"}, {"senator_name": "Ron Wyden", "state_id": 37, "img_url": "https://www.citystats.xyz/images/states/37/senators/1"}, {"senator_name": "Jeff Merkley", "state_id": 37, "img_url": "https://www.citystats.xyz/images/states/37/senators/2"}, {"senator_name": "Bob Casey Jr.", "state_id": 38, "img_url": "https://www.citystats.xyz/images/states/38/senators/1"}, {"senator_name": "John Fetterman", "state_id": 38, "img_url": "https://www.citystats.xyz/images/states/38/senators/2"}, {"senator_name": "Jack Reed", "state_id": 39, "img_url": "https://www.citystats.xyz/images/states/39/senators/1"}, {"senator_name": "Sheldon Whitehouse", "state_id": 39, "img_url": "https://www.citystats.xyz/images/states/39/senators/2"}, {"senator_name": "Lindsey Graham", "state_id": 40, "img_url": "https://www.citystats.xyz/images/states/40/senators/1"}, {"senator_name": "Tim Scott", "state_id": 40, "img_url": "https://www.citystats.xyz/images/states/40/senators/2"}, {"senator_name": "John Thune", "state_id": 41, "img_url": "https://www.citystats.xyz/images/states/41/senators/1"}, {"senator_name": "Mike Rounds", "state_id": 41, "img_url": "https://www.citystats.xyz/images/states/41/senators/2"}, {"senator_name": "Marsha Blackburn", "state_id": 42, "img_url": "https://www.citystats.xyz/images/states/42/senators/1"}, {"senator_name": "Bill Hagerty", "state_id": 42, "img_url": "https://www.citystats.xyz/images/states/42/senators/2"}, {"senator_name": "John Cornyn", "state_id": 43, "img_url": "https://www.citystats.xyz/images/states/43/senators/1"}, {"senator_name": "Ted Cruz", "state_id": 43, "img_url": "https://www.citystats.xyz/images/states/43/senators/2"}, {"senator_name": "Mike Lee", "state_id": 44, "img_url": "https://www.citystats.xyz/images/states/44/senators/1"}, {"senator_name": "Mitt Romney", "state_id": 44, "img_url": "https://www.citystats.xyz/images/states/44/senators/2"}, {"senator_name": "Bernie Sanders", "state_id": 45, "img_url": "https://www.citystats.xyz/images/states/45/senators/1"}, {"senator_name": "Peter Welch", "state_id": 45, "img_url": "https://www.citystats.xyz/images/states/45/senators/2"}, {"senator_name": "Mark Warner", "state_id": 46, "img_url": "https://www.citystats.xyz/images/states/46/senators/1"}, {"senator_name": "Tim Kaine", "state_id": 46, "img_url": "https://www.citystats.xyz/images/states/46/senators/2"}, {"senator_name": "Patty Murray", "state_id": 47, "img_url": "https://www.citystats.xyz/images/states/47/senators/1"}, {"senator_name": "Maria Cantwell", "state_id": 47, "img_url": "https://www.citystats.xyz/images/states/47/senators/2"}, {"senator_name": "Joe Manchin", "state_id": 48, "img_url": "https://www.citystats.xyz/images/states/48/senators/1"}, {"senator_name": "Shelley Moore Capito", "state_id": 48, "img_url": "https://www.citystats.xyz/images/states/48/senators/2"}, {"senator_name": "Ron Johnson", "state_id": 49, "img_url": "https://www.citystats.xyz/images/states/49/senators/1"}, {"senator_name": "Tammy Baldwin", "state_id": 49, "img_url": "https://www.citystats.xyz/images/states/49/senators/2"}, {"senator_name": "John Barrasso", "state_id": 50, "img_url": "https://www.citystats.xyz/images/states/50/senators/1"}, {"senator_name": "Cynthia Lummis", "state_id": 50, "img_url": "https://www.citystats.xyz/images/states/50/senators/2"}]
+[
+    {
+        "senator_name": "Tommy Tuberville",
+        "state_id": 1,
+        "img_url": "https://www.citystats.xyz/images/states/1/senators/1"
+    },
+    {
+        "senator_name": "Katie Britt",
+        "state_id": 1,
+        "img_url": "https://www.citystats.xyz/images/states/1/senators/2"
+    },
+    {
+        "senator_name": "Lisa Murkowski",
+        "state_id": 2,
+        "img_url": "https://www.citystats.xyz/images/states/2/senators/1"
+    },
+    {
+        "senator_name": "Dan Sullivan",
+        "state_id": 2,
+        "img_url": "https://www.citystats.xyz/images/states/2/senators/2"
+    },
+    {
+        "senator_name": "Kyrsten Sinema",
+        "state_id": 3,
+        "img_url": "https://www.citystats.xyz/images/states/3/senators/1"
+    },
+    {
+        "senator_name": "Mark Kelly",
+        "state_id": 3,
+        "img_url": "https://www.citystats.xyz/images/states/3/senators/2"
+    },
+    {
+        "senator_name": "John Boozman",
+        "state_id": 4,
+        "img_url": "https://www.citystats.xyz/images/states/4/senators/1"
+    },
+    {
+        "senator_name": "Tom Cotton",
+        "state_id": 4,
+        "img_url": "https://www.citystats.xyz/images/states/4/senators/2"
+    },
+    {
+        "senator_name": "Alex Padilla",
+        "state_id": 5,
+        "img_url": "https://www.citystats.xyz/images/states/5/senators/1"
+    },
+    {
+        "senator_name": "Laphonza Butler",
+        "state_id": 5,
+        "img_url": "https://www.citystats.xyz/images/states/5/senators/2"
+    },
+    {
+        "senator_name": "Michael Bennet",
+        "state_id": 6,
+        "img_url": "https://www.citystats.xyz/images/states/6/senators/1"
+    },
+    {
+        "senator_name": "John Hickenlooper",
+        "state_id": 6,
+        "img_url": "https://www.citystats.xyz/images/states/6/senators/2"
+    },
+    {
+        "senator_name": "Richard Blumenthal",
+        "state_id": 7,
+        "img_url": "https://www.citystats.xyz/images/states/7/senators/1"
+    },
+    {
+        "senator_name": "Chris Murphy",
+        "state_id": 7,
+        "img_url": "https://www.citystats.xyz/images/states/7/senators/2"
+    },
+    {
+        "senator_name": "Tom Carper",
+        "state_id": 8,
+        "img_url": "https://www.citystats.xyz/images/states/8/senators/1"
+    },
+    {
+        "senator_name": "Chris Coons",
+        "state_id": 8,
+        "img_url": "https://www.citystats.xyz/images/states/8/senators/2"
+    },
+    {
+        "senator_name": "Marco Rubio",
+        "state_id": 9,
+        "img_url": "https://www.citystats.xyz/images/states/9/senators/1"
+    },
+    {
+        "senator_name": "Rick Scott",
+        "state_id": 9,
+        "img_url": "https://www.citystats.xyz/images/states/9/senators/2"
+    },
+    {
+        "senator_name": "Jon Ossoff",
+        "state_id": 10,
+        "img_url": "https://www.citystats.xyz/images/states/10/senators/1"
+    },
+    {
+        "senator_name": "Raphael Warnock",
+        "state_id": 10,
+        "img_url": "https://www.citystats.xyz/images/states/10/senators/2"
+    },
+    {
+        "senator_name": "Brian Schatz",
+        "state_id": 11,
+        "img_url": "https://www.citystats.xyz/images/states/11/senators/1"
+    },
+    {
+        "senator_name": "Mazie Hirono",
+        "state_id": 11,
+        "img_url": "https://www.citystats.xyz/images/states/11/senators/2"
+    },
+    {
+        "senator_name": "Mike Crapo",
+        "state_id": 12,
+        "img_url": "https://www.citystats.xyz/images/states/12/senators/1"
+    },
+    {
+        "senator_name": "Jim Risch",
+        "state_id": 12,
+        "img_url": "https://www.citystats.xyz/images/states/12/senators/2"
+    },
+    {
+        "senator_name": "Dick Durbin",
+        "state_id": 13,
+        "img_url": "https://www.citystats.xyz/images/states/13/senators/1"
+    },
+    {
+        "senator_name": "Tammy Duckworth",
+        "state_id": 13,
+        "img_url": "https://www.citystats.xyz/images/states/13/senators/2"
+    },
+    {
+        "senator_name": "Todd Young",
+        "state_id": 14,
+        "img_url": "https://www.citystats.xyz/images/states/14/senators/1"
+    },
+    {
+        "senator_name": "Mike Braun",
+        "state_id": 14,
+        "img_url": "https://www.citystats.xyz/images/states/14/senators/2"
+    },
+    {
+        "senator_name": "Chuck Grassley",
+        "state_id": 15,
+        "img_url": "https://www.citystats.xyz/images/states/15/senators/1"
+    },
+    {
+        "senator_name": "Joni Ernst",
+        "state_id": 15,
+        "img_url": "https://www.citystats.xyz/images/states/15/senators/2"
+    },
+    {
+        "senator_name": "Jerry Moran",
+        "state_id": 16,
+        "img_url": "https://www.citystats.xyz/images/states/16/senators/1"
+    },
+    {
+        "senator_name": "Roger Marshall",
+        "state_id": 16,
+        "img_url": "https://www.citystats.xyz/images/states/16/senators/2"
+    },
+    {
+        "senator_name": "Mitch McConnell",
+        "state_id": 17,
+        "img_url": "https://www.citystats.xyz/images/states/17/senators/1"
+    },
+    {
+        "senator_name": "Rand Paul",
+        "state_id": 17,
+        "img_url": "https://www.citystats.xyz/images/states/17/senators/2"
+    },
+    {
+        "senator_name": "Bill Cassidy",
+        "state_id": 18,
+        "img_url": "https://www.citystats.xyz/images/states/18/senators/1"
+    },
+    {
+        "senator_name": "John Kennedy",
+        "state_id": 18,
+        "img_url": "https://www.citystats.xyz/images/states/18/senators/2"
+    },
+    {
+        "senator_name": "Susan Collins",
+        "state_id": 19,
+        "img_url": "https://www.citystats.xyz/images/states/19/senators/1"
+    },
+    {
+        "senator_name": "Angus King",
+        "state_id": 19,
+        "img_url": "https://www.citystats.xyz/images/states/19/senators/2"
+    },
+    {
+        "senator_name": "Ben Cardin",
+        "state_id": 20,
+        "img_url": "https://www.citystats.xyz/images/states/20/senators/1"
+    },
+    {
+        "senator_name": "Chris Van Hollen",
+        "state_id": 20,
+        "img_url": "https://www.citystats.xyz/images/states/20/senators/2"
+    },
+    {
+        "senator_name": "Elizabeth Warren",
+        "state_id": 21,
+        "img_url": "https://www.citystats.xyz/images/states/21/senators/1"
+    },
+    {
+        "senator_name": "Ed Markey",
+        "state_id": 21,
+        "img_url": "https://www.citystats.xyz/images/states/21/senators/2"
+    },
+    {
+        "senator_name": "Debbie Stabenow",
+        "state_id": 22,
+        "img_url": "https://www.citystats.xyz/images/states/22/senators/1"
+    },
+    {
+        "senator_name": "Gary Peters",
+        "state_id": 22,
+        "img_url": "https://www.citystats.xyz/images/states/22/senators/2"
+    },
+    {
+        "senator_name": "Amy Klobuchar",
+        "state_id": 23,
+        "img_url": "https://www.citystats.xyz/images/states/23/senators/1"
+    },
+    {
+        "senator_name": "Tina Smith",
+        "state_id": 23,
+        "img_url": "https://www.citystats.xyz/images/states/23/senators/2"
+    },
+    {
+        "senator_name": "Roger Wicker",
+        "state_id": 24,
+        "img_url": "https://www.citystats.xyz/images/states/24/senators/1"
+    },
+    {
+        "senator_name": "Cindy Hyde-Smith",
+        "state_id": 24,
+        "img_url": "https://www.citystats.xyz/images/states/24/senators/2"
+    },
+    {
+        "senator_name": "Josh Hawley",
+        "state_id": 25,
+        "img_url": "https://www.citystats.xyz/images/states/25/senators/1"
+    },
+    {
+        "senator_name": "Eric Schmitt",
+        "state_id": 25,
+        "img_url": "https://www.citystats.xyz/images/states/25/senators/2"
+    },
+    {
+        "senator_name": "Jon Tester",
+        "state_id": 26,
+        "img_url": "https://www.citystats.xyz/images/states/26/senators/1"
+    },
+    {
+        "senator_name": "Steve Daines",
+        "state_id": 26,
+        "img_url": "https://www.citystats.xyz/images/states/26/senators/2"
+    },
+    {
+        "senator_name": "Deb Fischer",
+        "state_id": 27,
+        "img_url": "https://www.citystats.xyz/images/states/27/senators/1"
+    },
+    {
+        "senator_name": "Pete Ricketts",
+        "state_id": 27,
+        "img_url": "https://www.citystats.xyz/images/states/27/senators/2"
+    },
+    {
+        "senator_name": "Catherine Cortez Masto",
+        "state_id": 28,
+        "img_url": "https://www.citystats.xyz/images/states/28/senators/1"
+    },
+    {
+        "senator_name": "Jacky Rosen",
+        "state_id": 28,
+        "img_url": "https://www.citystats.xyz/images/states/28/senators/2"
+    },
+    {
+        "senator_name": "Jeanne Shaheen",
+        "state_id": 29,
+        "img_url": "https://www.citystats.xyz/images/states/29/senators/1"
+    },
+    {
+        "senator_name": "Maggie Hassan",
+        "state_id": 29,
+        "img_url": "https://www.citystats.xyz/images/states/29/senators/2"
+    },
+    {
+        "senator_name": "Bob Menendez",
+        "state_id": 30,
+        "img_url": "https://www.citystats.xyz/images/states/30/senators/1"
+    },
+    {
+        "senator_name": "Cory Booker",
+        "state_id": 30,
+        "img_url": "https://www.citystats.xyz/images/states/30/senators/2"
+    },
+    {
+        "senator_name": "Martin Heinrich",
+        "state_id": 31,
+        "img_url": "https://www.citystats.xyz/images/states/31/senators/1"
+    },
+    {
+        "senator_name": "Ben Ray Luján",
+        "state_id": 31,
+        "img_url": "https://www.citystats.xyz/images/states/31/senators/2"
+    },
+    {
+        "senator_name": "Chuck Schumer",
+        "state_id": 32,
+        "img_url": "https://www.citystats.xyz/images/states/32/senators/1"
+    },
+    {
+        "senator_name": "Kirsten Gillibrand",
+        "state_id": 32,
+        "img_url": "https://www.citystats.xyz/images/states/32/senators/2"
+    },
+    {
+        "senator_name": "Thom Tillis",
+        "state_id": 33,
+        "img_url": "https://www.citystats.xyz/images/states/33/senators/1"
+    },
+    {
+        "senator_name": "Ted Budd",
+        "state_id": 33,
+        "img_url": "https://www.citystats.xyz/images/states/33/senators/2"
+    },
+    {
+        "senator_name": "John Hoeven",
+        "state_id": 34,
+        "img_url": "https://www.citystats.xyz/images/states/34/senators/1"
+    },
+    {
+        "senator_name": "Kevin Cramer",
+        "state_id": 34,
+        "img_url": "https://www.citystats.xyz/images/states/34/senators/2"
+    },
+    {
+        "senator_name": "Sherrod Brown",
+        "state_id": 35,
+        "img_url": "https://www.citystats.xyz/images/states/35/senators/1"
+    },
+    {
+        "senator_name": "J. D. Vance",
+        "state_id": 35,
+        "img_url": "https://www.citystats.xyz/images/states/35/senators/2"
+    },
+    {
+        "senator_name": "James Lankford",
+        "state_id": 36,
+        "img_url": "https://www.citystats.xyz/images/states/36/senators/1"
+    },
+    {
+        "senator_name": "Markwayne Mullin",
+        "state_id": 36,
+        "img_url": "https://www.citystats.xyz/images/states/36/senators/2"
+    },
+    {
+        "senator_name": "Ron Wyden",
+        "state_id": 37,
+        "img_url": "https://www.citystats.xyz/images/states/37/senators/1"
+    },
+    {
+        "senator_name": "Jeff Merkley",
+        "state_id": 37,
+        "img_url": "https://www.citystats.xyz/images/states/37/senators/2"
+    },
+    {
+        "senator_name": "Bob Casey Jr.",
+        "state_id": 38,
+        "img_url": "https://www.citystats.xyz/images/states/38/senators/1"
+    },
+    {
+        "senator_name": "John Fetterman",
+        "state_id": 38,
+        "img_url": "https://www.citystats.xyz/images/states/38/senators/2"
+    },
+    {
+        "senator_name": "Jack Reed",
+        "state_id": 39,
+        "img_url": "https://www.citystats.xyz/images/states/39/senators/1"
+    },
+    {
+        "senator_name": "Sheldon Whitehouse",
+        "state_id": 39,
+        "img_url": "https://www.citystats.xyz/images/states/39/senators/2"
+    },
+    {
+        "senator_name": "Lindsey Graham",
+        "state_id": 40,
+        "img_url": "https://www.citystats.xyz/images/states/40/senators/1"
+    },
+    {
+        "senator_name": "Tim Scott",
+        "state_id": 40,
+        "img_url": "https://www.citystats.xyz/images/states/40/senators/2"
+    },
+    {
+        "senator_name": "John Thune",
+        "state_id": 41,
+        "img_url": "https://www.citystats.xyz/images/states/41/senators/1"
+    },
+    {
+        "senator_name": "Mike Rounds",
+        "state_id": 41,
+        "img_url": "https://www.citystats.xyz/images/states/41/senators/2"
+    },
+    {
+        "senator_name": "Marsha Blackburn",
+        "state_id": 42,
+        "img_url": "https://www.citystats.xyz/images/states/42/senators/1"
+    },
+    {
+        "senator_name": "Bill Hagerty",
+        "state_id": 42,
+        "img_url": "https://www.citystats.xyz/images/states/42/senators/2"
+    },
+    {
+        "senator_name": "John Cornyn",
+        "state_id": 43,
+        "img_url": "https://www.citystats.xyz/images/states/43/senators/1"
+    },
+    {
+        "senator_name": "Ted Cruz",
+        "state_id": 43,
+        "img_url": "https://www.citystats.xyz/images/states/43/senators/2"
+    },
+    {
+        "senator_name": "Mike Lee",
+        "state_id": 44,
+        "img_url": "https://www.citystats.xyz/images/states/44/senators/1"
+    },
+    {
+        "senator_name": "Mitt Romney",
+        "state_id": 44,
+        "img_url": "https://www.citystats.xyz/images/states/44/senators/2"
+    },
+    {
+        "senator_name": "Bernie Sanders",
+        "state_id": 45,
+        "img_url": "https://www.citystats.xyz/images/states/45/senators/1"
+    },
+    {
+        "senator_name": "Peter Welch",
+        "state_id": 45,
+        "img_url": "https://www.citystats.xyz/images/states/45/senators/2"
+    },
+    {
+        "senator_name": "Mark Warner",
+        "state_id": 46,
+        "img_url": "https://www.citystats.xyz/images/states/46/senators/1"
+    },
+    {
+        "senator_name": "Tim Kaine",
+        "state_id": 46,
+        "img_url": "https://www.citystats.xyz/images/states/46/senators/2"
+    },
+    {
+        "senator_name": "Patty Murray",
+        "state_id": 47,
+        "img_url": "https://www.citystats.xyz/images/states/47/senators/1"
+    },
+    {
+        "senator_name": "Maria Cantwell",
+        "state_id": 47,
+        "img_url": "https://www.citystats.xyz/images/states/47/senators/2"
+    },
+    {
+        "senator_name": "Joe Manchin",
+        "state_id": 48,
+        "img_url": "https://www.citystats.xyz/images/states/48/senators/1"
+    },
+    {
+        "senator_name": "Shelley Moore Capito",
+        "state_id": 48,
+        "img_url": "https://www.citystats.xyz/images/states/48/senators/2"
+    },
+    {
+        "senator_name": "Ron Johnson",
+        "state_id": 49,
+        "img_url": "https://www.citystats.xyz/images/states/49/senators/1"
+    },
+    {
+        "senator_name": "Tammy Baldwin",
+        "state_id": 49,
+        "img_url": "https://www.citystats.xyz/images/states/49/senators/2"
+    },
+    {
+        "senator_name": "John Barrasso",
+        "state_id": 50,
+        "img_url": "https://www.citystats.xyz/images/states/50/senators/1"
+    },
+    {
+        "senator_name": "Cynthia Lummis",
+        "state_id": 50,
+        "img_url": "https://www.citystats.xyz/images/states/50/senators/2"
+    }
+]

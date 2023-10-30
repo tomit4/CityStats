@@ -168,14 +168,14 @@ def scrape_data():
                 count = count + 1
                 if data[i]['state_id'] == data[i + 1]['state_id']:
                     data[i][
-                        'img_url'] = f"https://citystats.xyz/images/states/{data[i]['state_id']}/house_delegation/{count}"
+                        'img_url'] = f"https://citystats.xyz/images/states/{data[i]['state_id']}/delegates/{count}"
                 else:
                     data[i][
-                        'img_url'] = f"https://citystats.xyz/images/states/{data[i]['state_id']}/house_delegation/{count}"
+                        'img_url'] = f"https://citystats.xyz/images/states/{data[i]['state_id']}/delegates/{count}"
                     count = 0
             # Handle Out of Index Edge Case where data[i+1] doesn't exist at last element
                 data[-1][
-                    'img_url'] = f"https://citystats.xyz/images/states/{data[i+1]['state_id']}/house_delegation/{count+1}"
+                    'img_url'] = f"https://citystats.xyz/images/states/{data[i+1]['state_id']}/delegates/{count+1}"
         except IndexError:
             None
         f.close()
