@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# scrapes new senators names and images.
+# scrapes new house_delegates names and images.
 import os
 import json
 import logging
