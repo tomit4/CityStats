@@ -18,7 +18,10 @@ module.exports = async (fastify, options, done) => {
                 },
             },
             response: {
-                200: { $ref: 'singleStateWithField#' },
+                200: {
+                    type: 'array',
+                    items: { $ref: 'singleStateWithField#' },
+                },
             },
         },
         handler: async (request, reply) => {

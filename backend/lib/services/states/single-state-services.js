@@ -127,6 +127,7 @@ class SingleStateService extends SingleStateServiceDetails {
      * */
     async grabSingleStateById(knex, idOrName) {
         const id = await this.grabIdByName(knex, idOrName)
+        const returnData = []
         this.singleState = await this._grabStateById(knex, id)
         this.singleState.area = await this._grabAreaById(knex, id)
         this.singleState.population = await this._grabPopulationById(knex, id)
@@ -135,7 +136,8 @@ class SingleStateService extends SingleStateServiceDetails {
             knex,
             id,
         )
-        return this.singleState
+        returnData.push(this.singleState)
+        return returnData
     }
     /**
      * Aggregates min state info with single query field
@@ -146,11 +148,15 @@ class SingleStateService extends SingleStateServiceDetails {
      * */
     async grabRelDataById(knex, idOrName, field) {
         const id = await this.grabIdByName(knex, idOrName)
+        const returnData = []
+        let returnObj = {}
         if (this._nativeFields.includes(field)) {
-            return await this._grabNativeFieldData(knex, id, field)
+            returnObj = await this._grabNativeFieldData(knex, id, field)
         } else {
-            return await this._grabRelatedFieldData(knex, id, field)
+            returnObj = await this._grabRelatedFieldData(knex, id, field)
         }
+        returnData.push(returnObj)
+        return returnData
     }
 }
 

@@ -139,6 +139,8 @@ class SingleStateServiceDetails {
     async grabRelDataByIdWithDeets(knex, idOrName, field, details) {
         const id = await this.grabIdByName(knex, idOrName)
         const state = await this._grabMinStateInfo(knex, id)
+        const returnData = []
+        let dataAsObj = {}
         const {
             relFieldIsValid,
             relFieldIsInvalid,
@@ -151,17 +153,17 @@ class SingleStateServiceDetails {
         if (relFieldIsValid) {
             const table = `states_${field}`
             const deets = await this._grabDetails(knex, id, details, table)
-            return { ...state, ...deets }
+            dataAsObj = { ...state, ...deets }
         } else if (relFieldIsInvalid) {
             throwNoDeetsErr(details, field)
         } else if (senFieldIsValid) {
             const senators = await this.grabSenatorsById(knex, id)
             if (deetsNotInRange(senators)) throwNoDeetsErr(details, field)
-            return { ...state, senator: senators[details - 1] }
+            dataAsObj = { ...state, senator: senators[details - 1] }
         } else if (delFieldIsValid) {
             const delegates = await this.grabDelegatesById(knex, id)
             if (deetsNotInRange(delegates)) throwNoDeetsErr(details, field)
-            return {
+            dataAsObj = {
                 ...state,
                 house_delegate: delegates[Number(details - 1)],
             }
@@ -169,6 +171,8 @@ class SingleStateServiceDetails {
             throw Error(
                 `No data found for subquery: '${details}' in query: '${idOrName}/${field}'`,
             )
+        returnData.push(dataAsObj)
+        return returnData
     }
 }
 
