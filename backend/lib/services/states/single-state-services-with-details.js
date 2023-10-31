@@ -52,10 +52,15 @@ class SingleStateServiceDetails {
         try {
             const senators = await knex
                 .where('state_id', id)
-                .select('senator_name')
+                .select('senator_name', 'img_url')
                 .from('states_senators')
             if (!senators) throw Error(`No Senators Found For Id: ${id}`)
-            return senators.map(senator => senator.senator_name)
+            return senators.map(senator => {
+                return {
+                    senator_name: senator.senator_name,
+                    img_url: senator.img_url,
+                }
+            })
         } catch (err) {
             console.error('ERROR :=>', err)
         }
@@ -64,10 +69,15 @@ class SingleStateServiceDetails {
         try {
             const delegates = await knex
                 .where('state_id', id)
-                .select('delegate_name')
+                .select('delegate_name', 'img_url')
                 .from('states_house_delegates')
             if (!delegates) throw Error(`No Delegates Found For Id: ${id}`)
-            return delegates.map(delegate => delegate.delegate_name)
+            return delegates.map(delegate => {
+                return {
+                    delegate_name: delegate.delegate_name,
+                    img_url: delegate.img_url,
+                }
+            })
         } catch (err) {
             console.error('ERROR :=>', err)
         }

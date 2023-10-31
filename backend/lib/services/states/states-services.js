@@ -84,7 +84,10 @@ class StatesService extends SingleStateService {
                     return state.id === senator.state_id
                 })
                 .map(senator => {
-                    return senator.senator_name
+                    return {
+                        senator_name: senator.senator_name,
+                        img_url: senator.img_url,
+                    }
                 })
         })
     }
@@ -95,7 +98,10 @@ class StatesService extends SingleStateService {
                     return state.id === delegate.state_id
                 })
                 .map(delegate => {
-                    return delegate.delegate_name
+                    return {
+                        delegate_name: delegate.delegate_name,
+                        img_url: delegate.img_url,
+                    }
                 })
         })
     }
