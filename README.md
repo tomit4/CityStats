@@ -22,13 +22,8 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 -   [x] Add [fastify-static](https://github.com/fastify/fastify-static) for image hosting of senator/house_delegates/mayors/city_counselors images
 -   [x] Set up appropriate route for image filepath (i.e cities/1/government/city_council/1/image) (half done)
 -   [x] Set up imagemagick script to scale images (reasonable sizes for frontend display)
--   [ ] Grab an image for each city and state (map for state, image for city) and format appropriately for front end.
 -   [ ] Integrate Basic Auth using a separate sqlite db that holds API keys
-
-**BUG_FIXES**:
-
--   [ ] Remove all underscore characters from city (and state?) names, instead normalize the url string (%20 for spaces, etc.). This will make it easier for front end communications in the long run (curl fans won't like it I guess, but hey, an occasional backslash never hurt anyone I guess...)
--   [x] Allow for multiple cities of the same name to be returned by a single city query (yeah, bad naming convention then...)
+-   [ ] Rewrite mock data returns to reflect updated data returned from web scraping scripts
 
 **Frontend:**
 
