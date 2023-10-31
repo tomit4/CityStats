@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+# scrapes new govenor names
+import os
+import json
+import logging
+#  import requests
+from datetime import datetime
+# Use requests_html when JS is required on website
+# https://requests.readthedocs.io/projects/requests-html/en/latest/
+from requests_html import HTMLSession
+
+base_states = json.load(open('./base_states.json'))
+BASE_URL = 'https://en.wikipedia.org/wiki/List_of_current_United_States_governors'
+session = HTMLSession()
+
+CURR_DATE = datetime.now().strftime('%d_%m_%Y')
+LOG_FILENAME = f'log_{CURR_DATE}.txt'
+os.makedirs(f'./new_house/json/', exist_ok=True)
+
+log_format = '%(asctime)s - %(levelname)s - %(message)s'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.INFO,
+                    format=log_format)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(logging.Formatter(log_format))
+logging.getLogger().addHandler(console_handler)
+
+
+def scrape_data():
+    try:
+        data = []
+        r = session.get(BASE_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('table')
+        for result in results:
+            bigs = result.find('big')
+            for big in bigs:
+                if 'United States governors' in big.text:
+                    ths = result.find('th')
+                    for th in ths:
+                        if 'scope' in th.attrs and th.attrs['scope'] == 'row':
+                            a_tags = th.find('a')
+                            for a_tag in a_tags:
+                                data.append(a_tag.text)
+        new_base_states = []
+        for state in base_states:
+            new_base_states.append(state)
+        for i, state in enumerate(new_base_states):
+            new_base_states[i]['governor'] = data[i]
+        return new_base_states
+    except Exception as e:
+        logging.error(f'Error during scraping: {str(e)}')
+        return False
+
+
+if __name__ == "__main__":
+    governors_names = scrape_data()
+    if governors_names:
+        with open(f'./new_base_states.json', 'w') as writeJSON:
+            json.dump(governors_names, writeJSON, ensure_ascii=False)
+    open('./base_states.json').close()

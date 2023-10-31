@@ -16,7 +16,7 @@ class SingleStateService extends SingleStateServiceDetails {
             'date_admitted',
             'capital',
             'largest_city',
-            'govenor',
+            'governor',
             'elevation',
             'time_zone',
             'latitude',
