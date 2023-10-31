@@ -134,7 +134,7 @@ class CityService extends CityServiceField {
     }
     async _mapCounties(knex) {
         const counties = await this._grabAllCounties(knex)
-        this.allCities.forEach(city => {
+        for (const city of this.allCities) {
             city.counties = counties
                 .filter(county => {
                     return city.id === county.city_id
@@ -142,7 +142,7 @@ class CityService extends CityServiceField {
                 .map(county => {
                     return county.county_name
                 })
-        })
+        }
     }
     async _parseCodes(knex, codesToAgg) {
         const parsedCodes = {}
@@ -170,7 +170,7 @@ class CityService extends CityServiceField {
         const parsedCodes = await this._parseCodes(knex, codesToAgg)
         const tableToAgg = parsedCodes.table
         const key = parsedCodes.key
-        tableToAgg.forEach(prop => {
+        for (const prop of tableToAgg) {
             if (!Object.hasOwn(aggregated, prop.city_id)) {
                 aggregated[prop.city_id] = {}
             }
@@ -187,7 +187,7 @@ class CityService extends CityServiceField {
                     aggregated[prop.city_id][codesToAgg].push(prop[key])
                 }
             }
-        })
+        }
         return aggregated
     }
     async _aggregate(knex, codesToAgg) {
@@ -196,7 +196,7 @@ class CityService extends CityServiceField {
         const aggregatedKeys = Object.keys(aggregated).map(key => {
             return Number(key)
         })
-        this.allCities.forEach((city, i) => {
+        for (const [i, city] of this.allCities.entries()) {
             const aggregatedData =
                 aggregated[String(aggregatedKeys[i])][codesToAgg]
             if (city.id === aggregatedKeys[i]) {
@@ -209,7 +209,7 @@ class CityService extends CityServiceField {
                 throw Error(
                     `No ${codesToAgg} data found for city_id: ${city.id} at aggregated_id: ${aggregatedKeys[i]}`,
                 )
-        })
+        }
     }
     /**
      * Aggregates all cities data

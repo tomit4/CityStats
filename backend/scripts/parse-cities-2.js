@@ -21,7 +21,6 @@ fs.readdirSync(directoryPath)
         if (jsonData.length > 1) {
             combinedData.push(jsonData.slice(1, jsonData.length))
         } else {
-            console.log('jsonData :=>', jsonData)
             combinedData.push(null)
         }
     })
