@@ -11,8 +11,7 @@ exports.seed = async function (knex) {
     await knex('cities_government_council').insert(mockData.slice(1000, 1500))
     await knex('cities_government_council').insert(mockData.slice(1500, 2000))
     await knex('cities_government_council').insert(mockData.slice(2000, 2500))
-    await knex('cities_government_council').insert(mockData.slice(2501, 3000))
     await knex('cities_government_council').insert(
-        mockData.slice(3001, mockData.length),
+        mockData.slice(2501, mockData.length),
     )
 }

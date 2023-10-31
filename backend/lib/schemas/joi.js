@@ -8,8 +8,8 @@ module.exports = {
     object: args => {
         return { type: 'object', properties: { ...args } }
     },
-    array: () => {
-        return { type: 'array' }
+    array: (nullable = false) => {
+        return { type: 'array', nullable: nullable }
     },
     bool: () => {
         return { type: 'boolean' }

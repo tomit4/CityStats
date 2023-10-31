@@ -44,7 +44,8 @@ class CitiesSchema {
                 government: joi.object({
                     type: { type: 'string', nullable: true },
                     mayor: joi.string(),
-                    city_council: joi.array(),
+                    img_url: { type: 'string', nullable: true },
+                    city_council: { type: 'array' },
                 }),
                 area: joi.object({
                     city: joi.string(),
@@ -68,6 +69,7 @@ class CitiesSchema {
                 ...this.singleCity.properties,
                 city_council: joi.array(),
                 council_member: joi.string(),
+                img_url: joi.string(),
             },
         }
     }

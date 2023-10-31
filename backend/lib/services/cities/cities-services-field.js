@@ -19,7 +19,6 @@ class CityServiceField extends CityServiceDetails {
             'fips_code',
             'url',
         ]
-        // TODO: To be put in SingleCityServiceDetails class
         this.relatedFields = [
             'counties',
             'government',
@@ -91,7 +90,7 @@ class CityServiceField extends CityServiceDetails {
     async _grabGovCouncilMembersById(knex, id) {
         try {
             const councilMembers = await knex
-                .select('council_member')
+                .select('council_member', 'img_url')
                 .from('cities_government_council')
                 .where('city_id', id)
             if (!councilMembers)
@@ -99,7 +98,10 @@ class CityServiceField extends CityServiceDetails {
                     `No Cities Government Council Members Found For Id: ${id}`,
                 )
             return councilMembers.map(member => {
-                return member.council_member
+                return {
+                    council_member: member.council_member,
+                    img_url: member.img_url,
+                }
             })
         } catch (err) {
             console.error('ERROR :=>', err)
@@ -112,7 +114,7 @@ class CityServiceField extends CityServiceDetails {
                 id,
             )
             const gov = await knex
-                .select('type', 'mayor')
+                .select('type', 'mayor', 'img_url')
                 .from('cities_government')
                 .where('id', id)
                 .first()

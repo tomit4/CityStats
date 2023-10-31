@@ -17,7 +17,6 @@ BASE_URL = 'https://citycouncil.cityofomaha.org'
 CITY_COUNCIL_URL = 'https://citycouncil.cityofomaha.org/council-members'
 MAYOR_URL = 'https://en.wikipedia.org/wiki/Omaha,_Nebraska'
 MAYOR_OFF_URL = 'https://mayors-office.cityofomaha.org'
-mayor_img_url = ''
 mayor_unoff_url = ''
 BASE_IMG_PATH = f'https://www.citystats.xyz/images/cities/{CITY_ID}'
 
@@ -117,15 +116,31 @@ def grab_images_from(member_urls):
         data = []
         for url in member_urls:
             r = session.get(url)
-            results = r.html.find('.clearfix')
+            results = r.html.find('.com-content-article__body')
             for result in results:
                 images = result.find('img')
                 for image in images:
                     if 'src' in image.attrs:
-                        if 'showpublishedimage' in image.attrs[
-                                'src'] and image.attrs['src'] not in data:
-                            data.append(image.attrs['src'])
+                        if f"{BASE_URL}{image.attrs['src']}" not in data:
+                            data.append(f"{BASE_URL}{image.attrs['src']}")
         return data
+    except Exception as e:
+        logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
+        return False
+
+
+def prepend_mayor_img(mayor_unoff_url, member_img_urls):
+    try:
+        r = session.get(mayor_unoff_url)
+        results = r.html.find('.usa-width-one-whole')
+        mayor_img_url = ''
+        for result in results:
+            images = result.find('img')
+            for image in images:
+                if 'src' in image.attrs:
+                    mayor_img_url = f"{MAYOR_OFF_URL}{image.attrs['src']}"
+        member_img_urls.insert(0, mayor_img_url)
+        return member_img_urls
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
         return False
@@ -133,22 +148,16 @@ def grab_images_from(member_urls):
 
 def grab_img_urls_from(member_urls):
     try:
-        member_urls.insert(0, mayor_unoff_url)
         data = []
         for url in member_urls:
             r = session.get(url)
             # r.html actually works, lsp doesn't like it for some reason...
-            results = r.html.find('.usa-width-one-whole')
+            results = r.html.find('.com-content-article__body')
             for result in results:
                 images = result.find('img')
                 for image in images:
                     if 'src' in image.attrs:
-                        data.append(image.attrs['src'])
-        for i, d in enumerate(data):
-            if i == 0:
-                data[i] = f"{MAYOR_OFF_URL}{d}"
-            else:
-                data[i] = f"{BASE_URL}{d}"
+                        data.append(f"{BASE_URL}{image.attrs['src']}")
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')
@@ -160,7 +169,7 @@ def grab_member_urls():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.usa-width-one-whole')
+        results = r.html.find('.com-content-article__body')
         for result in results:
             a_tags = result.find('a')
             for a_tag in a_tags:
@@ -220,7 +229,7 @@ def scrape_data():
         r = session.get(CITY_COUNCIL_URL)
         # r.html actually works, lsp doesn't like it for some reason...
         data = []
-        results = r.html.find('.usa-width-one-whole')
+        results = r.html.find('.com-content-article__body')
         for result in results:
             a_tags = result.find('a')
             for a_tag in a_tags:
@@ -240,5 +249,6 @@ if __name__ == "__main__":
         parse_json(results)
     member_urls = grab_member_urls()
     mayor_unoff_url = grab_mayor_url()
-    img_urls = grab_img_urls_from(member_urls)
+    member_img_urls = grab_img_urls_from(member_urls)
+    img_urls = prepend_mayor_img(mayor_unoff_url, member_img_urls)
     download_images(img_urls)

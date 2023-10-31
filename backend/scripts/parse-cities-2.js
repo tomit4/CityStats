@@ -18,12 +18,18 @@ fs.readdirSync(directoryPath)
     .forEach(file => {
         const filePath = path.join(directoryPath, file)
         const jsonData = JSON.parse(fs.readFileSync(filePath))
-        combinedData.push(jsonData)
+        if (jsonData.length > 1) {
+            combinedData.push(jsonData.slice(1, jsonData.length))
+        } else {
+            console.log('jsonData :=>', jsonData)
+            combinedData.push(null)
+        }
     })
 
 // Write the combined data to a new JSON file
 const outputFile = 'base_cities_government_council.json'
 const outputFilePath = path.join(__dirname, outputFile)
+console.log('length of combinedData.flat() :=>', combinedData.flat().length)
 fs.writeFileSync(outputFilePath, JSON.stringify(combinedData.flat(), null, 2)) // Use 2 for pretty-printing
 
 console.log(`Combined data written to ${outputFile}`)

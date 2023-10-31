@@ -44,7 +44,7 @@ class CityService extends CityServiceField {
     async _grabBaseGovInfo(knex) {
         try {
             const allGovs = await knex
-                .select('type', 'mayor')
+                .select('type', 'mayor', 'img_url')
                 .from('cities_government')
             if (!allGovs) throw Error('No Cities Government Table Found')
             return allGovs
@@ -55,7 +55,7 @@ class CityService extends CityServiceField {
     async _grabGovCouncilMembers(knex) {
         try {
             const allCouncilMembers = await knex
-                .select('city_id', 'council_member')
+                .select('city_id', 'council_member', 'img_url')
                 .from('cities_government_council')
             if (!allCouncilMembers)
                 throw Error('No Cities Government Council Table Found')
@@ -165,6 +165,7 @@ class CityService extends CityServiceField {
         return parsedCodes
     }
     async _aggregateCodes(knex, codesToAgg) {
+        const dataToBeNested = codesToAgg === 'council_members'
         const aggregated = {}
         const parsedCodes = await this._parseCodes(knex, codesToAgg)
         const tableToAgg = parsedCodes.table
@@ -177,7 +178,14 @@ class CityService extends CityServiceField {
                 aggregated[prop.city_id][codesToAgg] = []
             }
             if (prop.city_id in aggregated) {
-                aggregated[prop.city_id][codesToAgg].push(prop[key])
+                if (dataToBeNested) {
+                    aggregated[prop.city_id][codesToAgg].push({
+                        council_member: prop.council_member,
+                        img_url: prop.img_url,
+                    })
+                } else {
+                    aggregated[prop.city_id][codesToAgg].push(prop[key])
+                }
             }
         })
         return aggregated
