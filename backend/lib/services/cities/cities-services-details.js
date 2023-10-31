@@ -19,11 +19,19 @@ class CityServiceDetails {
             const deets = {}
             if (details !== 'city_council') {
                 field = table.split('_').pop()
-                deets[field] = await knex
-                    .where('city_id', id)
-                    .select(details)
-                    .from(table)
-                    .first()
+                if (details === 'mayor') {
+                    deets[field] = await knex
+                        .where('city_id', id)
+                        .select('mayor', 'img_url')
+                        .from(table)
+                        .first()
+                } else {
+                    deets[field] = await knex
+                        .where('city_id', id)
+                        .select(details)
+                        .from(table)
+                        .first()
+                }
             } else {
                 field = details
                 deets[field] = await this._grabGovCouncilMembersById(knex, id)
