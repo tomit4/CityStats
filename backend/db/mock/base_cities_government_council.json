@@ -1,6 +1,11 @@
 [
     {
         "city_id": 1,
+        "council_member": "Weldon Hurt",
+        "img_url": "https://www.citystats.xyz/images/cities/1/mayor"
+    },
+    {
+        "city_id": 1,
         "council_member": "Shane Price",
         "img_url": "https://www.citystats.xyz/images/cities/1/city_council/1"
     },
@@ -28,6 +33,11 @@
         "city_id": 1,
         "council_member": "Travis Craver",
         "img_url": "https://www.citystats.xyz/images/cities/1/city_council/6"
+    },
+    {
+        "city_id": 2,
+        "council_member": "Nancy Holland",
+        "img_url": "https://www.citystats.xyz/images/cities/2/mayor"
     },
     {
         "city_id": 2,
@@ -91,6 +101,11 @@
     },
     {
         "city_id": 3,
+        "council_member": "Tim Keller",
+        "img_url": "https://www.citystats.xyz/images/cities/3/mayor"
+    },
+    {
+        "city_id": 3,
         "council_member": "Louie Sanchez",
         "img_url": "https://www.citystats.xyz/images/cities/3/city_council/1"
     },
@@ -136,6 +151,11 @@
     },
     {
         "city_id": 4,
+        "council_member": "Justin Wilson",
+        "img_url": "https://www.citystats.xyz/images/cities/4/mayor"
+    },
+    {
+        "city_id": 4,
         "council_member": "Amy Jackson",
         "img_url": "https://www.citystats.xyz/images/cities/4/city_council/1"
     },
@@ -166,6 +186,11 @@
     },
     {
         "city_id": 5,
+        "council_member": "Baine Brooks",
+        "img_url": "https://www.citystats.xyz/images/cities/5/mayor"
+    },
+    {
+        "city_id": 5,
         "council_member": "Daren Meis",
         "img_url": "https://www.citystats.xyz/images/cities/5/city_council/1"
     },
@@ -193,6 +218,11 @@
         "city_id": 5,
         "council_member": "Ben Trahan",
         "img_url": "https://www.citystats.xyz/images/cities/5/city_council/6"
+    },
+    {
+        "city_id": 6,
+        "council_member": "Matt Tuerk",
+        "img_url": "https://www.citystats.xyz/images/cities/6/mayor"
     },
     {
         "city_id": 6,
@@ -231,6 +261,11 @@
     },
     {
         "city_id": 7,
+        "council_member": "Cole Stanley ",
+        "img_url": "https://www.citystats.xyz/images/cities/7/mayor"
+    },
+    {
+        "city_id": 7,
         "council_member": "Josh Craft",
         "img_url": "https://www.citystats.xyz/images/cities/7/city_council/1"
     },
@@ -248,6 +283,11 @@
         "city_id": 7,
         "council_member": "Les Simpson ",
         "img_url": "https://www.citystats.xyz/images/cities/7/city_council/4"
+    },
+    {
+        "city_id": 8,
+        "council_member": "Ashleigh E. Aitken",
+        "img_url": "https://www.citystats.xyz/images/cities/8/mayor"
     },
     {
         "city_id": 8,
@@ -278,6 +318,11 @@
         "city_id": 8,
         "council_member": "Natalie Meeks",
         "img_url": "https://www.citystats.xyz/images/cities/8/city_council/6"
+    },
+    {
+        "city_id": 9,
+        "council_member": "Dave Bronson",
+        "img_url": "https://www.citystats.xyz/images/cities/9/mayor"
     },
     {
         "city_id": 9,
@@ -341,6 +386,11 @@
     },
     {
         "city_id": 10,
+        "council_member": "Christopher Taylor",
+        "img_url": "https://www.citystats.xyz/images/cities/10/mayor"
+    },
+    {
+        "city_id": 10,
         "council_member": "Lisa Disch",
         "img_url": "https://www.citystats.xyz/images/cities/10/city_council/1"
     },
@@ -391,6 +441,11 @@
     },
     {
         "city_id": 11,
+        "council_member": "Lamar Thorpe",
+        "img_url": null
+    },
+    {
+        "city_id": 11,
         "council_member": "Tamisha Torres-Walker",
         "img_url": null
     },
@@ -407,6 +462,11 @@
     {
         "city_id": 11,
         "council_member": "Monica E. Wilson",
+        "img_url": null
+    },
+    {
+        "city_id": 12,
+        "council_member": "Jim Ross",
         "img_url": null
     },
     {
@@ -451,6 +511,11 @@
     },
     {
         "city_id": 13,
+        "council_member": "Marc Williams",
+        "img_url": null
+    },
+    {
+        "city_id": 13,
         "council_member": "Bob Fifer",
         "img_url": null
     },
@@ -477,6 +542,11 @@
     {
         "city_id": 13,
         "council_member": "David Jones",
+        "img_url": null
+    },
+    {
+        "city_id": 14,
+        "council_member": "Kelly Girtz",
         "img_url": null
     },
     {
@@ -528,6 +598,11 @@
         "city_id": 14,
         "council_member": "Mike  Hamby",
         "img_url": null
+    },
+    {
+        "city_id": 15,
+        "council_member": "Andre Dickens",
+        "img_url": "https://www.citystats.xyz/images/cities/15/mayor"
     },
     {
         "city_id": 15,
@@ -611,6 +686,11 @@
     },
     {
         "city_id": 16,
+        "council_member": "Garnett Johnson",
+        "img_url": "https://www.citystats.xyz/images/cities/16/mayor"
+    },
+    {
+        "city_id": 16,
         "council_member": "Jordan Johnson",
         "img_url": null
     },
@@ -661,6 +741,11 @@
     },
     {
         "city_id": 17,
+        "council_member": "Mike Coffman",
+        "img_url": "https://www.citystats.xyz/images/cities/17/mayor"
+    },
+    {
+        "city_id": 17,
         "council_member": "Crystal Murillo",
         "img_url": "https://www.citystats.xyz/images/cities/17/city_council/1"
     },
@@ -708,6 +793,11 @@
         "city_id": 17,
         "council_member": "Dustin Zvonek",
         "img_url": "https://www.citystats.xyz/images/cities/17/city_council/10"
+    },
+    {
+        "city_id": 18,
+        "council_member": "Richard C. Irvin",
+        "img_url": "https://www.citystats.xyz/images/cities/18/mayor"
     },
     {
         "city_id": 18,
@@ -771,6 +861,11 @@
     },
     {
         "city_id": 19,
+        "council_member": "Kirk Watson",
+        "img_url": null
+    },
+    {
+        "city_id": 19,
         "council_member": "Natasha Harper-Madison",
         "img_url": null
     },
@@ -821,6 +916,11 @@
     },
     {
         "city_id": 20,
+        "council_member": "Karen K. Goh",
+        "img_url": null
+    },
+    {
+        "city_id": 20,
         "council_member": "Eric Arias",
         "img_url": null
     },
@@ -852,6 +952,11 @@
     {
         "city_id": 20,
         "council_member": "Manpreet Kaur",
+        "img_url": null
+    },
+    {
+        "city_id": 21,
+        "council_member": "Brandon M. Scott",
         "img_url": null
     },
     {
@@ -931,6 +1036,11 @@
     },
     {
         "city_id": 22,
+        "council_member": "Sharon Weston Broome",
+        "img_url": "https://www.citystats.xyz/images/cities/22/mayor"
+    },
+    {
+        "city_id": 22,
         "council_member": "Brandon Noel",
         "img_url": "https://www.citystats.xyz/images/cities/22/city_council/1"
     },
@@ -991,6 +1101,11 @@
     },
     {
         "city_id": 23,
+        "council_member": "Roy West",
+        "img_url": "https://www.citystats.xyz/images/cities/23/mayor"
+    },
+    {
+        "city_id": 23,
         "council_member": "Albert “A.J.” Turner",
         "img_url": "https://www.citystats.xyz/images/cities/23/city_council/1"
     },
@@ -1018,6 +1133,11 @@
         "city_id": 23,
         "council_member": "Charles Durio",
         "img_url": "https://www.citystats.xyz/images/cities/23/city_council/6"
+    },
+    {
+        "city_id": 24,
+        "council_member": "Lynne Robinson",
+        "img_url": null
     },
     {
         "city_id": 24,
@@ -1051,6 +1171,11 @@
     },
     {
         "city_id": 25,
+        "council_member": "Melanie Kebler",
+        "img_url": null
+    },
+    {
+        "city_id": 25,
         "council_member": "Megan Perkins",
         "img_url": null
     },
@@ -1078,6 +1203,11 @@
         "city_id": 25,
         "council_member": "Mike Riley",
         "img_url": null
+    },
+    {
+        "city_id": 26,
+        "council_member": "Jesse Arreguín",
+        "img_url": "https://www.citystats.xyz/images/cities/26/mayor"
     },
     {
         "city_id": 26,
@@ -1121,6 +1251,11 @@
     },
     {
         "city_id": 27,
+        "council_member": "Bill Cole",
+        "img_url": null
+    },
+    {
+        "city_id": 27,
         "council_member": "Kendra Shaw",
         "img_url": null
     },
@@ -1158,6 +1293,11 @@
         "city_id": 27,
         "council_member": "Tom Rupsis",
         "img_url": null
+    },
+    {
+        "city_id": 28,
+        "council_member": "Randall Woodfin",
+        "img_url": "https://www.citystats.xyz/images/cities/28/mayor"
     },
     {
         "city_id": 28,
@@ -1206,6 +1346,11 @@
     },
     {
         "city_id": 29,
+        "council_member": "Lauren McLean",
+        "img_url": "https://www.citystats.xyz/images/cities/29/mayor"
+    },
+    {
+        "city_id": 29,
         "council_member": "Jimmy Hallyburton",
         "img_url": "https://www.citystats.xyz/images/cities/29/city_council/1"
     },
@@ -1233,6 +1378,11 @@
         "city_id": 29,
         "council_member": "Meredith Stead",
         "img_url": "https://www.citystats.xyz/images/cities/29/city_council/6"
+    },
+    {
+        "city_id": 30,
+        "council_member": "Michelle Wu",
+        "img_url": null
     },
     {
         "city_id": 30,
@@ -1301,6 +1451,11 @@
     },
     {
         "city_id": 31,
+        "council_member": "Aaron Brockett",
+        "img_url": null
+    },
+    {
+        "city_id": 31,
         "council_member": "Matt Benjamin",
         "img_url": null
     },
@@ -1338,6 +1493,11 @@
         "city_id": 31,
         "council_member": "Bob Yates",
         "img_url": null
+    },
+    {
+        "city_id": 32,
+        "council_member": "Joseph P. Ganim",
+        "img_url": "https://www.citystats.xyz/images/cities/32/mayor"
     },
     {
         "city_id": 32,
@@ -1431,6 +1591,11 @@
     },
     {
         "city_id": 33,
+        "council_member": "Robert F. Sullivan",
+        "img_url": null
+    },
+    {
+        "city_id": 33,
         "council_member": "Winthrop Farwell Jr.",
         "img_url": null
     },
@@ -1486,6 +1651,11 @@
     },
     {
         "city_id": 34,
+        "council_member": "Debra Wimpee",
+        "img_url": null
+    },
+    {
+        "city_id": 34,
         "council_member": "Christi Gillespie",
         "img_url": null
     },
@@ -1503,6 +1673,11 @@
         "city_id": 34,
         "council_member": "Councilor Justin Green",
         "img_url": null
+    },
+    {
+        "city_id": 35,
+        "council_member": "John  Cowen, Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/35/mayor"
     },
     {
         "city_id": 35,
@@ -1536,6 +1711,11 @@
     },
     {
         "city_id": 36,
+        "council_member": "Eric Orsborn",
+        "img_url": "https://www.citystats.xyz/images/cities/36/mayor"
+    },
+    {
+        "city_id": 36,
         "council_member": "Tony Youngker",
         "img_url": "https://www.citystats.xyz/images/cities/36/city_council/1"
     },
@@ -1563,6 +1743,11 @@
         "city_id": 36,
         "council_member": "Clay Goodman",
         "img_url": "https://www.citystats.xyz/images/cities/36/city_council/6"
+    },
+    {
+        "city_id": 37,
+        "council_member": "Byron W. Brown",
+        "img_url": null
     },
     {
         "city_id": 37,
@@ -1616,6 +1801,11 @@
     },
     {
         "city_id": 38,
+        "council_member": "Konstantine Anthony",
+        "img_url": "https://www.citystats.xyz/images/cities/38/mayor"
+    },
+    {
+        "city_id": 38,
         "council_member": "Nick Schultz",
         "img_url": "https://www.citystats.xyz/images/cities/38/city_council/1"
     },
@@ -1633,6 +1823,11 @@
         "city_id": 38,
         "council_member": "Zizette Mullins",
         "img_url": "https://www.citystats.xyz/images/cities/38/city_council/4"
+    },
+    {
+        "city_id": 39,
+        "council_member": "Sumbul Siddiqui",
+        "img_url": null
     },
     {
         "city_id": 39,
@@ -1676,6 +1871,11 @@
     },
     {
         "city_id": 40,
+        "council_member": "John Gunter",
+        "img_url": "https://www.citystats.xyz/images/cities/40/mayor"
+    },
+    {
+        "city_id": 40,
         "council_member": "William E. (Bill) Steinke",
         "img_url": "https://www.citystats.xyz/images/cities/40/city_council/1"
     },
@@ -1711,6 +1911,11 @@
     },
     {
         "city_id": 41,
+        "council_member": "Keith Blackburn",
+        "img_url": null
+    },
+    {
+        "city_id": 41,
         "council_member": "Priya Bhat-Patel",
         "img_url": null
     },
@@ -1727,6 +1932,11 @@
     {
         "city_id": 41,
         "council_member": "Teresa Acosta",
+        "img_url": null
+    },
+    {
+        "city_id": 42,
+        "council_member": "James Brainard",
         "img_url": null
     },
     {
@@ -1776,6 +1986,11 @@
     },
     {
         "city_id": 43,
+        "council_member": "Steve Babick",
+        "img_url": "https://www.citystats.xyz/images/cities/43/mayor"
+    },
+    {
+        "city_id": 43,
         "council_member": "Christopher Axberg",
         "img_url": "https://www.citystats.xyz/images/cities/43/city_council/1"
     },
@@ -1811,6 +2026,11 @@
     },
     {
         "city_id": 44,
+        "council_member": "Harold Weinbrecht",
+        "img_url": "https://www.citystats.xyz/images/cities/44/mayor"
+    },
+    {
+        "city_id": 44,
         "council_member": "Lori Bush",
         "img_url": "https://www.citystats.xyz/images/cities/44/city_council/1"
     },
@@ -1838,6 +2058,11 @@
         "city_id": 44,
         "council_member": "Ryan Eades",
         "img_url": "https://www.citystats.xyz/images/cities/44/city_council/6"
+    },
+    {
+        "city_id": 45,
+        "council_member": "Tiffany O'Donnell",
+        "img_url": null
     },
     {
         "city_id": 45,
@@ -1881,6 +2106,11 @@
     },
     {
         "city_id": 46,
+        "council_member": "Stephanie Piko",
+        "img_url": "https://www.citystats.xyz/images/cities/46/mayor"
+    },
+    {
+        "city_id": 46,
         "council_member": "Robyn Carnes",
         "img_url": "https://www.citystats.xyz/images/cities/46/city_council/1"
     },
@@ -1921,6 +2151,11 @@
     },
     {
         "city_id": 47,
+        "council_member": "Kevin Hartke",
+        "img_url": null
+    },
+    {
+        "city_id": 47,
         "council_member": "Matt Orlando",
         "img_url": null
     },
@@ -1947,6 +2182,11 @@
     {
         "city_id": 47,
         "council_member": "Angel Encinas",
+        "img_url": null
+    },
+    {
+        "city_id": 48,
+        "council_member": "John Tecklenburg",
         "img_url": null
     },
     {
@@ -2011,6 +2251,11 @@
     },
     {
         "city_id": 49,
+        "council_member": "Vi Alexander Lyles",
+        "img_url": null
+    },
+    {
+        "city_id": 49,
         "council_member": "Braxton Winston",
         "img_url": null
     },
@@ -2066,6 +2311,11 @@
     },
     {
         "city_id": 50,
+        "council_member": "Tim Kelly",
+        "img_url": null
+    },
+    {
+        "city_id": 50,
         "council_member": "Chip Henderson",
         "img_url": null
     },
@@ -2111,6 +2361,11 @@
     },
     {
         "city_id": 51,
+        "council_member": "Dr. Richard W. \"Rick\" West",
+        "img_url": null
+    },
+    {
+        "city_id": 51,
         "council_member": "John de Triquet",
         "img_url": null
     },
@@ -2151,252 +2406,7 @@
     },
     {
         "city_id": 52,
-        "council_member": "Daniel La Spata",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Brian Hopkins",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Pat Dowell",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Lamont J. Robinson",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Desmon C. Yancy",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "William E. Hall",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Gregory Mitchell",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Michelle Harris",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Anthony Beale",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Peter Chico",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Nicole T. Lee",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Julia M. Ramirez",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Marty Quinn",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Jeylu B. Gutierrez",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Raymond Lopez",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Stephanie D. Coleman",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "David Moore",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Derrick G. Curtis",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Matthew J. O’Shea",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Jeanette B. Taylor",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Ronnie L. Mosley",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Michael D. Rodriguez",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Silvana Tabares",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Monique L. Scott",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Byron Sigcho Lopez",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Jessica Fuentes",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Walter Burnett, Jr.",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Jason C. Ervin",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Chris Taliaferro",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Ruth Cruz",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Felix Cardona, Jr.",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Scott Waguespack",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Rossana Rodriguez Sanchez",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "William Conway",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Carlos Ramirez-Rosa",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Gilbert Villegas",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Emma Mitts",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Nicholas Sposato",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Samantha Nugent",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Andre Vasquez, Jr.",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Anthony Napolitano",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Brendan Reilly",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Timmy Knudsen",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Bennett R. Lawson",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "James M. Gardiner",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Angela Clay",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Matthew J. Martin",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Leni Manaa-Hoppenworth",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Maria E. Hadden",
-        "img_url": null
-    },
-    {
-        "city_id": 52,
-        "council_member": "Debra Silverstein",
+        "council_member": "Brandon Johnson",
         "img_url": null
     },
     {
@@ -2648,6 +2658,261 @@
         "city_id": 52,
         "council_member": "Debra Silverstein",
         "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Daniel La Spata",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Brian Hopkins",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Pat Dowell",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Lamont J. Robinson",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Desmon C. Yancy",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "William E. Hall",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Gregory Mitchell",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Michelle Harris",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Anthony Beale",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Peter Chico",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Nicole T. Lee",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Julia M. Ramirez",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Marty Quinn",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Jeylu B. Gutierrez",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Raymond Lopez",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Stephanie D. Coleman",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "David Moore",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Derrick G. Curtis",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Matthew J. O’Shea",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Jeanette B. Taylor",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Ronnie L. Mosley",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Michael D. Rodriguez",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Silvana Tabares",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Monique L. Scott",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Byron Sigcho Lopez",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Jessica Fuentes",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Walter Burnett, Jr.",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Jason C. Ervin",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Chris Taliaferro",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Ruth Cruz",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Felix Cardona, Jr.",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Scott Waguespack",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Rossana Rodriguez Sanchez",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "William Conway",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Carlos Ramirez-Rosa",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Gilbert Villegas",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Emma Mitts",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Nicholas Sposato",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Samantha Nugent",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Andre Vasquez, Jr.",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Anthony Napolitano",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Brendan Reilly",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Timmy Knudsen",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Bennett R. Lawson",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "James M. Gardiner",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Angela Clay",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Matthew J. Martin",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Leni Manaa-Hoppenworth",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Maria E. Hadden",
+        "img_url": null
+    },
+    {
+        "city_id": 52,
+        "council_member": "Debra Silverstein",
+        "img_url": null
+    },
+    {
+        "city_id": 53,
+        "council_member": "Andrew Coolidge",
+        "img_url": "https://www.citystats.xyz/images/cities/53/mayor"
     },
     {
         "city_id": 53,
@@ -2681,6 +2946,11 @@
     },
     {
         "city_id": 54,
+        "council_member": "John McCann",
+        "img_url": null
+    },
+    {
+        "city_id": 54,
         "council_member": "Carolina Chavez",
         "img_url": null
     },
@@ -2697,6 +2967,11 @@
     {
         "city_id": 54,
         "council_member": "Andrea Cardenas",
+        "img_url": null
+    },
+    {
+        "city_id": 55,
+        "council_member": "Aftab Pureval",
         "img_url": null
     },
     {
@@ -2746,6 +3021,11 @@
     },
     {
         "city_id": 56,
+        "council_member": "Joe Pitts",
+        "img_url": "https://www.citystats.xyz/images/cities/56/mayor"
+    },
+    {
+        "city_id": 56,
         "council_member": "Brian Zacharias",
         "img_url": null
     },
@@ -2772,6 +3052,11 @@
     {
         "city_id": 56,
         "council_member": "Wanda Smith",
+        "img_url": null
+    },
+    {
+        "city_id": 56,
+        "council_member": "Mayor Pro Tem",
         "img_url": null
     },
     {
@@ -2806,6 +3091,11 @@
     },
     {
         "city_id": 57,
+        "council_member": "Brian J. Aungst Sr.",
+        "img_url": "https://www.citystats.xyz/images/cities/57/mayor"
+    },
+    {
+        "city_id": 57,
         "council_member": "Mark Bunker",
         "img_url": "https://www.citystats.xyz/images/cities/57/city_council/1"
     },
@@ -2823,6 +3113,11 @@
         "city_id": 57,
         "council_member": "Lina Teixeira",
         "img_url": "https://www.citystats.xyz/images/cities/57/city_council/4"
+    },
+    {
+        "city_id": 58,
+        "council_member": "Justin M. Bibb",
+        "img_url": "https://www.citystats.xyz/images/cities/58/mayor"
     },
     {
         "city_id": 58,
@@ -2911,6 +3206,11 @@
     },
     {
         "city_id": 59,
+        "council_member": "Lynne Ashbeck",
+        "img_url": "https://www.citystats.xyz/images/cities/59/mayor"
+    },
+    {
+        "city_id": 59,
         "council_member": "Vong Mouanoutoua",
         "img_url": "https://www.citystats.xyz/images/cities/59/city_council/1"
     },
@@ -2928,6 +3228,11 @@
         "city_id": 59,
         "council_member": "Diane Pearce",
         "img_url": "https://www.citystats.xyz/images/cities/59/city_council/4"
+    },
+    {
+        "city_id": 60,
+        "council_member": "John Nichols",
+        "img_url": "https://www.citystats.xyz/images/cities/60/mayor"
     },
     {
         "city_id": 60,
@@ -2958,6 +3263,11 @@
         "city_id": 60,
         "council_member": "Dennis Maloney",
         "img_url": "https://www.citystats.xyz/images/cities/60/city_council/6"
+    },
+    {
+        "city_id": 61,
+        "council_member": "Yemi Mobolade",
+        "img_url": "https://www.citystats.xyz/images/cities/61/mayor"
     },
     {
         "city_id": 61,
@@ -3006,6 +3316,11 @@
     },
     {
         "city_id": 62,
+        "council_member": "Barbara Buffaloe",
+        "img_url": null
+    },
+    {
+        "city_id": 62,
         "council_member": "Nick Knoth",
         "img_url": null
     },
@@ -3036,6 +3351,11 @@
     },
     {
         "city_id": 63,
+        "council_member": "Daniel J. Rickenmann",
+        "img_url": "https://www.citystats.xyz/images/cities/63/mayor"
+    },
+    {
+        "city_id": 63,
         "council_member": "Howard E. Duvall, Jr.",
         "img_url": "https://www.citystats.xyz/images/cities/63/city_council/1"
     },
@@ -3063,6 +3383,11 @@
         "city_id": 63,
         "council_member": "Peter M. Brown",
         "img_url": "https://www.citystats.xyz/images/cities/63/city_council/6"
+    },
+    {
+        "city_id": 64,
+        "council_member": "Andrew J. Ginther",
+        "img_url": "https://www.citystats.xyz/images/cities/64/mayor"
     },
     {
         "city_id": 64,
@@ -3098,6 +3423,11 @@
         "city_id": 64,
         "council_member": "Emmanuel V. Remy",
         "img_url": "https://www.citystats.xyz/images/cities/64/city_council/7"
+    },
+    {
+        "city_id": 65,
+        "council_member": "B. H. \"Skip\" Henderson III",
+        "img_url": null
     },
     {
         "city_id": 65,
@@ -3151,6 +3481,11 @@
     },
     {
         "city_id": 66,
+        "council_member": "Laura Hoffmeister",
+        "img_url": null
+    },
+    {
+        "city_id": 66,
         "council_member": "Edi Birsan",
         "img_url": null
     },
@@ -3168,6 +3503,11 @@
         "city_id": 66,
         "council_member": "Carlyn Obringer",
         "img_url": null
+    },
+    {
+        "city_id": 67,
+        "council_member": "William C. \"Bill\" Dusch",
+        "img_url": "https://www.citystats.xyz/images/cities/67/mayor"
     },
     {
         "city_id": 67,
@@ -3206,6 +3546,11 @@
     },
     {
         "city_id": 68,
+        "council_member": "Scott J. Brook",
+        "img_url": "https://www.citystats.xyz/images/cities/68/mayor"
+    },
+    {
+        "city_id": 68,
         "council_member": "Shawn Cerra",
         "img_url": "https://www.citystats.xyz/images/cities/68/city_council/1"
     },
@@ -3223,6 +3568,11 @@
         "city_id": 68,
         "council_member": "Joy Carter",
         "img_url": "https://www.citystats.xyz/images/cities/68/city_council/4"
+    },
+    {
+        "city_id": 69,
+        "council_member": "Tony Daddario",
+        "img_url": "https://www.citystats.xyz/images/cities/69/mayor"
     },
     {
         "city_id": 69,
@@ -3248,6 +3598,11 @@
         "city_id": 69,
         "council_member": "Chad Willardson",
         "img_url": "https://www.citystats.xyz/images/cities/69/city_council/5"
+    },
+    {
+        "city_id": 70,
+        "council_member": "Paulette M. Guajardo",
+        "img_url": "https://www.citystats.xyz/images/cities/70/mayor"
     },
     {
         "city_id": 70,
@@ -3291,6 +3646,11 @@
     },
     {
         "city_id": 71,
+        "council_member": "John Stephens",
+        "img_url": "https://www.citystats.xyz/images/cities/71/mayor"
+    },
+    {
+        "city_id": 71,
         "council_member": "Jeffrey Harlan",
         "img_url": "https://www.citystats.xyz/images/cities/71/city_council/1"
     },
@@ -3318,6 +3678,11 @@
         "city_id": 71,
         "council_member": "Arlis Reynolds",
         "img_url": "https://www.citystats.xyz/images/cities/71/city_council/6"
+    },
+    {
+        "city_id": 72,
+        "council_member": "Eric L. Johnson",
+        "img_url": null
     },
     {
         "city_id": 72,
@@ -3391,6 +3756,11 @@
     },
     {
         "city_id": 73,
+        "council_member": "Raymond A. Buenaventura",
+        "img_url": "https://www.citystats.xyz/images/cities/73/mayor"
+    },
+    {
+        "city_id": 73,
         "council_member": "Juslyn C. Manalo",
         "img_url": "https://www.citystats.xyz/images/cities/73/city_council/1"
     },
@@ -3408,6 +3778,11 @@
         "city_id": 73,
         "council_member": "Glenn R. Sylvester",
         "img_url": "https://www.citystats.xyz/images/cities/73/city_council/4"
+    },
+    {
+        "city_id": 74,
+        "council_member": "Mike Matson",
+        "img_url": null
     },
     {
         "city_id": 74,
@@ -3456,6 +3831,11 @@
     },
     {
         "city_id": 75,
+        "council_member": "Judy Paul",
+        "img_url": "https://www.citystats.xyz/images/cities/75/mayor"
+    },
+    {
+        "city_id": 75,
         "council_member": "Michelle Whitman",
         "img_url": "https://www.citystats.xyz/images/cities/75/city_council/1"
     },
@@ -3476,6 +3856,11 @@
     },
     {
         "city_id": 76,
+        "council_member": "Jeffrey J. Mims, Jr.",
+        "img_url": null
+    },
+    {
+        "city_id": 76,
         "council_member": "Matt Joseph",
         "img_url": null
     },
@@ -3493,6 +3878,11 @@
         "city_id": 76,
         "council_member": "Shenise Turner-Sloss",
         "img_url": null
+    },
+    {
+        "city_id": 77,
+        "council_member": "Abdullah Hammoud",
+        "img_url": "https://www.citystats.xyz/images/cities/77/mayor"
     },
     {
         "city_id": 77,
@@ -3531,6 +3921,11 @@
     },
     {
         "city_id": 78,
+        "council_member": "Gerard Hudspeth",
+        "img_url": "https://www.citystats.xyz/images/cities/78/mayor"
+    },
+    {
+        "city_id": 78,
         "council_member": "Vicki Byrd",
         "img_url": "https://www.citystats.xyz/images/cities/78/city_council/1"
     },
@@ -3558,6 +3953,11 @@
         "city_id": 78,
         "council_member": "Chris Watts",
         "img_url": "https://www.citystats.xyz/images/cities/78/city_council/6"
+    },
+    {
+        "city_id": 79,
+        "council_member": "Mike Johnston",
+        "img_url": null
     },
     {
         "city_id": 79,
@@ -3616,6 +4016,11 @@
     },
     {
         "city_id": 80,
+        "council_member": "T.M. Franklin Cownie",
+        "img_url": "https://www.citystats.xyz/images/cities/80/mayor"
+    },
+    {
+        "city_id": 80,
         "council_member": "Carl Voss",
         "img_url": "https://www.citystats.xyz/images/cities/80/city_council/1"
     },
@@ -3638,6 +4043,11 @@
         "city_id": 80,
         "council_member": "Joe Gatto",
         "img_url": "https://www.citystats.xyz/images/cities/80/city_council/5"
+    },
+    {
+        "city_id": 81,
+        "council_member": "Mike Duggan",
+        "img_url": "https://www.citystats.xyz/images/cities/81/mayor"
     },
     {
         "city_id": 81,
@@ -3686,6 +4096,11 @@
     },
     {
         "city_id": 82,
+        "council_member": "Claudia M. Frometa",
+        "img_url": "https://www.citystats.xyz/images/cities/82/mayor"
+    },
+    {
+        "city_id": 82,
         "council_member": "Timothy Horn",
         "img_url": "https://www.citystats.xyz/images/cities/82/city_council/1"
     },
@@ -3698,6 +4113,11 @@
         "city_id": 82,
         "council_member": "Mario Trujillo",
         "img_url": "https://www.citystats.xyz/images/cities/82/city_council/3"
+    },
+    {
+        "city_id": 83,
+        "council_member": "Elaine O'Neal",
+        "img_url": "https://www.citystats.xyz/images/cities/83/mayor"
     },
     {
         "city_id": 83,
@@ -3731,6 +4151,11 @@
     },
     {
         "city_id": 84,
+        "council_member": "Ramiro Garza Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/84/mayor"
+    },
+    {
+        "city_id": 84,
         "council_member": "David White",
         "img_url": "https://www.citystats.xyz/images/cities/84/city_council/1"
     },
@@ -3748,6 +4173,11 @@
         "city_id": 84,
         "council_member": "Johnny Garcia",
         "img_url": "https://www.citystats.xyz/images/cities/84/city_council/4"
+    },
+    {
+        "city_id": 85,
+        "council_member": "Sam Joshi",
+        "img_url": null
     },
     {
         "city_id": 85,
@@ -3796,6 +4226,11 @@
     },
     {
         "city_id": 86,
+        "council_member": "Bill Wells",
+        "img_url": "https://www.citystats.xyz/images/cities/86/mayor"
+    },
+    {
+        "city_id": 86,
         "council_member": "Gary Kendrick",
         "img_url": "https://www.citystats.xyz/images/cities/86/city_council/1"
     },
@@ -3813,6 +4248,11 @@
         "city_id": 86,
         "council_member": "Phil Ortiz",
         "img_url": "https://www.citystats.xyz/images/cities/86/city_council/4"
+    },
+    {
+        "city_id": 87,
+        "council_member": "David Kaptain",
+        "img_url": null
     },
     {
         "city_id": 87,
@@ -3852,6 +4292,11 @@
     {
         "city_id": 87,
         "council_member": "Steven Thoren",
+        "img_url": null
+    },
+    {
+        "city_id": 88,
+        "council_member": "Patricia Perkins-Auguste",
         "img_url": null
     },
     {
@@ -3896,6 +4341,11 @@
     },
     {
         "city_id": 89,
+        "council_member": "Bobbie Singh-Allen",
+        "img_url": null
+    },
+    {
+        "city_id": 89,
         "council_member": "Darren Suen",
         "img_url": null
     },
@@ -3912,6 +4362,11 @@
     {
         "city_id": 89,
         "council_member": "Sergio Robles",
+        "img_url": null
+    },
+    {
+        "city_id": 90,
+        "council_member": "Jessica Ancona",
         "img_url": null
     },
     {
@@ -3942,6 +4397,11 @@
     {
         "city_id": 90,
         "council_member": "Dr. Julia Ruedas",
+        "img_url": null
+    },
+    {
+        "city_id": 91,
+        "council_member": "Oscar Leeser",
         "img_url": null
     },
     {
@@ -3986,6 +4446,11 @@
     },
     {
         "city_id": 92,
+        "council_member": "Dane White",
+        "img_url": "https://www.citystats.xyz/images/cities/92/mayor"
+    },
+    {
+        "city_id": 92,
         "council_member": "Consuelo Martinez",
         "img_url": "https://www.citystats.xyz/images/cities/92/city_council/1"
     },
@@ -4003,6 +4468,11 @@
         "city_id": 92,
         "council_member": "Michael Morasco",
         "img_url": "https://www.citystats.xyz/images/cities/92/city_council/4"
+    },
+    {
+        "city_id": 93,
+        "council_member": "Lucy Vinis",
+        "img_url": null
     },
     {
         "city_id": 93,
@@ -4042,6 +4512,11 @@
     {
         "city_id": 93,
         "council_member": "Randy Groves",
+        "img_url": null
+    },
+    {
+        "city_id": 94,
+        "council_member": "Lloyd Winnecke",
         "img_url": null
     },
     {
@@ -4091,6 +4566,11 @@
     },
     {
         "city_id": 95,
+        "council_member": "Cassie Franklin",
+        "img_url": null
+    },
+    {
+        "city_id": 95,
         "council_member": "Brenda Stonecipher",
         "img_url": null
     },
@@ -4126,6 +4606,11 @@
     },
     {
         "city_id": 96,
+        "council_member": "Catherine Moy",
+        "img_url": null
+    },
+    {
+        "city_id": 96,
         "council_member": "Pam Bertani",
         "img_url": null
     },
@@ -4156,6 +4641,11 @@
     },
     {
         "city_id": 97,
+        "council_member": "Tim Mahoney",
+        "img_url": "https://www.citystats.xyz/images/cities/97/mayor"
+    },
+    {
+        "city_id": 97,
         "council_member": "Arlette Preston",
         "img_url": "https://www.citystats.xyz/images/cities/97/city_council/1"
     },
@@ -4173,6 +4663,11 @@
         "city_id": 97,
         "council_member": "John Strand",
         "img_url": "https://www.citystats.xyz/images/cities/97/city_council/4"
+    },
+    {
+        "city_id": 98,
+        "council_member": "Mitch Colvin",
+        "img_url": null
     },
     {
         "city_id": 98,
@@ -4217,6 +4712,11 @@
     {
         "city_id": 98,
         "council_member": "Deno Hondros",
+        "img_url": null
+    },
+    {
+        "city_id": 99,
+        "council_member": "Scott Fadness",
         "img_url": null
     },
     {
@@ -4266,6 +4766,11 @@
     },
     {
         "city_id": 100,
+        "council_member": "Acquanetta Warren",
+        "img_url": "https://www.citystats.xyz/images/cities/100/mayor"
+    },
+    {
+        "city_id": 100,
         "council_member": "Peter A. Garcia",
         "img_url": "https://www.citystats.xyz/images/cities/100/city_council/1"
     },
@@ -4283,6 +4788,11 @@
         "city_id": 100,
         "council_member": "Phillip W. Cothran",
         "img_url": "https://www.citystats.xyz/images/cities/100/city_council/4"
+    },
+    {
+        "city_id": 101,
+        "council_member": "Jeni Arndt",
+        "img_url": "https://www.citystats.xyz/images/cities/101/mayor"
     },
     {
         "city_id": 101,
@@ -4316,6 +4826,11 @@
     },
     {
         "city_id": 102,
+        "council_member": "Dean J. Trantalis",
+        "img_url": null
+    },
+    {
+        "city_id": 102,
         "council_member": "John C. Herbst",
         "img_url": null
     },
@@ -4332,6 +4847,11 @@
     {
         "city_id": 102,
         "council_member": "Warren Sturman",
+        "img_url": null
+    },
+    {
+        "city_id": 103,
+        "council_member": "Tom Henry",
         "img_url": null
     },
     {
@@ -4373,6 +4893,11 @@
         "city_id": 103,
         "council_member": "Tom Freistroffer",
         "img_url": null
+    },
+    {
+        "city_id": 104,
+        "council_member": "Mattie Parker",
+        "img_url": "https://www.citystats.xyz/images/cities/104/mayor"
     },
     {
         "city_id": 104,
@@ -4426,6 +4951,11 @@
     },
     {
         "city_id": 105,
+        "council_member": "Lily Mei",
+        "img_url": "https://www.citystats.xyz/images/cities/105/mayor"
+    },
+    {
+        "city_id": 105,
         "council_member": "Teresa Cox",
         "img_url": "https://www.citystats.xyz/images/cities/105/city_council/1"
     },
@@ -4453,6 +4983,11 @@
         "city_id": 105,
         "council_member": "Raj Salwan",
         "img_url": "https://www.citystats.xyz/images/cities/105/city_council/6"
+    },
+    {
+        "city_id": 106,
+        "council_member": "Jerry Dyer",
+        "img_url": "https://www.citystats.xyz/images/cities/106/mayor"
     },
     {
         "city_id": 106,
@@ -4491,6 +5026,11 @@
     },
     {
         "city_id": 107,
+        "council_member": "Jeff Cheney",
+        "img_url": null
+    },
+    {
+        "city_id": 107,
         "council_member": "John Keating",
         "img_url": null
     },
@@ -4521,6 +5061,11 @@
     },
     {
         "city_id": 108,
+        "council_member": "Fred Jung",
+        "img_url": "https://www.citystats.xyz/images/cities/108/mayor"
+    },
+    {
+        "city_id": 108,
         "council_member": "Bruce Whitaker",
         "img_url": "https://www.citystats.xyz/images/cities/108/city_council/1"
     },
@@ -4538,6 +5083,11 @@
         "city_id": 108,
         "council_member": "Ahmad Zahra",
         "img_url": "https://www.citystats.xyz/images/cities/108/city_council/4"
+    },
+    {
+        "city_id": 109,
+        "council_member": "Harvey Ward",
+        "img_url": "https://www.citystats.xyz/images/cities/109/mayor"
     },
     {
         "city_id": 109,
@@ -4571,6 +5121,11 @@
     },
     {
         "city_id": 110,
+        "council_member": "Steve Jones",
+        "img_url": "https://www.citystats.xyz/images/cities/110/mayor"
+    },
+    {
+        "city_id": 110,
         "council_member": "George S. Brietigam III",
         "img_url": "https://www.citystats.xyz/images/cities/110/city_council/1"
     },
@@ -4598,6 +5153,11 @@
         "city_id": 110,
         "council_member": "Kim B. Nguyen-Penaloza",
         "img_url": "https://www.citystats.xyz/images/cities/110/city_council/6"
+    },
+    {
+        "city_id": 111,
+        "council_member": "Scott Lemay",
+        "img_url": null
     },
     {
         "city_id": 111,
@@ -4641,6 +5201,11 @@
     },
     {
         "city_id": 112,
+        "council_member": "Brigette Peterson",
+        "img_url": "https://www.citystats.xyz/images/cities/112/mayor"
+    },
+    {
+        "city_id": 112,
         "council_member": "Kathy Tilque",
         "img_url": "https://www.citystats.xyz/images/cities/112/city_council/1"
     },
@@ -4668,6 +5233,11 @@
         "city_id": 112,
         "council_member": "Jim Torgeson",
         "img_url": "https://www.citystats.xyz/images/cities/112/city_council/6"
+    },
+    {
+        "city_id": 113,
+        "council_member": "Jerry P. Weiers",
+        "img_url": "https://www.citystats.xyz/images/cities/113/mayor"
     },
     {
         "city_id": 113,
@@ -4701,6 +5271,11 @@
     },
     {
         "city_id": 114,
+        "council_member": "Daniel Brotman",
+        "img_url": "https://www.citystats.xyz/images/cities/114/mayor"
+    },
+    {
+        "city_id": 114,
         "council_member": "Ara Najarian",
         "img_url": "https://www.citystats.xyz/images/cities/114/city_council/1"
     },
@@ -4718,6 +5293,11 @@
         "city_id": 114,
         "council_member": "Elen Asatryan",
         "img_url": "https://www.citystats.xyz/images/cities/114/city_council/4"
+    },
+    {
+        "city_id": 115,
+        "council_member": "Joe Pizzillo",
+        "img_url": null
     },
     {
         "city_id": 115,
@@ -4748,6 +5328,11 @@
         "city_id": 115,
         "council_member": "Vicki Gillis",
         "img_url": null
+    },
+    {
+        "city_id": 116,
+        "council_member": "Ron Jensen",
+        "img_url": "https://www.citystats.xyz/images/cities/116/mayor"
     },
     {
         "city_id": 116,
@@ -4791,6 +5376,11 @@
     },
     {
         "city_id": 117,
+        "council_member": "Rosalynn Bliss",
+        "img_url": "https://www.citystats.xyz/images/cities/117/mayor"
+    },
+    {
+        "city_id": 117,
         "council_member": "Jon O'Connor",
         "img_url": "https://www.citystats.xyz/images/cities/117/city_council/1"
     },
@@ -4821,6 +5411,11 @@
     },
     {
         "city_id": 118,
+        "council_member": "John Gates",
+        "img_url": "https://www.citystats.xyz/images/cities/118/mayor"
+    },
+    {
+        "city_id": 118,
         "council_member": "Tommy Butler",
         "img_url": "https://www.citystats.xyz/images/cities/118/city_council/1"
     },
@@ -4848,6 +5443,11 @@
         "city_id": 118,
         "council_member": "Ed Clark",
         "img_url": "https://www.citystats.xyz/images/cities/118/city_council/6"
+    },
+    {
+        "city_id": 119,
+        "council_member": "Eric Genrich",
+        "img_url": "https://www.citystats.xyz/images/cities/119/mayor"
     },
     {
         "city_id": 119,
@@ -4911,6 +5511,11 @@
     },
     {
         "city_id": 120,
+        "council_member": "Nancy Vaughan",
+        "img_url": null
+    },
+    {
+        "city_id": 120,
         "council_member": "Yvonne J. Johnson",
         "img_url": null
     },
@@ -4951,6 +5556,11 @@
     },
     {
         "city_id": 121,
+        "council_member": "Travis Stovall",
+        "img_url": null
+    },
+    {
+        "city_id": 121,
         "council_member": "Dina DiNucci",
         "img_url": null
     },
@@ -4981,6 +5591,11 @@
     },
     {
         "city_id": 122,
+        "council_member": "Donnie Tuck",
+        "img_url": "https://www.citystats.xyz/images/cities/122/mayor"
+    },
+    {
+        "city_id": 122,
         "council_member": "Jimmy Gray",
         "img_url": "https://www.citystats.xyz/images/cities/122/city_council/1"
     },
@@ -5008,6 +5623,11 @@
         "city_id": 122,
         "council_member": "Martha Mugler",
         "img_url": "https://www.citystats.xyz/images/cities/122/city_council/6"
+    },
+    {
+        "city_id": 123,
+        "council_member": "Luke Bronin",
+        "img_url": null
     },
     {
         "city_id": 123,
@@ -5056,6 +5676,11 @@
     },
     {
         "city_id": 124,
+        "council_member": "Legislative Program",
+        "img_url": null
+    },
+    {
+        "city_id": 124,
         "council_member": "Mark Salinas",
         "img_url": null
     },
@@ -5091,6 +5716,16 @@
     },
     {
         "city_id": 125,
+        "council_member": "Michelle Romero",
+        "img_url": null
+    },
+    {
+        "city_id": 125,
+        "council_member": "Michelle Romero Joins Mayors for Parks Coalition",
+        "img_url": null
+    },
+    {
+        "city_id": 125,
         "council_member": "Jim Seebock",
         "img_url": null
     },
@@ -5115,6 +5750,16 @@
         "img_url": null
     },
     {
+        "city_id": 125,
+        "council_member": "Michelle Romero Joins Mayors for Parks Coalition",
+        "img_url": null
+    },
+    {
+        "city_id": 126,
+        "council_member": "Brigit Bennington",
+        "img_url": null
+    },
+    {
         "city_id": 126,
         "council_member": "Larry Bird",
         "img_url": null
@@ -5133,6 +5778,11 @@
         "city_id": 126,
         "council_member": "Cameron Gregg",
         "img_url": null
+    },
+    {
+        "city_id": 127,
+        "council_member": "Esteban Bovo, Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/127/mayor"
     },
     {
         "city_id": 127,
@@ -5168,6 +5818,11 @@
         "city_id": 127,
         "council_member": "Carl Zogby",
         "img_url": "https://www.citystats.xyz/images/cities/127/city_council/7"
+    },
+    {
+        "city_id": 128,
+        "council_member": "Jay W. Wagner",
+        "img_url": "https://www.citystats.xyz/images/cities/128/mayor"
     },
     {
         "city_id": 128,
@@ -5211,6 +5866,11 @@
     },
     {
         "city_id": 129,
+        "council_member": "Steve Callaway",
+        "img_url": null
+    },
+    {
+        "city_id": 129,
         "council_member": "Anthony Martin",
         "img_url": null
     },
@@ -5241,6 +5901,11 @@
     },
     {
         "city_id": 130,
+        "council_member": "Josh Levy",
+        "img_url": "https://www.citystats.xyz/images/cities/130/mayor"
+    },
+    {
+        "city_id": 130,
         "council_member": "Caryl S. Shuham",
         "img_url": "https://www.citystats.xyz/images/cities/130/city_council/1"
     },
@@ -5268,6 +5933,11 @@
         "city_id": 130,
         "council_member": "Idelma Quintana",
         "img_url": "https://www.citystats.xyz/images/cities/130/city_council/6"
+    },
+    {
+        "city_id": 131,
+        "council_member": "Tommy Waters",
+        "img_url": "https://www.citystats.xyz/images/cities/131/mayor"
     },
     {
         "city_id": 131,
@@ -5313,6 +5983,11 @@
         "city_id": 131,
         "council_member": "Augie Tulba",
         "img_url": "https://www.citystats.xyz/images/cities/131/city_council/9"
+    },
+    {
+        "city_id": 132,
+        "council_member": "Sylvester Turner",
+        "img_url": null
     },
     {
         "city_id": 132,
@@ -5396,6 +6071,11 @@
     },
     {
         "city_id": 133,
+        "council_member": "Tony Strickland",
+        "img_url": "https://www.citystats.xyz/images/cities/133/mayor"
+    },
+    {
+        "city_id": 133,
         "council_member": "Gracey Van Der Mark",
         "img_url": "https://www.citystats.xyz/images/cities/133/city_council/1"
     },
@@ -5426,6 +6106,11 @@
     },
     {
         "city_id": 134,
+        "council_member": "Tommy Battle",
+        "img_url": null
+    },
+    {
+        "city_id": 134,
         "council_member": "Devyn S. Keith",
         "img_url": null
     },
@@ -5448,6 +6133,11 @@
         "city_id": 134,
         "council_member": "John Meredith",
         "img_url": null
+    },
+    {
+        "city_id": 135,
+        "council_member": "Rory Rowland",
+        "img_url": "https://www.citystats.xyz/images/cities/135/mayor"
     },
     {
         "city_id": 135,
@@ -5478,6 +6168,11 @@
         "city_id": 135,
         "council_member": "Dr. Bridget McCandless",
         "img_url": "https://www.citystats.xyz/images/cities/135/city_council/6"
+    },
+    {
+        "city_id": 136,
+        "council_member": "Vop Osili",
+        "img_url": null
     },
     {
         "city_id": 136,
@@ -5601,6 +6296,11 @@
     },
     {
         "city_id": 137,
+        "council_member": "James T. Butts",
+        "img_url": null
+    },
+    {
+        "city_id": 137,
         "council_member": "Gloria Gray",
         "img_url": null
     },
@@ -5621,6 +6321,11 @@
     },
     {
         "city_id": 138,
+        "council_member": "Farrah N. Khan",
+        "img_url": "https://www.citystats.xyz/images/cities/138/mayor"
+    },
+    {
+        "city_id": 138,
         "council_member": "Tammy Kim",
         "img_url": "https://www.citystats.xyz/images/cities/138/city_council/1"
     },
@@ -5638,6 +6343,11 @@
         "city_id": 138,
         "council_member": "Kathleen Treseder",
         "img_url": "https://www.citystats.xyz/images/cities/138/city_council/4"
+    },
+    {
+        "city_id": 139,
+        "council_member": "Rick Stopfer",
+        "img_url": null
     },
     {
         "city_id": 139,
@@ -5681,6 +6391,11 @@
     },
     {
         "city_id": 140,
+        "council_member": "Chokwe Antar Lumumba",
+        "img_url": null
+    },
+    {
+        "city_id": 140,
         "council_member": "Ashby Foote",
         "img_url": "https://www.citystats.xyz/images/cities/140/city_council/1"
     },
@@ -5713,6 +6428,11 @@
         "city_id": 140,
         "council_member": "Virgi Lindsay",
         "img_url": "https://www.citystats.xyz/images/cities/140/city_council/7"
+    },
+    {
+        "city_id": 141,
+        "council_member": "Donna Deegan",
+        "img_url": null
     },
     {
         "city_id": 141,
@@ -5811,6 +6531,11 @@
     },
     {
         "city_id": 142,
+        "council_member": "Steven Fulop",
+        "img_url": null
+    },
+    {
+        "city_id": 142,
         "council_member": "Joyce E. Watterman",
         "img_url": "https://www.citystats.xyz/images/cities/142/city_council/1"
     },
@@ -5856,6 +6581,11 @@
     },
     {
         "city_id": 143,
+        "council_member": "Terry D'Arcy",
+        "img_url": "https://www.citystats.xyz/images/cities/143/mayor"
+    },
+    {
+        "city_id": 143,
         "council_member": "Larry E. Hug",
         "img_url": "https://www.citystats.xyz/images/cities/143/city_council/1"
     },
@@ -5896,6 +6626,11 @@
     },
     {
         "city_id": 144,
+        "council_member": "Chris Barajas",
+        "img_url": "https://www.citystats.xyz/images/cities/144/mayor"
+    },
+    {
+        "city_id": 144,
         "council_member": "Guillermo Silva",
         "img_url": "https://www.citystats.xyz/images/cities/144/city_council/1"
     },
@@ -5913,6 +6648,11 @@
         "city_id": 144,
         "council_member": "Armando Carmona",
         "img_url": "https://www.citystats.xyz/images/cities/144/city_council/4"
+    },
+    {
+        "city_id": 145,
+        "council_member": "Quinton Lucas",
+        "img_url": null
     },
     {
         "city_id": 145,
@@ -5976,6 +6716,11 @@
     },
     {
         "city_id": 146,
+        "council_member": "Tyrone Garner",
+        "img_url": "https://www.citystats.xyz/images/cities/146/mayor"
+    },
+    {
+        "city_id": 146,
         "council_member": "Melissa Bynum",
         "img_url": "https://www.citystats.xyz/images/cities/146/city_council/1"
     },
@@ -6026,6 +6771,11 @@
     },
     {
         "city_id": 147,
+        "council_member": "Dana Ralph",
+        "img_url": "https://www.citystats.xyz/images/cities/147/mayor"
+    },
+    {
+        "city_id": 147,
         "council_member": "Bill Boyce",
         "img_url": "https://www.citystats.xyz/images/cities/147/city_council/1"
     },
@@ -6061,6 +6811,11 @@
     },
     {
         "city_id": 148,
+        "council_member": "Debbie Nash-King",
+        "img_url": null
+    },
+    {
+        "city_id": 148,
         "council_member": "Nina Cobb",
         "img_url": null
     },
@@ -6093,6 +6848,11 @@
         "city_id": 148,
         "council_member": "Riakos Adams",
         "img_url": null
+    },
+    {
+        "city_id": 149,
+        "council_member": "Indya Kincannon",
+        "img_url": "https://www.citystats.xyz/images/cities/149/mayor"
     },
     {
         "city_id": 149,
@@ -6141,27 +6901,7 @@
     },
     {
         "city_id": 150,
-        "council_member": "Pat Lewis",
-        "img_url": null
-    },
-    {
-        "city_id": 150,
-        "council_member": "Andy Naquin",
-        "img_url": null
-    },
-    {
-        "city_id": 150,
-        "council_member": "Liz W. Hebert",
-        "img_url": null
-    },
-    {
-        "city_id": 150,
-        "council_member": "Nanette Cook",
-        "img_url": null
-    },
-    {
-        "city_id": 150,
-        "council_member": "Glenn Lazard",
+        "council_member": "Josh Guillory",
         "img_url": null
     },
     {
@@ -6188,6 +6928,36 @@
         "city_id": 150,
         "council_member": "Glenn Lazard",
         "img_url": null
+    },
+    {
+        "city_id": 150,
+        "council_member": "Pat Lewis",
+        "img_url": null
+    },
+    {
+        "city_id": 150,
+        "council_member": "Andy Naquin",
+        "img_url": null
+    },
+    {
+        "city_id": 150,
+        "council_member": "Liz W. Hebert",
+        "img_url": null
+    },
+    {
+        "city_id": 150,
+        "council_member": "Nanette Cook",
+        "img_url": null
+    },
+    {
+        "city_id": 150,
+        "council_member": "Glenn Lazard",
+        "img_url": null
+    },
+    {
+        "city_id": 151,
+        "council_member": "William \"Bill\" Mutz",
+        "img_url": "https://www.citystats.xyz/images/cities/151/mayor"
     },
     {
         "city_id": 151,
@@ -6218,6 +6988,11 @@
         "city_id": 151,
         "council_member": "Sam Simmons",
         "img_url": "https://www.citystats.xyz/images/cities/151/city_council/6"
+    },
+    {
+        "city_id": 152,
+        "council_member": "Adam Paul",
+        "img_url": "https://www.citystats.xyz/images/cities/152/mayor"
     },
     {
         "city_id": 152,
@@ -6271,6 +7046,11 @@
     },
     {
         "city_id": 153,
+        "council_member": "Albert Akerman",
+        "img_url": null
+    },
+    {
+        "city_id": 153,
         "council_member": "Michael D'Elia",
         "img_url": null
     },
@@ -6291,6 +7071,11 @@
     },
     {
         "city_id": 154,
+        "council_member": "R. Rex Parris",
+        "img_url": "https://www.citystats.xyz/images/cities/154/mayor"
+    },
+    {
+        "city_id": 154,
         "council_member": ". Rex Parris",
         "img_url": "https://www.citystats.xyz/images/cities/154/city_council/1"
     },
@@ -6308,6 +7093,11 @@
         "city_id": 154,
         "council_member": "Lauren Hughes-Leslie",
         "img_url": "https://www.citystats.xyz/images/cities/154/city_council/4"
+    },
+    {
+        "city_id": 155,
+        "council_member": "Andy Schor",
+        "img_url": null
     },
     {
         "city_id": 155,
@@ -6347,6 +7137,11 @@
     {
         "city_id": 155,
         "council_member": "Brian Jackson",
+        "img_url": null
+    },
+    {
+        "city_id": 156,
+        "council_member": "Dr. Victor D. Treviño",
         "img_url": null
     },
     {
@@ -6391,6 +7186,11 @@
     },
     {
         "city_id": 157,
+        "council_member": "Ken Miyagishima",
+        "img_url": null
+    },
+    {
+        "city_id": 157,
         "council_member": "Kasandra Gandara",
         "img_url": null
     },
@@ -6421,6 +7221,11 @@
     },
     {
         "city_id": 158,
+        "council_member": "Carolyn G. Goodman",
+        "img_url": "https://www.citystats.xyz/images/cities/158/mayor"
+    },
+    {
+        "city_id": 158,
         "council_member": "Brian Knudsen",
         "img_url": "https://www.citystats.xyz/images/cities/158/city_council/1"
     },
@@ -6448,6 +7253,11 @@
         "city_id": 158,
         "council_member": "Nancy E. Brune",
         "img_url": "https://www.citystats.xyz/images/cities/158/city_council/6"
+    },
+    {
+        "city_id": 159,
+        "council_member": "Nick Long",
+        "img_url": "https://www.citystats.xyz/images/cities/159/mayor"
     },
     {
         "city_id": 159,
@@ -6483,6 +7293,11 @@
         "city_id": 159,
         "council_member": "Sean Saunders",
         "img_url": "https://www.citystats.xyz/images/cities/159/city_council/7"
+    },
+    {
+        "city_id": 160,
+        "council_member": "William A. Baird",
+        "img_url": "https://www.citystats.xyz/images/cities/160/mayor"
     },
     {
         "city_id": 160,
@@ -6526,6 +7341,11 @@
     },
     {
         "city_id": 161,
+        "council_member": "TJ Gilmore",
+        "img_url": "https://www.citystats.xyz/images/cities/161/mayor"
+    },
+    {
+        "city_id": 161,
         "council_member": "Bob Troyer",
         "img_url": "https://www.citystats.xyz/images/cities/161/city_council/1"
     },
@@ -6553,6 +7373,11 @@
         "city_id": 161,
         "council_member": "Patrick Kelly",
         "img_url": "https://www.citystats.xyz/images/cities/161/city_council/6"
+    },
+    {
+        "city_id": 162,
+        "council_member": "Linda Gorton",
+        "img_url": "https://www.citystats.xyz/images/cities/162/mayor"
     },
     {
         "city_id": 162,
@@ -6631,6 +7456,11 @@
     },
     {
         "city_id": 163,
+        "council_member": "Leirion Gaylor Baird",
+        "img_url": "https://www.citystats.xyz/images/cities/163/mayor"
+    },
+    {
+        "city_id": 163,
         "council_member": "James Michael Bowers",
         "img_url": "https://www.citystats.xyz/images/cities/163/city_council/1"
     },
@@ -6663,6 +7493,11 @@
         "city_id": 163,
         "council_member": "Bennie Shobe",
         "img_url": "https://www.citystats.xyz/images/cities/163/city_council/7"
+    },
+    {
+        "city_id": 164,
+        "council_member": "Frank Scott Jr.",
+        "img_url": null
     },
     {
         "city_id": 164,
@@ -6716,6 +7551,11 @@
     },
     {
         "city_id": 165,
+        "council_member": "Rex Richardson",
+        "img_url": "https://www.citystats.xyz/images/cities/165/mayor"
+    },
+    {
+        "city_id": 165,
         "council_member": "Mary Zendejas",
         "img_url": "https://www.citystats.xyz/images/cities/165/city_council/1"
     },
@@ -6761,6 +7601,11 @@
     },
     {
         "city_id": 166,
+        "council_member": "Joan Peck",
+        "img_url": null
+    },
+    {
+        "city_id": 166,
         "council_member": "Susie Hidalgo-Fahring",
         "img_url": null
     },
@@ -6793,6 +7638,11 @@
         "city_id": 166,
         "council_member": "Shiquita Yarbrough",
         "img_url": null
+    },
+    {
+        "city_id": 167,
+        "council_member": "Karen Bass",
+        "img_url": "https://www.citystats.xyz/images/cities/167/mayor"
     },
     {
         "city_id": 167,
@@ -6868,6 +7718,11 @@
         "city_id": 167,
         "council_member": "Tim McOsker",
         "img_url": "https://www.citystats.xyz/images/cities/167/city_council/15"
+    },
+    {
+        "city_id": 168,
+        "council_member": "Craig Greenberg",
+        "img_url": null
     },
     {
         "city_id": 168,
@@ -7001,6 +7856,11 @@
     },
     {
         "city_id": 169,
+        "council_member": "Sokhary Chau",
+        "img_url": null
+    },
+    {
+        "city_id": 169,
         "council_member": "John Drinkwater",
         "img_url": null
     },
@@ -7051,6 +7911,11 @@
     },
     {
         "city_id": 170,
+        "council_member": "Tray Payne",
+        "img_url": null
+    },
+    {
+        "city_id": 170,
         "council_member": "Christy Martinez",
         "img_url": null
     },
@@ -7077,6 +7942,11 @@
     {
         "city_id": 170,
         "council_member": "Latrelle Joy",
+        "img_url": null
+    },
+    {
+        "city_id": 171,
+        "council_member": "Jared C. Nicholson",
         "img_url": null
     },
     {
@@ -7136,6 +8006,11 @@
     },
     {
         "city_id": 172,
+        "council_member": "Lester Miller",
+        "img_url": null
+    },
+    {
+        "city_id": 172,
         "council_member": "Seth Clark",
         "img_url": null
     },
@@ -7177,6 +8052,11 @@
     {
         "city_id": 172,
         "council_member": "Al Tillman",
+        "img_url": null
+    },
+    {
+        "city_id": 173,
+        "council_member": "Satya Rhodes-Conway",
         "img_url": null
     },
     {
@@ -7276,6 +8156,11 @@
     },
     {
         "city_id": 174,
+        "council_member": "Joyce Craig",
+        "img_url": null
+    },
+    {
+        "city_id": 174,
         "council_member": "Kevin Cavanaugh",
         "img_url": null
     },
@@ -7346,6 +8231,11 @@
     },
     {
         "city_id": 175,
+        "council_member": "Javier Villalobos",
+        "img_url": null
+    },
+    {
+        "city_id": 175,
         "council_member": "Tony  Aguirre",
         "img_url": null
     },
@@ -7376,6 +8266,11 @@
     },
     {
         "city_id": 176,
+        "council_member": "George Fuller",
+        "img_url": null
+    },
+    {
+        "city_id": 176,
         "council_member": "Charlie Philips",
         "img_url": null
     },
@@ -7402,6 +8297,11 @@
     {
         "city_id": 176,
         "council_member": "Michael Jones",
+        "img_url": null
+    },
+    {
+        "city_id": 177,
+        "council_member": "Jim Strickland",
         "img_url": null
     },
     {
@@ -7471,6 +8371,11 @@
     },
     {
         "city_id": 178,
+        "council_member": "Bill Zimmerman",
+        "img_url": "https://www.citystats.xyz/images/cities/178/mayor"
+    },
+    {
+        "city_id": 178,
         "council_member": "Tem Bob Karwin",
         "img_url": "https://www.citystats.xyz/images/cities/178/city_council/1"
     },
@@ -7488,6 +8393,11 @@
         "city_id": 178,
         "council_member": "Councilmember Dean Deines",
         "img_url": "https://www.citystats.xyz/images/cities/178/city_council/4"
+    },
+    {
+        "city_id": 179,
+        "council_member": "Robert Simison",
+        "img_url": "https://www.citystats.xyz/images/cities/179/mayor"
     },
     {
         "city_id": 179,
@@ -7521,6 +8431,11 @@
     },
     {
         "city_id": 180,
+        "council_member": "John Giles",
+        "img_url": "https://www.citystats.xyz/images/cities/180/mayor"
+    },
+    {
+        "city_id": 180,
         "council_member": "Mark Freeman",
         "img_url": "https://www.citystats.xyz/images/cities/180/city_council/1"
     },
@@ -7548,6 +8463,11 @@
         "city_id": 180,
         "council_member": "Scott Somers",
         "img_url": "https://www.citystats.xyz/images/cities/180/city_council/6"
+    },
+    {
+        "city_id": 181,
+        "council_member": "Daniel Alemán Jr.",
+        "img_url": "https://www.citystats.xyz/images/cities/181/mayor"
     },
     {
         "city_id": 181,
@@ -7581,6 +8501,11 @@
     },
     {
         "city_id": 182,
+        "council_member": "Francis Suarez",
+        "img_url": null
+    },
+    {
+        "city_id": 182,
         "council_member": "Sabina Covo",
         "img_url": null
     },
@@ -7598,6 +8523,11 @@
         "city_id": 182,
         "council_member": "Christine King",
         "img_url": null
+    },
+    {
+        "city_id": 183,
+        "council_member": "Rodney Harris",
+        "img_url": "https://www.citystats.xyz/images/cities/183/mayor"
     },
     {
         "city_id": 183,
@@ -7631,6 +8561,11 @@
     },
     {
         "city_id": 184,
+        "council_member": "Lori Blong",
+        "img_url": "https://www.citystats.xyz/images/cities/184/mayor"
+    },
+    {
+        "city_id": 184,
         "council_member": "Dan Corrales",
         "img_url": "https://www.citystats.xyz/images/cities/184/city_council/1"
     },
@@ -7658,6 +8593,11 @@
         "city_id": 184,
         "council_member": "Amy Stretcher Burkes",
         "img_url": "https://www.citystats.xyz/images/cities/184/city_council/6"
+    },
+    {
+        "city_id": 185,
+        "council_member": "Cavalier Johnson",
+        "img_url": null
     },
     {
         "city_id": 185,
@@ -7736,6 +8676,11 @@
     },
     {
         "city_id": 186,
+        "council_member": "Jacob Frey",
+        "img_url": "https://www.citystats.xyz/images/cities/186/mayor"
+    },
+    {
+        "city_id": 186,
         "council_member": "Elliott Payne",
         "img_url": "https://www.citystats.xyz/images/cities/186/city_council/1"
     },
@@ -7801,6 +8746,11 @@
     },
     {
         "city_id": 187,
+        "council_member": "Wayne M. Messam",
+        "img_url": "https://www.citystats.xyz/images/cities/187/mayor"
+    },
+    {
+        "city_id": 187,
         "council_member": "Alexandra P. Davis",
         "img_url": "https://www.citystats.xyz/images/cities/187/city_council/1"
     },
@@ -7818,6 +8768,11 @@
         "city_id": 187,
         "council_member": "Yvette Colbourne",
         "img_url": "https://www.citystats.xyz/images/cities/187/city_council/4"
+    },
+    {
+        "city_id": 188,
+        "council_member": "Sandy Stimpson",
+        "img_url": "https://www.citystats.xyz/images/cities/188/mayor"
     },
     {
         "city_id": 188,
@@ -7856,6 +8811,11 @@
     },
     {
         "city_id": 189,
+        "council_member": "Sue Zwahlen",
+        "img_url": null
+    },
+    {
+        "city_id": 189,
         "council_member": "Rosa Escutia-Braaton",
         "img_url": null
     },
@@ -7883,6 +8843,11 @@
         "city_id": 189,
         "council_member": "David Wright",
         "img_url": null
+    },
+    {
+        "city_id": 190,
+        "council_member": "Steven L. Reed",
+        "img_url": "https://www.citystats.xyz/images/cities/190/mayor"
     },
     {
         "city_id": 190,
@@ -7931,6 +8896,11 @@
     },
     {
         "city_id": 191,
+        "council_member": "Ulises Cabrera",
+        "img_url": "https://www.citystats.xyz/images/cities/191/mayor"
+    },
+    {
+        "city_id": 191,
         "council_member": "Elena Baca-Santa Cruz",
         "img_url": "https://www.citystats.xyz/images/cities/191/city_council/1"
     },
@@ -7948,6 +8918,11 @@
         "city_id": 191,
         "council_member": "Cheylynda Barnard",
         "img_url": "https://www.citystats.xyz/images/cities/191/city_council/4"
+    },
+    {
+        "city_id": 192,
+        "council_member": "Shane McFarland",
+        "img_url": null
     },
     {
         "city_id": 192,
@@ -7981,6 +8956,11 @@
     },
     {
         "city_id": 193,
+        "council_member": "Lisa DeForest",
+        "img_url": "https://www.citystats.xyz/images/cities/193/mayor"
+    },
+    {
+        "city_id": 193,
         "council_member": "Lori Stone",
         "img_url": "https://www.citystats.xyz/images/cities/193/city_council/1"
     },
@@ -7998,6 +8978,11 @@
         "city_id": 193,
         "council_member": "Cindy Warren",
         "img_url": "https://www.citystats.xyz/images/cities/193/city_council/4"
+    },
+    {
+        "city_id": 194,
+        "council_member": "Debbie Kling",
+        "img_url": "https://www.citystats.xyz/images/cities/194/mayor"
     },
     {
         "city_id": 194,
@@ -8023,6 +9008,11 @@
         "city_id": 194,
         "council_member": "Randy Haverfield",
         "img_url": "https://www.citystats.xyz/images/cities/194/city_council/5"
+    },
+    {
+        "city_id": 195,
+        "council_member": "Scott A. Wehrli",
+        "img_url": null
     },
     {
         "city_id": 195,
@@ -8062,6 +9052,11 @@
     {
         "city_id": 195,
         "council_member": "Nate Wilson",
+        "img_url": null
+    },
+    {
+        "city_id": 196,
+        "council_member": "Jim Shulman",
         "img_url": null
     },
     {
@@ -8261,6 +9256,11 @@
     },
     {
         "city_id": 197,
+        "council_member": "Ras Baraka",
+        "img_url": "https://www.citystats.xyz/images/cities/197/mayor"
+    },
+    {
+        "city_id": 197,
         "council_member": "Michael J. Silva",
         "img_url": "https://www.citystats.xyz/images/cities/197/city_council/1"
     },
@@ -8303,6 +9303,11 @@
         "city_id": 197,
         "council_member": "Carlos M. Gonzalez",
         "img_url": "https://www.citystats.xyz/images/cities/197/city_council/9"
+    },
+    {
+        "city_id": 198,
+        "council_member": "Jon Mitchell",
+        "img_url": null
     },
     {
         "city_id": 198,
@@ -8357,6 +9362,11 @@
     {
         "city_id": 198,
         "council_member": "Ryan Pereira",
+        "img_url": null
+    },
+    {
+        "city_id": 199,
+        "council_member": "Justin Elicker",
         "img_url": null
     },
     {
@@ -8511,37 +9521,7 @@
     },
     {
         "city_id": 200,
-        "council_member": "Helena N. Moreno",
-        "img_url": null
-    },
-    {
-        "city_id": 200,
-        "council_member": "Jean Paul \"JP\" Morrell",
-        "img_url": null
-    },
-    {
-        "city_id": 200,
-        "council_member": "Joseph I. Giarrusso III",
-        "img_url": null
-    },
-    {
-        "city_id": 200,
-        "council_member": "Freddie King III",
-        "img_url": null
-    },
-    {
-        "city_id": 200,
-        "council_member": "Eugene J. Green",
-        "img_url": null
-    },
-    {
-        "city_id": 200,
-        "council_member": "Lesli Harris",
-        "img_url": null
-    },
-    {
-        "city_id": 200,
-        "council_member": "Oliver Thomas",
+        "council_member": "LaToya Cantrell",
         "img_url": null
     },
     {
@@ -8577,6 +9557,46 @@
     {
         "city_id": 200,
         "council_member": "Oliver Thomas",
+        "img_url": null
+    },
+    {
+        "city_id": 200,
+        "council_member": "Helena N. Moreno",
+        "img_url": null
+    },
+    {
+        "city_id": 200,
+        "council_member": "Jean Paul \"JP\" Morrell",
+        "img_url": null
+    },
+    {
+        "city_id": 200,
+        "council_member": "Joseph I. Giarrusso III",
+        "img_url": null
+    },
+    {
+        "city_id": 200,
+        "council_member": "Freddie King III",
+        "img_url": null
+    },
+    {
+        "city_id": 200,
+        "council_member": "Eugene J. Green",
+        "img_url": null
+    },
+    {
+        "city_id": 200,
+        "council_member": "Lesli Harris",
+        "img_url": null
+    },
+    {
+        "city_id": 200,
+        "council_member": "Oliver Thomas",
+        "img_url": null
+    },
+    {
+        "city_id": 201,
+        "council_member": "Phillip D. Jones",
         "img_url": null
     },
     {
@@ -8607,6 +9627,11 @@
     {
         "city_id": 201,
         "council_member": "Dr. Patricia P. Woodbury",
+        "img_url": null
+    },
+    {
+        "city_id": 202,
+        "council_member": "Eric Adams",
         "img_url": null
     },
     {
@@ -8866,6 +9891,11 @@
     },
     {
         "city_id": 203,
+        "council_member": "Kenneth Cooper Alexander, Ph.D.",
+        "img_url": null
+    },
+    {
+        "city_id": 203,
         "council_member": "Martin A. Thomas Jr.",
         "img_url": null
     },
@@ -8898,6 +9928,11 @@
         "city_id": 203,
         "council_member": "Danica J. Royster",
         "img_url": null
+    },
+    {
+        "city_id": 204,
+        "council_member": "Larry Heikkila",
+        "img_url": "https://www.citystats.xyz/images/cities/204/mayor"
     },
     {
         "city_id": 204,
@@ -8938,6 +9973,11 @@
         "city_id": 204,
         "council_member": "Matthew Peacock",
         "img_url": "https://www.citystats.xyz/images/cities/204/city_council/8"
+    },
+    {
+        "city_id": 205,
+        "council_member": "R. Keith Summey",
+        "img_url": "https://www.citystats.xyz/images/cities/205/mayor"
     },
     {
         "city_id": 205,
@@ -8991,6 +10031,11 @@
     },
     {
         "city_id": 206,
+        "council_member": "Pamela Goynes-Brown",
+        "img_url": "https://www.citystats.xyz/images/cities/206/mayor"
+    },
+    {
+        "city_id": 206,
         "council_member": "Isaac Barron",
         "img_url": "https://www.citystats.xyz/images/cities/206/city_council/1"
     },
@@ -9011,6 +10056,11 @@
     },
     {
         "city_id": 207,
+        "council_member": "Ana Valencia",
+        "img_url": "https://www.citystats.xyz/images/cities/207/mayor"
+    },
+    {
+        "city_id": 207,
         "council_member": "Margarita L. Rios",
         "img_url": "https://www.citystats.xyz/images/cities/207/city_council/1"
     },
@@ -9028,6 +10078,11 @@
         "city_id": 207,
         "council_member": "Rick Ramirez",
         "img_url": "https://www.citystats.xyz/images/cities/207/city_council/4"
+    },
+    {
+        "city_id": 208,
+        "council_member": "Rebecca Kaplan",
+        "img_url": null
     },
     {
         "city_id": 208,
@@ -9076,6 +10131,11 @@
     },
     {
         "city_id": 209,
+        "council_member": "Esther C. Sanchez",
+        "img_url": null
+    },
+    {
+        "city_id": 209,
         "council_member": "Ryan Keim",
         "img_url": null
     },
@@ -9092,6 +10152,11 @@
     {
         "city_id": 209,
         "council_member": "Peter Weiss",
+        "img_url": null
+    },
+    {
+        "city_id": 210,
+        "council_member": "Javier Joven",
         "img_url": null
     },
     {
@@ -9123,6 +10188,11 @@
         "city_id": 210,
         "council_member": "Chris Hanie",
         "img_url": null
+    },
+    {
+        "city_id": 211,
+        "council_member": "David Holt",
+        "img_url": "https://www.citystats.xyz/images/cities/211/mayor"
     },
     {
         "city_id": 211,
@@ -9166,6 +10236,11 @@
     },
     {
         "city_id": 212,
+        "council_member": "John Bacon",
+        "img_url": "https://www.citystats.xyz/images/cities/212/mayor"
+    },
+    {
+        "city_id": 212,
         "council_member": "Kevin Gilmore",
         "img_url": "https://www.citystats.xyz/images/cities/212/city_council/1"
     },
@@ -9195,6 +10270,16 @@
         "img_url": "https://www.citystats.xyz/images/cities/212/city_council/6"
     },
     {
+        "city_id": 213,
+        "council_member": "Jean Stothert",
+        "img_url": "https://www.citystats.xyz/images/cities/213/mayor"
+    },
+    {
+        "city_id": 214,
+        "council_member": "Paul S. Leon",
+        "img_url": "https://www.citystats.xyz/images/cities/214/mayor"
+    },
+    {
         "city_id": 214,
         "council_member": "Debra Porada",
         "img_url": "https://www.citystats.xyz/images/cities/214/city_council/1"
@@ -9213,6 +10298,11 @@
         "city_id": 214,
         "council_member": "Ruben Valencia",
         "img_url": "https://www.citystats.xyz/images/cities/214/city_council/4"
+    },
+    {
+        "city_id": 215,
+        "council_member": "Dan Slater",
+        "img_url": "https://www.citystats.xyz/images/cities/215/mayor"
     },
     {
         "city_id": 215,
@@ -9246,6 +10336,11 @@
     },
     {
         "city_id": 216,
+        "council_member": "Buddy Dyer",
+        "img_url": "https://www.citystats.xyz/images/cities/216/mayor"
+    },
+    {
+        "city_id": 216,
         "council_member": "Jim Gray",
         "img_url": "https://www.citystats.xyz/images/cities/216/city_council/1"
     },
@@ -9273,6 +10368,11 @@
         "city_id": 216,
         "council_member": "Bakari F. Burns",
         "img_url": "https://www.citystats.xyz/images/cities/216/city_council/6"
+    },
+    {
+        "city_id": 217,
+        "council_member": "Curt Skoog",
+        "img_url": null
     },
     {
         "city_id": 217,
@@ -9336,6 +10436,11 @@
     },
     {
         "city_id": 218,
+        "council_member": "John C. Zaragoza",
+        "img_url": null
+    },
+    {
+        "city_id": 218,
         "council_member": "Bryan A. MacDonald",
         "img_url": null
     },
@@ -9366,6 +10471,11 @@
     },
     {
         "city_id": 219,
+        "council_member": "Rob Medina",
+        "img_url": null
+    },
+    {
+        "city_id": 219,
         "council_member": "Donny Felix",
         "img_url": null
     },
@@ -9381,6 +10491,11 @@
     },
     {
         "city_id": 220,
+        "council_member": "Laura Bettencourt",
+        "img_url": null
+    },
+    {
+        "city_id": 220,
         "council_member": "Austin Bishop",
         "img_url": null
     },
@@ -9392,6 +10507,11 @@
     {
         "city_id": 220,
         "council_member": "Eric Ohlsen",
+        "img_url": null
+    },
+    {
+        "city_id": 221,
+        "council_member": "Victor Gordo",
         "img_url": null
     },
     {
@@ -9428,6 +10548,11 @@
         "city_id": 221,
         "council_member": "Jason Lyon",
         "img_url": null
+    },
+    {
+        "city_id": 222,
+        "council_member": "Jeff Wagner",
+        "img_url": "https://www.citystats.xyz/images/cities/222/mayor"
     },
     {
         "city_id": 222,
@@ -9468,6 +10593,11 @@
         "city_id": 222,
         "council_member": "Thomas Schoenbein",
         "img_url": "https://www.citystats.xyz/images/cities/222/city_council/8"
+    },
+    {
+        "city_id": 223,
+        "council_member": "Andre Sayegh",
+        "img_url": null
     },
     {
         "city_id": 223,
@@ -9516,6 +10646,11 @@
     },
     {
         "city_id": 224,
+        "council_member": "Kevin Cole",
+        "img_url": "https://www.citystats.xyz/images/cities/224/mayor"
+    },
+    {
+        "city_id": 224,
         "council_member": "Tony Carbone",
         "img_url": "https://www.citystats.xyz/images/cities/224/city_council/1"
     },
@@ -9551,6 +10686,11 @@
     },
     {
         "city_id": 225,
+        "council_member": "Frank C. Ortis",
+        "img_url": null
+    },
+    {
+        "city_id": 225,
         "council_member": "Thomas Good, Jr.",
         "img_url": null
     },
@@ -9567,6 +10707,11 @@
     {
         "city_id": 225,
         "council_member": "Iris A. Siple",
+        "img_url": null
+    },
+    {
+        "city_id": 226,
+        "council_member": "Jason Beck",
         "img_url": null
     },
     {
@@ -9597,6 +10742,11 @@
     {
         "city_id": 226,
         "council_member": "Jon Edwards",
+        "img_url": null
+    },
+    {
+        "city_id": 227,
+        "council_member": "Rita Ali",
         "img_url": null
     },
     {
@@ -9647,6 +10797,11 @@
     {
         "city_id": 227,
         "council_member": "Michael P. Vespa",
+        "img_url": null
+    },
+    {
+        "city_id": 228,
+        "council_member": "Jim Kenney",
         "img_url": null
     },
     {
@@ -9726,6 +10881,11 @@
     },
     {
         "city_id": 229,
+        "council_member": "Kate Gallego",
+        "img_url": null
+    },
+    {
+        "city_id": 229,
         "council_member": "Ann O’Brien",
         "img_url": null
     },
@@ -9762,6 +10922,11 @@
     {
         "city_id": 229,
         "council_member": "Kesha Hodge Washington",
+        "img_url": null
+    },
+    {
+        "city_id": 230,
+        "council_member": "Ed Gainey",
         "img_url": null
     },
     {
@@ -9811,6 +10976,11 @@
     },
     {
         "city_id": 231,
+        "council_member": "John B. Muns",
+        "img_url": null
+    },
+    {
+        "city_id": 231,
         "council_member": "Tem Kayci Prince",
         "img_url": null
     },
@@ -9846,6 +11016,11 @@
     },
     {
         "city_id": 232,
+        "council_member": "Tim Sandoval",
+        "img_url": null
+    },
+    {
+        "city_id": 232,
         "council_member": "John Nolte",
         "img_url": null
     },
@@ -9876,6 +11051,11 @@
     },
     {
         "city_id": 233,
+        "council_member": "Rex Hardin",
+        "img_url": "https://www.citystats.xyz/images/cities/233/mayor"
+    },
+    {
+        "city_id": 233,
         "council_member": "Andrea McGee",
         "img_url": "https://www.citystats.xyz/images/cities/233/city_council/1"
     },
@@ -9901,6 +11081,11 @@
     },
     {
         "city_id": 234,
+        "council_member": "Ted Wheeler",
+        "img_url": null
+    },
+    {
+        "city_id": 234,
         "council_member": "Mingus Mapps",
         "img_url": null
     },
@@ -9921,6 +11106,11 @@
     },
     {
         "city_id": 235,
+        "council_member": "Shannon M. Martin",
+        "img_url": null
+    },
+    {
+        "city_id": 235,
         "council_member": "Jolien Caraballo",
         "img_url": null
     },
@@ -9937,6 +11127,11 @@
     {
         "city_id": 235,
         "council_member": "Anthony Bonna, Sr.",
+        "img_url": null
+    },
+    {
+        "city_id": 236,
+        "council_member": "Brett Smiley",
         "img_url": null
     },
     {
@@ -10016,6 +11211,11 @@
     },
     {
         "city_id": 237,
+        "council_member": "Michelle Kaufusi",
+        "img_url": "https://www.citystats.xyz/images/cities/237/mayor"
+    },
+    {
+        "city_id": 237,
         "council_member": "Katrice MacKay",
         "img_url": "https://www.citystats.xyz/images/cities/237/city_council/1"
     },
@@ -10051,6 +11251,11 @@
     },
     {
         "city_id": 238,
+        "council_member": "Nick Gradisar",
+        "img_url": null
+    },
+    {
+        "city_id": 238,
         "council_member": "Regina Maestri",
         "img_url": null
     },
@@ -10117,6 +11322,11 @@
     {
         "city_id": 238,
         "council_member": "Heather Graham",
+        "img_url": null
+    },
+    {
+        "city_id": 239,
+        "council_member": "Thomas P. Koch",
         "img_url": null
     },
     {
@@ -10166,6 +11376,11 @@
     },
     {
         "city_id": 240,
+        "council_member": "Mary-Ann Baldwin",
+        "img_url": null
+    },
+    {
+        "city_id": 240,
         "council_member": "Stormie D. Forte",
         "img_url": null
     },
@@ -10201,6 +11416,11 @@
     },
     {
         "city_id": 241,
+        "council_member": "L. Dennis Michael",
+        "img_url": "https://www.citystats.xyz/images/cities/241/mayor"
+    },
+    {
+        "city_id": 241,
         "council_member": "Lynne B. Kennedy",
         "img_url": "https://www.citystats.xyz/images/cities/241/city_council/1"
     },
@@ -10218,6 +11438,11 @@
         "city_id": 241,
         "council_member": "Ashley N. Stickler",
         "img_url": "https://www.citystats.xyz/images/cities/241/city_council/4"
+    },
+    {
+        "city_id": 242,
+        "council_member": "Hillary Schieve",
+        "img_url": "https://www.citystats.xyz/images/cities/242/mayor"
     },
     {
         "city_id": 242,
@@ -10248,6 +11473,11 @@
         "city_id": 242,
         "council_member": "Kathleen Taylor",
         "img_url": null
+    },
+    {
+        "city_id": 243,
+        "council_member": "Armondo Pavone",
+        "img_url": "https://www.citystats.xyz/images/cities/243/mayor"
     },
     {
         "city_id": 243,
@@ -10286,6 +11516,11 @@
     },
     {
         "city_id": 244,
+        "council_member": "Deborah Robertson",
+        "img_url": "https://www.citystats.xyz/images/cities/244/mayor"
+    },
+    {
+        "city_id": 244,
         "council_member": "Andy Carrizales",
         "img_url": "https://www.citystats.xyz/images/cities/244/city_council/1"
     },
@@ -10303,6 +11538,11 @@
         "city_id": 244,
         "council_member": "Joe Baca",
         "img_url": "https://www.citystats.xyz/images/cities/244/city_council/4"
+    },
+    {
+        "city_id": 245,
+        "council_member": "Bob Dubey",
+        "img_url": "https://www.citystats.xyz/images/cities/245/mayor"
     },
     {
         "city_id": 245,
@@ -10336,6 +11576,11 @@
     },
     {
         "city_id": 246,
+        "council_member": "Eduardo Martinez",
+        "img_url": null
+    },
+    {
+        "city_id": 246,
         "council_member": "Soheila Bana",
         "img_url": null
     },
@@ -10363,6 +11608,11 @@
         "city_id": 246,
         "council_member": "Cesar Zepeda",
         "img_url": null
+    },
+    {
+        "city_id": 247,
+        "council_member": "Levar Stoney",
+        "img_url": "https://www.citystats.xyz/images/cities/247/mayor"
     },
     {
         "city_id": 247,
@@ -10411,6 +11661,11 @@
     },
     {
         "city_id": 248,
+        "council_member": "Gregg Hull",
+        "img_url": null
+    },
+    {
+        "city_id": 248,
         "council_member": "Jim Owen",
         "img_url": null
     },
@@ -10438,6 +11693,11 @@
         "city_id": 248,
         "council_member": "Nicole List",
         "img_url": null
+    },
+    {
+        "city_id": 249,
+        "council_member": "Lock Dawson",
+        "img_url": "https://www.citystats.xyz/images/cities/249/mayor"
     },
     {
         "city_id": 249,
@@ -10476,6 +11736,11 @@
     },
     {
         "city_id": 250,
+        "council_member": "Kim Norton",
+        "img_url": "https://www.citystats.xyz/images/cities/250/mayor"
+    },
+    {
+        "city_id": 250,
         "council_member": "Brooke Carlson",
         "img_url": "https://www.citystats.xyz/images/cities/250/city_council/1"
     },
@@ -10508,6 +11773,11 @@
         "city_id": 250,
         "council_member": "Molly Dennis",
         "img_url": "https://www.citystats.xyz/images/cities/250/city_council/7"
+    },
+    {
+        "city_id": 251,
+        "council_member": "Malik Evans",
+        "img_url": null
     },
     {
         "city_id": 251,
@@ -10552,6 +11822,11 @@
     {
         "city_id": 251,
         "council_member": "Jose Peo",
+        "img_url": null
+    },
+    {
+        "city_id": 252,
+        "council_member": "Tom McNamara",
         "img_url": null
     },
     {
@@ -10626,6 +11901,11 @@
     },
     {
         "city_id": 253,
+        "council_member": "Bruce Houdesheldt",
+        "img_url": "https://www.citystats.xyz/images/cities/253/mayor"
+    },
+    {
+        "city_id": 253,
         "council_member": "Krista Bernasconi",
         "img_url": "https://www.citystats.xyz/images/cities/253/city_council/1"
     },
@@ -10643,6 +11923,11 @@
         "city_id": 253,
         "council_member": "Tracy Mendonsa",
         "img_url": "https://www.citystats.xyz/images/cities/253/city_council/4"
+    },
+    {
+        "city_id": 254,
+        "council_member": "Craig Morgan",
+        "img_url": "https://www.citystats.xyz/images/cities/254/mayor"
     },
     {
         "city_id": 254,
@@ -10673,6 +11958,11 @@
         "city_id": 254,
         "council_member": "Hilda Montgomery",
         "img_url": "https://www.citystats.xyz/images/cities/254/city_council/6"
+    },
+    {
+        "city_id": 255,
+        "council_member": "Darrell Steinberg",
+        "img_url": "https://www.citystats.xyz/images/cities/255/mayor"
     },
     {
         "city_id": 255,
@@ -10716,6 +12006,11 @@
     },
     {
         "city_id": 256,
+        "council_member": "Melvin Carter",
+        "img_url": null
+    },
+    {
+        "city_id": 256,
         "council_member": "Russel Balenger",
         "img_url": "https://www.citystats.xyz/images/cities/256/city_council/1"
     },
@@ -10750,6 +12045,16 @@
         "img_url": "https://www.citystats.xyz/images/cities/256/city_council/7"
     },
     {
+        "city_id": 257,
+        "council_member": "Chris Hoy",
+        "img_url": "https://www.citystats.xyz/images/cities/257/mayor"
+    },
+    {
+        "city_id": 258,
+        "council_member": "Kimbley Craig",
+        "img_url": null
+    },
+    {
         "city_id": 258,
         "council_member": "Carla Viviana González",
         "img_url": null
@@ -10777,6 +12082,11 @@
     {
         "city_id": 258,
         "council_member": "Anthony Rocha",
+        "img_url": null
+    },
+    {
+        "city_id": 259,
+        "council_member": "Erin Mendenhall",
         "img_url": null
     },
     {
@@ -10813,6 +12123,11 @@
         "city_id": 259,
         "council_member": "Sarah Young",
         "img_url": "https://www.citystats.xyz/images/cities/259/city_council/7"
+    },
+    {
+        "city_id": 260,
+        "council_member": "Ron Nirenberg",
+        "img_url": null
     },
     {
         "city_id": 260,
@@ -10866,6 +12181,11 @@
     },
     {
         "city_id": 261,
+        "council_member": "Helen Tran (D)",
+        "img_url": null
+    },
+    {
+        "city_id": 261,
         "council_member": "Theodore Sanchez",
         "img_url": null
     },
@@ -10897,6 +12217,11 @@
     {
         "city_id": 261,
         "council_member": "Damon L. Alexander",
+        "img_url": null
+    },
+    {
+        "city_id": 262,
+        "council_member": "Todd Gloria",
         "img_url": null
     },
     {
@@ -10946,6 +12271,11 @@
     },
     {
         "city_id": 263,
+        "council_member": "Rusty Paul",
+        "img_url": "https://www.citystats.xyz/images/cities/263/mayor"
+    },
+    {
+        "city_id": 263,
         "council_member": "John Paulson",
         "img_url": "https://www.citystats.xyz/images/cities/263/city_council/1"
     },
@@ -10973,6 +12303,11 @@
         "city_id": 263,
         "council_member": "Andy Bauman",
         "img_url": "https://www.citystats.xyz/images/cities/263/city_council/6"
+    },
+    {
+        "city_id": 264,
+        "council_member": "London Breed",
+        "img_url": null
     },
     {
         "city_id": 264,
@@ -11031,6 +12366,11 @@
     },
     {
         "city_id": 265,
+        "council_member": "Matt Mahan",
+        "img_url": null
+    },
+    {
+        "city_id": 265,
         "council_member": "Rosemary Kamei",
         "img_url": null
     },
@@ -11071,6 +12411,11 @@
     },
     {
         "city_id": 266,
+        "council_member": "Amourence Lee",
+        "img_url": null
+    },
+    {
+        "city_id": 266,
         "council_member": "Lisa Diaz Nash",
         "img_url": null
     },
@@ -11088,6 +12433,11 @@
         "city_id": 266,
         "council_member": "Rich Hedges",
         "img_url": null
+    },
+    {
+        "city_id": 267,
+        "council_member": "Valerie Amezcua",
+        "img_url": "https://www.citystats.xyz/images/cities/267/mayor"
     },
     {
         "city_id": 267,
@@ -11121,6 +12471,11 @@
     },
     {
         "city_id": 268,
+        "council_member": "Lisa M. Gillmor",
+        "img_url": "https://www.citystats.xyz/images/cities/268/mayor"
+    },
+    {
+        "city_id": 268,
         "council_member": "Kathy Watanabe",
         "img_url": "https://www.citystats.xyz/images/cities/268/city_council/1"
     },
@@ -11151,6 +12506,11 @@
     },
     {
         "city_id": 269,
+        "council_member": "Jason Gibbs",
+        "img_url": "https://www.citystats.xyz/images/cities/269/mayor"
+    },
+    {
+        "city_id": 269,
         "council_member": "Cameron Smyth",
         "img_url": "https://www.citystats.xyz/images/cities/269/city_council/1"
     },
@@ -11171,6 +12531,11 @@
     },
     {
         "city_id": 270,
+        "council_member": "Alice Patino",
+        "img_url": "https://www.citystats.xyz/images/cities/270/mayor"
+    },
+    {
+        "city_id": 270,
         "council_member": "Gloria Soto",
         "img_url": "https://www.citystats.xyz/images/cities/270/city_council/1"
     },
@@ -11188,6 +12553,11 @@
         "city_id": 270,
         "council_member": "Mike Cordero",
         "img_url": "https://www.citystats.xyz/images/cities/270/city_council/4"
+    },
+    {
+        "city_id": 271,
+        "council_member": "Eddie Alvarez",
+        "img_url": null
     },
     {
         "city_id": 271,
@@ -11223,6 +12593,11 @@
         "city_id": 271,
         "council_member": "[email protected]",
         "img_url": null
+    },
+    {
+        "city_id": 272,
+        "council_member": "Van R. Johnson, II",
+        "img_url": "https://www.citystats.xyz/images/cities/272/mayor"
     },
     {
         "city_id": 272,
@@ -11266,6 +12641,11 @@
     },
     {
         "city_id": 273,
+        "council_member": "David D. Ortega",
+        "img_url": "https://www.citystats.xyz/images/cities/273/mayor"
+    },
+    {
+        "city_id": 273,
         "council_member": "Tammy Caputi",
         "img_url": "https://www.citystats.xyz/images/cities/273/city_council/1"
     },
@@ -11293,6 +12673,11 @@
         "city_id": 273,
         "council_member": "Solange Whitehead",
         "img_url": "https://www.citystats.xyz/images/cities/273/city_council/6"
+    },
+    {
+        "city_id": 274,
+        "council_member": "Bruce Harrell",
+        "img_url": null
     },
     {
         "city_id": 274,
@@ -11341,6 +12726,11 @@
     },
     {
         "city_id": 275,
+        "council_member": "Tom Arceneaux",
+        "img_url": null
+    },
+    {
+        "city_id": 275,
         "council_member": "Tabatha H. Taylor",
         "img_url": null
     },
@@ -11376,6 +12766,11 @@
     },
     {
         "city_id": 276,
+        "council_member": "Fred D. Thomas",
+        "img_url": "https://www.citystats.xyz/images/cities/276/mayor"
+    },
+    {
+        "city_id": 276,
         "council_member": "Mike Judge",
         "img_url": "https://www.citystats.xyz/images/cities/276/city_council/1"
     },
@@ -11393,6 +12788,11 @@
         "city_id": 276,
         "council_member": "Rocky Rhodes",
         "img_url": "https://www.citystats.xyz/images/cities/276/city_council/4"
+    },
+    {
+        "city_id": 277,
+        "council_member": "Paul TenHaken",
+        "img_url": "https://www.citystats.xyz/images/cities/277/mayor"
     },
     {
         "city_id": 277,
@@ -11433,6 +12833,11 @@
         "city_id": 277,
         "council_member": "Pat Starr",
         "img_url": "https://www.citystats.xyz/images/cities/277/city_council/8"
+    },
+    {
+        "city_id": 278,
+        "council_member": "James Mueller",
+        "img_url": "https://www.citystats.xyz/images/cities/278/mayor"
     },
     {
         "city_id": 278,
@@ -11481,6 +12886,11 @@
     },
     {
         "city_id": 279,
+        "council_member": "Khalid Kamau",
+        "img_url": "https://www.citystats.xyz/images/cities/279/mayor"
+    },
+    {
+        "city_id": 279,
         "council_member": "Catherine Foster-Rowell",
         "img_url": "https://www.citystats.xyz/images/cities/279/city_council/1"
     },
@@ -11516,6 +12926,11 @@
     },
     {
         "city_id": 280,
+        "council_member": "Ed Lawson",
+        "img_url": "https://www.citystats.xyz/images/cities/280/mayor"
+    },
+    {
+        "city_id": 280,
         "council_member": "Donald Abbott",
         "img_url": "https://www.citystats.xyz/images/cities/280/city_council/1"
     },
@@ -11538,6 +12953,11 @@
         "city_id": 280,
         "council_member": "Kristopher Dahir",
         "img_url": "https://www.citystats.xyz/images/cities/280/city_council/5"
+    },
+    {
+        "city_id": 281,
+        "council_member": "Pam Haley",
+        "img_url": null
     },
     {
         "city_id": 281,
@@ -11576,6 +12996,11 @@
     },
     {
         "city_id": 282,
+        "council_member": "Nadine Woodward",
+        "img_url": "https://www.citystats.xyz/images/cities/282/mayor"
+    },
+    {
+        "city_id": 282,
         "council_member": "Lori Kinnear",
         "img_url": "https://www.citystats.xyz/images/cities/282/city_council/1"
     },
@@ -11608,6 +13033,11 @@
         "city_id": 282,
         "council_member": "Karen Stratton",
         "img_url": "https://www.citystats.xyz/images/cities/282/city_council/7"
+    },
+    {
+        "city_id": 283,
+        "council_member": "Misty Buscher",
+        "img_url": null
     },
     {
         "city_id": 283,
@@ -11658,6 +13088,11 @@
         "city_id": 283,
         "council_member": "Ralph Hanauer",
         "img_url": "https://www.citystats.xyz/images/cities/283/city_council/10"
+    },
+    {
+        "city_id": 284,
+        "council_member": "Domenic Sarno",
+        "img_url": null
     },
     {
         "city_id": 284,
@@ -11726,6 +13161,11 @@
     },
     {
         "city_id": 285,
+        "council_member": "Ken McClure",
+        "img_url": null
+    },
+    {
+        "city_id": 285,
         "council_member": "Heather Hardinger",
         "img_url": null
     },
@@ -11762,6 +13202,11 @@
     {
         "city_id": 285,
         "council_member": "Matthew Simpson",
+        "img_url": null
+    },
+    {
+        "city_id": 286,
+        "council_member": "Caroline Simmons",
         "img_url": null
     },
     {
@@ -11966,6 +13411,11 @@
     },
     {
         "city_id": 287,
+        "council_member": "Michael C. Taylor",
+        "img_url": null
+    },
+    {
+        "city_id": 287,
         "council_member": "Liz Sierawski",
         "img_url": "https://www.citystats.xyz/images/cities/287/city_council/1"
     },
@@ -11993,6 +13443,11 @@
         "city_id": 287,
         "council_member": "Barbara A. Ziarko",
         "img_url": "https://www.citystats.xyz/images/cities/287/city_council/6"
+    },
+    {
+        "city_id": 288,
+        "council_member": "Tishaura Jones",
+        "img_url": null
     },
     {
         "city_id": 288,
@@ -12066,6 +13521,11 @@
     },
     {
         "city_id": 289,
+        "council_member": "Kevin J. Lincoln, II",
+        "img_url": null
+    },
+    {
+        "city_id": 289,
         "council_member": "Michele Padilla",
         "img_url": null
     },
@@ -12092,6 +13552,11 @@
     {
         "city_id": 289,
         "council_member": "Kimberly Warmsley",
+        "img_url": null
+    },
+    {
+        "city_id": 290,
+        "council_member": "Ken Welch",
         "img_url": null
     },
     {
@@ -12136,6 +13601,11 @@
     },
     {
         "city_id": 291,
+        "council_member": "Joe R. Zimmerman",
+        "img_url": "https://www.citystats.xyz/images/cities/291/mayor"
+    },
+    {
+        "city_id": 291,
         "council_member": "William Ferguson",
         "img_url": "https://www.citystats.xyz/images/cities/291/city_council/1"
     },
@@ -12163,6 +13633,11 @@
         "city_id": 291,
         "council_member": "Carol K. McCutcheon",
         "img_url": "https://www.citystats.xyz/images/cities/291/city_council/6"
+    },
+    {
+        "city_id": 292,
+        "council_member": "Larry Klein",
+        "img_url": null
     },
     {
         "city_id": 292,
@@ -12196,6 +13671,11 @@
     },
     {
         "city_id": 293,
+        "council_member": "Skip Hall",
+        "img_url": null
+    },
+    {
+        "city_id": 293,
         "council_member": "Chris Judd",
         "img_url": null
     },
@@ -12223,6 +13703,11 @@
         "city_id": 293,
         "council_member": "Jack Hastings",
         "img_url": null
+    },
+    {
+        "city_id": 294,
+        "council_member": "Ben Walsh",
+        "img_url": "https://www.citystats.xyz/images/cities/294/mayor"
     },
     {
         "city_id": 294,
@@ -12276,6 +13761,11 @@
     },
     {
         "city_id": 295,
+        "council_member": "Victoria Woodards",
+        "img_url": "https://www.citystats.xyz/images/cities/295/mayor"
+    },
+    {
+        "city_id": 295,
         "council_member": "John Hines",
         "img_url": "https://www.citystats.xyz/images/cities/295/city_council/1"
     },
@@ -12316,6 +13806,11 @@
     },
     {
         "city_id": 296,
+        "council_member": "John E. Dailey,",
+        "img_url": "https://www.citystats.xyz/images/cities/296/mayor"
+    },
+    {
+        "city_id": 296,
         "council_member": "Jeremy Matlow",
         "img_url": "https://www.citystats.xyz/images/cities/296/city_council/1"
     },
@@ -12333,6 +13828,11 @@
         "city_id": 296,
         "council_member": "Dianne Williams-Cox",
         "img_url": "https://www.citystats.xyz/images/cities/296/city_council/4"
+    },
+    {
+        "city_id": 297,
+        "council_member": "Jane Castor",
+        "img_url": "https://www.citystats.xyz/images/cities/297/mayor"
     },
     {
         "city_id": 297,
@@ -12371,6 +13871,11 @@
     },
     {
         "city_id": 298,
+        "council_member": "Zak Schwank",
+        "img_url": "https://www.citystats.xyz/images/cities/298/mayor"
+    },
+    {
+        "city_id": 298,
         "council_member": "James \"Stew\" Stewart",
         "img_url": "https://www.citystats.xyz/images/cities/298/city_council/1"
     },
@@ -12388,6 +13893,11 @@
         "city_id": 298,
         "council_member": "Brenden Kalfus",
         "img_url": "https://www.citystats.xyz/images/cities/298/city_council/4"
+    },
+    {
+        "city_id": 299,
+        "council_member": "Corey D Woods",
+        "img_url": "https://www.citystats.xyz/images/cities/299/mayor"
     },
     {
         "city_id": 299,
@@ -12418,6 +13928,11 @@
         "city_id": 299,
         "council_member": "Joel Navarro",
         "img_url": "https://www.citystats.xyz/images/cities/299/city_council/6"
+    },
+    {
+        "city_id": 300,
+        "council_member": "Jan Kulmann",
+        "img_url": null
     },
     {
         "city_id": 300,
@@ -12461,6 +13976,11 @@
     },
     {
         "city_id": 301,
+        "council_member": "Kevin McNamee",
+        "img_url": "https://www.citystats.xyz/images/cities/301/mayor"
+    },
+    {
+        "city_id": 301,
         "council_member": "Al Adam",
         "img_url": "https://www.citystats.xyz/images/cities/301/city_council/1"
     },
@@ -12478,6 +13998,11 @@
         "city_id": 301,
         "council_member": "Mikey Taylor",
         "img_url": "https://www.citystats.xyz/images/cities/301/city_council/4"
+    },
+    {
+        "city_id": 302,
+        "council_member": "Wade Kapszukiewicz",
+        "img_url": null
     },
     {
         "city_id": 302,
@@ -12541,6 +14066,11 @@
     },
     {
         "city_id": 303,
+        "council_member": "George K. Chen",
+        "img_url": "https://www.citystats.xyz/images/cities/303/mayor"
+    },
+    {
+        "city_id": 303,
         "council_member": "Jon Kaji",
         "img_url": "https://www.citystats.xyz/images/cities/303/city_council/1"
     },
@@ -12571,6 +14101,11 @@
     },
     {
         "city_id": 304,
+        "council_member": "- Regina Romero",
+        "img_url": "https://www.citystats.xyz/images/cities/304/mayor"
+    },
+    {
+        "city_id": 304,
         "council_member": "Lane Santa Cruz",
         "img_url": "https://www.citystats.xyz/images/cities/304/city_council/1"
     },
@@ -12598,6 +14133,11 @@
         "city_id": 304,
         "council_member": "Steve Kozachik",
         "img_url": "https://www.citystats.xyz/images/cities/304/city_council/6"
+    },
+    {
+        "city_id": 305,
+        "council_member": "G. T. Bynum",
+        "img_url": null
     },
     {
         "city_id": 305,
@@ -12646,6 +14186,11 @@
     },
     {
         "city_id": 306,
+        "council_member": "Walt Maddox",
+        "img_url": "https://www.citystats.xyz/images/cities/306/mayor"
+    },
+    {
+        "city_id": 306,
         "council_member": "Matthew Wilson",
         "img_url": "https://www.citystats.xyz/images/cities/306/city_council/1"
     },
@@ -12681,6 +14226,11 @@
     },
     {
         "city_id": 307,
+        "council_member": "Don Warren",
+        "img_url": "https://www.citystats.xyz/images/cities/307/mayor"
+    },
+    {
+        "city_id": 307,
         "council_member": "Stuart Hene",
         "img_url": "https://www.citystats.xyz/images/cities/307/city_council/1"
     },
@@ -12711,6 +14261,11 @@
     },
     {
         "city_id": 308,
+        "council_member": "John Carli",
+        "img_url": "https://www.citystats.xyz/images/cities/308/mayor"
+    },
+    {
+        "city_id": 308,
         "council_member": "Roy Stockton",
         "img_url": "https://www.citystats.xyz/images/cities/308/city_council/1"
     },
@@ -12733,6 +14288,11 @@
         "city_id": 308,
         "council_member": "Jeanette Wylie",
         "img_url": "https://www.citystats.xyz/images/cities/308/city_council/5"
+    },
+    {
+        "city_id": 309,
+        "council_member": "Robert H. Mcconnell",
+        "img_url": null
     },
     {
         "city_id": 309,
@@ -12766,6 +14326,11 @@
     },
     {
         "city_id": 310,
+        "council_member": "Anne McEnerny-Ogle",
+        "img_url": "https://www.citystats.xyz/images/cities/310/mayor"
+    },
+    {
+        "city_id": 310,
         "council_member": "Kim D. Harless",
         "img_url": "https://www.citystats.xyz/images/cities/310/city_council/1"
     },
@@ -12793,6 +14358,11 @@
         "city_id": 310,
         "council_member": "Sarah J. Fox",
         "img_url": "https://www.citystats.xyz/images/cities/310/city_council/6"
+    },
+    {
+        "city_id": 311,
+        "council_member": "Joe Schroeder",
+        "img_url": "https://www.citystats.xyz/images/cities/311/mayor"
     },
     {
         "city_id": 311,
@@ -12826,6 +14396,11 @@
     },
     {
         "city_id": 312,
+        "council_member": "Debra Jones",
+        "img_url": "https://www.citystats.xyz/images/cities/312/mayor"
+    },
+    {
+        "city_id": 312,
         "council_member": "Elizabeth Becerra",
         "img_url": "https://www.citystats.xyz/images/cities/312/city_council/1"
     },
@@ -12843,6 +14418,11 @@
         "city_id": 312,
         "council_member": "Leslie Irving",
         "img_url": "https://www.citystats.xyz/images/cities/312/city_council/4"
+    },
+    {
+        "city_id": 313,
+        "council_member": "Robert M. \"Bobby\" Dyer",
+        "img_url": null
     },
     {
         "city_id": 313,
@@ -12896,6 +14476,11 @@
     },
     {
         "city_id": 314,
+        "council_member": "Brian Poochigian",
+        "img_url": null
+    },
+    {
+        "city_id": 314,
         "council_member": "Brett Taylor",
         "img_url": null
     },
@@ -12913,6 +14498,11 @@
         "city_id": 314,
         "council_member": "Emmanuel Hernandez Soto",
         "img_url": null
+    },
+    {
+        "city_id": 315,
+        "council_member": "Dillon Meek",
+        "img_url": "https://www.citystats.xyz/images/cities/315/mayor"
     },
     {
         "city_id": 315,
@@ -12938,6 +14528,11 @@
         "city_id": 315,
         "council_member": "Jim Holmes",
         "img_url": "https://www.citystats.xyz/images/cities/315/city_council/5"
+    },
+    {
+        "city_id": 316,
+        "council_member": "James R. Fouts",
+        "img_url": null
     },
     {
         "city_id": 316,
@@ -12972,6 +14567,11 @@
     {
         "city_id": 316,
         "council_member": "Eddie Kabacinski",
+        "img_url": null
+    },
+    {
+        "city_id": 317,
+        "council_member": "Muriel Bowser",
         "img_url": null
     },
     {
@@ -13037,6 +14637,11 @@
     {
         "city_id": 317,
         "council_member": "Trayon White",
+        "img_url": null
+    },
+    {
+        "city_id": 318,
+        "council_member": "Neil O'Leary",
         "img_url": null
     },
     {
@@ -13116,6 +14721,11 @@
     },
     {
         "city_id": 319,
+        "council_member": "Rosario Diaz",
+        "img_url": "https://www.citystats.xyz/images/cities/319/mayor"
+    },
+    {
+        "city_id": 319,
         "council_member": "Letty Lopez-Viado",
         "img_url": "https://www.citystats.xyz/images/cities/319/city_council/1"
     },
@@ -13133,6 +14743,11 @@
         "city_id": 319,
         "council_member": "Ollie Cantos",
         "img_url": "https://www.citystats.xyz/images/cities/319/city_council/4"
+    },
+    {
+        "city_id": 320,
+        "council_member": "Dirk Burton",
+        "img_url": "https://www.citystats.xyz/images/cities/320/mayor"
     },
     {
         "city_id": 320,
@@ -13171,6 +14786,11 @@
     },
     {
         "city_id": 321,
+        "council_member": "Nancy McNally",
+        "img_url": "https://www.citystats.xyz/images/cities/321/mayor"
+    },
+    {
+        "city_id": 321,
         "council_member": "David DeMott",
         "img_url": "https://www.citystats.xyz/images/cities/321/city_council/1"
     },
@@ -13201,6 +14821,11 @@
     },
     {
         "city_id": 322,
+        "council_member": "Keith A. James",
+        "img_url": null
+    },
+    {
+        "city_id": 322,
         "council_member": "Cathleen Ward",
         "img_url": "https://www.citystats.xyz/images/cities/322/city_council/1"
     },
@@ -13223,6 +14848,11 @@
         "city_id": 322,
         "council_member": "Christina Lambert",
         "img_url": "https://www.citystats.xyz/images/cities/322/city_council/5"
+    },
+    {
+        "city_id": 323,
+        "council_member": "Karen Lang",
+        "img_url": "https://www.citystats.xyz/images/cities/323/mayor"
     },
     {
         "city_id": 323,
@@ -13256,6 +14886,11 @@
     },
     {
         "city_id": 324,
+        "council_member": "Stephen Santellana ",
+        "img_url": "https://www.citystats.xyz/images/cities/324/mayor"
+    },
+    {
+        "city_id": 324,
         "council_member": "Bobby Whiteley ",
         "img_url": "https://www.citystats.xyz/images/cities/324/city_council/1"
     },
@@ -13283,6 +14918,11 @@
         "city_id": 324,
         "council_member": "Steve Jackson ",
         "img_url": "https://www.citystats.xyz/images/cities/324/city_council/6"
+    },
+    {
+        "city_id": 325,
+        "council_member": "Dr. Brandon Whipple",
+        "img_url": "https://www.citystats.xyz/images/cities/325/mayor"
     },
     {
         "city_id": 325,
@@ -13316,6 +14956,11 @@
     },
     {
         "city_id": 326,
+        "council_member": "Bill Saffo",
+        "img_url": null
+    },
+    {
+        "city_id": 326,
         "council_member": "Margaret Haynes",
         "img_url": null
     },
@@ -13342,6 +14987,11 @@
     {
         "city_id": 326,
         "council_member": "Luke Waddell",
+        "img_url": null
+    },
+    {
+        "city_id": 327,
+        "council_member": "Allen Joines",
         "img_url": null
     },
     {
@@ -13382,6 +15032,11 @@
     {
         "city_id": 327,
         "council_member": "Robert C. Clark",
+        "img_url": null
+    },
+    {
+        "city_id": 328,
+        "council_member": "John McCormac",
         "img_url": null
     },
     {
@@ -13428,6 +15083,11 @@
         "city_id": 328,
         "council_member": "Brian Small",
         "img_url": "https://www.citystats.xyz/images/cities/328/city_council/9"
+    },
+    {
+        "city_id": 329,
+        "council_member": "Joseph M. Petty",
+        "img_url": null
     },
     {
         "city_id": 329,
@@ -13478,6 +15138,11 @@
         "city_id": 329,
         "council_member": "Etel Haxhiaj",
         "img_url": null
+    },
+    {
+        "city_id": 330,
+        "council_member": "Mike Spano",
+        "img_url": "https://www.citystats.xyz/images/cities/330/mayor"
     },
     {
         "city_id": 330,

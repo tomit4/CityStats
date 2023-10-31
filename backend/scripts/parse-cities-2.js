@@ -22,8 +22,8 @@ fs.readdirSync(directoryPath)
     })
 
 // Write the combined data to a new JSON file
-const outputFile = 'city_government_council.json'
+const outputFile = 'base_cities_government_council.json'
 const outputFilePath = path.join(__dirname, outputFile)
-fs.writeFileSync(outputFilePath, JSON.stringify(combinedData, null, 2)) // Use 2 for pretty-printing
+fs.writeFileSync(outputFilePath, JSON.stringify(combinedData.flat(), null, 2)) // Use 2 for pretty-printing
 
 console.log(`Combined data written to ${outputFile}`)
