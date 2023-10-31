@@ -64,10 +64,13 @@ class CityServiceDetails {
     async _grabSingleCityDeets(knex, id, details, field) {
         const city = await this._grabMinCityInfo(knex, id)
         let deets = {}
-        if (this._objFields.includes(field) && isNaN(Number(details))) {
+        if (this._objFields.includes(field) && Number.isNaN(Number(details))) {
             const table = `cities_${field}`
             deets = await this._grabObjDetails(knex, id, details, table)
-        } else if (this._arrFields.includes(field) && !isNaN(Number(details))) {
+        } else if (
+            this._arrFields.includes(field) &&
+            !Number.isNaN(Number(details))
+        ) {
             const index = details - 1
             const fieldName = field.slice(0, -1)
             deets = await this._grabArrDetails(knex, id, index, fieldName)
@@ -109,7 +112,7 @@ class CityServiceDetails {
         const ids = await this.grabCityIdByName(knex, idOrName)
         const cityIds = typeof ids === 'string' ? [ids] : ids
         const cities = []
-        if (isNaN(Number(query)))
+        if (Number.isNaN(Number(query)))
             throw Error(`Query: ${query} must be a number`)
         for (const id of cityIds) {
             const city = await this._grabMinCityInfo(knex, id)

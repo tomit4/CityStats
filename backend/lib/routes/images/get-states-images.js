@@ -6,11 +6,11 @@ module.exports = async (fastify, options, done) => {
             forceRequestEncoding: 'gzip',
         },
         handler: async (request, reply) => {
-            // TODO: use knex to grab stateId by Name?
-            // TODO: grab id by idOrName method
-            // (i.e. images/states/Alabama/senators/1 etc.)
+            const { knex, stateService } = fastify
             const { id, govBody, imageId } = request.params
-            const folderId = Number(id) < 10 ? `0${id}` : `${id}`
+            const idOrName = await stateService.grabIdByName(knex, id)
+            const folderId =
+                Number(idOrName) < 10 ? `0${idOrName}` : `${idOrName}`
             const imgId = Number(imageId) < 10 ? `0${imageId}` : `${imageId}`
             let imgPath
             if (govBody === 'senators') {

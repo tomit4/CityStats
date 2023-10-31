@@ -35,7 +35,7 @@ class SingleStateServiceDetails {
     async grabIdByName(knex, idOrName) {
         try {
             let id
-            if (isNaN(Number(idOrName))) {
+            if (Number.isNaN(Number(idOrName))) {
                 const allStateNames = await this._grabAllStateNames(knex)
                 if (allStateNames.includes(idOrName)) {
                     id = await this._grabStateIdByName(knex, idOrName)
@@ -108,12 +108,15 @@ class SingleStateServiceDetails {
     _deetConditionals(field, details) {
         return {
             relFieldIsValid:
-                this._statsFields.includes(field) && isNaN(Number(details)),
+                this._statsFields.includes(field) &&
+                Number.isNaN(Number(details)),
             relFieldIsInvalid:
-                this._statsFields.includes(field) && !isNaN(Number(details)),
-            senFieldIsValid: field === 'senators' && !isNaN(Number(details)),
+                this._statsFields.includes(field) &&
+                !Number.isNaN(Number(details)),
+            senFieldIsValid:
+                field === 'senators' && !Number.isNaN(Number(details)),
             delFieldIsValid:
-                field === 'house_delegates' && !isNaN(Number(details)),
+                field === 'house_delegates' && !Number.isNaN(Number(details)),
             deetsNotInRange: reps =>
                 Number(details) > reps.length || Number(details) === 0,
             throwNoDeetsErr: (details, field) => {

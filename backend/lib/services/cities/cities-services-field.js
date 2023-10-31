@@ -67,7 +67,7 @@ class CityServiceField extends CityServiceDetails {
     }
     async grabCityIdByName(knex, idOrName) {
         try {
-            if (isNaN(Number(idOrName))) {
+            if (Number.isNaN(Number(idOrName))) {
                 const allCityNames = await this._grabAllCityNames(knex)
                 if (allCityNames.includes(idOrName)) {
                     return await this._grabCityIdsByName(knex, idOrName)
