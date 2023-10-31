@@ -22,9 +22,42 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 -   [x] Add [fastify-static](https://github.com/fastify/fastify-static) for image hosting of senator/house_delegates/mayors/city_counselors images
 -   [x] Set up appropriate route for image filepath (i.e cities/1/government/city_council/1/image) (half done)
 -   [x] Set up imagemagick script to scale images (reasonable sizes for frontend display)
--   [ ] Set up scripts and db to update state govenor name (and add image?)
+-   [x] Set up scripts and db to update state govenor name
 -   [ ] Integrate Basic Auth using a separate sqlite db that holds API keys
--   [ ] Rewrite mock data returns to reflect updated data returned from web scraping scripts
+-   [x] Rewrite mock data returns to reflect updated data returned from web scraping scripts
+
+**Backend_V3 (next version)**
+
+-   [ ] Adjust states tables to output json output/schemas to return state government like so (governor image currently not brought in, just names):
+
+```
+government: {
+    "governor": {
+        "governor_name": "Governor Name",
+        "img_url": "https://www.citystats.xyz/images/states/2/governor"
+    },
+    "senators": [
+        {
+            "senator_name": "Senator 1 Name",
+            "img_url: "https://www.citystats.xyz/images/states/2/senators/1
+        },
+        {
+            "senator_name": "Senator 2 Name",
+            "img_url: "https://www.citystats.xyz/images/states/2/senators/2
+        },
+    ],
+    "house_delegates": [
+        {
+            "delegate_name": "Delegate 1 Name",
+            "img_url: "https://www.citystats.xyz/images/states/2/delegates/1
+        },
+        {
+            "delegate_name": "Delegate 2 Name",
+            "img_url: "https://www.citystats.xyz/images/states/2/delegates/2
+        },
+    ]
+}
+```
 
 **Frontend:**
 
