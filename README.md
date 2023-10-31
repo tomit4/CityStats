@@ -26,6 +26,12 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 -   [ ] Integrate Basic Auth using a separate sqlite db that holds API keys
 -   [x] Rewrite mock data returns to reflect updated data returned from web scraping scripts
 
+:recycle: **Cleanup**
+
+-   [ ] Create a new repository for your web scraping/other scripts
+-   [ ] Clean up file/directory structure
+-   [ ] Write up a separate README for future you to utilize scripts and update citystats db
+
 **Backend_V3 (next version)**
 
 -   [ ] Adjust states tables to output json output/schemas to return state government like so (governor image currently not brought in, just names):
