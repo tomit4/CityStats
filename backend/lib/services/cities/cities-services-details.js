@@ -16,22 +16,16 @@ class CityServiceDetails {
     async _grabObjDetails(knex, id, details, table) {
         try {
             let field = null
+            const localDetails =
+                details === 'mayor' ? [details, 'img_url'] : details
             const deets = {}
             if (details !== 'city_council') {
                 field = table.split('_').pop()
-                if (details === 'mayor') {
-                    deets[field] = await knex
-                        .where('city_id', id)
-                        .select('mayor', 'img_url')
-                        .from(table)
-                        .first()
-                } else {
-                    deets[field] = await knex
-                        .where('city_id', id)
-                        .select(details)
-                        .from(table)
-                        .first()
-                }
+                deets[field] = await knex
+                    .where('city_id', id)
+                    .select(localDetails)
+                    .from(table)
+                    .first()
             } else {
                 field = details
                 deets[field] = await this._grabGovCouncilMembersById(knex, id)
