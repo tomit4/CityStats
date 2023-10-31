@@ -120,13 +120,17 @@ class CityServiceDetails {
                 const councilMember = (
                     await knex
                         .where('city_id', id)
-                        .select('council_member')
+                        .select('council_member', 'img_url')
                         .from('cities_government_council')
                         .limit(1)
                         .offset(query - 1)
                 ).map(member => {
-                    return member.council_member
+                    return {
+                        council_member: member.council_member,
+                        img_url: member.img_url,
+                    }
                 })
+                console.log('councilMember :=>', councilMember)
                 if (!councilMember.length)
                     throw Error(
                         `No Council Member returned for Queried Index: ${query} for city id: ${id}`,
