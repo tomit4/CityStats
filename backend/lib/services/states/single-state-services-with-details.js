@@ -115,7 +115,7 @@ class SingleStateServiceDetails {
             )
         }
     }
-    _deetConditionals(idOrName, field, details, subdeets) {
+    _deetConditionals(field, details, subdeets) {
         return {
             relFieldIsValid:
                 this._statsFields.includes(field) &&
@@ -165,7 +165,7 @@ class SingleStateServiceDetails {
             deetsNotInRange,
             throwNoDeetsErr,
             throwGenErr,
-        } = this._deetConditionals(id, field, details, subdeets)
+        } = this._deetConditionals(field, details, subdeets)
 
         if (relFieldIsValid) {
             const table = `states_${field}`
