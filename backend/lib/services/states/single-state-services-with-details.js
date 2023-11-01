@@ -115,7 +115,7 @@ class SingleStateServiceDetails {
             )
         }
     }
-    _deetConditionals(field, details, subdeets) {
+    _deetConditionals(idOrName, field, details, subdeets) {
         return {
             relFieldIsValid:
                 this._statsFields.includes(field) &&
@@ -131,6 +131,11 @@ class SingleStateServiceDetails {
             throwNoDeetsErr: (subdeets, details) => {
                 throw new Error(
                     `No Info on subquery: ${subdeets} in detail field: ${details}`,
+                )
+            },
+            throwGenErr: (details, idOrName, field) => {
+                throw Error(
+                    `No data found for subquery: '${details}' in query: '${idOrName}/${field}'`,
                 )
             },
         }
@@ -159,7 +164,8 @@ class SingleStateServiceDetails {
             delFieldIsValid,
             deetsNotInRange,
             throwNoDeetsErr,
-        } = this._deetConditionals(field, details, subdeets)
+            throwGenErr,
+        } = this._deetConditionals(id, field, details, subdeets)
 
         if (relFieldIsValid) {
             const table = `states_${field}`
@@ -182,14 +188,8 @@ class SingleStateServiceDetails {
                 dataAsObj.government = !subdeets
                     ? { house_delegates: delegates }
                     : { house_delegate: delegates[subdeets - 1] }
-            } else
-                throw Error(
-                    `No data found for subquery: '${details}' in query: '${idOrName}/${field}'`,
-                )
-        } else
-            throw Error(
-                `No data found for subquery: '${details}' in query: '${idOrName}/${field}'`,
-            )
+            } else throwGenErr(details, idOrName, field)
+        } else throwGenErr(details, idOrName, field)
         returnData.push(dataAsObj)
         return returnData
     }
