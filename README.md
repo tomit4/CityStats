@@ -34,7 +34,11 @@ This is the second version of my [City Stats API](https://citystats.xyz/states/)
 
 **Backend_V3 (next version)**
 
--   [ ] Adjust states tables to output json output/schemas to return state government like so (governor image currently not brought in, just names):
+-   [x] Adjust states tables to output json output/schemas to return state government (see json example below):
+-   [ ] Halfway done. Just add governor information. (use your existing updating governor python script to save new governor names/images).
+-   [ ] For governor, Prepare json file, knex migration, seed, etc, and add to database as table 'states_governors'.
+-   [ ] Adjust states logic to place governor table info into new government json field.
+-   [ ] Adjust states routes schema validations to accept new government field.
 
 ```
 government: {
