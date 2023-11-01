@@ -104,14 +104,22 @@ class SingleStateService extends SingleStateServiceDetails {
                 returnVal = await this._grabPopulationById(knex, id)
                 returnVal = { population: returnVal }
                 break
-            case 'senators':
-                returnVal = await this.grabSenatorsById(knex, id)
-                returnVal = { senators: returnVal }
+            case 'government':
+                returnVal = {
+                    government: {
+                        senators: await this.grabSenatorsById(knex, id),
+                        house_delegates: await this.grabDelegatesById(knex, id),
+                    },
+                }
                 break
-            case 'house_delegates':
-                returnVal = await this.grabDelegatesById(knex, id)
-                returnVal = { house_delegates: returnVal }
-                break
+            // case 'senators':
+            // returnVal = await this.grabSenatorsById(knex, id)
+            // returnVal = { government: { senators: returnVal } }
+            // break
+            // case 'house_delegates':
+            // returnVal = await this.grabDelegatesById(knex, id)
+            // returnVal = { government: { house_delegates: returnVal } }
+            // break
             default:
                 throw Error(
                     `Unable to find state info for id: ${id} on field: ${field}`,
@@ -131,11 +139,18 @@ class SingleStateService extends SingleStateServiceDetails {
         this.singleState = await this._grabStateById(knex, id)
         this.singleState.area = await this._grabAreaById(knex, id)
         this.singleState.population = await this._grabPopulationById(knex, id)
-        this.singleState.senators = await this.grabSenatorsById(knex, id)
-        this.singleState.house_delegates = await this.grabDelegatesById(
+        this.singleState.government = !Object.hasOwn(
+            this.singleState,
+            'government',
+        )
+            ? {}
+            : this.singleState.government
+        this.singleState.government.senators = await this.grabSenatorsById(
             knex,
             id,
         )
+        this.singleState.government.house_delegates =
+            await this.grabDelegatesById(knex, id)
         returnData.push(this.singleState)
         return returnData
     }

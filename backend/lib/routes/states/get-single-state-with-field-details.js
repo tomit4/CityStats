@@ -1,7 +1,7 @@
 module.exports = async (fastify, options, done) => {
     await fastify.route({
         method: 'GET',
-        url: '/states/:id/:field/:details',
+        url: '/states/:id/:field/:details/:subdeets?',
         decompress: {
             forceRequestEncoding: 'gzip',
         },
@@ -17,15 +17,15 @@ module.exports = async (fastify, options, done) => {
                     details: { type: 'string' },
                 },
             },
-            response: {
-                200: {
-                    type: 'array',
-                    items: { $ref: 'singleStateWithField#' },
-                },
-            },
+            // response: {
+            // 200: {
+            // type: 'array',
+            // items: { $ref: 'singleStateWithField#' },
+            // },
+            // },
         },
         handler: async (request, reply) => {
-            const { id, field, details } = request.params
+            const { id, field, details, subdeets } = request.params
             if (!details)
                 throw Error('No nested details passed within URL string')
             const { knex, stateService } = fastify
@@ -37,6 +37,7 @@ module.exports = async (fastify, options, done) => {
                     id,
                     field,
                     details,
+                    subdeets,
                 ),
             )
         },

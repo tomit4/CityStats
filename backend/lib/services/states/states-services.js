@@ -79,7 +79,10 @@ class StatesService extends SingleStateService {
     }
     _mapSenators() {
         for (const state of this.allStates) {
-            state.senators = this._senators
+            state.government = !Object.hasOwn(state, 'government')
+                ? {}
+                : state.government
+            state.government.senators = this._senators
                 .filter(senator => {
                     return state.id === senator.state_id
                 })
@@ -93,7 +96,10 @@ class StatesService extends SingleStateService {
     }
     _mapDelegates() {
         for (const state of this.allStates) {
-            state.house_delegates = this._house_delegates
+            state.government = !Object.hasOwn(state, 'government')
+                ? {}
+                : state.government
+            state.government.house_delegates = this._house_delegates
                 .filter(delegate => {
                     return state.id === delegate.state_id
                 })

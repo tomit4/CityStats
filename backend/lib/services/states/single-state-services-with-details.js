@@ -5,7 +5,7 @@
 class SingleStateServiceDetails {
     constructor() {
         this._statsFields = ['area', 'population']
-        this._repFields = ['senators', 'house_delegates']
+        this._repFields = ['government', 'senators', 'house_delegates']
         this.relatedFields = [...this._statsFields, ...this._repFields]
     }
     async _grabAllStateNames(knex) {
@@ -115,7 +115,7 @@ class SingleStateServiceDetails {
             )
         }
     }
-    _deetConditionals(field, details) {
+    _deetConditionals(field, details, subdeets) {
         return {
             relFieldIsValid:
                 this._statsFields.includes(field) &&
@@ -123,15 +123,14 @@ class SingleStateServiceDetails {
             relFieldIsInvalid:
                 this._statsFields.includes(field) &&
                 !Number.isNaN(Number(details)),
-            senFieldIsValid:
-                field === 'senators' && !Number.isNaN(Number(details)),
-            delFieldIsValid:
-                field === 'house_delegates' && !Number.isNaN(Number(details)),
+            govFieldIsValid: field === 'government',
+            senFieldIsValid: details === 'senators',
+            delFieldIsValid: details === 'house_delegates',
             deetsNotInRange: reps =>
-                Number(details) > reps.length || Number(details) === 0,
-            throwNoDeetsErr: (details, field) => {
+                Number(subdeets) > reps.length || Number(subdeets) === 0,
+            throwNoDeetsErr: (subdeets, details) => {
                 throw new Error(
-                    `No Info on subquery: ${details} in field: ${field}`,
+                    `No Info on subquery: ${subdeets} in detail field: ${details}`,
                 )
             },
         }
@@ -139,43 +138,49 @@ class SingleStateServiceDetails {
 
     /**
      * Aggregates Single Relational Data Point On State
-     * (i.e. specific area/total, senator/senator_id, etc.)
+     * (i.e. specific area/total, government/senator/senator_id, etc.)
      * @params { promise } knex
      * @params { string } idOrName
      * @ params { string } field
      * @params { string } details
-     * returns { object }
+     * @params { string } subdeets
+     * returns [ array ]
      * */
-    async grabRelDataByIdWithDeets(knex, idOrName, field, details) {
+    async grabRelDataByIdWithDeets(knex, idOrName, field, details, subdeets) {
         const id = await this.grabIdByName(knex, idOrName)
         const state = await this._grabMinStateInfo(knex, id)
         const returnData = []
-        let dataAsObj = {}
+        let dataAsObj = { ...state }
         const {
             relFieldIsValid,
             relFieldIsInvalid,
+            govFieldIsValid,
             senFieldIsValid,
             delFieldIsValid,
             deetsNotInRange,
             throwNoDeetsErr,
-        } = this._deetConditionals(field, details)
-
+        } = this._deetConditionals(field, details, subdeets)
         if (relFieldIsValid) {
             const table = `states_${field}`
             const deets = await this._grabDetails(knex, id, details, table)
-            dataAsObj = { ...state, ...deets }
+            dataAsObj = { ...dataAsObj, ...deets }
         } else if (relFieldIsInvalid) {
             throwNoDeetsErr(details, field)
-        } else if (senFieldIsValid) {
-            const senators = await this.grabSenatorsById(knex, id)
-            if (deetsNotInRange(senators)) throwNoDeetsErr(details, field)
-            dataAsObj = { ...state, senator: senators[details - 1] }
-        } else if (delFieldIsValid) {
-            const delegates = await this.grabDelegatesById(knex, id)
-            if (deetsNotInRange(delegates)) throwNoDeetsErr(details, field)
-            dataAsObj = {
-                ...state,
-                house_delegate: delegates[Number(details - 1)],
+        } else if (govFieldIsValid) {
+            if (senFieldIsValid) {
+                const senators = await this.grabSenatorsById(knex, id)
+                if (deetsNotInRange(senators))
+                    throwNoDeetsErr(subdeets, details)
+                dataAsObj.government = !subdeets
+                    ? { senators: senators }
+                    : { senator: senators[subdeets - 1] }
+            } else if (delFieldIsValid) {
+                const delegates = await this.grabDelegatesById(knex, id)
+                if (deetsNotInRange(delegates))
+                    throwNoDeetsErr(subdeets, details)
+                dataAsObj.government = !subdeets
+                    ? { house_delegates: delegates }
+                    : { house_delegate: delegates[subdeets - 1] }
             }
         } else
             throw Error(
