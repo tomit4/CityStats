@@ -5,7 +5,7 @@
 class SingleStateServiceDetails {
     constructor() {
         this._statsFields = ['area', 'population']
-        this._repFields = ['government', 'senators', 'house_delegates']
+        this._repFields = ['government']
         this.relatedFields = [...this._statsFields, ...this._repFields]
     }
     async _grabAllStateNames(knex) {
@@ -160,6 +160,7 @@ class SingleStateServiceDetails {
             deetsNotInRange,
             throwNoDeetsErr,
         } = this._deetConditionals(field, details, subdeets)
+
         if (relFieldIsValid) {
             const table = `states_${field}`
             const deets = await this._grabDetails(knex, id, details, table)
@@ -181,7 +182,10 @@ class SingleStateServiceDetails {
                 dataAsObj.government = !subdeets
                     ? { house_delegates: delegates }
                     : { house_delegate: delegates[subdeets - 1] }
-            }
+            } else
+                throw Error(
+                    `No data found for subquery: '${details}' in query: ${idOrName}/${field}'`,
+                )
         } else
             throw Error(
                 `No data found for subquery: '${details}' in query: '${idOrName}/${field}'`,
