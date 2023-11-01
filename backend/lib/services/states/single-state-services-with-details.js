@@ -184,7 +184,7 @@ class SingleStateServiceDetails {
                     : { house_delegate: delegates[subdeets - 1] }
             } else
                 throw Error(
-                    `No data found for subquery: '${details}' in query: ${idOrName}/${field}'`,
+                    `No data found for subquery: '${details}' in query: '${idOrName}/${field}'`,
                 )
         } else
             throw Error(
