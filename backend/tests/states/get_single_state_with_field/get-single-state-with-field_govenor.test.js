@@ -7,18 +7,26 @@ const registerRoute = async fastify => {
     const newRoute = async fastify => {
         await fastify.route({
             method: 'GET',
-            url: '/states/:id/:field',
+            url: '/states/:id/:field/:details/:subdeets?',
             handler: async (request, reply) => {
-                const { id, field } = request.params
+                const { id, field, details, subdeets } = request.params
                 const { knex, stateService } = fastify
-                reply.send(await stateService.grabRelDataById(knex, id, field))
+                reply.send(
+                    await stateService.grabRelDataByIdWithDeets(
+                        knex,
+                        id,
+                        field,
+                        details,
+                        subdeets,
+                    ),
+                )
             },
         })
     }
     fastify.register(newRoute)
 }
 
-test('requests the /states route with param id of 5 and field of govenor', async t => {
+test('requests the /states route with param id of 5 and field of governor', async t => {
     t.plan(3)
     await registerPlugins(fastify)
     await registerRoute(fastify)
@@ -27,7 +35,7 @@ test('requests the /states route with param id of 5 and field of govenor', async
 
     const response = await fastify.inject({
         method: 'GET',
-        url: '/states/5/govenor',
+        url: '/states/5/government/governor',
     })
 
     t.is(response.statusCode, 200)

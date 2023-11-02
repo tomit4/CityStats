@@ -1,1 +1,19 @@
-"[{\"id\":5,\"state_name\":\"California\",\"state_abbreviation\":\"CA\",\"date_admitted\":\"1850-09-09T00:00:00.000Z\",\"capital\":\"Sacramento\",\"largest_city\":\"Los Angeles\",\"govenor\":\"Gavin Newsom\",\"elevation\":\"2900 ft\",\"time_zone\":\"UTC-8(PST)\",\"latitude\":\"32°32′ N to 42° N\",\"longitude\":\"114°8′ W to 124°26′ W\",\"url\":\"https://www.ca.gov/\",\"flag_url\":\"https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg\",\"insignia_url\":\"https://upload.wikimedia.org/wikipedia/commons/a/ab/Great_Seal_of_California.svg\",\"area\":{\"total\":\"163696 sq mi\",\"land\":\"155959 sq mi\",\"water\":\"7737 sq mi\"},\"population\":{\"total\":\"39185605\",\"density\":\"251.3/sq mi\",\"median_household_income\":\"$78700\"},\"senators\":[\"Dianne Feinstein\",\"Alex Padilla\"],\"house_delegates\":[\"Doug LaMalfa\",\"Jared Huffman\",\"Kevin Kiley\",\"Mike Thompson\",\"Tom McClintock\",\"Ami Bera\",\"Doris Matsui\",\"John Garamendi\",\"Josh Harder\",\"Mark DeSaulnier\",\"Nancy Pelosi\",\"Barbara Lee\",\"John Duarte\",\"Eric Swalwell\",\"Kevin Mullin\",\"Anna Eshoo\",\"Ro Khanna\",\"Zoe Lofgren\",\"Jimmy Panetta\",\"Kevin McCarthy\",\"Jim Costa\",\"David Valadao\",\"Jay Obernolte\",\"Salud Carbajal\",\"Raul Ruiz\",\"Julia Brownley\",\"Mike Garcia\",\"Judy Chu\",\"Tony Cárdenas\",\"Adam Schiff\",\"Grace Napolitano\",\"Brad Sherman\",\"Pete Aguilar\",\"Jimmy Gomez\",\"Norma Torres\",\"Ted Lieu\",\"Sydney Kamlager-Dove\",\"Linda Sánchez\",\"Mark Takano\",\"Young Kim\",\"Ken Calvert\",\"Robert Garcia\",\"Maxine Waters\",\"Nanette Barragán\",\"Michelle Steel\",\"Lou Correa\",\"Katie Porter\",\"Darrell Issa\",\"Mike Levin\",\"Scott Peters\",\"Sara Jacobs\",\"Juan Vargas\"]}]"
+[
+    {
+        "id": 5,
+        "state_name": "California",
+        "state_abbreviation": "CA",
+        "government": {
+            "senators": [
+                {
+                    "senator_name": "Alex Padilla",
+                    "img_url": "https://www.citystats.xyz/images/states/5/senators/1"
+                },
+                {
+                    "senator_name": "Laphonza Butler",
+                    "img_url": "https://www.citystats.xyz/images/states/5/senators/2"
+                }
+            ]
+        }
+    }
+]

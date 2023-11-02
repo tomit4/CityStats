@@ -1,1 +1,253 @@
-"[{\"id\":5,\"state_name\":\"California\",\"state_abbreviation\":\"CA\",\"date_admitted\":\"1850-09-09T00:00:00.000Z\",\"capital\":\"Sacramento\",\"largest_city\":\"Los Angeles\",\"govenor\":\"Gavin Newsom\",\"elevation\":\"2900 ft\",\"time_zone\":\"UTC-8(PST)\",\"latitude\":\"32°32′ N to 42° N\",\"longitude\":\"114°8′ W to 124°26′ W\",\"url\":\"https://www.ca.gov/\",\"flag_url\":\"https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg\",\"insignia_url\":\"https://upload.wikimedia.org/wikipedia/commons/a/ab/Great_Seal_of_California.svg\",\"area\":{\"total\":\"163696 sq mi\",\"land\":\"155959 sq mi\",\"water\":\"7737 sq mi\"},\"population\":{\"total\":\"39185605\",\"density\":\"251.3/sq mi\",\"median_household_income\":\"$78700\"},\"senators\":[\"Dianne Feinstein\",\"Alex Padilla\"],\"house_delegates\":[\"Doug LaMalfa\",\"Jared Huffman\",\"Kevin Kiley\",\"Mike Thompson\",\"Tom McClintock\",\"Ami Bera\",\"Doris Matsui\",\"John Garamendi\",\"Josh Harder\",\"Mark DeSaulnier\",\"Nancy Pelosi\",\"Barbara Lee\",\"John Duarte\",\"Eric Swalwell\",\"Kevin Mullin\",\"Anna Eshoo\",\"Ro Khanna\",\"Zoe Lofgren\",\"Jimmy Panetta\",\"Kevin McCarthy\",\"Jim Costa\",\"David Valadao\",\"Jay Obernolte\",\"Salud Carbajal\",\"Raul Ruiz\",\"Julia Brownley\",\"Mike Garcia\",\"Judy Chu\",\"Tony Cárdenas\",\"Adam Schiff\",\"Grace Napolitano\",\"Brad Sherman\",\"Pete Aguilar\",\"Jimmy Gomez\",\"Norma Torres\",\"Ted Lieu\",\"Sydney Kamlager-Dove\",\"Linda Sánchez\",\"Mark Takano\",\"Young Kim\",\"Ken Calvert\",\"Robert Garcia\",\"Maxine Waters\",\"Nanette Barragán\",\"Michelle Steel\",\"Lou Correa\",\"Katie Porter\",\"Darrell Issa\",\"Mike Levin\",\"Scott Peters\",\"Sara Jacobs\",\"Juan Vargas\"]}]"
+[
+    {
+        "id": 5,
+        "state_name": "California",
+        "state_abbreviation": "CA",
+        "date_admitted": "1850-09-09T00:00:00.000Z",
+        "capital": "Sacramento",
+        "largest_city": "Los Angeles",
+        "elevation": "2900 ft",
+        "time_zone": "UTC-8(PST)",
+        "latitude": "32°32′ N to 42° N",
+        "longitude": "114°8′ W to 124°26′ W",
+        "url": "https://www.ca.gov/",
+        "flag_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg",
+        "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Great_Seal_of_California.svg",
+        "area": {
+            "total": "163696 sq mi",
+            "land": "155959 sq mi",
+            "water": "7737 sq mi"
+        },
+        "population": {
+            "total": "39185605",
+            "density": "251.3/sq mi",
+            "median_household_income": "$78700"
+        },
+        "government": {
+            "governor": {
+                "governor_name": "Gavin Newsom",
+                "img_url": "https://citystats.xyz/images/states/5/governor"
+            },
+            "senators": [
+                {
+                    "senator_name": "Alex Padilla",
+                    "img_url": "https://www.citystats.xyz/images/states/5/senators/1"
+                },
+                {
+                    "senator_name": "Laphonza Butler",
+                    "img_url": "https://www.citystats.xyz/images/states/5/senators/2"
+                }
+            ],
+            "house_delegates": [
+                {
+                    "delegate_name": "Doug LaMalfa",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/1"
+                },
+                {
+                    "delegate_name": "Jared Huffman",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/2"
+                },
+                {
+                    "delegate_name": "Kevin Kiley",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/3"
+                },
+                {
+                    "delegate_name": "Mike Thompson",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/4"
+                },
+                {
+                    "delegate_name": "Tom McClintock",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/5"
+                },
+                {
+                    "delegate_name": "Ami Bera",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/6"
+                },
+                {
+                    "delegate_name": "Doris Matsui",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/7"
+                },
+                {
+                    "delegate_name": "John Garamendi",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/8"
+                },
+                {
+                    "delegate_name": "Josh Harder",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/9"
+                },
+                {
+                    "delegate_name": "Mark DeSaulnier",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/10"
+                },
+                {
+                    "delegate_name": "Nancy Pelosi",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/11"
+                },
+                {
+                    "delegate_name": "Barbara Lee",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/12"
+                },
+                {
+                    "delegate_name": "John Duarte",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/13"
+                },
+                {
+                    "delegate_name": "Eric Swalwell",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/14"
+                },
+                {
+                    "delegate_name": "Kevin Mullin",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/15"
+                },
+                {
+                    "delegate_name": "Anna Eshoo",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/16"
+                },
+                {
+                    "delegate_name": "Ro Khanna",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/17"
+                },
+                {
+                    "delegate_name": "Zoe Lofgren",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/18"
+                },
+                {
+                    "delegate_name": "Jimmy Panetta",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/19"
+                },
+                {
+                    "delegate_name": "Kevin McCarthy",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/20"
+                },
+                {
+                    "delegate_name": "Jim Costa",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/21"
+                },
+                {
+                    "delegate_name": "David Valadao",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/22"
+                },
+                {
+                    "delegate_name": "Jay Obernolte",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/23"
+                },
+                {
+                    "delegate_name": "Salud Carbajal",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/24"
+                },
+                {
+                    "delegate_name": "Raul Ruiz",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/25"
+                },
+                {
+                    "delegate_name": "Julia Brownley",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/26"
+                },
+                {
+                    "delegate_name": "Mike Garcia",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/27"
+                },
+                {
+                    "delegate_name": "Judy Chu",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/28"
+                },
+                {
+                    "delegate_name": "Tony Cárdenas",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/29"
+                },
+                {
+                    "delegate_name": "Adam Schiff",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/30"
+                },
+                {
+                    "delegate_name": "Grace Napolitano",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/31"
+                },
+                {
+                    "delegate_name": "Brad Sherman",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/32"
+                },
+                {
+                    "delegate_name": "Pete Aguilar",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/33"
+                },
+                {
+                    "delegate_name": "Jimmy Gomez",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/34"
+                },
+                {
+                    "delegate_name": "Norma Torres",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/35"
+                },
+                {
+                    "delegate_name": "Ted Lieu",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/36"
+                },
+                {
+                    "delegate_name": "Sydney Kamlager-Dove",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/37"
+                },
+                {
+                    "delegate_name": "Linda Sánchez",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/38"
+                },
+                {
+                    "delegate_name": "Mark Takano",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/39"
+                },
+                {
+                    "delegate_name": "Young Kim",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/40"
+                },
+                {
+                    "delegate_name": "Ken Calvert",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/41"
+                },
+                {
+                    "delegate_name": "Robert Garcia",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/42"
+                },
+                {
+                    "delegate_name": "Maxine Waters",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/43"
+                },
+                {
+                    "delegate_name": "Nanette Barragán",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/44"
+                },
+                {
+                    "delegate_name": "Michelle Steel",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/45"
+                },
+                {
+                    "delegate_name": "Lou Correa",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/46"
+                },
+                {
+                    "delegate_name": "Katie Porter",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/47"
+                },
+                {
+                    "delegate_name": "Darrell Issa",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/48"
+                },
+                {
+                    "delegate_name": "Mike Levin",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/49"
+                },
+                {
+                    "delegate_name": "Scott Peters",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/50"
+                },
+                {
+                    "delegate_name": "Sara Jacobs",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/51"
+                },
+                {
+                    "delegate_name": "Juan Vargas",
+                    "img_url": "https://citystats.xyz/images/states/5/delegates/52"
+                }
+            ]
+        }
+    }
+]

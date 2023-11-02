@@ -17,6 +17,9 @@ module.exports = async (fastify, options, done) => {
                     details: { type: 'string' },
                 },
             },
+            // NOTE: design problem noted, schema
+            // this specific not possible without
+            // very specific route handling
             // response: {
             // 200: {
             // type: 'array',
