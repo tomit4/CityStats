@@ -3,19 +3,21 @@
 import os
 import json
 import logging
-#  import requests
+import requests
 from datetime import datetime
 # Use requests_html when JS is required on website
 # https://requests.readthedocs.io/projects/requests-html/en/latest/
 from requests_html import HTMLSession
 
-base_states = json.load(open('./base_states.json'))
-BASE_URL = 'https://en.wikipedia.org/wiki/List_of_current_United_States_governors'
 session = HTMLSession()
 
+BASE_URL = 'https://en.wikipedia.org/wiki/List_of_current_United_States_governors'
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
-os.makedirs(f'./new_house/json/', exist_ok=True)
+JSON_PATH = './new_governors/json'
+IMG_PATH = './new_governors/images'
+os.makedirs(f'{JSON_PATH}', exist_ok=True)
+os.makedirs(f'{IMG_PATH}', exist_ok=True)
 
 log_format = '%(asctime)s - %(levelname)s - %(message)s'
 logging.basicConfig(filename=LOG_FILENAME,
@@ -24,6 +26,57 @@ logging.basicConfig(filename=LOG_FILENAME,
 console_handler = logging.StreamHandler()
 console_handler.setFormatter(logging.Formatter(log_format))
 logging.getLogger().addHandler(console_handler)
+
+
+def download_images(img_urls):
+    for i, url in enumerate(img_urls):
+        if i + 1 < 10:
+            dir_number = f"0{i+1}"
+        else:
+            dir_number = i + 1
+        os.makedirs(f'{IMG_PATH}/{dir_number}', exist_ok=True)
+        file_name = f"./{IMG_PATH}/{dir_number}/governor.jpg"
+        img_data = requests.get(
+            url,
+            stream=True,
+            headers={
+                'User-agent': 'Mozilla/5.0'
+            },
+        ).content
+        file = open(f'{file_name}', 'wb')
+        file.write(img_data)
+        logging.info(f"Downloaded image for state_id: {i+1}")
+
+
+def grab_img_urls():
+    try:
+        data = []
+        r = session.get(BASE_URL)
+        # r.html actually works, lsp doesn't like it for some reason...
+        results = r.html.find('table')
+        for result in results:
+            bigs = result.find('big')
+            for big in bigs:
+                if 'United States governors' in big.text:
+                    tds = result.find('td')
+                    for td in tds:
+                        imgs = td.find('img')
+                        for img in imgs:
+                            url = ''
+                            if 'jpg' in img.attrs['src']:
+                                url = f"https:{img.attrs['src'].split('.jpg')[0].replace('thumb/', '')}.jpg"
+                            elif 'JPG' in img.attrs['src']:
+                                url = f"https:{img.attrs['src'].split('.JPG')[0].replace('thumb/', '')}.JPG"
+                            elif 'jpeg' in img.attrs['src']:
+                                url = f"https:{img.attrs['src'].split('.jpeg')[0].replace('thumb/', '')}.jpeg"
+                            elif 'png' in img.attrs['src']:
+                                url = f"https:{img.attrs['src'].split('.png')[0].replace('thumb/', '')}.png"
+                            if len(url):
+                                data.append(url)
+        return data
+    except Exception as e:
+        logging.error(f'Error during scraping: {str(e)}')
+        return False
 
 
 def scrape_data():
@@ -59,6 +112,7 @@ def scrape_data():
 if __name__ == "__main__":
     governors_names = scrape_data()
     if governors_names:
-        with open(f'./new_governors.json', 'w') as writeJSON:
+        with open(f'{JSON_PATH}/new_governors.json', 'w') as writeJSON:
             json.dump(governors_names, writeJSON, ensure_ascii=False)
-    #  open('./base_states.json').close()
+    img_urls = grab_img_urls()
+    download_images(img_urls)
