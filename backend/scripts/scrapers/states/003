@@ -42,12 +42,15 @@ def scrape_data():
                             a_tags = th.find('a')
                             for a_tag in a_tags:
                                 data.append(a_tag.text)
-        new_base_states = []
-        for state in base_states:
-            new_base_states.append(state)
-        for i, state in enumerate(new_base_states):
-            new_base_states[i]['governor'] = data[i]
-        return new_base_states
+        final_data = []
+        for i, d in enumerate(data):
+            dict = {}
+            dict['id'] = i + 1
+            dict['governor_name'] = d
+            dict[
+                'img_url'] = f"https://citystats.xyz/images/states/{i}/governor"
+            final_data.append(dict)
+        return final_data
     except Exception as e:
         logging.error(f'Error during scraping: {str(e)}')
         return False
@@ -56,6 +59,6 @@ def scrape_data():
 if __name__ == "__main__":
     governors_names = scrape_data()
     if governors_names:
-        with open(f'./new_base_states.json', 'w') as writeJSON:
+        with open(f'./new_governors.json', 'w') as writeJSON:
             json.dump(governors_names, writeJSON, ensure_ascii=False)
-    open('./base_states.json').close()
+    #  open('./base_states.json').close()
