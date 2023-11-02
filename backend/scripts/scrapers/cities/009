@@ -80,8 +80,8 @@ def scrape_data():
                 result = row.findAll('td')[1].contents
                 result = result[:-1]
                 if len(result):
-                    member_res.append(result[1].contents[0])
-                    member_res.append(result[5].contents[0])
+                    member_res.append(result[1].contents[0].strip())
+                    member_res.append(result[5].contents[0].strip())
             except:
                 pass
         return member_res

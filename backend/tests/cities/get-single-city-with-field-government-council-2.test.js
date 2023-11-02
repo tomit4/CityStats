@@ -20,7 +20,7 @@ const registerRoute = async fastify => {
     fastify.register(newRoute)
 }
 
-test('requests the /cities route with param id of 252 and field of government and details of council and sub of 2', async t => {
+test('requests the /cities route with param id of 252 and field of government and details of city_council and sub of 2', async t => {
     t.plan(3)
     await registerPlugins(fastify)
     await registerRoute(fastify)
@@ -34,6 +34,6 @@ test('requests the /cities route with param id of 252 and field of government an
 
     t.is(response.statusCode, 200)
     t.is(response.headers['content-type'], 'application/json; charset=utf-8')
-    t.is(response.payload, mock)
+    t.is(response.payload, JSON.stringify(mock))
     await fastify.close()
 })

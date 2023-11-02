@@ -301,7 +301,7 @@
   },
   {
     "city_id": 9,
-    "council_member": "Austin Quinn-Davidson ",
+    "council_member": "Austin Quinn-Davidson",
     "img_url": null
   },
   {
@@ -11310,11 +11310,6 @@
     "img_url": null
   },
   {
-    "city_id": 271,
-    "council_member": "[email protected]",
-    "img_url": null
-  },
-  {
     "city_id": 272,
     "council_member": "Kesha Gibson-Carter",
     "img_url": "https://www.citystats.xyz/images/cities/272/city_council/1"
@@ -11501,7 +11496,7 @@
   },
   {
     "city_id": 277,
-    "council_member": "Rich Merkouris (AL)",
+    "council_member": "Rich Merkouris",
     "img_url": "https://www.citystats.xyz/images/cities/277/city_council/4"
   },
   {
@@ -13346,32 +13341,32 @@
   },
   {
     "city_id": 324,
-    "council_member": "Bobby Whiteley ",
+    "council_member": "Bobby Whiteley",
     "img_url": "https://www.citystats.xyz/images/cities/324/city_council/1"
   },
   {
     "city_id": 324,
-    "council_member": "Michael Smith ",
+    "council_member": "Michael Smith",
     "img_url": "https://www.citystats.xyz/images/cities/324/city_council/2"
   },
   {
     "city_id": 324,
-    "council_member": "Larry Nelson ",
+    "council_member": "Larry Nelson",
     "img_url": "https://www.citystats.xyz/images/cities/324/city_council/3"
   },
   {
     "city_id": 324,
-    "council_member": "Jeff Browning ",
+    "council_member": "Jeff Browning",
     "img_url": "https://www.citystats.xyz/images/cities/324/city_council/4"
   },
   {
     "city_id": 324,
-    "council_member": "Tim Brewer ",
+    "council_member": "Tim Brewer",
     "img_url": "https://www.citystats.xyz/images/cities/324/city_council/5"
   },
   {
     "city_id": 324,
-    "council_member": "Steve Jackson ",
+    "council_member": "Steve Jackson",
     "img_url": "https://www.citystats.xyz/images/cities/324/city_council/6"
   },
   {

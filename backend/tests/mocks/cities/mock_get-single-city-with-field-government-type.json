@@ -1,1 +1,10 @@
-"[{\"id\":252,\"city_name\":\"Rockford\",\"state_name\":\"Illinois\",\"government\":{\"type\":\"Mayor-Council\"}}]"
+[
+    {
+        "id": 252,
+        "city_name": "Rockford",
+        "state_name": "Illinois",
+        "government": {
+            "type": "Mayor-Council"
+        }
+    }
+]

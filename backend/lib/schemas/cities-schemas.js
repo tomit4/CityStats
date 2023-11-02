@@ -32,7 +32,7 @@ class CitiesSchema {
             properties: {
                 id: joi.number(),
                 city_name: joi.string(),
-                state_name: joi.string(),
+                state_name: { type: 'string', nullable: true },
                 coordinates: joi.string(),
                 settled_founded: { type: 'string', nullable: true },
                 incorporated: { type: 'string', nullable: true },

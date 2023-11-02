@@ -101,7 +101,8 @@ def scrape_data():
             a_tags = result.find('a')
             for a_tag in a_tags:
                 if 'href' in a_tag.attrs:
-                    data.append(a_tag.text.split('|')[0].lower().title())
+                    data.append(
+                        a_tag.text.split('|')[0].lower().title().strip())
         data.pop()
         return data
     except Exception as e:

@@ -1,1 +1,11 @@
-"[{\"id\":252,\"city_name\":\"Rockford\",\"state_name\":\"Illinois\",\"council_member\":\"Jonathan Logemann\"}]"
+[
+    {
+        "id": 252,
+        "city_name": "Rockford",
+        "state_name": "Illinois",
+        "council_member": {
+            "council_member": "Jonathan Logemann",
+            "img_url": null
+        }
+    }
+]

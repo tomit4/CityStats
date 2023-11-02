@@ -101,12 +101,13 @@ def scrape_data():
             for a_tag in a_tags:
                 if 'href' in a_tag.attrs:
                     if len(a_tag.text):
-                        data.append(a_tag.text)
+                        data.append(normalize("NFKD", a_tag.text))
         for i, d in enumerate(data):
             if 'Mayor' in d:
                 data[i] = d.split('Mayor ')[1]
             else:
                 data[i] = d.split(' (')[0]
+        print(data)
         return data
     except Exception as e:
         logging.error(f'Error at city_id: {CITY_ID} during scraping: {str(e)}')

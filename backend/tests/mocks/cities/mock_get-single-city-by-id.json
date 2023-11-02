@@ -1,1 +1,91 @@
-"[{\"id\":252,\"city_name\":\"Rockford\",\"state_name\":\"Illinois\",\"coordinates\":\"42°16′16″N 89°05′38″W\",\"settled_founded\":null,\"incorporated\":\"1852\",\"elevation\":\"728 ft\",\"time_zone\":\"UTC-6(CST)\",\"fips_code\":\"17-65000\",\"url\":\"https://rockfordil.gov/\",\"counties\":[\"Winnebago\",\"Ogle\"],\"government\":{\"type\":\"Mayor-Council\",\"mayor\":\"Tom McNamara\",\"city_council\":[\"Dr. Timothy J. Durkee\",\"Jonathan Logemann\",\"Chad Tuneberg\",\"Kevin Frost\",\"Gabrielle Torina\",\"Aprel Prunty\",\"Janessa Wilkins\",\"Karen Hoffman\",\"Bill Rose\",\"Franklin Beach\",\"Tuffy Quinonez\",\"Gina Meeks\",\"Linda McNeely\",\"Mark Bonne\"]},\"area\":{\"city\":\"65.92 sq mi\",\"land\":\"64.91 sq mi\",\"water\":\"1.01 sq mi\"},\"population\":{\"city\":\"148655\",\"density\":\"2290.24/sq mi\",\"metro\":\"338798\"},\"zip_codes\":[\"61101–61110\",\"61112\",\"61114\",\"61125\",\"61126\"],\"area_codes\":[815,779],\"gnis_feature_ids\":[\"2396405\"]}]"
+[
+    {
+        "id": 252,
+        "city_name": "Rockford",
+        "state_name": "Illinois",
+        "coordinates": "42°16′16″N 89°05′38″W",
+        "settled_founded": null,
+        "incorporated": "1852",
+        "elevation": "728 ft",
+        "time_zone": "UTC-6(CST)",
+        "fips_code": "17-65000",
+        "url": "https://rockfordil.gov/",
+        "counties": ["Winnebago", "Ogle"],
+        "government": {
+            "type": "Mayor-Council",
+            "mayor": "Tom McNamara",
+            "img_url": null,
+            "city_council": [
+                {
+                    "council_member": "Timothy J. Durkee",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Jonathan Logemann",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Chad Tuneberg",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Kevin Frost",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Gabrielle Torina",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Aprel Prunty",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Janessa Wilkins",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Karen Hoffman",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Bill Rose",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Franklin Beach",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Isidro B. Barrios",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Gina Meeks",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Jeff Bailey",
+                    "img_url": null
+                },
+                {
+                    "council_member": "Mark Bonne",
+                    "img_url": null
+                }
+            ]
+        },
+        "area": {
+            "city": "65.92 sq mi",
+            "land": "64.91 sq mi",
+            "water": "1.01 sq mi"
+        },
+        "population": {
+            "city": "148655",
+            "density": "2290.24/sq mi",
+            "metro": "338798"
+        },
+        "zip_codes": ["61101–61110", "61112", "61114", "61125", "61126"],
+        "area_codes": [815, 779],
+        "gnis_feature_ids": ["2396405"]
+    }
+]

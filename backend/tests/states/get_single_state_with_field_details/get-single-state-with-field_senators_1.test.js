@@ -38,6 +38,6 @@ test('requests the /states route with param id of 5 and field of senators and de
 
     t.is(response.statusCode, 200)
     t.is(response.headers['content-type'], 'application/json; charset=utf-8')
-    t.is(response.payload, mock)
+    t.is(response.payload, JSON.stringify(mock))
     await fastify.close()
 })

@@ -53,7 +53,7 @@ def scrape_data():
             a_tags = result.find('a')
             for a_tag in a_tags:
                 if 'href' in a_tag.attrs:
-                    if len(a_tag.text):
+                    if len(a_tag.text) and 'email' not in a_tag.text:
                         data.append(a_tag.text)
         data = data[1:-10]
         return data
