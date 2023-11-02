@@ -16,12 +16,12 @@ module.exports = async (fastify, options, done) => {
                     field: { type: 'string' },
                 },
             },
-            // response: {
-            // 200: {
-            // type: 'array',
-            // items: { $ref: 'singleStateWithField#' },
-            // },
-            // },
+            response: {
+                200: {
+                    type: 'array',
+                    items: { $ref: 'singleStateWithField#' },
+                },
+            },
         },
         handler: async (request, reply) => {
             const { id, field } = request.params

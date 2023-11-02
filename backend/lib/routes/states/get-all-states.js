@@ -7,12 +7,12 @@ module.exports = async (fastify, options, done) => {
         },
         schema: {
             description: 'returns all states entities',
-            // response: {
-            // 200: {
-            // type: 'array',
-            // items: { $ref: 'singleState#' },
-            // },
-            // },
+            response: {
+                200: {
+                    type: 'array',
+                    items: { $ref: 'singleState#' },
+                },
+            },
         },
         handler: async (request, reply) => {
             const { knex, stateService } = fastify

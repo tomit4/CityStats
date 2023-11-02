@@ -14,12 +14,12 @@ module.exports = async (fastify, options, done) => {
                     id: { type: 'string' },
                 },
             },
-            // response: {
-            // 200: {
-            // type: 'array',
-            // items: { $ref: 'singleState#' },
-            // },
-            // },
+            response: {
+                200: {
+                    type: 'array',
+                    items: { $ref: 'singleState#' },
+                },
+            },
         },
         handler: async (request, reply) => {
             const { id } = request.params

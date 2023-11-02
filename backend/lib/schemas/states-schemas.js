@@ -8,6 +8,35 @@ const joi = require('./joi')
  * */
 class StatesSchema {
     constructor() {
+        this.government = {
+            type: 'object',
+            properties: {
+                governor: joi.object({
+                    governor_name: joi.string(),
+                    img_url: joi.string(),
+                }),
+                senators: {
+                    type: 'array',
+                    items: {
+                        type: 'object',
+                        properties: {
+                            senator_name: joi.string(),
+                            img_url: joi.string(),
+                        },
+                    },
+                },
+                house_delegates: {
+                    type: 'array',
+                    items: {
+                        type: 'object',
+                        properties: {
+                            delegate_name: joi.string(),
+                            img_url: joi.string(),
+                        },
+                    },
+                },
+            },
+        }
         this.singleState = {
             type: 'object',
             required: [
@@ -17,7 +46,6 @@ class StatesSchema {
                 'date_admitted',
                 'capital',
                 'largest_city',
-                'governor',
                 'elevation',
                 'time_zone',
                 'latitude',
@@ -27,8 +55,7 @@ class StatesSchema {
                 'insignia_url',
                 'area',
                 'population',
-                'senators',
-                'house_delegates',
+                'government',
             ],
             properties: {
                 id: joi.number(),
@@ -37,7 +64,6 @@ class StatesSchema {
                 date_admitted: joi.string(),
                 capital: joi.string(),
                 largest_city: joi.string(),
-                governor: joi.string(),
                 elevation: joi.string(),
                 time_zone: joi.string(),
                 latitude: joi.string(),
@@ -55,8 +81,7 @@ class StatesSchema {
                     density: joi.string(),
                     median_household_income: joi.string(),
                 }),
-                senators: joi.array(),
-                house_delegates: joi.array(),
+                government: this.government,
             },
         }
         this.singleStateWithField = {
@@ -64,8 +89,7 @@ class StatesSchema {
             required: ['id', 'state_name', 'state_abbreviation'],
             properties: {
                 ...this.singleState.properties,
-                senator: joi.string(),
-                house_delegate: joi.string(),
+                government: this.government,
             },
         }
     }

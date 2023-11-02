@@ -16,7 +16,6 @@ class SingleStateService extends SingleStateServiceDetails {
             'date_admitted',
             'capital',
             'largest_city',
-            'governor',
             'elevation',
             'time_zone',
             'latitude',
@@ -146,7 +145,7 @@ class SingleStateService extends SingleStateServiceDetails {
         )
             ? {}
             : this.singleState.government
-        this.singleState.government.govenor = await this.grabGovernorById(
+        this.singleState.government.governor = await this.grabGovernorById(
             knex,
             id,
         )
