@@ -132,7 +132,6 @@ class CityServiceDetails {
                         img_url: member.img_url,
                     }
                 })
-                console.log('councilMember :=>', councilMember)
                 if (!councilMember.length)
                     throw Error(
                         `No Council Member returned for Queried Index: ${query} for city id: ${id}`,
