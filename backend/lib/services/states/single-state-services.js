@@ -107,6 +107,7 @@ class SingleStateService extends SingleStateServiceDetails {
             case 'government':
                 returnVal = {
                     government: {
+                        governor: await this.grabGovernorById(knex, id),
                         senators: await this.grabSenatorsById(knex, id),
                         house_delegates: await this.grabDelegatesById(knex, id),
                     },
@@ -145,6 +146,10 @@ class SingleStateService extends SingleStateServiceDetails {
         )
             ? {}
             : this.singleState.government
+        this.singleState.government.govenor = await this.grabGovernorById(
+            knex,
+            id,
+        )
         this.singleState.government.senators = await this.grabSenatorsById(
             knex,
             id,

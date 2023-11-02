@@ -11,6 +11,7 @@ class StatesService extends SingleStateService {
         this._statesAreas = {}
         this._statesPopulations = {}
         this._senators = []
+        this._governors = []
         this._house_delegates = []
     }
     // TODO:
@@ -48,6 +49,15 @@ class StatesService extends SingleStateService {
             console.error('ERROR :=>', err)
         }
     }
+    async _grabAllStateGovernors(knex) {
+        try {
+            const governors = await knex('states_governors')
+            if (!governors) throw Error('No States Governors Table Found')
+            this._governors = governors
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
+    }
     async _grabAllStateSenators(knex) {
         try {
             const senators = await knex('states_senators')
@@ -76,6 +86,20 @@ class StatesService extends SingleStateService {
                 population: this._statesPopulations[i],
             }
         })
+    }
+    _mapGovernors() {
+        for (const state of this.allStates) {
+            state.government = !Object.hasOwn(state, 'government')
+                ? {}
+                : state.government
+            const governor = this._governors.filter(governor => {
+                return state.id === governor.state_id
+            })[0]
+            state.government.governor = {
+                governor_name: governor.governor_name,
+                img_url: governor.img_url,
+            }
+        }
     }
     _mapSenators() {
         for (const state of this.allStates) {
@@ -120,9 +144,11 @@ class StatesService extends SingleStateService {
         await this._grabAllStateInfo(knex)
         await this._grabAllStateAreas(knex)
         await this._grabAllStatePopulations(knex)
+        await this._grabAllStateGovernors(knex)
         await this._grabAllStateSenators(knex)
         await this._grabAllHouseDelegates(knex)
         this._mapAreaAndPopulation()
+        this._mapGovernors()
         this._mapSenators()
         this._mapDelegates()
         return this.allStates

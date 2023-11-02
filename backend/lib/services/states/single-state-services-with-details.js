@@ -48,6 +48,22 @@ class SingleStateServiceDetails {
             console.error('ERROR :=>', err)
         }
     }
+    async grabGovernorById(knex, id) {
+        try {
+            const governor = await knex
+                .where('state_id', id)
+                .select('governor_name', 'img_url')
+                .from('states_governors')
+                .first()
+            if (!governor) throw Error(`No Governor Found For Id: ${id}`)
+            return {
+                governor_name: governor.governor_name,
+                img_url: governor.img_url,
+            }
+        } catch (err) {
+            console.error('ERROR :=>', err)
+        }
+    }
     async grabSenatorsById(knex, id) {
         try {
             const senators = await knex
@@ -124,6 +140,7 @@ class SingleStateServiceDetails {
                 this._statsFields.includes(field) &&
                 !Number.isNaN(Number(details)),
             govFieldIsValid: field === 'government',
+            governorFieldIsValid: details === 'governor',
             senFieldIsValid: details === 'senators',
             delFieldIsValid: details === 'house_delegates',
             deetsNotInRange: reps =>
@@ -160,6 +177,7 @@ class SingleStateServiceDetails {
             relFieldIsValid,
             relFieldIsInvalid,
             govFieldIsValid,
+            governorFieldIsValid,
             senFieldIsValid,
             delFieldIsValid,
             deetsNotInRange,
@@ -188,6 +206,13 @@ class SingleStateServiceDetails {
                 dataAsObj.government = !subdeets
                     ? { house_delegates: delegates }
                     : { house_delegate: delegates[subdeets - 1] }
+            } else if (governorFieldIsValid) {
+                const governor = await this.grabGovernorById(knex, id)
+                if (deetsNotInRange(governor))
+                    throwNoDeetsErr(subdeets, details)
+                if (!subdeets) {
+                    dataAsObj.government = governor
+                } else throwNoDeetsErr(subdeets, details)
             } else throwGenErr(details, idOrName, field)
         } else throwGenErr(details, idOrName, field)
         returnData.push(dataAsObj)
