@@ -98,10 +98,10 @@ def scrape_data():
         final_data = []
         for i, d in enumerate(data):
             dict = {}
-            dict['id'] = i + 1
+            dict['state_id'] = i + 1
             dict['governor_name'] = d
             dict[
-                'img_url'] = f"https://citystats.xyz/images/states/{i}/governor"
+                'img_url'] = f"https://citystats.xyz/images/states/{i+1}/governor"
             final_data.append(dict)
         return final_data
     except Exception as e:
@@ -112,7 +112,7 @@ def scrape_data():
 if __name__ == "__main__":
     governors_names = scrape_data()
     if governors_names:
-        with open(f'{JSON_PATH}/new_governors.json', 'w') as writeJSON:
+        with open(f'{JSON_PATH}/base_state_governors.json', 'w') as writeJSON:
             json.dump(governors_names, writeJSON, ensure_ascii=False)
     img_urls = grab_img_urls()
     download_images(img_urls)

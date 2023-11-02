@@ -10,7 +10,6 @@ exports.up = function (knex) {
         table.string('date_admitted').notNullable()
         table.string('capital').notNullable()
         table.string('largest_city').notNullable()
-        table.string('governor').notNullable()
         table.string('elevation').notNullable()
         table.string('time_zone').notNullable()
         table.string('latitude').notNullable()
