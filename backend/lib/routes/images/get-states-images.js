@@ -17,6 +17,8 @@ module.exports = async (fastify, options, done) => {
                 imgPath = `states/senators/${folderId}/${imgId}.jpg`
             } else if (govBody === 'delegates') {
                 imgPath = `states/delegates/${folderId}/${imgId}.jpg`
+            } else if (govBody === 'governor') {
+                imgPath = `states/governors/${folderId}/governor.jpg`
             } else {
                 reply.code(500)
                 return new Error(

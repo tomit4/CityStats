@@ -15,7 +15,7 @@ BASE_URL = 'https://en.wikipedia.org/wiki/List_of_current_United_States_governor
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
 JSON_PATH = './new_governors/json'
-IMG_PATH = './new_governors/images'
+IMG_PATH = './new_governors/img'
 os.makedirs(f'{JSON_PATH}', exist_ok=True)
 os.makedirs(f'{IMG_PATH}', exist_ok=True)
 
