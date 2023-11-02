@@ -7,15 +7,16 @@ const registerRoute = async fastify => {
     const newRoute = async fastify => {
         await fastify.route({
             method: 'GET',
-            url: '/states/:id/:field/:details',
+            url: '/states/:id/:field/:details/:subdeets?',
             handler: async (request, reply) => {
-                const { id, field, details } = request.params
+                const { id, field, details, subdeets } = request.params
                 const { knex, stateService } = fastify
                 const payload = await stateService.grabRelDataByIdWithDeets(
                     knex,
                     id,
                     field,
                     details,
+                    subdeets,
                 )
                 reply.send(payload)
             },
