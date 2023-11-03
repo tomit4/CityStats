@@ -5,6 +5,18 @@ module.exports = async (fastify, options, done) => {
         decompress: {
             forceRequestEncoding: 'gzip',
         },
+        schema: {
+            description:
+                'returns state government images by city id, governing body, and image id',
+            params: {
+                type: 'object',
+                required: ['id', 'govBody'],
+                properties: {
+                    id: { type: 'string' },
+                    govBody: { type: 'string' },
+                },
+            },
+        },
         handler: async (request, reply) => {
             const { knex, stateService } = fastify
             const { id, govBody, imageId } = request.params
@@ -22,7 +34,7 @@ module.exports = async (fastify, options, done) => {
             } else {
                 reply.code(500)
                 return new Error(
-                    `Governing Body: ${govBody} not acceptable format. Please use senators or delegates as appropriate governing body query string.`,
+                    `Governing Body: ${govBody} not acceptable format. Please use senators or delegates or governor as appropriate governing body query string.`,
                 )
             }
             fastify.log.info(

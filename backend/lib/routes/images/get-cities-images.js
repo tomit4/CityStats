@@ -5,6 +5,18 @@ module.exports = async (fastify, options, done) => {
         decompress: {
             forceRequestEncoding: 'gzip',
         },
+        schema: {
+            description:
+                'returns city government images by city id, governing body, and image id',
+            params: {
+                type: 'object',
+                required: ['id', 'govBody'],
+                properties: {
+                    id: { type: 'string' },
+                    govBody: { type: 'string' },
+                },
+            },
+        },
         handler: async (request, reply) => {
             const { knex, cityService } = fastify
             const { id, govBody, imageId } = request.params

@@ -112,14 +112,6 @@ class SingleStateService extends SingleStateServiceDetails {
                     },
                 }
                 break
-            // case 'senators':
-            // returnVal = await this.grabSenatorsById(knex, id)
-            // returnVal = { government: { senators: returnVal } }
-            // break
-            // case 'house_delegates':
-            // returnVal = await this.grabDelegatesById(knex, id)
-            // returnVal = { government: { house_delegates: returnVal } }
-            // break
             default:
                 throw Error(
                     `Unable to find state info for id: ${id} on field: ${field}`,
