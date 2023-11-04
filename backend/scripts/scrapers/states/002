@@ -16,11 +16,11 @@ session = HTMLSession()
 # Change based off of which site being scraped
 BASE_URL = 'https://en.wikipedia.org/wiki/List_of_current_members_of_the_United_States_House_of_Representatives'
 WIKI_URL = 'https://en.wikipedia.org'
-IMG_PATH = './new_house/img/'
+IMG_PATH = '../../base/states/img/house_delegates/'
 
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
-os.makedirs(f'./new_house/json/', exist_ok=True)
+os.makedirs(f'.../base/states/json/base_state_delegates.json', exist_ok=True)
 
 log_format = '%(asctime)s - %(levelname)s - %(message)s'
 logging.basicConfig(filename=LOG_FILENAME,
@@ -188,7 +188,7 @@ def scrape_data():
 if __name__ == "__main__":
     delegates_names = scrape_data()
     if delegates_names:
-        with open(f'./new_house/json/base_state_delegates.json',
+        with open(f'.../base/states/json/base_state_delegates.json',
                   'w') as writeJSON:
             json.dump(delegates_names, writeJSON, ensure_ascii=False)
     img_urls = scrape_img_urls()

@@ -14,10 +14,9 @@ session = HTMLSession()
 BASE_URL = 'https://en.wikipedia.org/wiki/List_of_current_United_States_governors'
 CURR_DATE = datetime.now().strftime('%d_%m_%Y')
 LOG_FILENAME = f'log_{CURR_DATE}.txt'
-JSON_PATH = './new_governors/json'
-IMG_PATH = './new_governors/img'
-os.makedirs(f'{JSON_PATH}', exist_ok=True)
+IMG_PATH = '../../base/states/img/governors/'
 os.makedirs(f'{IMG_PATH}', exist_ok=True)
+os.makedirs(f'.../base/states/json/base_state_governors.json', exist_ok=True)
 
 log_format = '%(asctime)s - %(levelname)s - %(message)s'
 logging.basicConfig(filename=LOG_FILENAME,
@@ -112,7 +111,8 @@ def scrape_data():
 if __name__ == "__main__":
     governors_names = scrape_data()
     if governors_names:
-        with open(f'{JSON_PATH}/base_state_governors.json', 'w') as writeJSON:
+        with open(f'../../base/states/json/base_state_governors.json',
+                  'w') as writeJSON:
             json.dump(governors_names, writeJSON, ensure_ascii=False)
     img_urls = grab_img_urls()
     download_images(img_urls)

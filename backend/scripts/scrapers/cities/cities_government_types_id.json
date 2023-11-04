@@ -1,0 +1,1322 @@
+[
+    {
+        "city_id": 1,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 2,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 3,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 4,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 5,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 6,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 7,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 8,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 9,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 10,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 11,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 12,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 13,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 14,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 15,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 16,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 17,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 18,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 19,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 20,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 21,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 22,
+        "type": "Mayor-President"
+    },
+    {
+        "city_id": 23,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 24,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 25,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 26,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 27,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 28,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 29,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 30,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 31,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 32,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 33,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 34,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 35,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 36,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 37,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 38,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 39,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 40,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 41,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 42,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 43,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 44,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 45,
+        "type": "Home Rule"
+    },
+    {
+        "city_id": 46,
+        "type": "Home Rule"
+    },
+    {
+        "city_id": 47,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 48,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 49,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 50,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 51,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 52,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 53,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 54,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 55,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 56,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 57,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 58,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 59,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 60,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 61,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 62,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 63,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 64,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 65,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 66,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 67,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 68,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 69,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 70,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 71,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 72,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 73,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 74,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 75,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 76,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 77,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 78,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 79,
+        "type": "Consolidated City and County"
+    },
+    {
+        "city_id": 80,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 81,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 82,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 83,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 84,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 85,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 86,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 87,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 88,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 89,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 90,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 91,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 92,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 93,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 94,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 95,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 96,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 97,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 98,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 99,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 100,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 101,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 102,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 103,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 104,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 105,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 106,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 107,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 108,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 109,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 110,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 111,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 112,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 113,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 114,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 115,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 116,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 117,
+        "type": "City Commission"
+    },
+    {
+        "city_id": 118,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 119,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 120,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 121,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 122,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 123,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 124,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 125,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 126,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 127,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 128,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 129,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 130,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 131,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 132,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 133,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 134,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 135,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 136,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 137,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 138,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 139,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 140,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 141,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 142,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 143,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 144,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 145,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 146,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 147,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 148,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 149,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 150,
+        "type": "Consolidated City-Parish"
+    },
+    {
+        "city_id": 151,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 152,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 153,
+        "type": "Township"
+    },
+    {
+        "city_id": 154,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 155,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 156,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 157,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 158,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 159,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 160,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 161,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 162,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 163,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 164,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 165,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 166,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 167,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 168,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 169,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 170,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 171,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 172,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 173,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 174,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 175,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 176,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 177,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 178,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 179,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 180,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 181,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 182,
+        "type": "Mayor-Commission"
+    },
+    {
+        "city_id": 183,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 184,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 185,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 186,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 187,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 188,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 189,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 190,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 191,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 192,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 193,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 194,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 195,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 196,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 197,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 198,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 199,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 200,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 201,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 202,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 203,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 204,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 205,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 206,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 207,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 208,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 209,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 210,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 211,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 212,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 213,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 214,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 215,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 216,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 217,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 218,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 219,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 220,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 221,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 222,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 223,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 224,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 225,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 226,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 227,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 228,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 229,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 230,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 231,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 232,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 233,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 234,
+        "type": "Commission-Manager"
+    },
+    {
+        "city_id": 235,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 236,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 237,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 238,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 239,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 240,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 241,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 242,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 243,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 244,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 245,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 246,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 247,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 248,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 249,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 250,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 251,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 252,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 253,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 254,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 255,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 256,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 257,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 258,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 259,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 260,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 261,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 262,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 263,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 264,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 265,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 266,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 267,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 268,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 269,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 270,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 271,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 272,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 273,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 274,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 275,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 276,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 277,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 278,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 279,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 280,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 281,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 282,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 283,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 284,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 285,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 286,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 287,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 288,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 289,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 290,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 291,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 292,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 293,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 294,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 295,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 296,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 297,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 298,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 299,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 300,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 301,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 302,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 303,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 304,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 305,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 306,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 307,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 308,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 309,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 310,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 311,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 312,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 313,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 314,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 315,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 316,
+        "type": "Strong-Mayor"
+    },
+    {
+        "city_id": 317,
+        "type": null
+    },
+    {
+        "city_id": 318,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 319,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 320,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 321,
+        "type": "Municipality"
+    },
+    {
+        "city_id": 322,
+        "type": "Mayor-Commission"
+    },
+    {
+        "city_id": 323,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 324,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 325,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 326,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 327,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 328,
+        "type": "Mayor-Council"
+    },
+    {
+        "city_id": 329,
+        "type": "Council-Manager"
+    },
+    {
+        "city_id": 330,
+        "type": "Strong-Mayor"
+    }
+]

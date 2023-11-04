@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cp -r ./new_council_members/img ../../base/cities/img && node ./parse-cities.js
