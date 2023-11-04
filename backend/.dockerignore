@@ -1,5 +1,8 @@
 node_modules
 npm-debug.log
+db/mock
+db/migrations
+db/seeds
 scripts
 tests
 test_utils

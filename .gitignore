@@ -6,9 +6,5 @@ node_modules
 *.jpg
 *.jpeg
 *.png
-backend/scripts/scrapers/cities/log*
-backend/scripts/scrapers/states/log*
-backend/scripts/scrapers/cities/new_council_members/img/
-backend/scripts/base*
 backend/nginx
 .nyc_output

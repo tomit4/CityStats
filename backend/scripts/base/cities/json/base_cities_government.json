@@ -1,0 +1,1982 @@
+[
+  {
+    "city_id": 1,
+    "mayor": "Weldon Hurt",
+    "img_url": "https://www.citystats.xyz/images/cities/1/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 2,
+    "mayor": "Nancy Holland",
+    "img_url": "https://www.citystats.xyz/images/cities/2/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 3,
+    "mayor": "Tim Keller",
+    "img_url": "https://www.citystats.xyz/images/cities/3/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 4,
+    "mayor": "Justin Wilson",
+    "img_url": "https://www.citystats.xyz/images/cities/4/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 5,
+    "mayor": "Baine Brooks",
+    "img_url": "https://www.citystats.xyz/images/cities/5/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 6,
+    "mayor": "Matt Tuerk",
+    "img_url": "https://www.citystats.xyz/images/cities/6/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 7,
+    "mayor": "Cole Stanley ",
+    "img_url": "https://www.citystats.xyz/images/cities/7/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 8,
+    "mayor": "Ashleigh E. Aitken",
+    "img_url": "https://www.citystats.xyz/images/cities/8/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 9,
+    "mayor": "Dave Bronson",
+    "img_url": "https://www.citystats.xyz/images/cities/9/mayor",
+    "type": "Municipality"
+  },
+  {
+    "city_id": 10,
+    "mayor": "Christopher Taylor",
+    "img_url": "https://www.citystats.xyz/images/cities/10/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 11,
+    "mayor": "Lamar Thorpe",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 12,
+    "mayor": "Jim Ross",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 13,
+    "mayor": "Marc Williams",
+    "img_url": null,
+    "type": "Municipality"
+  },
+  {
+    "city_id": 14,
+    "mayor": "Kelly Girtz",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 15,
+    "mayor": "Andre Dickens",
+    "img_url": "https://www.citystats.xyz/images/cities/15/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 16,
+    "mayor": "Garnett Johnson",
+    "img_url": "https://www.citystats.xyz/images/cities/16/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 17,
+    "mayor": "Mike Coffman",
+    "img_url": "https://www.citystats.xyz/images/cities/17/mayor",
+    "type": "Municipality"
+  },
+  {
+    "city_id": 18,
+    "mayor": "Richard C. Irvin",
+    "img_url": "https://www.citystats.xyz/images/cities/18/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 19,
+    "mayor": "Kirk Watson",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 20,
+    "mayor": "Karen K. Goh",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 21,
+    "mayor": "Brandon M. Scott",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 22,
+    "mayor": "Sharon Weston Broome",
+    "img_url": "https://www.citystats.xyz/images/cities/22/mayor",
+    "type": "Mayor-President"
+  },
+  {
+    "city_id": 23,
+    "mayor": "Roy West",
+    "img_url": "https://www.citystats.xyz/images/cities/23/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 24,
+    "mayor": "Lynne Robinson",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 25,
+    "mayor": "Melanie Kebler",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 26,
+    "mayor": "Jesse Arreguín",
+    "img_url": "https://www.citystats.xyz/images/cities/26/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 27,
+    "mayor": "Bill Cole",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 28,
+    "mayor": "Randall Woodfin",
+    "img_url": "https://www.citystats.xyz/images/cities/28/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 29,
+    "mayor": "Lauren McLean",
+    "img_url": "https://www.citystats.xyz/images/cities/29/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 30,
+    "mayor": "Michelle Wu",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 31,
+    "mayor": "Aaron Brockett",
+    "img_url": null,
+    "type": "Municipality"
+  },
+  {
+    "city_id": 32,
+    "mayor": "Joseph P. Ganim",
+    "img_url": "https://www.citystats.xyz/images/cities/32/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 33,
+    "mayor": "Robert F. Sullivan",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 34,
+    "mayor": "Debra Wimpee",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 35,
+    "mayor": "John  Cowen, Jr.",
+    "img_url": "https://www.citystats.xyz/images/cities/35/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 36,
+    "mayor": "Eric Orsborn",
+    "img_url": "https://www.citystats.xyz/images/cities/36/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 37,
+    "mayor": "Byron W. Brown",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 38,
+    "mayor": "Konstantine Anthony",
+    "img_url": "https://www.citystats.xyz/images/cities/38/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 39,
+    "mayor": "Sumbul Siddiqui",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 40,
+    "mayor": "John Gunter",
+    "img_url": "https://www.citystats.xyz/images/cities/40/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 41,
+    "mayor": "Keith Blackburn",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 42,
+    "mayor": "James Brainard",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 43,
+    "mayor": "Steve Babick",
+    "img_url": "https://www.citystats.xyz/images/cities/43/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 44,
+    "mayor": "Harold Weinbrecht",
+    "img_url": "https://www.citystats.xyz/images/cities/44/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 45,
+    "mayor": "Tiffany O'Donnell",
+    "img_url": null,
+    "type": "Home Rule"
+  },
+  {
+    "city_id": 46,
+    "mayor": "Stephanie Piko",
+    "img_url": "https://www.citystats.xyz/images/cities/46/mayor",
+    "type": "Home Rule"
+  },
+  {
+    "city_id": 47,
+    "mayor": "Kevin Hartke",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 48,
+    "mayor": "John Tecklenburg",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 49,
+    "mayor": "Vi Alexander Lyles",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 50,
+    "mayor": "Tim Kelly",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 51,
+    "mayor": "Dr. Richard W. \"Rick\" West",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 52,
+    "mayor": "Brandon Johnson",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 53,
+    "mayor": "Andrew Coolidge",
+    "img_url": "https://www.citystats.xyz/images/cities/53/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 54,
+    "mayor": "John McCann",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 55,
+    "mayor": "Aftab Pureval",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 56,
+    "mayor": "Joe Pitts",
+    "img_url": "https://www.citystats.xyz/images/cities/56/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 57,
+    "mayor": "Brian J. Aungst Sr.",
+    "img_url": "https://www.citystats.xyz/images/cities/57/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 58,
+    "mayor": "Justin M. Bibb",
+    "img_url": "https://www.citystats.xyz/images/cities/58/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 59,
+    "mayor": "Lynne Ashbeck",
+    "img_url": "https://www.citystats.xyz/images/cities/59/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 60,
+    "mayor": "John Nichols",
+    "img_url": "https://www.citystats.xyz/images/cities/60/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 61,
+    "mayor": "Yemi Mobolade",
+    "img_url": "https://www.citystats.xyz/images/cities/61/mayor",
+    "type": "Municipality"
+  },
+  {
+    "city_id": 62,
+    "mayor": "Barbara Buffaloe",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 63,
+    "mayor": "Daniel J. Rickenmann",
+    "img_url": "https://www.citystats.xyz/images/cities/63/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 64,
+    "mayor": "Andrew J. Ginther",
+    "img_url": "https://www.citystats.xyz/images/cities/64/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 65,
+    "mayor": "B. H. \"Skip\" Henderson III",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 66,
+    "mayor": "Laura Hoffmeister",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 67,
+    "mayor": "William C. \"Bill\" Dusch",
+    "img_url": "https://www.citystats.xyz/images/cities/67/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 68,
+    "mayor": "Scott J. Brook",
+    "img_url": "https://www.citystats.xyz/images/cities/68/mayor",
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 69,
+    "mayor": "Tony Daddario",
+    "img_url": "https://www.citystats.xyz/images/cities/69/mayor",
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 70,
+    "mayor": "Paulette M. Guajardo",
+    "img_url": "https://www.citystats.xyz/images/cities/70/mayor",
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 71,
+    "mayor": "John Stephens",
+    "img_url": "https://www.citystats.xyz/images/cities/71/mayor",
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 72,
+    "mayor": "Eric L. Johnson",
+    "img_url": null,
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 73,
+    "mayor": "Raymond A. Buenaventura",
+    "img_url": "https://www.citystats.xyz/images/cities/73/mayor",
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 74,
+    "mayor": "Mike Matson",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 75,
+    "mayor": "Judy Paul",
+    "img_url": "https://www.citystats.xyz/images/cities/75/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 76,
+    "mayor": "Jeffrey J. Mims, Jr.",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 77,
+    "mayor": "Abdullah Hammoud",
+    "img_url": "https://www.citystats.xyz/images/cities/77/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 78,
+    "mayor": "Gerard Hudspeth",
+    "img_url": "https://www.citystats.xyz/images/cities/78/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 79,
+    "mayor": "Mike Johnston",
+    "img_url": null,
+    "type": "Consolidated City and County"
+  },
+  {
+    "city_id": 80,
+    "mayor": "T.M. Franklin Cownie",
+    "img_url": "https://www.citystats.xyz/images/cities/80/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 81,
+    "mayor": "Mike Duggan",
+    "img_url": "https://www.citystats.xyz/images/cities/81/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 82,
+    "mayor": "Claudia M. Frometa",
+    "img_url": "https://www.citystats.xyz/images/cities/82/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 83,
+    "mayor": "Elaine O'Neal",
+    "img_url": "https://www.citystats.xyz/images/cities/83/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 84,
+    "mayor": "Ramiro Garza Jr.",
+    "img_url": "https://www.citystats.xyz/images/cities/84/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 85,
+    "mayor": "Sam Joshi",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 86,
+    "mayor": "Bill Wells",
+    "img_url": "https://www.citystats.xyz/images/cities/86/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 87,
+    "mayor": "David Kaptain",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 88,
+    "mayor": "Patricia Perkins-Auguste",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 89,
+    "mayor": "Bobbie Singh-Allen",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 90,
+    "mayor": "Jessica Ancona",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 91,
+    "mayor": "Oscar Leeser",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 92,
+    "mayor": "Dane White",
+    "img_url": "https://www.citystats.xyz/images/cities/92/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 93,
+    "mayor": "Lucy Vinis",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 94,
+    "mayor": "Lloyd Winnecke",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 95,
+    "mayor": "Cassie Franklin",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 96,
+    "mayor": "Catherine Moy",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 97,
+    "mayor": "Tim Mahoney",
+    "img_url": "https://www.citystats.xyz/images/cities/97/mayor",
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 98,
+    "mayor": "Mitch Colvin",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 99,
+    "mayor": "Scott Fadness",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 100,
+    "mayor": "Acquanetta Warren",
+    "img_url": "https://www.citystats.xyz/images/cities/100/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 101,
+    "mayor": "Jeni Arndt",
+    "img_url": "https://www.citystats.xyz/images/cities/101/mayor",
+    "type": "Municipality"
+  },
+  {
+    "city_id": 102,
+    "mayor": "Dean J. Trantalis",
+    "img_url": null,
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 103,
+    "mayor": "Tom Henry",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 104,
+    "mayor": "Mattie Parker",
+    "img_url": "https://www.citystats.xyz/images/cities/104/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 105,
+    "mayor": "Lily Mei",
+    "img_url": "https://www.citystats.xyz/images/cities/105/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 106,
+    "mayor": "Jerry Dyer",
+    "img_url": "https://www.citystats.xyz/images/cities/106/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 107,
+    "mayor": "Jeff Cheney",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 108,
+    "mayor": "Fred Jung",
+    "img_url": "https://www.citystats.xyz/images/cities/108/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 109,
+    "mayor": "Harvey Ward",
+    "img_url": "https://www.citystats.xyz/images/cities/109/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 110,
+    "mayor": "Steve Jones",
+    "img_url": "https://www.citystats.xyz/images/cities/110/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 111,
+    "mayor": "Scott Lemay",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 112,
+    "mayor": "Brigette Peterson",
+    "img_url": "https://www.citystats.xyz/images/cities/112/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 113,
+    "mayor": "Jerry P. Weiers",
+    "img_url": "https://www.citystats.xyz/images/cities/113/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 114,
+    "mayor": "Daniel Brotman",
+    "img_url": "https://www.citystats.xyz/images/cities/114/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 115,
+    "mayor": "Joe Pizzillo",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 116,
+    "mayor": "Ron Jensen",
+    "img_url": "https://www.citystats.xyz/images/cities/116/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 117,
+    "mayor": "Rosalynn Bliss",
+    "img_url": "https://www.citystats.xyz/images/cities/117/mayor",
+    "type": "City Commission"
+  },
+  {
+    "city_id": 118,
+    "mayor": "John Gates",
+    "img_url": "https://www.citystats.xyz/images/cities/118/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 119,
+    "mayor": "Eric Genrich",
+    "img_url": "https://www.citystats.xyz/images/cities/119/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 120,
+    "mayor": "Nancy Vaughan",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 121,
+    "mayor": "Travis Stovall",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 122,
+    "mayor": "Donnie Tuck",
+    "img_url": "https://www.citystats.xyz/images/cities/122/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 123,
+    "mayor": "Luke Bronin",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 124,
+    "mayor": "Legislative Program",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 125,
+    "mayor": "Michelle Romero",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 126,
+    "mayor": "Brigit Bennington",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 127,
+    "mayor": "Esteban Bovo, Jr.",
+    "img_url": "https://www.citystats.xyz/images/cities/127/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 128,
+    "mayor": "Jay W. Wagner",
+    "img_url": "https://www.citystats.xyz/images/cities/128/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 129,
+    "mayor": "Steve Callaway",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 130,
+    "mayor": "Josh Levy",
+    "img_url": "https://www.citystats.xyz/images/cities/130/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 131,
+    "mayor": "Tommy Waters",
+    "img_url": "https://www.citystats.xyz/images/cities/131/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 132,
+    "mayor": "Sylvester Turner",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 133,
+    "mayor": "Tony Strickland",
+    "img_url": "https://www.citystats.xyz/images/cities/133/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 134,
+    "mayor": "Tommy Battle",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 135,
+    "mayor": "Rory Rowland",
+    "img_url": "https://www.citystats.xyz/images/cities/135/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 136,
+    "mayor": "Vop Osili",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 137,
+    "mayor": "James T. Butts",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 138,
+    "mayor": "Farrah N. Khan",
+    "img_url": "https://www.citystats.xyz/images/cities/138/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 139,
+    "mayor": "Rick Stopfer",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 140,
+    "mayor": "Chokwe Antar Lumumba",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 141,
+    "mayor": "Donna Deegan",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 142,
+    "mayor": "Steven Fulop",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 143,
+    "mayor": "Terry D'Arcy",
+    "img_url": "https://www.citystats.xyz/images/cities/143/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 144,
+    "mayor": "Chris Barajas",
+    "img_url": "https://www.citystats.xyz/images/cities/144/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 145,
+    "mayor": "Quinton Lucas",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 146,
+    "mayor": "Tyrone Garner",
+    "img_url": "https://www.citystats.xyz/images/cities/146/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 147,
+    "mayor": "Dana Ralph",
+    "img_url": "https://www.citystats.xyz/images/cities/147/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 148,
+    "mayor": "Debbie Nash-King",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 149,
+    "mayor": "Indya Kincannon",
+    "img_url": "https://www.citystats.xyz/images/cities/149/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 150,
+    "mayor": "Josh Guillory",
+    "img_url": null,
+    "type": "Consolidated City-Parish"
+  },
+  {
+    "city_id": 151,
+    "mayor": "William \"Bill\" Mutz",
+    "img_url": "https://www.citystats.xyz/images/cities/151/mayor",
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 152,
+    "mayor": "Adam Paul",
+    "img_url": "https://www.citystats.xyz/images/cities/152/mayor",
+    "type": "Municipality"
+  },
+  {
+    "city_id": 153,
+    "mayor": "Albert Akerman",
+    "img_url": null,
+    "type": "Township"
+  },
+  {
+    "city_id": 154,
+    "mayor": "R. Rex Parris",
+    "img_url": "https://www.citystats.xyz/images/cities/154/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 155,
+    "mayor": "Andy Schor",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 156,
+    "mayor": "Dr. Victor D. Treviño",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 157,
+    "mayor": "Ken Miyagishima",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 158,
+    "mayor": "Carolyn G. Goodman",
+    "img_url": "https://www.citystats.xyz/images/cities/158/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 159,
+    "mayor": "Nick Long",
+    "img_url": "https://www.citystats.xyz/images/cities/159/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 160,
+    "mayor": "William A. Baird",
+    "img_url": "https://www.citystats.xyz/images/cities/160/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 161,
+    "mayor": "TJ Gilmore",
+    "img_url": "https://www.citystats.xyz/images/cities/161/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 162,
+    "mayor": "Linda Gorton",
+    "img_url": "https://www.citystats.xyz/images/cities/162/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 163,
+    "mayor": "Leirion Gaylor Baird",
+    "img_url": "https://www.citystats.xyz/images/cities/163/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 164,
+    "mayor": "Frank Scott Jr.",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 165,
+    "mayor": "Rex Richardson",
+    "img_url": "https://www.citystats.xyz/images/cities/165/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 166,
+    "mayor": "Joan Peck",
+    "img_url": null,
+    "type": "Municipality"
+  },
+  {
+    "city_id": 167,
+    "mayor": "Karen Bass",
+    "img_url": "https://www.citystats.xyz/images/cities/167/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 168,
+    "mayor": "Craig Greenberg",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 169,
+    "mayor": "Sokhary Chau",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 170,
+    "mayor": "Tray Payne",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 171,
+    "mayor": "Jared C. Nicholson",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 172,
+    "mayor": "Lester Miller",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 173,
+    "mayor": "Satya Rhodes-Conway",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 174,
+    "mayor": "Joyce Craig",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 175,
+    "mayor": "Javier Villalobos",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 176,
+    "mayor": "George Fuller",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 177,
+    "mayor": "Jim Strickland",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 178,
+    "mayor": "Bill Zimmerman",
+    "img_url": "https://www.citystats.xyz/images/cities/178/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 179,
+    "mayor": "Robert Simison",
+    "img_url": "https://www.citystats.xyz/images/cities/179/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 180,
+    "mayor": "John Giles",
+    "img_url": "https://www.citystats.xyz/images/cities/180/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 181,
+    "mayor": "Daniel Alemán Jr.",
+    "img_url": "https://www.citystats.xyz/images/cities/181/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 182,
+    "mayor": "Francis Suarez",
+    "img_url": null,
+    "type": "Mayor-Commission"
+  },
+  {
+    "city_id": 183,
+    "mayor": "Rodney Harris",
+    "img_url": "https://www.citystats.xyz/images/cities/183/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 184,
+    "mayor": "Lori Blong",
+    "img_url": "https://www.citystats.xyz/images/cities/184/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 185,
+    "mayor": "Cavalier Johnson",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 186,
+    "mayor": "Jacob Frey",
+    "img_url": "https://www.citystats.xyz/images/cities/186/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 187,
+    "mayor": "Wayne M. Messam",
+    "img_url": "https://www.citystats.xyz/images/cities/187/mayor",
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 188,
+    "mayor": "Sandy Stimpson",
+    "img_url": "https://www.citystats.xyz/images/cities/188/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 189,
+    "mayor": "Sue Zwahlen",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 190,
+    "mayor": "Steven L. Reed",
+    "img_url": "https://www.citystats.xyz/images/cities/190/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 191,
+    "mayor": "Ulises Cabrera",
+    "img_url": "https://www.citystats.xyz/images/cities/191/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 192,
+    "mayor": "Shane McFarland",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 193,
+    "mayor": "Lisa DeForest",
+    "img_url": "https://www.citystats.xyz/images/cities/193/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 194,
+    "mayor": "Debbie Kling",
+    "img_url": "https://www.citystats.xyz/images/cities/194/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 195,
+    "mayor": "Scott A. Wehrli",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 196,
+    "mayor": "Jim Shulman",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 197,
+    "mayor": "Ras Baraka",
+    "img_url": "https://www.citystats.xyz/images/cities/197/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 198,
+    "mayor": "Jon Mitchell",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 199,
+    "mayor": "Justin Elicker",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 200,
+    "mayor": "LaToya Cantrell",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 201,
+    "mayor": "Phillip D. Jones",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 202,
+    "mayor": "Eric Adams",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 203,
+    "mayor": "Kenneth Cooper Alexander, Ph.D.",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 204,
+    "mayor": "Larry Heikkila",
+    "img_url": "https://www.citystats.xyz/images/cities/204/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 205,
+    "mayor": "R. Keith Summey",
+    "img_url": "https://www.citystats.xyz/images/cities/205/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 206,
+    "mayor": "Pamela Goynes-Brown",
+    "img_url": "https://www.citystats.xyz/images/cities/206/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 207,
+    "mayor": "Ana Valencia",
+    "img_url": "https://www.citystats.xyz/images/cities/207/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 208,
+    "mayor": "Rebecca Kaplan",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 209,
+    "mayor": "Esther C. Sanchez",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 210,
+    "mayor": "Javier Joven",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 211,
+    "mayor": "David Holt",
+    "img_url": "https://www.citystats.xyz/images/cities/211/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 212,
+    "mayor": "John Bacon",
+    "img_url": "https://www.citystats.xyz/images/cities/212/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 213,
+    "mayor": "Jean Stothert",
+    "img_url": "https://www.citystats.xyz/images/cities/213/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 214,
+    "mayor": "Paul S. Leon",
+    "img_url": "https://www.citystats.xyz/images/cities/214/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 215,
+    "mayor": "Dan Slater",
+    "img_url": "https://www.citystats.xyz/images/cities/215/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 216,
+    "mayor": "Buddy Dyer",
+    "img_url": "https://www.citystats.xyz/images/cities/216/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 217,
+    "mayor": "Curt Skoog",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 218,
+    "mayor": "John C. Zaragoza",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 219,
+    "mayor": "Rob Medina",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 220,
+    "mayor": "Laura Bettencourt",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 221,
+    "mayor": "Victor Gordo",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 222,
+    "mayor": "Jeff Wagner",
+    "img_url": "https://www.citystats.xyz/images/cities/222/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 223,
+    "mayor": "Andre Sayegh",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 224,
+    "mayor": "Kevin Cole",
+    "img_url": "https://www.citystats.xyz/images/cities/224/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 225,
+    "mayor": "Frank C. Ortis",
+    "img_url": null,
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 226,
+    "mayor": "Jason Beck",
+    "img_url": null,
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 227,
+    "mayor": "Rita Ali",
+    "img_url": null,
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 228,
+    "mayor": "Jim Kenney",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 229,
+    "mayor": "Kate Gallego",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 230,
+    "mayor": "Ed Gainey",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 231,
+    "mayor": "John B. Muns",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 232,
+    "mayor": "Tim Sandoval",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 233,
+    "mayor": "Rex Hardin",
+    "img_url": "https://www.citystats.xyz/images/cities/233/mayor",
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 234,
+    "mayor": "Ted Wheeler",
+    "img_url": null,
+    "type": "Commission-Manager"
+  },
+  {
+    "city_id": 235,
+    "mayor": "Shannon M. Martin",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 236,
+    "mayor": "Brett Smiley",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 237,
+    "mayor": "Michelle Kaufusi",
+    "img_url": "https://www.citystats.xyz/images/cities/237/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 238,
+    "mayor": "Nick Gradisar",
+    "img_url": null,
+    "type": "Municipality"
+  },
+  {
+    "city_id": 239,
+    "mayor": "Thomas P. Koch",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 240,
+    "mayor": "Mary-Ann Baldwin",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 241,
+    "mayor": "L. Dennis Michael",
+    "img_url": "https://www.citystats.xyz/images/cities/241/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 242,
+    "mayor": "Hillary Schieve",
+    "img_url": "https://www.citystats.xyz/images/cities/242/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 243,
+    "mayor": "Armondo Pavone",
+    "img_url": "https://www.citystats.xyz/images/cities/243/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 244,
+    "mayor": "Deborah Robertson",
+    "img_url": "https://www.citystats.xyz/images/cities/244/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 245,
+    "mayor": "Bob Dubey",
+    "img_url": "https://www.citystats.xyz/images/cities/245/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 246,
+    "mayor": "Eduardo Martinez",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 247,
+    "mayor": "Levar Stoney",
+    "img_url": "https://www.citystats.xyz/images/cities/247/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 248,
+    "mayor": "Gregg Hull",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 249,
+    "mayor": "Lock Dawson",
+    "img_url": "https://www.citystats.xyz/images/cities/249/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 250,
+    "mayor": "Kim Norton",
+    "img_url": "https://www.citystats.xyz/images/cities/250/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 251,
+    "mayor": "Malik Evans",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 252,
+    "mayor": "Tom McNamara",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 253,
+    "mayor": "Bruce Houdesheldt",
+    "img_url": "https://www.citystats.xyz/images/cities/253/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 254,
+    "mayor": "Craig Morgan",
+    "img_url": "https://www.citystats.xyz/images/cities/254/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 255,
+    "mayor": "Darrell Steinberg",
+    "img_url": "https://www.citystats.xyz/images/cities/255/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 256,
+    "mayor": "Melvin Carter",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 257,
+    "mayor": "Chris Hoy",
+    "img_url": "https://www.citystats.xyz/images/cities/257/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 258,
+    "mayor": "Kimbley Craig",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 259,
+    "mayor": "Erin Mendenhall",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 260,
+    "mayor": "Ron Nirenberg",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 261,
+    "mayor": "Helen Tran (D)",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 262,
+    "mayor": "Todd Gloria",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 263,
+    "mayor": "Rusty Paul",
+    "img_url": "https://www.citystats.xyz/images/cities/263/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 264,
+    "mayor": "London Breed",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 265,
+    "mayor": "Matt Mahan",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 266,
+    "mayor": "Amourence Lee",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 267,
+    "mayor": "Valerie Amezcua",
+    "img_url": "https://www.citystats.xyz/images/cities/267/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 268,
+    "mayor": "Lisa M. Gillmor",
+    "img_url": "https://www.citystats.xyz/images/cities/268/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 269,
+    "mayor": "Jason Gibbs",
+    "img_url": "https://www.citystats.xyz/images/cities/269/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 270,
+    "mayor": "Alice Patino",
+    "img_url": "https://www.citystats.xyz/images/cities/270/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 271,
+    "mayor": "Eddie Alvarez",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 272,
+    "mayor": "Van R. Johnson, II",
+    "img_url": "https://www.citystats.xyz/images/cities/272/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 273,
+    "mayor": "David D. Ortega",
+    "img_url": "https://www.citystats.xyz/images/cities/273/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 274,
+    "mayor": "Bruce Harrell",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 275,
+    "mayor": "Tom Arceneaux",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 276,
+    "mayor": "Fred D. Thomas",
+    "img_url": "https://www.citystats.xyz/images/cities/276/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 277,
+    "mayor": "Paul TenHaken",
+    "img_url": "https://www.citystats.xyz/images/cities/277/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 278,
+    "mayor": "James Mueller",
+    "img_url": "https://www.citystats.xyz/images/cities/278/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 279,
+    "mayor": "Khalid Kamau",
+    "img_url": "https://www.citystats.xyz/images/cities/279/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 280,
+    "mayor": "Ed Lawson",
+    "img_url": "https://www.citystats.xyz/images/cities/280/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 281,
+    "mayor": "Pam Haley",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 282,
+    "mayor": "Nadine Woodward",
+    "img_url": "https://www.citystats.xyz/images/cities/282/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 283,
+    "mayor": "Misty Buscher",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 284,
+    "mayor": "Domenic Sarno",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 285,
+    "mayor": "Ken McClure",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 286,
+    "mayor": "Caroline Simmons",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 287,
+    "mayor": "Michael C. Taylor",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 288,
+    "mayor": "Tishaura Jones",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 289,
+    "mayor": "Kevin J. Lincoln, II",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 290,
+    "mayor": "Ken Welch",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 291,
+    "mayor": "Joe R. Zimmerman",
+    "img_url": "https://www.citystats.xyz/images/cities/291/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 292,
+    "mayor": "Larry Klein",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 293,
+    "mayor": "Skip Hall",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 294,
+    "mayor": "Ben Walsh",
+    "img_url": "https://www.citystats.xyz/images/cities/294/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 295,
+    "mayor": "Victoria Woodards",
+    "img_url": "https://www.citystats.xyz/images/cities/295/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 296,
+    "mayor": "John E. Dailey,",
+    "img_url": "https://www.citystats.xyz/images/cities/296/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 297,
+    "mayor": "Jane Castor",
+    "img_url": "https://www.citystats.xyz/images/cities/297/mayor",
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 298,
+    "mayor": "Zak Schwank",
+    "img_url": "https://www.citystats.xyz/images/cities/298/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 299,
+    "mayor": "Corey D Woods",
+    "img_url": "https://www.citystats.xyz/images/cities/299/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 300,
+    "mayor": "Jan Kulmann",
+    "img_url": null,
+    "type": "Municipality"
+  },
+  {
+    "city_id": 301,
+    "mayor": "Kevin McNamee",
+    "img_url": "https://www.citystats.xyz/images/cities/301/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 302,
+    "mayor": "Wade Kapszukiewicz",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 303,
+    "mayor": "George K. Chen",
+    "img_url": "https://www.citystats.xyz/images/cities/303/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 304,
+    "mayor": "- Regina Romero",
+    "img_url": "https://www.citystats.xyz/images/cities/304/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 305,
+    "mayor": "G. T. Bynum",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 306,
+    "mayor": "Walt Maddox",
+    "img_url": "https://www.citystats.xyz/images/cities/306/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 307,
+    "mayor": "Don Warren",
+    "img_url": "https://www.citystats.xyz/images/cities/307/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 308,
+    "mayor": "John Carli",
+    "img_url": "https://www.citystats.xyz/images/cities/308/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 309,
+    "mayor": "Robert H. Mcconnell",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 310,
+    "mayor": "Anne McEnerny-Ogle",
+    "img_url": "https://www.citystats.xyz/images/cities/310/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 311,
+    "mayor": "Joe Schroeder",
+    "img_url": "https://www.citystats.xyz/images/cities/311/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 312,
+    "mayor": "Debra Jones",
+    "img_url": "https://www.citystats.xyz/images/cities/312/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 313,
+    "mayor": "Robert M. \"Bobby\" Dyer",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 314,
+    "mayor": "Brian Poochigian",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 315,
+    "mayor": "Dillon Meek",
+    "img_url": "https://www.citystats.xyz/images/cities/315/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 316,
+    "mayor": "James R. Fouts",
+    "img_url": null,
+    "type": "Strong-Mayor"
+  },
+  {
+    "city_id": 317,
+    "mayor": "Muriel Bowser",
+    "img_url": null,
+    "type": null
+  },
+  {
+    "city_id": 318,
+    "mayor": "Neil O'Leary",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 319,
+    "mayor": "Rosario Diaz",
+    "img_url": "https://www.citystats.xyz/images/cities/319/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 320,
+    "mayor": "Dirk Burton",
+    "img_url": "https://www.citystats.xyz/images/cities/320/mayor",
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 321,
+    "mayor": "Nancy McNally",
+    "img_url": "https://www.citystats.xyz/images/cities/321/mayor",
+    "type": "Municipality"
+  },
+  {
+    "city_id": 322,
+    "mayor": "Keith A. James",
+    "img_url": null,
+    "type": "Mayor-Commission"
+  },
+  {
+    "city_id": 323,
+    "mayor": "Karen Lang",
+    "img_url": "https://www.citystats.xyz/images/cities/323/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 324,
+    "mayor": "Stephen Santellana",
+    "img_url": "https://www.citystats.xyz/images/cities/324/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 325,
+    "mayor": "Dr. Brandon Whipple",
+    "img_url": "https://www.citystats.xyz/images/cities/325/mayor",
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 326,
+    "mayor": "Bill Saffo",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 327,
+    "mayor": "Allen Joines",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 328,
+    "mayor": "John McCormac",
+    "img_url": null,
+    "type": "Mayor-Council"
+  },
+  {
+    "city_id": 329,
+    "mayor": "Joseph M. Petty",
+    "img_url": null,
+    "type": "Council-Manager"
+  },
+  {
+    "city_id": 330,
+    "mayor": "Mike Spano",
+    "img_url": "https://www.citystats.xyz/images/cities/330/mayor",
+    "type": "Strong-Mayor"
+  }
+]
