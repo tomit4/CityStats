@@ -1,7 +1,8 @@
 node_modules
 npm-debug.log
-scripts/scrapers/cities/new_council_members/img
-scripts/scrapers/cities/log.txt
+scripts
 tests
+test_utils
 .nyc_output
 nginx
+*/vim
