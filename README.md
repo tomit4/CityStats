@@ -4,70 +4,81 @@
 
 ## Introduction
 
-This is the second version of my [City Stats API](https://citystats.xyz/states/).
+CityStats is a simple Read Only REST API that delivers statistics about all 50 states
+within the United States of America as well as the top 330 most populated cities
+within the United States.
+
+**Getting Started**
+
+:construction: Official Online Documentation is still in development. Keep an
+eye out for https://citystats.info where official documentation will eventually
+find its home.
+
+To grab a general overview of what is available. Please visit one of the two
+following root endpoints:
+
+-   https://citystats.xyz/states
+-   https://citystats.xyz/cities
+
+This will provide you with the majority of the data available including
+information about each state/city including fields such as square footage,
+population, politician names, and more. Subfields can be added to the URL string
+to gain more fine grained details from the API, such as:
+
+-   https://citystats.xyz/states/1
+
+Which will return to you information only about the first state within the
+data set. If you wish to query information by state name, that is also available
+by adjusting the URl query string like so:
+
+-   https://citystats.xyz/states/Alabama
+
+**Query Specifics**
+
+The query string for states or cities can be adjusted to accept the name of the
+state/city. Should the state/city name have multi-word, please note that the
+API's formatting requries the use of underscores instead of spaces, like so:
+
+-   https://citystats.xyz/cities/Los_Angeles
+
+Should a city name have multiple references by that name within the data set,
+all cities with that name will be returned, as is the case for example,
+with the city name Aurora:
+
+-   https://citystats.xyz/cities/Aurora
+
+The query can become increasingly granular, as each subsequent forward slash
+within the URL string can further specify the specific data you wish to
+retrieve:
+
+-   https://citystats.xyz/states/1/area
+-   https://citystats.xyz/states/1/area/total
+-   https://citystats/xyz/states/Alabama/government
+-   https://citystats/xyz/states/Alabama/government/senators
+-   https://citystats/xyz/states/Alabama/government/senators/1
+
+**Images**
+
+Additionally, images of specific government representatives, such as senators,
+house delegates, governors, mayors, and city councilmembers are all
+available via the images routes:
+
+-   https://citystats.xyz/images/states/1/governor
+-   https://citystats.xyz/images/states/1/senators/1
+-   https://citystats.xyz/images/states/1/delegates/2
+-   https://www.citystats.xyz/images/cities/10/mayor
+-   https://www.citystats.xyz/images/cities/10/city_council/6
+
+**Periodic Updates**
+
+This API is updated utilizing a series of Python Beautiful Soup Web Scraping
+scripts which periodically bring in new names/images from Wikipedia as well as
+Official Government Websites. This is an imperfect method of bringing in new
+information, and while some automation has been implemented, if you notice any
+inaccuracies in any of the data, please feel free to create an issue in this
+repository and I will do my best to address it in a timely manner.
 
 #### TODO:
-
-**Backend:**
-
--   [x] Break out knex/sql statements into services folder as classes with properties/methods.
--   [x] Integrate [fastify-helmet](https://github.com/fastify/fastify-helmet).
--   [x] Add more nested routes for specific state data (i.e. area, population, speicific senators, etc.)
--   [x] Apply seed data for states
--   [x] Create routes and nested routes for cities ( same as nested routes above for cities)
--   [x] Apply seed data for cities
--   [x] Add more functionality where cities with duplicate names, all cities are returned, not just the first one that matches the name.
--   [x] Write unit tests using ava. Consider using [fastify's testing guide](https://fastify.dev/docs/latest/Guides/Testing)
--   [ ] Rewrite tests for cities-services-field.js and also cities-services-details.js as logic has changed with new search by name features
--   [x] Add [fastify-static](https://github.com/fastify/fastify-static) for image hosting of senator/house_delegates/mayors/city_counselors images
--   [x] Set up appropriate route for image filepath (i.e cities/1/government/city_council/1/image) (half done)
--   [x] Set up imagemagick script to scale images (reasonable sizes for frontend display)
--   [x] Set up scripts and db to update state govenor name
--   [ ] Integrate Basic Auth using a separate sqlite db that holds API keys
--   [x] Rewrite mock data returns to reflect updated data returned from web scraping scripts
-
-:recycle: **Cleanup**
-
--   [ ] Create a new repository for your web scraping/other scripts
--   [ ] Clean up file/directory structure
--   [ ] Write up a separate README for future you to utilize scripts and update citystats db
-
-**Backend_V3 (next version)**
-
--   [x] Adjust states tables to output json output/schemas to return state government (see json example below):
--   [ ] Halfway done. Just add governor information. (use your existing updating governor python script to save new governor names/images).
--   [ ] For governor, Prepare json file, knex migration, seed, etc, and add to database as table 'states_governors'.
--   [ ] Adjust states logic to place governor table info into new government json field.
--   [ ] Adjust states routes schema validations to accept new government field.
-
-```
-government: {
-    "governor": {
-        "governor_name": "Governor Name",
-        "img_url": "https://www.citystats.xyz/images/states/2/governor"
-    },
-    "senators": [
-        {
-            "senator_name": "Senator 1 Name",
-            "img_url: "https://www.citystats.xyz/images/states/2/senators/1
-        },
-        {
-            "senator_name": "Senator 2 Name",
-            "img_url: "https://www.citystats.xyz/images/states/2/senators/2
-        },
-    ],
-    "house_delegates": [
-        {
-            "delegate_name": "Delegate 1 Name",
-            "img_url: "https://www.citystats.xyz/images/states/2/delegates/1
-        },
-        {
-            "delegate_name": "Delegate 2 Name",
-            "img_url: "https://www.citystats.xyz/images/states/2/delegates/2
-        },
-    ]
-}
-```
 
 **Frontend:**
 
@@ -76,26 +87,8 @@ government: {
 -   [ ] Model frontend off of classic simple Apis like [I Can Haz Dad Joke](https://icanhazdadjoke.com/) and [The Star Wars API](https://swapi.dev/).
 -   [ ] Determine how you can demonstrate this api without exposing auth headers in fetch() (???)
 
-**Automation:**
+**Backend:**
 
--   [x] Adjust initial scripts already written to catch beautiful soup errors and log them to the log.txt file for easy finding of where beautiful soup failed (this way we can quickly find the city site that failed and adjust our sraping script accordingly).
--   [x] Since there will be a LOT of python scripts to run, the script to pass to cron/celery will need to run every \*.py file within our scraping directory, investigate [run-parts command](https://unix.stackexchange.com/questions/189118/sanely-run-all-scripts-in-a-directory)
--   [ ] Set up scripts in their own separate directory (i.e backend, frontend, data)
--   [ ] Investigate python/celery for "super cron" jobs.
-
-**Devops:**
-
--   [x] Dockerize Entire App
--   [ ] Deploy to Linode, re-establish ssl certs, etc.
-
-**Note:**
-
-See your nginx configs for how to redirect docker containers (pretty easy)
-
-To spin up the docker container locally simply navigate to backend and invoke:
-
-```
-docker-compose up -d citystats
-```
-
-And navigate to localhost:$DOCKERPORT
+-   [ ] Once Frontend is finished, create logic on both front and back end to
+        implement Basic Auth using generated API keys and Brevo Transactional
+        Emails for Sign Up/Sending of API keys.
