@@ -21,9 +21,14 @@
         node/express, and python) that will show basic usage in a backend api.
 
 **NOTES**:
-On reading some of the React Docs, we have determined that we'll
-need to use useState, useEffect, useMemo, and useDeferredValue hooks
-to grab what we need from the backend citystats API and render it appropriately.
+
+-   On reading some of the React Docs, we have determined that we'll
+    need to use useState, useEffect, useMemo, and useDeferredValue hooks
+    to grab what we need from the backend citystats API and render it appropriately.
+-   On watching [Web Dev Simplified's tutorial](https://www.youtube.com/watch?v=UUga4-z7b6s&pp=ygUsd2ViIGRldiBzaW1wbGlmaWVkIHJlYWN0IGRpcmVjdG9yeSBzdHJ1Y3R1cmU%3D) on organizing a React project's
+    directory, structure, I have added certain directories into the src directory
+    that have yet to be utilized (see his intermediate and advanced dir structure to
+    get a grasp on how best to organize your project here).
 
 **RESOURCES**
 
