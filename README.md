@@ -87,8 +87,15 @@ repository and I will do my best to address it in a timely manner.
 -   [ ] Model frontend off of classic simple Apis like [I Can Haz Dad Joke](https://icanhazdadjoke.com/) and [The Star Wars API](https://swapi.dev/).
 -   [ ] Determine how you can demonstrate this api without exposing auth headers in fetch() (???)
 
-**Backend:**
+**Authentication:**
 
 -   [ ] Once Frontend is finished, create logic on both front and back end to
         implement Basic Auth using generated API keys and Brevo Transactional
         Emails for Sign Up/Sending of API keys.
+-   [ ] Correlate an API key login/auth logic on both the frontend and the backend
+        (i.e. utilize cookie/auth headers using hashing email addresses, storing
+        emails in temporary state, aka cache, and create timers to check if
+        confirmation emails were checked).
+-   [ ] Create logic for if same email is sent for sign up (ask to recreate API
+        key...)
+-   [ ] Create a login/sign up pages, add 'lost my API key button and logic'
