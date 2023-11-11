@@ -6,5 +6,8 @@ node_modules
 *.jpg
 *.jpeg
 *.png
+*.otf
+*.zip
+frontend/src/assets
 backend/nginx
 .nyc_output
