@@ -76,3 +76,10 @@ Powered by Linode, NGINX, Docker, React
 -   [React Official Docs - useEffect](https://react.dev/reference/react/useEffect)
 -   [React Official Docs - useMemo](https://react.dev/reference/react/useMemo)
 -   [React Official Docs - useDefferedValue](https://react.dev/reference/react/useDeferredValue)
+
+**ASSETS**
+
+Fonts:
+
+1. [Source Code Pro](https://www.fontspace.com/search?q=source%20code%20pro)
+2. [Poppins](https://www.1001fonts.com/search.html?search=poppins)
