@@ -30,6 +30,44 @@
     that have yet to be utilized (see his intermediate and advanced dir structure to
     get a grasp on how best to organize your project here).
 
+-   Forego all references to API keys for now, get the public API up first, then
+    implement API keys (a project on its own).
+
+**NAVBAR**
+
+Navbar Elements Should Include:
+
+-   Home
+-   API Keys
+-   Github
+-   Search (ctrl k)
+-   Light/Dark Toggle
+
+NOTE: when navbar collapses, majority goes into hamburger menu except for
+search.
+
+**ASIDE MENU**
+
+...collapsed NavBar if in mobile
+
+-   Toggle Button for states/cities(?)
+-   Getting Started Submenu
+
+    1. All States
+    2. Specific State
+
+-   Essentials Submenu
+
+    1. Query by Specific Field
+    2. Query Government Officials
+    3. Querying Images
+
+-   Generate API Key, etc.
+
+**FOOTER MENU**
+Email, Mastodon, Website
+Powered by Linode, NGINX, Docker, React
+
 **RESOURCES**
 
 -   [FreeCodeCamp - How To Write Good API Documentation](https://www.freecodecamp.org/news/how-to-write-api-documentation-like-a-pro/)
