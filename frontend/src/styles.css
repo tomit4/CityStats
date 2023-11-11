@@ -1,6 +1,33 @@
-.hero-image {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    font-family: system-ui;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+main {
+    width: min(70ch, 100% - 4rem);
+    margin-inline: auto;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
     display: block;
+}
+
+.hero-image {
     margin: 0 auto;
-    width: 90%;
-    max-width: 1920px;
+    margin-top: -0.5em;
+    padding: 0;
 }

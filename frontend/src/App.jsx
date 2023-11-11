@@ -7,6 +7,7 @@ export default function App() {
         <>
             {/* If Logged In... */}
             <Hero />
+            {/* <main></main> */}
         </>
     )
 }

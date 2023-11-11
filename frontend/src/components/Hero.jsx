@@ -1,5 +1,6 @@
 import React from 'react'
 import heroImage from '../assets/images/city_lights_usa_01.jpg'
+// import heroImage from '../assets/images/lower_manhattan_panorama_01.jpg'
 
 export default function Hero() {
     return (
