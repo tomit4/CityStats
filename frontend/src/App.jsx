@@ -1,5 +1,5 @@
 import {} from 'react'
-import Hero from './components/Hero'
+import Body from './components/Body'
 import './styles.css'
 
 export default function App() {
@@ -7,9 +7,8 @@ export default function App() {
         <>
             {/* If Logged In... */}
             {/* <Nav /> */}
-            {/* <Body /> */}
+            <Body />
             {/* <Footer /> */}
-            <Hero />
         </>
     )
 }

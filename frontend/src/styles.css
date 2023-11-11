@@ -19,6 +19,14 @@ main {
     margin-inline: auto;
 }
 
+h1 {
+    font-family: 'Poppins';
+}
+
+p {
+    font-family: 'Source-Code-Pro';
+}
+
 img,
 svg,
 video {
@@ -26,8 +34,19 @@ video {
     display: block;
 }
 
-.hero-image {
-    margin: 0 auto;
-    margin-top: -0.5em;
-    padding: 0;
+/* Imported Font Families */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../src/assets/fonts/poppins/PoppinsRegular-B2Bw.otf')
+        format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source-Code-Pro';
+    src: url('../src/assets/fonts/source-code-pro/SourceCodeProMedium-g9np.ttf')
+        format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }

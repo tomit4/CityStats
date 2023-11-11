@@ -83,3 +83,5 @@ Fonts:
 
 1. [Source Code Pro](https://www.fontspace.com/search?q=source%20code%20pro)
 2. [Poppins](https://www.1001fonts.com/search.html?search=poppins)
+
+    NOTE: Make sure to chmod 644 all files xtracted.
