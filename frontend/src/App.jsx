@@ -6,8 +6,10 @@ export default function App() {
     return (
         <>
             {/* If Logged In... */}
+            {/* <Nav /> */}
+            {/* <Body /> */}
+            {/* <Footer /> */}
             <Hero />
-            {/* <main></main> */}
         </>
     )
 }
