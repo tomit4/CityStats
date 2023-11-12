@@ -1,0 +1,116 @@
+/* utility class */
+
+/* simple wrapper around flex with gap */
+.flex {
+    display: flex;
+    gap: var(--gap, 1em);
+}
+
+/*  https://kittygiraudel.com/snippets/sr-only-class/
+ *  https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html 
+ *  sr-only special class designed to hide 
+ *  from sighted users, but not from screen readers */
+.sr-only:not(:focus):not(:active) {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* primary header */
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl(0 0% 0% / 0.75);
+}
+
+/* Firefox does support backdrop-filter, 
+ * but this is interesting CSS feature nevertheless */
+@supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(1rem);
+    }
+}
+
+.primary-navigation a {
+    text-decoration: none;
+    /* color: white; */
+}
+
+.primary-navigation a > [aria-hidden='true'] {
+    font-weight: 700;
+    /* Makes sure that the margin end reads 
+     * according to language preferences */
+    margin-inline-end: 0.5em;
+}
+
+@media (max-width: 35em) {
+    .primary-navigation {
+        --gap: 3em;
+        position: fixed;
+        z-index: 1000;
+        /* margin but starts from top, right, bottom left */
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        /* dynamic vertical spacing from top, but stops at 10 rem*/
+        padding: min(30vh, 10rem) 2em;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .primary-navigation[data-visible='true'] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background: url('../assets/icons/hamburger.svg');
+        background-repeat: no-repeat;
+        border: 0;
+        width: 2rem;
+        /* width/height are same */
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .mobile-nav-toggle[aria-expanded='true'] {
+        background-image: url('../assets/icons/close.svg');
+    }
+}
+
+@media (min-width: 35em) and (max-width: 55em) {
+    .primary-navigation a > span[aria-hidden] {
+        display: none;
+    }
+}
+
+@media (min-width: 35em) {
+    .primary-navigation {
+        --gap: clamp(1.5rem, 5vw, 3rem);
+        /* padding-block only affects top/bottom */
+        padding-block: 2rem;
+        padding-inline: clamp(3re, 8vw, 10rem);
+    }
+}
