@@ -22,6 +22,7 @@ export default function Nav(props) {
     return (
         <>
             <header className="primary-header flex">
+                <div className="head-experiment" />
                 <button
                     type="button"
                     className="mobile-nav-toggle"
@@ -39,6 +40,30 @@ export default function Nav(props) {
                         className="primary-navigation flex"
                         ref={primaryNav}
                     >
+                        <li className="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Destination</a>
+                        </li>
+                        <li>
+                            <a href="#">Crew</a>
+                        </li>
+                        <li>
+                            <a href="#">Technology</a>
+                        </li>
+                        <li className="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Destination</a>
+                        </li>
+                        <li>
+                            <a href="#">Crew</a>
+                        </li>
+                        <li>
+                            <a href="#">Technology</a>
+                        </li>
                         <li className="active">
                             <a href="#">Home</a>
                         </li>

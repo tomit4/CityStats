@@ -1,3 +1,6 @@
+/*********************
+* DEFAULT STYLINGS
+*********************/
 *,
 *::before,
 *::after {
@@ -33,8 +36,24 @@ main {
 }
 
 h1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
     font-family: 'Zikketica', system-ui;
     font-weight: 900;
+    border-top: 2px solid black;
+}
+h2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Vegur', system-ui;
+    font-size: 90%;
+    font-weight: 900;
+    border-bottom: 2px solid black;
+    margin-top: -1.5em;
 }
 
 p {
@@ -49,14 +68,18 @@ video {
     display: block;
 }
 
-/* Media Queries */
+/*********************
+ * MEDIA QUERIES
+*********************/
 @media (max-width: 35em) {
     main {
-        margin-top: 3em;
+        margin-top: 3.25em;
     }
 }
 
-/* Imported Font Families */
+/*********************
+ * FONT FAMILIES
+*********************/
 @font-face {
     font-family: 'Vegur';
     src: url('../src/assets/fonts/vegur/VegurRegular-YE48.otf')

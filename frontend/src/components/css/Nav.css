@@ -1,6 +1,8 @@
-/* TODO: Convert all colors to hsl, rgb, or hex... */
-/* utility class */
+/* TODO: Convert all lors to hsl, rgb, or hex... */
 
+/**********************
+ * UTILITY CLASSES
+ *********************/
 /* simple wrapper around flex with gap */
 .flex {
     display: flex;
@@ -25,13 +27,21 @@
     white-space: nowrap;
 }
 
-/* primary header */
-
+/**********************
+ * PRIMARY HEADER
+ *********************/
 .primary-header {
     align-items: center;
     justify-content: space-between;
 }
+.head-experiment {
+    display: none;
+}
 
+.head-icon {
+    width: 3rem;
+    height: 3rem;
+}
 .mobile-nav-toggle {
     display: none;
 }
@@ -40,6 +50,7 @@
     padding: 0;
     margin: 0;
     background: white;
+    border-bottom: 2px solid black;
 }
 
 .primary-navigation a {
@@ -51,9 +62,11 @@
     margin-inline-end: 0.5em;
 }
 
+/*********************
+ * MEDIA QUERIES
+*********************/
 @media (max-width: 35em) {
     .primary-navigation {
-        /* border: 2px solid black; */
         position: fixed;
         z-index: 1000;
         flex-direction: column;
@@ -61,10 +74,24 @@
         left: 0;
         height: 100%;
         width: 80%;
-        padding: min(30vh, 10rem) 2em;
+        padding: min(10vh, 10rem) 2em;
         overflow-y: scroll;
         transform: translateX(-100%);
         transition: transform 350ms ease-out;
+    }
+
+    .head-experiment {
+        display: block;
+        position: fixed;
+        height: 3.25rem;
+        margin-top: 2em;
+        margin-left: -0.125em;
+        background: url('../assets/icons/building.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: black;
+        border-radius: 0 0 5px 5px;
+        padding-inline: 0em 23.5em;
     }
 
     .primary-navigation[data-visible='true'] {
@@ -80,8 +107,8 @@
         border: 0;
         width: 2rem;
         aspect-ratio: 1;
-        top: 1rem;
-        left: 2rem;
+        top: 0.5rem;
+        left: 1.8rem;
         transform: translateX(-40%);
         transition: transform 350ms ease-out;
     }
@@ -101,7 +128,6 @@
 @media (min-width: 35em) {
     .primary-navigation {
         --gap: clamp(1.5rem, 5vw, 3rem);
-        /* padding-block only affects top/bottom */
         padding-block: 2rem;
         padding-inline: clamp(3re, 8vw, 10rem);
     }
