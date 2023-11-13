@@ -1,3 +1,4 @@
+/* TODO: Convert all colors to hsl, rgb, or hex... */
 /* utility class */
 
 /* simple wrapper around flex with gap */
@@ -38,27 +39,16 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    background: hsl(0 0% 0% / 0.75);
-}
-
-/* Firefox does support backdrop-filter, 
- * but this is interesting CSS feature nevertheless */
-@supports (backdrop-filter: blur(1rem)) {
-    .primary-navigation {
-        background: hsl(0 0% 100% / 0.1);
-        backdrop-filter: blur(1rem);
-    }
+    background: white;
+    border: 2px solid black;
 }
 
 .primary-navigation a {
     text-decoration: none;
-    /* color: white; */
 }
 
 .primary-navigation a > [aria-hidden='true'] {
     font-weight: 700;
-    /* Makes sure that the margin end reads 
-     * according to language preferences */
     margin-inline-end: 0.5em;
 }
 
@@ -67,32 +57,29 @@
         --gap: 3em;
         position: fixed;
         z-index: 1000;
-        /* margin but starts from top, right, bottom left */
-        inset: 0 0 0 30%;
         flex-direction: column;
-        /* dynamic vertical spacing from top, but stops at 10 rem*/
+        height: 100%;
         padding: min(30vh, 10rem) 2em;
 
-        transform: translateX(100%);
+        transform: translateX(-100%);
         transition: transform 350ms ease-out;
     }
 
     .primary-navigation[data-visible='true'] {
-        transform: translateX(0%);
+        transform: translateX(80%);
     }
 
     .mobile-nav-toggle {
         display: block;
-        position: absolute;
+        position: fixed;
         z-index: 9999;
         background: url('../assets/icons/hamburger.svg');
         background-repeat: no-repeat;
         border: 0;
         width: 2rem;
-        /* width/height are same */
         aspect-ratio: 1;
         top: 2rem;
-        right: 2rem;
+        left: 2rem;
     }
 
     .mobile-nav-toggle[aria-expanded='true'] {

@@ -20,11 +20,13 @@ main {
 }
 
 h1 {
-    font-family: 'Poppins';
+    font-family: 'Zikketica', system-ui;
+    font-weight: 900;
 }
 
 p {
-    font-family: 'Source-Code-Pro';
+    font-family: 'Vegur', system-ui;
+    font-size: 90%;
 }
 
 img,
@@ -34,18 +36,25 @@ video {
     display: block;
 }
 
+/* Media Queries */
+@media (max-width: 35em) {
+    main {
+        margin-top: 3em;
+    }
+}
+
 /* Imported Font Families */
 @font-face {
-    font-family: 'Poppins';
-    src: url('../src/assets/fonts/poppins/PoppinsRegular-B2Bw.otf')
+    font-family: 'Vegur';
+    src: url('../src/assets/fonts/vegur/VegurRegular-YE48.otf')
         format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Source-Code-Pro';
-    src: url('../src/assets/fonts/source-code-pro/SourceCodeProMedium-g9np.ttf')
+    font-family: 'Zikketica';
+    src: url('../src/assets/fonts/zikketica/Zikketica-nD7V.ttf')
         format('truetype');
     font-weight: normal;
     font-style: normal;
