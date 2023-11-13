@@ -1,9 +1,16 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import './css/Nav.css'
 
-export default function Nav() {
+export default function Nav(props) {
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
+    useEffect(() => {
+        if (props.sidebar) {
+            primaryNav.current.setAttribute('data-visible', false)
+            navToggle.current.setAttribute('aria-expanded', false)
+            props.showSidebar()
+        }
+    }, [props])
     const toggleHamburger = () => {
         const visibility =
             primaryNav.current.getAttribute('data-visible') === 'false'
@@ -32,6 +39,54 @@ export default function Nav() {
                         className="primary-navigation flex"
                         ref={primaryNav}
                     >
+                        <li className="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Destination</a>
+                        </li>
+                        <li>
+                            <a href="#">Crew</a>
+                        </li>
+                        <li>
+                            <a href="#">Technology</a>
+                        </li>
+                        <li className="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Destination</a>
+                        </li>
+                        <li>
+                            <a href="#">Crew</a>
+                        </li>
+                        <li>
+                            <a href="#">Technology</a>
+                        </li>
+                        <li className="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Destination</a>
+                        </li>
+                        <li>
+                            <a href="#">Crew</a>
+                        </li>
+                        <li>
+                            <a href="#">Technology</a>
+                        </li>
+                        <li className="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Destination</a>
+                        </li>
+                        <li>
+                            <a href="#">Crew</a>
+                        </li>
+                        <li>
+                            <a href="#">Technology</a>
+                        </li>
                         <li className="active">
                             <a href="#">Home</a>
                         </li>

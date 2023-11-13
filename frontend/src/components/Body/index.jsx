@@ -1,9 +1,7 @@
-import React from 'react'
-
-export default function Body() {
+export default function Body(props) {
     return (
         <>
-            <body>
+            <div onClick={props.showSidebar} className="content">
                 <main>
                     <article>
                         <h1>Header</h1>
@@ -31,7 +29,7 @@ export default function Body() {
                         </p>
                     </article>
                 </main>
-            </body>
+            </div>
         </>
     )
 }

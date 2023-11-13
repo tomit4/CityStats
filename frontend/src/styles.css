@@ -8,7 +8,7 @@
     color-scheme: light dark;
 }
 
-body {
+.content {
     font-family: system-ui;
     font-size: 1.125rem;
     line-height: 1.5;
