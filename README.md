@@ -53,9 +53,9 @@ retrieve:
 
 -   https://citystats.xyz/states/1/area
 -   https://citystats.xyz/states/1/area/total
--   https://citystats/xyz/states/Alabama/government
--   https://citystats/xyz/states/Alabama/government/senators
--   https://citystats/xyz/states/Alabama/government/senators/1
+-   https://citystats.xyz/states/Alabama/government
+-   https://citystats.xyz/states/Alabama/government/senators
+-   https://citystats.xyz/states/Alabama/government/senators/1
 
 **Images**
 
@@ -83,19 +83,20 @@ repository and I will do my best to address it in a timely manner.
 **Frontend:**
 
 -   [ ] Use React to dynamically render an example page
+-   [ ] Use React-Router for ease of dynamically rendering different components
+        (follow [tutorial](https://reactrouter.com/en/main/start/tutorial) to quickly get up to speed).
 -   [ ] Use React to Write a Documentation page demonstrating usage of API with node, fetch, curl, and python
 -   [ ] Model frontend off of classic simple Apis like [I Can Haz Dad Joke](https://icanhazdadjoke.com/) and [The Star Wars API](https://swapi.dev/).
--   [ ] Determine how you can demonstrate this api without exposing auth headers in fetch() (???)
 
-**Authentication:**
+**Backend:**
 
--   [ ] Once Frontend is finished, create logic on both front and back end to
-        implement Basic Auth using generated API keys and Brevo Transactional
-        Emails for Sign Up/Sending of API keys.
--   [ ] Correlate an API key login/auth logic on both the frontend and the backend
-        (i.e. utilize cookie/auth headers using hashing email addresses, storing
-        emails in temporary state, aka cache, and create timers to check if
-        confirmation emails were checked).
--   [ ] Create logic for if same email is sent for sign up (ask to recreate API
-        key...)
--   [ ] Create a login/sign up pages, add 'lost my API key button and logic'
+-   [ ] Utilize [fastify-throttle](https://github.com/fastify/fastify-throttle)
+        to test react dynamic rendering on front end (loading animation if JSON or IMG
+        has yet to be returned from server)
+
+**TODO for 3.0:**
+
+-   [ ] Reimplement both front and back ends in TypeScript (shouldn't be TOO hard,
+        right? ...)
+-   [ ] Implement Authenticaton utilizing API keys and Brevo Transactional Emails
+        for signing up.
