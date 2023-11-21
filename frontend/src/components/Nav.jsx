@@ -4,6 +4,8 @@ import './css/Nav.css'
 export default function Nav(props) {
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
+    // TODO: Review wittcode's coverage of how to clean up useEffect
+    // TODO: Figure out props validation...
     useEffect(() => {
         if (props.sidebar) {
             primaryNav.current.setAttribute('data-visible', false)
@@ -22,6 +24,7 @@ export default function Nav(props) {
     return (
         <>
             <header className="primary-header flex">
+                {/* TODO: Rename className */}
                 <div className="head-experiment" />
                 <button
                     type="button"
@@ -34,6 +37,7 @@ export default function Nav(props) {
                     <span className="sr-only"> Menu </span>
                 </button>
                 <nav>
+                    <span className="transparent-overlay" />
                     <ul
                         id="primary-navigation"
                         data-visible="false"

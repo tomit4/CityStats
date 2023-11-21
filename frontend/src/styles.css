@@ -1,5 +1,5 @@
 /*********************
-* DEFAULT STYLINGS
+ DEFAULT STYLINGS
 *********************/
 *,
 *::before,
@@ -74,6 +74,15 @@ video {
 @media (max-width: 35em) {
     main {
         margin-top: 3.25em;
+    }
+    h1,
+    h2,
+    p {
+        color: transparent;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    }
+    h1 {
+        border-top: 2px solid rgba(0, 0, 0, 0.4);
     }
 }
 
