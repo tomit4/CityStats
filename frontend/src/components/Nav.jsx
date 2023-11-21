@@ -20,6 +20,7 @@ export default function Nav(props) {
                 : true
         primaryNav.current.setAttribute('data-visible', !visibility)
         navToggle.current.setAttribute('aria-expanded', !visibility)
+        props.blurIt()
     }
     return (
         <>
@@ -37,7 +38,6 @@ export default function Nav(props) {
                     <span className="sr-only"> Menu </span>
                 </button>
                 <nav>
-                    <span className="transparent-overlay" />
                     <ul
                         id="primary-navigation"
                         data-visible="false"

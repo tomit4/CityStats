@@ -75,14 +75,15 @@ video {
     main {
         margin-top: 3.25em;
     }
-    h1,
-    h2,
-    p {
+    .content[data-visible='true'] {
         color: transparent;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
     }
-    h1 {
+    h1[data-visible='true'] {
         border-top: 2px solid rgba(0, 0, 0, 0.4);
+    }
+    h2[data-visible='true'] {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.4);
     }
 }
 
