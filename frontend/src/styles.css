@@ -19,7 +19,8 @@
 }
 
 :root {
-    color-scheme: light dark;
+    /* TODO: uncomment in production */
+    /* color-scheme: light dark; */
     /* mozilla firefox styling of scrollbar */
     scrollbar-color: #000 #fff;
 }

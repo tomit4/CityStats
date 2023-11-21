@@ -82,15 +82,14 @@
     .head-experiment {
         display: block;
         position: fixed;
-        height: 3.25rem;
-        margin-top: 2em;
-        margin-left: -0.125em;
+        height: 3.25em;
+        top: 0;
         background: url('../assets/icons/building.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-color: black;
         border-radius: 0 0 5px 5px;
-        padding-inline: 0em 23.5em;
+        padding-inline: 0 96vw;
     }
 
     .primary-navigation[data-visible='true'] {
