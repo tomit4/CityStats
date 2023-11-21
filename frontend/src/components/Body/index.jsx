@@ -17,9 +17,9 @@ const Body = props => {
     }
     return (
         <>
-            {/* TODO: Address OnClick Warnings */}
             <div
                 onClick={closeSideBar}
+                onKeyUp={closeSideBar}
                 className="content"
                 ref={content}
                 data-visible="false"
