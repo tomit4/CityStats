@@ -25,8 +25,7 @@ const Nav = props => {
     return (
         <>
             <header className="primary-header flex">
-                {/* TODO: Rename className */}
-                <div className="head-experiment" />
+                <div className="nav-bg" />
                 <button
                     type="button"
                     className="mobile-nav-toggle"
@@ -44,6 +43,9 @@ const Nav = props => {
                         className="primary-navigation flex"
                         ref={primaryNav}
                     >
+                        {/* TODO: Render components based off of Nav links here.
+                            Consider react-router or more simple 
+                            approach using conditional statements. */}
                         <li className="active">
                             <a href="#">Home</a>
                         </li>

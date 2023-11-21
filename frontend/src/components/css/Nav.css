@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.head-experiment {
+.nav-bg {
     display: none;
 }
 
@@ -79,7 +79,7 @@
         transform: translateX(-100%);
         transition: transform 350ms ease-out;
     }
-    .head-experiment {
+    .nav-bg {
         display: block;
         position: fixed;
         height: 3.25em;

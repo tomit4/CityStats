@@ -30,6 +30,7 @@ const Body = props => {
                         <h2 ref={h2}>
                             The API For USA State And City Statistics
                         </h2>
+                        {/* TODO: Render components based off of Nav links here */}
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
