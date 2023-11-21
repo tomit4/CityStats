@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 
-export default function Body(props) {
+const Body = props => {
     const content = useRef(null)
     const h1 = useRef(null)
     const h2 = useRef(null)
@@ -79,3 +80,12 @@ export default function Body(props) {
         </>
     )
 }
+
+Body.propTypes = {
+    blur: PropTypes.bool,
+    sidebar: PropTypes.bool,
+    showSidebar: PropTypes.func,
+    blurIt: PropTypes.func,
+}
+
+export default Body

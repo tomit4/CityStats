@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import './css/Nav.css'
 
-export default function Nav(props) {
+const Nav = props => {
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
     // TODO: Review wittcode's coverage of how to clean up useEffect
-    // TODO: Figure out props validation...
     useEffect(() => {
         if (props.sidebar) {
             primaryNav.current.setAttribute('data-visible', false)
@@ -134,3 +134,11 @@ export default function Nav(props) {
         </>
     )
 }
+
+Nav.propTypes = {
+    sidebar: PropTypes.bool,
+    showSidebar: PropTypes.func,
+    blurIt: PropTypes.func,
+}
+
+export default Nav
