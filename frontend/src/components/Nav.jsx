@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './css/Nav.css'
 
@@ -53,7 +53,6 @@ const Nav = props => {
                         <Link className="nav-link" to="/cities">
                             Cities
                         </Link>
-                        <Outlet />
                     </ul>
                 </nav>
             </header>
