@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import States from '../../pages/States'
 import Cities from '../../pages/Cities'
+import NotFound from '../../pages/NotFound'
 
 const Body = props => {
     const content = useRef(null)
@@ -35,9 +36,8 @@ const Body = props => {
                         </h2>
                         <Routes>
                             <Route path="/states" element={<States />} />
-                        </Routes>
-                        <Routes>
                             <Route path="/cities" element={<Cities />} />
+                            <Route path="*" element={<NotFound />} />
                         </Routes>
                         {/* TODO: Conditionally Render About Page instead of dummy text here */}
                         <p>
