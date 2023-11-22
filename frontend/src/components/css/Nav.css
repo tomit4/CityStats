@@ -61,6 +61,11 @@
     font-weight: 700;
     margin-inline-end: 0.5em;
 }
+/* TODO: Restyle font for nav-links */
+.nav-link {
+    font-family: 'Zikketica', system-ui;
+    color: black;
+}
 
 /*********************
  * MEDIA QUERIES

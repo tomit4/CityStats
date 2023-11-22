@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link, Outlet } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './css/Nav.css'
 
@@ -25,7 +26,7 @@ const Nav = props => {
     return (
         <>
             <header className="primary-header flex">
-                <div className="nav-bg" />
+                <Link className="nav-bg" to="/" />
                 <button
                     type="button"
                     className="mobile-nav-toggle"
@@ -43,93 +44,16 @@ const Nav = props => {
                         className="primary-navigation flex"
                         ref={primaryNav}
                     >
-                        {/* TODO: Render components based off of Nav links here.
-                            Consider react-router or more simple 
-                            approach using conditional statements. */}
-                        <li className="active">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Destination</a>
-                        </li>
-                        <li>
-                            <a href="#">Crew</a>
-                        </li>
-                        <li>
-                            <a href="#">Technology</a>
-                        </li>
-                        <li className="active">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Destination</a>
-                        </li>
-                        <li>
-                            <a href="#">Crew</a>
-                        </li>
-                        <li>
-                            <a href="#">Technology</a>
-                        </li>
-                        <li className="active">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Destination</a>
-                        </li>
-                        <li>
-                            <a href="#">Crew</a>
-                        </li>
-                        <li>
-                            <a href="#">Technology</a>
-                        </li>
-                        <li className="active">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Destination</a>
-                        </li>
-                        <li>
-                            <a href="#">Crew</a>
-                        </li>
-                        <li>
-                            <a href="#">Technology</a>
-                        </li>
-                        <li className="active">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Destination</a>
-                        </li>
-                        <li>
-                            <a href="#">Crew</a>
-                        </li>
-                        <li>
-                            <a href="#">Technology</a>
-                        </li>
-                        <li className="active">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Destination</a>
-                        </li>
-                        <li>
-                            <a href="#">Crew</a>
-                        </li>
-                        <li>
-                            <a href="#">Technology</a>
-                        </li>
-                        <li className="active">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Destination</a>
-                        </li>
-                        <li>
-                            <a href="#">Crew</a>
-                        </li>
-                        <li>
-                            <a href="#">Technology</a>
-                        </li>
+                        <Link className="nav-link" to="/">
+                            Home
+                        </Link>
+                        <Link className="nav-link" to="/states">
+                            States
+                        </Link>
+                        <Link className="nav-link" to="/cities">
+                            Cities
+                        </Link>
+                        <Outlet />
                     </ul>
                 </nav>
             </header>
