@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import States from '../../pages/States'
-import Cities from '../../pages/Cities'
-import NotFound from '../../pages/NotFound'
+import General from '../../pages/General.jsx'
+import States from '../../pages/States.jsx'
+import Cities from '../../pages/Cities.jsx'
+import NotFound from '../../pages/NotFound.jsx'
 
 const Body = props => {
     const content = useRef(null)
@@ -34,36 +35,13 @@ const Body = props => {
                         <h2 ref={h2}>
                             The API For USA State And City Statistics
                         </h2>
+                        {/* TODO: Conditionally Render About Page instead of dummy text here */}
                         <Routes>
                             <Route path="/states" element={<States />} />
                             <Route path="/cities" element={<Cities />} />
+                            <Route path="/" element={<General />} />
                             <Route path="*" element={<NotFound />} />
                         </Routes>
-                        {/* TODO: Conditionally Render About Page instead of dummy text here */}
-                        <p>
-                            General Body Info Here, Placeholder. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
-                        </p>
-                        <p>
-                            General Body Info Here, Placeholder. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
-                        </p>
                     </article>
                 </main>
             </div>
