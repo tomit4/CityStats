@@ -10,11 +10,13 @@ const Body = props => {
     const content = useRef(null)
     const h1 = useRef(null)
     const h2 = useRef(null)
+
     useEffect(() => {
         content.current.setAttribute('data-visible', props.blur)
         h1.current.setAttribute('data-visible', props.blur)
         h2.current.setAttribute('data-visible', props.blur)
     }, [props])
+
     const closeSideBar = () => {
         if (props.blur === props.sidebar) return
         props.blurIt()

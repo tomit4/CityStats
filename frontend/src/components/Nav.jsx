@@ -1,11 +1,15 @@
-import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect, useRef } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './css/Nav.css'
 
 const Nav = props => {
+    const navigate = useNavigate()
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
+    const apiToggle = useRef(null)
+    const toggleLinks = useRef({})
+    const [showStatesLinks, toggleStateLinks] = useState(false)
     // TODO: Review wittcode's coverage of how to clean up useEffect
     useEffect(() => {
         if (props.sidebar) {
@@ -14,6 +18,7 @@ const Nav = props => {
             props.showSidebar()
         }
     }, [props])
+
     const toggleHamburger = () => {
         const visibility =
             primaryNav.current.getAttribute('data-visible') === 'false'
@@ -22,6 +27,22 @@ const Nav = props => {
         primaryNav.current.setAttribute('data-visible', !visibility)
         navToggle.current.setAttribute('aria-expanded', !visibility)
         props.blurIt()
+    }
+
+    const saveToggleRef = id => linkRef => {
+        toggleLinks.current[id] = linkRef
+    }
+
+    const toggleNavLinks = () => {
+        toggleStateLinks(!showStatesLinks)
+        const currentToggleLink = toggleLinks.current['states-api-toggle']
+        const alternateToggleLink = toggleLinks.current['cities-api-toggle']
+        const currentToggleValue =
+            currentToggleLink.getAttribute('data-toggled') === 'true'
+        currentToggleLink.setAttribute('data-toggled', !currentToggleValue)
+        alternateToggleLink.setAttribute('data-toggled', currentToggleValue)
+        const targetRoute = !currentToggleValue ? '/states' : 'cities'
+        navigate(targetRoute)
     }
     return (
         <>
@@ -44,14 +65,37 @@ const Nav = props => {
                         className="primary-navigation flex"
                         ref={primaryNav}
                     >
-                        <Link className="nav-link" to="/">
-                            Home
-                        </Link>
-                        <Link className="nav-link" to="/states">
+                        <label className="switch">
+                            <input
+                                type="checkbox"
+                                ref={apiToggle}
+                                onChange={toggleNavLinks}
+                            />
+                            <span className="slider" />
+                        </label>
+                        <div
+                            className="nav-link toggle-link"
+                            ref={saveToggleRef('states-api-toggle')}
+                            data-toggled="true"
+                            id="states-api-toggle"
+                            to="/states"
+                        >
                             States
-                        </Link>
-                        <Link className="nav-link" to="/cities">
+                        </div>
+                        <div
+                            className="nav-link toggle-link"
+                            ref={saveToggleRef('cities-api-toggle')}
+                            data-toggled="false"
+                            id="cities-api-toggle"
+                            to="/cities"
+                        >
                             Cities
+                        </div>
+                        {/* TODO: This is no longer needed with .nav-bg being 
+                            home navigation now delete once api specific 
+                            scroll-links are implemented*/}
+                        <Link className="nav-link home-nav" to="/">
+                            Home
                         </Link>
                     </ul>
                 </nav>

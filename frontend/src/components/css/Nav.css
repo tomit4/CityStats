@@ -62,9 +62,32 @@
     margin-inline-end: 0.5em;
 }
 /* TODO: Restyle font for nav-links */
+
 .nav-link {
     font-family: 'Zikketica', system-ui;
     color: black;
+}
+
+.toggle-link[data-toggled='true'] {
+    color: black;
+}
+
+.toggle-link[data-toggled='false'] {
+    color: grey;
+}
+
+.home-nav {
+    margin-top: 1em;
+}
+
+#states-api-toggle {
+    margin-top: -2.6em;
+    margin-left: 2.2em;
+}
+
+#cities-api-toggle {
+    margin-top: -2.2em;
+    margin-left: 10.2em;
 }
 
 /*********************
@@ -116,6 +139,52 @@
 
     .mobile-nav-toggle[aria-expanded='true'] {
         background-image: url('../assets/icons/close.svg');
+    }
+
+    .switch {
+        position: relative;
+        width: 50px;
+        height: 20px;
+        left: 6.25em;
+        bottom: 0.5em;
+    }
+
+    .slider {
+        position: absolute;
+        z-index: 9999;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        transition: 0.4s;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: '';
+        width: 14px;
+        aspect-ratio: 1;
+        left: 2px;
+        bottom: 1.25px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.4s;
+    }
+
+    input:checked + .slider {
+        background-color: black;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px black;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(28px);
     }
 }
 
