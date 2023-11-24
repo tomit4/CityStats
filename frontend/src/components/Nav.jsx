@@ -29,8 +29,8 @@ const Nav = props => {
         props.blurIt()
     }
 
-    const saveToggleRef = id => linkRef => {
-        toggleLinks.current[id] = linkRef
+    const saveToggleRef = id => elementRef => {
+        toggleLinks.current[id] = elementRef
     }
 
     const toggleNavLinks = () => {
