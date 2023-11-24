@@ -41,7 +41,7 @@ const Nav = props => {
             currentToggleLink.getAttribute('data-toggled') === 'true'
         currentToggleLink.setAttribute('data-toggled', !currentToggleValue)
         alternateToggleLink.setAttribute('data-toggled', currentToggleValue)
-        const targetRoute = !currentToggleValue ? '/states' : 'cities'
+        const targetRoute = !currentToggleValue ? '/states' : '/cities'
         navigate(targetRoute)
     }
     return (
