@@ -78,7 +78,6 @@ const Nav = props => {
                             ref={saveToggleRef('states-api-toggle')}
                             data-toggled="true"
                             id="states-api-toggle"
-                            to="/states"
                         >
                             States
                         </div>
@@ -87,7 +86,6 @@ const Nav = props => {
                             ref={saveToggleRef('cities-api-toggle')}
                             data-toggled="false"
                             id="cities-api-toggle"
-                            to="/cities"
                         >
                             Cities
                         </div>
