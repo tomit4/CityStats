@@ -30,6 +30,8 @@ const Nav = props => {
         props.blurIt()
     }
 
+    const toggleFromAnchor = () => toggleHamburger()
+
     const saveToggleRef = id => elementRef => {
         toggleLinks.current[id] = elementRef
     }
@@ -44,9 +46,6 @@ const Nav = props => {
         alternateToggleLink.setAttribute('data-toggled', currentToggleValue)
         const targetRoute = !currentToggleValue ? '/states' : '/cities'
         navigate(targetRoute)
-    }
-    const toggleFromAnchor = () => {
-        toggleHamburger()
     }
     return (
         <>

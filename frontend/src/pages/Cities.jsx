@@ -1,13 +1,22 @@
 import { useEffect } from 'react'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-json'
-import './css/prism_solarized_light/prism.css'
-// import './css/prism_okaidia/prism.css'
+// import './css/prism_solarized_light/prism.css'
+import './css/prism_okaidia/prism.css'
 
 export default function Cities() {
     useEffect(() => {
         Prism.highlightAll()
     })
+
+    /*
+     * TODO: Right now the code block does not "blur"
+     * upon opening of the sidebar nav.
+     * This component will need props so it can watch for when that is open,
+     * and then blur not just the text but also the code block itself
+     * (possibly by overriding the background color and applying a box shadow
+     * to both the <pre> and <code> elements)
+     */
 
     /* TODO: Create a component specifically for code snippets
      * You'll need three "tabs" that will display the instructions
