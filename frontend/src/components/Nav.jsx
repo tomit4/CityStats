@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './css/Nav.css'
+import ApiOptions from './ApiOptions'
 
 const Nav = props => {
     const navigate = useNavigate()
@@ -9,8 +10,8 @@ const Nav = props => {
     const navToggle = useRef(null)
     const apiToggle = useRef(null)
     const toggleLinks = useRef({})
-    const [showStatesLinks, toggleStateLinks] = useState(false)
-    // TODO: Review wittcode's coverage of how to clean up useEffect
+    const [showStatesLinks, toggleStateLinks] = useState(true)
+
     useEffect(() => {
         if (props.sidebar) {
             primaryNav.current.setAttribute('data-visible', false)
@@ -43,6 +44,9 @@ const Nav = props => {
         alternateToggleLink.setAttribute('data-toggled', currentToggleValue)
         const targetRoute = !currentToggleValue ? '/states' : '/cities'
         navigate(targetRoute)
+    }
+    const toggleFromAnchor = () => {
+        toggleHamburger()
     }
     return (
         <>
@@ -89,12 +93,10 @@ const Nav = props => {
                         >
                             Cities
                         </div>
-                        {/* TODO: This is no longer needed with .nav-bg being 
-                            home navigation now delete once api specific 
-                            scroll-links are implemented*/}
-                        <Link className="nav-link home-nav" to="/">
-                            Home
-                        </Link>
+                        <ApiOptions
+                            showStatesLinks={showStatesLinks}
+                            toggleFromAnchor={toggleFromAnchor}
+                        />
                     </ul>
                 </nav>
             </header>

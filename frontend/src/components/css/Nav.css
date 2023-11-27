@@ -53,8 +53,9 @@
     border-bottom: 2px solid black;
 }
 
-.primary-navigation a {
-    text-decoration: none;
+.primary-navigation > a:hover {
+    font-weight: bold;
+    text-decoration-thickness: 0.125rem;
 }
 
 .primary-navigation a > [aria-hidden='true'] {
@@ -63,6 +64,7 @@
 }
 /* TODO: Restyle font for nav-links */
 
+.nav-menu-title,
 .nav-link {
     font-family: 'Zikketica', system-ui;
     color: black;
@@ -76,7 +78,8 @@
     color: grey;
 }
 
-.home-nav {
+.nav-menu-title,
+.page-nav {
     margin-top: 1em;
 }
 

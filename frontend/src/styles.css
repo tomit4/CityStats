@@ -25,6 +25,10 @@
     scrollbar-color: #000 #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .content {
     font-family: system-ui;
     font-size: 1.125rem;
