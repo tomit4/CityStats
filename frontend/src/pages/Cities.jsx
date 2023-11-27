@@ -29,7 +29,8 @@ export default function Cities() {
     // TODO: Once you actually fetch in data,
     // you'll have to do some interesting things
     // to get JSON to format properly
-    const json = '{\n\t"result":true, \n\t"count":42, \n\t"love": [0, 1, 2],\n}'
+    const json =
+        '{\n\t"result": null, \n\t"count": 42, \n\t"love": [0, 1, 2],\n}'
     const data = JSON.stringify(json)
     return (
         <>
