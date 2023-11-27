@@ -1,7 +1,33 @@
+import { useEffect } from 'react'
+import Prism from 'prismjs'
+import 'prismjs/components/prism-json'
+import './css/prism_solarized_light/prism.css'
+// import './css/prism_okaidia/prism.css'
+
 export default function Cities() {
+    useEffect(() => {
+        Prism.highlightAll()
+    })
+
+    /* TODO: Create a component specifically for code snippets
+     * You'll need three "tabs" that will display the instructions
+     * in code on how to grab the backend API in:
+     * bash/curl, javascript, and python.
+     * Lastly, you'll need a "try it out" button that actually queries
+     * the API and displays it in another code block
+     * (which renders dynamically, otherwise is invisible?). */
+
+    // TODO: Once you actually fetch in data,
+    // you'll have to do some interesting things
+    // to get JSON to format properly
+    const json = '{\n\t"result":true, \n\t"count":42, \n\t"love": [0, 1, 2],\n}'
+    const data = JSON.stringify(json)
     return (
         <>
             <div>Cities</div>
+            <pre>
+                <code className="language-json">{JSON.parse(data)}</code>
+            </pre>
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

@@ -72,6 +72,16 @@ video {
     max-width: 100%;
     display: block;
 }
+/**********************
+* PRISMJS
+**********************/
+pre {
+    border: 2px solid black;
+}
+code.language-json {
+    display: block;
+    font-size: 90%;
+}
 
 /*********************
  * MEDIA QUERIES
