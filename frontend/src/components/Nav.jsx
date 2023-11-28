@@ -50,7 +50,9 @@ const Nav = props => {
     return (
         <>
             <header className="primary-header flex">
-                <Link className="nav-bg" to="/" />
+                <div className="nav-bg">
+                    <Link className="nav-home-link" to="/" />
+                </div>
                 <button
                     type="button"
                     className="mobile-nav-toggle"

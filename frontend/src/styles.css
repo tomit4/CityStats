@@ -30,7 +30,7 @@ html {
 }
 
 .content {
-    font-family: system-ui;
+    font-family: 'Vegur', 'Helvetica', system-ui;
     font-size: 1.125rem;
     line-height: 1.5;
 }
@@ -45,7 +45,7 @@ h1 {
     align-content: center;
     justify-content: center;
     text-align: center;
-    font-family: 'Zikketica', system-ui;
+    font-family: 'Zikketica', 'Helvetica', system-ui;
     font-weight: 900;
     border-top: 2px solid black;
 }
@@ -54,7 +54,7 @@ h2 {
     align-content: center;
     justify-content: center;
     text-align: center;
-    font-family: 'Vegur', system-ui;
+    font-family: 'Vegur', 'Helvetica', system-ui;
     font-size: 90%;
     font-weight: 900;
     border-bottom: 2px solid black;
@@ -62,7 +62,7 @@ h2 {
 }
 
 p {
-    font-family: 'Vegur', system-ui;
+    font-family: 'Vegur', 'Arial', system-ui;
     font-size: 90%;
 }
 

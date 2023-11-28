@@ -115,12 +115,20 @@
         position: fixed;
         height: 3.25em;
         top: 0;
-        background: url('../assets/icons/building.svg');
-        background-repeat: no-repeat;
-        background-position: center;
         background-color: black;
         border-radius: 0 0 5px 5px;
         padding-inline: 0 96vw;
+    }
+    .nav-home-link {
+        left: 44.5vw;
+        background-color: lime;
+        position: fixed;
+        margin-top: 0.4em;
+        height: 3.25em;
+        width: 3.25em;
+        background-position: center;
+        background: url('../assets/icons/building.svg');
+        background-repeat: no-repeat;
     }
 
     .primary-navigation[data-visible='true'] {
@@ -142,6 +150,10 @@
 
     .mobile-nav-toggle[aria-expanded='true'] {
         background-image: url('../assets/icons/close.svg');
+    }
+
+    .mobile-nav-toggle:hover {
+        cursor: pointer;
     }
 
     .switch {
