@@ -21,10 +21,11 @@ const Cities = props => {
     // NOTE: Works but requires a hard refresh to see results...
     // If we're going to allow user to adjust fetch
     // string in application, then we might have a problem
-    // TODO: Test it with an input field to see what happens
+    // TODO: Test it with an input field to see what happens,
+    // this likely will need to toggle the dependency field of this hook ([])
     useEffect(() => {
         const getEntity = async () => {
-            await fetch('https://citystats.xyz/cities/2')
+            await fetch('https://citystats.xyz/cities/1')
                 .then(res => res.json())
                 .then(setJSON)
         }
