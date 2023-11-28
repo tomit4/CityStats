@@ -6,21 +6,22 @@
 
 **TODO**:
 
--   [ ] Create an \<aside\> element like in traditional docs (see
+-   [x] Create an \<aside\> element like in traditional docs (see
         almost any modern docs, i.e. fastify, react, vue, etc.). This will render
         out different components in the main section to the right.
--   [ ] Create a drop down to determine states or cities or images.
--   [ ] Create an input form for state/city names
--   [ ] Create another drop down for subfields (changes depending on if state or city)
-        (i.e. largest_city, latitude, url, area, population, etc.)
--   [ ] Create another drop down for queries (government/governor, population/density,
-        area/total, etc.)
--   [ ] All this will call out to the backend api citystats.xyz. This will then
+-   [x] Create a drop down to determine states or cities or images.
+-   [ ] Call out to the backend api citystats.xyz. This will then
         render in a JSON code block (styled using prisma?).
 -   [ ] Additionally the frontend will generate a series of code snippets (bash,
         node/express, and python) that will show basic usage in a backend api.
 
 **NOTES**:
+
+-   PrismJS currently has two prism.css files (okaidia and solarized light).
+    This needs to be conditionally rendered based off of user's browser
+    preferences and additionally based off a good ol' light/dark toggle button.
+    The most "brute-force" way of accomplishing this would be to use two different
+    react components that return based off of a simple useState() toggle.
 
 -   On reading some of the React Docs, we have determined that we'll
     need to use useState, useEffect, useMemo, and useDeferredValue hooks
@@ -30,15 +31,11 @@
     that have yet to be utilized (see his intermediate and advanced dir structure to
     get a grasp on how best to organize your project here).
 
--   Forego all references to API keys for now, get the public API up first, then
-    implement API keys (a project on its own).
-
 **NAVBAR**
 
 Navbar Elements Should Include:
 
 -   Home
--   API Keys
 -   Github
 -   Search (ctrl k)
 -   Light/Dark Toggle
@@ -62,8 +59,6 @@ search.
     2. Query Government Officials
     3. Querying Images
 
--   Generate API Key, etc.
-
 **FOOTER MENU**
 Email, Mastodon, Website
 Powered by Linode, NGINX, Docker, React
@@ -81,7 +76,4 @@ Powered by Linode, NGINX, Docker, React
 
 Fonts:
 
-1. [Source Code Pro](https://www.fontspace.com/search?q=source%20code%20pro)
-2. [Poppins](https://www.1001fonts.com/search.html?search=poppins)
-
-    NOTE: Make sure to chmod 644 all files xtracted.
+NOTE: Make sure to chmod 644 all files xtracted.
