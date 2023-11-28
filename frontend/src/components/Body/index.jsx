@@ -37,10 +37,15 @@ const Body = props => {
                         <h2 ref={h2}>
                             The API For USA State And City Statistics
                         </h2>
-                        {/* TODO: Conditionally Render About Page instead of dummy text here */}
                         <Routes>
-                            <Route path="/states" element={<States />} />
-                            <Route path="/cities" element={<Cities />} />
+                            <Route
+                                path="/states"
+                                element={<States blur={props.blur} />}
+                            />
+                            <Route
+                                path="/cities"
+                                element={<Cities blur={props.blur} />}
+                            />
                             <Route path="/" element={<General />} />
                             <Route path="*" element={<NotFound />} />
                         </Routes>

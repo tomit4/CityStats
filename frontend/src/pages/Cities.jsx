@@ -1,22 +1,21 @@
-import { useEffect } from 'react'
+import { useRef, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-json'
 // import './css/prism_solarized_light/prism.css'
 import './css/prism_okaidia/prism.css'
 
-export default function Cities() {
+const Cities = props => {
+    const prismPre = useRef(null)
+    const prismCode = useRef(null)
     useEffect(() => {
         Prism.highlightAll()
     })
 
-    /*
-     * TODO: Right now the code block does not "blur"
-     * upon opening of the sidebar nav.
-     * This component will need props so it can watch for when that is open,
-     * and then blur not just the text but also the code block itself
-     * (possibly by overriding the background color and applying a box shadow
-     * to both the <pre> and <code> elements)
-     */
+    useEffect(() => {
+        prismPre.current.setAttribute('data-visible', props.blur)
+        prismCode.current.setAttribute('data-visible', props.blur)
+    }, [props])
 
     /* TODO: Create a component specifically for code snippets
      * You'll need three "tabs" that will display the instructions
@@ -35,8 +34,14 @@ export default function Cities() {
     return (
         <>
             <div>Cities</div>
-            <pre>
-                <code className="language-json">{JSON.parse(data)}</code>
+            <pre ref={prismPre} className="prism-pre" data-visible="false">
+                <code
+                    ref={prismCode}
+                    data-visible="false"
+                    className="language-json prism-code"
+                >
+                    {JSON.parse(data)}
+                </code>
             </pre>
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
@@ -102,3 +107,9 @@ export default function Cities() {
         </>
     )
 }
+
+Cities.propTypes = {
+    blur: PropTypes.bool,
+}
+
+export default Cities
