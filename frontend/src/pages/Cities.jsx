@@ -18,18 +18,18 @@ const Cities = props => {
         prismCode.current.setAttribute('data-visible', props.blur)
     }, [props])
 
-    useEffect(
-        () => async () => {
-            await fetch('http://localhost:5000/states/1')
-                // await fetch('https://citystats.xyz/states/1') // try when CORS is set up
+    // NOTE: Works but requires a hard refresh to see results...
+    // If we're going to allow user to adjust fetch
+    // string in application, then we might have a problem
+    // TODO: Test it with an input field to see what happens
+    useEffect(() => {
+        const getEntity = async () => {
+            await fetch('https://citystats.xyz/cities/2')
                 .then(res => res.json())
-                .then(setJSON)(async () => {})()
-        },
-        [],
-    )
-
-    // Needs to be formatted before returned
-    // console.log('json :=>', json)
+                .then(setJSON)
+        }
+        getEntity()
+    }, [])
 
     /* TODO: Create a component specifically for code snippets
      * You'll need three "tabs" that will display the instructions
@@ -38,10 +38,6 @@ const Cities = props => {
      * Lastly, you'll need a "try it out" button that actually queries
      * the API and displays it in another code block
      * (which renders dynamically, otherwise is invisible?). */
-
-    // TODO: Once you actually fetch in data,
-    // you'll have to do some interesting things
-    // to get JSON to format properly
     return (
         <>
             <div>Cities</div>
@@ -52,7 +48,9 @@ const Cities = props => {
                     className="language-json prism-code"
                 >
                     {json.map(jso => (
-                        <div key={jso.id}>{JSON.stringify(jso)}</div>
+                        <div key={jso.id}>
+                            {JSON.stringify(jso, null, '\t')}
+                        </div>
                     ))}
                 </code>
             </pre>
