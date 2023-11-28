@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-json'
@@ -6,6 +6,7 @@ import 'prismjs/components/prism-json'
 import './css/prism_okaidia/prism.css'
 
 const Cities = props => {
+    const [json, setJSON] = useState([])
     const prismPre = useRef(null)
     const prismCode = useRef(null)
     useEffect(() => {
@@ -16,6 +17,19 @@ const Cities = props => {
         prismPre.current.setAttribute('data-visible', props.blur)
         prismCode.current.setAttribute('data-visible', props.blur)
     }, [props])
+
+    useEffect(
+        () => async () => {
+            await fetch('http://localhost:5000/states/1')
+                // await fetch('https://citystats.xyz/states/1') // try when CORS is set up
+                .then(res => res.json())
+                .then(setJSON)(async () => {})()
+        },
+        [],
+    )
+
+    // Needs to be formatted before returned
+    // console.log('json :=>', json)
 
     /* TODO: Create a component specifically for code snippets
      * You'll need three "tabs" that will display the instructions
@@ -28,9 +42,6 @@ const Cities = props => {
     // TODO: Once you actually fetch in data,
     // you'll have to do some interesting things
     // to get JSON to format properly
-    const json =
-        '{\n\t"result": null, \n\t"count": 42, \n\t"love": [0, 1, 2],\n}'
-    const data = JSON.stringify(json)
     return (
         <>
             <div>Cities</div>
@@ -40,7 +51,9 @@ const Cities = props => {
                     data-visible="false"
                     className="language-json prism-code"
                 >
-                    {JSON.parse(data)}
+                    {json.map(jso => (
+                        <div key={jso.id}>{JSON.stringify(jso)}</div>
+                    ))}
                 </code>
             </pre>
             <p>

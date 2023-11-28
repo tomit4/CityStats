@@ -1,6 +1,7 @@
 const path = require('node:path')
 
 module.exports = async fastify => {
+    await fastify.register(require('@fastify/cors'))
     await fastify.register(require('@fastify/compress'), {
         global: false,
         encodings: ['deflate', 'gzip'],
