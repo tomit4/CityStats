@@ -118,6 +118,7 @@
         background-color: black;
         border-radius: 0 0 5px 5px;
         padding-inline: 0 96vw;
+        z-index: 9999;
     }
     .nav-home-link {
         left: 44.5vw;

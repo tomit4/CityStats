@@ -93,6 +93,11 @@ code.prism-code[data-visible='true'] {
     filter: blur(0.125em);
 }
 
+/* inputs */
+/* TODO: Further styling of input fields */
+input {
+    width: 80vw;
+}
 /*********************
  * MEDIA QUERIES
 *********************/

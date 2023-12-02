@@ -4,11 +4,14 @@ import Prism from 'prismjs'
 import 'prismjs/components/prism-json'
 // import './css/prism_solarized_light/prism.css'
 import './css/prism_okaidia/prism.css'
+import { debounce } from 'lodash'
 
 const Cities = props => {
     const [json, setJSON] = useState([])
+    const [url, setUrl] = useState('https://citystats.xyz/cities/1')
     const prismPre = useRef(null)
     const prismCode = useRef(null)
+    const inputRef = useRef(null)
     useEffect(() => {
         Prism.highlightAll()
     })
@@ -18,41 +21,72 @@ const Cities = props => {
         prismCode.current.setAttribute('data-visible', props.blur)
     }, [props])
 
-    // NOTE: Works but requires a hard refresh to see results...
-    // If we're going to allow user to adjust fetch
-    // string in application, then we might have a problem
-    // TODO: Test it with an input field to see what happens,
-    // this likely will need to toggle the dependency field of this hook ([])
     useEffect(() => {
         const getEntity = async () => {
-            await fetch('https://citystats.xyz/cities/1')
-                .then(res => res.json())
-                .then(setJSON)
+            try {
+                const response = await fetch(url)
+                if (!response.ok) throw new Error('City data not found!')
+                const data = await response.json()
+                setJSON(data)
+            } catch (err) {
+                console.error('ERROR fetching data :=>', err)
+                setJSON([{ err_msg: err.message }])
+            }
         }
         getEntity()
-    }, [])
+    }, [url])
 
-    /* TODO: Create a component specifically for code snippets
-     * You'll need three "tabs" that will display the instructions
-     * in code on how to grab the backend API in:
-     * bash/curl, javascript, and python.
-     * Lastly, you'll need a "try it out" button that actually queries
-     * the API and displays it in another code block
-     * (which renders dynamically, otherwise is invisible?). */
+    const isValidUrl = inputUrl => {
+        return (
+            inputUrl.length >= 24 &&
+            /^https:\/\/citystats\.xyz\/cities\/\d{1,3}$/.test(inputUrl)
+        )
+    }
+
+    const handleChange = debounce(() => {
+        const newUrl = inputRef.current.value
+        if (isValidUrl(newUrl)) {
+            setUrl(newUrl)
+        }
+    }, 500)
+
+    const handleBackSpace = e => {
+        const selectionStart = e.target.selectionStart
+        const lastSlashIndex = e.target.value.lastIndexOf('/')
+        if (e.keyCode === 8 && selectionStart <= lastSlashIndex + 1)
+            e.preventDefault()
+    }
+
     return (
         <>
             <div>Cities</div>
+            <form onSubmit={e => e.preventDefault()}>
+                <label>
+                    Enter URL:
+                    <br />
+                    <input
+                        type="text"
+                        defaultValue={url}
+                        ref={inputRef}
+                        onChange={handleChange}
+                        onKeyDown={handleBackSpace}
+                    />
+                </label>
+            </form>
             <pre ref={prismPre} className="prism-pre" data-visible="false">
                 <code
                     ref={prismCode}
                     data-visible="false"
                     className="language-json prism-code"
+                    key={JSON.stringify(json)}
                 >
-                    {json.map(jso => (
-                        <div key={jso.id}>
-                            {JSON.stringify(jso, null, '\t')}
-                        </div>
-                    ))}
+                    <div>
+                        {json.map(jso => (
+                            <div key={jso.id}>
+                                {JSON.stringify(jso, null, '\t')}
+                            </div>
+                        ))}
+                    </div>
                 </code>
             </pre>
             <p>
