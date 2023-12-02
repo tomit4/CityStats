@@ -36,6 +36,8 @@ const Cities = props => {
         getEntity()
     }, [url])
 
+    // Refactor to have two arguments for
+    // length comparison (other urls can be passed)
     const isValidUrl = inputUrl => {
         return (
             inputUrl.length >= 24 &&
