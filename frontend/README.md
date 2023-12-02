@@ -10,10 +10,13 @@
         almost any modern docs, i.e. fastify, react, vue, etc.). This will render
         out different components in the main section to the right.
 -   [x] Create a drop down to determine states or cities or images.
--   [ ] Call out to the backend api citystats.xyz. This will then
+-   [x] Call out to the backend api citystats.xyz. This will then
         render in a JSON code block (styled using prisma?).
 -   [ ] Additionally the frontend will generate a series of code snippets (bash,
         node/express, and python) that will show basic usage in a backend api.
+-   [ ] For nodejs, you can find issue a get request using the http lib. See [this
+        documentation](https://www.golinuxcloud.com/http-get-request-in-node-js/)
+        on how to issue an http get request from within basic nodejs.
 
 **NOTES**:
 
