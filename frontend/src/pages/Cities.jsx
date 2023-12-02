@@ -38,6 +38,7 @@ const Cities = props => {
 
     // Refactor to have two arguments for
     // length comparison (other urls can be passed)
+    // Allow to take names as well as id
     const isValidUrl = inputUrl => {
         return (
             inputUrl.length >= 24 &&
