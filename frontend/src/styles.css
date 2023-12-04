@@ -90,6 +90,7 @@ input.stv-radio-tab {
 }
 input.stv-radio-tab[data-focused='true'] + label {
     background-color: #272822;
+    font-weight: 700;
     color: white;
 }
 

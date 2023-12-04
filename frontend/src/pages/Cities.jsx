@@ -32,7 +32,8 @@ const Cities = props => {
     }, [props])
 
     useEffect(() => {
-        if (!url.length) return setJSON([{ err_msg: 'No URL provided' }])
+        // Extend this logic out, this only does JSON, what about js/bash/python code?
+        if (!url.length) return setJSON([{ id: 0, err_msg: 'No URL provided' }])
         const getEntity = async () => {
             try {
                 const response = await fetch(url)
@@ -112,14 +113,9 @@ const Cities = props => {
                     onClick={() => toggleTabs('__tabbed_2_1')}
                     data-focused="true"
                     type="radio"
-                    key={'input__tabbed_2_1'}
                     defaultChecked
                 />
-                <label
-                    key={'label__tabbed_2_1'}
-                    className="tabbed-set-label"
-                    htmlFor="__tabbed_2_1"
-                >
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
                     JSON
                 </label>
                 <input
@@ -129,13 +125,8 @@ const Cities = props => {
                     onClick={() => toggleTabs('__tabbed_2_2')}
                     data-focused="false"
                     type="radio"
-                    key={'input__tabbed_2_2'}
                 />
-                <label
-                    key={'label__tabbed_2_2'}
-                    className="tabbed-set-label"
-                    htmlFor="__tabbed_2_2"
-                >
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_2">
                     curl
                 </label>
                 <input
@@ -145,13 +136,8 @@ const Cities = props => {
                     onClick={() => toggleTabs('__tabbed_2_3')}
                     data-focused="false"
                     type="radio"
-                    key={'input__tabbed_2_3'}
                 />
-                <label
-                    key={'label__tabbed_2_3'}
-                    className="tabbed-set-label"
-                    htmlFor="__tabbed_2_3"
-                >
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_3">
                     python
                 </label>
                 <input
@@ -161,13 +147,8 @@ const Cities = props => {
                     ref={saveTabRef('__tabbed_2_4')}
                     onClick={() => toggleTabs('__tabbed_2_4')}
                     data-focused="false"
-                    key={'input__tabbed_2_4'}
                 />
-                <label
-                    key={'label__tabbed_2_4'}
-                    className="tabbed-set-label"
-                    htmlFor="__tabbed_2_4"
-                >
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_4">
                     node
                 </label>
             </div>
@@ -187,13 +168,6 @@ const Cities = props => {
                     </div>
                 </code>
             </pre>
-            <div>
-                {chosenTab === '__tabbed_2_1' ? (
-                    <div>__tabbed_2_1 selected</div>
-                ) : (
-                    <div>__tabbed_2_1 not selected</div>
-                )}
-            </div>
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
