@@ -12,6 +12,8 @@ const Cities = props => {
     const prismPre = useRef(null)
     const prismCode = useRef(null)
     const inputRef = useRef(null)
+    const tabs = useRef({})
+
     useEffect(() => {
         Prism.highlightAll()
     })
@@ -19,6 +21,11 @@ const Cities = props => {
     useEffect(() => {
         prismPre.current.setAttribute('data-visible', props.blur)
         prismCode.current.setAttribute('data-visible', props.blur)
+        for (const key of Object.keys(tabs.current)) {
+            if (tabs.current[key].getAttribute('data-focused') === 'true') {
+                tabs.current[key].setAttribute('data-visible', props.blur)
+            }
+        }
     }, [props])
 
     useEffect(() => {
@@ -60,6 +67,20 @@ const Cities = props => {
             e.preventDefault()
     }
 
+    const saveToggleRef = id => elementRef => {
+        tabs.current[id] = elementRef
+    }
+
+    const toggleTabs = id => {
+        for (const value of Object.values(tabs.current)) {
+            if (value.id !== id) {
+                tabs.current[value.id].setAttribute('data-focused', 'false')
+            } else {
+                tabs.current[id].setAttribute('data-focused', 'true')
+            }
+        }
+    }
+
     return (
         <>
             <div>Cities</div>
@@ -79,39 +100,51 @@ const Cities = props => {
             <div className="tabbed-set">
                 <input
                     className="stv-radio-tab"
-                    id="__tabbed_2_1"
-                    type="radio"
-                    autoFocus={true}
-                    defaultChecked
-                />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
-                    curl
-                </label>
-                <input
-                    className="stv-radio-tab"
-                    id="__tabbed_2_2"
-                    type="radio"
-                />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_2">
-                    python
-                </label>
-                <input
-                    className="stv-radio-tab"
-                    id="__tabbed_2_3"
-                    type="radio"
-                />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_3">
-                    node
-                </label>
-                <input
-                    className="stv-radio-tab"
                     id="__tabbed_2_4"
+                    ref={saveToggleRef('__tabbed_2_4')}
+                    onClick={() => toggleTabs('__tabbed_2_4')}
+                    data-focused="true"
+                    defaultChecked
                     type="radio"
                 />
                 <label className="tabbed-set-label" htmlFor="__tabbed_2_4">
                     JSON
                 </label>
+                <input
+                    className="stv-radio-tab"
+                    id="__tabbed_2_2"
+                    ref={saveToggleRef('__tabbed_2_2')}
+                    onClick={() => toggleTabs('__tabbed_2_2')}
+                    data-focused="false"
+                    type="radio"
+                />
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_2">
+                    curl
+                </label>
+                <input
+                    className="stv-radio-tab"
+                    id="__tabbed_2_3"
+                    ref={saveToggleRef('__tabbed_2_3')}
+                    onClick={() => toggleTabs('__tabbed_2_3')}
+                    data-focused="false"
+                    type="radio"
+                />
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_3">
+                    python
+                </label>
+                <input
+                    className="stv-radio-tab"
+                    id="__tabbed_2_1"
+                    type="radio"
+                    ref={saveToggleRef('__tabbed_2_1')}
+                    onClick={() => toggleTabs('__tabbed_2_1')}
+                    data-focused="false"
+                />
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
+                    node
+                </label>
             </div>
+            {/* TODO: conditionally render what content is displayed based off of toggled tabs */}
             <div className="tabbed-content">
                 <div className="tabbed-block">
                     <div className="highlight">
