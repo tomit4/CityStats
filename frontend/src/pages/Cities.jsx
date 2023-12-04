@@ -76,22 +76,68 @@ const Cities = props => {
                     />
                 </label>
             </form>
-            <pre ref={prismPre} className="prism-pre" data-visible="false">
-                <code
-                    ref={prismCode}
-                    data-visible="false"
-                    className="language-json prism-code"
-                    key={JSON.stringify(json)}
-                >
-                    <div>
-                        {json.map(jso => (
-                            <div key={jso.id}>
-                                {JSON.stringify(jso, null, '\t')}
-                            </div>
-                        ))}
+            <div className="tabbed-set">
+                <input
+                    className="stv-radio-tab"
+                    id="__tabbed_2_1"
+                    type="radio"
+                    autoFocus={true}
+                    defaultChecked
+                />
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
+                    curl
+                </label>
+                <input
+                    className="stv-radio-tab"
+                    id="__tabbed_2_2"
+                    type="radio"
+                />
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_2">
+                    python
+                </label>
+                <input
+                    className="stv-radio-tab"
+                    id="__tabbed_2_3"
+                    type="radio"
+                />
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_3">
+                    node
+                </label>
+                <input
+                    className="stv-radio-tab"
+                    id="__tabbed_2_4"
+                    type="radio"
+                />
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_4">
+                    JSON
+                </label>
+            </div>
+            <div className="tabbed-content">
+                <div className="tabbed-block">
+                    <div className="highlight">
+                        <pre
+                            ref={prismPre}
+                            className="prism-pre"
+                            data-visible="false"
+                        >
+                            <code
+                                ref={prismCode}
+                                data-visible="false"
+                                className="language-json prism-code"
+                                key={JSON.stringify(json)}
+                            >
+                                <div>
+                                    {json.map(jso => (
+                                        <div key={jso.id}>
+                                            {JSON.stringify(jso, null, '\t')}
+                                        </div>
+                                    ))}
+                                </div>
+                            </code>
+                        </pre>
                     </div>
-                </code>
-            </pre>
+                </div>
+            </div>
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
