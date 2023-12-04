@@ -91,7 +91,6 @@ input.stv-radio-tab {
 input.stv-radio-tab[data-focused='true'] + label {
     background-color: #272822;
     color: white;
-    user-select: none;
 }
 
 input.stv-radio-tab[data-visible='true'] + label {
@@ -104,10 +103,11 @@ input.stv-radio-tab[data-no-border='true'] + label {
 }
 
 label.tabbed-set-label {
+    user-select: none;
     cursor: pointer;
     outline: 1px solid #272822;
     border-bottom: 0;
-    border-radius: 3px 3px 3px 0px;
+    border-radius: 1px 1px 1px 0px;
     margin: 0 3px;
     padding: 0 1em;
 }
