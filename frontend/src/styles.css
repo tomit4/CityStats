@@ -122,7 +122,7 @@ pre {
     border: 1px solid #272822;
     border-radius: 0px 5px 5px 5px !important;
 }
-code.language-json {
+code.prism-code {
     display: block;
     font-size: 75%;
 }
@@ -143,6 +143,7 @@ code.prism-code[data-visible='true'] {
 /* TODO: Further styling of input fields */
 input {
     width: 80vw;
+    max-width: 54em;
 }
 /*********************
  * MEDIA QUERIES

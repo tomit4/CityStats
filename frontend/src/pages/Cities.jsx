@@ -7,16 +7,23 @@ import './css/prism_okaidia/prism.css'
 import { debounce } from 'lodash'
 
 const Cities = props => {
-    const [json, setJSON] = useState([])
+    const [lang, setLang] = useState('language-json')
     const [url, setUrl] = useState('https://citystats.xyz/cities/1')
+    const { hostname, pathname } = new URL(url)
     const prismPre = useRef(null)
     const prismCode = useRef(null)
     const inputRef = useRef(null)
     const tabs = useRef({})
     const [chosenTab, setChosenTab] = useState('__tabbed_2_1')
+    const [returnCode, setReturnCode] = useState('')
+    const bashCode = `#!/usr/bin/env bash\n\ncurl "${url}" \\\n\t-H "Accept: application/json" | jq`
+    const pythonCode = `import requests\nimport json\n\nurl = ${url}\nheaders = {"Accept": "application/json}\n\nresponse = requests.get(url, headers=headers)\n\nif response.status_code == 200:\n    data = response.json()\n    formatted_data = json.dumps(data, indent=4)\n    print(formatted_data)\nelse:\n    print("Failed to fetch data:", response.status_code)`
+    const javascriptCode = `const https = require("https");\nconst util = require("util");\n\nconst options = {\n  hostname: "${hostname}",\n  path: "${pathname}",\n  method: "GET",\n  headers: {\n    Accept: "application/json",\n  },\n};\n\nconst req = https.request(options, (res) => {\n  let data = "";\n\n  res.on("data", (chunk) => {\n    data += chunk;\n  });\n\n  res.on("end"), () => {\n    try {\n      const jsonData = JSON.parse(data);\n      console.log(util.insepct(jsonData, { colors: true, depth: null}));\n    } catch (error) {\n      console.error("Error parsing JSON:", error.message);\n    }\n  });\n});\n\nreq.on("error", (error) => {\n  console.error("Error fetching data:", error.message);\n});\n\nreq.end();`
 
     useEffect(() => {
         Prism.highlightAll()
+        Prism.languages.bash = Prism.languages.extend('clike', {})
+        Prism.languages.python = Prism.languages.extend('clike', {})
     })
 
     useEffect(() => {
@@ -32,21 +39,35 @@ const Cities = props => {
     }, [props])
 
     useEffect(() => {
-        // Extend this logic out, this only does JSON, what about js/bash/python code?
-        if (!url.length) return setJSON([{ id: 0, err_msg: 'No URL provided' }])
-        const getEntity = async () => {
-            try {
-                const response = await fetch(url)
-                if (!response.ok) throw new Error('City data not found!')
-                const data = await response.json()
-                setJSON(data)
-            } catch (err) {
-                console.error('ERROR fetching data :=>', err)
-                setJSON([{ err_msg: err.message }])
+        if (lang !== 'language-json') {
+            if (lang === 'language-bash') {
+                return setReturnCode(bashCode)
+            }
+            if (lang === 'language-python') {
+                return setReturnCode(pythonCode)
+            }
+            if (lang === 'language-javascript') {
+                return setReturnCode(javascriptCode)
             }
         }
-        getEntity()
-    }, [url])
+        if (lang.length || lang === 'language-json') {
+            if (lang === 'language-json') {
+                const getEntity = async () => {
+                    try {
+                        const response = await fetch(url)
+                        if (!response.ok)
+                            throw new Error('City data not found!')
+                        const data = await response.json()
+                        setReturnCode(JSON.stringify(data[0], null, '\t'))
+                    } catch (err) {
+                        console.error('ERROR fetching data :=>', err)
+                        setReturnCode('uh oh...')
+                    }
+                }
+                getEntity()
+            }
+        }
+    }, [url, lang, pythonCode, bashCode, javascriptCode])
 
     // Refactor to have two arguments for
     // length comparison (other urls can be passed)
@@ -76,9 +97,25 @@ const Cities = props => {
         tabs.current[id] = elementRef
     }
 
+    const _setPrismLang = tabId => {
+        switch (tabId) {
+            case 2:
+                setLang('language-bash')
+                break
+            case 3:
+                setLang('language-python')
+                break
+            case 4:
+                setLang('language-javascript')
+                break
+            default:
+                setLang('language-json')
+        }
+    }
+
     const toggleTabs = id => {
-        const urlToSet = id !== '__tabbed_2_1' ? '' : inputRef.current.value
-        setUrl(urlToSet)
+        const tabId = Number(id.split('').pop())
+        _setPrismLang(tabId)
         setChosenTab(id)
         for (const value of Object.values(tabs.current)) {
             if (value.id !== id) {
@@ -156,16 +193,10 @@ const Cities = props => {
                 <code
                     ref={prismCode}
                     data-visible="false"
-                    className="language-json prism-code"
-                    key={JSON.stringify(json)}
+                    className={`${lang} prism-code`}
+                    key={returnCode}
                 >
-                    <div>
-                        {json.map(jso => (
-                            <div key={jso.id}>
-                                {JSON.stringify(jso, null, '\t')}
-                            </div>
-                        ))}
-                    </div>
+                    <div>{returnCode}</div>
                 </code>
             </pre>
             <p>
