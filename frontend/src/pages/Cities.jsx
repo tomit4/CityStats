@@ -24,6 +24,8 @@ const Cities = props => {
         for (const key of Object.keys(tabs.current)) {
             if (tabs.current[key].getAttribute('data-focused') === 'true') {
                 tabs.current[key].setAttribute('data-visible', props.blur)
+            } else {
+                tabs.current[key].setAttribute('data-no-border', props.blur)
             }
         }
     }, [props])
