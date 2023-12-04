@@ -13,6 +13,7 @@ const Cities = props => {
     const prismCode = useRef(null)
     const inputRef = useRef(null)
     const tabs = useRef({})
+    const [chosenTab, setChosenTab] = useState('__tabbed_2_1')
 
     useEffect(() => {
         Prism.highlightAll()
@@ -74,6 +75,7 @@ const Cities = props => {
     }
 
     const toggleTabs = id => {
+        setChosenTab(id)
         for (const value of Object.values(tabs.current)) {
             if (value.id !== id) {
                 tabs.current[value.id].setAttribute('data-focused', 'false')
@@ -102,14 +104,14 @@ const Cities = props => {
             <div className="tabbed-set">
                 <input
                     className="stv-radio-tab"
-                    id="__tabbed_2_4"
-                    ref={saveToggleRef('__tabbed_2_4')}
-                    onClick={() => toggleTabs('__tabbed_2_4')}
+                    id="__tabbed_2_1"
+                    ref={saveToggleRef('__tabbed_2_1')}
+                    onClick={() => toggleTabs('__tabbed_2_1')}
                     data-focused="true"
                     defaultChecked
                     type="radio"
                 />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_4">
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
                     JSON
                 </label>
                 <input
@@ -136,43 +138,47 @@ const Cities = props => {
                 </label>
                 <input
                     className="stv-radio-tab"
-                    id="__tabbed_2_1"
+                    id="__tabbed_2_4"
                     type="radio"
-                    ref={saveToggleRef('__tabbed_2_1')}
-                    onClick={() => toggleTabs('__tabbed_2_1')}
+                    ref={saveToggleRef('__tabbed_2_4')}
+                    onClick={() => toggleTabs('__tabbed_2_4')}
                     data-focused="false"
                 />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
+                <label className="tabbed-set-label" htmlFor="__tabbed_2_4">
                     node
                 </label>
             </div>
-            {/* TODO: conditionally render what content is displayed based off of toggled tabs */}
-            <div className="tabbed-content">
-                <div className="tabbed-block">
-                    <div className="highlight">
-                        <pre
-                            ref={prismPre}
-                            className="prism-pre"
-                            data-visible="false"
-                        >
-                            <code
-                                ref={prismCode}
-                                data-visible="false"
-                                className="language-json prism-code"
-                                key={JSON.stringify(json)}
-                            >
-                                <div>
-                                    {json.map(jso => (
-                                        <div key={jso.id}>
-                                            {JSON.stringify(jso, null, '\t')}
-                                        </div>
-                                    ))}
+            <pre ref={prismPre} className="prism-pre" data-visible="false">
+                {/* Put the conditional here, tie it to useState/useEffect */}
+                {/* TODO: change this to use && syntax for multiple conditions */}
+                {chosenTab === '__tabbed_2_1' ? (
+                    <code
+                        ref={prismCode}
+                        data-visible="false"
+                        className="language-json prism-code"
+                        key={JSON.stringify(json)}
+                    >
+                        <div>
+                            {json.map(jso => (
+                                <div key={jso.id}>
+                                    {JSON.stringify(jso, null, '\t')}
                                 </div>
-                            </code>
-                        </pre>
-                    </div>
-                </div>
-            </div>
+                            ))}
+                        </div>
+                    </code>
+                ) : (
+                    <code
+                        ref={prismCode}
+                        data-visible="false"
+                        className="language-json prism-code"
+                        key={JSON.stringify(json)}
+                    >
+                        <div>
+                            <div>{JSON.stringify({ msg: 'hello' })}</div>
+                        </div>
+                    </code>
+                )}
+            </pre>
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
