@@ -32,6 +32,7 @@ const Cities = props => {
     }, [props])
 
     useEffect(() => {
+        if (!url.length) return setJSON([{ err_msg: 'No URL provided' }])
         const getEntity = async () => {
             try {
                 const response = await fetch(url)
@@ -70,11 +71,13 @@ const Cities = props => {
             e.preventDefault()
     }
 
-    const saveToggleRef = id => elementRef => {
+    const saveTabRef = id => elementRef => {
         tabs.current[id] = elementRef
     }
 
     const toggleTabs = id => {
+        const urlToSet = id !== '__tabbed_2_1' ? '' : inputRef.current.value
+        setUrl(urlToSet)
         setChosenTab(id)
         for (const value of Object.values(tabs.current)) {
             if (value.id !== id) {
@@ -105,80 +108,92 @@ const Cities = props => {
                 <input
                     className="stv-radio-tab"
                     id="__tabbed_2_1"
-                    ref={saveToggleRef('__tabbed_2_1')}
+                    ref={saveTabRef('__tabbed_2_1')}
                     onClick={() => toggleTabs('__tabbed_2_1')}
                     data-focused="true"
-                    defaultChecked
                     type="radio"
+                    key={'input__tabbed_2_1'}
+                    defaultChecked
                 />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
+                <label
+                    key={'label__tabbed_2_1'}
+                    className="tabbed-set-label"
+                    htmlFor="__tabbed_2_1"
+                >
                     JSON
                 </label>
                 <input
                     className="stv-radio-tab"
                     id="__tabbed_2_2"
-                    ref={saveToggleRef('__tabbed_2_2')}
+                    ref={saveTabRef('__tabbed_2_2')}
                     onClick={() => toggleTabs('__tabbed_2_2')}
                     data-focused="false"
                     type="radio"
+                    key={'input__tabbed_2_2'}
                 />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_2">
+                <label
+                    key={'label__tabbed_2_2'}
+                    className="tabbed-set-label"
+                    htmlFor="__tabbed_2_2"
+                >
                     curl
                 </label>
                 <input
                     className="stv-radio-tab"
                     id="__tabbed_2_3"
-                    ref={saveToggleRef('__tabbed_2_3')}
+                    ref={saveTabRef('__tabbed_2_3')}
                     onClick={() => toggleTabs('__tabbed_2_3')}
                     data-focused="false"
                     type="radio"
+                    key={'input__tabbed_2_3'}
                 />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_3">
+                <label
+                    key={'label__tabbed_2_3'}
+                    className="tabbed-set-label"
+                    htmlFor="__tabbed_2_3"
+                >
                     python
                 </label>
                 <input
                     className="stv-radio-tab"
                     id="__tabbed_2_4"
                     type="radio"
-                    ref={saveToggleRef('__tabbed_2_4')}
+                    ref={saveTabRef('__tabbed_2_4')}
                     onClick={() => toggleTabs('__tabbed_2_4')}
                     data-focused="false"
+                    key={'input__tabbed_2_4'}
                 />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_4">
+                <label
+                    key={'label__tabbed_2_4'}
+                    className="tabbed-set-label"
+                    htmlFor="__tabbed_2_4"
+                >
                     node
                 </label>
             </div>
             <pre ref={prismPre} className="prism-pre" data-visible="false">
-                {/* Put the conditional here, tie it to useState/useEffect */}
-                {/* TODO: change this to use && syntax for multiple conditions */}
-                {chosenTab === '__tabbed_2_1' ? (
-                    <code
-                        ref={prismCode}
-                        data-visible="false"
-                        className="language-json prism-code"
-                        key={JSON.stringify(json)}
-                    >
-                        <div>
-                            {json.map(jso => (
-                                <div key={jso.id}>
-                                    {JSON.stringify(jso, null, '\t')}
-                                </div>
-                            ))}
-                        </div>
-                    </code>
-                ) : (
-                    <code
-                        ref={prismCode}
-                        data-visible="false"
-                        className="language-json prism-code"
-                        key={JSON.stringify(json)}
-                    >
-                        <div>
-                            <div>{JSON.stringify({ msg: 'hello' })}</div>
-                        </div>
-                    </code>
-                )}
+                <code
+                    ref={prismCode}
+                    data-visible="false"
+                    className="language-json prism-code"
+                    key={JSON.stringify(json)}
+                >
+                    <div>
+                        {json.map(jso => (
+                            <div key={jso.id}>
+                                {JSON.stringify(jso, null, '\t')}
+                            </div>
+                        ))}
+                    </div>
+                </code>
             </pre>
+            <div>
+                {chosenTab === '__tabbed_2_1' ? (
+                    <div>__tabbed_2_1 selected</div>
+                ) : (
+                    <div>__tabbed_2_1 not selected</div>
+                )}
+            </div>
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
