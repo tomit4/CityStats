@@ -115,8 +115,7 @@ label.tabbed-set-label {
 * PRISMJS
 **********************/
 pre {
-    max-height: 20em;
-    min-height: 20em;
+    height: 20em;
     overflow-y: scroll;
     width: 100%;
     border: 1px solid #272822;
