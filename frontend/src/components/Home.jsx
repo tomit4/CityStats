@@ -10,7 +10,12 @@ export default function App() {
     return (
         <>
             <Nav blurIt={blurIt} sidebar={sidebar} showSidebar={showSidebar} />
-            <Body blur={blur} blurIt={blurIt} sidebar={sidebar} />
+            <Body
+                blur={blur}
+                blurIt={blurIt}
+                sidebar={sidebar}
+                showSidebar={showSidebar}
+            />
             {/* <Footer /> */}
         </>
     )
