@@ -40,11 +40,21 @@ const Body = props => {
                         <Routes>
                             <Route
                                 path="/states"
-                                element={<States blur={props.blur} />}
+                                element={
+                                    <States
+                                        blur={props.blur}
+                                        theme={props.theme}
+                                    />
+                                }
                             />
                             <Route
                                 path="/cities"
-                                element={<Cities blur={props.blur} />}
+                                element={
+                                    <Cities
+                                        blur={props.blur}
+                                        theme={props.theme}
+                                    />
+                                }
                             />
                             <Route path="/" element={<General />} />
                             <Route path="*" element={<NotFound />} />
@@ -58,6 +68,7 @@ const Body = props => {
 
 Body.propTypes = {
     blur: PropTypes.bool,
+    theme: PropTypes.string,
     sidebar: PropTypes.bool,
     showSidebar: PropTypes.func,
     blurIt: PropTypes.func,
