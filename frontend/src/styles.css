@@ -125,6 +125,7 @@ pre {
 code.prism-code {
     display: block;
     font-size: 75% !important;
+    font-weight: 900;
 }
 pre[data-visible='true'] {
     box-shadow: 0 0 2px 2px #3c3c39;
