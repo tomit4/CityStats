@@ -7,24 +7,10 @@ export default function App() {
     const [blur, setBlur] = useState(false)
     const showSidebar = () => setSidebar(!sidebar)
     const blurIt = () => setBlur(!blur)
-    const [theme, toggleTheme] = useState('light')
-    const setTheme = () => toggleTheme(theme === 'light' ? 'dark' : 'light')
     return (
         <>
-            <Nav
-                blurIt={blurIt}
-                sidebar={sidebar}
-                showSidebar={showSidebar}
-                theme={theme}
-                setTheme={setTheme}
-            />
-            <Body
-                blur={blur}
-                blurIt={blurIt}
-                sidebar={sidebar}
-                showSidebar={showSidebar}
-                theme={theme}
-            />
+            <Nav blurIt={blurIt} sidebar={sidebar} showSidebar={showSidebar} />
+            <Body blur={blur} blurIt={blurIt} sidebar={sidebar} />
             {/* <Footer /> */}
         </>
     )

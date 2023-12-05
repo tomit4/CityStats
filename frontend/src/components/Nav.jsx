@@ -9,8 +9,8 @@ const Nav = props => {
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
     const apiToggle = useRef(null)
-    const themeToggle = useRef(null)
     const toggleLinks = useRef({})
+    const themeToggle = useRef(null)
     const [showStatesLinks, toggleStateLinks] = useState(true)
 
     useEffect(() => {
@@ -20,13 +20,6 @@ const Nav = props => {
             props.showSidebar()
         }
     }, [props])
-
-    useEffect(() => {
-        themeToggle.current.setAttribute(
-            'data-toggled',
-            props.theme === 'light' ? false : true,
-        )
-    }, [props.theme])
 
     const toggleHamburger = () => {
         const visibility =
@@ -39,12 +32,11 @@ const Nav = props => {
     }
 
     const toggleLightDark = () => {
-        props.setTheme()
-        const temperature =
+        const isToggled =
             themeToggle.current.getAttribute('data-toggled') === 'false'
                 ? false
                 : true
-        themeToggle.current.setAttribute('data-toggled', !temperature)
+        themeToggle.current.setAttribute('data-toggled', !isToggled)
     }
 
     const toggleFromAnchor = () => toggleHamburger()
@@ -134,10 +126,8 @@ const Nav = props => {
 
 Nav.propTypes = {
     sidebar: PropTypes.bool,
-    theme: PropTypes.string,
     showSidebar: PropTypes.func,
     blurIt: PropTypes.func,
-    setTheme: PropTypes.func,
 }
 
 export default Nav

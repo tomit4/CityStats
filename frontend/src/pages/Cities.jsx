@@ -1,11 +1,10 @@
-import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Code from '../components/Code'
 
 const Cities = props => {
     return (
         <>
-            <Code blur={props.blur} theme={props.theme} />
+            <Code blur={props.blur} />
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -73,7 +72,6 @@ const Cities = props => {
 
 Cities.propTypes = {
     blur: PropTypes.bool,
-    theme: PropTypes.string,
 }
 
 export default Cities
