@@ -7,8 +7,8 @@ export default function App() {
     const [blur, setBlur] = useState(false)
     const showSidebar = () => setSidebar(!sidebar)
     const blurIt = () => setBlur(!blur)
-    // TODO: establish dark light button in nav
-    const [theme, setTheme] = useState('dark')
+    const [theme, toggleTheme] = useState('light')
+    const setTheme = () => toggleTheme(theme === 'light' ? 'dark' : 'light')
     return (
         <>
             <Nav

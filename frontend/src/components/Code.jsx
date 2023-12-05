@@ -5,9 +5,9 @@ import 'prismjs/components/prism-json'
 import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-python'
 import 'prismjs/components/prism-javascript'
-import { codeSnippets } from '../utils/code_snippets'
 // import './css/prism_solarized_light/prism.css'
 // import './css/prism_okaidia/prism.css'
+import { codeSnippets } from '../utils/code_snippets'
 import { debounce } from 'lodash'
 
 const Code = props => {
@@ -25,17 +25,6 @@ const Code = props => {
     useEffect(() => {
         Prism.highlightAll()
     })
-
-    useEffect(() => {
-        const loadTheme = async () => {
-            if (props.theme === 'dark') {
-                await import('./css/prism_okaidia/prism.css')
-            } else {
-                await import('./css/prism_solarized_light/prism.css')
-            }
-        }
-        loadTheme()
-    }, [props])
 
     useEffect(() => {
         prismPre.current.setAttribute('data-visible', props.blur)

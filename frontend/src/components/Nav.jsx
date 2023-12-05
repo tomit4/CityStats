@@ -9,6 +9,7 @@ const Nav = props => {
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
     const apiToggle = useRef(null)
+    const themeToggle = useRef(null)
     const toggleLinks = useRef({})
     const [showStatesLinks, toggleStateLinks] = useState(true)
 
@@ -20,6 +21,13 @@ const Nav = props => {
         }
     }, [props])
 
+    useEffect(() => {
+        themeToggle.current.setAttribute(
+            'data-toggled',
+            props.theme === 'light' ? false : true,
+        )
+    }, [props.theme])
+
     const toggleHamburger = () => {
         const visibility =
             primaryNav.current.getAttribute('data-visible') === 'false'
@@ -28,6 +36,15 @@ const Nav = props => {
         primaryNav.current.setAttribute('data-visible', !visibility)
         navToggle.current.setAttribute('aria-expanded', !visibility)
         props.blurIt()
+    }
+
+    const toggleLightDark = () => {
+        props.setTheme()
+        const temperature =
+            themeToggle.current.getAttribute('data-toggled') === 'false'
+                ? false
+                : true
+        themeToggle.current.setAttribute('data-toggled', !temperature)
     }
 
     const toggleFromAnchor = () => toggleHamburger()
@@ -62,6 +79,16 @@ const Nav = props => {
                     onClick={toggleHamburger}
                 >
                     <span className="sr-only"> Menu </span>
+                </button>
+                <button
+                    type="button"
+                    className="dark-light-toggle"
+                    aria-label="Toggle Dark/Light Mode"
+                    data-toggled="false"
+                    ref={themeToggle}
+                    onClick={toggleLightDark}
+                >
+                    <span className="sr-only"> Light/Dark </span>
                 </button>
                 <nav>
                     <ul
@@ -107,8 +134,10 @@ const Nav = props => {
 
 Nav.propTypes = {
     sidebar: PropTypes.bool,
+    theme: PropTypes.string,
     showSidebar: PropTypes.func,
     blurIt: PropTypes.func,
+    setTheme: PropTypes.func,
 }
 
 export default Nav
