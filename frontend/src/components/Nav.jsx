@@ -3,8 +3,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './css/Nav.css'
 import ApiOptions from './ApiOptions'
+import { useThemeUpdate } from '../ThemeSelector'
 
 const Nav = props => {
+    const toggleTheme = useThemeUpdate()
     const navigate = useNavigate()
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
@@ -37,6 +39,7 @@ const Nav = props => {
                 ? false
                 : true
         themeToggle.current.setAttribute('data-toggled', !isToggled)
+        toggleTheme()
     }
 
     const toggleFromAnchor = () => toggleHamburger()
