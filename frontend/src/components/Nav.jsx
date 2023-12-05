@@ -5,6 +5,12 @@ import './css/Nav.css'
 import ApiOptions from './ApiOptions'
 import { useThemeUpdate } from '../ThemeSelector'
 
+/* TODO: Address the UI BUG occurring when
+ * clicking around, doesn't always work...,
+ * Consider creating a transparent window that disables
+ * clicking on the actual body, and instead, when the transparent
+ * div is clicked, you can return to the regular document.*/
+
 const Nav = props => {
     const toggleTheme = useThemeUpdate()
     const navigate = useNavigate()
@@ -22,7 +28,6 @@ const Nav = props => {
             props.showSidebar()
         }
     }, [props])
-
     const toggleHamburger = () => {
         const visibility =
             primaryNav.current.getAttribute('data-visible') === 'false'

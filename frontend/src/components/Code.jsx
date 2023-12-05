@@ -49,7 +49,8 @@ const Code = props => {
                 const response = await fetch(url)
                 if (!response.ok) throw new Error('City data not found!')
                 const data = await response.json()
-                setReturnCode(JSON.stringify(data[0], null, '\t'))
+                const dataToReturn = data.length > 1 ? data : data[0]
+                setReturnCode(JSON.stringify(dataToReturn, null, '\t'))
             } catch (err) {
                 console.error('ERROR fetching data :=>', err)
                 setReturnCode(JSON.stringify({ error: err.message }))

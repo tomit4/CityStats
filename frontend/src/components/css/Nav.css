@@ -131,19 +131,6 @@
         background-repeat: no-repeat;
     }
     button.dark-light-toggle[data-toggled='false'] {
-        left: 86vw;
-        position: fixed;
-        top: 0.65em;
-        height: 3.25em;
-        aspect-ratio: 1;
-        background-position: center;
-        background: url('../../assets/icons/sun.svg');
-        background-repeat: no-repeat;
-        border: none;
-        cursor: pointer;
-    }
-
-    button.dark-light-toggle[data-toggled='true'] {
         left: 87vw;
         position: fixed;
         height: 3.25em;
@@ -154,6 +141,19 @@
         border: none;
         cursor: pointer;
         top: 0.825em;
+    }
+
+    button.dark-light-toggle[data-toggled='true'] {
+        left: 86vw;
+        position: fixed;
+        top: 0.65em;
+        height: 3.25em;
+        aspect-ratio: 1;
+        background-position: center;
+        background: url('../../assets/icons/sun.svg');
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
     }
 
     .primary-navigation[data-visible='true'] {

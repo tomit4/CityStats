@@ -80,3 +80,16 @@ Powered by Linode, NGINX, Docker, React
 Fonts:
 
 NOTE: Make sure to chmod 644 all files xtracted.
+
+**FURTHER_NOTES**
+
+-   https://gist.github.com/arniebradfo/dc1dcb0793108cfc4cfca8faf0cb15d3
+-   https://stackoverflow.com/questions/48047362/how-to-remove-imported-css-in-reactjs
+
+See the above notes regarding conditional rendering of css. Due to the way that
+prismJS is implemented in react, there isn't a truly clean way of swapping out
+stylesheets (aka, dark and light prismjs code blocks). Thusly if you look at
+./src/ThemeSelector.jsx, you'll find the toggleTheme() method to be a bit hacky
+of a way to get this functionality working. The above is a much cleaner and well
+thought out react hook that I didn't take the time to implement in this version
+of the front end.
