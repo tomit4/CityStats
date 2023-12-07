@@ -202,10 +202,7 @@ input {
         margin-top: 3.25em;
     }
     .content[data-visible='true'] {
-        color: transparent;
         filter: blur(0.125em);
-        max-width: 96%;
-        position: fixed;
     }
 
     pre.prism-pre[data-visible='true'] {
