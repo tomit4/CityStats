@@ -127,7 +127,7 @@
         height: 3.25em;
         width: 3.25em;
         background-position: center;
-        background: url('../../assets/icons/building.svg');
+        background: url('../assets/icons/building.svg');
         background-repeat: no-repeat;
     }
     button.dark-light-toggle[data-toggled='false'] {
@@ -136,7 +136,7 @@
         height: 3.25em;
         aspect-ratio: 1;
         background-position: center;
-        background: url('../../assets/icons/moon.svg');
+        background: url('../assets/icons/moon.svg');
         background-repeat: no-repeat;
         border: none;
         cursor: pointer;
@@ -150,7 +150,7 @@
         height: 3.25em;
         aspect-ratio: 1;
         background-position: center;
-        background: url('../../assets/icons/sun.svg');
+        background: url('../assets/icons/sun.svg');
         background-repeat: no-repeat;
         border: none;
         cursor: pointer;
@@ -164,7 +164,7 @@
         display: block;
         position: fixed;
         z-index: 9999;
-        background: url('../../assets/icons/hamburger.svg');
+        background: url('../assets/icons/hamburger.svg');
         background-repeat: no-repeat;
         border: 0;
         width: 2rem;
@@ -174,7 +174,7 @@
     }
 
     .mobile-nav-toggle[aria-expanded='true'] {
-        background-image: url('../../assets/icons/close.svg');
+        background-image: url('../assets/icons/close.svg');
     }
 
     .mobile-nav-toggle:hover {
