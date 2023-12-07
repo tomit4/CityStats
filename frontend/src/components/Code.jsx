@@ -121,6 +121,7 @@ const Code = props => {
                     <br />
                     <input
                         type="text"
+                        className="url-input"
                         defaultValue={url}
                         ref={inputRef}
                         onChange={handleChange}

@@ -22,18 +22,14 @@
 :root {
     /* TODO: uncomment in production */
     /* color-scheme: light dark; */
-    --offblack: #343231;
-    --offwhite: #faf0e6;
-    --okaidia-black: #272822;
-    --solarized-white: #fdf6e3;
+    --offblack: #272822;
+    --offwhite: #fdf6e3;
     --custom-grey: #737373;
 }
 
 :root[data-citystats-theme='true'] {
-    --offblack: #dfe1e3;
-    --offwhite: #161615;
-    --okaidia-black: #fdf6e3;
-    --solarized-white: #272822;
+    --offblack: #fdf6e3;
+    --offwhite: #272822;
 }
 
 html {
@@ -80,24 +76,25 @@ h2 {
 .page-title {
     font-family: 'Vegur', 'Arial', system-ui;
     font-weight: 900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     color: var(--offblack);
 }
 
 .form-label {
-    /* font-family: 'Zikketica', 'Helvetica', system-ui; */
     font-family: 'Vegur', 'Arial', system-ui;
-    margin-top: 1em;
     font-size: 90%;
     font-weight: 900;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     color: var(--offblack);
+}
+
+.url-input {
+    font-family: 'Arial', system-ui;
+    font-size: 95%;
+    font-weight: 400;
+    background-color: var(--offwhite);
+    color: var(--offblack);
+    border: 1.75px solid var(--offblack);
+    border-radius: 3px;
+    padding: 0.25em;
 }
 
 p {
@@ -129,7 +126,7 @@ video {
     font-family: 'monospace';
     font-size: 75%;
     font-weight: 500;
-    margin: 0.25rem auto -2.25em -0.15em;
+    margin: 0.25rem auto -2.15em -0.15em;
 }
 input.stv-radio-tab {
     position: absolute;
@@ -137,15 +134,15 @@ input.stv-radio-tab {
     top: -99999em;
 }
 input.stv-radio-tab[data-focused='true'] + label {
-    background-color: var(--okaidia-black);
-    color: var(--solarized-white);
+    background-color: var(--offblack);
+    color: var(--offwhite);
     font-weight: 700;
-    color: var(--solarized-white);
+    color: var(--offwhite);
 }
 
 input.stv-radio-tab[data-visible='true'] + label {
-    background-color: var(--okaidia-black);
-    color: var(--solarized-white);
+    background-color: var(--offblack);
+    color: var(--offwhite);
     filter: blur(0.125em);
 }
 
@@ -156,9 +153,9 @@ input.stv-radio-tab[data-no-border='true'] + label {
 label.tabbed-set-label {
     user-select: none;
     cursor: pointer;
-    outline: 1px solid var(--okaidia-black);
-    background-color: var(--solarized-white);
-    color: var(--okaidia-black);
+    outline: 1px solid var(--offblack);
+    background-color: var(--offwhite);
+    color: var(--offblack);
     border-bottom: 0;
     border-radius: 1px 1px 1px 0px;
     margin: 0 3px;
@@ -171,7 +168,7 @@ pre {
     height: 20em;
     overflow-y: scroll;
     width: 100%;
-    border: 1px solid var(--okaidia-black);
+    border: 1px solid var(--offblack);
     border-radius: 0px 5px 5px 5px !important;
 }
 code.prism-code {
@@ -214,6 +211,20 @@ input {
     }
     h2[data-visible='true'] {
         border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    }
+    .page-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .form-label {
+        margin-top: 1em;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 

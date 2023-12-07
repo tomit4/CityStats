@@ -83,8 +83,8 @@
     margin-top: 1em;
 }
 
-.icons[data-citystats-theme='dark'] {
-    filter: invert(100%) sepia(0%) brightness(110%) contrast(100%);
+.icons[data-toggled='true'] {
+    filter: invert(90%) sepia(200%) brightness(110%) contrast(90%);
 }
 
 #states-api-toggle {

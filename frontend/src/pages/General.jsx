@@ -1,7 +1,7 @@
 export default function General() {
     return (
         <>
-            <div>Intro Page</div>
+            <div className="page-title">Intro Page</div>
             <p>
                 General Intro Info Goes here, Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

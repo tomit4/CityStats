@@ -16,6 +16,7 @@ const Nav = props => {
     const navigate = useNavigate()
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
+    const homeToggle = useRef(null)
     const apiToggle = useRef(null)
     const toggleLinks = useRef({})
     const themeToggle = useRef(null)
@@ -44,6 +45,8 @@ const Nav = props => {
                 ? false
                 : true
         themeToggle.current.setAttribute('data-toggled', !isToggled)
+        navToggle.current.setAttribute('data-toggled', !isToggled)
+        homeToggle.current.setAttribute('data-toggled', !isToggled)
         toggleTheme()
     }
 
@@ -68,13 +71,19 @@ const Nav = props => {
         <>
             <header className="primary-header flex">
                 <div className="nav-bg">
-                    <Link className="icons nav-home-link" to="/" />
+                    <Link
+                        className="icons nav-home-link"
+                        data-toggled="false"
+                        ref={homeToggle}
+                        to="/"
+                    />
                 </div>
                 <button
                     type="button"
                     className="icons mobile-nav-toggle"
                     aria-controls="primary-navigation"
                     aria-expanded="false"
+                    data-toggled="false"
                     ref={navToggle}
                     onClick={toggleHamburger}
                 >
