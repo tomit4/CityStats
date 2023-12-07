@@ -83,6 +83,7 @@
     margin-top: 1em;
 }
 
+/* TODO: Fix bugs based off of this */
 .icons[data-toggled='true'] {
     filter: invert(90%) sepia(200%) brightness(110%) contrast(90%);
 }

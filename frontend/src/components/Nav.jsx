@@ -39,11 +39,13 @@ const Nav = props => {
         props.blurIt()
     }
 
+    // TODO: Fix bugs based off of this
     const toggleLightDark = () => {
         const isToggled =
             themeToggle.current.getAttribute('data-toggled') === 'false'
                 ? false
                 : true
+        console.log('isToggled :=>', isToggled)
         themeToggle.current.setAttribute('data-toggled', !isToggled)
         navToggle.current.setAttribute('data-toggled', !isToggled)
         homeToggle.current.setAttribute('data-toggled', !isToggled)

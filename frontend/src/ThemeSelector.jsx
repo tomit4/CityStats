@@ -22,9 +22,11 @@ const ThemeSelector = ({ children }) => {
             document.styleSheets[2].disabled = !document.styleSheets[2].disabled
         }
         setPrefersDark(prevDarkTheme => !prevDarkTheme)
+        // TODO: Fix bugs based off of this
+        console.log('prefersDark :=>', prefersDark)
         document.documentElement.setAttribute(
             'data-citystats-theme',
-            prefersDark,
+            !prefersDark,
         )
     }
 
