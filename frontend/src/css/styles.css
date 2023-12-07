@@ -30,6 +30,7 @@
 :root[data-citystats-theme='true'] {
     --offblack: #fdf6e3;
     --offwhite: #272822;
+    --custom-grey: #b9b9b9;
 }
 
 html {

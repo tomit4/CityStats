@@ -49,7 +49,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    background: white;
+    background: var(--offwhite);
     border-bottom: 2px solid var(--offblack);
 }
 
@@ -218,7 +218,7 @@
         aspect-ratio: 1;
         left: 2px;
         bottom: 1.25px;
-        background-color: white;
+        background-color: var(--offwhite);
         border-radius: 50%;
         transition: 0.4s;
     }
