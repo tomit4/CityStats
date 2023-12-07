@@ -25,6 +25,7 @@
     --offblack: #272822;
     --offwhite: #fdf6e3;
     --custom-grey: #737373;
+    --box-shadow: #3c3c39;
 }
 
 :root[data-citystats-theme='true'] {
@@ -127,7 +128,7 @@ video {
     font-family: 'monospace';
     font-size: 75%;
     font-weight: 500;
-    margin: 0.25rem auto -2.15em -0.15em;
+    margin: 0.25rem auto -2.2em -0.15em;
 }
 input.stv-radio-tab {
     position: absolute;
@@ -178,15 +179,10 @@ code.prism-code {
     font-weight: 900;
 }
 pre[data-visible='true'] {
-    box-shadow: 0 0 2px 2px #3c3c39;
-    border: none;
     overflow-x: hidden;
     overflow-y: hidden;
 }
 code.prism-code[data-visible='true'] {
-    border-radius: 5px;
-    box-shadow: 0 0 6.25em 6.25em #3c3c39;
-    background-color: #3c3c39;
     filter: blur(0.125em);
 }
 
@@ -205,13 +201,15 @@ input {
     }
     .content[data-visible='true'] {
         color: transparent;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+        filter: blur(0.125em);
     }
     h1[data-visible='true'] {
         border-top: 2px solid rgba(0, 0, 0, 0.4);
+        filter: blur(0.125em);
     }
     h2[data-visible='true'] {
         border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+        filter: blur(0.125em);
     }
     .page-title {
         display: flex;
