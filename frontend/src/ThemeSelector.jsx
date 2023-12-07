@@ -5,11 +5,11 @@ const LightTheme = React.lazy(() => import('./themes/Lighttheme.jsx'))
 const DarkTheme = React.lazy(() => import('./themes/Darktheme.jsx'))
 
 // TODO: Have Dark Mode Saved in localStorage
+// (change immediately on finding prefersDark setting)
 const ThemeSelector = ({ children }) => {
     const [prefersDark, setPrefersDark] = useState(
         window.matchMedia('(prefers-color-scheme: dark)').matches,
     )
-    document.documentElement.setAttribute('data-citystats-theme', prefersDark)
 
     /* NOTE: Hacky workaround to get prismjs stylesheets to
      * toggle on and off depending on dark/light mode (see ./README.md) */
