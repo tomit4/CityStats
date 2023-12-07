@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './css/Nav.css'
 import ApiOptions from './ApiOptions'
-import { useThemeUpdate } from '../ThemeSelector'
+import { useThemeUpdate } from '../contexts/useThemeUpdate'
 
 /* TODO: Address the UI BUG occurring when
  * clicking around, doesn't always work...,

@@ -1,13 +1,8 @@
-import React, { useState, useContext, createContext } from 'react'
+import React, { useState } from 'react'
+import { ThemeUpdateContext } from './contexts/ThemeUpdateContext.jsx'
 import PropTypes from 'prop-types'
 const LightTheme = React.lazy(() => import('./themes/Lighttheme.jsx'))
 const DarkTheme = React.lazy(() => import('./themes/Darktheme.jsx'))
-const ThemeUpdateContext = createContext()
-
-/* TODO: Address fast refresh warnings from eslint */
-export function useThemeUpdate() {
-    return useContext(ThemeUpdateContext)
-}
 
 const ThemeSelector = ({ children }) => {
     const [prefersDark, setPrefersDark] = useState(
