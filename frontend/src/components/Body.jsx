@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import General from '../../pages/General.jsx'
-import States from '../../pages/States.jsx'
-import Cities from '../../pages/Cities.jsx'
-import NotFound from '../../pages/NotFound.jsx'
+import General from '../pages/General.jsx'
+import States from '../pages/States.jsx'
+import Cities from '../pages/Cities.jsx'
+import NotFound from '../pages/NotFound.jsx'
 
 const Body = props => {
     const content = useRef(null)
