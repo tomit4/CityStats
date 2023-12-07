@@ -1,7 +1,7 @@
 export default function States() {
     return (
         <>
-            <div>States</div>
+            <div className="page-title">States</div>
             <p>
                 States Info Goes here, Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit, sed do eiusmod tempor incididunt ut labore et

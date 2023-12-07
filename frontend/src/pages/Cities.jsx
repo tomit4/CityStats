@@ -4,6 +4,7 @@ import Code from '../components/Code'
 const Cities = props => {
     return (
         <>
+            <div className="page-title">City Queries</div>
             <Code blur={props.blur} />
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,

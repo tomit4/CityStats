@@ -25,18 +25,22 @@
     --offblack: #343231;
     --offwhite: #faf0e6;
     --okaidia-black: #272822;
+    --solarized-white: #fdf6e3;
     --custom-grey: #737373;
 }
 
-.root[data-theme='dark'] {
+:root[data-citystats-theme='true'] {
     --offblack: #dfe1e3;
     --offwhite: #161615;
+    --okaidia-black: #fdf6e3;
+    --solarized-white: #272822;
 }
 
 html {
     scroll-behavior: smooth;
     /* mozilla firefox styling of scrollbar */
     scrollbar-color: var(--offblack) var(--offwhite);
+    background-color: var(--offwhite);
 }
 
 .content {
@@ -73,6 +77,29 @@ h2 {
     margin-top: -1.5em;
 }
 
+.page-title {
+    font-family: 'Vegur', 'Arial', system-ui;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--offblack);
+}
+
+.form-label {
+    /* font-family: 'Zikketica', 'Helvetica', system-ui; */
+    font-family: 'Vegur', 'Arial', system-ui;
+    margin-top: 1em;
+    font-size: 90%;
+    font-weight: 900;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--offblack);
+}
+
 p {
     font-family: 'Vegur', 'Arial', system-ui;
     color: var(--offblack);
@@ -92,6 +119,10 @@ video {
 /**********************
 * CODE TABS
 **********************/
+.code-block-set {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
 .tabbed-set {
     height: 3em;
     /* TODO: Bring in custom monospace font */
@@ -107,12 +138,14 @@ input.stv-radio-tab {
 }
 input.stv-radio-tab[data-focused='true'] + label {
     background-color: var(--okaidia-black);
+    color: var(--solarized-white);
     font-weight: 700;
-    color: white;
+    color: var(--solarized-white);
 }
 
 input.stv-radio-tab[data-visible='true'] + label {
-    background-color: #3c3c39;
+    background-color: var(--okaidia-black);
+    color: var(--solarized-white);
     filter: blur(0.125em);
 }
 
@@ -124,6 +157,8 @@ label.tabbed-set-label {
     user-select: none;
     cursor: pointer;
     outline: 1px solid var(--okaidia-black);
+    background-color: var(--solarized-white);
+    color: var(--okaidia-black);
     border-bottom: 0;
     border-radius: 1px 1px 1px 0px;
     margin: 0 3px;

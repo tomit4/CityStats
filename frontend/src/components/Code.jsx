@@ -115,9 +115,8 @@ const Code = props => {
 
     return (
         <>
-            <div>Cities</div>
             <form onSubmit={e => e.preventDefault()}>
-                <label>
+                <label className="form-label">
                     Enter URL:
                     <br />
                     <input
@@ -129,63 +128,65 @@ const Code = props => {
                     />
                 </label>
             </form>
-            <div className="tabbed-set">
-                <input
-                    className="stv-radio-tab"
-                    id="__tabbed_2_1"
-                    ref={saveTabRef('__tabbed_2_1')}
-                    onClick={() => toggleTabs('__tabbed_2_1')}
-                    data-focused="true"
-                    type="radio"
-                    defaultChecked
-                />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
-                    JSON
-                </label>
-                <input
-                    className="stv-radio-tab"
-                    id="__tabbed_2_2"
-                    ref={saveTabRef('__tabbed_2_2')}
-                    onClick={() => toggleTabs('__tabbed_2_2')}
-                    data-focused="false"
-                    type="radio"
-                />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_2">
-                    curl
-                </label>
-                <input
-                    className="stv-radio-tab"
-                    id="__tabbed_2_3"
-                    ref={saveTabRef('__tabbed_2_3')}
-                    onClick={() => toggleTabs('__tabbed_2_3')}
-                    data-focused="false"
-                    type="radio"
-                />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_3">
-                    python
-                </label>
-                <input
-                    className="stv-radio-tab"
-                    id="__tabbed_2_4"
-                    type="radio"
-                    ref={saveTabRef('__tabbed_2_4')}
-                    onClick={() => toggleTabs('__tabbed_2_4')}
-                    data-focused="false"
-                />
-                <label className="tabbed-set-label" htmlFor="__tabbed_2_4">
-                    node
-                </label>
+            <div className="code-block-set">
+                <div className="tabbed-set">
+                    <input
+                        className="stv-radio-tab"
+                        id="__tabbed_2_1"
+                        ref={saveTabRef('__tabbed_2_1')}
+                        onClick={() => toggleTabs('__tabbed_2_1')}
+                        data-focused="true"
+                        type="radio"
+                        defaultChecked
+                    />
+                    <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
+                        JSON
+                    </label>
+                    <input
+                        className="stv-radio-tab"
+                        id="__tabbed_2_2"
+                        ref={saveTabRef('__tabbed_2_2')}
+                        onClick={() => toggleTabs('__tabbed_2_2')}
+                        data-focused="false"
+                        type="radio"
+                    />
+                    <label className="tabbed-set-label" htmlFor="__tabbed_2_2">
+                        curl
+                    </label>
+                    <input
+                        className="stv-radio-tab"
+                        id="__tabbed_2_3"
+                        ref={saveTabRef('__tabbed_2_3')}
+                        onClick={() => toggleTabs('__tabbed_2_3')}
+                        data-focused="false"
+                        type="radio"
+                    />
+                    <label className="tabbed-set-label" htmlFor="__tabbed_2_3">
+                        python
+                    </label>
+                    <input
+                        className="stv-radio-tab"
+                        id="__tabbed_2_4"
+                        type="radio"
+                        ref={saveTabRef('__tabbed_2_4')}
+                        onClick={() => toggleTabs('__tabbed_2_4')}
+                        data-focused="false"
+                    />
+                    <label className="tabbed-set-label" htmlFor="__tabbed_2_4">
+                        node
+                    </label>
+                </div>
+                <pre ref={prismPre} className="prism-pre" data-visible="false">
+                    <code
+                        ref={prismCode}
+                        data-visible="false"
+                        className={`${lang} prism-code`}
+                        key={returnCode}
+                    >
+                        <div>{returnCode}</div>
+                    </code>
+                </pre>
             </div>
-            <pre ref={prismPre} className="prism-pre" data-visible="false">
-                <code
-                    ref={prismCode}
-                    data-visible="false"
-                    className={`${lang} prism-code`}
-                    key={returnCode}
-                >
-                    <div>{returnCode}</div>
-                </code>
-            </pre>
         </>
     )
 }

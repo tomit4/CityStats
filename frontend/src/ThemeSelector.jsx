@@ -8,6 +8,7 @@ const ThemeSelector = ({ children }) => {
     const [prefersDark, setPrefersDark] = useState(
         window.matchMedia('(prefers-color-scheme: dark)').matches,
     )
+    document.documentElement.setAttribute('data-citystats-theme', prefersDark)
 
     /* NOTE: Hacky workaround to get prismjs stylesheets to
      * toggle on and off depending on dark/light mode (see ./README.md) */
@@ -20,6 +21,10 @@ const ThemeSelector = ({ children }) => {
             document.styleSheets[2].disabled = !document.styleSheets[2].disabled
         }
         setPrefersDark(prevDarkTheme => !prevDarkTheme)
+        document.documentElement.setAttribute(
+            'data-citystats-theme',
+            prefersDark,
+        )
     }
 
     return (
