@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 const LightTheme = React.lazy(() => import('./themes/Lighttheme.jsx'))
 const DarkTheme = React.lazy(() => import('./themes/Darktheme.jsx'))
 
+// TODO: Have Dark Mode Saved in localStorage
 const ThemeSelector = ({ children }) => {
     const [prefersDark, setPrefersDark] = useState(
         window.matchMedia('(prefers-color-scheme: dark)').matches,
