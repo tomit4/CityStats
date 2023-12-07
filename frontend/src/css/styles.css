@@ -76,7 +76,11 @@ h2 {
 p {
     font-family: 'Vegur', 'Arial', system-ui;
     color: var(--offblack);
-    font-size: 90%;
+    line-height: 1.85;
+    width: 80vw;
+    max-width: 68ch;
+    font-size: 95%;
+    font-weight: 900;
 }
 
 img,
