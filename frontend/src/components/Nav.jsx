@@ -68,11 +68,11 @@ const Nav = props => {
         <>
             <header className="primary-header flex">
                 <div className="nav-bg">
-                    <Link className="nav-home-link" to="/" />
+                    <Link className="icons nav-home-link" to="/" />
                 </div>
                 <button
                     type="button"
-                    className="mobile-nav-toggle"
+                    className="icons mobile-nav-toggle"
                     aria-controls="primary-navigation"
                     aria-expanded="false"
                     ref={navToggle}
@@ -82,7 +82,7 @@ const Nav = props => {
                 </button>
                 <button
                     type="button"
-                    className="dark-light-toggle"
+                    className="icons dark-light-toggle"
                     aria-label="Toggle Dark/Light Mode"
                     data-toggled="false"
                     ref={themeToggle}

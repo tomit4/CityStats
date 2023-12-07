@@ -50,11 +50,11 @@
     padding: 0;
     margin: 0;
     background: white;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--offblack);
 }
 
 .primary-navigation > a:hover {
-    font-weight: bold;
+    font-weight: 700;
     text-decoration-thickness: 0.125rem;
 }
 
@@ -67,20 +67,24 @@
 .nav-menu-title,
 .nav-link {
     font-family: 'Zikketica', system-ui;
-    color: black;
+    color: var(--offblack);
 }
 
 .toggle-link[data-toggled='true'] {
-    color: black;
+    color: var(--offblack);
 }
 
 .toggle-link[data-toggled='false'] {
-    color: grey;
+    color: var(--custom-grey);
 }
 
 .nav-menu-title,
 .page-nav {
     margin-top: 1em;
+}
+
+.icons[data-citystats-theme='dark'] {
+    filter: invert(100%) sepia(0%) brightness(110%) contrast(100%);
 }
 
 #states-api-toggle {
@@ -115,7 +119,7 @@
         position: fixed;
         height: 3.25em;
         top: 0;
-        background-color: black;
+        background-color: var(--offblack);
         border-radius: 0 0 5px 5px;
         padding-inline: 0 96vw;
         /* z-index: 9999; */
@@ -201,9 +205,9 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: black;
+        background-color: var(--offblack);
         transition: 0.4s;
-        border: 2px solid black;
+        border: 2px solid var(--offblack);
         border-radius: 10px;
     }
 
@@ -220,11 +224,11 @@
     }
 
     input:checked + .slider {
-        background-color: black;
+        background-color: --var(--offblack);
     }
 
     input:focus + .slider {
-        box-shadow: 0 0 1px black;
+        box-shadow: 0 0 1px var(--offblack);
     }
 
     input:checked + .slider:before {

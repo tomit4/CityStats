@@ -10,23 +10,33 @@
 /* chromium styling of scrollbar */
 *::-webkit-scrollbar {
     width: 3px;
+    height: 3px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #000;
+    background-color: var(--offblack);
     border-radius: 20px;
-    border: 3px solid #000;
+    border: 3px solid var(--offblack);
 }
 
 :root {
     /* TODO: uncomment in production */
     /* color-scheme: light dark; */
-    /* mozilla firefox styling of scrollbar */
-    scrollbar-color: #000 #fff;
+    --offblack: #343231;
+    --offwhite: #faf0e6;
+    --okaidia-black: #272822;
+    --custom-grey: #737373;
+}
+
+.root[data-theme='dark'] {
+    --offblack: #dfe1e3;
+    --offwhite: #161615;
 }
 
 html {
     scroll-behavior: smooth;
+    /* mozilla firefox styling of scrollbar */
+    scrollbar-color: var(--offblack) var(--offwhite);
 }
 
 .content {
@@ -47,7 +57,8 @@ h1 {
     text-align: center;
     font-family: 'Zikketica', 'Helvetica', system-ui;
     font-weight: 900;
-    border-top: 2px solid black;
+    color: var(--offblack);
+    border-top: 2px solid var(--offblack);
 }
 h2 {
     display: flex;
@@ -57,12 +68,14 @@ h2 {
     font-family: 'Vegur', 'Helvetica', system-ui;
     font-size: 90%;
     font-weight: 900;
-    border-bottom: 2px solid black;
+    color: var(--offblack);
+    border-bottom: 2px solid var(--offblack);
     margin-top: -1.5em;
 }
 
 p {
     font-family: 'Vegur', 'Arial', system-ui;
+    color: var(--offblack);
     font-size: 90%;
 }
 
@@ -89,7 +102,7 @@ input.stv-radio-tab {
     top: -99999em;
 }
 input.stv-radio-tab[data-focused='true'] + label {
-    background-color: #272822;
+    background-color: var(--okaidia-black);
     font-weight: 700;
     color: white;
 }
@@ -106,7 +119,7 @@ input.stv-radio-tab[data-no-border='true'] + label {
 label.tabbed-set-label {
     user-select: none;
     cursor: pointer;
-    outline: 1px solid #272822;
+    outline: 1px solid var(--okaidia-black);
     border-bottom: 0;
     border-radius: 1px 1px 1px 0px;
     margin: 0 3px;
@@ -119,7 +132,7 @@ pre {
     height: 20em;
     overflow-y: scroll;
     width: 100%;
-    border: 1px solid #272822;
+    border: 1px solid var(--okaidia-black);
     border-radius: 0px 5px 5px 5px !important;
 }
 code.prism-code {
