@@ -92,6 +92,8 @@ h2 {
     font-family: 'Arial', system-ui;
     font-size: 95%;
     font-weight: 400;
+    width: 80vw;
+    max-width: 47em;
     background-color: var(--offwhite);
     color: var(--offblack);
     border: 1.75px solid var(--offblack);
@@ -202,7 +204,18 @@ input {
     .content[data-visible='true'] {
         color: transparent;
         filter: blur(0.125em);
+        max-width: 96%;
+        position: fixed;
     }
+
+    pre.prism-pre[data-visible='true'] {
+        pointer-events: none;
+    }
+
+    code.prism-code[data-visible='true'] {
+        filter: blur(0.125em);
+    }
+
     h1[data-visible='true'] {
         border-top: 2px solid rgba(0, 0, 0, 0.4);
         filter: blur(0.125em);
