@@ -5,12 +5,6 @@ import '../css/Nav.css'
 import ApiOptions from './ApiOptions'
 import { useThemeUpdate } from '../contexts/useThemeUpdate'
 
-/* TODO: Address the UI BUG occurring when
- * clicking around, doesn't always work...,
- * Consider creating a transparent window that disables
- * clicking on the actual body, and instead, when the transparent
- * div is clicked, you can return to the regular document.*/
-
 const Nav = props => {
     const toggleTheme = useThemeUpdate()
     const navigate = useNavigate()
@@ -21,6 +15,9 @@ const Nav = props => {
     const toggleLinks = useRef({})
     const themeToggle = useRef(null)
     const [showStatesLinks, toggleStateLinks] = useState(true)
+    const prefersDark = useRef(
+        document.documentElement.getAttribute('data-citystats-theme'),
+    )
 
     useEffect(() => {
         if (props.sidebar) {
@@ -29,6 +26,7 @@ const Nav = props => {
             props.showSidebar()
         }
     }, [props])
+
     const toggleHamburger = () => {
         const visibility =
             primaryNav.current.getAttribute('data-visible') === 'false'
@@ -40,9 +38,10 @@ const Nav = props => {
     }
 
     const toggleLightDark = () => {
-        themeToggle.current.setAttribute('data-toggled', !toggleTheme())
-        navToggle.current.setAttribute('data-toggled', !toggleTheme())
-        homeToggle.current.setAttribute('data-toggled', !toggleTheme())
+        const themePref = toggleTheme()
+        themeToggle.current.setAttribute('data-toggled', !themePref)
+        navToggle.current.setAttribute('data-toggled', !themePref)
+        homeToggle.current.setAttribute('data-toggled', !themePref)
     }
 
     const toggleFromAnchor = () => toggleHamburger()
@@ -68,7 +67,7 @@ const Nav = props => {
                 <div className="nav-bg">
                     <Link
                         className="icons nav-home-link"
-                        data-toggled="false"
+                        data-toggled={prefersDark.current}
                         ref={homeToggle}
                         to="/"
                     />
@@ -78,7 +77,7 @@ const Nav = props => {
                     className="icons mobile-nav-toggle"
                     aria-controls="primary-navigation"
                     aria-expanded="false"
-                    data-toggled="false"
+                    data-toggled={prefersDark.current}
                     ref={navToggle}
                     onClick={toggleHamburger}
                 >
@@ -88,7 +87,7 @@ const Nav = props => {
                     type="button"
                     className="icons dark-light-toggle"
                     aria-label="Toggle Dark/Light Mode"
-                    data-toggled="false"
+                    data-toggled={prefersDark.current}
                     ref={themeToggle}
                     onClick={toggleLightDark}
                 >
