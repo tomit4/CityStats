@@ -35,7 +35,7 @@
 
 **TODO_HOME**
 
--   [ ] Your Home Page should have a simple introduction to what the application
+-   [ ] Your Home Page(see pages/General.jsx) should have a simple introduction to what the application
         is, provide simple links to the documentation, and a hero page that dynamically
         loads either day time or night time city landscape images that will transition
         out (3 day, 3 night). The Nav disappear and show hamburger own mobile,
