@@ -30,6 +30,8 @@ const Nav = props => {
     const toggleHamburger = () => {
         const visibility =
             primaryNav.current.getAttribute('data-visible') === 'false'
+                ? false
+                : true
         primaryNav.current.setAttribute('data-visible', !visibility)
         navToggle.current.setAttribute('aria-expanded', !visibility)
         props.blurIt()
