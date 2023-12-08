@@ -12,11 +12,17 @@
 -   [x] Create a drop down to determine states or cities or images.
 -   [x] Call out to the backend api citystats.xyz. This will then
         render in a JSON code block (styled using prisma?).
--   [ ] Additionally the frontend will generate a series of code snippets (bash,
+-   [x] Additionally the frontend will generate a series of code snippets (bash,
         node/express, and python) that will show basic usage in a backend api.
--   [ ] For nodejs, you can find issue a get request using the http lib. See [this
-        documentation](https://www.golinuxcloud.com/http-get-request-in-node-js/)
-        on how to issue an http get request from within basic nodejs.
+-   [x] Implement a Light/Dark Mode Toggle that defaults to User Default Preferences,
+        but uses localStorage to hold onto user's changes in theme.
+-   [ ] Add Footer on Mobile Version of site (include mastodon link, github
+        link, personal website link, maybe link to license and terms of service,
+        etc?, see FOOTER MENU below).
+-   [ ] Create Desktop Version of Site. Maybe finally choose a Hero Image(s)
+        (series of images that fade in and out and change which images get shown
+        based off of user's dark/light pref? Basically, show night time shots of
+        cities vs day time shots of cities).
 
 **NOTES**:
 
