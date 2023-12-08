@@ -4,13 +4,15 @@ import PropTypes from 'prop-types'
 const LightTheme = React.lazy(() => import('./themes/Lighttheme.jsx'))
 const DarkTheme = React.lazy(() => import('./themes/Darktheme.jsx'))
 
-// TODO: Have Dark Mode Saved in localStorage
-// (change immediately on finding prefersDark setting)
 const ThemeSelector = ({ children }) => {
     const [prefersDark, setPrefersDark] = useState(
         window.matchMedia('(prefers-color-scheme: dark)').matches,
     )
-    document.documentElement.setAttribute('data-citystats-theme', prefersDark)
+
+    let localPref = localStorage.getItem('data-citystats-theme')
+    localPref = localPref === 'true'
+    localStorage.setItem('data-citystats-theme', localPref)
+    document.documentElement.setAttribute('data-citystats-theme', localPref)
 
     const toggleTheme = () => {
         setPrefersDark(prevDarkTheme => !prevDarkTheme)
@@ -24,17 +26,18 @@ const ThemeSelector = ({ children }) => {
         }
         document.documentElement.setAttribute(
             'data-citystats-theme',
-            !prefersDark,
+            !localPref,
         )
-        return prefersDark
+        localStorage.setItem('data-citystats-theme', !localPref)
+        return localPref
     }
 
     return (
         <>
             <ThemeUpdateContext.Provider value={toggleTheme}>
                 <React.Suspense fallback={<div />}>
-                    {!prefersDark && <LightTheme />}
-                    {prefersDark && <DarkTheme />}
+                    {!localPref && <LightTheme />}
+                    {localPref && <DarkTheme />}
                 </React.Suspense>
                 {children}
             </ThemeUpdateContext.Provider>
