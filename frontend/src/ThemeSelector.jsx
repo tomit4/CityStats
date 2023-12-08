@@ -10,8 +10,12 @@ const ThemeSelector = ({ children }) => {
     )
 
     let localPref = localStorage.getItem('data-citystats-theme')
+    if (localPref === null) {
+        localStorage.setItem('data-citystats-theme', prefersDark)
+    } else {
+        localStorage.setItem('data-citystats-theme', localPref)
+    }
     localPref = localPref === 'true'
-    localStorage.setItem('data-citystats-theme', localPref)
     document.documentElement.setAttribute('data-citystats-theme', localPref)
 
     const toggleTheme = () => {
