@@ -24,6 +24,25 @@
         based off of user's dark/light pref? Basically, show night time shots of
         cities vs day time shots of cities).
 
+**TODO_DOCS**
+
+-   [ ] Look carefully at the styling of the VueJS, Vue-Router, and also
+        FastifyJS's websites for inspiration on how to structure the documentation page
+        (i.e. Vue's & Vue-Router's use of showing you which part of the page you are on
+        on the right, etc.). Otherwise, perhaps put the "citystats.info" text in
+        its own mini-hero section (not as large as traditional site hero splash
+        images)
+
+**TODO_HOME**
+
+-   [ ] Your Home Page should have a simple introduction to what the application
+        is, provide simple links to the documentation, and a hero page that dynamically
+        loads either day time or night time city landscape images that will transition
+        out (3 day, 3 night). The Nav disappear and show hamburger own mobile,
+        and otherwise float left for text regarding Home, About, Contact.
+-   [ ] Consider adding a "fade" affect visually to the images that mutes the
+        contrast of the images against a more or less black/white background.
+
 **NOTES**:
 
 -   PrismJS currently has two prism.css files (okaidia and solarized light).
