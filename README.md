@@ -103,4 +103,5 @@ repository and I will do my best to address it in a timely manner.
 -   [ ] Serve Images outside of node via NGINX, S3, or a CDN, see [this helpful link on node best
         practices](https://github.com/goldbergyoni/nodebestpractices#1-project-architecture-practices)
 -   [ ] Consider reimplementing this as a trpc API instead of a Rest API, which
-        will work better with typescript/zod validation, etc.
+        will work better with typescript/zod validation, etc. trpc has [an
+        adaptor](https://trpc.io/docs/server/adapters/fastify) that integrates well with fastify.
