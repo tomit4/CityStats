@@ -105,3 +105,5 @@ repository and I will do my best to address it in a timely manner.
 -   [ ] Consider reimplementing this as a trpc API instead of a Rest API, which
         will work better with typescript/zod validation, etc. trpc has [an
         adaptor](https://trpc.io/docs/server/adapters/fastify) that integrates well with fastify.
+-   [ ] Consider a faster http request library in your python scripts. See
+        [ArjanCodes video on the subject](https://www.youtube.com/watch?v=OPyoXx0yA0I&pp=ygUKYXJqYW5jb2Rlcw%3D%3D)
