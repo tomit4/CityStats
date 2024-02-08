@@ -9,6 +9,11 @@ import { codeSnippets } from '../utils/code_snippets'
 import { debounce } from 'lodash'
 
 const Code = props => {
+    const { componentId } = props
+    const tabId1 = `${componentId}__tabbed_2_1`
+    const tabId2 = `${componentId}__tabbed_2_2`
+    const tabId3 = `${componentId}__tabbed_2_3`
+    const tabId4 = `${componentId}__tabbed_2_4`
     const [lang, setLang] = useState('language-json')
     const [url, setUrl] = useState(props.url.string)
     const { hostname, pathname } = new URL(url)
@@ -17,7 +22,7 @@ const Code = props => {
     const prismCode = useRef(null)
     const inputRef = useRef(null)
     const tabs = useRef({})
-    const [chosenTab, setChosenTab] = useState('__tabbed_2_1')
+    const [chosenTab, setChosenTab] = useState(tabId1)
     const [returnCode, setReturnCode] = useState('')
 
     useEffect(() => {
@@ -137,47 +142,47 @@ const Code = props => {
                 <div className="tabbed-set">
                     <input
                         className="stv-radio-tab"
-                        id="__tabbed_2_1"
-                        ref={saveTabRef('__tabbed_2_1')}
-                        onClick={() => toggleTabs('__tabbed_2_1')}
+                        id={tabId1}
+                        ref={saveTabRef(tabId1)}
+                        onClick={() => toggleTabs(tabId1)}
                         data-focused="true"
                         type="radio"
                         defaultChecked
                     />
-                    <label className="tabbed-set-label" htmlFor="__tabbed_2_1">
+                    <label className="tabbed-set-label" htmlFor={tabId1}>
                         JSON
                     </label>
                     <input
                         className="stv-radio-tab"
-                        id="__tabbed_2_2"
-                        ref={saveTabRef('__tabbed_2_2')}
-                        onClick={() => toggleTabs('__tabbed_2_2')}
+                        id={tabId2}
+                        ref={saveTabRef(tabId2)}
+                        onClick={() => toggleTabs(tabId2)}
                         data-focused="false"
                         type="radio"
                     />
-                    <label className="tabbed-set-label" htmlFor="__tabbed_2_2">
+                    <label className="tabbed-set-label" htmlFor={tabId2}>
                         curl
                     </label>
                     <input
                         className="stv-radio-tab"
-                        id="__tabbed_2_3"
-                        ref={saveTabRef('__tabbed_2_3')}
-                        onClick={() => toggleTabs('__tabbed_2_3')}
+                        id={tabId3}
+                        ref={saveTabRef(tabId3)}
+                        onClick={() => toggleTabs(tabId3)}
                         data-focused="false"
                         type="radio"
                     />
-                    <label className="tabbed-set-label" htmlFor="__tabbed_2_3">
+                    <label className="tabbed-set-label" htmlFor={tabId3}>
                         python
                     </label>
                     <input
                         className="stv-radio-tab"
-                        id="__tabbed_2_4"
+                        id={tabId4}
                         type="radio"
-                        ref={saveTabRef('__tabbed_2_4')}
-                        onClick={() => toggleTabs('__tabbed_2_4')}
+                        ref={saveTabRef(tabId4)}
+                        onClick={() => toggleTabs(tabId4)}
                         data-focused="false"
                     />
-                    <label className="tabbed-set-label" htmlFor="__tabbed_2_4">
+                    <label className="tabbed-set-label" htmlFor={tabId4}>
                         node
                     </label>
                 </div>
@@ -201,6 +206,7 @@ Code.propTypes = {
     blur: PropTypes.bool,
     url: PropTypes.object,
     fields: PropTypes.array,
+    componentId: PropTypes.number,
 }
 
 export default Code

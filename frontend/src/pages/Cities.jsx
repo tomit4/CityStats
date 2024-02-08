@@ -44,6 +44,7 @@ const Cities = props => {
                 blur={props.blur}
                 url={urlRegexes.singleCityUrl}
                 fields={[]}
+                componentId={1}
             />
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
@@ -60,6 +61,7 @@ const Cities = props => {
                 blur={props.blur}
                 url={urlRegexes.singleCityWithSingleFieldUrl}
                 fields={cityFields}
+                componentId={2}
             />
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
