@@ -106,7 +106,7 @@ p {
     color: var(--offblack);
     line-height: 1.85;
     width: 80vw;
-    max-width: 68ch;
+    max-width: 70ch;
     font-size: 95%;
     font-weight: 900;
 }
@@ -123,7 +123,8 @@ video {
 .code-block-set {
     margin-top: 1.5em;
     margin-bottom: 2em;
-    width: 45rem;
+    width: 90vw;
+    max-width: 45rem;
 }
 .tabbed-set {
     height: 3em;
@@ -148,7 +149,6 @@ input.stv-radio-tab[data-focused='true'] + label {
 input.stv-radio-tab[data-visible='true'] + label {
     background-color: var(--offblack);
     color: var(--offwhite);
-    filter: blur(0.125em);
 }
 
 input.stv-radio-tab[data-no-border='true'] + label {
@@ -185,10 +185,6 @@ pre[data-visible='true'] {
     overflow-x: hidden;
     overflow-y: hidden;
 }
-code.prism-code[data-visible='true'] {
-    filter: blur(0.125em);
-}
-
 /* inputs */
 /* TODO: Further styling of input fields */
 input {
@@ -234,7 +230,6 @@ input {
         align-items: center;
         text-align: center;
     }
-
     .form-label {
         margin-top: 1em;
         display: block;
@@ -242,10 +237,34 @@ input {
         align-items: center;
         text-align: center;
     }
+    .url-input {
+        width: 83vw;
+    }
+    .code-block-set {
+        margin-left: 1rem;
+        width: 83vw;
+    }
+    p {
+        margin-left: 1rem;
+    }
     /* Mobile Only */
     @media (max-width: 35em) {
         main {
             margin-right: 2.5rem;
+        }
+        .content {
+            margin: 0 auto;
+            margin-right: -0.75rem;
+        }
+        .url-input {
+            width: 85vw;
+        }
+        .code-block-set {
+            margin-left: auto;
+            width: 84vw;
+        }
+        p {
+            margin-left: auto;
         }
     }
 }

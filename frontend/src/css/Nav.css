@@ -97,9 +97,8 @@
     margin-top: -2.6em;
     margin-left: 2.2em;
 }
-
 #cities-api-toggle {
-    margin-top: -2.2em;
+    margin-top: -4.1em;
     margin-left: 10.2em;
 }
 
@@ -233,6 +232,9 @@ input:checked + .slider:before {
         border-right: none;
         margin-top: 0;
     }
+    #cities-api-toggle {
+        margin-top: -3.6em;
+    }
     .nav-bg {
         width: 98vw;
         display: block;
@@ -352,8 +354,12 @@ input:checked + .slider:before {
             width: 80%;
         }
         .nav-bg {
-            width: 98vw;
+            width: 96vw;
             left: 0.5rem;
+        }
+        #cities-api-toggle {
+            margin-top: -2em;
+            margin-left: 10.2em;
         }
         button.dark-light-toggle[data-toggled='false'] {
             left: 87vw;
