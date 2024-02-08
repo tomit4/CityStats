@@ -74,11 +74,16 @@ h2 {
     border-bottom: 2px solid var(--offblack);
     margin-top: -1.5em;
 }
-
 .page-title {
     font-family: 'Vegur', 'Arial', system-ui;
     font-weight: 900;
     color: var(--offblack);
+    margin-bottom: -3rem;
+}
+
+.section-divider {
+    height: 2.75em;
+    margin-top: -3rem;
 }
 
 .form-label {
@@ -249,22 +254,29 @@ input {
     }
     /* Mobile Only */
     @media (max-width: 35em) {
+        *:not(code) {
+            overflow-x: hidden;
+        }
+        .form-label {
+            margin-top: -0.25rem;
+        }
         main {
             margin-right: 2.5rem;
+            overflow-x: hidden;
         }
         .content {
-            margin: 0 auto;
             margin-right: -0.75rem;
         }
         .url-input {
-            width: 85vw;
+            width: 82vw;
         }
         .code-block-set {
             margin-left: auto;
-            width: 84vw;
+            width: 82vw;
         }
         p {
             margin-left: auto;
+            width: 82vw;
         }
     }
 }

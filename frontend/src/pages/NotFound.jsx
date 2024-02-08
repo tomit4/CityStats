@@ -1,3 +1,8 @@
 export default function NotFound() {
-    return <div>404 Resource Not Found</div>
+    return (
+        <>
+            <h3 className="page-title">404 Resource Not Found</h3>
+            <div className="section-divider" />
+        </>
+    )
 }

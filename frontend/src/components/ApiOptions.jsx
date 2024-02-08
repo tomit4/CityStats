@@ -29,14 +29,14 @@ const ApiOptions = props => {
                 <HashLink
                     onClick={props.toggleFromAnchor}
                     className="page-nav nav-link"
-                    to="/cities#test"
+                    to="/cities#test-one"
                 >
                     Cities Element One
                 </HashLink>
                 <HashLink
                     onClick={props.toggleFromAnchor}
                     className="page-nav nav-link"
-                    to="/cities#test"
+                    to="/cities#test-two"
                 >
                     Cities Element Two
                 </HashLink>

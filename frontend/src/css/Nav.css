@@ -34,9 +34,6 @@
     align-items: center;
     justify-content: space-between;
 }
-.nav-bg {
-    display: none;
-}
 
 .head-icon {
     width: 3rem;
@@ -237,15 +234,7 @@ input:checked + .slider:before {
     }
     .nav-bg {
         width: 98vw;
-        display: block;
-        position: fixed;
-        height: 3.25em;
-        top: 0;
         left: 0.5rem;
-        background-color: var(--offblack);
-        border-radius: 0 0 5px 5px;
-        padding-inline: 0 96vw;
-        z-index: 9999;
     }
     .nav-home-link {
         left: 44.5vw;

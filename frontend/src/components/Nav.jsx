@@ -69,28 +69,28 @@ const Nav = props => {
                         ref={homeToggle}
                         to="/"
                     />
+                    <button
+                        type="button"
+                        className="icons mobile-nav-toggle"
+                        aria-controls="primary-navigation"
+                        aria-expanded="false"
+                        data-toggled={prefersDark.current}
+                        ref={navToggle}
+                        onClick={toggleHamburger}
+                    >
+                        <span className="sr-only"> Menu </span>
+                    </button>
+                    <button
+                        type="button"
+                        className="icons dark-light-toggle"
+                        aria-label="Toggle Dark/Light Mode"
+                        data-toggled={prefersDark.current}
+                        ref={themeToggle}
+                        onClick={toggleLightDark}
+                    >
+                        <span className="sr-only"> Light/Dark </span>
+                    </button>
                 </div>
-                <button
-                    type="button"
-                    className="icons mobile-nav-toggle"
-                    aria-controls="primary-navigation"
-                    aria-expanded="false"
-                    data-toggled={prefersDark.current}
-                    ref={navToggle}
-                    onClick={toggleHamburger}
-                >
-                    <span className="sr-only"> Menu </span>
-                </button>
-                <button
-                    type="button"
-                    className="icons dark-light-toggle"
-                    aria-label="Toggle Dark/Light Mode"
-                    data-toggled={prefersDark.current}
-                    ref={themeToggle}
-                    onClick={toggleLightDark}
-                >
-                    <span className="sr-only"> Light/Dark </span>
-                </button>
                 <nav>
                     <ul
                         id="primary-navigation"

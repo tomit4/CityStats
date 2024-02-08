@@ -38,7 +38,9 @@ const cityFields = [
 const Cities = props => {
     return (
         <>
-            <div className="page-title">City Queries</div>
+            <h3 className="page-title">City Queries</h3>
+            <div className="section-divider" id="test-one" />
+            <h4>Grab Cities By Id</h4>
             <Code
                 entity="City"
                 blur={props.blur}
@@ -56,6 +58,8 @@ const Cities = props => {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum.
             </p>
+            <div className="section-divider" id="test-two" />
+            <h4>Grab Cities By Id And Field</h4>
             <Code
                 entity="City"
                 blur={props.blur}
@@ -93,7 +97,6 @@ const Cities = props => {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum.
             </p>
-            <p id="test">Scroll To Hear Cities</p>
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

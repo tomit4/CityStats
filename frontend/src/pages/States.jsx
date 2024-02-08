@@ -1,7 +1,8 @@
 export default function States() {
     return (
         <>
-            <div className="page-title">States</div>
+            <h3 className="page-title">States Queries</h3>
+            <div className="section-divider" />
             <p>
                 States Info Goes here, Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit, sed do eiusmod tempor incididunt ut labore et

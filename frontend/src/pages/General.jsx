@@ -1,7 +1,8 @@
 export default function General() {
     return (
         <>
-            <div className="page-title">Intro Page</div>
+            <h3 className="page-title">Intro Page</h3>
+            <div className="section-divider" />
             <p>
                 This is where your home page will go, introductions, promoting
                 use of the API, etc. General Intro Info Goes here, Lorem ipsum
