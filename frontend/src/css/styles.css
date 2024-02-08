@@ -50,6 +50,7 @@ html {
 main {
     width: min(70ch, 100% - 70vw);
     margin-inline: auto;
+    margin-top: 3.25em;
 }
 
 h1,
@@ -199,27 +200,26 @@ input {
 *********************/
 @media (max-width: 50em) {
     main {
-        margin-top: 3.25em;
         width: min(70ch, 100% - 4rem);
         margin-inline: auto;
+        margin-right: 1.5rem;
     }
-    @media (max-width: 35em) {
-        main {
-            margin-right: 2.5rem;
-        }
+    .content {
+        margin-right: 1.5rem;
     }
     .content[data-visible='true'] {
         filter: blur(0.125em);
     }
-
     pre.prism-pre[data-visible='true'] {
         pointer-events: none;
     }
-
     code.prism-code[data-visible='true'] {
         filter: blur(0.125em);
     }
-
+    h1,
+    h2 {
+        width: 85vw;
+    }
     h1[data-visible='true'] {
         border-top: 2px solid rgba(0, 0, 0, 0.4);
         filter: blur(0.125em);
@@ -241,6 +241,12 @@ input {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    /* Mobile Only */
+    @media (max-width: 35em) {
+        main {
+            margin-right: 2.5rem;
+        }
     }
 }
 
