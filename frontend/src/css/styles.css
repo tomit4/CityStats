@@ -48,29 +48,28 @@ html {
 }
 
 main {
-    width: min(70ch, 100% - 4rem);
+    width: min(70ch, 100% - 70vw);
     margin-inline: auto;
 }
 
-h1 {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Zikketica', 'Helvetica', system-ui;
-    font-weight: 900;
-    color: var(--offblack);
-    border-top: 2px solid var(--offblack);
-}
+h1,
 h2 {
     display: flex;
     align-content: center;
     justify-content: center;
     text-align: center;
+    color: var(--offblack);
+    width: 45rem;
+}
+h1 {
+    font-family: 'Zikketica', 'Helvetica', system-ui;
+    font-weight: 900;
+    border-top: 2px solid var(--offblack);
+}
+h2 {
     font-family: 'Vegur', 'Helvetica', system-ui;
     font-size: 90%;
     font-weight: 900;
-    color: var(--offblack);
     border-bottom: 2px solid var(--offblack);
     margin-top: -1.5em;
 }
@@ -123,6 +122,7 @@ video {
 .code-block-set {
     margin-top: 1.5em;
     margin-bottom: 2em;
+    width: 45rem;
 }
 .tabbed-set {
     height: 3em;
@@ -197,9 +197,16 @@ input {
 /*********************
  * MEDIA QUERIES
 *********************/
-@media (max-width: 35em) {
+@media (max-width: 50em) {
     main {
         margin-top: 3.25em;
+        width: min(70ch, 100% - 4rem);
+        margin-inline: auto;
+    }
+    @media (max-width: 35em) {
+        main {
+            margin-right: 2.5rem;
+        }
     }
     .content[data-visible='true'] {
         filter: blur(0.125em);

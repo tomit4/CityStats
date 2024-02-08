@@ -46,11 +46,16 @@
     display: none;
 }
 .primary-navigation {
+    width: 15rem;
+    flex-direction: column;
     list-style: none;
     padding: 0;
-    margin: 0;
+    position: absolute;
+    height: 100vh;
+    left: 1rem;
+    /* margin-right: 100rem; */
     background: var(--offwhite);
-    border-bottom: 2px solid var(--offblack);
+    border-right: 2px solid var(--offblack);
 }
 
 .primary-navigation > a:hover {
@@ -101,20 +106,26 @@
 /*********************
  * MEDIA QUERIES
 *********************/
-@media (max-width: 35em) {
+@media (max-width: 50em) {
     .primary-navigation {
         overflow-x: hidden;
         position: fixed;
         z-index: 1000;
         flex-direction: column;
-        top: 3.3em;
+        top: 3em;
         left: 0;
         height: 100%;
-        width: 80%;
+        width: 35%;
         padding: min(5vh, 10rem) 2em;
         overflow-y: scroll;
         transform: translateX(-100%);
         transition: transform 350ms ease-out;
+        border-right: none;
+    }
+    @media (max-width: 35em) {
+        .primary-navigation {
+            width: 80%;
+        }
     }
     .nav-bg {
         display: block;
