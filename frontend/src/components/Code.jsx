@@ -9,11 +9,11 @@ import { codeSnippets } from '../utils/code_snippets'
 import { debounce } from 'lodash'
 
 const Code = props => {
-    const { componentId } = props
-    const tabId1 = `${componentId}__tabbed_2_1`
-    const tabId2 = `${componentId}__tabbed_2_2`
-    const tabId3 = `${componentId}__tabbed_2_3`
-    const tabId4 = `${componentId}__tabbed_2_4`
+    const { entity, componentId } = props
+    const tabId1 = `${componentId}__tabbed_1`
+    const tabId2 = `${componentId}__tabbed_2`
+    const tabId3 = `${componentId}__tabbed_3`
+    const tabId4 = `${componentId}__tabbed_4`
     const [lang, setLang] = useState('language-json')
     const [url, setUrl] = useState(props.url.string)
     const { hostname, pathname } = new URL(url)
@@ -52,8 +52,7 @@ const Code = props => {
         const getEntity = async () => {
             try {
                 const response = await fetch(url)
-                if (!response.ok)
-                    throw new Error(`${props.entity} data not found!`)
+                if (!response.ok) throw new Error(`${entity} data not found!`)
                 const data = await response.json()
                 const dataToReturn = data.length > 1 ? data : data[0]
                 setReturnCode(JSON.stringify(dataToReturn, null, '\t'))
@@ -63,7 +62,16 @@ const Code = props => {
             }
         }
         getEntity()
-    }, [url, hostname, pathname, lang, bashCode, pythonCode, javascriptCode])
+    }, [
+        entity,
+        url,
+        hostname,
+        pathname,
+        lang,
+        bashCode,
+        pythonCode,
+        javascriptCode,
+    ])
 
     const _isValidUrl = (
         urlPattern,
