@@ -54,12 +54,18 @@ main {
 }
 
 h1,
+h2,
+h3,
+h4 {
+    color: var(--offblack);
+}
+
+h1,
 h2 {
     display: flex;
     align-content: center;
     justify-content: center;
     text-align: center;
-    color: var(--offblack);
     width: 45rem;
 }
 h1 {
