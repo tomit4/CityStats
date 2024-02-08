@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types'
 import Code from '../components/Code'
 
+/* TODO: A nice feature to bring in would be to add images
+ * (consider it, but rendering might be difficult due to
+ * variable image sizes, not found images, etc.) */
+
 // TODO: Compartmentalize into a separate utils file or something like that
 const urlRegexes = {
     singleCityUrl: {
