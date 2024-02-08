@@ -47,7 +47,8 @@ const Code = props => {
         const getEntity = async () => {
             try {
                 const response = await fetch(url)
-                if (!response.ok) throw new Error('City data not found!')
+                if (!response.ok)
+                    throw new Error(`${props.entity} data not found!`)
                 const data = await response.json()
                 const dataToReturn = data.length > 1 ? data : data[0]
                 setReturnCode(JSON.stringify(dataToReturn, null, '\t'))
@@ -196,6 +197,7 @@ const Code = props => {
 }
 
 Code.propTypes = {
+    entity: PropTypes.string,
     blur: PropTypes.bool,
     url: PropTypes.object,
     fields: PropTypes.array,

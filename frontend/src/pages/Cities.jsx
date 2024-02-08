@@ -40,6 +40,7 @@ const Cities = props => {
         <>
             <div className="page-title">City Queries</div>
             <Code
+                entity="City"
                 blur={props.blur}
                 url={urlRegexes.singleCityUrl}
                 fields={[]}
@@ -55,6 +56,7 @@ const Cities = props => {
                 qui officia deserunt mollit anim id est laborum.
             </p>
             <Code
+                entity="City"
                 blur={props.blur}
                 url={urlRegexes.singleCityWithSingleFieldUrl}
                 fields={cityFields}
