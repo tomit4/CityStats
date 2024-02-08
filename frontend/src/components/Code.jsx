@@ -90,7 +90,14 @@ const Code = props => {
     const handleChange = debounce(() => {
         const newUrl = inputRef.current.value
         const { regex, minLength } = props.url
-        if (_isValidUrl(regex, newUrl, minLength)) setUrl(newUrl)
+        /* TODO: set a custom error message to render in the
+         * JSON tab that instructs on which fields are acceptible
+         * (i.e. in fields array)
+         * AND: prevents the useEffect hook above from running and
+         * querying our server/db*/
+        if (!_isValidUrl(regex, newUrl, minLength))
+            return console.error('Url is Not Valid')
+        setUrl(newUrl)
     }, 500)
 
     const handleBackSpace = e => {
