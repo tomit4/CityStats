@@ -6,10 +6,14 @@ const urlRegexes = {
     singleCityUrl: {
         string: 'https://citystats.xyz/cities/1',
         regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)$/,
+        canDelUpTo: 29,
+        minLength: 24,
     },
     singleCityWithSingleFieldUrl: {
         string: 'https://citystats.xyz/cities/1/city_name',
         regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+$/,
+        canDelUpTo: 29,
+        minLength: 34,
     },
 }
 const cityFields = [

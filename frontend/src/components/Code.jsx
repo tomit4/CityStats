@@ -59,8 +59,6 @@ const Code = props => {
         getEntity()
     }, [url, hostname, pathname, lang, bashCode, pythonCode, javascriptCode])
 
-    // TODO: possibly add regex as third parameter
-    // that is passed down from parent via props
     const _isValidUrl = (
         urlPattern,
         inputUrl,
@@ -77,14 +75,14 @@ const Code = props => {
 
     const handleChange = debounce(() => {
         const newUrl = inputRef.current.value
-        if (_isValidUrl(props.url.regex, newUrl, 24)) setUrl(newUrl)
+        const { regex, minLength } = props.url
+        if (_isValidUrl(regex, newUrl, minLength)) setUrl(newUrl)
     }, 500)
 
     const handleBackSpace = e => {
         const selectionStart = e.target.selectionStart
-        const lastSlashIndex = e.target.value.lastIndexOf('/')
-        if (e.keyCode === 8 && selectionStart <= lastSlashIndex + 1)
-            e.preventDefault()
+        const { canDelUpTo } = props.url
+        if (e.keyCode === 8 && selectionStart <= canDelUpTo) e.preventDefault()
     }
 
     const saveTabRef = id => elementRef => {
