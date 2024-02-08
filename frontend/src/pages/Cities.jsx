@@ -1,11 +1,45 @@
 import PropTypes from 'prop-types'
 import Code from '../components/Code'
 
+// TODO: Compartmentalize into a separate utils file or something like that
+const urlRegexes = {
+    singleCityUrl: {
+        string: 'https://citystats.xyz/cities/1',
+        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)$/,
+    },
+    singleCityWithSingleFieldUrl: {
+        string: 'https://citystats.xyz/cities/1/city_name',
+        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+$/,
+    },
+}
+const cityFields = [
+    'city_name',
+    'state_name',
+    'coordinates',
+    'settled_founded',
+    'incorporated',
+    'elevation',
+    'time_zone',
+    'fips_code',
+    'url',
+    'counties',
+    'government',
+    'area',
+    'population',
+    'zip_codes',
+    'area_codes',
+    'gnis_feature_ids',
+]
+
 const Cities = props => {
     return (
         <>
             <div className="page-title">City Queries</div>
-            <Code blur={props.blur} />
+            <Code
+                blur={props.blur}
+                url={urlRegexes.singleCityUrl}
+                fields={[]}
+            />
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -16,6 +50,11 @@ const Cities = props => {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum.
             </p>
+            <Code
+                blur={props.blur}
+                url={urlRegexes.singleCityWithSingleFieldUrl}
+                fields={cityFields}
+            />
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

@@ -10,7 +10,7 @@ import { debounce } from 'lodash'
 
 const Code = props => {
     const [lang, setLang] = useState('language-json')
-    const [url, setUrl] = useState('https://citystats.xyz/cities/1')
+    const [url, setUrl] = useState(props.url.string)
     const { hostname, pathname } = new URL(url)
     const { bashCode, pythonCode, javascriptCode } = codeSnippets
     const prismPre = useRef(null)
@@ -61,18 +61,23 @@ const Code = props => {
 
     // TODO: possibly add regex as third parameter
     // that is passed down from parent via props
-    const _isValidUrl = (inputUrl, minLength) => {
-        return (
-            inputUrl.length >= minLength &&
-            /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)$/.test(
-                inputUrl,
-            )
-        )
+    const _isValidUrl = (
+        urlPattern,
+        inputUrl,
+        minLength,
+        fieldsToSearch = [],
+    ) => {
+        if (fieldsToSearch.length) {
+            for (const field of fieldsToSearch) {
+                if (!props.fields.includes(field)) return false
+            }
+        }
+        return inputUrl.length >= minLength && urlPattern.test(inputUrl)
     }
 
     const handleChange = debounce(() => {
         const newUrl = inputRef.current.value
-        if (_isValidUrl(newUrl, 24)) setUrl(newUrl)
+        if (_isValidUrl(props.url.regex, newUrl, 24)) setUrl(newUrl)
     }, 500)
 
     const handleBackSpace = e => {
@@ -194,6 +199,8 @@ const Code = props => {
 
 Code.propTypes = {
     blur: PropTypes.bool,
+    url: PropTypes.object,
+    fields: PropTypes.array,
 }
 
 export default Code
