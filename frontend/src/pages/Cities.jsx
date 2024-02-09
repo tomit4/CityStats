@@ -25,6 +25,12 @@ const urlRegexes = {
         canDelUpTo: 42,
         minLength: 46,
     },
+    singleCityWithQueryUrl: {
+        string: 'https://citystats.xyz/cities/202/government/city_council/50',
+        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+\/[\w]+\/\d{1,2}$/,
+        canDelUpTo: 57,
+        minLength: 58,
+    },
 }
 const cityFields = [
     'city_name',
@@ -45,17 +51,7 @@ const cityFields = [
     'gnis_feature_ids',
 ]
 
-const citySubFields = [
-    'type',
-    'mayor',
-    'img_url',
-    'city_council',
-    'city',
-    'land',
-    'water',
-    'density',
-    'metro',
-]
+const citySubFields = ['type', 'mayor', 'city_council']
 
 const Cities = props => {
     return (
@@ -141,6 +137,16 @@ const Cities = props => {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum.
             </p>
+            <div className="section-divider" id="grab-city-with-query" />
+            <h4>Grab City With Query</h4>
+            <Code
+                entity="City"
+                blur={props.blur}
+                url={urlRegexes.singleCityWithQueryUrl}
+                fields={[]}
+                subFields={[]}
+                componentId={4}
+            />
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

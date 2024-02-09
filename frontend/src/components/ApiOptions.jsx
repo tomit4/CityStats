@@ -47,6 +47,13 @@ const ApiOptions = props => {
                 >
                     Grab City With SubField
                 </HashLink>
+                <HashLink
+                    onClick={props.toggleFromAnchor}
+                    className="page-nav nav-link"
+                    to="/cities#grab-city-with-query"
+                >
+                    Grab City With Query
+                </HashLink>
             </>
         )
     }
