@@ -14,10 +14,16 @@ const urlRegexes = {
         minLength: 24,
     },
     singleCityWithSingleFieldUrl: {
-        string: 'https://citystats.xyz/cities/1/city_name',
+        string: 'https://citystats.xyz/cities/1/government',
         regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+$/,
         canDelUpTo: 29,
         minLength: 34,
+    },
+    singleCityWithSubFieldUrl: {
+        string: 'https://citystats.xyz/cities/1/government/city_council',
+        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+\/[\w]+$/,
+        canDelUpTo: 42,
+        minLength: 46,
     },
 }
 const cityFields = [
@@ -39,17 +45,30 @@ const cityFields = [
     'gnis_feature_ids',
 ]
 
+const citySubFields = [
+    'type',
+    'mayor',
+    'img_url',
+    'city_council',
+    'city',
+    'land',
+    'water',
+    'density',
+    'metro',
+]
+
 const Cities = props => {
     return (
         <>
             <h3 className="page-title">City Queries</h3>
-            <div className="section-divider" id="test-one" />
-            <h4>Grab Cities By Id</h4>
+            <div className="section-divider" id="grab-city" />
+            <h4>Grab City By Id/Name</h4>
             <Code
                 entity="City"
                 blur={props.blur}
                 url={urlRegexes.singleCityUrl}
                 fields={[]}
+                subFields={[]}
                 componentId={1}
             />
             <p>
@@ -62,13 +81,14 @@ const Cities = props => {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum.
             </p>
-            <div className="section-divider" id="test-two" />
-            <h4>Grab Cities By Id And Field</h4>
+            <div className="section-divider" id="grab-city-with-field" />
+            <h4>Grab City With Field</h4>
             <Code
                 entity="City"
                 blur={props.blur}
                 url={urlRegexes.singleCityWithSingleFieldUrl}
                 fields={cityFields}
+                subFields={[]}
                 componentId={2}
             />
             <p>
@@ -91,6 +111,16 @@ const Cities = props => {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum.
             </p>
+            <div className="section-divider" id="grab-city-with-subfield" />
+            <h4>Grab City With SubField</h4>
+            <Code
+                entity="City"
+                blur={props.blur}
+                url={urlRegexes.singleCityWithSubFieldUrl}
+                fields={[]}
+                subFields={citySubFields}
+                componentId={3}
+            />
             <p>
                 City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

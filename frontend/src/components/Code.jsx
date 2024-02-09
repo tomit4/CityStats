@@ -9,13 +9,14 @@ import { codeSnippets } from '../utils/code_snippets'
 import { debounce } from 'lodash'
 
 const Code = props => {
-    const { entity, componentId } = props
+    const { entity, fields, subFields, componentId } = props
+    const { string, regex, canDelUpTo, minLength } = props.url
     const tabId1 = `${componentId}__tabbed_1`
     const tabId2 = `${componentId}__tabbed_2`
     const tabId3 = `${componentId}__tabbed_3`
     const tabId4 = `${componentId}__tabbed_4`
     const [lang, setLang] = useState('language-json')
-    const [url, setUrl] = useState(props.url.string)
+    const [url, setUrl] = useState(string)
     const [errMsg, setErrMsg] = useState('')
     const { hostname, pathname } = new URL(url)
     const { bashCode, pythonCode, javascriptCode } = codeSnippets
@@ -52,7 +53,7 @@ const Code = props => {
         }
         const getEntity = async () => {
             try {
-                if (errMsg.length) throw new Error('Url is not valid!')
+                if (errMsg.length) throw new Error(errMsg)
                 const response = await fetch(url)
                 if (!response.ok) throw new Error(`${entity} data not found!`)
                 const data = await response.json()
@@ -84,7 +85,7 @@ const Code = props => {
     ) => {
         if (fieldsToSearch.length) {
             for (const field of fieldsToSearch) {
-                if (!props.fields.includes(field)) return false
+                if (!fields.includes(field)) return false
             }
         }
         return inputUrl.length >= minLength && urlPattern.test(inputUrl)
@@ -93,7 +94,11 @@ const Code = props => {
     const handleChange = debounce(() => {
         setErrMsg('')
         const newUrl = inputRef.current.value
-        const { regex, minLength } = props.url
+        const lastField = newUrl.split('/')[newUrl.split('/').length - 1]
+        if (fields.length && !fields.includes(lastField))
+            setErrMsg('Field is not part of API')
+        if (subFields.length && !subFields.includes(lastField))
+            setErrMsg('Queried subfield is not part of API')
         if (!_isValidUrl(regex, newUrl, minLength))
             setErrMsg('Url is not valid!')
         setUrl(newUrl)
@@ -101,7 +106,6 @@ const Code = props => {
 
     const handleBackSpace = e => {
         const selectionStart = e.target.selectionStart
-        const { canDelUpTo } = props.url
         if (e.keyCode === 8 && selectionStart <= canDelUpTo) e.preventDefault()
     }
 
@@ -220,6 +224,7 @@ Code.propTypes = {
     blur: PropTypes.bool,
     url: PropTypes.object,
     fields: PropTypes.array,
+    subFields: PropTypes.array,
     componentId: PropTypes.number,
 }
 
