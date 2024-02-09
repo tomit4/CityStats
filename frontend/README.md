@@ -23,6 +23,7 @@
         (series of images that fade in and out and change which images get shown
         based off of user's dark/light pref? Basically, show night time shots of
         cities vs day time shots of cities).
+-   [ ] Add favicon
 
 **TODO_DOCS**
 
@@ -90,6 +91,12 @@ search.
 **FOOTER MENU**
 Email, Mastodon, Website
 Powered by Linode, NGINX, Docker, React
+
+**BUGS**
+
+-   [ ] If the user refreshes the page more than 5 times, the rate limiter hits.
+        Figure out caching of initial data into localStorage. If it doesn't exist,
+        register the JSON into localStorage.
 
 **RESOURCES**
 
