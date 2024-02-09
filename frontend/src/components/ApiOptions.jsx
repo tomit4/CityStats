@@ -9,54 +9,67 @@ const ApiOptions = props => {
                 <HashLink
                     onClick={props.toggleFromAnchor}
                     className="page-nav nav-link"
-                    to="/states#test"
+                    to="/states#grab-state"
                 >
-                    States Element One
+                    Grab State By Id/Name
                 </HashLink>
                 <HashLink
                     onClick={props.toggleFromAnchor}
                     className="page-nav nav-link"
-                    to="/states#test"
+                    to="/states#grab-state-with-field"
                 >
-                    States Element Two
-                </HashLink>
-            </>
-        )
-    } else {
-        return (
-            <>
-                <div className="nav-menu-title">Cities API Options</div>
-                <HashLink
-                    onClick={props.toggleFromAnchor}
-                    className="page-nav nav-link"
-                    to="/cities#grab-city"
-                >
-                    Grab City By Id/Name
+                    Grab State With Field
                 </HashLink>
                 <HashLink
                     onClick={props.toggleFromAnchor}
                     className="page-nav nav-link"
-                    to="/cities#grab-city-with-field"
+                    to="/states#grab-state-with-subfield"
                 >
-                    Grab City With Field
+                    Grab State With SubField
                 </HashLink>
                 <HashLink
                     onClick={props.toggleFromAnchor}
                     className="page-nav nav-link"
-                    to="/cities#grab-city-with-subfield"
+                    to="/states#grab-state-with-query"
                 >
-                    Grab City With SubField
-                </HashLink>
-                <HashLink
-                    onClick={props.toggleFromAnchor}
-                    className="page-nav nav-link"
-                    to="/cities#grab-city-with-query"
-                >
-                    Grab City With Query
+                    Grab State With Query
                 </HashLink>
             </>
         )
     }
+    return (
+        <>
+            <div className="nav-menu-title">Cities API Options</div>
+            <HashLink
+                onClick={props.toggleFromAnchor}
+                className="page-nav nav-link"
+                to="/cities#grab-city"
+            >
+                Grab City By Id/Name
+            </HashLink>
+            <HashLink
+                onClick={props.toggleFromAnchor}
+                className="page-nav nav-link"
+                to="/cities#grab-city-with-field"
+            >
+                Grab City With Field
+            </HashLink>
+            <HashLink
+                onClick={props.toggleFromAnchor}
+                className="page-nav nav-link"
+                to="/cities#grab-city-with-subfield"
+            >
+                Grab City With SubField
+            </HashLink>
+            <HashLink
+                onClick={props.toggleFromAnchor}
+                className="page-nav nav-link"
+                to="/cities#grab-city-with-query"
+            >
+                Grab City With Query
+            </HashLink>
+        </>
+    )
 }
 
 ApiOptions.propTypes = {
