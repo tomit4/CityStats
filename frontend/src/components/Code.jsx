@@ -16,6 +16,7 @@ const Code = props => {
     const tabId4 = `${componentId}__tabbed_4`
     const [lang, setLang] = useState('language-json')
     const [url, setUrl] = useState(props.url.string)
+    const [errMsg, setErrMsg] = useState('')
     const { hostname, pathname } = new URL(url)
     const { bashCode, pythonCode, javascriptCode } = codeSnippets
     const prismPre = useRef(null)
@@ -51,6 +52,7 @@ const Code = props => {
         }
         const getEntity = async () => {
             try {
+                if (errMsg.length) throw new Error('Url is not valid!')
                 const response = await fetch(url)
                 if (!response.ok) throw new Error(`${entity} data not found!`)
                 const data = await response.json()
@@ -63,6 +65,7 @@ const Code = props => {
         }
         getEntity()
     }, [
+        errMsg,
         entity,
         url,
         hostname,
@@ -88,15 +91,11 @@ const Code = props => {
     }
 
     const handleChange = debounce(() => {
+        setErrMsg('')
         const newUrl = inputRef.current.value
         const { regex, minLength } = props.url
-        /* TODO: set a custom error message to render in the
-         * JSON tab that instructs on which fields are acceptible
-         * (i.e. in fields array)
-         * AND: prevents the useEffect hook above from running and
-         * querying our server/db*/
         if (!_isValidUrl(regex, newUrl, minLength))
-            return console.error('Url is Not Valid')
+            setErrMsg('Url is not valid!')
         setUrl(newUrl)
     }, 500)
 
