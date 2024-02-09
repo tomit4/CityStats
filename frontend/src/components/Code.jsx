@@ -44,6 +44,11 @@ const Code = props => {
     }, [props])
 
     useEffect(() => {
+        /* TODO: Add check for localStorage string of cached JSON data,
+         * if it exists, simply
+         * setReturnCode(JSON.stringify(JSON.parse(data), null, '\t'))
+         * NOTE: Consider that this can backfire however, as we still want the following
+         * code to run if the user starts to type, this is just to prevent the rate-limit bug*/
         if (lang !== 'language-json') {
             if (lang === 'language-bash') return setReturnCode(bashCode(url))
             if (lang === 'language-python')
