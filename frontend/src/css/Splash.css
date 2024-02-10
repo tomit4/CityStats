@@ -1,0 +1,67 @@
+/* TODO: Use a local font instead, find FOSS alternative */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+    width: 75rem;
+    text-align: center;
+    margin-top: 20vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 2em;
+}
+
+h1.title {
+    border: none;
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-size: 500%;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    min-width: 0;
+}
+
+span.subtitle {
+    font-weight: 900;
+    font-family: 'Raleway';
+    font-size: 200%;
+    display: block;
+}
+
+.link {
+    margin-top: 1em;
+    font-weight: 900;
+    font-family: 'Raleway';
+    font-size: 140%;
+    display: block;
+    color: #fff;
+}
+
+.home-hero {
+    background-image: url('../assets/img/midtown_manhattan_panorama_01.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 10em 0;
+    color: #fff;
+}
+
+/* Mobile Only */
+@media (max-width: 35em) {
+    .container {
+        margin: 0 0.5rem;
+        margin-top: 10vh;
+        width: 96vw;
+    }
+    h1.title {
+        font-size: 400%;
+    }
+    span.subtitle {
+        font-size: 160%;
+    }
+}
