@@ -1,11 +1,11 @@
-export default function General() {
+export default function Splash() {
     return (
         <>
             <h3 className="page-title">Intro Page</h3>
             <div className="section-divider" />
             <p>
                 This is where your home page will go, introductions, promoting
-                use of the API, etc. General Intro Info Goes here, Lorem ipsum
+                use of the API, etc. Splash Intro Info Goes here, Lorem ipsum
                 dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                 minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -15,7 +15,7 @@ export default function General() {
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p>
-                General Intro Info Goes here, Lorem ipsum dolor sit amet,
+                Splash Intro Info Goes here, Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea

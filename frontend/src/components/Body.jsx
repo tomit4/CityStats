@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import General from '../pages/General.jsx'
+import Splash from '../pages/Splash.jsx'
 import States from '../pages/States.jsx'
 import Cities from '../pages/Cities.jsx'
 import NotFound from '../pages/NotFound.jsx'
@@ -46,7 +46,7 @@ const Body = props => {
                                 path="/cities"
                                 element={<Cities blur={props.blur} />}
                             />
-                            <Route path="/" element={<General />} />
+                            <Route path="/" element={<Splash />} />
                             <Route path="*" element={<NotFound />} />
                         </Routes>
                     </article>

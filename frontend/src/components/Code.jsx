@@ -106,7 +106,7 @@ const Code = props => {
     }, 500)
 
     const handleBackSpace = e => {
-        const selectionStart = e.target.selectionStart
+        const { selectionStart } = e.target
         if (e.keyCode === 8 && selectionStart <= canDelUpTo) e.preventDefault()
     }
 
