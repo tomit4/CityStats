@@ -88,17 +88,7 @@ const Code = props => {
         javascriptCode,
     ])
 
-    const _isValidUrl = (
-        urlPattern,
-        inputUrl,
-        minLength,
-        fieldsToSearch = [],
-    ) => {
-        if (fieldsToSearch.length) {
-            for (const field of fieldsToSearch) {
-                if (!fields.includes(field)) return false
-            }
-        }
+    const _isValidUrl = (urlPattern, inputUrl, minLength) => {
         return inputUrl.length >= minLength && urlPattern.test(inputUrl)
     }
 
