@@ -8,7 +8,7 @@ export default function Splash() {
                 <div className="container">
                     <h1 className="title">CityStats API</h1>
                     <span className="subtitle">
-                        A Simple API For Statistics On US Cities and States
+                        Get Statistics On US States And Cities
                     </span>
                     <Link className="link" to="/states">
                         Click Here To Get Started

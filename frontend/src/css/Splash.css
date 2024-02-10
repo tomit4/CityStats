@@ -21,6 +21,7 @@ h1.title {
     font-size: 500%;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 1rem;
     color: #fff;
     min-width: 0;
 }
@@ -29,7 +30,6 @@ span.subtitle {
     font-weight: 900;
     font-family: 'Raleway';
     font-size: 200%;
-    display: block;
 }
 
 .link {
