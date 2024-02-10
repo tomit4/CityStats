@@ -44,11 +44,6 @@ const Code = props => {
     }, [props])
 
     useEffect(() => {
-        /* TODO: Add check for localStorage string of cached JSON data,
-         * if it exists, simply
-         * setReturnCode(JSON.stringify(JSON.parse(data), null, '\t'))
-         * NOTE: Consider that this can backfire however, as we still want the following
-         * code to run if the user starts to type, this is just to prevent the rate-limit bug*/
         if (lang !== 'language-json') {
             if (lang === 'language-bash') return setReturnCode(bashCode(url))
             if (lang === 'language-python')
@@ -59,11 +54,22 @@ const Code = props => {
         const getEntity = async () => {
             try {
                 if (errMsg.length) throw new Error(errMsg)
-                const response = await fetch(url)
-                if (!response.ok) throw new Error(`${entity} data not found!`)
-                const data = await response.json()
-                const dataToReturn = data.length > 1 ? data : data[0]
-                setReturnCode(JSON.stringify(dataToReturn, null, '\t'))
+                const cachedData = localStorage.getItem(`${entity}-${url}`)
+                if (cachedData) {
+                    const parsedData = JSON.parse(cachedData)
+                    setReturnCode(JSON.stringify(parsedData, null, '\t'))
+                } else {
+                    const response = await fetch(url)
+                    if (!response.ok)
+                        throw new Error(`${entity} data not found!`)
+                    const data = await response.json()
+                    const dataToReturn = data.length > 1 ? data : data[0]
+                    localStorage.setItem(
+                        `${entity}-${url}`,
+                        JSON.stringify(dataToReturn),
+                    )
+                    setReturnCode(JSON.stringify(dataToReturn, null, '\t'))
+                }
             } catch (err) {
                 console.error('ERROR fetching data :=>', err)
                 setReturnCode(JSON.stringify({ error: err.message }))
