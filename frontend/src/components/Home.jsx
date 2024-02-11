@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 import Body from './Body'
 import Nav from './Nav'
@@ -11,7 +11,9 @@ export default function Home() {
     const fadeRef = useRef(null)
 
     const showSidebar = () => setSidebar(!sidebar)
-    const blurIt = () => setBlur(!blur)
+    const blurIt = useCallback(() => {
+        setBlur(prevBlur => !prevBlur)
+    }, [])
 
     const delay = ms => {
         return new Promise(resolve => setTimeout(resolve, ms))
@@ -25,8 +27,10 @@ export default function Home() {
             (prevPath === '/states' || prevPath === '/cities') &&
             pathname === '/'
 
-        if (fadeRef.current && (isGoingHomeFromApp || prevPath === '/'))
+        if (fadeRef.current && (isGoingHomeFromApp || prevPath === '/')) {
             fadeRef.current.classList.add('fade-in')
+            if (blur) blurIt()
+        }
 
         const cleanup = async () => {
             await delay(600)
@@ -34,7 +38,7 @@ export default function Home() {
                 fadeRef.current.classList.remove('fade-in')
         }
         cleanup()
-    }, [pathname])
+    }, [pathname, blur, blurIt])
 
     if (pathname === '/') {
         return (
