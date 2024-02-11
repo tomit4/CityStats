@@ -237,7 +237,7 @@ input:checked + .slider:before {
         left: 0.5rem;
     }
     .nav-home-link {
-        left: 44.5vw;
+        left: 46vw;
         position: fixed;
         margin-top: 0.4em;
         height: 3.25em;
@@ -341,6 +341,9 @@ input:checked + .slider:before {
     @media (max-width: 35em) {
         .primary-navigation {
             width: 80%;
+        }
+        .nav-home-link {
+            left: 44.75vw;
         }
         .nav-bg {
             width: 96vw;

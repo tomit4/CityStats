@@ -1,3 +1,4 @@
+/* TODO: Change font weights based off of firefox vs chromium browsers */
 body {
     margin: 0;
 }
@@ -62,16 +63,4 @@ span.subtitle {
     span.subtitle {
         font-size: 160%;
     }
-}
-
-/*********************
- * FONT FAMILIES
-*********************/
-@font-face {
-    font-family: 'Raleway';
-    src: url('../src/assets/fonts/raleway/Raleway-Regular.ttf')
-        format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
 }

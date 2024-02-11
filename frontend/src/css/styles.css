@@ -42,7 +42,7 @@ html {
 }
 
 .content {
-    font-family: 'Vegur', 'Helvetica', system-ui;
+    font-family: 'Raleway', 'Helvetica', system-ui;
     font-size: 1.125rem;
     line-height: 1.5;
 }
@@ -57,6 +57,7 @@ h1,
 h2,
 h3,
 h4 {
+    font-family: 'Raleway', 'Helvetica', system-ui;
     color: var(--offblack);
 }
 
@@ -69,19 +70,22 @@ h2 {
     width: 45rem;
 }
 h1 {
-    font-family: 'Zikketica', 'Helvetica', system-ui;
     font-weight: 900;
+    font-size: 175%;
     border-top: 2px solid var(--offblack);
 }
 h2 {
-    font-family: 'Vegur', 'Helvetica', system-ui;
     font-size: 90%;
     font-weight: 900;
     border-bottom: 2px solid var(--offblack);
     margin-top: -1.5em;
 }
+h4 {
+    font-weight: 900;
+    text-decoration: underline;
+}
 .page-title {
-    font-family: 'Vegur', 'Arial', system-ui;
+    font-family: 'Raleway', 'Helvetica', system-ui;
     font-weight: 900;
     color: var(--offblack);
     margin-bottom: -3rem;
@@ -93,7 +97,7 @@ h2 {
 }
 
 .form-label {
-    font-family: 'Vegur', 'Arial', system-ui;
+    font-family: 'Raleway', 'Helvetica', system-ui;
     font-size: 90%;
     font-weight: 900;
     color: var(--offblack);
@@ -113,7 +117,7 @@ h2 {
 }
 
 p {
-    font-family: 'Vegur', 'Arial', system-ui;
+    font-family: 'Raleway', 'Arial', system-ui;
     color: var(--offblack);
     line-height: 1.85;
     width: 80vw;
@@ -243,6 +247,7 @@ input {
     }
     .form-label {
         margin-top: 1em;
+        margin-left: -0.75em;
         display: block;
         justify-content: center;
         align-items: center;
@@ -255,6 +260,9 @@ input {
         margin-left: 1rem;
         width: 83vw;
     }
+    h4 {
+        text-align: center;
+    }
     p {
         margin-left: 1rem;
     }
@@ -265,6 +273,7 @@ input {
         }
         .form-label {
             margin-top: -0.25rem;
+            margin-left: 0.0125em;
         }
         main {
             margin-right: 2.5rem;
@@ -277,8 +286,11 @@ input {
             width: 82vw;
         }
         .code-block-set {
-            margin-left: auto;
             width: 82vw;
+            margin: 1em auto;
+        }
+        h4 {
+            margin-bottom: 0.75em;
         }
         p {
             margin-left: auto;
@@ -291,17 +303,8 @@ input {
  * FONT FAMILIES
 *********************/
 @font-face {
-    font-family: 'Vegur';
-    src: url('../src/assets/fonts/vegur/VegurRegular-YE48.otf')
-        format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Zikketica';
-    src: url('../src/assets/fonts/zikketica/Zikketica-nD7V.ttf')
+    font-family: 'Raleway';
+    src: url('../src/assets/fonts/raleway/Raleway-Regular.ttf')
         format('truetype');
     font-weight: normal;
     font-style: normal;
