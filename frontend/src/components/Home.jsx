@@ -1,32 +1,66 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import Body from './Body'
 import Nav from './Nav'
 import Splash from '../pages/Splash.jsx'
 
-export default function App() {
+export default function Home() {
     const [sidebar, setSidebar] = useState(false)
     const [blur, setBlur] = useState(false)
+    const { pathname } = useLocation()
+    const fadeRef = useRef(null)
+
     const showSidebar = () => setSidebar(!sidebar)
     const blurIt = () => setBlur(!blur)
-    const { pathname } = useLocation()
+
+    const delay = ms => {
+        return new Promise(resolve => setTimeout(resolve, ms))
+    }
+
+    useEffect(() => {
+        const prevPath = sessionStorage.getItem('previousPathname')
+        sessionStorage.setItem('previousPathname', pathname)
+
+        const isGoingHomeFromApp =
+            (prevPath === '/states' || prevPath === '/cities') &&
+            pathname === '/'
+
+        if (fadeRef.current && (isGoingHomeFromApp || prevPath === '/'))
+            fadeRef.current.classList.add('fade-in')
+
+        const cleanup = async () => {
+            await delay(600)
+            if (fadeRef.current.classList.contains('fade-in'))
+                fadeRef.current.classList.remove('fade-in')
+        }
+        cleanup()
+    }, [pathname])
+
     if (pathname === '/') {
         return (
             <>
-                <Splash />
+                <div ref={fadeRef}>
+                    <Splash />
+                </div>
             </>
         )
     }
     return (
         <>
-            <Nav blurIt={blurIt} sidebar={sidebar} showSidebar={showSidebar} />
-            <Body
-                blur={blur}
-                blurIt={blurIt}
-                sidebar={sidebar}
-                showSidebar={showSidebar}
-            />
-            {/* <Footer /> */}
+            <div ref={fadeRef}>
+                <Nav
+                    blurIt={blurIt}
+                    sidebar={sidebar}
+                    showSidebar={showSidebar}
+                />
+                <Body
+                    blur={blur}
+                    blurIt={blurIt}
+                    sidebar={sidebar}
+                    showSidebar={showSidebar}
+                />
+                {/* <Footer /> */}
+            </div>
         </>
     )
 }
