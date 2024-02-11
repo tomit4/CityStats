@@ -80,7 +80,11 @@ h2 {
     border-bottom: 2px solid var(--offblack);
     margin-top: -1.5em;
 }
+h3 {
+    font-size: 140%;
+}
 h4 {
+    font-size: 110%;
     font-weight: 900;
     text-decoration: underline;
 }
@@ -123,7 +127,7 @@ p {
     width: 80vw;
     max-width: 70ch;
     font-size: 95%;
-    font-weight: 900;
+    /* font-weight: 600; */
 }
 
 img,
@@ -180,6 +184,10 @@ label.tabbed-set-label {
     border-radius: 1px 1px 1px 0px;
     margin: 0 3px;
     padding: 0 1em;
+}
+.api-list {
+    font-size: 90%;
+    list-style-type: none;
 }
 /**********************
 * PRISMJS
