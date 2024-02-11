@@ -296,6 +296,7 @@ input {
         format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -304,4 +305,5 @@ input {
         format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }

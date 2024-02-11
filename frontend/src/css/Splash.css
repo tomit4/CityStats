@@ -1,9 +1,7 @@
-/* TODO: Use a local font instead, find FOSS alternative */
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
 body {
     margin: 0;
 }
+
 .container {
     margin: 0 auto;
     width: 75rem;
@@ -64,4 +62,16 @@ span.subtitle {
     span.subtitle {
         font-size: 160%;
     }
+}
+
+/*********************
+ * FONT FAMILIES
+*********************/
+@font-face {
+    font-family: 'Raleway';
+    src: url('../src/assets/fonts/raleway/Raleway-Regular.ttf')
+        format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }

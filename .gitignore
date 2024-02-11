@@ -1,0 +1,15 @@
+node_modules
+*.env
+*.db
+.prettierrc
+*.vim
+*.jpg
+*.jpeg
+*.png
+*.otf
+*.zip
+*.ttf
+frontend/dist
+backend/nginx
+.nyc_output
+.eslintrc.cjs
