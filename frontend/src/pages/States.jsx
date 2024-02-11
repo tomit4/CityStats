@@ -70,6 +70,7 @@ const States = props => {
                 Alternatively, type in your state name! If your state name has a
                 space demaracation in it, like &#34;New York&#34;, put an
                 underscore character, &#34;_&#34;, where the space would be.
+                (e.g. &#34;New_York&#34;).
             </p>
             <div className="section-divider" id="grab-state-with-field" />
             <h4>Grab City With Field</h4>

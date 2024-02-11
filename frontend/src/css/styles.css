@@ -127,7 +127,7 @@ p {
     width: 80vw;
     max-width: 70ch;
     font-size: 95%;
-    /* font-weight: 600; */
+    font-weight: 600;
 }
 
 img,
@@ -188,6 +188,7 @@ label.tabbed-set-label {
 .api-list {
     font-size: 90%;
     list-style-type: none;
+    color: var(--offblack);
 }
 /**********************
 * PRISMJS
