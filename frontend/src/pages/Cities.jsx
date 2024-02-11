@@ -68,14 +68,15 @@ const Cities = props => {
                 componentId={1}
             />
             <p>
-                City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
+                Similar to the States API, Cities can also be queried by an ID
+                number or City Name. You can test this out in the above URL
+                form. Just enter any number between 1 and 330, or any city name
+                within the US. Only the top 330 most populous cities in the US
+                are included in the City Stats API, so keep in mind the API
+                might not include statistics about the particular state you have
+                in mind. Like the States API, city names are demarcated using an
+                underscore, &#34;_&#34;, character instead of a space. (e.g.
+                &#34;Los_Angeles&#34;).
             </p>
             <div className="section-divider" id="grab-city-with-field" />
             <h4>Grab City With Field</h4>
@@ -88,25 +89,27 @@ const Cities = props => {
                 componentId={2}
             />
             <p>
-                City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
+                You can also specify fields of data on each particular city.
+                Allowed fields to query include the following:
             </p>
-            <p>
-                City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-            </p>
+            <ul className="api-list">
+                <li> - city_name</li>
+                <li> - state_name</li>
+                <li> - coordinates</li>
+                <li> - settled_founded</li>
+                <li> - incorporated</li>
+                <li> - elevation</li>
+                <li> - time_zone</li>
+                <li> - fips_code</li>
+                <li> - url</li>
+                <li> - counties</li>
+                <li> - government</li>
+                <li> - area</li>
+                <li> - population</li>
+                <li> - zip_codes</li>
+                <li> - area_codes</li>
+                <li> - gnis_feature_ids</li>
+            </ul>
             <div className="section-divider" id="grab-city-with-subfield" />
             <h4>Grab City With SubField</h4>
             <Code
@@ -118,24 +121,20 @@ const Cities = props => {
                 componentId={3}
             />
             <p>
-                City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
+                The Cities API also includes nested subfields that you can pull
+                more specific data from. In the above URL, you can request data
+                specifically about Abilene's government, specifically the City
+                Council. You can also query the following subfields:
             </p>
+            <ul className="api-list">
+                <li> - type</li>
+                <li> - mayor</li>
+            </ul>
             <p>
-                City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
+                There are other subfields you can grab from the &#34;area&#34;
+                and &#34;population&#34; fields as well like the &#34;land&#34;,
+                &#34;water&#34;, &#34;density&#34;, and &#34;metro&#34;
+                subfields.
             </p>
             <div className="section-divider" id="grab-city-with-query" />
             <h4>Grab City With Query</h4>
@@ -148,14 +147,12 @@ const Cities = props => {
                 componentId={4}
             />
             <p>
-                City Info Goes Here, Placeholder. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
+                You can also grab specific City Council Member&#39;s data from
+                the Cities API by specifying their specific &#34;id number&#34;.
+                Type in any number between &#34;1&#34; and &#34;50&#34; above.
+                New York City has 50 City Council Members at the time of this
+                writing, and you can specify which one you&#39;d like to query
+                by number with this API endpoint.
             </p>
         </>
     )
