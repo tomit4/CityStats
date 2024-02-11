@@ -1,6 +1,15 @@
 /* TODO: Change font weights based off of firefox vs chromium browsers */
+:root {
+    --splashoffwhite: #fdf6e3;
+    --splashoffblack: #272822;
+}
+
 body {
     margin: 0;
+}
+
+.container[data-citystats-theme='true'] {
+    background-color: rgba(253, 246, 227, 0.5);
 }
 
 .container {
@@ -8,9 +17,13 @@ body {
     width: 75rem;
     text-align: center;
     margin-top: 20vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(39, 40, 34, 0.7);
     border-radius: 5px;
     padding: 2em;
+}
+
+h1.title[data-citystats-theme='true'] {
+    color: var(--splashoffblack);
 }
 
 h1.title {
@@ -21,14 +34,23 @@ h1.title {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--splashoffwhite);
     min-width: 0;
+}
+
+span.subtitle[data-citystats-theme='true'] {
+    color: var(--splashoffblack);
 }
 
 span.subtitle {
     font-weight: 900;
     font-family: 'Raleway';
     font-size: 200%;
+    color: var(--splashoffwhite);
+}
+
+.link[data-citystats-theme='true'] {
+    color: var(--splashoffblack);
 }
 
 .link {
@@ -37,7 +59,11 @@ span.subtitle {
     font-family: 'Raleway';
     font-size: 140%;
     display: block;
-    color: #fff;
+    color: var(--splashoffwhite);
+}
+
+.home-hero[data-citystats-theme='true'] {
+    background-image: url('../assets/img/chicago_at_night_01.jpg');
 }
 
 .home-hero {
@@ -47,7 +73,7 @@ span.subtitle {
     height: 100vh;
     width: 100vw;
     padding: 10em 0;
-    color: #fff;
+    color: var(--splashoffblack);
 }
 
 /* Mobile Only */
