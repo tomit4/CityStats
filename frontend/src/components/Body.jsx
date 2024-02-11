@@ -33,10 +33,8 @@ const Body = props => {
             >
                 <main>
                     <article>
-                        <h1 ref={h1}>citystats.info</h1>
-                        <h2 ref={h2}>
-                            The API For USA State And City Statistics
-                        </h2>
+                        <h1 ref={h1}>CityStats API</h1>
+                        <h2 ref={h2}>Get Statistics On US States And Cities</h2>
                         <Routes>
                             <Route
                                 path="/states"
