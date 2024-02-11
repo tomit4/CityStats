@@ -145,7 +145,7 @@ const States = props => {
             />
             <p>
                 If you&#39;d like to grab specific house delegates, you can
-                specify each by &#34;id number&#34;, try typing in any number
+                specify each by &#34;id number&#34;. Try typing in any number
                 between &#34;1&#34; and &#34;7&#34; above to see the results.
                 Alabama, at the time of this writing, has a total of seven
                 delegates, try typing in any number between &#34;1&#34; and
