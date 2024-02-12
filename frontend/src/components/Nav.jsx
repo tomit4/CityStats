@@ -7,7 +7,6 @@ import { useThemeUpdate } from '../contexts/useThemeUpdate'
 
 const Nav = props => {
     const toggleTheme = useThemeUpdate()
-    const { pathname } = useLocation()
     const navigate = useNavigate()
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
