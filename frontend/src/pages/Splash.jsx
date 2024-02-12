@@ -149,6 +149,57 @@ export default function Splash() {
                     .
                 </p>
             </section>
+            <section>
+                <h1 data-citystats-theme={theme} className="disclaimer-h1">
+                    Disclaimer
+                </h1>
+                <aside>
+                    <p data-citystats-theme={theme}>
+                        The information provided by the CityStats API is for
+                        informational purposes only. While we strive to ensure
+                        the accuracy and reliability of the data, we make no
+                        representations or warranties of any kind, express or
+                        implied, about the completeness, accuracy, reliability,
+                        suitability, or availability with respect to the API or
+                        the information contained therein. Any reliance you
+                        place on such information is therefore strictly at your
+                        own risk. In no event will we be liable for any loss or
+                        damage including without limitation, indirect or
+                        consequential loss or damage, or any loss or damage
+                        whatsoever arising from loss of data or profits arising
+                        out of, or in connection with, the use of this API. By
+                        using the CityStats API, you acknowledge and agree that
+                        the data provided may contain inaccuracies or errors,
+                        and you are solely responsible for any actions you take
+                        based on the information obtained through the API. We
+                        disclaim any responsibility for the accuracy or
+                        reliability of the data and shall not be held liable for
+                        any damages resulting from the use of or inability to
+                        use the API. Furthermore, please note that the CityStats
+                        API is provided on an "as is" and "as available" basis,
+                        without any warranties of any kind, either express or
+                        implied, including but not limited to the implied
+                        warranties of merchantability, fitness for a particular
+                        purpose, or non-infringement. We reserve the right to
+                        modify, suspend, or discontinue the API at any time
+                        without prior notice. Your use of the API constitutes
+                        acceptance of these terms and conditions. This API is
+                        licensed under the{' '}
+                        <a
+                            className="inline-link"
+                            data-citystats-theme={theme}
+                            aria-label="A Link to The Linux Foundation's page on the BSD-3-Clause-Clear License"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            role="link"
+                            href="https://spdx.org/licenses/BSD-3-Clause-Clear.html"
+                        >
+                            BSD-3-Clause-Clear license
+                        </a>{' '}
+                        .
+                    </p>
+                </aside>
+            </section>
         </>
     )
 }

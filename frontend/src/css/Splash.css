@@ -97,6 +97,39 @@ p.splash-p {
 .inline-link[data-citystats-theme='true'] {
     color: var(--splashoffwhite);
 }
+
+.disclaimer-h1 {
+    border: none;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 0.25em;
+    font-size: 120%;
+    text-decoration: underline;
+    color: var(--splashoffblack);
+}
+
+.disclaimer-h1[data-citystats-theme='true'] {
+    color: var(--splashoffwhite);
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 90%;
+    width: 100vw;
+    margin-bottom: 1rem;
+}
+
+aside > p {
+    color: var(--splashoffblack);
+}
+
+aside > p[data-citystats-theme='true'] {
+    color: var(--splashoffwhite);
+}
+
 /* Mobile Only */
 @media (max-width: 35em) {
     .container {
@@ -114,5 +147,9 @@ p.splash-p {
     p.splash-p {
         text-align: center;
         width: 20rem;
+    }
+    aside > p {
+        margin: 0 auto;
+        text-align: center;
     }
 }

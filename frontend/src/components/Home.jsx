@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
-import Body from './Body'
 import Nav from './Nav'
+import Body from './Body'
+import Footer from './Footer'
 import Splash from '../pages/Splash.jsx'
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
             <>
                 <div ref={fadeRef}>
                     <Splash />
+                    <Footer />
                 </div>
             </>
         )
@@ -63,7 +65,6 @@ export default function Home() {
                     sidebar={sidebar}
                     showSidebar={showSidebar}
                 />
-                {/* <Footer /> */}
             </div>
         </>
     )

@@ -1,0 +1,48 @@
+:root {
+    --footeroffwhite: #fdf6e3;
+    --footeroffblack: #272822;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
+.footer-links-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none;
+    height: 4em;
+    background-color: var(--footeroffblack);
+    z-index: 9999;
+}
+
+.footer-links-list[data-citystats-theme='true'] {
+    background-color: var(--footeroffwhite);
+}
+
+a.inline-link {
+    color: var(--footeroffblack);
+}
+
+a.inline-link[data-citystats-theme='true'] {
+    color: var(--footeroffwhite);
+}
+
+.footer-links-list-item {
+    color: var(--footeroffwhite);
+}
+
+.footer-links-list-item[data-citystats-theme='true'] {
+    color: var(--footeroffblack);
+}
+
+/* Mobile Only */
+@media (max-width: 35em) {
+    .footer-links-list {
+        margin-left: -2rem;
+    }
+}
