@@ -12,7 +12,11 @@ export default function Home() {
     const fadeRef = useRef(null)
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        document.documentElement.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant',
+        })
     }, [pathname])
 
     const showSidebar = () => setSidebar(!sidebar)
