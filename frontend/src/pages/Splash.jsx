@@ -134,7 +134,7 @@ export default function Splash() {
             <section>
                 <h2 className="splash-h2">How Do I Use CityStats?</h2>
                 <p className="splash-p">
-                    Using CityStats assumes it&#39;s users have a basic
+                    The developers of CityStats assume its users to have a basic
                     understanding of programming concepts when it comes to data
                     fetching. That said, CityStats is a very minimal API and is
                     relatively easy to get started. The best place to start is
