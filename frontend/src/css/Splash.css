@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 .container[data-citystats-theme='true'] {
@@ -76,6 +77,26 @@ span.subtitle {
     color: var(--splashoffblack);
 }
 
+h2.splash-h2 {
+    margin: 1rem auto;
+    margin-top: 3rem;
+    font-size: 200%;
+}
+
+p.splash-p {
+    margin: 0 auto;
+    margin-top: 1em;
+    font-size: 100%;
+    width: 40rem;
+}
+
+.inline-link {
+    color: var(--splashoffblack);
+}
+
+.inline-link[data-citystats-theme='true'] {
+    color: var(--splashoffwhite);
+}
 /* Mobile Only */
 @media (max-width: 35em) {
     .container {
@@ -88,5 +109,10 @@ span.subtitle {
     }
     span.subtitle {
         font-size: 160%;
+    }
+
+    p.splash-p {
+        text-align: center;
+        width: 20rem;
     }
 }
