@@ -47,9 +47,9 @@ export default function Splash() {
                     >
                         Wikipedia
                     </a>
-                    , CityStats provides it&#39;s user with a simple API
-                    interface with which to interface using their programming
-                    language of choice.
+                    , CityStats provides it&#39;s user with a simple API with
+                    which to interface using their programming language of
+                    choice.
                 </p>
             </section>
             <section>
