@@ -11,6 +11,10 @@ export default function Home() {
     const { pathname } = useLocation()
     const fadeRef = useRef(null)
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname])
+
     const showSidebar = () => setSidebar(!sidebar)
     const blurIt = useCallback(() => {
         setBlur(prevBlur => !prevBlur)
