@@ -129,7 +129,18 @@ aside > p {
 aside > p[data-citystats-theme='true'] {
     color: var(--splashoffwhite);
 }
-
+/* Tablet */
+@media (max-width: 50em) {
+    .container {
+        width: 96vw;
+    }
+    h1.title {
+        font-size: 400%;
+    }
+    span.subtitle {
+        font-size: 160%;
+    }
+}
 /* Mobile Only */
 @media (max-width: 35em) {
     .container {

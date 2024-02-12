@@ -212,6 +212,7 @@ input:checked + .slider:before {
 /*********************
  * MEDIA QUERIES
 *********************/
+/* Tablet & Mobile */
 @media (max-width: 50em) {
     .primary-navigation {
         overflow-x: hidden;
