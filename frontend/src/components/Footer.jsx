@@ -1,11 +1,20 @@
+import { useRef, useEffect } from 'react'
+import { useThemeUpdate } from '../contexts/useThemeUpdate'
 import '../css/Footer.css'
 
 export default function Footer() {
+    const footerToggle = useRef(null)
+    useThemeUpdate()
     const theme = localStorage.getItem('data-citystats-theme')
+    useEffect(() => {}, [theme])
     return (
         <>
             <footer>
-                <ul data-citystats-theme={theme} className="footer-links-list">
+                <ul
+                    ref={footerToggle}
+                    data-citystats-theme={theme}
+                    className="footer-links-list"
+                >
                     <li>
                         <a
                             data-citystats-theme={theme}

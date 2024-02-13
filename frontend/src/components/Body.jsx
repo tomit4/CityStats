@@ -33,7 +33,9 @@ const Body = props => {
             >
                 <main>
                     <article>
-                        <h1 ref={h1}>CityStats API</h1>
+                        <h1 className="main-h1" ref={h1}>
+                            CityStats API
+                        </h1>
                         <h2 ref={h2}>Get Statistics On US States And Cities</h2>
                         <Routes>
                             <Route

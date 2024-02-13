@@ -4,7 +4,7 @@
 }
 
 footer {
-    margin-top: 1rem;
+    margin-top: 5rem;
 }
 
 .footer-links-list {
@@ -13,6 +13,8 @@ footer {
     align-items: center;
     gap: 3rem;
     margin: 0 auto;
+    position: absolute;
+    width: 100%;
     text-align: center;
     list-style-type: none;
     height: 5em;
@@ -95,10 +97,11 @@ a.inline-link[data-citystats-theme='true'] {
 }
 
 /* Mobile Only */
-@media (max-width: 35em) {
+@media (max-width: 50em) {
     .footer-links-list {
-        width: 96%;
+        width: 99%;
         height: 4em;
+        left: 0.25em;
         border-radius: 5px 5px 0px 0px;
         gap: 2rem;
         padding-right: 2.25em;
@@ -109,5 +112,20 @@ a.inline-link[data-citystats-theme='true'] {
     .footer-icons {
         display: flex;
         margin-top: 1.25em;
+    }
+    @media (max-width: 35em) {
+        .footer-links-list {
+            width: 98%;
+            height: 3.25em;
+            border-radius: 5px 5px 0px 0px;
+            gap: 2rem;
+        }
+        .footer-links-text {
+            display: none;
+        }
+        .footer-icons {
+            display: flex;
+            margin-top: 1.25em;
+        }
     }
 }

@@ -11,6 +11,7 @@ const Nav = props => {
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
     const homeToggle = useRef(null)
+    const homeTextToggle = useRef(null)
     const apiToggle = useRef(null)
     const toggleLinks = useRef({})
     const themeToggle = useRef(null)
@@ -40,6 +41,7 @@ const Nav = props => {
         themeToggle.current.setAttribute('data-toggled', !themePref)
         navToggle.current.setAttribute('data-toggled', !themePref)
         homeToggle.current.setAttribute('data-toggled', !themePref)
+        homeTextToggle.current.setAttribute('data-toggled', !themePref)
     }
 
     const toggleFromAnchor = () => toggleHamburger()
@@ -69,6 +71,15 @@ const Nav = props => {
                         ref={homeToggle}
                         to="/"
                     />
+                    <br />
+                    <Link
+                        className="nav-home-link-text"
+                        data-toggled={prefersDark.current}
+                        ref={homeTextToggle}
+                        to="/"
+                    >
+                        Home
+                    </Link>
                     <button
                         type="button"
                         className="icons mobile-nav-toggle"
