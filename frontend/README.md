@@ -35,6 +35,8 @@
         Nav.css is repeated. Investigate and clean up
 -   [ ] Refactor JS, particularly in States and Cities components where you have
         TODOS regarding redirecting urlRegex objects into separate utils folder
+-   [ ] Review semantic HTML-like elements and see if you can improve
+        accessibility.
 -   [ ] Write unit/integration tests in Vitest to 90% code completion.
 -   [ ] Write e2e tests in Cypress.
 
