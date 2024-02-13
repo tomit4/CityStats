@@ -11,11 +11,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
     margin: 0 auto;
     text-align: center;
     list-style-type: none;
-    height: 4em;
+    height: 5em;
     background-color: var(--footeroffblack);
     z-index: 9999;
 }
@@ -34,15 +34,80 @@ a.inline-link[data-citystats-theme='true'] {
 
 .footer-links-list-item {
     color: var(--footeroffwhite);
+    font-family: 'Raleway', 'Helvetica', system-ui;
+    text-decoration: none;
+}
+
+.footer-links-list-item:hover {
+    text-decoration: underline;
 }
 
 .footer-links-list-item[data-citystats-theme='true'] {
     color: var(--footeroffblack);
 }
 
+/* Icons */
+.footer-icons {
+    height: 1.75em;
+}
+
+.footer-icons:hover {
+    scale: 1.25;
+}
+
+#email-icon {
+    content: url('../assets/icons/mail-sharp.svg');
+}
+#email-icon[data-citystats-theme='true'] {
+    content: url('../assets/icons/mail-sharp-dark.svg');
+}
+
+#git-icon {
+    content: url('../assets/icons/git.svg');
+}
+#git-icon[data-citystats-theme='true'] {
+    content: url('../assets/icons/git-dark.svg');
+}
+
+#linkedin-icon {
+    content: url('../assets/icons/linkedin-box-fill.svg');
+}
+#linkedin-icon[data-citystats-theme='true'] {
+    content: url('../assets/icons/linkedin-box-fill-dark.svg');
+}
+
+#blog-icon {
+    height: 1.45em;
+    margin-bottom: 0.25em;
+    content: url('../assets/icons/pencil.svg');
+}
+#blog-icon[data-citystats-theme='true'] {
+    content: url('../assets/icons/pencil-dark.svg');
+}
+
+#mastodon-icon {
+    height: 1.95em;
+    margin-bottom: -0.125em;
+    content: url('../assets/icons/mastodon.svg');
+}
+#mastodon-icon[data-citystats-theme='true'] {
+    content: url('../assets/icons/mastodon-dark.svg');
+}
+
 /* Mobile Only */
 @media (max-width: 35em) {
     .footer-links-list {
-        margin-left: -2rem;
+        width: 96%;
+        height: 4em;
+        border-radius: 5px 5px 0px 0px;
+        gap: 2rem;
+        padding-right: 2.25em;
+    }
+    .footer-links-text {
+        display: none;
+    }
+    .footer-icons {
+        display: flex;
+        margin-top: 1.25em;
     }
 }
