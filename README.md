@@ -80,19 +80,29 @@ repository and I will do my best to address it in a timely manner.
 
 #### TODO:
 
+**Fullstack:**
+
+-   [ ] Once Frontend is dockerized, backend is updated, deploy application to
+        Linode/Akamai instance and test if app is working as expected.
+-   [ ] Completely rewrite this README.md
+
 **Frontend:**
 
--   [ ] Use React to dynamically render an example page
--   [ ] Use React-Router for ease of dynamically rendering different components
+-   [x] Use React to dynamically render an example page
+-   [x] Use React-Router for ease of dynamically rendering different components
         (follow [tutorial](https://reactrouter.com/en/main/start/tutorial) to quickly get up to speed).
--   [ ] Use React to Write a Documentation page demonstrating usage of API with node, fetch, curl, and python
--   [ ] Model frontend off of classic simple Apis like [I Can Haz Dad Joke](https://icanhazdadjoke.com/) and [The Star Wars API](https://swapi.dev/).
+-   [x] Use React to Write a Documentation page demonstrating usage of API with node, fetch, curl, and python
+-   [x] Model frontend off of classic simple Apis like [I Can Haz Dad Joke](https://icanhazdadjoke.com/) and [The Star Wars API](https://swapi.dev/).
+-   [ ] See frontend/README.md for details on remaining tasks (i.e.
+        refactor/unit tests)
+-   [ ] Rewrite citystats.xyz routes to work with localhost in development mode
+        (requires use of VITE .env variables)
+-   [ ] Dockerize frontend with NGINX.
 
 **Backend:**
 
--   [ ] Utilize [fastify-throttle](https://github.com/fastify/fastify-throttle)
-        to test react dynamic rendering on front end (loading animation if JSON or IMG
-        has yet to be returned from server)
+-   [ ] Investigate how you can achieve 90% code coverage on backend unit tests.
+-   [ ] Rerun web scraping scripts, address errors, and update backend db.
 
 **TODO for 3.0:**
 

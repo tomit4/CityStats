@@ -16,33 +16,27 @@
         node/express, and python) that will show basic usage in a backend api.
 -   [x] Implement a Light/Dark Mode Toggle that defaults to User Default Preferences,
         but uses localStorage to hold onto user's changes in theme.
--   [ ] Add Footer on Mobile Version of site (include mastodon link, github
+-   [x] Add Footer on Mobile Version of site (include mastodon link, github
         link, personal website link, maybe link to license and terms of service,
         etc?, see FOOTER MENU below).
--   [ ] Create Desktop Version of Site. Maybe finally choose a Hero Image(s)
+-   [x] Create Desktop Version of Site. Maybe finally choose a Hero Image(s)
         (series of images that fade in and out and change which images get shown
         based off of user's dark/light pref? Basically, show night time shots of
         cities vs day time shots of cities).
--   [ ] Add favicon
-
-**TODO_DOCS**
-
--   [ ] Look carefully at the styling of the VueJS, Vue-Router, and also
-        FastifyJS's websites for inspiration on how to structure the documentation page
-        (i.e. Vue's & Vue-Router's use of showing you which part of the page you are on
-        on the right, etc.). Otherwise, perhaps put the "citystats.info" text in
-        its own mini-hero section (not as large as traditional site hero splash
-        images)
-
-**TODO_HOME**
-
--   [ ] Your Home Page(see pages/Splash.jsx) should have a simple introduction to what the application
+-   [x] Add favicon
+-   [x] Your Home Page(see pages/Splash.jsx) should have a simple introduction to what the application
         is, provide simple links to the documentation, and a hero page that dynamically
         loads either day time or night time city landscape images that will transition
         out (3 day, 3 night). The Nav disappear and show hamburger own mobile,
         and otherwise float left for text regarding Home, About, Contact.
--   [ ] Consider adding a "fade" affect visually to the images that mutes the
+-   [x] Consider adding a "fade" affect visually to the images that mutes the
         contrast of the images against a more or less black/white background.
+-   [ ] Refactor CSS. In particular in certain parts of styles.css and
+        Nav.css is repeated. Investigate and clean up
+-   [ ] Refactor JS, particularly in States and Cities components where you have
+        TODOS regarding redirecting urlRegex objects into separate utils folder
+-   [ ] Write unit/integration tests in Vitest to 90% code completion.
+-   [ ] Write e2e tests in Cypress.
 
 **NOTES**:
 
@@ -94,9 +88,10 @@ Powered by Linode, NGINX, Docker, React
 
 **BUGS**
 
--   [ ] If the user refreshes the page more than 5 times, the rate limiter hits.
+-   [x] If the user refreshes the page more than 5 times, the rate limiter hits.
         Figure out caching of initial data into localStorage. If it doesn't exist,
-        register the JSON into localStorage.
+        register the JSON into localStorage. (DONE: cached results in
+        localStorage)
 
 **RESOURCES**
 
