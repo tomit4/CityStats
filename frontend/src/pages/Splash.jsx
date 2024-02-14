@@ -73,8 +73,8 @@ export default function Splash() {
                 </p>
                 <p className="splash-p">
                     CityStats is a Free and Open Source Project. If you wish to
-                    contribute, report a bug, contribute to, or fork the
-                    project, you can find it&#39;s source code over on{' '}
+                    report a bug, contribute to, or fork the project, you can
+                    find it&#39;s source code over on{' '}
                     <a
                         className="inline-link"
                         data-citystats-theme={theme}
