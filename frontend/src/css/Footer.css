@@ -96,7 +96,7 @@ a.inline-link[data-citystats-theme='true'] {
     content: url('../assets/icons/mastodon-dark.svg');
 }
 
-/* Mobile Only */
+/* Tablet & Mobile*/
 @media (max-width: 50em) {
     .footer-links-list {
         width: 99%;
@@ -113,19 +113,15 @@ a.inline-link[data-citystats-theme='true'] {
         display: flex;
         margin-top: 1.25em;
     }
-    @media (max-width: 35em) {
-        .footer-links-list {
-            width: 98%;
-            height: 3.25em;
-            border-radius: 5px 5px 0px 0px;
-            gap: 2rem;
-        }
-        .footer-links-text {
-            display: none;
-        }
-        .footer-icons {
-            display: flex;
-            margin-top: 1.25em;
-        }
+}
+
+/* Mobile Only */
+@media (max-width: 35em) {
+    .footer-links-list {
+        width: 98%;
+        height: 3.25em;
+    }
+    .footer-links-text {
+        display: none;
     }
 }

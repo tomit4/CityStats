@@ -263,13 +263,7 @@ input:checked + .slider:before {
     }
     .nav-home-link {
         left: 46vw;
-        position: fixed;
         margin-top: 0.4em;
-        height: 3.25em;
-        width: 3.25em;
-        background-position: center;
-        background: url('../assets/icons/building.svg');
-        background-repeat: no-repeat;
     }
     .nav-home-link-text {
         display: none;
@@ -301,9 +295,6 @@ input:checked + .slider:before {
         border: none;
         cursor: pointer;
     }
-    .primary-navigation[data-visible='true'] {
-        transform: translateX(0%);
-    }
     .mobile-nav-toggle {
         display: block;
         position: fixed;
@@ -322,75 +313,33 @@ input:checked + .slider:before {
     .mobile-nav-toggle:hover {
         cursor: pointer;
     }
-    .switch {
-        position: relative;
-        width: 50px;
-        height: 20px;
-        left: 6.25em;
-        bottom: 0.5em;
+}
+
+/* Mobile Only */
+@media (max-width: 35em) {
+    .primary-navigation {
+        width: 80%;
     }
-    .switch input[type='checkbox'] {
-        visibility: hidden;
+    .nav-menu-title,
+    .page-nav {
+        margin-top: 1em;
     }
-    .slider {
-        position: absolute;
-        z-index: 9999;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--offblack);
-        transition: 0.4s;
-        border: 2px solid var(--offblack);
-        border-radius: 10px;
+    .nav-home-link {
+        left: 44.75vw;
     }
-    .slider:before {
-        position: absolute;
-        content: '';
-        width: 14px;
-        aspect-ratio: 1;
-        left: 2px;
-        bottom: 1.25px;
-        background-color: var(--offwhite);
-        border-radius: 50%;
-        transition: 0.4s;
+    .nav-bg {
+        width: 96vw;
+        left: 0.5rem;
     }
-    input:checked + .slider {
-        background-color: --var(--offblack);
+    #cities-api-toggle {
+        margin-top: -2.4em;
+        margin-left: 10.5em;
     }
-    input:focus + .slider {
-        box-shadow: 0 0 1px var(--offblack);
+    button.dark-light-toggle[data-toggled='false'] {
+        left: 87vw;
     }
-    input:checked + .slider:before {
-        transform: translateX(28px);
-    }
-    /* Mobile Only */
-    @media (max-width: 35em) {
-        .primary-navigation {
-            width: 80%;
-        }
-        .nav-menu-title,
-        .page-nav {
-            margin-top: 1em;
-        }
-        .nav-home-link {
-            left: 44.75vw;
-        }
-        .nav-bg {
-            width: 96vw;
-            left: 0.5rem;
-        }
-        #cities-api-toggle {
-            margin-top: -2.4em;
-            margin-left: 10.5em;
-        }
-        button.dark-light-toggle[data-toggled='false'] {
-            left: 87vw;
-        }
-        button.dark-light-toggle[data-toggled='true'] {
-            left: 86vw;
-        }
+    button.dark-light-toggle[data-toggled='true'] {
+        left: 86vw;
     }
 }
 

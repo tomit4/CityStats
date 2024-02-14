@@ -220,6 +220,7 @@ input {
 /*********************
  * MEDIA QUERIES
 *********************/
+/* Tablet & Mobile */
 @media (max-width: 50em) {
     main {
         width: min(70ch, 100% - 4rem);
@@ -280,36 +281,37 @@ input {
     p {
         margin-left: 1rem;
     }
-    /* Mobile Only */
-    @media (max-width: 35em) {
-        *:not(code) {
-            overflow-x: hidden;
-        }
-        .form-label {
-            margin-top: -0.25rem;
-            margin-left: 0.0125em;
-        }
-        main {
-            margin-right: 2.5rem;
-            overflow-x: hidden;
-        }
-        .content {
-            margin-right: -0.75rem;
-        }
-        .url-input {
-            width: 82vw;
-        }
-        .code-block-set {
-            width: 82vw;
-            margin: 1em auto;
-        }
-        h4 {
-            margin-bottom: 0.75em;
-        }
-        p {
-            margin-left: auto;
-            width: 82vw;
-        }
+}
+
+/* Mobile Only */
+@media (max-width: 35em) {
+    *:not(code) {
+        overflow-x: hidden;
+    }
+    .form-label {
+        margin-top: -0.25rem;
+        margin-left: 0.0125em;
+    }
+    main {
+        margin-right: 2.5rem;
+        overflow-x: hidden;
+    }
+    .content {
+        margin-right: -0.75rem;
+    }
+    .url-input {
+        width: 82vw;
+    }
+    .code-block-set {
+        width: 82vw;
+        margin: 1em auto;
+    }
+    h4 {
+        margin-bottom: 0.75em;
+    }
+    p {
+        margin-left: auto;
+        width: 82vw;
     }
 }
 
