@@ -176,15 +176,15 @@ export default function Splash() {
                         reliability of the data and shall not be held liable for
                         any damages resulting from the use of or inability to
                         use the API. Furthermore, please note that the CityStats
-                        API is provided on an "as is" and "as available" basis,
-                        without any warranties of any kind, either express or
-                        implied, including but not limited to the implied
-                        warranties of merchantability, fitness for a particular
-                        purpose, or non-infringement. We reserve the right to
-                        modify, suspend, or discontinue the API at any time
-                        without prior notice. Your use of the API constitutes
-                        acceptance of these terms and conditions. This API is
-                        licensed under the{' '}
+                        API is provided on an &#34;as is&#34; and &#34;as
+                        available&#34; basis, without any warranties of any
+                        kind, either express or implied, including but not
+                        limited to the implied warranties of merchantability,
+                        fitness for a particular purpose, or non-infringement.
+                        We reserve the right to modify, suspend, or discontinue
+                        the API at any time without prior notice. Your use of
+                        the API constitutes acceptance of these terms and
+                        conditions. This API is licensed under the{' '}
                         <a
                             className="inline-link"
                             data-citystats-theme={theme}

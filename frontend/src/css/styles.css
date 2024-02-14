@@ -160,6 +160,9 @@ input.stv-radio-tab {
     left: -99999em;
     top: -99999em;
 }
+input.stv-radio-tab:focus + .tabbed-set-label {
+    outline: 2px solid #007bff;
+}
 input.stv-radio-tab[data-focused='true'] + label {
     background-color: var(--offblack);
     color: var(--offwhite);
@@ -193,7 +196,7 @@ label.tabbed-set-label {
     color: var(--offblack);
 }
 /**********************
-* PRISMJS
+* PRISMJS CODE BLOCKS
 **********************/
 pre {
     height: 20em;

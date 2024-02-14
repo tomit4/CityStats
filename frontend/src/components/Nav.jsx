@@ -61,6 +61,12 @@ const Nav = props => {
         const targetRoute = !currentToggleValue ? '/states' : '/cities'
         navigate(targetRoute)
     }
+    const handleEnterKeyPress = e => {
+        if (e.key === 'Enter') {
+            apiToggle.current.checked = !apiToggle.current.checked
+            toggleNavLinks()
+        }
+    }
     return (
         <>
             <header className="primary-header flex">
@@ -109,13 +115,19 @@ const Nav = props => {
                         className="primary-navigation flex"
                         ref={primaryNav}
                     >
-                        <label className="switch">
+                        <label
+                            onKeyDown={e => handleEnterKeyPress(e)}
+                            className="switch"
+                        >
                             <input
                                 type="checkbox"
+                                role="switch"
+                                aria-checked="true"
                                 ref={apiToggle}
                                 onChange={toggleNavLinks}
+                                tabIndex="0"
                             />
-                            <span className="slider" />
+                            <span tabIndex="0" className="slider" />
                         </label>
                         <div
                             className="nav-link toggle-link"

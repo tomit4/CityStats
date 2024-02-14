@@ -140,20 +140,24 @@ const Code = props => {
             else tabs.current[id].setAttribute('data-focused', 'true')
         }
     }
-
+    const handleEnterKeyPress = (e, tabId) => {
+        if (e.key === 'Enter') toggleTabs(tabId)
+    }
     return (
         <>
             <form onSubmit={e => e.preventDefault()}>
-                <label className="form-label">
+                <label className="form-label" htmlFor="url-input">
                     Enter URL:
                     <br />
                     <input
                         type="text"
+                        id="url-input"
                         className="url-input"
                         defaultValue={url}
                         ref={inputRef}
                         onChange={handleChange}
                         onKeyDown={handleBackSpace}
+                        aria-label="Enter URL"
                     />
                 </label>
             </form>
@@ -164,9 +168,11 @@ const Code = props => {
                         id={tabId1}
                         ref={saveTabRef(tabId1)}
                         onClick={() => toggleTabs(tabId1)}
+                        onKeyDown={e => handleEnterKeyPress(e, tabId1)}
                         data-focused="true"
                         type="radio"
                         defaultChecked
+                        tabIndex="0"
                     />
                     <label className="tabbed-set-label" htmlFor={tabId1}>
                         JSON
@@ -176,8 +182,10 @@ const Code = props => {
                         id={tabId2}
                         ref={saveTabRef(tabId2)}
                         onClick={() => toggleTabs(tabId2)}
+                        onKeyDown={e => handleEnterKeyPress(e, tabId2)}
                         data-focused="false"
                         type="radio"
+                        tabIndex="0"
                     />
                     <label className="tabbed-set-label" htmlFor={tabId2}>
                         curl
@@ -187,8 +195,10 @@ const Code = props => {
                         id={tabId3}
                         ref={saveTabRef(tabId3)}
                         onClick={() => toggleTabs(tabId3)}
+                        onKeyDown={e => handleEnterKeyPress(e, tabId3)}
                         data-focused="false"
                         type="radio"
+                        tabIndex="0"
                     />
                     <label className="tabbed-set-label" htmlFor={tabId3}>
                         python
@@ -196,10 +206,12 @@ const Code = props => {
                     <input
                         className="stv-radio-tab"
                         id={tabId4}
-                        type="radio"
                         ref={saveTabRef(tabId4)}
                         onClick={() => toggleTabs(tabId4)}
+                        onKeyDown={e => handleEnterKeyPress(e, tabId4)}
                         data-focused="false"
+                        type="radio"
+                        tabIndex="0"
                     />
                     <label className="tabbed-set-label" htmlFor={tabId4}>
                         node
