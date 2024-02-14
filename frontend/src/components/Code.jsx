@@ -140,12 +140,31 @@ const Code = props => {
             else tabs.current[id].setAttribute('data-focused', 'true')
         }
     }
+
+    // Re-Implements Default Behavior Expected of Radio Buttons
     const handleEnterKeyPress = (e, tabId) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             toggleTabs(tabId)
+        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault()
+            const nextTabId = Number(tabId.split('').pop()) + 1
+            const nextTab = `${componentId}__tabbed_${nextTabId}`
+            if (tabs.current[nextTab]) {
+                tabs.current[nextTab].focus()
+                toggleTabs(nextTab)
+            }
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault()
+            const prevTabId = Number(tabId.split('').pop()) - 1
+            const prevTab = `${componentId}__tabbed_${prevTabId}`
+            if (tabs.current[prevTab]) {
+                tabs.current[prevTab].focus()
+                toggleTabs(prevTab)
+            }
         }
     }
+
     return (
         <>
             <form onSubmit={e => e.preventDefault()}>
