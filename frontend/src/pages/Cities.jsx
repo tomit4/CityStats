@@ -123,8 +123,8 @@ const Cities = props => {
             <p>
                 The Cities API also includes nested subfields that you can pull
                 more specific data from. In the above URL, you can request data
-                specifically about Abilene's government, specifically the City
-                Council. You can also query the following subfields:
+                specifically about Abilene&#39;s government, specifically the
+                City Council. You can also query the following subfields:
             </p>
             <ul className="api-list">
                 <li> - type</li>

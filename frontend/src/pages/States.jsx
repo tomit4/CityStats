@@ -83,12 +83,12 @@ const States = props => {
                 componentId={2}
             />
             <p>
-                If you'd prefer to only receive certain fields of data from the
-                queried state, you can specify which field of data in particular
-                you're interested in zeroing in on. As you can see above, you
-                can query the &#34;government&#34; field, but you can also
-                choose others, like the state's &#34;capital&#34;, the
-                &#34;time_zone&#34;. Other accepted fields include:
+                If you&#39;d prefer to only receive certain fields of data from
+                the queried state, you can specify which field of data in
+                particular you&#39;re interested in zeroing in on. As you can
+                see above, you can query the &#34;government&#34; field, but you
+                can also choose others, like the state&#39;s &#34;capital&#34;,
+                the &#34;time_zone&#34;. Other accepted fields include:
             </p>
             <ul className="api-list">
                 <li> - state_name</li>
