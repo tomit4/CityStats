@@ -141,7 +141,10 @@ const Code = props => {
         }
     }
     const handleEnterKeyPress = (e, tabId) => {
-        if (e.key === 'Enter') toggleTabs(tabId)
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            toggleTabs(tabId)
+        }
     }
     return (
         <>

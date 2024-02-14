@@ -62,7 +62,8 @@ const Nav = props => {
         navigate(targetRoute)
     }
     const handleEnterKeyPress = e => {
-        if (e.key === 'Enter') {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
             apiToggle.current.checked = !apiToggle.current.checked
             toggleNavLinks()
         }
