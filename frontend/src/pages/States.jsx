@@ -1,54 +1,16 @@
 import PropTypes from 'prop-types'
 import Code from '../components/Code'
-
-// TODO: Compartmentalize into a separate utils file or something like that
-const urlRegexes = {
-    singleStateUrl: {
-        string: 'https://citystats.xyz/states/1',
-        regex: /^https:\/\/citystats\.xyz\/states\/(?:\d{1,2}|[\w]+)$/,
-        canDelUpTo: 29,
-        minLength: 24,
-    },
-    singleStateWithSingleFieldUrl: {
-        string: 'https://citystats.xyz/states/1/government',
-        regex: /^https:\/\/citystats\.xyz\/states\/(?:\d{1,2}|[\w]+)\/[\w]+$/,
-        canDelUpTo: 29,
-        minLength: 34,
-    },
-    singleStateWithSubFieldUrl: {
-        string: 'https://citystats.xyz/states/1/government/senators',
-        regex: /^https:\/\/citystats\.xyz\/states\/(?:\d{1,2}|[\w]+)\/[\w]+\/[\w]+$/,
-        canDelUpTo: 42,
-        minLength: 46,
-    },
-    singleStateWithQueryUrl: {
-        string: 'https://citystats.xyz/states/1/government/house_delegates/1',
-        regex: /^https:\/\/citystats\.xyz\/states\/(?:\d{1,2}|[\w]+)\/[\w]+\/[\w]+\/\d{1,2}$/,
-        canDelUpTo: 58,
-        minLength: 59,
-    },
-}
-const stateFields = [
-    'state_name',
-    'state_abbreviation',
-    'date_admitted',
-    'capital',
-    'largest_city',
-    'elevation',
-    'time_zone',
-    'latitude',
-    'longitude',
-    'url',
-    'flag_url',
-    'insignia_url',
-    'area',
-    'population',
-    'government',
-]
-
-const stateSubFields = ['governor', 'senators', 'house_delegates']
+import { stateUrlParserOpts } from '../utils/url_parser_opts.js'
 
 const States = props => {
+    const {
+        singleStateUrl,
+        singleStateWithSingleFieldUrl,
+        singleStateWithSubFieldUrl,
+        singleStateWithQueryUrl,
+        stateFields,
+        stateSubFields,
+    } = stateUrlParserOpts
     return (
         <>
             <h3 className="page-title">States Queries</h3>
@@ -57,7 +19,7 @@ const States = props => {
             <Code
                 entity="State"
                 blur={props.blur}
-                url={urlRegexes.singleStateUrl}
+                urlParser={singleStateUrl}
                 fields={[]}
                 subFields={[]}
                 componentId={1}
@@ -77,7 +39,7 @@ const States = props => {
             <Code
                 entity="State"
                 blur={props.blur}
-                url={urlRegexes.singleStateWithSingleFieldUrl}
+                urlParser={singleStateWithSingleFieldUrl}
                 fields={stateFields}
                 subFields={[]}
                 componentId={2}
@@ -112,7 +74,7 @@ const States = props => {
             <Code
                 entity="State"
                 blur={props.blur}
-                url={urlRegexes.singleStateWithSubFieldUrl}
+                urlParser={singleStateWithSubFieldUrl}
                 fields={[]}
                 subFields={stateSubFields}
                 componentId={3}
@@ -138,7 +100,7 @@ const States = props => {
             <Code
                 entity="State"
                 blur={props.blur}
-                url={urlRegexes.singleStateWithQueryUrl}
+                urlParser={singleStateWithQueryUrl}
                 fields={[]}
                 subFields={[]}
                 componentId={4}

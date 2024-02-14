@@ -1,59 +1,16 @@
 import PropTypes from 'prop-types'
 import Code from '../components/Code'
-
-/* TODO: A nice feature to bring in would be to add images
- * (consider it, but rendering might be difficult due to
- * variable image sizes, not found images, etc.) */
-
-// TODO: Compartmentalize into a separate utils file or something like that
-const urlRegexes = {
-    singleCityUrl: {
-        string: 'https://citystats.xyz/cities/1',
-        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)$/,
-        canDelUpTo: 29,
-        minLength: 24,
-    },
-    singleCityWithSingleFieldUrl: {
-        string: 'https://citystats.xyz/cities/1/government',
-        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+$/,
-        canDelUpTo: 29,
-        minLength: 34,
-    },
-    singleCityWithSubFieldUrl: {
-        string: 'https://citystats.xyz/cities/1/government/city_council',
-        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+\/[\w]+$/,
-        canDelUpTo: 42,
-        minLength: 46,
-    },
-    singleCityWithQueryUrl: {
-        string: 'https://citystats.xyz/cities/202/government/city_council/50',
-        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+\/[\w]+\/\d{1,2}$/,
-        canDelUpTo: 57,
-        minLength: 58,
-    },
-}
-const cityFields = [
-    'city_name',
-    'state_name',
-    'coordinates',
-    'settled_founded',
-    'incorporated',
-    'elevation',
-    'time_zone',
-    'fips_code',
-    'url',
-    'counties',
-    'government',
-    'area',
-    'population',
-    'zip_codes',
-    'area_codes',
-    'gnis_feature_ids',
-]
-
-const citySubFields = ['type', 'mayor', 'city_council']
+import { cityUrlParserOpts } from '../utils/url_parser_opts.js'
 
 const Cities = props => {
+    const {
+        singleCityUrl,
+        singleCityWithSingleFieldUrl,
+        singleCityWithSubFieldUrl,
+        singleCityWithQueryUrl,
+        cityFields,
+        citySubFields,
+    } = cityUrlParserOpts
     return (
         <>
             <h3 className="page-title">City Queries</h3>
@@ -62,7 +19,7 @@ const Cities = props => {
             <Code
                 entity="City"
                 blur={props.blur}
-                url={urlRegexes.singleCityUrl}
+                urlParser={singleCityUrl}
                 fields={[]}
                 subFields={[]}
                 componentId={1}
@@ -83,7 +40,7 @@ const Cities = props => {
             <Code
                 entity="City"
                 blur={props.blur}
-                url={urlRegexes.singleCityWithSingleFieldUrl}
+                urlParser={singleCityWithSingleFieldUrl}
                 fields={cityFields}
                 subFields={[]}
                 componentId={2}
@@ -115,7 +72,7 @@ const Cities = props => {
             <Code
                 entity="City"
                 blur={props.blur}
-                url={urlRegexes.singleCityWithSubFieldUrl}
+                urlParser={singleCityWithSubFieldUrl}
                 fields={[]}
                 subFields={citySubFields}
                 componentId={3}
@@ -141,7 +98,7 @@ const Cities = props => {
             <Code
                 entity="City"
                 blur={props.blur}
-                url={urlRegexes.singleCityWithQueryUrl}
+                urlParser={singleCityWithQueryUrl}
                 fields={[]}
                 subFields={[]}
                 componentId={4}

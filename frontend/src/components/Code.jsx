@@ -10,7 +10,7 @@ import { debounce } from 'lodash'
 
 const Code = props => {
     const { entity, fields, subFields, componentId } = props
-    const { string, regex, canDelUpTo, minLength } = props.url
+    const { string, regex, canDelUpTo, minLength } = props.urlParser
     const tabId1 = `${componentId}__tabbed_1`
     const tabId2 = `${componentId}__tabbed_2`
     const tabId3 = `${componentId}__tabbed_3`
@@ -223,7 +223,7 @@ const Code = props => {
 Code.propTypes = {
     entity: PropTypes.string,
     blur: PropTypes.bool,
-    url: PropTypes.object,
+    urlParser: PropTypes.object,
     fields: PropTypes.array,
     subFields: PropTypes.array,
     componentId: PropTypes.number,
