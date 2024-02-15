@@ -3,10 +3,7 @@ import { render, screen } from '@testing-library/react'
 import App from '../App'
 import { BrowserRouter } from 'react-router-dom'
 
-it('should have "citystats" in document', () => {
+it('App should render and have home splash component in it', () => {
     render(<App />, { wrapper: BrowserRouter })
-    // console.log('screen :=>', screen)
-    const message = screen.queryByT
-    console.log('message :=>', message)
-    expect(message).toBeTruthy()
+    expect(screen.getByTestId('home-splash-component')).toBeDefined()
 })

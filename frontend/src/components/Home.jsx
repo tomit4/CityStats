@@ -15,7 +15,6 @@ export default function Home() {
         document.documentElement.scrollTo({
             top: 0,
             left: 0,
-            // behavior: 'instant',
         })
     }, [pathname])
 
@@ -52,7 +51,7 @@ export default function Home() {
     if (pathname === '/') {
         return (
             <>
-                <div ref={fadeRef}>
+                <div ref={fadeRef} data-testid="home-splash-component">
                     <Splash />
                     <Footer />
                 </div>
