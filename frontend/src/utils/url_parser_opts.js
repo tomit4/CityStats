@@ -1,10 +1,11 @@
 const stateUrlParserOpts = {
     singleStateUrl: {
-        string: 'https://citystats.xyz/states/1',
-        regex: /^https:\/\/citystats\.xyz\/states\/(?:\d{1,2}|[\w]+)$/,
+        string: import.meta.env.VITE_SINGLE_STATE_URL,
+        regex: new RegExp(import.meta.env.VITE_SINGLE_STATE_REGEX),
         canDelUpTo: 29,
         minLength: 24,
     },
+    // TODO:  Pass vite environment variables for rest of these
     singleStateWithSingleFieldUrl: {
         string: 'https://citystats.xyz/states/1/government',
         regex: /^https:\/\/citystats\.xyz\/states\/(?:\d{1,2}|[\w]+)\/[\w]+$/,

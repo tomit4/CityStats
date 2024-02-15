@@ -63,6 +63,10 @@ const Code = props => {
                     if (!response.ok)
                         throw new Error(`${entity} data not found!`)
                     const data = await response.json()
+                    if (!data)
+                        throw new Error(
+                            `response returned ok, but data field for ${entity} not found!`,
+                        )
                     const dataToReturn = data.length > 1 ? data : data[0]
                     localStorage.setItem(
                         `${entity}-${url}`,
