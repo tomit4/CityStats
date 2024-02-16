@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
+import { delay } from '../utils/general_utils.js'
 import Nav from './Nav'
 import Body from './Body'
 import Footer from './Footer'
@@ -22,10 +23,6 @@ export default function Home() {
     const blurIt = useCallback(() => {
         setBlur(prevBlur => !prevBlur)
     }, [])
-
-    const delay = ms => {
-        return new Promise(resolve => setTimeout(resolve, ms))
-    }
 
     useEffect(() => {
         const prevPath = sessionStorage.getItem('previousPathname')

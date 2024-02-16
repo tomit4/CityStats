@@ -4,7 +4,7 @@ import Splash from '../pages/Splash'
 import { BrowserRouter } from 'react-router-dom'
 
 describe('Splash Page', () => {
-    it('renders and interact with as expected', () => {
+    it('renders and interacts with as expected', () => {
         render(
             <BrowserRouter basename="/">
                 <Splash />

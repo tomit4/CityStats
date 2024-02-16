@@ -43,6 +43,7 @@ const Code = props => {
         }
     }, [props])
 
+    // TODO: Refactor into helper functions
     useEffect(() => {
         if (lang !== 'language-json') {
             if (lang === 'language-bash') return setReturnCode(bashCode(url))
@@ -63,10 +64,6 @@ const Code = props => {
                     if (!response.ok)
                         throw new Error(`${entity} data not found!`)
                     const data = await response.json()
-                    if (!data)
-                        throw new Error(
-                            `response returned ok, but data field for ${entity} not found!`,
-                        )
                     const dataToReturn = data.length > 1 ? data : data[0]
                     localStorage.setItem(
                         `${entity}-${url}`,
@@ -111,7 +108,8 @@ const Code = props => {
 
     const handleBackSpace = e => {
         const { selectionStart } = e.target
-        if (e.keyCode === 8 && selectionStart <= canDelUpTo) e.preventDefault()
+        if (e.key === 'Backspace' && selectionStart <= canDelUpTo)
+            e.preventDefault()
     }
 
     const saveTabRef = id => elementRef => {
@@ -146,6 +144,7 @@ const Code = props => {
     }
 
     // Re-Implements Default Behavior Expected of Radio Buttons
+    // TODO: Refactor  into separate helper functions
     const handleEnterKeyPress = (e, tabId) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
@@ -157,6 +156,9 @@ const Code = props => {
             if (tabs.current[nextTab]) {
                 tabs.current[nextTab].focus()
                 toggleTabs(nextTab)
+            } else {
+                toggleTabs(`${componentId}__tabbed_1`)
+                tabs.current[`${componentId}__tabbed_1`].focus()
             }
         } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
             e.preventDefault()
@@ -165,6 +167,9 @@ const Code = props => {
             if (tabs.current[prevTab]) {
                 tabs.current[prevTab].focus()
                 toggleTabs(prevTab)
+            } else {
+                toggleTabs(`${componentId}__tabbed_4`)
+                tabs.current[`${componentId}__tabbed_4`].focus()
             }
         }
     }
@@ -183,12 +188,13 @@ const Code = props => {
                         ref={inputRef}
                         onChange={handleChange}
                         onKeyDown={handleBackSpace}
+                        data-testid="url-input"
                         aria-label="Enter URL"
                     />
                 </label>
             </form>
             <div className="code-block-set">
-                <div className="tabbed-set">
+                <div role="radiogroup" className="tabbed-set">
                     <input
                         className="stv-radio-tab"
                         id={tabId1}
@@ -197,6 +203,8 @@ const Code = props => {
                         onKeyDown={e => handleEnterKeyPress(e, tabId1)}
                         data-focused="true"
                         type="radio"
+                        role="radio"
+                        data-testid="json-tab"
                         defaultChecked
                         tabIndex="0"
                     />
@@ -211,6 +219,8 @@ const Code = props => {
                         onKeyDown={e => handleEnterKeyPress(e, tabId2)}
                         data-focused="false"
                         type="radio"
+                        role="radio"
+                        data-testid="curl-tab"
                         tabIndex="0"
                     />
                     <label className="tabbed-set-label" htmlFor={tabId2}>
@@ -224,6 +234,8 @@ const Code = props => {
                         onKeyDown={e => handleEnterKeyPress(e, tabId3)}
                         data-focused="false"
                         type="radio"
+                        role="radio"
+                        data-testid="python-tab"
                         tabIndex="0"
                     />
                     <label className="tabbed-set-label" htmlFor={tabId3}>
@@ -237,6 +249,8 @@ const Code = props => {
                         onKeyDown={e => handleEnterKeyPress(e, tabId4)}
                         data-focused="false"
                         type="radio"
+                        role="radio"
+                        data-testid="node-tab"
                         tabIndex="0"
                     />
                     <label className="tabbed-set-label" htmlFor={tabId4}>

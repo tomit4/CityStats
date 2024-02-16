@@ -44,7 +44,6 @@ const States = props => {
                 subFields={[]}
                 componentId={2}
             />
-            {/* TODO: Remove these notes once States rendering passes testing
             <p>
                 If you&#39;d prefer to only receive certain fields of data from
                 the queried state, you can specify which field of data in
@@ -118,8 +117,6 @@ const States = props => {
                 You can also grab the senators from the CityStats Api using your
                 programming language of choice.
             </p>
-
-            */}
         </>
     )
 }

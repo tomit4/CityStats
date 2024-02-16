@@ -191,6 +191,7 @@ label.tabbed-set-label {
     padding: 0 1em;
 }
 .api-list {
+    margin-top: 1em;
     font-size: 90%;
     list-style-type: none;
     color: var(--offblack);

@@ -1,8 +1,12 @@
+import '@testing-library/jest-dom'
+
 import { cleanup } from '@testing-library/react'
 import { afterAll, afterEach, beforeEach, vi } from 'vitest'
-import { server } from './src/mocks/node'
 
-beforeEach(() => {
+import { server } from './src/mocks/node'
+import { stateUrlParserOpts } from './src/utils/url_parser_opts'
+
+beforeEach(async () => {
     Object.defineProperty(window, 'matchMedia', {
         value: vi.fn(() => {
             return {
@@ -23,28 +27,9 @@ beforeEach(() => {
             useRoutes: vi.fn(),
         }
     })
-
     vi.mock('localStorage', () => {
-        return {
-            getItem: vi.fn(),
-            setItem: vi.fn(),
-            removeItem: vi.fn(),
-        }
+        return { getItem: vi.fn(), setItem: vi.fn(), removeItem: vi.fn() }
     })
-    /* TODO: See if something like this resolves our 
-    * issue with testing the States page
-    vi.mock(
-        './src/utils/utils',
-        vi.fn(() => {
-            return {
-                delay: vi.fn(),
-                grabStoredCookie: vi.fn(() => {
-                    return process.env.VITE_TEST_HASH
-                }),
-            }
-        }),
-    )
-    */
     server.listen({ onUnhandledRequest: 'error' })
 })
 

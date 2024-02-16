@@ -5,22 +5,21 @@ const stateUrlParserOpts = {
         canDelUpTo: 29,
         minLength: 24,
     },
-    // TODO:  Pass vite environment variables for rest of these
     singleStateWithSingleFieldUrl: {
-        string: 'https://citystats.xyz/states/1/government',
-        regex: /^https:\/\/citystats\.xyz\/states\/(?:\d{1,2}|[\w]+)\/[\w]+$/,
+        string: import.meta.env.VITE_SINGLE_STATE_FIELD,
+        regex: new RegExp(import.meta.env.VITE_SINGLE_STATE_FIELD_REGEX),
         canDelUpTo: 29,
         minLength: 34,
     },
     singleStateWithSubFieldUrl: {
-        string: 'https://citystats.xyz/states/1/government/senators',
-        regex: /^https:\/\/citystats\.xyz\/states\/(?:\d{1,2}|[\w]+)\/[\w]+\/[\w]+$/,
+        string: import.meta.env.VITE_SINGLE_STATE_SUBFIELD,
+        regex: new RegExp(import.meta.env.VITE_SINGLE_STATE_SUBFIELD_REGEX),
         canDelUpTo: 42,
         minLength: 46,
     },
     singleStateWithQueryUrl: {
-        string: 'https://citystats.xyz/states/1/government/house_delegates/1',
-        regex: /^https:\/\/citystats\.xyz\/states\/(?:\d{1,2}|[\w]+)\/[\w]+\/[\w]+\/\d{1,2}$/,
+        string: import.meta.env.VITE_SINGLE_STATE_QUERY,
+        regex: new RegExp(import.meta.env.VITE_SINGLE_STATE_QUERY_REGEX),
         canDelUpTo: 58,
         minLength: 59,
     },
