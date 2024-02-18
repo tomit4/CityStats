@@ -25,6 +25,9 @@ beforeEach(async () => {
             useRoutes: vi.fn(),
         }
     })
+    vi.mock('sessionStorage', () => {
+        return { getItem: vi.fn(), setItem: vi.fn(), removeItem: vi.fn() }
+    })
     vi.mock('localStorage', () => {
         return { getItem: vi.fn(), setItem: vi.fn(), removeItem: vi.fn() }
     })

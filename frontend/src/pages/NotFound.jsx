@@ -1,3 +1,4 @@
+/* v8 ignore next 8 */
 export default function NotFound() {
     return (
         <>

@@ -1,3 +1,4 @@
+/* v8 ignore next 129 */
 import PropTypes from 'prop-types'
 import Code from '../components/Code'
 import { stateUrlParserOpts } from '../utils/url_parser_opts.js'

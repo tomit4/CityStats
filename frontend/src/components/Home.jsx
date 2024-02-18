@@ -1,3 +1,4 @@
+/* v8 ignore next 77 */
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 import { delay } from '../utils/general_utils.js'

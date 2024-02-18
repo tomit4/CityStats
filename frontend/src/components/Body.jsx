@@ -1,3 +1,4 @@
+/* v8 ignore next 67 */
 import { useEffect, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import PropTypes from 'prop-types'

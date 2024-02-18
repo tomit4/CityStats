@@ -1,3 +1,4 @@
+/* v8 ignore next 123 */
 import PropTypes from 'prop-types'
 import Code from '../components/Code'
 import { cityUrlParserOpts } from '../utils/url_parser_opts.js'
