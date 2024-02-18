@@ -76,6 +76,7 @@ const Nav = props => {
                         className="icons nav-home-link"
                         data-toggled={prefersDark.current}
                         ref={homeToggle}
+                        data-testid="home-btn"
                         to="/"
                     />
                     <br />
@@ -95,6 +96,7 @@ const Nav = props => {
                         data-toggled={prefersDark.current}
                         ref={navToggle}
                         onClick={toggleHamburger}
+                        data-testid="nav-toggle"
                     >
                         <span className="sr-only"> Menu </span>
                     </button>
@@ -105,6 +107,7 @@ const Nav = props => {
                         data-toggled={prefersDark.current}
                         ref={themeToggle}
                         onClick={toggleLightDark}
+                        data-testid="toggle-theme-btn"
                     >
                         <span className="sr-only"> Light/Dark </span>
                     </button>
@@ -119,6 +122,7 @@ const Nav = props => {
                         <label
                             onKeyDown={e => handleEnterKeyPress(e)}
                             className="switch"
+                            data-testid="toggle-switch"
                         >
                             <input
                                 type="checkbox"

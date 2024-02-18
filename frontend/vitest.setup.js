@@ -1,10 +1,7 @@
 import '@testing-library/jest-dom'
-
 import { cleanup } from '@testing-library/react'
 import { afterAll, afterEach, beforeEach, vi } from 'vitest'
-
 import { server } from './src/mocks/node'
-import { stateUrlParserOpts } from './src/utils/url_parser_opts'
 
 beforeEach(async () => {
     Object.defineProperty(window, 'matchMedia', {
@@ -18,6 +15,7 @@ beforeEach(async () => {
         value: {
             scrollTo: vi.fn(),
             setAttribute: vi.fn(),
+            getAttribute: vi.fn(),
         },
     })
     vi.mock('react-router-dom', async () => {
