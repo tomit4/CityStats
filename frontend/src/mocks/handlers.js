@@ -1,5 +1,6 @@
 import { http, HttpResponse } from 'msw'
 import { mockReturns } from './mock_returns'
+
 const singleStateUrlString = import.meta.env.VITE_SINGLE_STATE_URL
 const singleStateUrlStringTwo = import.meta.env.VITE_SINGLE_STATE_URL_2
 const singleStateWithSingleFieldUrlString = import.meta.env
