@@ -20,8 +20,7 @@
 }
 
 :root {
-    /* TODO: uncomment in production */
-    /* color-scheme: light dark; */
+    color-scheme: light dark;
     --offblack: #272822;
     --offwhite: #fdf6e3;
     --custom-grey: #737373;
@@ -215,7 +214,6 @@ pre[data-visible='true'] {
     overflow-y: hidden;
 }
 /* inputs */
-/* TODO: Further styling of input fields */
 input {
     width: 80vw;
     max-width: 54em;
