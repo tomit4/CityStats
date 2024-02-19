@@ -84,7 +84,7 @@ repository and I will do my best to address it in a timely manner.
 
 -   [ ] Once Frontend is dockerized, backend is updated, deploy application to
         Linode/Akamai instance and test if app is working as expected.
--   [ ] Completely rewrite this README.md
+-   [ ] Completely rewrite this README.md (except for V3 TODOS below)
 
 **Frontend:**
 
@@ -95,7 +95,7 @@ repository and I will do my best to address it in a timely manner.
 -   [x] Model frontend off of classic simple Apis like [I Can Haz Dad Joke](https://icanhazdadjoke.com/) and [The Star Wars API](https://swapi.dev/).
 -   [ ] See frontend/README.md for details on remaining tasks (i.e.
         refactor/unit tests)
--   [ ] Rewrite citystats.xyz routes to work with localhost in development mode
+-   [x] Rewrite citystats.xyz routes to work with localhost in development mode
         (requires use of VITE .env variables)
 -   [ ] Dockerize frontend with NGINX.
 
