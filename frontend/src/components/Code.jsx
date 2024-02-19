@@ -149,7 +149,6 @@ const Code = props => {
     }
 
     const _navigateCodeBlockRadioBtns = (e, tabId) => {
-        console.log('tabId :=>', tabId)
         const currentTabId = Number(tabId.split('').pop())
         let nextTab = `${componentId}__tabbed_`
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
