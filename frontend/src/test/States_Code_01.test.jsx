@@ -29,7 +29,6 @@ describe('Code component', () => {
         expect(screen.getByLabelText(/node/i)).toBeDefined()
 
         // Test URL Input
-        // TODO: replace actual urls with env vars
         const urlInput = screen.getByTestId('url-input')
         await user.click(urlInput)
         await user.keyboard('[Backspace>]')

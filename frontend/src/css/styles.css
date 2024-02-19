@@ -149,7 +149,6 @@ video {
 }
 .tabbed-set {
     height: 3em;
-    /* TODO: Bring in custom monospace font */
     font-family: 'monospace';
     font-size: 75%;
     font-weight: 500;
