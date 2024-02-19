@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-json'
@@ -9,12 +9,25 @@ import { codeSnippets } from '../utils/code_snippets'
 import { debounce } from 'lodash'
 
 const Code = props => {
+    // NOTE: Props to distinguish how code blocks are rendered
     const { entity, fields, subFields, componentId } = props
+    // NOTE: Props to parse and test user passed url strings
     const { string, regex, canDelUpTo, minLength } = props.urlParser
+    // NOTE: Variables used to render approrpriate code blocks via radio-buttons/tabs
     const tabId1 = `${componentId}__tabbed_1`
     const tabId2 = `${componentId}__tabbed_2`
     const tabId3 = `${componentId}__tabbed_3`
     const tabId4 = `${componentId}__tabbed_4`
+    // NOTE: Accepted button interactions for use with radio-buttons/tabs
+    const _radioBtnInteractionKeys = [
+        'Enter',
+        ' ',
+        'ArrowRight',
+        'ArrowDown',
+        'ArrowLeft',
+        'ArrowUp',
+    ]
+    // NOTE: Hooks and state used to change code blocks based off of user interactions
     const [lang, setLang] = useState('language-json')
     const [url, setUrl] = useState(string)
     const [errMsg, setErrMsg] = useState('')
@@ -24,7 +37,6 @@ const Code = props => {
     const prismCode = useRef(null)
     const inputRef = useRef(null)
     const tabs = useRef({})
-    const [chosenTab, setChosenTab] = useState(tabId1)
     const [returnCode, setReturnCode] = useState('')
 
     useEffect(() => {
@@ -43,15 +55,19 @@ const Code = props => {
         }
     }, [props])
 
-    // TODO: Refactor into helper functions
-    useEffect(() => {
-        if (lang !== 'language-json') {
+    const _displayCodeBlock = useCallback(
+        lang => {
             if (lang === 'language-bash') return setReturnCode(bashCode(url))
             if (lang === 'language-python')
                 return setReturnCode(pythonCode(url))
             if (lang === 'language-javascript')
                 return setReturnCode(javascriptCode(hostname, pathname))
-        }
+        },
+        [bashCode, pythonCode, javascriptCode, url, hostname, pathname],
+    )
+
+    useEffect(() => {
+        if (lang !== 'language-json') return _displayCodeBlock(lang)
         const getEntity = async () => {
             try {
                 if (errMsg.length) throw new Error(errMsg)
@@ -77,17 +93,7 @@ const Code = props => {
             }
         }
         getEntity()
-    }, [
-        errMsg,
-        entity,
-        url,
-        hostname,
-        pathname,
-        lang,
-        bashCode,
-        pythonCode,
-        javascriptCode,
-    ])
+    }, [_displayCodeBlock, errMsg, entity, url, hostname, pathname, lang])
 
     const _isValidUrl = (urlPattern, inputUrl, minLength) => {
         return inputUrl.length >= minLength && urlPattern.test(inputUrl)
@@ -135,7 +141,6 @@ const Code = props => {
     const toggleTabs = id => {
         const tabId = Number(id.split('').pop())
         _setPrismLang(tabId)
-        setChosenTab(id)
         for (const value of Object.values(tabs.current)) {
             if (value.id !== id)
                 tabs.current[value.id].setAttribute('data-focused', 'false')
@@ -143,35 +148,27 @@ const Code = props => {
         }
     }
 
-    // Re-Implements Default Behavior Expected of Radio Buttons
-    // TODO: Refactor  into separate helper functions
-    const handleEnterKeyPress = (e, tabId) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            toggleTabs(tabId)
-        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-            e.preventDefault()
-            const nextTabId = Number(tabId.split('').pop()) + 1
-            const nextTab = `${componentId}__tabbed_${nextTabId}`
-            if (tabs.current[nextTab]) {
-                tabs.current[nextTab].focus()
-                toggleTabs(nextTab)
-            } else {
-                toggleTabs(`${componentId}__tabbed_1`)
-                tabs.current[`${componentId}__tabbed_1`].focus()
-            }
+    const _navigateCodeBlockRadioBtns = (e, tabId) => {
+        console.log('tabId :=>', tabId)
+        const currentTabId = Number(tabId.split('').pop())
+        let nextTab = `${componentId}__tabbed_`
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            nextTab = `${nextTab}${currentTabId + 1}`
+            if (!tabs.current[nextTab]) nextTab = `${componentId}__tabbed_1`
         } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-            e.preventDefault()
-            const prevTabId = Number(tabId.split('').pop()) - 1
-            const prevTab = `${componentId}__tabbed_${prevTabId}`
-            if (tabs.current[prevTab]) {
-                tabs.current[prevTab].focus()
-                toggleTabs(prevTab)
-            } else {
-                toggleTabs(`${componentId}__tabbed_4`)
-                tabs.current[`${componentId}__tabbed_4`].focus()
-            }
+            nextTab = `${nextTab}${currentTabId - 1}`
+            if (!tabs.current[nextTab]) nextTab = `${componentId}__tabbed_4`
         }
+        if (!tabs.current[nextTab]) tabs.current[tabId].focus()
+        else tabs.current[nextTab].focus()
+        toggleTabs(nextTab)
+    }
+
+    // NOTE: Re-Implements Default Behavior Expected of Radio Buttons (for accessibility)
+    const handleEnterKeyPress = (e, tabId) => {
+        if (_radioBtnInteractionKeys.includes(e.key)) e.preventDefault()
+        if (e.key === 'Enter' || e.key === ' ') toggleTabs(tabId)
+        else _navigateCodeBlockRadioBtns(e, tabId)
     }
 
     return (
