@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import '../css/Nav.css'
 import ApiOptions from './ApiOptions'
@@ -8,6 +8,7 @@ import { useThemeUpdate } from '../contexts/useThemeUpdate'
 const Nav = props => {
     const toggleTheme = useThemeUpdate()
     const navigate = useNavigate()
+    const { pathname } = useLocation()
     const primaryNav = useRef(null)
     const navToggle = useRef(null)
     const homeToggle = useRef(null)
@@ -19,6 +20,10 @@ const Nav = props => {
     const prefersDark = useRef(
         document.documentElement.getAttribute('data-citystats-theme'),
     )
+
+    useEffect(() => {
+        if (pathname === '/cities') apiToggle.current.checked = true
+    }, [pathname])
 
     useEffect(() => {
         if (props.sidebar) {
