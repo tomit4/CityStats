@@ -45,26 +45,26 @@ const stateUrlParserOpts = {
 
 const cityUrlParserOpts = {
     singleCityUrl: {
-        string: 'https://citystats.xyz/cities/1',
-        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)$/,
+        string: import.meta.env.VITE_SINGLE_CITY_URL,
+        regex: new RegExp(import.meta.env.VITE_SINGLE_CITY_REGEX),
         canDelUpTo: 29,
         minLength: 24,
     },
     singleCityWithSingleFieldUrl: {
-        string: 'https://citystats.xyz/cities/1/government',
-        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+$/,
+        string: import.meta.env.VITE_SINGLE_CITY_FIELD,
+        regex: new RegExp(import.meta.env.VITE_SINGLE_CITY_FIELD_REGEX),
         canDelUpTo: 29,
         minLength: 34,
     },
     singleCityWithSubFieldUrl: {
-        string: 'https://citystats.xyz/cities/1/government/city_council',
-        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+\/[\w]+$/,
+        string: import.meta.env.VITE_SINGLE_CITY_SUBFIELD,
+        regex: new RegExp(import.meta.env.VITE_SINGLE_CITY_SUBFIELD_REGEX),
         canDelUpTo: 42,
         minLength: 46,
     },
     singleCityWithQueryUrl: {
-        string: 'https://citystats.xyz/cities/202/government/city_council/50',
-        regex: /^https:\/\/citystats\.xyz\/cities\/(?:\d{1,3}|[\w]+)\/[\w]+\/[\w]+\/\d{1,2}$/,
+        string: import.meta.env.VITE_SINGLE_CITY_QUERY,
+        regex: new RegExp(import.meta.env.VITE_SINGLE_CITY_QUERY_REGEX),
         canDelUpTo: 57,
         minLength: 58,
     },

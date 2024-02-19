@@ -30,22 +30,21 @@ describe('Code component', () => {
 
         // Test URL Input
         // TODO: replace actual urls with env vars
-        /*
         const urlInput = screen.getByTestId('url-input')
         await user.click(urlInput)
         await user.keyboard('[Backspace>]')
-        expect(urlInput).toHaveValue('https://citystats.xyz/states/')
+        expect(urlInput).toHaveValue('https://citystats.xyz/cities/')
         await waitFor(async () => {
             await user.keyboard('2')
             await delay(500)
         })
-        expect(urlInput).toHaveValue('https://citystats.xyz/states/2')
+        expect(urlInput).toHaveValue('https://citystats.xyz/cities/2')
 
         // Test handleBackSpace function
         await user.keyboard('[Backspace>]')
         await user.keyboard('[Backspace>]')
         await user.keyboard('[Backspace>]')
-        expect(urlInput).toHaveValue('https://citystats.xyz/states/')
+        expect(urlInput).toHaveValue('https://citystats.xyz/cities/')
 
         // Wait for error message to be displayed
         await waitFor(async () => await delay(500))
@@ -72,6 +71,5 @@ describe('Code component', () => {
         await user.keyboard('[ArrowLeft>]')
         await user.keyboard('[ArrowUp>]')
         await user.keyboard('[ArrowDown>]')
-        */
     })
 })

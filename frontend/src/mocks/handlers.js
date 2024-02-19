@@ -4,22 +4,41 @@ const singleStateUrlString = import.meta.env.VITE_SINGLE_STATE_URL
 const singleStateUrlStringTwo = import.meta.env.VITE_SINGLE_STATE_URL_2
 const singleStateWithSingleFieldUrlString = import.meta.env
     .VITE_SINGLE_STATE_FIELD
+const singleCityUrlString = import.meta.env.VITE_SINGLE_CITY_URL
+const singleCityUrlStringTwo = import.meta.env.VITE_SINGLE_CITY_URL_2
+const singleCityWithSingleFieldUrlString = import.meta.env
+    .VITE_SINGLE_CITY_FIELD
 
-const { singleState, singleStateWithField } = mockReturns
-const { urlStringIdOne, urlStringIdTwo } = singleState
-const { urlWithFieldStringIdOne } = singleStateWithField
+const { singleState, singleStateWithField, singleCity, singleCityWithField } =
+    mockReturns
+const { stateUrlStringIdOne, stateUrlStringIdTwo } = singleState
+const { cityUrlStringIdOne, cityUrlStringIdTwo } = singleCity
+const { stateUrlWithFieldStringIdOne } = singleStateWithField
+const { cityUrlWithFieldStringIdOne } = singleCityWithField
 
 export const handlers = [
     // SingleState id#1
     http.get(singleStateUrlString, async () => {
-        return HttpResponse.json(urlStringIdOne)
+        return HttpResponse.json(stateUrlStringIdOne)
     }),
     // SingleState id#2
     http.get(singleStateUrlStringTwo, async () => {
-        return HttpResponse.json(urlStringIdTwo)
+        return HttpResponse.json(stateUrlStringIdTwo)
     }),
     // SingleStateWithSingleField
     http.get(singleStateWithSingleFieldUrlString, async () => {
-        return HttpResponse.json(urlWithFieldStringIdOne)
+        return HttpResponse.json(stateUrlWithFieldStringIdOne)
+    }),
+    // SingleCity id#1
+    http.get(singleCityUrlString, async () => {
+        return HttpResponse.json(cityUrlStringIdOne)
+    }),
+    // SingleCity id#2
+    http.get(singleCityUrlStringTwo, async () => {
+        return HttpResponse.json(cityUrlStringIdTwo)
+    }),
+    // SingleCityWithSingleField
+    http.get(singleCityWithSingleFieldUrlString, async () => {
+        return HttpResponse.json(cityUrlWithFieldStringIdOne)
     }),
 ]
