@@ -38,4 +38,3 @@
 -   [x] Review semantic HTML-like elements and see if you can improve
         accessibility.
 -   [x] Write unit/integration tests in Vitest to 90% code completion.
--   [ ] Write e2e tests in Cypress.
