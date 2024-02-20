@@ -495,51 +495,60 @@ const mockReturns = {
     },
     singleCityWithField: {
         cityUrlWithFieldStringIdOne: [
-            [
-                {
-                    id: 1,
-                    city_name: 'Abilene',
-                    state_name: 'Texas',
-                    government: {
-                        type: 'Council-Manager',
-                        mayor: 'Weldon Hurt',
-                        img_url:
-                            'https://www.citystats.xyz/images/cities/1/mayor',
-                        city_council: [
-                            {
-                                council_member: 'Shane Price',
-                                img_url:
-                                    'https://www.citystats.xyz/images/cities/1/city_council/1',
-                            },
-                            {
-                                council_member: 'Lynn Beard',
-                                img_url:
-                                    'https://www.citystats.xyz/images/cities/1/city_council/2',
-                            },
-                            {
-                                council_member: 'Blaise Regan',
-                                img_url:
-                                    'https://www.citystats.xyz/images/cities/1/city_council/3',
-                            },
-                            {
-                                council_member: 'Brian Yates',
-                                img_url:
-                                    'https://www.citystats.xyz/images/cities/1/city_council/4',
-                            },
-                            {
-                                council_member: 'Kyle McAlister',
-                                img_url:
-                                    'https://www.citystats.xyz/images/cities/1/city_council/5',
-                            },
-                            {
-                                council_member: 'Travis Craver',
-                                img_url:
-                                    'https://www.citystats.xyz/images/cities/1/city_council/6',
-                            },
-                        ],
-                    },
+            {
+                id: 1,
+                city_name: 'Abilene',
+                state_name: 'Texas',
+                government: {
+                    type: 'Council-Manager',
+                    mayor: 'Weldon Hurt',
+                    img_url: 'https://www.citystats.xyz/images/cities/1/mayor',
+                    city_council: [
+                        {
+                            council_member: 'Shane Price',
+                            img_url:
+                                'https://www.citystats.xyz/images/cities/1/city_council/1',
+                        },
+                        {
+                            council_member: 'Lynn Beard',
+                            img_url:
+                                'https://www.citystats.xyz/images/cities/1/city_council/2',
+                        },
+                        {
+                            council_member: 'Blaise Regan',
+                            img_url:
+                                'https://www.citystats.xyz/images/cities/1/city_council/3',
+                        },
+                        {
+                            council_member: 'Brian Yates',
+                            img_url:
+                                'https://www.citystats.xyz/images/cities/1/city_council/4',
+                        },
+                        {
+                            council_member: 'Kyle McAlister',
+                            img_url:
+                                'https://www.citystats.xyz/images/cities/1/city_council/5',
+                        },
+                        {
+                            council_member: 'Travis Craver',
+                            img_url:
+                                'https://www.citystats.xyz/images/cities/1/city_council/6',
+                        },
+                    ],
                 },
-            ],
+            },
+        ],
+        cityUrlWithFieldStringIdTwo: [
+            {
+                id: 2,
+                city_name: 'Akron',
+                state_name: 'Ohio',
+                area: {
+                    city: '62.27 sq mi',
+                    land: '61.93 sq mi',
+                    water: '0.34 sq mi',
+                },
+            },
         ],
     },
 }

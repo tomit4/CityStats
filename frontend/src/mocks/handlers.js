@@ -21,8 +21,15 @@ const singleCityUrlString = import.meta.env.VITE_SINGLE_CITY_URL
 const singleCityUrlStringTwo = import.meta.env.VITE_SINGLE_CITY_URL_2
 const singleCityWithSingleFieldUrlString = import.meta.env
     .VITE_SINGLE_CITY_FIELD
+const singleCityWithSingleFieldUrlStringTwo = import.meta.env
+    .VITE_SINGLE_CITY_FIELD_2
 
 // Mocked Data
+/* TODO:
+ * mock error response for https://citystats.xyz/states/
+ * & https://citystats.xyz/cities/
+ */
+// State
 const {
     singleState,
     singleStateWithField,
@@ -38,8 +45,11 @@ const { stateUrlWithSubFieldStringIdOne, stateUrlWithSubFieldStringIdTwo } =
     singleStateWithSubField
 const { stateUrlWithQueryStringIdOne, stateUrlWithQueryStringIdTwo } =
     singleStateWithQuery
+
+// City
 const { cityUrlStringIdOne, cityUrlStringIdTwo } = singleCity
-const { cityUrlWithFieldStringIdOne } = singleCityWithField
+const { cityUrlWithFieldStringIdOne, cityUrlWithFieldStringIdTwo } =
+    singleCityWithField
 
 export const handlers = [
     // SingleState id#1
@@ -82,8 +92,12 @@ export const handlers = [
     http.get(singleCityUrlStringTwo, async () => {
         return HttpResponse.json(cityUrlStringIdTwo)
     }),
-    // SingleCityWithSingleField
+    // SingleCityWithSingleField id#1
     http.get(singleCityWithSingleFieldUrlString, async () => {
         return HttpResponse.json(cityUrlWithFieldStringIdOne)
+    }),
+    // SingleCityWithSingleField id#1
+    http.get(singleCityWithSingleFieldUrlStringTwo, async () => {
+        return HttpResponse.json(cityUrlWithFieldStringIdTwo)
     }),
 ]
