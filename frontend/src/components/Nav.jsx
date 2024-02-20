@@ -22,8 +22,11 @@ const Nav = props => {
     )
 
     useEffect(() => {
-        if (pathname === '/cities') apiToggle.current.checked = true
-    }, [pathname])
+        if (pathname === '/cities') {
+            apiToggle.current.checked = true
+            toggleStateLinks(false)
+        }
+    }, [pathname, showStatesLinks])
 
     useEffect(() => {
         if (props.sidebar) {
@@ -66,6 +69,7 @@ const Nav = props => {
         const targetRoute = !currentToggleValue ? '/states' : '/cities'
         navigate(targetRoute)
     }
+
     const handleEnterKeyPress = e => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
@@ -73,6 +77,7 @@ const Nav = props => {
             toggleNavLinks()
         }
     }
+
     return (
         <>
             <header className="primary-header flex">
