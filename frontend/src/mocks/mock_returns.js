@@ -603,6 +603,30 @@ const mockReturns = {
             },
         ],
     },
+    singleCityWithQuery: {
+        cityUrlWithQueryStringIdOne: [
+            {
+                id: 202,
+                city_name: 'New_York_City',
+                state_name: 'New_York',
+                council_member: {
+                    council_member: 'David Carr',
+                    img_url: null,
+                },
+            },
+        ],
+        cityUrlWithQueryStringIdTwo: [
+            {
+                id: 202,
+                city_name: 'New_York_City',
+                state_name: 'New_York',
+                council_member: {
+                    council_member: 'Kamillah Hanks',
+                    img_url: null,
+                },
+            },
+        ],
+    },
 }
 
 export { mockReturns }
