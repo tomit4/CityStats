@@ -287,6 +287,36 @@ const mockReturns = {
             },
         ],
     },
+    singleStateWithQuery: {
+        stateUrlWithQueryStringIdOne: [
+            {
+                id: 1,
+                state_name: 'Alabama',
+                state_abbreviation: 'AL',
+                government: {
+                    house_delegate: {
+                        delegate_name: 'Jerry Carl',
+                        img_url:
+                            'https://citystats.xyz/images/states/1/delegates/1',
+                    },
+                },
+            },
+        ],
+        stateUrlWithQueryStringIdTwo: [
+            {
+                id: 1,
+                state_name: 'Alabama',
+                state_abbreviation: 'AL',
+                government: {
+                    house_delegate: {
+                        delegate_name: 'Barry Moore',
+                        img_url:
+                            'https://citystats.xyz/images/states/1/delegates/2',
+                    },
+                },
+            },
+        ],
+    },
     singleCity: {
         cityUrlStringIdOne: [
             [
