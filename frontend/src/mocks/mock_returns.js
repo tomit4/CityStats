@@ -551,6 +551,58 @@ const mockReturns = {
             },
         ],
     },
+    singleCityWithSubField: {
+        cityUrlWithSubFieldStringIdOne: [
+            {
+                id: 1,
+                city_name: 'Abilene',
+                state_name: 'Texas',
+                city_council: [
+                    {
+                        council_member: 'Shane Price',
+                        img_url:
+                            'https://www.citystats.xyz/images/cities/1/city_council/1',
+                    },
+                    {
+                        council_member: 'Lynn Beard',
+                        img_url:
+                            'https://www.citystats.xyz/images/cities/1/city_council/2',
+                    },
+                    {
+                        council_member: 'Blaise Regan',
+                        img_url:
+                            'https://www.citystats.xyz/images/cities/1/city_council/3',
+                    },
+                    {
+                        council_member: 'Brian Yates',
+                        img_url:
+                            'https://www.citystats.xyz/images/cities/1/city_council/4',
+                    },
+                    {
+                        council_member: 'Kyle McAlister',
+                        img_url:
+                            'https://www.citystats.xyz/images/cities/1/city_council/5',
+                    },
+                    {
+                        council_member: 'Travis Craver',
+                        img_url:
+                            'https://www.citystats.xyz/images/cities/1/city_council/6',
+                    },
+                ],
+            },
+        ],
+        cityUrlWithSubFieldStringIdTwo: [
+            {
+                id: 1,
+                city_name: 'Abilene',
+                state_name: 'Texas',
+                government: {
+                    mayor: 'Weldon Hurt',
+                    img_url: 'https://www.citystats.xyz/images/cities/1/mayor',
+                },
+            },
+        ],
+    },
 }
 
 export { mockReturns }

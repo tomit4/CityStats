@@ -23,6 +23,8 @@ const singleCityWithSingleFieldUrlString = import.meta.env
     .VITE_SINGLE_CITY_FIELD
 const singleCityWithSingleFieldUrlStringTwo = import.meta.env
     .VITE_SINGLE_CITY_FIELD_2
+const singleCitySubFieldUrl = import.meta.env.VITE_SINGLE_CITY_SUBFIELD
+const singleCitySubFieldUrlTwo = import.meta.env.VITE_SINGLE_CITY_SUBFIELD_2
 
 // Mocked Data
 /* TODO:
@@ -37,6 +39,7 @@ const {
     singleStateWithQuery,
     singleCity,
     singleCityWithField,
+    singleCityWithSubField,
 } = mockReturns
 const { stateUrlStringIdOne, stateUrlStringIdTwo } = singleState
 const { stateUrlWithFieldStringIdOne, stateUrlWithFieldStringIdTwo } =
@@ -50,6 +53,8 @@ const { stateUrlWithQueryStringIdOne, stateUrlWithQueryStringIdTwo } =
 const { cityUrlStringIdOne, cityUrlStringIdTwo } = singleCity
 const { cityUrlWithFieldStringIdOne, cityUrlWithFieldStringIdTwo } =
     singleCityWithField
+const { cityUrlWithSubFieldStringIdOne, cityUrlWithSubFieldStringIdTwo } =
+    singleCityWithSubField
 
 export const handlers = [
     // SingleState id#1
@@ -99,5 +104,13 @@ export const handlers = [
     // SingleCityWithSingleField id#1
     http.get(singleCityWithSingleFieldUrlStringTwo, async () => {
         return HttpResponse.json(cityUrlWithFieldStringIdTwo)
+    }),
+    // SingleCityWithSubField id#1
+    http.get(singleCitySubFieldUrl, async () => {
+        return HttpResponse.json(cityUrlWithSubFieldStringIdOne)
+    }),
+    // SingleCityWithSubfield id#2
+    http.get(singleCitySubFieldUrlTwo, async () => {
+        return HttpResponse.json(cityUrlWithSubFieldStringIdTwo)
     }),
 ]
