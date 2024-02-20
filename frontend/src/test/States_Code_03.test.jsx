@@ -7,7 +7,7 @@ import { stateUrlParserOpts } from '../utils/url_parser_opts'
 import { delay } from '../utils/general_utils'
 
 describe('Code component', () => {
-    it('renders states data with field and is interacted with as expected', async () => {
+    it('renders states data with sub-field and is interacted with as expected', async () => {
         const user = userEvent.setup()
         const { singleStateWithSubFieldUrl, stateSubFields } =
             stateUrlParserOpts
