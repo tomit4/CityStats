@@ -29,10 +29,6 @@ const singleCityWithQueryUrlString = import.meta.env.VITE_SINGLE_CITY_QUERY
 const singleCityWithQueryUrlStringTwo = import.meta.env.VITE_SINGLE_CITY_QUERY_2
 
 // Mocked Data
-/* TODO:
- * mock error response for https://citystats.xyz/states/
- * & https://citystats.xyz/cities/
- */
 // State
 const {
     singleState,
