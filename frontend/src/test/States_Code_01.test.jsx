@@ -28,7 +28,7 @@ describe('Code component', () => {
         expect(screen.getByLabelText(/python/i)).toBeDefined()
         expect(screen.getByLabelText(/node/i)).toBeDefined()
 
-        // Test URL Input
+        // Test URL Input Interaction
         const urlInput = screen.getByTestId('url-input')
         await user.click(urlInput)
         await user.keyboard('[Backspace>]')
@@ -40,9 +40,7 @@ describe('Code component', () => {
         expect(urlInput).toHaveValue('https://citystats.xyz/states/2')
 
         // Test handleBackSpace function
-        await user.keyboard('[Backspace>]')
-        await user.keyboard('[Backspace>]')
-        await user.keyboard('[Backspace>]')
+        for (let i = 0; i < 3; i++) await user.keyboard('[Backspace>]')
         expect(urlInput).toHaveValue('https://citystats.xyz/states/')
 
         // Wait for error message to be displayed

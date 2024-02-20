@@ -205,6 +205,18 @@ const mockReturns = {
                 },
             },
         ],
+        stateUrlWithFieldStringIdTwo: [
+            {
+                id: 2,
+                state_name: 'Alaska',
+                state_abbreviation: 'AK',
+                area: {
+                    total: '663268 sq mi',
+                    land: '571951 sq mi',
+                    water: '91316 sq mi',
+                },
+            },
+        ],
     },
     singleCity: {
         cityUrlStringIdOne: [
