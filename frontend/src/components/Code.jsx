@@ -104,11 +104,11 @@ const Code = props => {
         const newUrl = inputRef.current.value
         const lastField = newUrl.split('/')[newUrl.split('/').length - 1]
         if (fields.length && !fields.includes(lastField))
-            setErrMsg('Field is not part of API')
+            setErrMsg(`Field is not part of API :=> ${lastField}`)
         if (subFields.length && !subFields.includes(lastField))
-            setErrMsg('Queried subfield is not part of API')
+            setErrMsg(`Queried subfield is not part of API :=> ${lastField}`)
         if (!_isValidUrl(regex, newUrl, minLength))
-            setErrMsg('Url is not valid!')
+            setErrMsg(`Url is not valid! :=> ${newUrl}`)
         setUrl(newUrl)
     }, 500)
 

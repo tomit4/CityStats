@@ -218,6 +218,75 @@ const mockReturns = {
             },
         ],
     },
+    singleStateWithSubField: {
+        stateUrlWithSubFieldStringIdOne: [
+            {
+                id: 1,
+                state_name: 'Alabama',
+                state_abbreviation: 'AL',
+                government: {
+                    senators: [
+                        {
+                            senator_name: 'Tommy Tuberville',
+                            img_url:
+                                'https://www.citystats.xyz/images/states/1/senators/1',
+                        },
+                        {
+                            senator_name: 'Katie Britt',
+                            img_url:
+                                'https://www.citystats.xyz/images/states/1/senators/2',
+                        },
+                    ],
+                },
+            },
+        ],
+        stateUrlWithSubFieldStringIdTwo: [
+            {
+                id: 1,
+                state_name: 'Alabama',
+                state_abbreviation: 'AL',
+                government: {
+                    house_delegates: [
+                        {
+                            delegate_name: 'Jerry Carl',
+                            img_url:
+                                'https://citystats.xyz/images/states/1/delegates/1',
+                        },
+                        {
+                            delegate_name: 'Barry Moore',
+                            img_url:
+                                'https://citystats.xyz/images/states/1/delegates/2',
+                        },
+                        {
+                            delegate_name: 'Mike Rogers',
+                            img_url:
+                                'https://citystats.xyz/images/states/1/delegates/3',
+                        },
+                        {
+                            delegate_name: 'Robert Aderholt',
+                            img_url:
+                                'https://citystats.xyz/images/states/1/delegates/4',
+                        },
+                        {
+                            delegate_name: 'Dale Strong',
+                            img_url:
+                                'https://citystats.xyz/images/states/1/delegates/5',
+                        },
+                        {
+                            delegate_name: 'Gary Palmer',
+                            img_url:
+                                'https://citystats.xyz/images/states/1/delegates/6',
+                        },
+                        {
+                            delegate_name: 'Terri Sewell',
+                            img_url:
+                                'https://citystats.xyz/images/states/1/delegates/7',
+                        },
+                    ],
+                },
+            },
+        ],
+    },
     singleCity: {
         cityUrlStringIdOne: [
             [
