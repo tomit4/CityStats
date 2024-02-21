@@ -87,7 +87,8 @@ repository and I will do my best to address it in a timely manner.
 -   [ ] Fix small UI bugs on mobile (i.e. splash title is slightly to right and
         too far towards the bottom of screen on both firefox and chromium, also
         footer icons clip towards right on both firefox and chromium, also on
-        chromium "node" tab is pushed down over code block).
+        chromium "node" tab is pushed down over code block, see chromium at
+        312px wide and you'll witness the issues with tabs and icons).
 -   [ ] Completely rewrite this README.md (except for V3 TODOS below)
 
 **Frontend:**
