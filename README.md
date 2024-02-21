@@ -82,8 +82,12 @@ repository and I will do my best to address it in a timely manner.
 
 **Fullstack:**
 
--   [ ] Once Frontend is dockerized, backend is updated, deploy application to
+-   [x] Once Frontend is dockerized, backend is updated, deploy application to
         Linode/Akamai instance and test if app is working as expected.
+-   [ ] Fix small UI bugs on mobile (i.e. splash title is slightly to right and
+        too far towards the bottom of screen on both firefox and chromium, also
+        footer icons clip towards right on both firefox and chromium, also on
+        chromium "node" tab is pushed down over code block).
 -   [ ] Completely rewrite this README.md (except for V3 TODOS below)
 
 **Frontend:**
@@ -97,7 +101,7 @@ repository and I will do my best to address it in a timely manner.
         refactor/unit tests)
 -   [x] Rewrite citystats.xyz routes to work with localhost in development mode
         (requires use of VITE .env variables)
--   [ ] Dockerize frontend with NGINX.
+-   [x] Dockerize frontend with NGINX.
 
 **Backend:**
 
