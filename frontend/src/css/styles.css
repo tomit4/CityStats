@@ -321,8 +321,11 @@ input {
 *********************/
 @font-face {
     font-family: 'Raleway';
-    src: url('../src/assets/fonts/raleway/Raleway-Regular.ttf')
-        format('truetype');
+    /* DEV */
+    /* src: url('../src/assets/fonts/raleway/Raleway-Regular.ttf') */
+    /* format('truetype'); */
+    /* PROD */
+    src: url('./fonts/raleway/Raleway-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

@@ -22,11 +22,21 @@ const ThemeSelector = ({ children }) => {
         setPrefersDark(prevDarkTheme => !prevDarkTheme)
         /* NOTE: Hacky workaround to get prismjs stylesheets to
          * toggle on and off depending on dark/light mode (see ./README.md) */
+        /* DEV */
+        /*
         if (document.styleSheets.length === 5)
             document.styleSheets[4].disabled = true
         if (document.styleSheets.length === 6) {
             document.styleSheets[5].disabled = document.styleSheets[4].disabled
             document.styleSheets[4].disabled = !document.styleSheets[4].disabled
+        }
+        */
+        /* PROD */
+        if (document.styleSheets.length === 2)
+            document.styleSheets[1].disabled = true
+        if (document.styleSheets.length === 3) {
+            document.styleSheets[2].disabled = document.styleSheets[1].disabled
+            document.styleSheets[1].disabled = !document.styleSheets[1].disabled
         }
         document.documentElement.setAttribute(
             'data-citystats-theme',
