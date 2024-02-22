@@ -31,7 +31,6 @@ const Code = props => {
     const [lang, setLang] = useState('language-json')
     const [url, setUrl] = useState(string)
     const [errMsg, setErrMsg] = useState('')
-    const { hostname, pathname } = new URL(url)
     const { bashCode, pythonCode, javascriptCode } = codeSnippets
     const prismPre = useRef(null)
     const prismCode = useRef(null)
@@ -56,22 +55,23 @@ const Code = props => {
     }, [props])
 
     const _displayCodeBlock = useCallback(
-        lang => {
+        (lang, hostname, pathname) => {
             if (lang === 'language-bash') return setReturnCode(bashCode(url))
             if (lang === 'language-python')
                 return setReturnCode(pythonCode(url))
             if (lang === 'language-javascript')
                 return setReturnCode(javascriptCode(hostname, pathname))
         },
-        [bashCode, pythonCode, javascriptCode, url, hostname, pathname],
+        [bashCode, pythonCode, javascriptCode, url],
     )
 
     useEffect(() => {
-        if (lang !== 'language-json') return _displayCodeBlock(lang)
         const getEntity = async () => {
             try {
+                const { hostname, pathname } = new URL(url)
+                if (lang !== 'language-json')
+                    return _displayCodeBlock(lang, hostname, pathname)
                 if (errMsg.length) throw new Error(errMsg)
-                if (!url.length) throw new Error('Url string cannot be empty!')
                 const cachedData = localStorage.getItem(`${entity}-${url}`)
                 if (cachedData) {
                     const parsedData = JSON.parse(cachedData)
@@ -94,7 +94,7 @@ const Code = props => {
             }
         }
         getEntity()
-    }, [_displayCodeBlock, errMsg, entity, url, hostname, pathname, lang])
+    }, [_displayCodeBlock, errMsg, entity, url, lang])
 
     const _isValidUrl = (urlPattern, inputUrl, minLength) => {
         return inputUrl.length >= minLength && urlPattern.test(inputUrl)
