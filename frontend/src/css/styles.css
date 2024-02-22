@@ -218,6 +218,22 @@ input {
     width: 80vw;
     max-width: 54em;
 }
+
+/*********************
+ * NOT FOUND PAGE
+*********************/
+.not-found-container {
+    width: 45rem;
+    height: 48vh;
+    text-align: center;
+    font-size: 150%;
+    margin-top: 20vh;
+}
+.not-found-sub {
+    margin-top: 0.25em;
+    text-decoration: none;
+}
+
 /*********************
  * MEDIA QUERIES
 *********************/
@@ -316,6 +332,13 @@ input {
     p {
         margin-left: auto;
         width: 82vw;
+    }
+    .not-found-container {
+        width: 20rem;
+        height: 17.25em;
+        margin-top: 3em;
+        margin-left: -0.75em;
+        padding: 2em;
     }
 }
 
