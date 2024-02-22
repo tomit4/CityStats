@@ -1,6 +1,6 @@
+<img alt="logo" src="https://raw.githubusercontent.com/tomit4/CityStats/main/readme_assets/building.png">
 <h1 align="center">CityStats</h1>
 <h2 align="center">Get Statistics On US States And Cities</h2>
-<img alt="logo" src="https://raw.githubusercontent.com/tomit4/CityStats/main/readme_assets/building.svg">
 
 ## Introduction
 
