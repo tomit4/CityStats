@@ -1,7 +1,6 @@
-# City_Stats_V2
-
-test
-:construction: This repository is currently under heavy construction.
+<h1 align="center">CityStats</h1>
+<h2 align="center">Get Statistics On US States And Cities</h2>
+<img alt="logo" src="https://raw.githubusercontent.com/tomit4/CityStats/main/readme_assets/building.svg">
 
 ## Introduction
 
