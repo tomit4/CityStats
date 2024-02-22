@@ -143,11 +143,12 @@ aside > p[data-citystats-theme='true'] {
 /* Mobile Only */
 @media (max-width: 35em) {
     .container {
-        margin: 0 0.25rem;
-        margin-top: 1em;
+        margin: 0 0.5rem;
+        margin-top: -1em;
         width: 95vw;
     }
     h1.title {
+        margin: 0 -0.25em;
         font-size: 400%;
     }
     span.subtitle {
