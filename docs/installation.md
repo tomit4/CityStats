@@ -40,6 +40,12 @@ As long as you have followed the [web scraping instructions](https://github.com/
 
 **Starting The Server**
 
+Prior to starting the server. You'll need to adjust the environment variables by
+copying the sample `.env.sample` file as .env (do not commit this file!!). While
+you can leave it as is, you can also adjust the `PORT` variable for whichever
+port you wish to run the local dev server on. The `DOCKERPORT` is utilized more
+for use once ready for production.
+
 The hard part being done now, you'll simply want to start the server using:
 
 ```bash
@@ -54,3 +60,110 @@ npm run dev
 ```
 
 ##### Frontend
+
+**Installing Dependencies**
+
+Very much like the backend, once in the root of the project directory, navigate
+to the `frontend` directory and install dependcies using `npm`:
+
+```bash
+cd frontend && npm install
+```
+
+**Small Inconveniences**
+
+As you are probably aware from looking at this project, CityStats is written by
+a new JavaScript developer. As such, there are some inconveniences with the
+adjustment of the project's specific variables based off of whether working in
+Production or Development. To address these inconveniences, you'll need to
+adjust the following lines of code within two specific files:
+
+```javascript
+// /src/ThemeSelector.jsx, line 25
+/* DEV */
+/*
+        if (document.styleSheets.length === 5)
+            document.styleSheets[4].disabled = true
+        if (document.styleSheets.length === 6) {
+            document.styleSheets[5].disabled = document.styleSheets[4].disabled
+            document.styleSheets[4].disabled = !document.styleSheets[4].disabled
+        }
+        */
+/* PROD */
+if (document.styleSheets.length === 2) document.styleSheets[1].disabled = true
+if (document.styleSheets.length === 3) {
+    document.styleSheets[2].disabled = document.styleSheets[1].disabled
+    document.styleSheets[1].disabled = !document.styleSheets[1].disabled
+}
+```
+
+And also:
+
+```css
+/* /src/css/styles.css, line 327 */
+/* DEV */
+/* src: url('../src/assets/fonts/raleway/Raleway-Regular.ttf') */
+/* format('truetype'); */
+/* PROD */
+src: url('./fonts/raleway/Raleway-Regular.ttf') format('truetype');
+```
+
+In each of these comment out the PROD lines displayed, and uncomment the DEV
+lines. I do apologize for the inconvenience, but at the time of this writing, I
+was unable to ascertain the best practice for easily switching between these
+inconsistencies between running dev and production.
+
+**Environment Variables**
+
+Unlike the backend, the frontend utilizes a large series of environment
+variables to parse and verify the user's input when interacting with the url
+inputs. The `env.sample` file provides these environment variables that actually
+will reach out to the official CityStats API. Should you wish to use your own
+locally run backend dev server, the `env.sample.local` file is provided for you
+to utilize instead. Whichever one you wish to use, simply copy that file as your
+`.env` file prior to starting the dev server.
+
+**Starting the Dev Server**
+
+Once done adjusting the appropriate variables, you're ready to simply run the
+frontend server using `npm` from the `frontend` directory:
+
+```bash
+npm run dev
+```
+
+CityStats uses Vite under the hood. It should provide you with the local address
+and port number (usually localhost:5173) you can bring up in your browser to
+view the locally run server.
+
+##### Containerizing for Production
+
+When ready for production, CityStats is run virtually through docker containers.
+The use of docker and is various intricacies is outside the scope of this
+document, and it is assumed you have a basic understanding on how to use docker
+and forward the exposed ports to a reverse proxy/http server like NGINX.
+
+Should you wish to spin up docker containers, be mindful of the `DOCKERPORT`
+environment variables in both the `backend` and `frontend` .env files as you'll
+want to ensure they do not interfere with other docker containers you have
+running or each other.
+
+The `package.json` files in both the `backend` and `frontend` directories
+provide a `build` and `destroy` script that allows you to quickly spin up or
+spin down docker containers in each like so:
+
+```bash
+# spin up the docker containers
+npm run build
+```
+
+And also:
+
+```bash
+# spin down the docker containers
+npm run destroy
+```
+
+Afterwards which, it is up to you to discern how best to utilize these
+containers. CityStats utilizes NGINX in conjunction with these containers to
+reverse proxy the backend API server and the frontend to the web.

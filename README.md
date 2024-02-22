@@ -13,6 +13,12 @@ CityStats is a simple Read Only REST API that delivers statistics about all 50 s
 within the United States of America as well as the top 330 most populated cities
 within the United States.
 
+#### Why CityStats?
+
+CityStats was made so that programmers and students could easily acquire and
+parse publicly available data on US states and cities. While there are many
+online resources for acquiring this data, the creator of CityStats, [Brian Hayes](https://brianhayes.dev), desired to have an interface that could quickly grab this data.
+
 #### Getting Started
 
 :memo: Official Online Documentation can on the basics can be found at the
@@ -296,8 +302,20 @@ indicated by their `img_url` field having a `null` value.
 
 Please see the [Installation Documentation](https://github.com/tomit4/CityStats/docs/installation.md)
 
-#### Contributing
+#### Forking This Project
 
 CityStats code is open sourced under the BSD 3-Clause License. Should you wish
 to fork the project, contribute to the project, or make any modifications,
-please feel free to do so by opening up an issue and/or making a pull request.
+please feel free to do so (although attribution of credit is appreciated).
+
+#### Disclaimer
+
+The information provided by the CityStats API is for informational purposes only. While we strive to ensure the accuracy and reliability of the data, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the API or the information contained therein. Any reliance you place on such information is therefore strictly at your own risk. In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this API. By using the CityStats API, you acknowledge and agree that the data provided may contain inaccuracies or errors, and you are solely responsible for any actions you take based on the information obtained through the API. We disclaim any responsibility for the accuracy or reliability of the data and shall not be held liable for any damages resulting from the use of or inability to use the API. Furthermore, please note that the CityStats API is provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. We reserve the right to modify, suspend, or discontinue the API at any time without prior notice. Your use of the API constitutes acceptance of these terms and conditions. This API is licensed under the [BSD-3-Clause-Clear license](https://spdx.org/licenses/BSD-3-Clause-Clear.html).
+
+### Conclusion
+
+Should you have any constructive criticism, feedback, or just want to reach out,
+please feel free to do so through any of the social media links or my email, which
+you can find on [my website](https://brianhayes.dev). Furthermore, if you would like
+to contribute to the CityStats project, please feel free to reach out by opening up
+an issue and/or making a pull request. I do hope you find CityStats useful. :peace_symbol:
