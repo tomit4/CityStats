@@ -45,7 +45,6 @@
     width: 20rem;
     flex-direction: column;
     list-style: none;
-    padding: 0;
     position: fixed;
     height: 100vh;
     padding-left: 1rem;
@@ -316,6 +315,7 @@ input:checked + .slider:before {
 /* Mobile Only */
 @media (max-width: 35em) {
     .primary-navigation {
+        padding-left: 0;
         width: 80%;
     }
     .nav-menu-title,
