@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build && cp -r src/assets/fonts dist/assets/fonts && docker compose -f docker-compose.yml up -d",
+        "destroy": "docker compose -f docker-compose.yml down && docker image rm frontend-citystatsinfo",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
         "test": "vitest run --coverage --silent"

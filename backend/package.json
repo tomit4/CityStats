@@ -6,6 +6,8 @@
     "scripts": {
         "dev": "nodemon server",
         "start": "node server",
+        "build": "docker-compose -f docker-compose.yml up -d",
+        "destroy": "docker-compose -f docker-compose.yml down && docker image rm citystats",
         "knex": "knex",
         "km-make": "knex migrate:make",
         "km-up": "rm ./db/city_stats.db && knex migrate:latest",
