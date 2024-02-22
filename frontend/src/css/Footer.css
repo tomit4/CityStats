@@ -124,4 +124,29 @@ a.inline-link[data-citystats-theme='true'] {
     .footer-links-text {
         display: none;
     }
+    #email-icon,
+    #email-icon[data-citystats-theme='true'] {
+        width: 102%;
+    }
+
+    #git-icon,
+    #git-icon[data-citystats-theme='true'] {
+        width: 105%;
+    }
+
+    #linkedin-icon,
+    #linkedin-icon[data-citystats-theme='true'] {
+        width: 106%;
+    }
+
+    #blog-icon,
+    #blog-icon[data-citystats-theme='true'] {
+        width: 105%;
+    }
+
+    #mastodon-icon,
+    #mastodon-icon[data-citystats-theme='true'] {
+        width: 104%;
+        margin-bottom: 0;
+    }
 }
