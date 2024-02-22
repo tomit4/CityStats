@@ -1,6 +1,5 @@
-/* v8 ignore next 8 */
-// TODO: Change above number once done editing file:
-import '../css/Splash.css'
+/* v8 ignore next 18 */
+import '../css/styles.css'
 
 export default function NotFound() {
     return (
