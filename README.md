@@ -4,123 +4,300 @@
 <h1 align="center">CityStats</h1>
 <h2 align="center">Get Statistics On US States And Cities</h2>
 
-## Introduction
+### Introduction
 
+CityStats is a minimal API for accessing data on all 50 US States and the top 330 most populous US Cities. Publicly available to all, CityStats aims to provide up to date data and statistics in a programmatically-accessible format that can be utilized and integrated into educational and research projects.
+
+Aggregating and integrating data from multiple local government websites as well as publicly available resources like [Wikipedia](https://wikipedia.org), CityStats provides it's user with a simple API with which to interface using their programming language of choice.
 CityStats is a simple Read Only REST API that delivers statistics about all 50 states
 within the United States of America as well as the top 330 most populated cities
 within the United States.
 
-**Getting Started**
+#### Getting Started
 
-:construction: Official Online Documentation is still in development. Keep an
-eye out for https://citystats.info where official documentation will eventually
-find its home.
+:memo: Official Online Documentation can on the basics can be found at the
+[Official CityStats Info Website](https://citystats.info). While not all use
+cases are covered, CityStats (as mentioned earlier) is very minimal and is very
+easy to understand.
 
-To grab a general overview of what is available. Please visit one of the two
-following root endpoints:
+**Basic Queries**
 
--   https://citystats.xyz/states
--   https://citystats.xyz/cities
+For example if you wish to grab all information available on the state of
+Alabama, one could simply visit `https://citystats.xyz/states/1` or `https://citystats.xyz/states/Alabama`. Grabbing this data via the standard `curl` command is straight-forward:
 
-This will provide you with the majority of the data available including
-information about each state/city including fields such as square footage,
-population, politician names, and more. Subfields can be added to the URL string
-to gain more fine grained details from the API, such as:
+```bash
+curl "https://citystats.xyz/states/1" -H "Accept: application/json" | jq
+```
 
--   https://citystats.xyz/states/1
+This will return the following JSON:
 
-Which will return to you information only about the first state within the
-data set. If you wish to query information by state name, that is also available
-by adjusting the URl query string like so:
+```json
+[
+    {
+        "id": 1,
+        "state_name": "Alabama",
+        "state_abbreviation": "AL",
+        "date_admitted": "1819-12-14T00:00:00.000Z",
+        "capital": "Montgomery",
+        "largest_city": "Huntsville",
+        "elevation": "500 ft",
+        "time_zone": "UTC-6(CST)",
+        "latitude": "30°11' N to 35° N",
+        "longitude": "84°53' W to 88°28' W",
+        "url": "https://www.alabama.gov/",
+        "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Alabama.svg",
+        "insignia_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Seal_of_Alabama.svg",
+        "area": {
+            "total": "52419 sq mi",
+            "land": "50744 sq mi",
+            "water": "1675 sq mi"
+        },
+        "population": {
+            "total": "5039877",
+            "density": "99.1/sq mi",
+            "median_household_income": "$52000"
+        },
+        "government": {
+            "governor": {
+                "governor_name": "Kay Ivey",
+                "img_url": "https://citystats.xyz/images/states/1/governor"
+            },
+            "senators": [
+                {
+                    "senator_name": "Tommy Tuberville",
+                    "img_url": "https://www.citystats.xyz/images/states/1/senators/1"
+                },
+                {
+                    "senator_name": "Katie Britt",
+                    "img_url": "https://www.citystats.xyz/images/states/1/senators/2"
+                }
+            ],
+            "house_delegates": [
+                {
+                    "delegate_name": "Jerry Carl",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/1"
+                },
+                {
+                    "delegate_name": "Barry Moore",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/2"
+                },
+                {
+                    "delegate_name": "Mike Rogers",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/3"
+                },
+                {
+                    "delegate_name": "Robert Aderholt",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/4"
+                },
+                {
+                    "delegate_name": "Dale Strong",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/5"
+                },
+                {
+                    "delegate_name": "Gary Palmer",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/6"
+                },
+                {
+                    "delegate_name": "Terri Sewell",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/7"
+                }
+            ]
+        }
+    }
+]
+```
 
--   https://citystats.xyz/states/Alabama
+**Query By Field**
 
-**Query Specifics**
+One can also grab more specified data about each particular state or city, like it's
+government or total area. Take this code snippet in python for example, that
+grabs all the government data on Alabama:
 
-The query string for states or cities can be adjusted to accept the name of the
-state/city. Should the state/city name have multi-word, please note that the
-API's formatting requries the use of underscores instead of spaces, like so:
+```python
+import requests
+import json
 
--   https://citystats.xyz/cities/Los_Angeles
+url = https://citystats.xyz/states/1/government
+headers = {"Accept": "application/json}
 
-Should a city name have multiple references by that name within the data set,
-all cities with that name will be returned, as is the case for example,
-with the city name Aurora:
+response = requests.get(url, headers=headers)
 
--   https://citystats.xyz/cities/Aurora
+if response.status_code == 200:
+    data = response.json()
+    formatted_data = json.dumps(data, indent=4)
+    print(formatted_data)
+else:
+    print("Failed to fetch data:", response.status_code)
+```
 
-The query can become increasingly granular, as each subsequent forward slash
-within the URL string can further specify the specific data you wish to
-retrieve:
+Invoking such a Python script would return the following JSON:
 
--   https://citystats.xyz/states/1/area
--   https://citystats.xyz/states/1/area/total
--   https://citystats.xyz/states/Alabama/government
--   https://citystats.xyz/states/Alabama/government/senators
--   https://citystats.xyz/states/Alabama/government/senators/1
+```json
+[
+    {
+        "id": 1,
+        "state_name": "Alabama",
+        "state_abbreviation": "AL",
+        "government": {
+            "governor": {
+                "governor_name": "Kay Ivey",
+                "img_url": "https://citystats.xyz/images/states/1/governor"
+            },
+            "senators": [
+                {
+                    "senator_name": "Tommy Tuberville",
+                    "img_url": "https://www.citystats.xyz/images/states/1/senators/1"
+                },
+                {
+                    "senator_name": "Katie Britt",
+                    "img_url": "https://www.citystats.xyz/images/states/1/senators/2"
+                }
+            ],
+            "house_delegates": [
+                {
+                    "delegate_name": "Jerry Carl",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/1"
+                },
+                {
+                    "delegate_name": "Barry Moore",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/2"
+                },
+                {
+                    "delegate_name": "Mike Rogers",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/3"
+                },
+                {
+                    "delegate_name": "Robert Aderholt",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/4"
+                },
+                {
+                    "delegate_name": "Dale Strong",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/5"
+                },
+                {
+                    "delegate_name": "Gary Palmer",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/6"
+                },
+                {
+                    "delegate_name": "Terri Sewell",
+                    "img_url": "https://citystats.xyz/images/states/1/delegates/7"
+                }
+            ]
+        }
+    }
+]
+```
+
+**Query By SubField**
+
+We can get even more specific data by tacking on another subfield to our query.
+This time, we'll utilize NodeJS to grab all of Alabama's senators:
+
+```javascript
+const https = require('https')
+const util = require('util')
+
+const options = {
+    hostname: 'citystats.xyz',
+    path: '/states/1/government/senators',
+    method: 'GET',
+    headers: {
+        Accept: 'application/json',
+    },
+}
+
+const req = https.request(options, res => {
+    let data = ''
+
+    res.on('data', chunk => {
+        data += chunk
+    })
+
+    res.on('end', () => {
+        try {
+            const jsonData = JSON.parse(data)
+            console.log(util.inspect(jsonData, { colors: true, depth: null }))
+        } catch (error) {
+            console.error('Error parsing JSON:', error.message)
+        }
+    })
+})
+
+req.on('error', error => {
+    console.error('Error fetching data:', error.message)
+})
+
+req.end()
+```
+
+Running this script will give us the following JSON:
+
+```json
+[
+    {
+        "id": 1,
+        "state_name": "Alabama",
+        "state_abbreviation": "AL",
+        "government": {
+            "senators": [
+                {
+                    "senator_name": "Tommy Tuberville",
+                    "img_url": "https://www.citystats.xyz/images/states/1/senators/1"
+                },
+                {
+                    "senator_name": "Katie Britt",
+                    "img_url": "https://www.citystats.xyz/images/states/1/senators/2"
+                }
+            ]
+        }
+    }
+]
+```
+
+**Query By Id**
+
+Additionally, if we wish only to grab one specific senator, we can do so by
+appending their specific index/id number to the end of the url like so:
+
+```bash
+curl "https://citystats.xyz/states/1/government/senators/1" -H "Accept: application/json" | jq
+```
+
+Which, of course, yields us the following JSON output:
+
+```json
+[
+    {
+        "id": 1,
+        "state_name": "Alabama",
+        "state_abbreviation": "AL",
+        "government": {
+            "senator": {
+                "senator_name": "Tommy Tuberville",
+                "img_url": "https://www.citystats.xyz/images/states/1/senators/1"
+            }
+        }
+    }
+]
+```
 
 **Images**
 
-Additionally, images of specific government representatives, such as senators,
-house delegates, governors, mayors, and city councilmembers are all
-available via the images routes:
+CityStats Also hosts images for government officials such as senators, house
+delegates, mayor, city council members, etc. Each of these can be found at the
+/images subdirectory of the `citystats.xyz` domain, followed by either `states` or
+`cities` subdirectory, as well as their ids, etc. Once you find a specific
+`img_url` field within the API, utilizing tools like `wget`, `curl`, or simply
+downloading the image directly from your browser will download the image. Please
+note that not all images are available for certain government officials,
+indicated by their `img_url` field having a `null` value.
 
--   https://citystats.xyz/images/states/1/governor
--   https://citystats.xyz/images/states/1/senators/1
--   https://citystats.xyz/images/states/1/delegates/2
--   https://www.citystats.xyz/images/cities/10/mayor
--   https://www.citystats.xyz/images/cities/10/city_council/6
+#### Installation
 
-**Periodic Updates**
+Please see the [Installation Documentation](https://github.com/tomit4/CityStats/docs/installation.md)
 
-This API is updated utilizing a series of Python Beautiful Soup Web Scraping
-scripts which periodically bring in new names/images from Wikipedia as well as
-Official Government Websites. This is an imperfect method of bringing in new
-information, and while some automation has been implemented, if you notice any
-inaccuracies in any of the data, please feel free to create an issue in this
-repository and I will do my best to address it in a timely manner.
+#### Contributing
 
-#### TODO:
-
-**Fullstack:**
-
--   [x] Once Frontend is dockerized, backend is updated, deploy application to
-        Linode/Akamai instance and test if app is working as expected.
--   [ ] Fix small UI bugs on mobile (i.e. splash title is slightly to right and
-        too far towards the bottom of screen on both firefox and chromium, also
-        footer icons clip towards right on both firefox and chromium, also on
-        chromium "node" tab is pushed down over code block, see chromium at
-        312px wide and you'll witness the issues with tabs and icons).
--   [ ] Completely rewrite this README.md (except for V3 TODOS below)
-
-**Frontend:**
-
--   [x] Use React to dynamically render an example page
--   [x] Use React-Router for ease of dynamically rendering different components
-        (follow [tutorial](https://reactrouter.com/en/main/start/tutorial) to quickly get up to speed).
--   [x] Use React to Write a Documentation page demonstrating usage of API with node, fetch, curl, and python
--   [x] Model frontend off of classic simple Apis like [I Can Haz Dad Joke](https://icanhazdadjoke.com/) and [The Star Wars API](https://swapi.dev/).
--   [ ] See frontend/README.md for details on remaining tasks (i.e.
-        refactor/unit tests)
--   [x] Rewrite citystats.xyz routes to work with localhost in development mode
-        (requires use of VITE .env variables)
--   [x] Dockerize frontend with NGINX.
-
-**Backend:**
-
--   [ ] Investigate how you can achieve 90% code coverage on backend unit tests.
--   [ ] Rerun web scraping scripts, address errors, and update backend db.
-
-**TODO for 3.0:**
-
--   [ ] Reimplement both front and back ends in TypeScript (shouldn't be TOO hard,
-        right? ...)
--   [ ] Implement Authenticaton utilizing API keys and Brevo Transactional Emails
-        for signing up.
--   [ ] Serve Images outside of node via NGINX, S3, or a CDN, see [this helpful link on node best
-        practices](https://github.com/goldbergyoni/nodebestpractices#1-project-architecture-practices)
--   [ ] Consider reimplementing this as a trpc API instead of a Rest API, which
-        will work better with typescript/zod validation, etc. trpc has [an
-        adaptor](https://trpc.io/docs/server/adapters/fastify) that integrates well with fastify.
--   [ ] Consider a faster http request library in your python scripts. See
-        [ArjanCodes video on the subject](https://www.youtube.com/watch?v=OPyoXx0yA0I&pp=ygUKYXJqYW5jb2Rlcw%3D%3D)
+CityStats code is open sourced under the BSD 3-Clause License. Should you wish
+to fork the project, contribute to the project, or make any modifications,
+please feel free to do so by opening up an issue and/or making a pull request.
