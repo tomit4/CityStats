@@ -71,6 +71,7 @@ const Code = props => {
         const getEntity = async () => {
             try {
                 if (errMsg.length) throw new Error(errMsg)
+                if (!url.length) throw new Error('Url string cannot be empty!')
                 const cachedData = localStorage.getItem(`${entity}-${url}`)
                 if (cachedData) {
                     const parsedData = JSON.parse(cachedData)
@@ -102,7 +103,6 @@ const Code = props => {
     const handleChange = debounce(() => {
         setErrMsg('')
         const newUrl = inputRef.current.value
-        if (!newUrl.length) setErrMsg('Url Input Cannot Be Empty')
         const lastField = newUrl.split('/')[newUrl.split('/').length - 1]
         if (fields.length && !fields.includes(lastField))
             setErrMsg(`Field is not part of API :=> ${lastField}`)
