@@ -300,7 +300,7 @@ indicated by their `img_url` field having a `null` value.
 
 #### Installation
 
-Please see the [Installation Documentation](https://github.com/tomit4/CityStats/docs/installation.md)
+Please see the [Installation Documentation](./docs/installation.md)
 
 #### Forking This Project
 
