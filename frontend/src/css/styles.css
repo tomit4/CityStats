@@ -307,6 +307,9 @@ input {
         width: 82vw;
         margin: 1em auto;
     }
+    label.tabbed-set-label {
+        padding: 0 0.5em;
+    }
     h4 {
         margin-bottom: 0.75em;
     }
