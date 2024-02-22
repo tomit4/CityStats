@@ -102,6 +102,7 @@ const Code = props => {
     const handleChange = debounce(() => {
         setErrMsg('')
         const newUrl = inputRef.current.value
+        if (!newUrl.length) setErrMsg('Url Input Cannot Be Empty')
         const lastField = newUrl.split('/')[newUrl.split('/').length - 1]
         if (fields.length && !fields.includes(lastField))
             setErrMsg(`Field is not part of API :=> ${lastField}`)
