@@ -6,7 +6,8 @@ coverage
 *.vim
 *.jpg
 *.jpeg
-*.png
+frontend/**/*.png
+backend/**/*.png
 *.otf
 *.zip
 *.ttf
