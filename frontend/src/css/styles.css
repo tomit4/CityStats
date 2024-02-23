@@ -65,7 +65,7 @@ h4 {
 h1,
 h2 {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     text-align: center;
     width: 45rem;
