@@ -17,7 +17,7 @@ install the dependencies using npm. If you don't have node or npm installed,
 you'll have to follow the [Installation Guide from the Official Website](https://nodejs.org/en/download).
 
 Once you have nodejs and npm installed. Navigate into the `backend` directory
-and run:
+and run the install alias:
 
 ```bash
 cd backend && npm install
@@ -26,7 +26,7 @@ cd backend && npm install
 **Web Scraping And Populating The Database**
 
 Once all dependencies have been installed. You'll need to populate the database
-with the appropriate data. CityStats utilizes the [Beautiful Soup Python Library](https://beautiful-soup-4.readthedocs.io/en/latest/) to web scrape Wikipedia and various other official City Government websites to gather it's data. Web scraping is unfortunately, an inefficient way of gathering data, but the python scripts provided should gather data effectively as of early 2024. There are a few websites that are not scrapable, however, and the scripts should provide you with a log to help you ascertain which sites you will have to manually gather data from and parse into JSON. For further instructions on running the web scraping scripts, see the provided [instructions](https://github.com/tomit4/CityStats/blob/main/backend/scripts/readme.md).
+with the appropriate data. CityStats utilizes the [Beautiful Soup Python Library](https://beautiful-soup-4.readthedocs.io/en/latest/) to web scrape Wikipedia and various other official City Government websites to gather it's data. Web scraping is unfortunately, an inefficient way of gathering data, but the python scripts provided should do so effectively as of early 2024. There are a few websites that are not scrapable, however, and the scripts should provide you with a log to help you ascertain which sites you will have to manually gather data from and parse into JSON. For further instructions on running the web scraping scripts, see the provided [instructions](https://github.com/tomit4/CityStats/blob/main/backend/scripts/readme.md).
 
 Once the web scraping scripts have completed, you'll need to populate the database with the appropriate data. This is accomplished using two npm aliases provided in the backend's `package.json`. Simply run:
 
@@ -36,15 +36,15 @@ npm run km-up && npm run ks-reseed
 
 From the root of the `backend` directory.
 
-As long as you have followed the [web scraping instructions](https://github.com/tomit4/CityStats/blob/main/backend/scripts/readme.md) correctly, the SQLite database will be populate appropriately.
+As long as you have followed the [web scraping instructions](https://github.com/tomit4/CityStats/blob/main/backend/scripts/readme.md) correctly, the SQLite database will be populated appropriately.
 
 **Starting The Server**
 
 Prior to starting the server. You'll need to adjust the environment variables by
 copying the sample `.env.sample` file as .env (do not commit this file!!). While
 you can leave it as is, you can also adjust the `PORT` variable for whichever
-port you wish to run the local dev server on. The `DOCKERPORT` is utilized more
-for use once ready for production.
+port you wish to run the local dev server on. The `DOCKERPORT` variable is to be utilized
+once ready for production.
 
 The hard part being done now, you'll simply want to start the server using:
 
@@ -52,8 +52,8 @@ The hard part being done now, you'll simply want to start the server using:
 npm run start
 ```
 
-If you wish to run the developer server, you can initialize the server instead
-using nodemon like so:
+If you wish to run the developer server using nodemon, you can initialize the server
+like so instead:
 
 ```bash
 npm run dev
@@ -108,7 +108,7 @@ And also:
 src: url('./fonts/raleway/Raleway-Regular.ttf') format('truetype');
 ```
 
-In each of these comment out the PROD lines displayed, and uncomment the DEV
+In each of these files, comment out the PROD lines displayed, and uncomment the DEV
 lines. I do apologize for the inconvenience, but at the time of this writing, I
 was unable to ascertain the best practice for easily switching between these
 inconsistencies between running dev and production.
@@ -132,14 +132,12 @@ frontend server using `npm` from the `frontend` directory:
 npm run dev
 ```
 
-CityStats uses Vite under the hood. It should provide you with the local address
-and port number (usually localhost:5173) you can bring up in your browser to
-view the locally run server.
+CityStats's frontend uses Vite under the hood. Running the above command should provide you with an output that indicates the local address and port number (usually localhost:5173). You can bring this local address up in your browser to view the frontend.
 
 ##### Containerizing for Production
 
 When ready for production, CityStats is run virtually through docker containers.
-The use of docker and is various intricacies is outside the scope of this
+The use of docker and its various intricacies is outside the scope of this
 document, and it is assumed you have a basic understanding on how to use docker
 and forward the exposed ports to a reverse proxy/http server like NGINX.
 

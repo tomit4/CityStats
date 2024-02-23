@@ -8,7 +8,7 @@
 
 CityStats is a minimal API for accessing data on all 50 US States and the top 330 most populous US Cities. Publicly available to all, CityStats aims to provide up to date data and statistics in a programmatically-accessible format that can be utilized and integrated into educational and research projects.
 
-Aggregating and integrating data from multiple local government websites as well as publicly available resources like [Wikipedia](https://wikipedia.org), CityStats provides it's user with a simple API with which to interface using their programming language of choice.
+Aggregating and integrating data from multiple local government websites as well as publicly available resources like [Wikipedia](https://wikipedia.org), CityStats provides its users with a simple API with which to interface using their programming language of choice.
 CityStats is a simple Read Only REST API that delivers statistics about all 50 states
 within the United States of America as well as the top 330 most populated cities
 within the United States.
@@ -21,10 +21,9 @@ online resources for acquiring this data, the creator of CityStats, [Brian Hayes
 
 #### Getting Started
 
-:memo: Official Online Documentation can on the basics can be found at the
+:memo: Official Online Documentation on the basic usage can be found at the
 [Official CityStats Info Website](https://citystats.info). While not all use
-cases are covered, CityStats (as mentioned earlier) is very minimal and is very
-easy to understand.
+cases are covered on the website, the documentation there is meant to be utilized as an introductory resource. CityStats (as mentioned earlier) is a minimal API and is very easy to understand.
 
 **Basic Queries**
 
@@ -115,7 +114,7 @@ This will return the following JSON:
 
 **Query By Field**
 
-One can also grab more specified data about each particular state or city, like it's
+One can also grab more specified data about each particular state or city, like its
 government or total area. Take this code snippet in python for example, that
 grabs all the government data on Alabama:
 
@@ -124,7 +123,7 @@ import requests
 import json
 
 url = https://citystats.xyz/states/1/government
-headers = {"Accept": "application/json}
+headers = {"Accept": "application/json"}
 
 response = requests.get(url, headers=headers)
 
@@ -289,14 +288,14 @@ Which, of course, yields us the following JSON output:
 
 **Images**
 
-CityStats Also hosts images for government officials such as senators, house
-delegates, mayor, city council members, etc. Each of these can be found at the
+CityStats also hosts images of government officials such as senators, house
+delegates, mayors, city council members, etc. Each of these can be found at the
 /images subdirectory of the `citystats.xyz` domain, followed by either `states` or
 `cities` subdirectory, as well as their ids, etc. Once you find a specific
 `img_url` field within the API, utilizing tools like `wget`, `curl`, or simply
-downloading the image directly from your browser will download the image. Please
+utlizing basic tools within the browser, can download the image. Please
 note that not all images are available for certain government officials,
-indicated by their `img_url` field having a `null` value.
+indicated by their `img_url` field having a `null` value in the JSON API output.
 
 #### Installation
 
