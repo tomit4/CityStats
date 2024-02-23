@@ -36,7 +36,7 @@ const States = props => {
                 (e.g. &#34;New_York&#34;).
             </p>
             <div className="section-divider" id="grab-state-with-field" />
-            <h4>Grab City With Field</h4>
+            <h4>Grab State With Field</h4>
             <Code
                 entity="State"
                 blur={props.blur}
@@ -51,7 +51,7 @@ const States = props => {
                 particular you&#39;re interested in zeroing in on. As you can
                 see above, you can query the &#34;government&#34; field, but you
                 can also choose others, like the state&#39;s &#34;capital&#34;,
-                the &#34;time_zone&#34;. Other accepted fields include:
+                the &#34;time_zone&#34;, etc. Other accepted fields include:
             </p>
             <ul className="api-list">
                 <li> - state_name</li>
@@ -71,7 +71,7 @@ const States = props => {
                 <li> - government</li>
             </ul>
             <div className="section-divider" id="grab-state-with-subfield" />
-            <h4>Grab City With SubField</h4>
+            <h4>Grab State With SubField</h4>
             <Code
                 entity="State"
                 blur={props.blur}
@@ -93,8 +93,8 @@ const States = props => {
             <p>
                 Although not demonstratable in the above url, one could easily
                 grab the subfields in other specific fields within the data set,
-                such as &#34;area&#34; field with the &#34;water&#34; subfield,
-                etc. using your developer tool of choice.
+                such as the &#34;area&#34; field with the &#34;water&#34;
+                subfield, etc. using your programming language of choice.
             </p>
             <div className="section-divider" id="grab-state-with-query" />
             <h4>Grab State With Query</h4>

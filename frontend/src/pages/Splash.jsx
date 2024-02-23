@@ -47,9 +47,8 @@ export default function Splash() {
                     >
                         Wikipedia
                     </a>
-                    , CityStats provides it&#39;s user with a simple API with
-                    which to interface using their programming language of
-                    choice.
+                    , CityStats provides its users with a simple API with which
+                    to interface using their programming language of choice.
                 </p>
             </section>
             <section>
@@ -67,14 +66,14 @@ export default function Splash() {
                     >
                         Brian Hayes
                     </a>
-                    , who created CityStats out of a desire for a simple
-                    interface to access aggregated data about both State and
-                    Local governments.
+                    , who made CityStats out of a desire for a simple interface
+                    to access aggregated data about both State and Local
+                    governments.
                 </p>
                 <p className="splash-p">
                     CityStats is a Free and Open Source Project. If you wish to
                     report a bug, contribute to, or fork the project, you can
-                    find it&#39;s source code over on{' '}
+                    find the source code over on{' '}
                     <a
                         className="inline-link"
                         data-citystats-theme={theme}
@@ -134,11 +133,11 @@ export default function Splash() {
             <section>
                 <h2 className="splash-h2">How Do I Use CityStats?</h2>
                 <p className="splash-p">
-                    The developers of CityStats assume its users to have a basic
-                    understanding of programming concepts when it comes to data
-                    fetching. That said, CityStats is a very minimal API and is
-                    relatively easy to get started. The best place to start is
-                    by reading{' '}
+                    The developer of CityStats assumes that its users have a
+                    basic understanding of programming concepts when it comes to
+                    data fetching. That said, CityStats is a very minimal API
+                    and is relatively easy to get started. The best way to begin
+                    is by reading{' '}
                     <Link
                         data-citystats-theme={theme}
                         className="inline-link"

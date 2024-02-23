@@ -31,7 +31,7 @@ const Cities = props => {
                 form. Just enter any number between 1 and 330, or any city name
                 within the US. Only the top 330 most populous cities in the US
                 are included in the City Stats API, so keep in mind the API
-                might not include statistics about the particular state you have
+                might not include statistics about the particular city you have
                 in mind. Like the States API, city names are demarcated using an
                 underscore, &#34;_&#34;, character instead of a space. (e.g.
                 &#34;Los_Angeles&#34;).
